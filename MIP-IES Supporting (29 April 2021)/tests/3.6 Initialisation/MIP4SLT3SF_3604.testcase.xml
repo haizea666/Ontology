@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>36</TestCaseIdGroup>
+    <TestCaseIdNumber>4</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Handle duplicate instances.</TestCaseTitle>
+  <TestCaseExecutionPriority>5</TestCaseExecutionPriority>
+  <TestCaseObjective>To verify that the national C2IS can handle these duplicate instances.It must be possible to introduce MIP at any stage in the deployment process. This includes the case when nations have not yet exchanged initial MIP data (initialisation), but already want to create plans and orders that involve BSOs of other nations (e.g. creation of ORBAT, Action Tasks / Action Events and control features, etc.).In this case, one nation has to create data that would normally be provided by another nation. Therefore, when the MIP gateways eventually initialise, this can lead to duplicate instances for plans and orders data.</TestCaseObjective>
+  <TestCaseScenario>The C2IS of Nations A and B are not connected. As part of the process of constructing plans and orders for a multilateral deployment, Nation A will create BSOs (organisations, etc.) that are part of the organisation of subordinate Nation B. Both nations then open a connection and Nation B subscribes to a topic from Nation A and creates its own BSOs in its Friendly and Neutral (Forces) topic, as described in the topic received from Nation A.Notice: This refers to plans and orders, which are out of MIP4.0 exchange scope.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: P/S, R/R</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A and Nation B are ready to connect their C2IS.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if both nations are able to correctly handle the duplicate instances of a BSO.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0004</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates organisations belonging to Nation B in its (Forces) topic.</TestCaseStepAction>
+    <TestCaseStepResult>Organisations are created. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A and B set up connectivity between their C2IS. </TestCaseStepAction>
+    <TestCaseStepResult>Nation A and Nation B's C2IS are connected. </TestCaseStepResult>
+    <TestCaseStepDestination>2,1</TestCaseStepDestination>
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A sends a list of available topics (including the Forces topic). </TestCaseStepAction>
+    <TestCaseStepResult>Nation B is notified that it can subscribe to the topics of Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B subscribes to the (Forces) topic of Nation A. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the (Forces) topic from Nation A, including the organisations created in Step 1 by Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B creates the same organisations as Nation A in its Friendly and Neutral (Forces) topics. </TestCaseStepAction>
+    <TestCaseStepResult>No operational issues are experienced by Nation B, which now has duplicate instances of some organisations. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A subscribes to the Friendly and Neutral (Forces) topic of Nation B and receives the organisations created in this topic by Nation B. </TestCaseStepAction>
+    <TestCaseStepResult>No operational issues are experienced by Nation A, which now has duplicate instances of certain organisations. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

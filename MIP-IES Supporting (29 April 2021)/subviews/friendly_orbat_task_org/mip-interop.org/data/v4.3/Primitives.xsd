@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:prim="https://mip-interop.org/data/v4.3/Primitives" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" targetNamespace="https://mip-interop.org/data/v4.3/Primitives" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.0">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">Primitive data types.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/AppInfo" schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" />
+  <xsd:simpleType name="BinaryType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Binary value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Binary</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:base64Binary" />
+  </xsd:simpleType>
+  <xsd:simpleType name="BooleanType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Boolean value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Boolean</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+  <xsd:simpleType name="CodeValueType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Code value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Code</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <!--xsd:pattern value="[0-9A-Za-z_]+"/-->
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DecimalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Decimal value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Decimal</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="18" />
+      <xsd:fractionDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IntegerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Integer value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Integer</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="StringType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing String value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::String</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--xsd:pattern value="[\s!'&quot;&amp;\(\)\*\+,\-\./0-9:;&lt;=&gt;\?A-Z_a-z\[\]\{\}\|\^@#~`]*"/-->
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TimeDurationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Time duration value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::TimeDuration</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:duration" />
+  </xsd:simpleType>
+  <xsd:simpleType name="TimePointType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Time point value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::TimePoint</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:dateTime">
+      <xsd:pattern value="(.+\+00:00)|(.+Z)" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Time value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Time</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:time">
+      <xsd:pattern value=".+Z" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Date value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Date</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:date">
+      <xsd:pattern value=".+Z" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Date value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::DateTime</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:dateTime">
+      <xsd:pattern value="(.+\+00:00)|(.+Z)" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TokenType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing Token value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Primitives::Token</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <!--xsd:pattern value="[&#x9; !'&amp;&quot;\(\)\*\+,\-\./0-9:;&lt;=&gt;\?A-Z_a-z\[\]\{\}\|\^@#~`]*"/-->
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

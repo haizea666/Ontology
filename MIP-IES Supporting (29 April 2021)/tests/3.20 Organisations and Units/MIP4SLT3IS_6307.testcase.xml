@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>63</TestCaseIdGroup>
+    <TestCaseIdNumber>7</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Organisations and Units multiple GeometricDefinition updates.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to update the GeometricDefinition for a created Unit multiple times and the Consumers/Receivers are able to understand (and display) it correctly.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates a Unit with a GeometricDefinition.
+The Consumers receive the information and interpret it correctly.
+The Producer updates multiple times the GeometricDefinition for the Unit.
+The Consumers receive the information and interpret it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created a topic which includes message elements belonging to the Organisations and Units message schema areas.The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the GeometricDefinition updates are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates a Unit with name XXX_UNIT_6307 with a GeometricDefinition
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_ UNIT_6307. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the Unit correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the GeometricDefinition of the Unit multiple times. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the Unit correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

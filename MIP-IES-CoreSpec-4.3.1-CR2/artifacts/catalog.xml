@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+*******************************************************************************
+
+MMMMMMMM               MMMMMMMMIIIIIIIIIIPPPPPPPPPPPPPPPPP        444444444  
+M:::::::M             M:::::::MI::::::::IP::::::::::::::::P      4::::::::4  
+M::::::::M           M::::::::MI::::::::IP::::::PPPPPP:::::P    4:::::::::4  
+M:::::::::M         M:::::::::MII::::::IIPP:::::P     P:::::P  4::::44::::4  
+M::::::::::M       M::::::::::M  I::::I    P::::P     P:::::P 4::::4 4::::4  
+M:::::::::::M     M:::::::::::M  I::::I    P::::P     P:::::P4::::4  4::::4  
+M:::::::M::::M   M::::M:::::::M  I::::I    P::::PPPPPP:::::P4::::4   4::::4  
+M::::::M M::::M M::::M M::::::M  I::::I    P:::::::::::::PP4::::444444::::444
+M::::::M  M::::M::::M  M::::::M  I::::I    P::::PPPPPPPPP  4::::::::::::::::4
+M::::::M   M:::::::M   M::::::M  I::::I    P::::P          4444444444:::::444
+M::::::M    M:::::M    M::::::M  I::::I    P::::P                    4::::4  
+M::::::M     MMMMM     M::::::M  I::::I    P::::P                    4::::4  
+M::::::M               M::::::MII::::::IIPP::::::PP                  4::::4  
+M::::::M               M::::::MI::::::::IP::::::::P                44::::::44
+M::::::M               M::::::MI::::::::IP::::::::P                4::::::::4
+MMMMMMMM               MMMMMMMMIIIIIIIIIIPPPPPPPPPP                4444444444
+	 
+Following contains a catalog definition for the MIP4 artifacts
+*******************************************************************************
+-->
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<!-- MIP4 -->
+	<rewriteURI uriStartString="http://mip-interop.org" rewritePrefix="./mip-interop.org" /> 
+	<rewriteURI uriStartString="https://mip-interop.org" rewritePrefix="./mip-interop.org" /> 
+</catalog>

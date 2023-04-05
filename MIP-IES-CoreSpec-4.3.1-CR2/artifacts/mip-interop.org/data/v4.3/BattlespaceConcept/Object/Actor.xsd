@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:actor="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:controlfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/ControlFeature" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/ControlFeature.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/ControlFeature" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Actor" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A person or a group of persons that is able to perform actions.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Actor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorAccountedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has the Materiel on its account.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b3b509e3-1847-49f6-b284-9e7714da765b-2I</app:SemanticID>
+        <app:ShortName>accountedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is accounting authority for</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorAccountedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has the Materiel on its account.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b3b509e3-1847-49f6-b284-9e7714da765b-2R</app:SemanticID>
+        <app:ShortName>accountedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>is accounting authority for</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorAuthorisedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is granted formal entitlement to the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f15e7fd7-a904-43ef-ab66-50bf83638b47-2I</app:SemanticID>
+        <app:ShortName>authorisedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is authorised to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorAuthorisedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is granted formal entitlement to the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f15e7fd7-a904-43ef-ab66-50bf83638b47-2R</app:SemanticID>
+        <app:ShortName>authorisedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>is authorised to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorCapturedObject" type="object:ObjectType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has taken possession, as a result of forceful means, of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9e419827-6431-4b03-b5ad-fdfeea88a9ddI</app:SemanticID>
+        <app:ShortName>capturedObject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is captor of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorCapturedObjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has taken possession, as a result of forceful means, of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9e419827-6431-4b03-b5ad-fdfeea88a9ddR</app:SemanticID>
+        <app:ShortName>capturedObjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f</app:ReferenceType>
+        <app:DisplayName>is captor of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorCommander" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is under command of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4c2e2557-aa8c-4964-b311-23cf001af7fa-1I</app:SemanticID>
+        <app:ShortName>commander</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is under command of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorCommanderRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is under command of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4c2e2557-aa8c-4964-b311-23cf001af7fa-1R</app:SemanticID>
+        <app:ShortName>commanderRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>is under command of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorControlledFacility" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has authority over the Facility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:293e8102-2ee6-46eb-b6fa-4d7c4fe22c51-2I</app:SemanticID>
+        <app:ShortName>controlledFacility</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorControlledFacilityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has authority over the Facility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:293e8102-2ee6-46eb-b6fa-4d7c4fe22c51-2R</app:SemanticID>
+        <app:ShortName>controlledFacilityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorControlledMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has authority over the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0e4c29af-b764-48c5-a318-cccbf090fbfd-2I</app:SemanticID>
+        <app:ShortName>controlledMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorControlledMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has authority over the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0e4c29af-b764-48c5-a318-cccbf090fbfd-2R</app:SemanticID>
+        <app:ShortName>controlledMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorEmployedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor employs the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:945f540e-2e33-45ce-8e3d-aca230d5983bI</app:SemanticID>
+        <app:ShortName>employedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>employs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorEmployedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor employs the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:945f540e-2e33-45ce-8e3d-aca230d5983bR</app:SemanticID>
+        <app:ShortName>employedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>employs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorInstalledMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor installs the Materiel (emplaces it/assembles it/connects it/adjusts it for use).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3a945db-d0c9-4848-bcfe-53f0c266db71-2I</app:SemanticID>
+        <app:ShortName>installedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>installs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorInstalledMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor installs the Materiel (emplaces it/assembles it/connects it/adjusts it for use).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3a945db-d0c9-4848-bcfe-53f0c266db71-2R</app:SemanticID>
+        <app:ShortName>installedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>installs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorMaintainedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor keeps the Materiel in good repair or efficiency on a routine basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1dfcea7a-4414-48e9-a10e-92b693687176-2I</app:SemanticID>
+        <app:ShortName>maintainedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>maintains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorMaintainedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor keeps the Materiel in good repair or efficiency on a routine basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1dfcea7a-4414-48e9-a10e-92b693687176-2R</app:SemanticID>
+        <app:ShortName>maintainedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>maintains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorObstacle" type="controlfeature:ObstacleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Obstacle is installed by the Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3a16f5cc-7845-43ca-830b-add7c6bd62a1-1I</app:SemanticID>
+        <app:ShortName>obstacle</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is installed by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorObstacleRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Obstacle is installed by the Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3a16f5cc-7845-43ca-830b-add7c6bd62a1-1R</app:SemanticID>
+        <app:ShortName>obstacleRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:624a04c7-d406-4f81-b829-b27936896e47</app:ReferenceType>
+        <app:DisplayName>is installed by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorOwnedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is the owner of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f06058b5-86b5-4769-b382-456b33b8b048-2I</app:SemanticID>
+        <app:ShortName>ownedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is owner of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorOwnedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is the owner of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f06058b5-86b5-4769-b382-456b33b8b048-2R</app:SemanticID>
+        <app:ShortName>ownedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>is owner of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorRepairedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor restores the Materiel to sound condition after damage or failure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:df0ccbb1-a725-4aa8-932c-d3a1938a2d2f-2I</app:SemanticID>
+        <app:ShortName>repairedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>repairs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorRepairedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor restores the Materiel to sound condition after damage or failure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:df0ccbb1-a725-4aa8-932c-d3a1938a2d2f-2R</app:SemanticID>
+        <app:ShortName>repairedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>repairs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorTransportedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cc175044-c7b4-4694-8d7e-307f42715374-2I</app:SemanticID>
+        <app:ShortName>transportedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorTransportedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cc175044-c7b4-4694-8d7e-307f42715374-2R</app:SemanticID>
+        <app:ShortName>transportedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ActorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A person or a group of persons that is able to perform actions.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Actor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:ObjectType">
+        <xsd:sequence>
+          <xsd:element ref="actor:ActorAccountedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorAccountedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorAuthorisedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorAuthorisedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorCapturedObjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorCapturedObject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorCommanderRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorCommander" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorControlledFacilityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorControlledFacility" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorControlledMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorControlledMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorEmployedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorEmployedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorInstalledMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorInstalledMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorMaintainedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorMaintainedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorObstacleRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorObstacle" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorOwnedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorOwnedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorRepairedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorRepairedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorTransportedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorTransportedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorUsedFacilityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="actor:ActorUsedFacility" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ActorUsedFacility" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor uses the Facility for its intended function while it is controlled by another organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:04e2ca40-0cb9-486c-909d-162f496c52e3I</app:SemanticID>
+        <app:ShortName>usedFacility</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>uses</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ActorUsedFacilityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor uses the Facility for its intended function while it is controlled by another organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:04e2ca40-0cb9-486c-909d-162f496c52e3R</app:SemanticID>
+        <app:ShortName>usedFacilityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>uses</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="EnlistedPrivateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A military person in the armed forces without an officer's commission, warrant or other rank conferring leadership over other servicemen.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1b39e3a4-65ba-4c21-8f3d-394391812365</app:SemanticID>
+        <app:DisplayName>Enlisted private</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="actor:MilitaryRankType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="MilitaryRankType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The military grade that establishes the relative position or status of a person in an organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:27a8b4b3-f70b-4a87-9843-c4e71035bcc6</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Military rank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="NonCommissionedOfficerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An enlisted member of the armed forces appointed to a rank conferring leadership over other servicemen.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0f03b5ef-a510-4334-862b-8c6643027f26</app:SemanticID>
+        <app:DisplayName>Non-commissioned officer (NCO)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="actor:MilitaryRankType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OfficerDesignateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rank of an Officer Designate.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:98aa93a1-23eb-410f-966b-6c2135800f36</app:SemanticID>
+        <app:DisplayName>Officer designate (OF-D)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="actor:MilitaryRankType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OfficerRankCode" type="actor:OfficerRankCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rank of a military person who is invested with authority by means of a commission in the armed forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2313fc0d-08a4-47be-975a-679f63a360e4</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OfficerRankCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A rank of a military person who is invested with authority by means of a commission in the armed forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1338398d-ace3-4cf0-aadb-15a2b87b8726</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower rank than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="OF1">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Lieutenant/Second Lieutenant/Midshipman/Sub-Lieutenant/Pilot Officer/Flying Officer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:80cfbd9c-98aa-4b8f-abc7-dd6630a7f063</app:SemanticID>
+            <app:DisplayName>OF-1</app:DisplayName>
+            <app:PhysicalName>OF1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Captain/Lieutenant/Flight Lieutenant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b1aefb4e-ae56-468f-9a86-bf135487d997</app:SemanticID>
+            <app:DisplayName>OF-2</app:DisplayName>
+            <app:PhysicalName>OF2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF3">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Major/Lieutenant-Commander/Squadron Leader.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f9e342f8-ce40-4e1f-a174-03c28d6b3c54</app:SemanticID>
+            <app:DisplayName>OF-3</app:DisplayName>
+            <app:PhysicalName>OF3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF4">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Lieutenant Colonel/Commander/Wing Commander.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:70c71302-c821-4c75-bdcc-37f491ef3bc7</app:SemanticID>
+            <app:DisplayName>OF-4</app:DisplayName>
+            <app:PhysicalName>OF4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF5">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Colonel/Captain (under 6 years seniority) /Group Captain.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2ea110b6-4a92-4aa2-bcc1-e54e461bf05f</app:SemanticID>
+            <app:DisplayName>OF-5</app:DisplayName>
+            <app:PhysicalName>OF5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF6">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Brigadier/Captain (over 6 years seniority)/Air Commodore.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ed77b430-560c-49ed-9b88-bb743c67fc46</app:SemanticID>
+            <app:DisplayName>OF-6</app:DisplayName>
+            <app:PhysicalName>OF6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF7">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Major General/Rear Admiral/Air Vice Marshal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a9fc4ea7-04dd-4bff-b1d9-331026341cdd</app:SemanticID>
+            <app:DisplayName>OF-7</app:DisplayName>
+            <app:PhysicalName>OF7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF8">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Lieutenant General/Vice Admiral/Air Marshal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6723c757-2bde-4deb-8d3b-5cbd6257149f</app:SemanticID>
+            <app:DisplayName>OF-8</app:DisplayName>
+            <app:PhysicalName>OF8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF9">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of General/Admiral/Air Chief Marshal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3c3bb761-c168-40b6-bb5b-a3b07ba867a0</app:SemanticID>
+            <app:DisplayName>OF-9</app:DisplayName>
+            <app:PhysicalName>OF9</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OF10">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Officer rank of Field Marshal/Fleet Admiral/General of the Air Force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b9a4efd9-64ef-43ad-a493-bfafcb694fad</app:SemanticID>
+            <app:DisplayName>OF-10</app:DisplayName>
+            <app:PhysicalName>OF10</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OfficerRankType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rank of a military person who is invested with authority by means of a commission in the armed forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f62a2b64-281a-47fe-8d8f-ec6ffe61076e</app:SemanticID>
+        <app:DisplayName>Officer rank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="actor:MilitaryRankType">
+        <xsd:sequence>
+          <xsd:element ref="actor:OfficerRankCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OtherRankCode" type="actor:OtherRankCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rank of a military person who does not hold an officer's commission in the armed forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9652db07-4764-41c8-b2a9-218409900486</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OtherRankCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A rank of a military person who does not hold an officer's commission in the armed forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:882c2536-ede7-4102-bb3d-51a9e180237e</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower rank than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="OR1">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Private (Class 4)/Seaman Recruit/Basic Airman.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3ac4037d-6f95-4970-8505-1912aeda1c43</app:SemanticID>
+            <app:DisplayName>OR-1</app:DisplayName>
+            <app:PhysicalName>OR1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Private (Class1-3)/Seaman Apprentice/Airman.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3187fd74-1eb1-426c-ba6e-031109bcb3ba</app:SemanticID>
+            <app:DisplayName>OR-2</app:DisplayName>
+            <app:PhysicalName>OR2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR3">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Lance Corporal/Seaman/Airman First Class.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:28255b18-5d3e-433f-b529-11b6dbe0e9ff</app:SemanticID>
+            <app:DisplayName>OR-3</app:DisplayName>
+            <app:PhysicalName>OR3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR4">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Corporal/Petty Officer Third Class/Senior Airman/Sergeant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8e00e0b9-4e69-4359-9580-dbb9e8783fbf</app:SemanticID>
+            <app:DisplayName>OR-4</app:DisplayName>
+            <app:PhysicalName>OR4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR5">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Sergeant (Junior)/Petty Officer Second Class/Staff Sergeant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:67785bad-2c5a-4ff0-b53c-29cd889e58f0</app:SemanticID>
+            <app:DisplayName>OR-5</app:DisplayName>
+            <app:PhysicalName>OR5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR6">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Sergeant (3 Years Seniority)/Petty Officer First Class/Technical Sergeant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ea23dc12-0921-47d2-ae7e-e4da03e9e00d</app:SemanticID>
+            <app:DisplayName>OR-6</app:DisplayName>
+            <app:PhysicalName>OR6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR7">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Staff Sergeant/Chief Petty Officer First Class/Master Sergeant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2b6b9983-d2a4-4142-9a26-7e0f70518bbf</app:SemanticID>
+            <app:DisplayName>OR-7</app:DisplayName>
+            <app:PhysicalName>OR7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR8">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Warrant Officer Class 2/Senior Chief Petty Officer/Senior Master Sergeant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4475ef98-c961-42ee-a17b-fde6334ae52d</app:SemanticID>
+            <app:DisplayName>OR-8</app:DisplayName>
+            <app:PhysicalName>OR8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OR9">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other rank of Warrant Officer Class 1/Master Chief Petty Officer/Chief Master Sergeant.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:773ad6f1-2b90-4833-b24c-6c09ef162b73</app:SemanticID>
+            <app:DisplayName>OR-9</app:DisplayName>
+            <app:PhysicalName>OR9</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OtherRankType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rank of a military person who does not hold an officer's commission in the armed forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3e1813f5-c735-428b-a5cd-6405882d10d9</app:SemanticID>
+        <app:DisplayName>Other rank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="actor:MilitaryRankType">
+        <xsd:sequence>
+          <xsd:element ref="actor:OtherRankCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

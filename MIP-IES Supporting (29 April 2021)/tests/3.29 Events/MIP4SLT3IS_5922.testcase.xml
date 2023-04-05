@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>59</TestCaseIdGroup>
+    <TestCaseIdNumber>22</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Remove IED discovery IEDEvent.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to notify the removal of an IED discovery IEDEvent and the Consumers/Receivers are able to understand and process it correctly.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates an IED discovery IEDEvent.
+The Consumers receive the information and interpret it correctly.
+The Producer sends a notification inferring the removal of this IEDEvent.
+The Consumers receive the information and interpret it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created a topic which includes message elements belonging to the Event message schema area.
+The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the IEDEvent information is processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_EM_0001</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (1) creates an IEDEvent with name XXX_RIED_922.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the IEDEvent: NLD_RIED_921. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (2) receive and display the IEDEvent correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (1) sends a notification inferring the removal of this IEDEvent. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (2) receive the removal notification and interpret it correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,30 @@
+Test description
+
+Test IDMIP4SLT1_1213Test TitleThe Producer service description (WSDL) shall comply with
+the minimum specified for compliance with WS-I Basic
+Profile 1.1.Execution Priority1ObjectiveThe purpose is to verify that the service description (WSDL) of the producer conforms to the desired subset of the WSDL and SOAP specifications.ScenarioAfter acquiring the producer's service description (WSDL)
+examine it for conformance with the desirable aspects of the
+WS-I Basic Profile 1.1.EnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1211, MIP4SLT1_1212Test InputsThe producer's service description (WSDL) and related included and imported artefacts.ConclusionThe test is completed when the producer's service description
+(WSDL) is verified to conform to the desirable aspects of the
+WS-I Basic Profile 1.1.Test OutputsVerification that the producer's service description (WSDL)
+conforms to the desirable aspects of the WS-I Basic Profile
+1.1.TraceabilityREQ_EM_0008
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Examine the producer's service description (WSDL) to determine the binding style specified for each binding relating to an MIP4 PortType. ~~The binding style is specified as 'document'. ~~122. Examine the producer's service description (WSDL) to determine the binding transport specified for each binding relating to an MIP4 PortType. ~~The binding transport is specified as 'http://schemas.xmlsoap.org/soap/http'. ~~123. Examine the producer's service description (WSDL) to determine the operation style specified for each binding related to an MIP4 PortType. ~~The operation style is specified as 'document'.  Note: If the attribute is not specified directly, it defaults to the value specified in the soap:binding element. If the soap:binding element does not specify a style, it is assumed to be "document". ~~124. Examine the producer's service description (WSDL) for to determine the input and output body style specified for each binging related to an MIP4 PortType. ~~The body style is specified as 'literal'. ~~125. Examine the producer's service description (WSDL) to determine the specified port names associated with the defined service. ~~The port names within the defined service are unique. ~~126. Examine the producer's service description (WSDL) to determine the port address location associated with each port. ~~The port address location will be specified and contain a valid URL. ~~12
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

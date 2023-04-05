@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>36</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Consumer Unexpected Disconnection</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To verify fault tolerance of the MIP4 IES to resume operational data exchange between a Consumer (A) and Provider (B) after the network has unexpectedly disconnected Consumer (A) by completing a stand-alone Request/Response exchange pattern to re-synchronize and establish ground truth and resume publish/subscribe services established prior to the network disruption.</TestCaseObjective>
+  <TestCaseScenario>Consumer (A) and Produced (B) have established a Publish/Subscribe exchange pattern that is satisfying the subscription as of the moment when Consumer (A) loses network connectivity to Producer (B).  Once network is re-established Consumer (A) requests stand-alone initialization data using a request/response exchange mechanism and resumes the subscription data that was established prior to network interruption.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>A subscription between Consumer (A) and Producer (B) has been initialized and routine updates are occurring using Publish/Subscribe exchange patterns.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Consumer (A) has successfully re-connected to the network, re-synchronized with Producer (B) and established ground truth without data loss.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0006, REQ_EM_0008, REQ_EM_0010</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (A) is subscribed to receive routine operational data from Producer (B). </TestCaseStepAction>
+    <TestCaseStepResult>Network and MIP4 Gateways are in an operational state and Consumer (A) is receiving routine operational data. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Simulate a Consumer (A) network disruption losing connectivity with Provider (B). </TestCaseStepAction>
+    <TestCaseStepResult>The connections between Consumer (A) and Provider (B) prevents the Consumer from receiving operational data. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Upon re-establishment of Network and MIP Gateway operational state, Consumer (A) requests a stand-alone request/response exchange from Produced (B). </TestCaseStepAction>
+    <TestCaseStepResult>Producer (B) provides the request/response exchange update to Consumer (A), and resumes the publish/subscribe information flow as previously established between Consumer (A) and Producer (B) prior to the network disruption. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

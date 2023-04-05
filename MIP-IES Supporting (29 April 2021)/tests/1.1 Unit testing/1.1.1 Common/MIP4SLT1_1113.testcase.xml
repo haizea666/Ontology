@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>13</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Retrieve the fixed topic set property from producer / provider</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is for the Consumer to retrieve if the producer topic set is immutable</TestCaseObjective>
+  <TestCaseScenario>The Consumer is interested in checking the immutability of the producer topic before or during using this topic set for Request/Response and/or Publish/Subscribe exchanges</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S and R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1213, MIP4SLT1_1215
+Prior to initiating exchange to request resource properties, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+
+Both Consumer and Producer systems conform to either MIP4.0 Publish/Subscribe Exchange Pattern Specification or MIP4.0 Request/Response Exchange Pattern Specification or both.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer has received a Boolean if the Producer Topic Set is immutable or not.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0011.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The consumer sends a request to check if the Topic Set is Immutable to the GetResourceProperty service of the producer. Requested property is :
+&lt;rp:GetResourceProperty&gt;
+b2: FixedTopicSet
+&lt;/rp:GetResourceProperty&gt; </TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request for resource properties using b2:FixedTopicSet </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer sends whether its Topic Set is Immutable or not the topic dialects it supports </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the FixedTopicSet value as a Boolean. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

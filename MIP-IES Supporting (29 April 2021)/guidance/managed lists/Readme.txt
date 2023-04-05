@@ -1,0 +1,2 @@
+The MIP4IES uses the concept of Managed Lists (see IDO Section 6.6). 
+This folder contains default values for the managed lists as well as a CVA file that bionds the values to the appropriate elements in the schema.

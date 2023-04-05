@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<facility:Airfield xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:ext="https://mip-interop.org/data/v4.3/Extension" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<ext:Extension ext:mustUnderstandIndicator="false">
+		<fac2:FlightSupportCategoryCode xmlns:fac2="http://example.com">IFR</fac2:FlightSupportCategoryCode>
+	</ext:Extension>
+	<base:ID>a</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata></battlespaceconcept:BattlespaceConceptMetadata>
+	<facility:FacilityOperationalStatusCode>Operational</facility:FacilityOperationalStatusCode>
+</facility:Airfield>
+<!--
+Original example
+
+<fac:Airfield>
+    ...
+    <ext:Extension ext:mustUnderstand="false">
+        <fac2:FlightSupportCategoryCode 
+                xmlns:fac2="http://example.com">IFR</fac2:FlightSupportCategoryCode>
+    </ext:Extension>
+    ...
+</fac:Airfield>
+-->

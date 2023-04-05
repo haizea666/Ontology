@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>36</TestCaseIdGroup>
+    <TestCaseIdNumber>5</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Standard time zone and time.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To verify that the system is able to perform time adjustment in order to be synchronised with the other systems. All exchanged data in the MIP solution concerning date and time must be measured using Coordinated Universal Time (UTC) ISO 8601:2000 as a standard of reference, constrained to "zero meridian" i.e. 'Zulu' (GMT) time zone only.</TestCaseObjective>
+  <TestCaseScenario>Official time synchronisation will be done.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: All</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nations have joined the MIP network. Nation A and B connect and subscribe to each other topic(s). Nation A and B are synchronised with regard to operational data.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>MIP Gateways process time-related-data correctly and reports are not interpreted as being 'future' reports because the sender's system clock is running ahead of the receiver's clock.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0005</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A and Nation B synchronise their time on system servers, using a common official time source established for the operation (e.g. by using GPS time, a time service, 'synchronise watch' procedure, etc.)
+Comment
+During MIP Block 2 testing, some nations did not process data correctly because their systems did not have synchronised system clocks.
+If a national system is configured to use a time zone other than UTC (e.g. if the system operates in local time), it is a national implementation responsibility to convert all times to/from UTC when communicating via a MIP exchange interface. </TestCaseStepAction>
+    <TestCaseStepResult>A common official time source is established for both nations. The date and time zone information stored in the national MIP data base is transferred in Zulu time when sending data via a MIP exchange interface.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A and B create and exchange current time-related -data (e. g. updating current locations of organisations).
+(This can be checked when performing other arbitrary test cases between Nation A and Nation B). </TestCaseStepAction>
+    <TestCaseStepResult>A.  Time data exchanged between Nations A and B shall be stored in Zulu time i.e. check exchanged files / messages for exchanged time data.
+B.  Time data in the database of Nations A and B shall be stored in Zulu time for all time fields, i.e. check the field corresponding to the message element 'ReportingDateTime' in the national MIP data base.
+Neither Nation A nor Nation B interprets the received data as being in the future / past. </TestCaseStepResult>
+    <TestCaseStepDestination>2,1</TestCaseStepDestination>
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

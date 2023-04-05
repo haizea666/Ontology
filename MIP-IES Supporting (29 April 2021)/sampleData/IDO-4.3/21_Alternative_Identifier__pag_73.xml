@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<vehicle:Automobile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:vehicle="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Vehicle" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>urn:mim:4ea911fe-2544-4830-ba70-c69d50fe11b1</base:ID>
+	<concept:ConceptName>IDT</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptAlternateIdentifier>
+		<battlespaceconcept:AlternateIdentifierIdentifier>urn:cop:Sty7+qjr5hG7rUYYAafFhg==</battlespaceconcept:AlternateIdentifierIdentifier>
+		<battlespaceconcept:AlternateIdentifierStandardCode>NVG</battlespaceconcept:AlternateIdentifierStandardCode>
+	</battlespaceconcept:BattlespaceConceptAlternateIdentifier>
+	<battlespaceconcept:BattlespaceConceptAlternateIdentifier>
+		<battlespaceconcept:AlternateIdentifierIdentifier>10903003226000001234</battlespaceconcept:AlternateIdentifierIdentifier>
+		<battlespaceconcept:AlternateIdentifierStandardCode>MIP31</battlespaceconcept:AlternateIdentifierStandardCode>
+	</battlespaceconcept:BattlespaceConceptAlternateIdentifier>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<materiel:MaterielOperationalStatusCode xsi:nil="true"/>
+</vehicle:Automobile>
+
+<!--
+Original example
+
+<equ:Vehicle>
+    <base:Identifier>
+        <base:Uri>urn:mim:4ea911fe-2544-4830-ba70-c69d50fe11b1</base:Uri>
+        <base:Source>IDT</base:Source>
+        <base:Discriminator>urn:guid:b6d509fd-3ef7-4f5d-926b-8884c52bd15d</base:Discriminator>
+        <base:IsDependentIndicator>false</base:IsDependentIndicator>
+    </base:Identifier>
+    <base:AlternateIdentifier>
+        <base:StandardCodeWrapper>
+            <base:StandardCode>NVG</base:StandardCode>
+        </base:StandardCodeWrapper>
+        <base:StringIdentifier>urn:cop:Sty7+qjr5hG7rUYYAafFhg==</base:StringIdentifier>
+    </base:AlternateIdentifier>
+    <base:AlternateIdentifier>
+          <base:StandardCodeWrapper>
+            <base:StandardCode>MIP31</base:StandardCode>
+        </base:StandardCodeWrapper>
+        <base:StringIdentifier>10903003226000001234</base:StringIdentifier>
+    </base:AlternateIdentifier>
+...
+</equ:Vehicle>
+-->

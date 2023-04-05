@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<controlfeature:AirRoute xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:controlfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/ControlFeature" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>-</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<controlfeature:ControlFeatureAirspaceControlMeans xsi:type="controlfeature:AirspaceControlMeansType">
+		<controlfeature:AirspaceControlMeansCategoryCode>AirCorridorOrRoute</controlfeature:AirspaceControlMeansCategoryCode>
+		<controlfeature:AirspaceControlMeansTransitInstructionText>a</controlfeature:AirspaceControlMeansTransitInstructionText>
+	</controlfeature:ControlFeatureAirspaceControlMeans>
+	<controlfeature:AirRouteUsageCode>ApproachCorridor</controlfeature:AirRouteUsageCode>
+</controlfeature:AirRoute>
+<!--
+Original example
+
+<?xml version ="1.0" encoding ="utf-16"?>
+<cfeat:AirRoute>
+...
+<cfeat:AirspaceControlMeansWrapper>
+<cfeat:AirspaceControlMeans xsi:type ="cfeat:AirDefenceOperationsAreaType">
+<cfeat:TransitInstructionTextWrapper>
+<cfeat:TransitInstructionText>a</cfeat:TransitInstructionText>
+</cfeat:TransitInstructionTextWrapper>
+</cfeat:AirspaceControlMeans>
+</cfeat:AirspaceControlMeansWrapper>
+...
+<cfeat:AirRouteUsageCodeWrapper>
+<cfeat:AirRouteUsageCode>ApproachCorridor</cfeat:AirRouteUsageCode>
+</cfeat:AirRouteUsageCodeWrapper>
+</cfeat:AirRoute>
+-->

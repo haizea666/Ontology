@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3202Test TitleProcess valid MIP4 payload making use of the attribute extension.Execution Priority1ObjectiveThe objective of this test is to assess the ability to process valid MIP4 payloads which make use of the attribute extension.ScenarioA Consumer receives a valid MIP4 payload with extensions and processes it into their system.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S, FileParticipation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe consumer can process MIP4 content which utilises the MIP4 attribute extension.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0011.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain the valid MIP4 content from the producer containing attribute extensions. ~~Content will be received from the Producer. ~~122. Process all the MIP4 content on the Consumer (with or without the MIP4 extension data). ~~The Consumer will successfully process the MIP4 content without error. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

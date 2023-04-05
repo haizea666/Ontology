@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>44</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Numerous messages situation</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Volumetric quantity checking incorporating OSG analysis for a nominal consumption initial use case.</TestCaseObjective>
+  <TestCaseScenario>The Producer (A) provides update information to the Consumer as prescribed utilising the P/S EM on a nominal consumption Numerous messages situation (after OSG analysis).</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1231.The Consumer has already achieved initialisation data and requested routine subscription to desired Topics.  </TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Consumer successfully receives update information to which it is subscribed on a nominal consumption numerous messages situation.Check volumetric behaviour on both sides, Producer and Consumer. </TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, REQ_EM_0010</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Producer (1) processes subscription request from Consumer (2) and provides update information as prescribed utilising the Publish/Subscribe exchange mechanism, on a nominal consumption numerous messages situation (A trial exceeded found quota for ADEM R/R client has been 65,536 bytes, resulting in having to put a limit below it at the provider side. but further advice from SME would be needed). </TestCaseStepAction>
+    <TestCaseStepResult>Consumer (2) receives updates of subscription data, on a nominal consumption Numerous messages situation.
+Check and register behaviour for a quantity volumetric analysis, i.e. what happens when the Producer needs to provide numerous messages in a row, exceeding a quota limit as a result of processing a Consumer's subscription.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

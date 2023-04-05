@@ -1,0 +1,35 @@
+Test description
+
+Test IDMIP4SLT3SF_3601Test TitleJoin a Federation.Execution Priority1ObjectiveThe objective of this test is to assess the ability of an incoming C2IS (Nation B) to join a MIP4 federation with another C2IS (Nation A). From then on, other Nations can follow this same process as Nations B and A.ScenarioThe MIP4-IES solution focuses on a peer-to-peer exchange of information between a Provider and a Consumer system. The MIP4-IES solution is intended to be deployed in an environment with a stable IP network between the Provider and Consumer. The MIP4-IES solution will primarily focus on the boundary between C2 systems, it is expected that systems will connect 'at the back end' via the MIP4 interface, and will separately handle the presentation of information.EnvironmentInternet, Co-located. Exchange Pattern: N/AParticipation2MTRSPre-test ConditionsThere is an available and dedicated stable MIP4 IP (V)LAN infrastructure, at least with bandwidth, throughput and performance values similar to the MIP local network in Greding during WGs. Its administrator(s) are also available for testing support.
+Both Nations have filled in the IPT4_Joining_Questionnaire and are correctly configured for the MIP4 LAN (including any security / classification constraints if necessary).
+The required physical communication links are established and tested, and each nation has a current and correct data-fill, plus any required national data, loaded in its national system.
+Nation A shall be in an operational state.
+Both nations shall provide a summary of the data to be exchanged (within the IPT4_Joining_Questionnaire) so that validation by the receiving nation can be performed.
+Both nations shall have established and verified connectivity via the MIP4-IES Exchange Mechanism.Test InputsN/AConclusionSystems are considered to have joined the MIP4 Federation when both nations' MIP4 Gateways have seamless IP connectivity between them.Test OutputsN/ATraceabilityREQ_SYS_0018
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Both nations get any necessary requirements and configuration data (IP addressing, TCP ports, users / passwords...) from the IP network administrator(s).
+
+Notices: This test is done bilaterally. Additional nations can repeat it for further joining the MIP4 federation.
+After joining, each nation will notify its partner nation that its joining process is complete.
+Notice that this procedure is just a draft general sample for IP networks. ~~
+Both nations become aware and understand what they technically need to join the IP federation network (transport level). ~~1,22. Both nations configure their MIP4 gateways and any other necessary equipment (routers, switches, cipher...) with the data gathered at step 1. ~~Both nations get their MIP4 network equipment and interfaces configured after its administrator's procedure. ~~1,23. Both nations configure their MIP4 gateways and national C2IS in order to operate a MIP4 environment. ~~Both networks get their MIP4 national segment configured for operation after national procedures. ~~1,24. With the help of the network administrator(s), both nations carry out peer-to-peer IP configuration tests (ping, raw XML message exchange, https...) in order to assure WS MIP4 exchange will be straightforward and clean. ~~The IP connection for WS operation between both nations' MIP4 gateways is fully operational, with the best quality that the network infrastructure allows for. ~~1,22,1
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

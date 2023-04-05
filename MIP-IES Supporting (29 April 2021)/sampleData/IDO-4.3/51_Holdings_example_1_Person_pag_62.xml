@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person:Person xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:mobility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Mobility" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:consumablemateriel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/ConsumableMateriel" xmlns:equipment="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" xmlns:weapon="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Weapon" xmlns:vehicle="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Vehicle" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:actor="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person BattlespaceConcept.Object.Actor.Person.xsd">
+	<base:ID>56165197-4c01-5241-d1f23824cca3e</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+    <object:ObjectProperty>
+        <base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+        <object:HoldingOperationalQuantityNumber>20</object:HoldingOperationalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>23</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="person:PersonType">
+			<base:ID>c4a997a2-8f3d-4d97-bbe9-2a1fde54f418</base:ID>
+			<concept:ConceptName>Military Personnel, OF-3 (Major)</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<person:PersonMilitaryStatusCode>Military</person:PersonMilitaryStatusCode>
+			<person:PersonRank xsi:type="actor:OfficerRankType">
+				<actor:OfficerRankCode>OF3</actor:OfficerRankCode>
+			</person:PersonRank>
+		</object:HoldingProperty>
+    </object:ObjectProperty>
+    <object:ObjectProperty>
+        <base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+        <object:HoldingOperationalQuantityNumber>3607</object:HoldingOperationalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>3943</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="person:PersonType">
+			<base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+			<concept:ConceptName>Military personnel</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<person:PersonMilitaryStatusCode>Military</person:PersonMilitaryStatusCode>
+		</object:HoldingProperty>
+    </object:ObjectProperty>
+	<person:PersonMilitaryStatusCode>Military</person:PersonMilitaryStatusCode>
+</person:Person>

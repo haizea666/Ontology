@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>68</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Notifications size limit: Large notification - 1 huge amount of small payloads</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>Objective is to exchange a large number of small payloads. Objective is not to sustain the exchange rate of a real-time tracking system but being able to sustain for example a rate of snapshots in order to have a picture for situation awareness.</TestCaseObjective>
+  <TestCaseScenario>Producer notifies a Consumer of two (2) updates, for example locations updates, every two (2) seconds for a duration of ten (10) minutes.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4.0_Publish_Subscribe_Exchange_Pattern, MIP4SLT1_1130, MIP4SLT1_1131.
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer receives all small notifications published to a given topic / geographical / source filter, from the Producer.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail</TestCaseOutput>
+  <TestCaseTraceability>MPR_1885</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Producer (1) starts notifying the Consumer (2) for a period of ten minutes: two updates every two seconds</TestCaseStepAction>
+    <TestCaseStepResult>Consumer (2) receives and is able to sustain the input of payloads. The information is displayed on the Consumer (2) C2 System.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

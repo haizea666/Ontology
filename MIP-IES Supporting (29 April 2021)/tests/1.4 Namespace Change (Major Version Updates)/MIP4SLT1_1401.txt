@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT1_1401Test TitleBackwards version compatibility - initialisationExecution Priority1ObjectiveLet's use the terms 'BSO-v1' and 'BSO-v2', indicating a major version update to the BSO as an example. Assess what happens when the Provider supports BSO-v1 whereas the Consumer supports BSO-v2, the Consumer requests instances of BSO-v2 and the Provider responds with instances of BSO-v1 notification.ScenarioA 'major version update' refers to a change in a message schema that is sufficiently significant to warrant a new namespace (i.e. a new schema), not just an extension.EnvironmentInternet or Co-located. Exchange Pattern: R/R.Participation2.MTRS
+Pre-test Conditions1.2.1 - Joining.Test InputsCurrent situation as known by the provider.  ConclusionThe test is completed when the consumer system (v2) has tried to receive the current situation from the provider (v1) by means of the MIP4.0 Request-Response exchange pattern.Test OutputsAssess (record) what happens when the Provider supports BSO-v1 whereas the Consumer supports BSO-v2. Is the backwards version compatibility kept in case of new namespace (i.e. a new schema)?TraceabilityREQ_IDT_0005. MIP4_Request_Response_Exchange_Pattern.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (2, supports BSO-v2) requests current situation from Provider (1, supports BSO-v1). ~~Provider receives request (for BSO-v2 instances).
+Record Provider behaviour, regarding backwards version compatibility. ~~212. Provider (1, supports BSO-v1) responds to Consumer's (2, supports BSO-v2) request. ~~Received response at Consumer: either current situation data (BSO-v1 instances) or an error / problem notification.
+Record Consumer and Provider behaviour, regarding backwards version compatibility. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

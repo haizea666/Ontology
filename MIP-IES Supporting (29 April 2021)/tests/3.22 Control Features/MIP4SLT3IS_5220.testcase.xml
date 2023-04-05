@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>20</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Add Air ControlFeature and AirspaceControlMeans Sub-Types.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to create and add several Air ControlFeature and AirspaceControlMeans in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates several Air ControlFeatures and AirspaceControlMeans. Nation B receives the information and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes Airspace Control Measures (ControlFeature message schema area) message elements, for instance Ground Picture &gt; Air Defence.
+Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the created Air ControlFeature and AirspaceControlMeans are displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a LowLevelTransitRoute. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the LowLevelTransitRoute correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a CoordinatingAltitude. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the CoordinatingAltitude correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a SpecialUseAirspace. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the SpecialUseAirspace correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a StandardUseArmyAircraftFlightRoute. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the StandardUseArmyAircraftFlightRoute correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an AirControlPoint. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AirControlPoint correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

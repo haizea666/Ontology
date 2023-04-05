@@ -1,0 +1,3525 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:location="https://mip-interop.org/data/v4.3/BattlespaceConcept/Location" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Location" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AbsolutePointLatitudeCoordinate" type="location:LatitudeCoordinateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle, defined with a specific resolution, between the plane of the equator and a line perpendicular to the ellipsoid surface and passing through the point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3b514a6-ba13-4d3c-bc7b-c42506cb7e64</app:SemanticID>
+        <app:ShortName>latitudeCoordinate</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>latitude coordinate</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AbsolutePointLongitudeCoordinate" type="location:LongitudeCoordinateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle, defined with a specific resolution, between the initial (zero or Greenwich) meridian and the meridian of the point measured in the plane of the Equator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ff8dcd3-2057-45c9-8dd8-45d90cd6eb4e</app:SemanticID>
+        <app:ShortName>longitudeCoordinate</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>longitude coordinate</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AbsolutePointType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Point that has its position specified with respect to the surface of the World Geodetic System 1984 (WGS 84) ellipsoid.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1b27d622-6f58-406d-aceb-2402af195155</app:SemanticID>
+        <app:DisplayName>Absolute point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:PointType">
+        <xsd:sequence>
+          <xsd:element ref="location:AbsolutePointLatitudeCoordinate" />
+          <xsd:element ref="location:AbsolutePointLongitudeCoordinate" />
+          <xsd:element ref="location:AbsolutePointVerticalDistance" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AbsolutePointVerticalDistance" type="location:VerticalDistanceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The altitude or height of the AbsolutePoint.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:04399fc9-62d4-45ef-a0ac-6e1a3a36c751</app:SemanticID>
+        <app:ShortName>verticalDistance</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>vertical distance</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AngleAccuracyAngle" type="location:AngleAccuracyAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement of a sector that represents the uncertainty range in the estimate of the Angle. The sector is bisected by the angle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d27c084e-1941-4b91-8764-3a4b204b10c9</app:SemanticID>
+        <app:ShortName>accuracyAngle</app:ShortName>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>accuracy</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AngleAccuracyAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement of a sector that represents the uncertainty range in the estimate of the Angle. The sector is bisected by the angle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d27c084e-1941-4b91-8764-3a4b204b10c9</app:SemanticID>
+        <app:ShortName>accuracyAngle</app:ShortName>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>accuracy</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxInclusive value="180" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AngleMeasuredAngle" type="location:AngleMeasuredAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement between two lines and/or planes diverging from a common point and/or line.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e7536fad-2c98-4d70-9573-bc5edd7a6690</app:SemanticID>
+        <app:ShortName>measuredAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>measured angle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AngleMeasuredAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement between two lines and/or planes diverging from a common point and/or line.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e7536fad-2c98-4d70-9573-bc5edd7a6690</app:SemanticID>
+        <app:ShortName>measuredAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>measured angle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="-180" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AnglePrecisionCode" type="location:AnglePrecisionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum resolution used for the expression of the angle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:98c8e413-0d7b-4795-be54-4becf626d3e5</app:SemanticID>
+        <app:ShortName>precisionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>precision</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AnglePrecisionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum resolution used for the expression of the value of an angle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:38b1ed26-04de-4e76-a235-137ce1f0447d</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower precision than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Degree">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of a degree (60 minutes).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:24e0fbce-7b2e-44e7-bd30-0d4c12071cd9</app:SemanticID>
+            <app:DisplayName>Degree</app:DisplayName>
+            <app:PhysicalName>DEGREE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_10thOfADegree">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/10 of a degree.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:63fcec21-e028-4a88-848a-3ba103d6237d</app:SemanticID>
+            <app:DisplayName>1/10 degree</app:DisplayName>
+            <app:PhysicalName>DEG10</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mil">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1 mil (1/6400 of a full circle).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6eb637e7-83ed-45a5-832c-08c25d066ab7</app:SemanticID>
+            <app:DisplayName>Mil</app:DisplayName>
+            <app:PhysicalName>MIL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement between two lines and/or planes diverging from a common point and/or line, measured with a range of uncertainty and a maximum resolution.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5c15c54e-3f20-42d5-8aa8-d553f718189c</app:SemanticID>
+        <app:DisplayName>Angle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:AngleAccuracyAngle" minOccurs="0" />
+          <xsd:element ref="location:AngleMeasuredAngle" />
+          <xsd:element ref="location:AnglePrecisionCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ArrowPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The required set of Points to draw the arrow.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1c323411-3fbe-4a58-8426-f128fb2b41f6</app:SemanticID>
+        <app:ShortName>point</app:ShortName>
+        <app:ValueOrAmplification>2</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ArrowType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A graphical representation of a BattlespaceConcept that is constituted of at least 2 ordered points and an optional width.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f6c6cdc-d604-4bcc-b4c8-0d627745cacc</app:SemanticID>
+        <app:Remarks>The graphic is decorated around a (possibly multi-segment) arrow with an optional width.
+
+	* Point 1 defines the head of the arrow.
+	* Points 2..n define the path of the arrow.</app:Remarks>
+        <app:DisplayName>Arrow</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GraphicType">
+        <xsd:sequence>
+          <xsd:element ref="location:ArrowPoint" minOccurs="2" maxOccurs="unbounded" />
+          <xsd:element ref="location:ArrowWidthDimension" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ArrowWidthDimension" type="location:ArrowWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The width of the Arrow body.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8e492899-4717-409d-bfd1-22f06c11fa08</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:Remarks>If the width is unspecified, the Arrow is drawn by a single line.</app:Remarks>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ArrowWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The width of the Arrow body.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8e492899-4717-409d-bfd1-22f06c11fa08</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:Remarks>If the width is unspecified, the Arrow is drawn by a single line.</app:Remarks>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CircleCentrePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The centre of the Circle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9c22ad44-ccbf-43e5-b70c-a41c50433f68</app:SemanticID>
+        <app:ShortName>centrePoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CircleRadiusDimension" type="location:CircleRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from any point of the Circle to its centre point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:acf91b42-0434-4bdd-9dd8-f6eb7a69062d</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CircleRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from any point of the Circle to its centre point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:acf91b42-0434-4bdd-9dd8-f6eb7a69062d</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CircleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A set of points equally distanced from a centre.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a30d557e-f2d3-4e09-b350-d99f04318ac0</app:SemanticID>
+        <app:DisplayName>Circle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:CircleCentrePoint" />
+          <xsd:element ref="location:CircleRadiusDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CircularRangeCentrePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The centre of the CircularRange.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5208085d-98ec-403d-9072-3a6176fbf811</app:SemanticID>
+        <app:ShortName>centrePoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CircularRangeRadiusDimension" type="location:CircularRangeRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance between the circles and the centre point in ascending order.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:19ad870c-fe16-4b9b-b742-518fd372a597</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CircularRangeRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance between the circles and the centre point in ascending order.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:19ad870c-fe16-4b9b-b742-518fd372a597</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CircularRangeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Range specified by means of concentric circles.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fa39b6f2-51b9-4a46-82b6-10b3545196a8</app:SemanticID>
+        <app:DisplayName>Circular range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:RangeType">
+        <xsd:sequence>
+          <xsd:element ref="location:CircularRangeCentrePoint" />
+          <xsd:element ref="location:CircularRangeRadiusDimension" maxOccurs="4" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ConeVolumeSurface" type="location:SurfaceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The cross-section of the ConeVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5ac7586c-440f-4f1b-875d-67326dd8dd6e</app:SemanticID>
+        <app:ShortName>surface</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ConeVolumeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeometricVolume whose boundary is swept by a line that has a fixed point and another that moves along the path defined by the border of a Surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3eccac80-70b2-4f44-9d28-dd8e45ac4b12</app:SemanticID>
+        <app:DisplayName>Cone volume</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometricVolumeType">
+        <xsd:sequence>
+          <xsd:element ref="location:ConeVolumeSurface" />
+          <xsd:element ref="location:ConeVolumeVertexPoint" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ConeVolumeVertexPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The vertex of the ConeVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:10eb96cc-dfe3-4650-9cbf-ad9380fc9d0e</app:SemanticID>
+        <app:ShortName>vertexPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>vertex point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CoordinateCoordinateDimension" type="location:CoordinateCoordinateDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The displacement of a point along one of its axes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3f8cf4e0-e013-4c76-b51e-fa99642744a6</app:SemanticID>
+        <app:ShortName>coordinateDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>coordinate</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CoordinateCoordinateDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The displacement of a point along one of its axes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3f8cf4e0-e013-4c76-b51e-fa99642744a6</app:SemanticID>
+        <app:ShortName>coordinateDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>coordinate</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="12" />
+      <xsd:maxInclusive value="999999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CoordinatePrecisionCode" type="location:DistancePrecisionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum resolution used for the expression of the coordinate.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e9fa5785-7d38-44c9-a056-8895e58f6289</app:SemanticID>
+        <app:ShortName>precisionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>precision</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CoordinateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The displacement of a point along one of its axes, defined with a specific maximum resolution.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dd2b9b69-a839-4644-9792-98fca6958f8e</app:SemanticID>
+        <app:DisplayName>Coordinate</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:CoordinateCoordinateDimension" />
+          <xsd:element ref="location:CoordinatePrecisionCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CorridorAreaCentreLine" type="location:LineType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The central line of the CorridorArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c9d0d726-d84a-497f-aff3-d016221f3ee0</app:SemanticID>
+        <app:ShortName>centreLine</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre line</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CorridorAreaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface that is defined by its width and a sequence of points.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:db0ae90c-2b86-4408-b5b6-421de467f45a</app:SemanticID>
+        <app:DisplayName>Corridor area</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:CorridorAreaCentreLine" />
+          <xsd:element ref="location:CorridorAreaWidthDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CorridorAreaWidthDimension" type="location:CorridorAreaWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance measured from side to side for the CorridorArea and distributed equally with respect to its centreline.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cab17d30-268a-4d22-98e2-8bcaf930b4ff</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CorridorAreaWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance measured from side to side for the CorridorArea and distributed equally with respect to its centreline.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cab17d30-268a-4d22-98e2-8bcaf930b4ff</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="7" />
+      <xsd:maxInclusive value="9999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DistancePrecisionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum resolution used for the expression of a linear measure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:34c83552-20b7-4cfe-b69e-d3309b7298e7</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower precision than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NauticalMile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of a nautical mile (1852 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d847b1f7-5bb7-4825-9679-8182a4f5594e</app:SemanticID>
+            <app:DisplayName>Nautical mile</app:DisplayName>
+            <app:PhysicalName>NM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of one mile (1609.344 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:931e3ca9-013f-479e-9716-33404a4505fd</app:SemanticID>
+            <app:DisplayName>Mile</app:DisplayName>
+            <app:PhysicalName>MILE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Kilometre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 1000 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e428ddcf-0205-4cdc-8298-3a9e04363e1a</app:SemanticID>
+            <app:DisplayName>Kilometre</app:DisplayName>
+            <app:PhysicalName>KM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Kiloyard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of a kiloyard (914,4 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1096234a-3f4c-4ae1-b935-6af61c659f8d</app:SemanticID>
+            <app:DisplayName>Kiloyard</app:DisplayName>
+            <app:PhysicalName>KILYRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_300Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 300 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2a142e9c-5035-4868-92f3-24cfe17ca90d</app:SemanticID>
+            <app:DisplayName>300 metres</app:DisplayName>
+            <app:PhysicalName>300MTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_100Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 100 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a5d3cc28-4b37-44ca-bd6d-82cecc84578f</app:SemanticID>
+            <app:DisplayName>100 metres</app:DisplayName>
+            <app:PhysicalName>100MTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_100Feet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 100 feet (30.48 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ca2c14e5-2756-4b6b-b176-ae9a8021d6ff</app:SemanticID>
+            <app:DisplayName>100 feet</app:DisplayName>
+            <app:PhysicalName>100FT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_30Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 30 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7474e881-c340-42f6-8b97-8b87bf859eee</app:SemanticID>
+            <app:DisplayName>30 metres</app:DisplayName>
+            <app:PhysicalName>30MTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_10Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 10 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b89a9150-aefa-48b7-80d4-ea8145f184e4</app:SemanticID>
+            <app:DisplayName>10 metres</app:DisplayName>
+            <app:PhysicalName>10MTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_10Feet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 10 feet (3.048 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:48280359-dbad-4ce0-b780-ec77176002b6</app:SemanticID>
+            <app:DisplayName>10 feet</app:DisplayName>
+            <app:PhysicalName>10FT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_3Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 3 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:802554c9-81cc-4199-9bdc-49312cec7968</app:SemanticID>
+            <app:DisplayName>3 metres</app:DisplayName>
+            <app:PhysicalName>3MTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Metre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of one metre.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6f978f5b-4446-405d-b0e4-73ae7065dbe3</app:SemanticID>
+            <app:DisplayName>Metre</app:DisplayName>
+            <app:PhysicalName>METRE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Yard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of a yard (0.9144 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a8ed1966-2504-4e8a-83ef-29417e77d562</app:SemanticID>
+            <app:DisplayName>Yard</app:DisplayName>
+            <app:PhysicalName>YARD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Foot">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of one foot (0.3048 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:88791f4d-517b-4965-808d-de58ae61b153</app:SemanticID>
+            <app:DisplayName>Foot</app:DisplayName>
+            <app:PhysicalName>FOOT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Inch">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of one inch (0.0254 metres).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:03ca6086-f76e-4839-be11-667aa5bd1517</app:SemanticID>
+            <app:DisplayName>Inch</app:DisplayName>
+            <app:PhysicalName>INCH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Centimetre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of 0.01 metre.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b4192a59-9627-43fc-8673-42f6d085e59a</app:SemanticID>
+            <app:DisplayName>Centimetre</app:DisplayName>
+            <app:PhysicalName>CM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Millimetre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A linear measure (distance, length) is defined to the precision of one millimetre.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:30140365-47aa-4a23-be73-0c2e69085500</app:SemanticID>
+            <app:DisplayName>Millimetre</app:DisplayName>
+            <app:PhysicalName>MM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="EllipseCentrePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The geometric centre of the Ellipse.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:de344aec-9da2-4382-9dd2-f93e3fd43618</app:SemanticID>
+        <app:ShortName>centrePoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="EllipseMajorAxisRadiusDimension" type="location:EllipseMajorAxisRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The largest distance from any point of the Ellipse to its centre point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c44fb24-f1ae-4624-84e8-0afaeb9883cd</app:SemanticID>
+        <app:ShortName>majorAxisRadiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>major axis radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="EllipseMajorAxisRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The largest distance from any point of the Ellipse to its centre point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c44fb24-f1ae-4624-84e8-0afaeb9883cd</app:SemanticID>
+        <app:ShortName>majorAxisRadiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>major axis radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="EllipseMinorAxisRadiusDimension" type="location:EllipseMinorAxisRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The shortest distance from any point of the Ellipse to its centre point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:90e99dcc-bd77-4e42-b917-206d4e6ed18c</app:SemanticID>
+        <app:ShortName>minorAxisRadiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>minor axis radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="EllipseMinorAxisRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The shortest distance from any point of the Ellipse to its centre point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:90e99dcc-bd77-4e42-b917-206d4e6ed18c</app:SemanticID>
+        <app:ShortName>minorAxisRadiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>minor axis radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="EllipseRotationAngle" type="location:EllipseRotationAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle of the major axis measured counter-clockwise from true east.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:988e16eb-a0f3-4a52-b0f7-8b491d837703</app:SemanticID>
+        <app:ShortName>rotationAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>rotation</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="EllipseRotationAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle of the major axis measured counter-clockwise from true east.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:988e16eb-a0f3-4a52-b0f7-8b491d837703</app:SemanticID>
+        <app:ShortName>rotationAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>rotation</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EllipseType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A planar Surface in the form of an ellipse.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fda15e1e-90b3-4944-9111-64941b2392d4</app:SemanticID>
+        <app:DisplayName>Ellipse</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:EllipseCentrePoint" />
+          <xsd:element ref="location:EllipseMajorAxisRadiusDimension" />
+          <xsd:element ref="location:EllipseMinorAxisRadiusDimension" />
+          <xsd:element ref="location:EllipseRotationAngle" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FanAreaMaximumRangeDimension" type="location:FanAreaMaximumRangeDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from the vertex to the outer ring of the ring sector used to specify the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f5d1f21-7caf-4497-9296-0c1099132e02</app:SemanticID>
+        <app:ShortName>maximumRangeDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>maximum range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanAreaMaximumRangeDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from the vertex to the outer ring of the ring sector used to specify the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f5d1f21-7caf-4497-9296-0c1099132e02</app:SemanticID>
+        <app:ShortName>maximumRangeDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>maximum range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="FanAreaMinimumRangeDimension" type="location:FanAreaMinimumRangeDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from the vertex to the inner ring of the ring sector used to specify the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84932fec-fd22-4f8c-92a4-2b23eb01bab9</app:SemanticID>
+        <app:ShortName>minimumRangeDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>minimum range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanAreaMinimumRangeDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from the vertex to the inner ring of the ring sector used to specify the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84932fec-fd22-4f8c-92a4-2b23eb01bab9</app:SemanticID>
+        <app:ShortName>minimumRangeDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>minimum range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="FanAreaOrientationAngle" type="location:FanAreaOrientationAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise between the line of true north and the left side of the sector of the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1742b410-f455-4a68-8914-25e100045097</app:SemanticID>
+        <app:ShortName>orientationAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>orientation</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanAreaOrientationAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise between the line of true north and the left side of the sector of the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1742b410-f455-4a68-8914-25e100045097</app:SemanticID>
+        <app:ShortName>orientationAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>orientation</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="FanAreaSectorSizeAngle" type="location:FanAreaSectorSizeAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise between the left and right sides of the sector of the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1d53a401-9864-4aea-b3cd-95947cc82388</app:SemanticID>
+        <app:ShortName>sectorSizeAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>sector size</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanAreaSectorSizeAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise between the left and right sides of the sector of the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1d53a401-9864-4aea-b3cd-95947cc82388</app:SemanticID>
+        <app:ShortName>sectorSizeAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>sector size</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="FanAreaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface that is in the form of a truncated ring sector, lying between and being bounded by the rays emanating from the centre-point of the ring and having a specified central angle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cf07d08b-93c2-47b7-8f3e-e6a44c980df8</app:SemanticID>
+        <app:DisplayName>Fan area</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:FanAreaMaximumRangeDimension" minOccurs="0" />
+          <xsd:element ref="location:FanAreaMinimumRangeDimension" />
+          <xsd:element ref="location:FanAreaOrientationAngle" />
+          <xsd:element ref="location:FanAreaSectorSizeAngle" />
+          <xsd:element ref="location:FanAreaVertexPoint" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FanAreaVertexPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The vertex of the FanArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2edfda7c-c135-4284-890c-0f36829dd4ff</app:SemanticID>
+        <app:ShortName>vertexPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>vertex point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FanSectorEndAngle" type="location:FanSectorEndAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the end angle of the FanSector.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3387742e-2474-4ac8-bd00-8670a34d9fe7</app:SemanticID>
+        <app:ShortName>endAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end angle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanSectorEndAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the end angle of the FanSector.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3387742e-2474-4ac8-bd00-8670a34d9fe7</app:SemanticID>
+        <app:ShortName>endAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end angle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="FanSectorRadiusDimension" type="location:FanSectorRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance between the fan sector and the centre point of a Sector Range.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3ac38d0a-892e-4b16-819c-e002b67585a2</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanSectorRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance between the fan sector and the centre point of a Sector Range.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3ac38d0a-892e-4b16-819c-e002b67585a2</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="FanSectorStartAngle" type="location:FanSectorStartAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the start angle of the FanSector.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f428c48-7f3a-47e4-971e-f375fa8d3eea</app:SemanticID>
+        <app:ShortName>startAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start angle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FanSectorStartAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the start angle of the FanSector.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f428c48-7f3a-47e4-971e-f375fa8d3eea</app:SemanticID>
+        <app:ShortName>startAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start angle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="FanSectorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A segment of a circle, where the centre is defined by the referring RangeSector.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7145168a-b905-4efd-a927-108f7ed90e14</app:SemanticID>
+        <app:DisplayName>Fan sector</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:FanSectorEndAngle" />
+          <xsd:element ref="location:FanSectorRadiusDimension" />
+          <xsd:element ref="location:FanSectorStartAngle" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="GeographicCoordinatePrecisionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum resolution used for the expression of the value of a geographical coordinate.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d5683ac2-572f-48e9-aff8-a574848a8ea8</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower precision than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Degree">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of a degree (60 minutes).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:32b795f1-d81e-4b3b-8518-fe7c6e6e1373</app:SemanticID>
+            <app:DisplayName>Degree</app:DisplayName>
+            <app:PhysicalName>DEGREE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_10thOfADegree">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/10 of a degree.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:88d2d2cc-3ec1-4a14-8e70-8d3e3e68d15d</app:SemanticID>
+            <app:DisplayName>1/10 degree</app:DisplayName>
+            <app:PhysicalName>DEG10</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Minute">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of a minute (60 seconds).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e4b55079-f930-49d5-a976-33e60c736a3f</app:SemanticID>
+            <app:DisplayName>Minute</app:DisplayName>
+            <app:PhysicalName>MINUTE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_10thOfAMinute">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/10 of a minute.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:71c3f37d-c3f3-413a-9203-c500c6776b8d</app:SemanticID>
+            <app:DisplayName>1/10 minute</app:DisplayName>
+            <app:PhysicalName>MN10</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Second">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of a second.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:99aba111-486a-45c7-9337-dc085fd5c38a</app:SemanticID>
+            <app:DisplayName>Second</app:DisplayName>
+            <app:PhysicalName>SECOND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_100thOfAMinute">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/100 of a minute (centiminute).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:01dc480b-3197-48e4-9bb3-7752a3c2db13</app:SemanticID>
+            <app:DisplayName>1/100 minute</app:DisplayName>
+            <app:PhysicalName>MN100</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_10thOfASecond">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/10 of a second.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a3777c8c-e126-4f92-80ad-501cecf0c635</app:SemanticID>
+            <app:DisplayName>1/10 second</app:DisplayName>
+            <app:PhysicalName>SEC10</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_1000thOfAMinute">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/1000 of a minute.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ba4ca8ec-c757-4f0c-8b2d-ef2edfe0b322</app:SemanticID>
+            <app:DisplayName>1/1000 minute</app:DisplayName>
+            <app:PhysicalName>MN1000</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_100thOfASecond">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/100 of a second.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cef36297-8964-4086-80cd-b9504ffb8573</app:SemanticID>
+            <app:DisplayName>1/100 second</app:DisplayName>
+            <app:PhysicalName>SEC100</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1_10000thOfAMinute">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Angular precision is expressed to the precision of 1/10000 of a minute.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:db4a85ab-8130-435c-bec0-c53ed6316fa5</app:SemanticID>
+            <app:DisplayName>1/10000 minute</app:DisplayName>
+            <app:PhysicalName>M10000</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="GeometricVolumeBottomBoundaryDistance" type="location:VerticalDistanceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The altitude or height of the lower level of the GeometricVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:61d03934-9d93-4c99-bd88-d3c1bd659c22</app:SemanticID>
+        <app:ShortName>bottomBoundaryDistance</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>bottom boundary height</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GeometricVolumeTopBoundaryDistance" type="location:VerticalDistanceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The altitude or height of the upper level of the GeometricVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1851d6ba-e5b3-4de5-9b4e-bdd024d88663</app:SemanticID>
+        <app:ShortName>topBoundaryDistance</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>top boundary height</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GeometricVolumeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A three-dimensional bounded space.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c924815a-e4ab-47a3-bdcc-07fdef62ff0a</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Geometric volume</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometryType">
+        <xsd:sequence>
+          <xsd:element ref="location:GeometricVolumeBottomBoundaryDistance" minOccurs="0" />
+          <xsd:element ref="location:GeometricVolumeTopBoundaryDistance" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="GeometryType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Measurements and relationships of lines, angles, etc. in a particular object or shape.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2f043bf9-022a-4026-9590-1317ff6e890b</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Geometry</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="GraphicType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A graphical representation of an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cf11aae2-5708-457b-b37a-53eac125980f</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Graphic</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometryType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LatitudeCoordinateCoordinate" type="location:LatitudeCoordinateCoordinateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle between the plane of the equator and a line perpendicular to the ellipsoid surface and passing through the given point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d40f494f-c553-4e08-a246-fe1045863263</app:SemanticID>
+        <app:ShortName>coordinate</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>coordinate</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>coordinate</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LatitudeCoordinateCoordinateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle between the plane of the equator and a line perpendicular to the ellipsoid surface and passing through the given point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d40f494f-c553-4e08-a246-fe1045863263</app:SemanticID>
+        <app:ShortName>coordinate</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>coordinate</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>coordinate</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="-90" />
+      <xsd:maxInclusive value="90" />
+      <xsd:fractionDigits value="7" />
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LatitudeCoordinatePrecisionCode" type="location:GeographicCoordinatePrecisionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The resolution used for the expression of the coordinate.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f074513-7c52-4683-bfe3-11fec5fe1fc7</app:SemanticID>
+        <app:ShortName>precisionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>precision</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LatitudeCoordinateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle, defined with a specific resolution, between the plane of the equator and a line perpendicular to the ellipsoid surface and passing through a given point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9f60395a-c99a-47df-a265-63b7292b05fa</app:SemanticID>
+        <app:DisplayName>Latitude coordinate</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:LatitudeCoordinateCoordinate" />
+          <xsd:element ref="location:LatitudeCoordinatePrecisionCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LinePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ordered sequence of Points used to define the Line.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:23bd3471-85f9-4bd3-9c9a-7a9ba66dfe61</app:SemanticID>
+        <app:ShortName>point</app:ShortName>
+        <app:ValueOrAmplification>2</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LineType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Location that is defined by two or more Points connected by one-dimensional line segments in an ordered sequence.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f4340665-cee4-4ba0-9e2a-7d5701f46718</app:SemanticID>
+        <app:Remarks>In order to determine the left/right side of the line, the points have to be traversed in ascending order.</app:Remarks>
+        <app:DisplayName>Line</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometryType">
+        <xsd:sequence>
+          <xsd:element ref="location:LinePoint" minOccurs="2" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LocationGeometry" type="location:GeometryType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The properties and relations of points, lines, surfaces, and geometric volumes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:728681b3-2f46-4296-854b-034654800ab5</app:SemanticID>
+        <app:ShortName>geometry</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>geometry</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LocationHorizontalAccuracyDimension" type="location:LocationHorizontalAccuracyDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The uncertainty in the horizontal plane in terms of probable circular error for the Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f8d916ce-9a68-4e54-b400-94a26b542675</app:SemanticID>
+        <app:ShortName>horizontalAccuracyDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>horizontal accuracy</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LocationHorizontalAccuracyDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The uncertainty in the horizontal plane in terms of probable circular error for the Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f8d916ce-9a68-4e54-b400-94a26b542675</app:SemanticID>
+        <app:ShortName>horizontalAccuracyDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>horizontal accuracy</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LocationMeaningCode" type="location:LocationMeaningCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The meaning of the Location as it pertains to an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:96855091-5f5b-4dad-ad0a-331111738c60</app:SemanticID>
+        <app:ShortName>meaningCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>meaning</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LocationMeaningCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The meaning of a Location geometry as it pertains to an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:86a4bf9f-7089-42fe-8a7a-e10fda0ee41c</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AddresseesPosition">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The position of the addressee.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b9db30eb-b748-44c7-8f97-13a8420a9314</app:SemanticID>
+            <app:DisplayName>Addressee’s position</app:DisplayName>
+            <app:PhysicalName>ADRPOS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AssociationWithCommandPost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Location (as a Point) of the Organisation is the same as that of its command post.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d9c3dd84-b1ce-4658-8ddd-8b41e1a96d5b</app:SemanticID>
+            <app:DisplayName>Association with command post</app:DisplayName>
+            <app:PhysicalName>ASSCP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AutomatedDerivationCentreOfMass">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The mean position (as a Point) of the Object. It is calculated by automated means.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:37369e26-d2ec-4090-8493-1e0c386af8e3</app:SemanticID>
+            <app:DisplayName>Centre of mass (automated derivation)</app:DisplayName>
+            <app:PhysicalName>COM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CentreFrontOfForceOrConvoy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The position in the centre of the front line of a force or convoy when the convoy is not in circular formation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:65707530-6135-49f4-8c20-c26bda214e14</app:SemanticID>
+            <app:DisplayName>Centre front of force/convoy</app:DisplayName>
+            <app:PhysicalName>CTRMNB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CommanderDetermined">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The position (as a Point) of the Object in accordance to criteria specified by competent authority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:631ea44d-ce9f-4e78-a93b-c4d557dd5ac5</app:SemanticID>
+            <app:DisplayName>Commander determined</app:DisplayName>
+            <app:PhysicalName>CMDDET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DispositionCentre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The central position of a maritime force disposition.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f9341efb-195c-4960-9e0e-7b3feedd08ca</app:SemanticID>
+            <app:DisplayName>Disposition centre</app:DisplayName>
+            <app:PhysicalName>DSPCTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FormationCentre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The central point of a maritime force formation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2974d88f-6501-41bd-ada0-35dcec7ab5a6</app:SemanticID>
+            <app:DisplayName>Formation centre</app:DisplayName>
+            <app:PhysicalName>FRMCTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LineOfBearing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The direction from an observer to the Object. The direction is specified by means of FanArea geometry using the observer’s position as the vertex.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ca9b0578-4e3d-4dc1-a74e-56433b97b9fa</app:SemanticID>
+            <app:DisplayName>Line of bearing</app:DisplayName>
+            <app:PhysicalName>LNBRNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ManualDerivationCentreOfMass">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The mean position (as a Point) of the Object. It is derived by manual means.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:771a9f55-b789-43db-93d6-07a7809fc156</app:SemanticID>
+            <app:DisplayName>Centre of mass (manual derivation)</app:DisplayName>
+            <app:PhysicalName>CEOFMA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OriginatorsLocation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Originator's position.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b086ce68-6a13-4fe7-b493-11e3379a9bc9</app:SemanticID>
+            <app:DisplayName>Originator’s location</app:DisplayName>
+            <app:PhysicalName>ORGPOS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PositionOfIntendedMovement">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The pre-planned movement of a unit or force between designated points detailed by either time, position, course and speed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e601b089-4f2a-47b0-9609-09dc4b1d0a7c</app:SemanticID>
+            <app:DisplayName>Position of intended movement</app:DisplayName>
+            <app:PhysicalName>POSOIM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Shape">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The external geometry of an Object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8bb81fb9-6ed1-4352-8d83-3830227862b6</app:SemanticID>
+            <app:DisplayName>Shape</app:DisplayName>
+            <app:PhysicalName>SHAPE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sounding">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A spot depth or drying height that has been referenced to a vertical datum.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:064c7c11-0812-41a8-8278-40378e1b249d</app:SemanticID>
+            <app:DisplayName>Sounding</app:DisplayName>
+            <app:PhysicalName>SOUND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StandardPositionEstabByOTC">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The position designated by the OTC in which all positional reports are to be based upon.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a07a4144-ba31-4a2d-bbc6-d725030e3f07</app:SemanticID>
+            <app:DisplayName>Standard position estab by OTC</app:DisplayName>
+            <app:PhysicalName>STDPOS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LocationName" type="location:LocationNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:417668b7-ec89-4abe-90f6-9159b8dce539</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LocationNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:417668b7-ec89-4abe-90f6-9159b8dce539</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="20" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LocationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A position and geometry with respect to a horizontal frame of reference and a vertical distance measured from a specified datum.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c9164dc3-1dfe-433d-be3c-6329610f2d7c</app:SemanticID>
+        <app:DisplayName>Location</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:LocationGeometry" minOccurs="0" />
+          <xsd:element ref="location:LocationHorizontalAccuracyDimension" minOccurs="0" />
+          <xsd:element ref="location:LocationMeaningCode" minOccurs="0" />
+          <xsd:element ref="location:LocationName" minOccurs="0" />
+          <xsd:element ref="location:LocationVerticalAccuracyDimension" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LocationVerticalAccuracyDimension" type="location:LocationVerticalAccuracyDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The uncertainty in terms of probable error range for the vertical axis of the Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7462272b-411e-40e7-a751-2a877c746a87</app:SemanticID>
+        <app:ShortName>verticalAccuracyDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>vertical accuracy</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LocationVerticalAccuracyDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The uncertainty in terms of probable error range for the vertical axis of the Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7462272b-411e-40e7-a751-2a877c746a87</app:SemanticID>
+        <app:ShortName>verticalAccuracyDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>vertical accuracy</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LongitudeCoordinateCoordinate" type="location:LongitudeCoordinateCoordinateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle between the initial (zero or Greenwich) meridian and the meridian of the given point measured in the plane of the Equator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4a91cb30-6e75-4bc4-85a9-e451652961ed</app:SemanticID>
+        <app:ShortName>coordinate</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>coordinate</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>coordinate</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LongitudeCoordinateCoordinateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle between the initial (zero or Greenwich) meridian and the meridian of the given point measured in the plane of the Equator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4a91cb30-6e75-4bc4-85a9-e451652961ed</app:SemanticID>
+        <app:ShortName>coordinate</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>coordinate</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>coordinate</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="-180" />
+      <xsd:maxInclusive value="180" />
+      <xsd:fractionDigits value="7" />
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LongitudeCoordinatePrecisionCode" type="location:GeographicCoordinatePrecisionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The resolution used for the expression of the coordinate.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a7499804-9667-4850-934a-2e90274945cc</app:SemanticID>
+        <app:ShortName>precisionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>precision</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LongitudeCoordinateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The angle, defined with a specific resolution, between the initial (zero or Greenwich) meridian and the meridian of a given point measured in the plane of the Equator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:278df291-3706-46c7-8b74-fcce19f3eb75</app:SemanticID>
+        <app:DisplayName>Longitude coordinate</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:LongitudeCoordinateCoordinate" />
+          <xsd:element ref="location:LongitudeCoordinatePrecisionCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MultiPointCategoryCode" type="location:MultiPointCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The shape specified by the MultiPoint.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e8ce3371-f34c-46a2-82c5-0ebbc844a1dd</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MultiPointCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The shape of the MultiPoint.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3df3135d-f817-4e92-97d6-3435436a499b</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Arrow3To50Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies an arrow-shaped symbol defined by three to fifty anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0f665499-bf36-4b91-b752-923e34fe7869</app:SemanticID>
+            <app:Remarks>The graphic is decorated around multiple line segments.
+
+	* Point 1 defines the head of the arrow.
+	* Points 2 to (N-1) define the multiple line segments.
+	* Point N defines the left-most point of the arrow head.
+
+The minimum distance between point N and the line segment between points 1 and 2 defines the width of the arrow.</app:Remarks>
+            <app:DisplayName>Arrow (3 to 50 points)</app:DisplayName>
+            <app:PhysicalName>ARR350</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AxisSymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies an axis-based graphic defined by two anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:deab456d-e8cb-45ca-b6df-4da28558c440</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two side line segments equally distanced from an imaginary line segment.
+
+* Points 1 and 2 define both ends of the imaginary line segment.
+* Point 3 defines a point on one of the two line segments, thereby defining the distance between the side line segments and the imaginary line segment.</app:Remarks>
+            <app:DisplayName>Axis symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>AXS2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BArrow4Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a B-arrow-based graphic defined by four anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b9addf3a-0981-4ae0-afef-3a22a1280eea</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a line segment attached to a 180 degrees arc arrow.
+
+	* Point 1 defines the beginning of the line segment.
+	* Point 2 defines the end of the line segment and the start of the arrow arc.
+	* Point 3 defines the end of the head of the arrow arc.
+	* Point 4 defines the middle of the arrow arc.
+
+Points 1, 2 and 3 form a straight line.</app:Remarks>
+            <app:DisplayName>B-arrow (4 points)</app:DisplayName>
+            <app:PhysicalName>BAR2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CurvedArrow2Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a curve-based arrow symbol defined by two anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2a0d8ac4-1e4a-408c-8192-a96db2fec955</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a 330 degrees arc-shaped arrow.
+
+	* Point 1 defines the centre of the curved arrow.
+	* Point 2 defines the end of the curved arrow.
+
+The head of the arrow is on the other end of the 330 degrees curve.</app:Remarks>
+            <app:DisplayName>Curved arrow (2 points)</app:DisplayName>
+            <app:PhysicalName>CAR2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CurvedArrow3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a curve-based arrow symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0520beba-da02-4cf1-a7af-687609542e43</app:SemanticID>
+            <app:Remarks>The graphic is decorated around an arc-shaped arrow.
+
+	* Point 1 defines the end of the curved arrow.
+	* Point 2 defines the head of the curved arrow.
+	* Point 3 defines the point in the middle of the curved arrow.</app:Remarks>
+            <app:DisplayName>Curved arrow (3 points)</app:DisplayName>
+            <app:PhysicalName>CAR3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CurvedArrow4Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a curve-based arrow symbol attached to a circle, defined by four anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7fc9bb55-1a49-40b1-b55c-c84cb98a78d2</app:SemanticID>
+            <app:Remarks>* Point 1 defines the centre of the circle.
+	* Point 2 defines the end of the curved arrow, which is also a point on the circle.
+	* Point 3 defines the point in the middle of the curved arrow.
+	* Point 4 defines the head of the curved arrow.</app:Remarks>
+            <app:DisplayName>Curved arrow (4 points)</app:DisplayName>
+            <app:PhysicalName>CAR4PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DSymbol2Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a 180 degrees closed arc-based symbol defined by two anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b3b14b52-213e-45ee-a914-53e8a023e8ef</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a 180 degrees closed arc.
+
+	* Point 1 defines the right end of the 180 degrees closed arc.
+	* Point 2 defines the left end of the 180 degrees closed arc.
+
+The diameter of the arc is the distance between the points.</app:Remarks>
+            <app:DisplayName>D symbol (2 points)</app:DisplayName>
+            <app:PhysicalName>D2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DoubleArrow3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a double-arrow shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5f566653-0f18-4b37-9fc6-29ef3eb598b9</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two arrows originating a centre.
+
+	* Point 1 defines the centre.
+	* Points 2 and 3 define the heads of both arrows.
+
+The lengths of both arrows may differ.</app:Remarks>
+            <app:DisplayName>Double arrow (3 points)</app:DisplayName>
+            <app:PhysicalName>DBA3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DoubleArrow4Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a double-arrow shaped symbol defined by four anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:001b028d-c594-4cc6-abd8-586a4da94887</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two arrows.
+
+	* Point 1 defines the head of first arrow.
+	* Point 2 defines the end of the first arrow.
+	* Point 3 defines the end of the second arrow.
+	* Point 4 defines the head of the second arrow.
+
+The lengths of both arrows may differ.</app:Remarks>
+            <app:DisplayName>Double arrow (4 points)</app:DisplayName>
+            <app:PhysicalName>DBA4PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DoubleOSymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a symbol with two circles defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:42583c31-4841-49a5-bb10-0bb6841c7cc7</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two circles.
+
+	* Point 1 defines the centre of both circles.
+	* Point 2 defines a point on the inner circle.
+	* Point 3 defines a point on the outer circle.</app:Remarks>
+            <app:DisplayName>Double-O symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>DBO3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IArrow2Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies an arrow-shaped symbol defined by two anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:08b442d6-8772-4bc8-9c57-691501fa3211</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a single line segment.
+
+* Point 1 defines the head of the arrow.
+* Point 2 defines the end of the arrow.</app:Remarks>
+            <app:DisplayName>|-arrow (2 points)</app:DisplayName>
+            <app:PhysicalName>IAR2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IISymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a ][-shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4f13854c-2353-4e73-a2b2-85f4bca0d4b4</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two parallel line segments of identical length.
+
+* Points 1 and 2 define the first line segment.
+* Point 3 defines a point on the second line segment.</app:Remarks>
+            <app:DisplayName>][ symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>II3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IISymbol4Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a ][-shaped symbol defined by four anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:562bea9a-126c-4d47-9e31-9b41fb6c82b5</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two line segments defined by 4 anchor points.
+
+	* Points 1 and 2 define the first line segment.
+	* Points 3 and 4 define the ends of the second line segment.
+
+The line segments may not intersect; they do not have to be parallel to each other.</app:Remarks>
+            <app:DisplayName>][ symbol (4 points)</app:DisplayName>
+            <app:PhysicalName>II4PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ISymbol2Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a |-shaped symbol defined by two anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c81b7e2b-b19f-4f40-a0a2-29dea0bd1f76</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a single line segment.
+Points 1 and 2 define the ends of the line segment.</app:Remarks>
+            <app:DisplayName>| symbol (2 points)</app:DisplayName>
+            <app:PhysicalName>I2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JArrow3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a J-shaped arrow symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dc66b978-3e1c-4698-afc8-985f1e69a664</app:SemanticID>
+            <app:Remarks>The graphic is decorated around an arrow line segment attached to a 180 degrees arc.
+
+	* Point 1 defines the head of the arrow line segment.
+	* Point 2 defines the tail end of the arrow line segment and the beginning of the arc.
+	* Point 3 defines the end of the 180 degrees arc.
+
+The angle between the imaginary line segment from point 2 to 3 and the arrow line segment is 90 degrees.</app:Remarks>
+            <app:DisplayName>J-arrow (3 points)</app:DisplayName>
+            <app:PhysicalName>JAR3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JSymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a J-shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2b599c1e-8a57-410a-b3b6-0660f3eaee48</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a line segment attached to a 180 degrees arc.
+
+	* Point 1 defines the beginning of the line segment.
+	* Point 2 defines the end of the line segment and the beginning of the arc.
+	* Point 3 defines the end of the 180 degrees arc.
+
+The angle between the imaginary line segment from point 2 to 3 and the line segment is 90 degrees.</app:Remarks>
+            <app:DisplayName>J symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>J3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LSymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies an L-shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:94eb3e51-bafb-41a4-bc35-8353c6276e2d</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two line segments.
+
+* Point 1 defines the beginning of the first line segment.
+* Point 2 defines the end of the first line segment and the beginning of the second line segment.
+* Point 3 defines the end of the second line segment.
+
+The angle between both line segments is 90 degrees.</app:Remarks>
+            <app:DisplayName>L symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>L3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SArrow3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies an S-shaped arrow defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:db9e657f-bbde-482e-a43d-a6d1f849dbec</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two parallel line segments connected to each other via two 90 degrees arcs that form an "S" shape.
+
+* Point 1 defines the end of the arrow.
+* Point 2 defines the middle of the 'S', i.e., the ends of the two arcs.
+* Point 3 defines the head of the arrow.
+
+The distance between points 1 and 3 must be large enough to draw the two 90 degrees arcs.</app:Remarks>
+            <app:DisplayName>S-arrow (3 points)</app:DisplayName>
+            <app:PhysicalName>SAR3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TArrow3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a T-shaped arrow defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9b21480f-4f3a-4a22-b01b-58559d42803e</app:SemanticID>
+            <app:Remarks>The graphic is decorated around an arrow line segment originating from the centre of a base line segment.
+
+	* Point 1 defines the head of the arrow.
+	* Points 2 and 3 define the ends of the base line segment of the arrow.
+
+The arrow originates from the centre of the base line segment. The angle between the arrow and the base is 90 degrees.</app:Remarks>
+            <app:DisplayName>T-arrow (3 points)</app:DisplayName>
+            <app:PhysicalName>TAR3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TSymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a T-shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6eb7c572-2c99-4202-b880-eea34c756e54</app:SemanticID>
+            <app:Remarks>The graphic is decorated around line segments at a 90 degrees angle.
+
+	* Points 1 and 2 define the ends of the top line segment.
+	* Point 3 defines the end of the line segment connected to the centre of the top line segment.
+
+The angle between both line segments is 90 degrees.</app:Remarks>
+            <app:DisplayName>T symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>T3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TailedArrow2Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a tailed arrow defined by two anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8c5b3958-9222-4608-a32e-e32ddbeb1c88</app:SemanticID>
+            <app:Remarks>The graphic is decorated around a tailed arrow.
+
+	* Point 1 defines the head of the arrow.
+	* Point 2 defines the left point of the tail of the arrow.</app:Remarks>
+            <app:DisplayName>Tailed arrow (2 points)</app:DisplayName>
+            <app:PhysicalName>TDA2PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UArrow4Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a U-shaped arrow symbol defined by four anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:29464477-8509-45cb-8cc4-67cde50a04b7</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two straight arrows originating from the ends of a base line segment.
+
+	* Point 1 defines the end of the first straight arrow.
+	* Point 2 defines the end of the second straight arrow.
+	* Point 3 defines the head of the first straight arrow.
+	* Point 4 defines the head of the second straight arrow.
+
+The points 1 and 2 shall be connected by a line segment. The lengths of the two arrows may be different; they are likely not parallel to each other.</app:Remarks>
+            <app:DisplayName>U-arrow (4 points)</app:DisplayName>
+            <app:PhysicalName>UAR4PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="USymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a U-shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6a21f0f0-f8fe-4bcb-9331-e529122a6b52</app:SemanticID>
+            <app:Remarks>The graphic is decorated around three line segments.
+
+	* Points 1 and 2 define the ends of two line segments connected to a base line segment.
+	* Point 3 defines the centre of the base line segment.
+
+The angle between all the connecting line segments is 90 degrees. The lengths of both line segments connected to the base line segment are equal.</app:Remarks>
+            <app:DisplayName>U symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>U3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="USymbol4Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a U-shaped symbol defined by four anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:60d75648-4d17-433a-9ba3-4ee4443c6de5</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two line segments connected by a smooth curve.
+
+	* Point 1 defines the start of the first line segment.
+	* Point 2 defines the end of the first line segment.
+	* Point 3 defines the start of the second line segment.
+	* Point 4 defines the end of the second line segment.
+
+The points 2 and 3 shall be connected by a smooth, curved line. The lengths of the two line segments may be different; they need not be parallel to each other.</app:Remarks>
+            <app:DisplayName>U symbol (4 points)</app:DisplayName>
+            <app:PhysicalName>U4PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VSymbol3Points">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MultiPoint specifies a V-shaped symbol defined by three anchor points.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:64e6fba1-6046-4631-8aaf-dca44e9141dd</app:SemanticID>
+            <app:Remarks>The graphic is decorated around two connected line segments.
+
+	* Point 1 defines the centre of the V.
+	* Points 2 and 3 define the ends of both line segments connected to the centre (point 1).
+
+The two line segments may have different lengths.</app:Remarks>
+            <app:DisplayName>V symbol (3 points)</app:DisplayName>
+            <app:PhysicalName>V3PT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MultiPointPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An ordered set of anchor points.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0d84844a-2092-4543-ba72-cbdc78b85a48</app:SemanticID>
+        <app:ShortName>point</app:ShortName>
+        <app:ValueOrAmplification>2</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MultiPointType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A set of ordered points that are used as anchor points for a specific graphical representation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ce23f749-d8ef-4a7a-ab25-97eb7329a2b1</app:SemanticID>
+        <app:DisplayName>Multipoint</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GraphicType">
+        <xsd:sequence>
+          <xsd:element ref="location:MultiPointCategoryCode" />
+          <xsd:element ref="location:MultiPointPoint" minOccurs="2" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OrbitAreaAlignmentCode" type="location:OrbitAreaAlignmentCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The placement of the OrbitArea with respect to its defining reference axis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:726a566e-889b-4a9c-a39b-9417e51fbff9</app:SemanticID>
+        <app:ShortName>alignmentCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>alignment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OrbitAreaAlignmentCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The placement of an OrbitArea with respect to its defining reference axis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ed15aa22-f7be-4b14-99e0-ff4c64a82f38</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Centre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The sides of the OrbitArea are equidistant from the reference axis.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:65944291-f4ae-4f31-b1c0-f7f932123c54</app:SemanticID>
+            <app:DisplayName>Centre</app:DisplayName>
+            <app:PhysicalName>CENTRE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Left">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The right side of the OrbitArea coincides with the reference axis.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d6551a8b-6abd-44c6-a943-7eb798dbb859</app:SemanticID>
+            <app:DisplayName>Left</app:DisplayName>
+            <app:PhysicalName>LEFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Right">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The left side of the OrbitArea coincides with the reference axis.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d9f500e5-3a2e-4c1f-9e6a-6f2241a29e3f</app:SemanticID>
+            <app:DisplayName>Right</app:DisplayName>
+            <app:PhysicalName>RIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrbitAreaFirstPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The initial Point of the axis of the OrbitArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5b1f4bf8-a9bf-4fd7-8136-8a44b688f050</app:SemanticID>
+        <app:ShortName>firstPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>first point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrbitAreaSecondPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The final Point of the axis of the OrbitArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b0ef9216-3e25-4320-b366-89379764a320</app:SemanticID>
+        <app:ShortName>secondPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>second point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrbitAreaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface that is (a) an open rectangular section defined by its width and the distance between the two specific Points, (b) is closed by two half-circles with radii equal to half the width, and is positioned left, centred, or right with respect to the line formed by the defining points.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:605affb8-bcd9-4cd9-b007-469055cb66e0</app:SemanticID>
+        <app:DisplayName>Orbit area</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:OrbitAreaAlignmentCode" />
+          <xsd:element ref="location:OrbitAreaFirstPoint" />
+          <xsd:element ref="location:OrbitAreaSecondPoint" />
+          <xsd:element ref="location:OrbitAreaWidthDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OrbitAreaWidthDimension" type="location:OrbitAreaWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance measured from side to side for the OrbitArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b063bd0c-da0c-4e14-b2a0-5c370d0be5ef</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OrbitAreaWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance measured from side to side for the OrbitArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b063bd0c-da0c-4e14-b2a0-5c370d0be5ef</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="12" />
+      <xsd:maxInclusive value="999999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrientationBankAngle" type="location:AngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement in the local vertical plane orthogonal to the heading, from the local vertical axis to the lateral axis of the object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4f3fd5c3-98eb-4b87-a9e4-2926a3a3ef28</app:SemanticID>
+        <app:ShortName>bankAngle</app:ShortName>
+        <app:Remarks>A positive value means that the left side is higher than the right one; a negative value means the left side is lower than the right one.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>bank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrientationElevationAngle" type="location:AngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement in the local vertical plane containing the heading, from the local horizontal axis to the direction faced by the object (longitudinal axis).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d4504086-2f19-422f-8788-7a35c1e79e16</app:SemanticID>
+        <app:ShortName>elevationAngle</app:ShortName>
+        <app:Remarks>A positive value means that the front of the object is vertically upward; a negative value means that the front is downward.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>elevation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrientationHeadingAngle" type="location:AngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement in the local horizontal plane of the object, clockwise from the line of true north to the projection in the local horizontal plane of the direction faced by the object (longitudinal axis).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2de27f5a-38c2-447c-bedc-c18008b297d2</app:SemanticID>
+        <app:ShortName>headingAngle</app:ShortName>
+        <app:Remarks>The angle increases clockwise from the centre line. Zero degrees denotes true north, 90 degrees east, 180 degrees south, and 270 degrees west.
+In specific domains, the term 'bearing' is used instead of 'heading'. In ballistics, the term 'azimuth' may sometimes be used instead of 'heading'.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>heading</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrientationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The inclination of the three principal axes of an Object (longitudinal, lateral, and vertical axes) with respect to the geographic coordinate system centred on Earth used as a reference.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:60adc437-9e4f-4978-bcfb-81dbde68a847</app:SemanticID>
+        <app:DisplayName>Orientation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:OrientationBankAngle" minOccurs="0" />
+          <xsd:element ref="location:OrientationElevationAngle" minOccurs="0" />
+          <xsd:element ref="location:OrientationHeadingAngle" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PointType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A zero dimensional Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:122f7d1b-0807-4191-84f9-7e313678cc57</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometryType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PolyarcAreaArcRadiusDimension" type="location:PolyarcAreaArcRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from the vertex to the ring sector used to define part of the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c61098d3-e6d0-4ffc-9611-9f7848db58a3</app:SemanticID>
+        <app:ShortName>arcRadiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>arc radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PolyarcAreaArcRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance from the vertex to the ring sector used to define part of the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c61098d3-e6d0-4ffc-9611-9f7848db58a3</app:SemanticID>
+        <app:ShortName>arcRadiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>arc radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PolyarcAreaBearingOriginPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The origin for the bearing angles that define the arch of the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8de17c50-be88-4abc-ac97-fd7373988b53</app:SemanticID>
+        <app:ShortName>bearingOriginPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>bearing origin point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PolyarcAreaBeginBearingAngle" type="location:PolyarcAreaBeginBearingAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the left side of a horizontal conical section used in defining the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4711fdb3-9e7a-4cad-afc3-41079e8c1bab</app:SemanticID>
+        <app:ShortName>beginBearingAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>begin bearing</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PolyarcAreaBeginBearingAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the left side of a horizontal conical section used in defining the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4711fdb3-9e7a-4cad-afc3-41079e8c1bab</app:SemanticID>
+        <app:ShortName>beginBearingAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>begin bearing</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PolyarcAreaBoundaryPartLine" type="location:LineType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Line used to define part of the boundary.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8aa44c64-d7c6-4213-8fdf-0009accfdb0c</app:SemanticID>
+        <app:ShortName>boundaryPartLine</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>boundary part line</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PolyarcAreaEndBearingAngle" type="location:PolyarcAreaEndBearingAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the right side of a horizontal conical section used in defining the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3a50890-1798-4073-b4b3-4cfe25de38e5</app:SemanticID>
+        <app:ShortName>endBearingAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end bearing</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PolyarcAreaEndBearingAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from true North to the right side of a horizontal conical section used in defining the PolyarcArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3a50890-1798-4073-b4b3-4cfe25de38e5</app:SemanticID>
+        <app:ShortName>endBearingAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end bearing</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PolyarcAreaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface that consists of a circular arc and a polygonal segment defined by a Line whose beginning coincides with the initial point of the arc and whose end coincides with the last point of the arc.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7d02f396-dff7-4776-9e12-2ea984595c38</app:SemanticID>
+        <app:DisplayName>Polyarc area</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:PolyarcAreaArcRadiusDimension" />
+          <xsd:element ref="location:PolyarcAreaBearingOriginPoint" />
+          <xsd:element ref="location:PolyarcAreaBeginBearingAngle" />
+          <xsd:element ref="location:PolyarcAreaBoundaryPartLine" />
+          <xsd:element ref="location:PolyarcAreaEndBearingAngle" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PolygonAreaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface that has its boundaries defined by a sequence of line segments.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a9198101-9748-4baf-9818-f303f38ed6be</app:SemanticID>
+        <app:DisplayName>Polygon area</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:PolygonAreaVertexPoint" minOccurs="3" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PolygonAreaVertexPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The boundary of the PolygonArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0bac9725-5aec-49e5-a4a1-b420ca598ce2</app:SemanticID>
+        <app:ShortName>vertexPoint</app:ShortName>
+        <app:Remarks>The bounding line is defined by an ordered sequence of line segments (closed polygonal path). The line segments are defined by the order of the Points in the sequence. The first and the last point form a line segment as well.</app:Remarks>
+        <app:ValueOrAmplification>3</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>vertex point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RangeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface defined by one or more fan sectors or concentric areas.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c2de29f2-6caa-4cfb-82e9-22c58d1a8164</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RectangleByCentreCentrePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The centre of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f0ea3bb8-25d1-4a4d-93d0-2790195045ba</app:SemanticID>
+        <app:ShortName>centrePoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RectangleByCentreHeightDimension" type="location:RectangleByCentreHeightDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The height of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b8bb123c-3fc3-4572-8fff-7fa862d103f5</app:SemanticID>
+        <app:ShortName>heightDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>height</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RectangleByCentreHeightDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The height of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b8bb123c-3fc3-4572-8fff-7fa862d103f5</app:SemanticID>
+        <app:ShortName>heightDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>height</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RectangleByCentreOrientationAngle" type="location:RectangleByCentreOrientationAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement counter-clockwise between the line of true north and the left side of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7cfbaaf1-49d7-4dbd-bfad-25d322b41f35</app:SemanticID>
+        <app:ShortName>orientationAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>orientationAngle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RectangleByCentreOrientationAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement counter-clockwise between the line of true north and the left side of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7cfbaaf1-49d7-4dbd-bfad-25d322b41f35</app:SemanticID>
+        <app:ShortName>orientationAngle</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>orientationAngle</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RectangleByCentreType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A rectangle defined by its centre, its height, its width, and its orientation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dfdf4e10-2744-4d4f-93bf-35b859825ecb</app:SemanticID>
+        <app:DisplayName>Rectangle by centre</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:RectangleType">
+        <xsd:sequence>
+          <xsd:element ref="location:RectangleByCentreCentrePoint" />
+          <xsd:element ref="location:RectangleByCentreHeightDimension" />
+          <xsd:element ref="location:RectangleByCentreOrientationAngle" />
+          <xsd:element ref="location:RectangleByCentreWidthDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RectangleByCentreWidthDimension" type="location:RectangleByCentreWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The width of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:682d42b0-92ef-455a-a57b-f5edea5ed069</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RectangleByCentreWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The width of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:682d42b0-92ef-455a-a57b-f5edea5ed069</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RectangleByEdgesMiddlePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The middle of the two opposite sides of the Rectangle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c720d64-632e-4d0b-8dab-4eecb9c13431</app:SemanticID>
+        <app:ShortName>middlePoint</app:ShortName>
+        <app:ValueOrAmplification>2</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>corner point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RectangleByEdgesType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Rectangle defined by the middle of two opposite sides and its width.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4bfed303-4f85-44c3-97b0-b9b361889292</app:SemanticID>
+        <app:DisplayName>Rectangle by edges</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:RectangleType">
+        <xsd:sequence>
+          <xsd:element ref="location:RectangleByEdgesMiddlePoint" minOccurs="2" maxOccurs="2" />
+          <xsd:element ref="location:RectangleByEdgesWidthDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RectangleByEdgesWidthDimension" type="location:RectangleByEdgesWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The length of the two opposite sides for which the middle points are specified.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:058d9f56-656b-419f-bba8-86038b99a17c</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RectangleByEdgesWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The length of the two opposite sides for which the middle points are specified.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:058d9f56-656b-419f-bba8-86038b99a17c</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="99999999.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RectangleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A quadrilateral with 4 right angles.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8bff065c-513f-4b98-836c-c27f71cd82ca</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Rectangle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SectorRangeCentrePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The centre of the SectorRange.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f981f51b-9aa5-49ec-b4bd-5e69c0415794</app:SemanticID>
+        <app:ShortName>centrePoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SectorRangeFanSector" type="location:FanSectorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The fan sectors of the SectorRange with ascending radius.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:33d4d843-94ea-4cce-ac61-8fb3ddd4d93f</app:SemanticID>
+        <app:ShortName>fanSector</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>fan sector</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SectorRangeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Range defined by fan sectors.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8b1dea11-8728-40f8-b9cd-86cb4d6256bf</app:SemanticID>
+        <app:DisplayName>Sector range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:RangeType">
+        <xsd:sequence>
+          <xsd:element ref="location:SectorRangeCentrePoint" />
+          <xsd:element ref="location:SectorRangeFanSector" maxOccurs="4" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SpeedAccuracyMeasure" type="location:SpeedAccuracyMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The uncertainty range in the estimate for the speed of an Object, where the speed estimate falls at the centre of the accuracy range.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:51e95974-1ccf-491a-87ca-8a852dbd4e41</app:SemanticID>
+        <app:ShortName>accuracyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>accuracy</app:DisplayName>
+        <app:UnitOfMeasure>kilometre per hour (km/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SpeedAccuracyMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The uncertainty range in the estimate for the speed of an Object, where the speed estimate falls at the centre of the accuracy range.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:51e95974-1ccf-491a-87ca-8a852dbd4e41</app:SemanticID>
+        <app:ShortName>accuracyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>accuracy</app:DisplayName>
+        <app:UnitOfMeasure>kilometre per hour (km/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="9999.9999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SpeedMeasuredSpeed" type="location:SpeedMeasuredSpeedType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The motion of the Object in terms of distance per unit time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfe645b2-e074-4278-901e-c9c051df798c</app:SemanticID>
+        <app:ShortName>measuredSpeed</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>measured speed</app:DisplayName>
+        <app:UnitOfMeasure>kilometre per hour (km/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SpeedMeasuredSpeedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The motion of the Object in terms of distance per unit time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfe645b2-e074-4278-901e-c9c051df798c</app:SemanticID>
+        <app:ShortName>measuredSpeed</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>measured speed</app:DisplayName>
+        <app:UnitOfMeasure>kilometre per hour (km/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="9999.9999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SpeedPrecisionCode" type="generic:SpeedPrecisionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum resolution used for the expression of speed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2aac2702-73d4-4fae-bf66-e1830f0d2d74</app:SemanticID>
+        <app:ShortName>precisionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>precision</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SpeedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The motion of an Object in terms of distance per unit time, measured with a range of uncertainty and a maximum resolution.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5318f9e-5da5-45c1-93e2-f6b2f4ab1653</app:SemanticID>
+        <app:DisplayName>Speed</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:SpeedAccuracyMeasure" minOccurs="0" />
+          <xsd:element ref="location:SpeedMeasuredSpeed" />
+          <xsd:element ref="location:SpeedPrecisionCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SphereVolumeCentrePoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The centre of the SphereVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b236b3fe-0dc8-46ce-b025-508d2c093c5b</app:SemanticID>
+        <app:ShortName>centrePoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>centre point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SphereVolumeRadiusDimension" type="location:SphereVolumeRadiusDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The radius from the centre that defines the surface of the SphereVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:789056bb-7afb-4e0d-a324-cf5baeace154</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SphereVolumeRadiusDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The radius from the centre that defines the surface of the SphereVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:789056bb-7afb-4e0d-a324-cf5baeace154</app:SemanticID>
+        <app:ShortName>radiusDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>radius</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="12" />
+      <xsd:maxInclusive value="999999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="SphereVolumeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeometricVolume that has its horizontal boundaries defined by the spherical surface determined by the radius and the specified Point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ba44d1b5-a54c-48e1-87c0-04a8c6a0a509</app:SemanticID>
+        <app:DisplayName>Sphere volume</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometricVolumeType">
+        <xsd:sequence>
+          <xsd:element ref="location:SphereVolumeCentrePoint" />
+          <xsd:element ref="location:SphereVolumeRadiusDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SurfaceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A two-dimensional Location.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a63b00f2-b616-49d3-9b38-892f6e328606</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometryType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SurfaceVolumeSurface" type="location:SurfaceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal boundary of the SurfaceVolume.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d20602a0-f138-4a0b-ae26-4d598380320f</app:SemanticID>
+        <app:ShortName>surface</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SurfaceVolumeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeometricVolume that has its horizontal boundaries defined by a Surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c99353bf-0f8d-4390-8d7b-e1a8ea62b818</app:SemanticID>
+        <app:DisplayName>Surface volume</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:GeometricVolumeType">
+        <xsd:sequence>
+          <xsd:element ref="location:SurfaceVolumeSurface" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TrackAreaBeginningPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The initial Point of the reference axis of the TrackArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bf13a8ba-0326-4812-9b64-24b939d094a7</app:SemanticID>
+        <app:ShortName>beginningPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>beginning point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TrackAreaEndingPoint" type="location:PointType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The final Point of the reference axis of the TrackArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a338a1bc-feb8-470d-a183-4412aefe45a9</app:SemanticID>
+        <app:ShortName>endingPoint</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>ending point</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TrackAreaLeftWidthDimension" type="location:TrackAreaLeftWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance to the left measured orthogonally to the reference axis for the TrackArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3b320f58-2842-43b7-96f5-91c9d7a75e13</app:SemanticID>
+        <app:ShortName>leftWidthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>left width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TrackAreaLeftWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance to the left measured orthogonally to the reference axis for the TrackArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3b320f58-2842-43b7-96f5-91c9d7a75e13</app:SemanticID>
+        <app:ShortName>leftWidthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>left width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="12" />
+      <xsd:maxInclusive value="999999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="TrackAreaRightWidthDimension" type="location:TrackAreaRightWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance to the right measured orthogonally to the reference axis for the TrackArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ab9801b5-b383-4bc6-9947-dc5cc79695b0</app:SemanticID>
+        <app:ShortName>rightWidthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>right width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TrackAreaRightWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance to the right measured orthogonally to the reference axis for the TrackArea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ab9801b5-b383-4bc6-9947-dc5cc79695b0</app:SemanticID>
+        <app:ShortName>rightWidthDimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>right width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="12" />
+      <xsd:maxInclusive value="999999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TrackAreaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Surface that is a rectangular section with its length defined by two Points and its width by the sum of the widths to the left and right of the connecting line between the two points.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1386dfb8-b66d-44c8-a641-1a08c0dca166</app:SemanticID>
+        <app:DisplayName>Track area</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="location:SurfaceType">
+        <xsd:sequence>
+          <xsd:element ref="location:TrackAreaBeginningPoint" />
+          <xsd:element ref="location:TrackAreaEndingPoint" />
+          <xsd:element ref="location:TrackAreaLeftWidthDimension" />
+          <xsd:element ref="location:TrackAreaRightWidthDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="VelocityAbsoluteBearingAngle" type="location:AngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise from the line of true North to the direction of motion in the horizontal plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b92c2a50-837d-41dc-8323-1008d14171d1</app:SemanticID>
+        <app:ShortName>absoluteBearingAngle</app:ShortName>
+        <app:Remarks>In the navigation domain, the term 'course' or 'course over ground' (COG) may be used instead of 'bearing' or, more precisely, 'absolute bearing'.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>absolute bearing</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VelocityApproximateSpeedCode" type="location:VelocityApproximateSpeedCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The speed of the Object, expressed relatively to its normal speed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7f2fa659-4e4a-472f-8ffb-e12e33fabbcb</app:SemanticID>
+        <app:ShortName>approximateSpeedCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>approximate speed</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="VelocityApproximateSpeedCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The speed of an object relative to its normal speed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bdfd8731-836a-4426-9972-9745904ffcbf</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower relative speed than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NoSpeed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self explanatory.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a3285eeb-8200-40dd-9824-a7de2d741e66</app:SemanticID>
+            <app:DisplayName>No speed</app:DisplayName>
+            <app:PhysicalName>ZERO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Slow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Slower than the normal speed of the object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:962b0c6d-4f99-4db8-b910-3d9a85f5e2e4</app:SemanticID>
+            <app:DisplayName>Slow</app:DisplayName>
+            <app:PhysicalName>SLOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medium">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The normal speed of the object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:553be866-6d50-4fb0-9ee0-ab230d3df9e3</app:SemanticID>
+            <app:DisplayName>Medium</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fast">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Faster than the normal speed of the object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fd110ca4-403f-473b-98c2-040a04d60e80</app:SemanticID>
+            <app:DisplayName>Fast</app:DisplayName>
+            <app:PhysicalName>FAST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="VelocityInclinationAngle" type="location:AngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement from the horizontal plane to the direction of motion of the Object, where the positive angle is vertically upward.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44d91000-3554-4434-97c1-ebe9df4c0657</app:SemanticID>
+        <app:ShortName>inclinationAngle</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>inclination</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VelocitySpeed" type="location:SpeedType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The motion of the Object in terms of horizontal distance per unit of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e41f60cd-31ac-4f7d-a159-2b6e294acb89</app:SemanticID>
+        <app:ShortName>speed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>speed</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="VelocityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The movement of an Object in terms of speed and direction.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fdb2ce6d-40a6-4df0-b397-41befd10faf6</app:SemanticID>
+        <app:DisplayName>Velocity</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:VelocityAbsoluteBearingAngle" minOccurs="0" />
+          <xsd:element ref="location:VelocityApproximateSpeedCode" minOccurs="0" />
+          <xsd:element ref="location:VelocityInclinationAngle" minOccurs="0" />
+          <xsd:element ref="location:VelocitySpeed" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="VerticalDistanceDimension" type="location:VerticalDistanceDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance with respect to the specified vertical datum.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:96168a4b-b5be-40d9-862a-32a31af89b69</app:SemanticID>
+        <app:ShortName>dimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>dimension</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="VerticalDistanceDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance with respect to the specified vertical datum.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:96168a4b-b5be-40d9-862a-32a31af89b69</app:SemanticID>
+        <app:ShortName>dimension</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>dimension</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="12" />
+      <xsd:maxInclusive value="999999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="VerticalDistancePrecisionCode" type="location:DistancePrecisionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The precision of the VerticalDistance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:997222fd-2e61-4c90-ab0e-30240b20ab67</app:SemanticID>
+        <app:ShortName>precisionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>precision</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VerticalDistanceReferenceCode" type="location:VerticalDistanceReferenceCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The reference system for the VerticalDistance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ccd7683c-9cf2-422b-9b94-b5f34eb94a2a</app:SemanticID>
+        <app:ShortName>referenceCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="VerticalDistanceReferenceCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The reference system for a VerticalDistance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1dc59d5-0d28-4d38-94a7-9c3758172b29</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ChartDatum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The vertical reference established as the lowest observed or theoretical sea level possible for the area, such as Mean Lower Low Water (MLLW) or Lowest Astronomical Tide (LAT).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d6e9d870-54c0-4813-a43f-398096248f93</app:SemanticID>
+            <app:DisplayName>Chart datum</app:DisplayName>
+            <app:PhysicalName>CHADAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MeanSeaLevel">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The vertical reference established as the average level of the ocean surface measured over a full metonic tidal cycle of 18.6 years.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c4dded4a-2a2b-4795-9081-659a0b58850e</app:SemanticID>
+            <app:DisplayName>Mean sea level</app:DisplayName>
+            <app:PhysicalName>MNSLVL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PressureDatumQFE">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The VerticalDistance reference in terms of atmospheric pressure indicated by a pressure altimeter that is calibrated to read 0 at airfield runway ground level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c38ffd37-4fc8-4f63-9873-e21dc13d5963</app:SemanticID>
+            <app:DisplayName>Pressure datum QFE</app:DisplayName>
+            <app:PhysicalName>PDQFE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PressureDatumQNH">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The VerticalDistance reference in terms of atmospheric pressure indicated by a pressure altimeter that is calibrated to read 0 at Mean Sea Level (MSL).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9aca52ce-da40-4870-9312-08d1d69b0084</app:SemanticID>
+            <app:DisplayName>Pressure datum QNH</app:DisplayName>
+            <app:PhysicalName>PDQNH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PressureDatumStandardAtmosphere">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The VerticalDistance reference in terms of atmospheric pressure indicated by a pressure altimeter that is calibrated to read 0 at standard atmosphere pressure of 1013.2 millibars.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d146ee1b-7ed2-4f83-9f2f-6190e08b8a7c</app:SemanticID>
+            <app:DisplayName>Pressure datum standard atmosphere</app:DisplayName>
+            <app:PhysicalName>PDSTDT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TopographicSurface">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The vertical reference is the actual visible surface. This includes both terrain and water surfaces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f01a17ab-9739-49f2-8b3f-363c7efdea85</app:SemanticID>
+            <app:DisplayName>Topographic surface</app:DisplayName>
+            <app:PhysicalName>TOPOSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WGS84Geoid">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The vertical reference established as the surface of the WGS84 geoid.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a8737c79-e634-49fe-9b98-1ddbdb69aca3</app:SemanticID>
+            <app:DisplayName>WGS84 geoid</app:DisplayName>
+            <app:PhysicalName>WGS84G</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WGS84ReferenceEllipsoid">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The vertical reference established as the surface of the WGS84 ellipsoid.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f986ecf8-0b13-4f24-bf2f-390fff46a0c7</app:SemanticID>
+            <app:DisplayName>WGS84 reference ellipsoid</app:DisplayName>
+            <app:PhysicalName>WGS84R</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WaterBottom">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The datum for VerticalDistance provided by the submerged surface at a point or area.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:05de4ba6-41d6-48a1-a02d-71642938af64</app:SemanticID>
+            <app:DisplayName>Water bottom</app:DisplayName>
+            <app:PhysicalName>WATBOT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="VerticalDistanceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The altitude or height of a point or a level as measured with respect to a reference datum in the direction normal to the plane that is tangent to the WGS84 ellipsoid of revolution.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0d18fea5-6426-427a-b74d-44ae04622e5d</app:SemanticID>
+        <app:DisplayName>Vertical distance</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="location:VerticalDistanceDimension" />
+          <xsd:element ref="location:VerticalDistancePrecisionCode" minOccurs="0" />
+          <xsd:element ref="location:VerticalDistanceReferenceCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

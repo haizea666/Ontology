@@ -1,0 +1,28 @@
+Test description
+
+Test IDMIP4SLT3SF_3149Test TitleSend a set of extended characters allowed by XML (Spanish, French, German... languages) to a Consumer who's C2IS has character set restrictions.Execution Priority1ObjectiveTest what happens when the Consumer C2IS dos not understand the charset, in order to explain the behaviour of the gateways.ScenarioNation A C2IS allows XML messages with extended charset and creates some BSOs (GeographicFeatures and Persons are suggested) with Names in Spanish, French, German... languages and their not covered in English special characters. Nation B C2IS native working language is English, has character set restrictions and receives the objects. EnvironmentInternet or co-located. Exchange Pattern: P/S, R/RParticipation2MTRSPre-test ConditionsNation A has published a topic, containing GeographicFeatures and Persons. Nation B has subscribed to Nation A's topic.Test InputsN/AConclusionThe test is passed if the Consumer can cope well with the Names of the received BSOs. Register gateways behaviour in any case.Test OutputsN/ATraceabilityREQ_SYS_0022
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates BSOs in its C2IS such as GeographicFeatures and Persons, which Name Elements include characters not existing in Nation B's with character set restrictions C2IS. 
+
+Comments
+The desired behaviour of a receiving system encountering an Unicode charset not included in its restricted charset, should be a convenient mapping of the special stranger characters (for instance German 'Straße' to 'Strasse') in case they cannot be represented. ~~Nation B C2IS native working language is English, has character set restrictions and receives the BSOs. 
+The receiving C2IS should cope well with the objects. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

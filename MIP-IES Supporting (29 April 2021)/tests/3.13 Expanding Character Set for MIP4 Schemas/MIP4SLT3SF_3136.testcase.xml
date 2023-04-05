@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>36</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Exchange BSO Names between English and Norwegian language C2ISs.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Cover exchanges and mapping between English and Norwegian charsets, especially 'extreme' examples, to see if unexpected behaviour is observed.</TestCaseObjective>
+  <TestCaseScenario>Nation A C2IS native working language is Norwegian and creates some BSOs (GeographicFeatures and Persons are suggested) on it. Nation B C2IS native working language is English and receives the objects. Rotate roles. Both C2IS should cope well with the objects in both cases. </TestCaseScenario>
+  <TestCaseEnvironment>Internet or co-located. Exchange Pattern: P/S, R/R</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has published a topic, containing GeographicFeatures and Persons. Nation B has subscribed to Nation A's topic.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is passed if both Nations can cope well with each other's (special) charset.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0022</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A (Norwegian native speaking) creates BSOs in its C2IS such as GeographicFeatures and Persons, which Name Elements include characters not existing in Nation B's native language. 
+Make sure all possible Nation A's language characters not existing in Nation B's are included in the Name Elements.
+Comments
+The desired behaviour of a receiving system encountering an Unicode charset not included in its own native language, should be a convenient mapping of the special stranger characters (for instance Norwegian 'Troms�' to 'Tromsoe') in case they cannot be represented, or just a representation with the original charset if possible. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B C2IS native working language is English and receives the BSOs.
+The receiving C2IS should cope well with the objects. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Rotate roles, even if all Nation B's charset is included in Nation A's. </TestCaseStepAction>
+    <TestCaseStepResult>The receiving C2IS should cope well with the objects. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

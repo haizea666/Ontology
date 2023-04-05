@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>54</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Notify consumer with single subscription</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is for the Producer to notify the Consumer of updates to the Current Situation according to the filtering criteria provided on a single subscription.</TestCaseObjective>
+  <TestCaseScenario>The Consumer receives notifications from the Producer matching the current subscription. Test to be derived on multiple kinds of subscriptions (topic, geographical filter, sources) and shapes.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4.0_Publish_Subscribe_Exchange_Pattern, MIP4SLT1_1130, MIP4SLT1_1131.
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer receives notifications published to a given topic / geographical / source filter, from the Producer.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, REQ_EM_0010, REQ_SYS_0021, REQ_SYS_0016</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer subscribes to the Producer in order to advertise its interest in a subset of the data space. </TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request for resource properties </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer sends the topics requested to the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the requested topics. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer processes the list of exposed topics, prepares a filter set, and requests a subscription on a single topic to the Producer. </TestCaseStepAction>
+    <TestCaseStepResult>Producer receives a subscription request for a desired topic. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Producer accepts the subscription request.
+Producer checks subscription filters and determines if data matches specified filters. If it does, the Producer sends a wsn-b:Notify to the address specified in the wsn-b:ConsumerReference for EACH matching subscription.</TestCaseStepAction>
+    <TestCaseStepResult>The Producer sends notification to the Consumer.
+The Consumer processes the data contained in the messages.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer unsubscribes using wsn-b:Unsubscribe operation with the SubscriptionReference issued from the initial Subscribe responses.</TestCaseStepAction>
+    <TestCaseStepResult>Producer destroys the corresponding subscriptions.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Repeat steps 1 to 5 for geographical, source and / or any other kind of subscription filter that should be tested. </TestCaseStepAction>
+    <TestCaseStepResult>Corresponding results in 1 to 5 for geographical, source and / or any other kind of subscription filter. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

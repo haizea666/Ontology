@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:element name="ObjectTypeName" type="object:ObjectTypeNameType">
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">The type name of the Object.</xsd:documentation>
+		<xsd:appinfo>
+			<app:SemanticId>MIM:118fa93e-4551-41d6-ba11-3ff5ae508699</app:SemanticId>
+			<app:ShortName>typeName</app:ShortName>
+			<app:Remarks xml:lang="en">The type name shall only be specified if the existing taxonomy does not allow to classify the Object at a sufficient level of detail.&#xD;
+The type name must not be confused with the model name available for Materiel. The type name is used to classify the Object (e.g., 'High Frequency Radio') whereas the model name denotes the product (e.g., 'HF-9000D').</app:Remarks>
+			<app:MIMStereotype>name</app:MIMStereotype>
+			<app:MIMStereotype>type</app:MIMStereotype>
+			<app:DisplayName>type name</app:DisplayName>
+		</xsd:appinfo>
+	</xsd:annotation>
+</xsd:element>
+
+<!--
+Original example
+
+<xsd:element name="TypeName" type="core:TypeNameType" nillable="true">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">The type name of the Object.</xsd:documentation>
+        <xsd:appinfo>
+            <app:SemanticId>MIM:118fa93e-4551-41d6-ba11-3ff5ae508699</app:SemanticId>
+            <app:MIMStereotype>name</app:MIMStereotype>
+            <app:MIMStereotype>type</app:MIMStereotype>
+        </xsd:appinfo>
+    </xsd:annotation>
+</xsd:element>
+
+-->

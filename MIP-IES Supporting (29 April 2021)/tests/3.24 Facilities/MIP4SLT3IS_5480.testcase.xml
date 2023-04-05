@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>54</TestCaseIdGroup>
+    <TestCaseIdNumber>80</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Update to every possible GeometricDefinition (LocationType Sub-Types) for an example Facility.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create and update every possible GeometricDefinition for a Facility and the Consumers/Receivers are able to understand (and display) it correctly.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates a Facility LandMinefield with LocationType=PolygonType.
+The Consumers receive the information and interpret it correctly.
+The Producer updates the LandMinefield to LocationType=ArcType.
+The Consumers receive the information and interpret it correctly.
+The Producer continues to update the LandMinefield to all possible LocationTypes and the Consumers receive the information and interpret it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created a topic which includes message elements belonging to the Facility message schema area.
+The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Facility is processed and interpreted correctly on all Nations' C2IS for all LocationTypes.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates a LandMinefield  (Facility) with name XXX_LNDMNFLD_5480 and with LocationType=PolygonType:
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_ LNDMNFLD_5480 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=ArcType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=ArrowType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=CircleType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=CorridorType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=EllipseType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=FanType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>8</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=LineType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>9</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=MultipointType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>10</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=OrbitType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>11</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=PointType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>12</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=RectangleType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>13</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the LandMinefield with LocationType=SphereType </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the LandMinefield correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

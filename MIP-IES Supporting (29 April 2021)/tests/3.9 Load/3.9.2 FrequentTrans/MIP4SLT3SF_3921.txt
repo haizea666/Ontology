@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3921Test TitleProcess frequent Status updates (periodicity checking).Execution Priority1ObjectiveThe objective of this test is to assess the ability of consumers and producers to handle frequent transactions.ScenarioA Consumer receives MIP4 BSOs with frequent Status (Element 'OperationalStatusCodeType') updates from the Producer EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'. Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe producer and consumer can process MIP4 BSOs changing frequently their Status.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0017.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain a MIP4 BSO (for instance an AdministrativeUnit, with element OperationalStatusCode = 'Operational') from the producer. ~~Content will be received from the Producer. ~~122. Process the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content. ~~123. Within a considered short time lapse (10 seconds or less if possible), change element OperationalStatusCode (to 'SubstantiallyOperational' for instance), at the producer for BSO produced on step 1. Rest of BSO's attributes and elements will stay unchanged as far as possible. Obtain it on the consumer. ~~Content will be received from the Producer. ~~124. Process the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error. ~~125. Repeat actions on steps 3 and 4 several times, changing to other values of element OperationalStatusCode (TemporarilyNotOperational, MarginallyOperational, NotOperational and back to the values already used) for that BSO. This should be carried out at the highest update and message production rate that the Producer is able to handle and for a quite long period (5 minutes...). ~~The Consumer will successfully process the MIP4 content without error, handling frequent transactions. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

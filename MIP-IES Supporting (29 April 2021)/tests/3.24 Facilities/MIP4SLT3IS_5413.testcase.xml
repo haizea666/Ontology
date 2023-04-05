@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>54</TestCaseIdGroup>
+    <TestCaseIdNumber>13</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Update to every possible GeometricDefinition for a Facility.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to create and update every possible GeometricDefinition for a Facility in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates a Facility (for instance just a 'Facility' Message Element) with LocationType = PolygonType.
+Nation B receives the information and interprets it correctly.
+Nation A updates the Facility to LocationType = ArcType.
+Nation B receives the information and interprets it correctly.
+Nation A continues to update the Facility to all possible LocationTypes and Nation B receives the information and interprets it every time correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes message elements belonging to the Facility message schema area.
+Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Facility is displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a Facility with LocationType = PolygonType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = ArcType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = ArrowType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = CircleType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI wCith LocationType = CorridorType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = EllipseType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = FanType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>8</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = LineType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>9</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = MultipointType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>10</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = OrbitType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>11</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = PointType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>12</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = RectangleType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>13</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AOI with LocationType = SphereType. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AOI correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:militaryorganisationreadiness="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/MilitaryOrganisationReadiness" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/MilitaryOrganisationReadiness" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AerialMissionReadinessCode" type="militaryorganisationreadiness:AerialMissionReadinessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level for an aerial mission.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fa20113c-5e7b-4a1f-b501-0fa23d139526</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AerialMissionReadinessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level for an aerial mission.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:edc2f153-7a4d-4670-9fa1-61edbe19c5ce</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirborneAlert">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The combat-equipped aircraft are airborne and ready for immediate action.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b82439d7-906a-42d2-83b3-2af7e924e29e</app:SemanticID>
+            <app:DisplayName>Airborne alert</app:DisplayName>
+            <app:PhysicalName>AIRALR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GroundAlert">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The aircraft on the ground/deck are fully serviced and armed, with combat crews in readiness to take off within a specified short period of time (usually 15 minutes) after receipt of a mission order.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f86bef34-0b24-4960-97d8-57d359a1f878</app:SemanticID>
+            <app:DisplayName>Ground alert</app:DisplayName>
+            <app:PhysicalName>GRDALR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AerialMissionReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level for an aerial mission.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c53ef12c-370c-4246-9d3b-97ff7f22d067</app:SemanticID>
+        <app:DisplayName>Aerial mission readiness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militaryorganisationreadiness:AirUnitReadinessType">
+        <xsd:sequence>
+          <xsd:element ref="militaryorganisationreadiness:AerialMissionReadinessCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AirUnitReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of an air unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e768aa20-e882-4feb-a1bf-9e6325c03e0a</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Air unit readiness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militaryorganisationreadiness:MilitaryOrganisationReadinessType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AircraftAlertReadinessCode" type="militaryorganisationreadiness:AircraftAlertReadinessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of an aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:230059c6-e9ad-45eb-940f-006ffe2c21dc</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AircraftAlertReadinessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of an aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c43ca6a5-a501-48c5-b731-ad07cac95431</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="BattleStations">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The aircrews will be in cockpits of their fighters and be capable of starting their engines and becoming airborne in the minimum practicable time.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7e54150d-ef58-40fe-a30f-207095793069</app:SemanticID>
+            <app:DisplayName>Battle stations</app:DisplayName>
+            <app:PhysicalName>BTLSTN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Red">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The 'marine unit' must be able to open fire in 2 to 5 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:03737d0b-d61b-464b-b970-5c0b3f7cc02e</app:SemanticID>
+            <app:DisplayName>Red</app:DisplayName>
+            <app:PhysicalName>RED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RunwayAlert">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The aircrews will be in the cockpits with the applicable checks completed and the aircraft will be located on or near the runway with engines running ready for take off.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e4c7b9a1-433e-45b1-b93c-b51eba1aab7d</app:SemanticID>
+            <app:DisplayName>Runway alert</app:DisplayName>
+            <app:PhysicalName>RNYALR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="White">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The 'marine unit' must be able to open fire in 30 to 60 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aa768746-1a4b-4638-af18-b38b3d974f1a</app:SemanticID>
+            <app:DisplayName>White</app:DisplayName>
+            <app:PhysicalName>WHITE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Yellow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The 'marine unit' must be able to open fire in 15 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f969e000-1dee-4dee-8188-beb52596668b</app:SemanticID>
+            <app:DisplayName>Yellow</app:DisplayName>
+            <app:PhysicalName>YELLOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AircraftAlertReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of an aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47a538ab-8863-411e-9499-15d3d18557d1</app:SemanticID>
+        <app:DisplayName>Air unit readiness B</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militaryorganisationreadiness:AirUnitReadinessType">
+        <xsd:sequence>
+          <xsd:element ref="militaryorganisationreadiness:AircraftAlertReadinessCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AircraftLaunchReadinessCode" type="militaryorganisationreadiness:AircraftLaunchReadinessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level for aircraft launch.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d718847f-8099-4323-b44a-bada5dc9b173</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AircraftLaunchReadinessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level for aircraft launch.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:da4fc2f1-6de0-4717-9ffe-b391962ce51e</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower readiness than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NotReadyWithin12Hours">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation cannot be ready within 12 hours.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4720eab0-a6e8-4f8c-85c3-68791307cfcc</app:SemanticID>
+            <app:DisplayName>Not ready within 12 hours</app:DisplayName>
+            <app:PhysicalName>NRD12H</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin12Hours">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 12 hours.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4fa2c1ab-629f-4ea5-af87-f18fd976b14a</app:SemanticID>
+            <app:DisplayName>Ready within 12 hours</app:DisplayName>
+            <app:PhysicalName>RDY12H</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin6Hours">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 6 hours.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7d468eb6-3682-4f9f-82eb-6e571c9a5839</app:SemanticID>
+            <app:DisplayName>Ready within 6 hours</app:DisplayName>
+            <app:PhysicalName>RDY6H</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin3Hours">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 3 hours.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:31d78895-9e8c-4a5e-9cb5-3b4b29b1342f</app:SemanticID>
+            <app:DisplayName>Ready within 3 hours</app:DisplayName>
+            <app:PhysicalName>RDY3H</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin2Hours">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 2 hours.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c09c0570-cddf-492d-9604-a5987f65f7fc</app:SemanticID>
+            <app:DisplayName>Ready within 2 hours</app:DisplayName>
+            <app:PhysicalName>RDY2H</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin60Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 60 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2cded21c-dfab-4a54-9ae0-54c1144647b5</app:SemanticID>
+            <app:DisplayName>Ready within 60 minutes</app:DisplayName>
+            <app:PhysicalName>RDY60M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin30Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 30 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4c0649b6-8166-4f2c-8f47-df6fb83f8548</app:SemanticID>
+            <app:DisplayName>Ready within 30 minutes</app:DisplayName>
+            <app:PhysicalName>RDY30M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin20Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 20 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d914164d-ac25-49ab-b9bb-fe2d5ae9988c</app:SemanticID>
+            <app:DisplayName>Ready within 20 minutes</app:DisplayName>
+            <app:PhysicalName>RDY20M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin15Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 15 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b3e90789-a347-48e4-ab49-d42a9a28af85</app:SemanticID>
+            <app:DisplayName>Ready within 15 minutes</app:DisplayName>
+            <app:PhysicalName>RDY15M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin10Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 10 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:134028fa-71cd-4128-b931-3346620fa0e7</app:SemanticID>
+            <app:DisplayName>Ready within 10 minutes</app:DisplayName>
+            <app:PhysicalName>RDY10M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithin5Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within 5 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:94ee181f-6342-4b5d-936b-6eb32e7332a7</app:SemanticID>
+            <app:DisplayName>Ready within 5 minutes</app:DisplayName>
+            <app:PhysicalName>RDY5M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadyWithinLessThan5Minutes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation can be ready within less than 5 minutes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e6a1597e-032b-4223-a231-e4dafaa338fe</app:SemanticID>
+            <app:DisplayName>Ready within less than 5 minutes</app:DisplayName>
+            <app:PhysicalName>RDYL5M</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AircraftLaunchReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level for aircraft launch.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3c6ee40e-8b35-4d07-a176-5b300f56b3a0</app:SemanticID>
+        <app:DisplayName>Aircraft launch readiness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militaryorganisationreadiness:AirUnitReadinessType">
+        <xsd:sequence>
+          <xsd:element ref="militaryorganisationreadiness:AircraftLaunchReadinessCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="MilitaryOrganisationReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a MilitaryOrganisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:15cb88ec-1db0-4881-8655-97c7aefe32cd</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Military organisation readiness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SurfaceToAirUnitReadinessCode" type="militaryorganisationreadiness:SurfaceToAirUnitReadinessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a surface-to-air unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dc94f12b-0b2a-47fb-b098-ea6d5f47b990</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SurfaceToAirUnitReadinessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a surface-to-air unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c5eab001-c6e2-41d3-a1b3-f179c3650b88</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower readiness than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ReadinessState9">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 9, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1bd08470-a020-476f-a4ed-60bcc0ad198e</app:SemanticID>
+            <app:DisplayName>Readiness state 9</app:DisplayName>
+            <app:PhysicalName>RDNS9</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState8">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 8, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a3f33724-bf1b-4d94-b74b-64442cb06658</app:SemanticID>
+            <app:DisplayName>Readiness state 8</app:DisplayName>
+            <app:PhysicalName>RDNS8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState7">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 7, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a694caf8-cd45-4108-922f-505a3a0251c7</app:SemanticID>
+            <app:DisplayName>Readiness state 7</app:DisplayName>
+            <app:PhysicalName>RDNS7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState6">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 6, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b0433dd4-e905-49a0-82ae-56a52547bfc0</app:SemanticID>
+            <app:DisplayName>Readiness state 6</app:DisplayName>
+            <app:PhysicalName>RDNS6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState5">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 5, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aeff3eca-ac0e-4b63-af44-539795030675</app:SemanticID>
+            <app:DisplayName>Readiness state 5</app:DisplayName>
+            <app:PhysicalName>RDNS5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState4">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 4, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e57e31cd-3e94-4f5b-b0f2-4a0dab0fbcf4</app:SemanticID>
+            <app:DisplayName>Readiness state 4</app:DisplayName>
+            <app:PhysicalName>RDNS4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState3">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 3, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d52c359c-e384-4ec8-a054-79ac0b2c4152</app:SemanticID>
+            <app:DisplayName>Readiness state 3</app:DisplayName>
+            <app:PhysicalName>RDNS3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 2, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e5aeb598-bd7c-44ff-a588-17a07baf1696</app:SemanticID>
+            <app:DisplayName>Readiness state 2</app:DisplayName>
+            <app:PhysicalName>RDNS2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState1">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 1, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f0f5050a-04ee-4491-ae70-27f5ca69745f</app:SemanticID>
+            <app:DisplayName>Readiness state 1</app:DisplayName>
+            <app:PhysicalName>RDNS1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReadinessState0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Readiness state 0, in line with definitions provided by "Shape Standing Defence Plan (SDP) 10901D - ANGRY HASP" [NC] and by the "Comairnorth Supplan 24600D Constant Effort" for the Northern Region Integrated Air Defence System (NRIADS), Annex h dated 15 FEB 2000 [NC].</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b2525530-3e87-4baa-8f1f-047d5c9276b5</app:SemanticID>
+            <app:DisplayName>Readiness state 0</app:DisplayName>
+            <app:PhysicalName>RDNS0</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="SurfaceToAirUnitReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a surface-to-air unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cce08d49-f87e-4619-b694-350e1279321e</app:SemanticID>
+        <app:DisplayName>Surface to air unit readiness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militaryorganisationreadiness:MilitaryOrganisationReadinessType">
+        <xsd:sequence>
+          <xsd:element ref="militaryorganisationreadiness:SurfaceToAirUnitReadinessCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TroopReadinessCode" type="militaryorganisationreadiness:TroopReadinessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a troop.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7ecb247c-f805-4548-ac64-f3feafc6f45e</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TroopReadinessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a troop.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e3b33e6f-c794-493c-8e6b-c143a34f63f1</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower readiness than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Within365Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 365 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:61a17dd4-c4cf-4cfd-b96c-f9f907c057c3</app:SemanticID>
+            <app:DisplayName>Within 365 days</app:DisplayName>
+            <app:PhysicalName>WT365D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within180Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 180 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:292f59e9-6f67-4552-b733-a92fbf38eaba</app:SemanticID>
+            <app:DisplayName>Within 180 days</app:DisplayName>
+            <app:PhysicalName>WT180D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within90Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 90 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a1dbdea3-445d-42ed-99aa-d95a6a10fc0e</app:SemanticID>
+            <app:DisplayName>Within 90 days</app:DisplayName>
+            <app:PhysicalName>WT90D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within60Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 60 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e4a2a7bb-adc4-4b38-b170-977344b2062c</app:SemanticID>
+            <app:DisplayName>Within 60 days</app:DisplayName>
+            <app:PhysicalName>WT60D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within30Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 30 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:354fd5a8-9983-4d03-b8f9-48769d3d0e59</app:SemanticID>
+            <app:DisplayName>Within 30 days</app:DisplayName>
+            <app:PhysicalName>WT30D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within20Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 20 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f00d0efc-bb38-489d-a56c-0e6aaad9cdc2</app:SemanticID>
+            <app:DisplayName>Within 20 days</app:DisplayName>
+            <app:PhysicalName>WT20D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within10Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 10 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3d337488-0c0b-46de-98fb-37c311ba3e24</app:SemanticID>
+            <app:DisplayName>Within 10 days</app:DisplayName>
+            <app:PhysicalName>WT10D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within5Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 5 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e1adf65f-7576-452c-a7d7-c2190f642bf0</app:SemanticID>
+            <app:DisplayName>Within 5 days</app:DisplayName>
+            <app:PhysicalName>WT5D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Within2Days">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The troops will be able to be engaged in action, defence or protection within 2 days.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d24532e5-422e-4121-b530-7a0e39eca064</app:SemanticID>
+            <app:DisplayName>Within 2 days</app:DisplayName>
+            <app:PhysicalName>WT2D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TroopReadinessType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The readiness level of a troop.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4587a9ad-e500-43ba-af44-273074d8a22f</app:SemanticID>
+        <app:DisplayName>Troop readiness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militaryorganisationreadiness:MilitaryOrganisationReadinessType">
+        <xsd:sequence>
+          <xsd:element ref="militaryorganisationreadiness:TroopReadinessCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

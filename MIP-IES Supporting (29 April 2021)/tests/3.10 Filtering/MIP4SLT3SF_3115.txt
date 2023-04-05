@@ -1,0 +1,31 @@
+Test description
+
+Test IDMIP4SLT3SF_3115Test TitleFilter by Area - data leaving.Execution Priority1ObjectiveEvaluate the behaviour associated with Filtering. Assess the impact of data 'leaving the filter' by Area. ScenarioA Consumer specifies a rectangular area indicating its geographical area of interest. Several BSOs within this subscription will be updated 'leaving the filter' at the Producer.
+The easiest way to test a BSO leaving an Area filter is by keeping its 'LocationType' to be a 'Point' and then changing its 'Lat' and 'Lon' Elements to move it out of the Consumer's area of interest borders (without changing any other of its elements or attributes).EnvironmentInternet, co-located. Exchange Pattern: P/S, R/R.Participation2MTRSPre-test Conditions31003 - Filter by Area test case.Test InputsN/AConclusionEven though the Consumer may specify a Filter, it remains the responsibility of the Provider to determine how best to satisfy the request, which should be considered a 'best effort' requirement.
+The Consumer must accept the fact that some updates may continue to be received for BSOs that leave its Area of Interest.  If the Provider implements logic to stop sending updates when a BSO leaves the Area Filter, the Consumer will not receive any special notification - it is its (system) responsibility to detect when BSO position updates have gone stale and should be removed from the current operational picture shown on its C2IS.
+Consequently, the conclusion of this test is just to evaluate the behaviour associated with Filtering, assessing the impact of data 'leaving the filter' by Area.Test OutputsN/ATraceabilityREQ_SYS_0016, REQ_SYS_0021
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer inserts BSOs in its C2IS, within the Area of Interest of the Consumer. ~~The insertions are automatically received at the Consumer, which is able to incorporate them to the current operational picture shown on its C2IS. ~~122. At the producer, update the positions ('Lat' and 'Lon' Elements) of some of these BSOs, making them fall out of the consumer's Area of Interest. Rest of these BSOs' attributes and elements will stay unchanged. Obtain them on the consumer.
+Allow some reasonable time, to let the Consumer detect when BSO position updates have gone stale and act consequently. ~~It remains the responsibility of the Provider to determine how best to satisfy the Consumer's Filter specification request.
+The not filtered out insertions are automatically received at the Consumer, which is able to incorporate them to the current operational picture shown on its C2IS.
+The Filtering behaviour will be evaluated on both Producer and Consumer sides. ~~123. Producer and Consumer rotate roles and conduct Step 1 again. ~~As steps 1 and 2. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

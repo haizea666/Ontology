@@ -1,0 +1,22 @@
+Test description
+
+Test IDMIP4SLT2.5_2101Test TitleReceived data correlation test.Execution Priority2ObjectiveTo check if a prepared set of data is correctly send from A to B.ScenarioA dataset is loaded with the Test Tool (TT) in the C2 system from the nation. The data is transferred back to the TT through either R/R or P/S protocol. The received data in the TT is logged and compared with the original data. If the systems work correctly, at least the IDT Schemas Mandatory Elements are transferred correctly.EnvironmentCo-located, Internet through VPN.Participation1MTRSPre-test ConditionsThe nation and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport.Test InputsDataset_2101.ConclusionThis test is considered a success if the data received by the TT at least has the Mandatory Elements filled with the same data as in the test data set. Additional data might be omitted.Test OutputsPass or fail.TraceabilityREQ_TST_0001, REQ_TST_0002, REQ_TST_0003
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The nation loads dataset_2101 into their C2 system (2) through the TT (1). ~~Objects visible in the C2 system. ~~122. The data is transferred to the TT (1) through either R/R or P/S. ~~The data is received in the TT, resulting in a data file. ~~213. Compare the processed logged data at the TT with the original dataset_2101. ~~The Mandatory Elements are transferred and the values are the same as in the original dataset_2101. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

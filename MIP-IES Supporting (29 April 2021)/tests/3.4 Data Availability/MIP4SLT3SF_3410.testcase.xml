@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>34</TestCaseIdGroup>
+    <TestCaseIdNumber>10</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Data Availability during a participant's Outage Period</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To assess what happens when a System disconnects for a period to the rest of participant systems that remain connected. Is information lost? Are there conflicts?</TestCaseObjective>
+  <TestCaseScenario>A producer notifies two or more consumers and at least one of the consumers goes offline. Other consumers need to keep receiving the notifications from the producer.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>4</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'.Nation B,C and D have subscribed to the same topic from Nation A.</TestCasePreCondition>
+  <TestCaseInput>Nation A will have to produce a payload to the other subscribed nations.</TestCaseInput>
+  <TestCaseConclusion>All online consumers keep receiving the notifications from the producer event if one consumer is offline.</TestCaseConclusion>
+  <TestCaseOutput>Nation C and D have all the payloads from the notifications sent from Nation A. (Nation B will not for it has gone offline during this test scenario; recovery is covered in another test scenario).</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0001, REQ_SYS_0002</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A produces a payload and sends the notification to the subscribers.</TestCaseStepAction>
+    <TestCaseStepResult>Nations B, C and D receive the notification.</TestCaseStepResult>
+    <TestCaseStepDestination>2,3,4</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B goes offline (unplug network cable or shutdown the system but DO NOT unsubscribe).</TestCaseStepAction>
+    <TestCaseStepResult>Nation A can still see the subscription from Nations B, C and D.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A produces a payload and sends the notification to the subscribers. </TestCaseStepAction>
+    <TestCaseStepResult>Nations C and D receive the notification. Nation A might have timed out on the notification to Nation B but won't stop sending to others that are still reachable. </TestCaseStepResult>
+    <TestCaseStepDestination>3,4</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

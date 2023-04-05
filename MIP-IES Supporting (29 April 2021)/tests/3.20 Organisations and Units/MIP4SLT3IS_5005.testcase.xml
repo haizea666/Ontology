@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>50</TestCaseIdGroup>
+    <TestCaseIdNumber>5</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create MilitaryConvoy.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the attributes and elements (defined at IDT Schemas &gt; Organisations.xsd &gt; MilitaryConvoy) and the Consumers are able to correctly understand (and display) it.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates message elements for MilitaryConvoy with at least all its mandatory Elements. The Consumers receive the data and process them.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Forces' topic. The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the MilitaryConvoy is created and all attributes are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates the MilitaryConvoy with name XXX_CV_013 and fills ALL attributes and elements that are indicated in the matrix with values.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the unit: ITA_CV_013 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the MilitaryConvoy and all attributes that the Producer created. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates an update for the object by changing ALL attributes and elements that are indicated in the matrix with values. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the MilitaryConvoy and all attributes that the Producer created. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,23 @@
+Test description
+
+Test IDMIP4SLT2.5_2102Test TitleDeleting data test.Execution Priority1ObjectiveTo check if deletion of objects within the data is correctly send from A to B.ScenarioRemove an object from the test data created in 2101 at the TT. Transfer the data back to the TT using R/R. Check if the object is deleted. Do the same for another object but now with P/S. At the TT check if  a notification is received indicating the deletion of the object.EnvironmentCo-located, Internet through VPN.Participation1MTRSPre-test ConditionsThe nation and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. Dataset_2101 is loaded and transferred as described in test MIP4SLT2.5_2101. Test InputsDataset_2101.ConclusionThis test is considered a success when objects are correctly deleted at the nations C2 system.Test OutputsPass or fail.TraceabilityREQ_EM_0001, REQ_EM_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The nation loads dataset_2101 into their C2 system (2) through the TT (1). ~~Objects visible in the C2 system. ~~122. An object is deleted at the TT (1). ~~The deleted object should disappear from the C2 system or be marked as deleted by producer. ~~123. The data is transferred to the TT (1) through R/R. ~~The data is received in the TT, resulting in a data file. ~~214. Compare the processed logged data at the TT (1) with the original dataset_2101. ~~The object is deleted in both datasets.
+In this case the test is passed. ~~215. Delete another object at the TT (1). ~~The deleted object should disappear from the C2 system or be marked as deleted by producer. ~~126. The data is transferred to the TT (1) through P/S. ~~At the TT a notification has to be received indicating the deletion of the object. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

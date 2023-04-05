@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>33</TestCaseIdGroup>
+    <TestCaseIdNumber>5</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Multiple Overlays (Current Situation, Planning, containing BSOs) coexistence first general check</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Verify if the current and the planned situation can be visualized via two different Overlays, one of them containing a BSO with its current situation properties, the other containing another BSO with planned properties.</TestCaseObjective>
+  <TestCaseScenario>Two BSOs are created. Then two Overlays named "Current Situation" and "Planning" are created. 
+Each BSO is associated to one of the Overlays. Both Overlays and the BSO are created by Nation A and exchanged via an appropriate P/S Topic or via Request/Response mechanism with Nation B.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a topic, which includes the Overlays and the BSOs contained in it.
+Nation B has subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>Both Overlays can be displayed separately as well as together indicating the current situation and the planned situation on both nations' systems.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates BSO_1 and Overlay "Current Situation" and assigns BSO_1 to Overlay "Current Situation".</TestCaseStepAction>
+    <TestCaseStepResult>Overlay and BSO are transferred to Nation B and displayed correctly on both nations' systems.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates BSO_2 and Overlay "Planning" and assigns BSO_1 to Overlay "Current Situation".</TestCaseStepAction>
+    <TestCaseStepResult>Overlay and BSO are transferred to Nation B and displayed correctly on both nations' systems.
+Both overlays can be displayed separately as well as together.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>0</TestCaseStepNumber>
+    <TestCaseStepAction />
+    <TestCaseStepResult />
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

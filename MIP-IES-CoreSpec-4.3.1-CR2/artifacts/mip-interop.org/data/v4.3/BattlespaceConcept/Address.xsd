@@ -1,0 +1,1152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:address="https://mip-interop.org/data/v4.3/BattlespaceConcept/Address" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:networkservice="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/NetworkService" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Address" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/NetworkService.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/NetworkService" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AddressDescriptionText" type="address:AddressDescriptionTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of the Address.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4533baac-7165-48d0-b687-280b45957393</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AddressDescriptionTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of the Address.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4533baac-7165-48d0-b687-280b45957393</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AddressType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Precise information on the basis of which a physical or electronic destination may be accessed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2087c4c6-4d2f-4596-b9a5-82d72c445cda</app:SemanticID>
+        <app:DisplayName>Address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="address:AddressDescriptionText" minOccurs="0" />
+          <xsd:element ref="address:AddressTypeCode" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AddressTypeCode" type="address:AddressTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of address.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1afbcbb8-cc2c-41bb-bec1-b4c803b85852</app:SemanticID>
+        <app:ShortName>typeCode</app:ShortName>
+        <app:Remarks>Example values are 'Work', 'Home', and 'Deployment'.</app:Remarks>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AddressTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of Address.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:199416e4-5221-44b5-8420-dd42b04f2f6c</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Deployment">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Address is related to an individual's deployment location.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:72ed3424-49b5-4957-b096-aa4f01abe75a</app:SemanticID>
+            <app:DisplayName>Deployment</app:DisplayName>
+            <app:PhysicalName>DPLMNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Home">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Address is related to an individual's place of living.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f029d4b2-b3d4-4428-81eb-801d71457467</app:SemanticID>
+            <app:DisplayName>Home</app:DisplayName>
+            <app:PhysicalName>HOME</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Work">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Address is related to an individual's work place.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b22a9671-951b-42af-ac4d-fc5fb399c2dc</app:SemanticID>
+            <app:DisplayName>Work</app:DisplayName>
+            <app:PhysicalName>WORK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ElectronicAddressNetworkService" type="networkservice:NetworkServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The NetworkService can be accessed via the ElectronicAddress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:866815dd-00d4-4c28-bd93-0b9b6d447313I</app:SemanticID>
+        <app:ShortName>networkService</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>can be accessed via</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ElectronicAddressNetworkServiceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The NetworkService can be accessed via the ElectronicAddress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:866815dd-00d4-4c28-bd93-0b9b6d447313R</app:SemanticID>
+        <app:ShortName>networkServiceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:cd5e1225-15dd-4f7e-b418-215977248c1d</app:ReferenceType>
+        <app:DisplayName>can be accessed via</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ElectronicAddressType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Address that is reached by using a NetworkService.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8b6baa02-751b-4dec-808c-bc3877208f35</app:SemanticID>
+        <app:DisplayName>Electronic address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="address:AddressType">
+        <xsd:sequence>
+          <xsd:element ref="address:ElectronicAddressUniqueResourceIdentifier" />
+          <xsd:element ref="address:ElectronicAddressNetworkServiceRef" minOccurs="0" />
+          <xsd:element ref="address:ElectronicAddressNetworkService" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ElectronicAddressUniqueResourceIdentifier" type="address:ElectronicAddressUniqueResourceIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The unique resource identifier of the ElectronicAddress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a70fcd5-a894-4e5f-ba0e-bd2d8af2711f</app:SemanticID>
+        <app:ShortName>uniqueResourceIdentifier</app:ShortName>
+        <app:Remarks>The identifier shall be defined according to the generic syntax for 'Unique Resource Identifiers' (URI) as defined by RFC 3986.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>unique resource identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ElectronicAddressUniqueResourceIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The unique resource identifier of the ElectronicAddress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a70fcd5-a894-4e5f-ba0e-bd2d8af2711f</app:SemanticID>
+        <app:ShortName>uniqueResourceIdentifier</app:ShortName>
+        <app:Remarks>The identifier shall be defined according to the generic syntax for 'Unique Resource Identifiers' (URI) as defined by RFC 3986.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>unique resource identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EmailAddressType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An electronic mail address for communication with an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:34521448-035c-4691-8c1c-8f31cee1db55</app:SemanticID>
+        <app:DisplayName>Email address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="address:ElectronicAddressType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="HaveQuickParametersDate" type="address:HaveQuickParametersDateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The date when the communication is supposed to happen.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4e3616d7-03a7-4b0b-80ec-9805816d3afc</app:SemanticID>
+        <app:ShortName>date</app:ShortName>
+        <app:MIMStereotype>date</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>date</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HaveQuickParametersDateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The date when the communication is supposed to happen.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4e3616d7-03a7-4b0b-80ec-9805816d3afc</app:SemanticID>
+        <app:ShortName>date</app:ShortName>
+        <app:MIMStereotype>date</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>date</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="HaveQuickParametersMickeyNetControllerName" type="address:HaveQuickParametersMickeyNetControllerNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Mickey Net controller name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e99711b6-7b77-473e-a6a3-1df6afd6b2dc</app:SemanticID>
+        <app:ShortName>mickeyNetControllerName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>mickey net controller name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HaveQuickParametersMickeyNetControllerNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Mickey Net controller name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e99711b6-7b77-473e-a6a3-1df6afd6b2dc</app:SemanticID>
+        <app:ShortName>mickeyNetControllerName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>mickey net controller name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="15" />
+      <xsd:pattern value="[&amp;#x20;A-Z0-9]{1,15}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="HaveQuickParametersNetworkInUseIdentifier" type="address:HaveQuickParametersNetworkInUseIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The identifier of the Have Quick net in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3b9626f4-1270-4ffb-a97a-d59ac03eb3e5</app:SemanticID>
+        <app:ShortName>networkInUseIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>network in use</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HaveQuickParametersNetworkInUseIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The identifier of the Have Quick net in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3b9626f4-1270-4ffb-a97a-d59ac03eb3e5</app:SemanticID>
+        <app:ShortName>networkInUseIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>network in use</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="4" />
+      <xsd:pattern value="[A-Z0-9]{1,4}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="HaveQuickParametersSetInUseIdentifier" type="address:HaveQuickParametersSetInUseIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The identifier of the Have Quick set in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7bc7f022-206c-45f8-a455-ec8d164e3797</app:SemanticID>
+        <app:ShortName>setInUseIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>set in use</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HaveQuickParametersSetInUseIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The identifier of the Have Quick set in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7bc7f022-206c-45f8-a455-ec8d164e3797</app:SemanticID>
+        <app:ShortName>setInUseIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>set in use</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="4" />
+      <xsd:pattern value="[A-Z0-9]{1,4}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="HaveQuickParametersType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific parameters required to contact another entity using Have Quick.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e3b07be3-7ebc-425c-b0c9-6bdf90aeaeb2</app:SemanticID>
+        <app:DisplayName>Have Quick parameters</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="address:HaveQuickParametersDate" minOccurs="0" />
+          <xsd:element ref="address:HaveQuickParametersMickeyNetControllerName" minOccurs="0" />
+          <xsd:element ref="address:HaveQuickParametersNetworkInUseIdentifier" minOccurs="0" />
+          <xsd:element ref="address:HaveQuickParametersSetInUseIdentifier" minOccurs="0" />
+          <xsd:element ref="address:HaveQuickParametersUnitOfElectromagneticEmissionMeasurement" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="HaveQuickParametersUnitOfElectromagneticEmissionMeasurement" type="address:UnitOfElectromagneticEmissionMeasurementCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The unit of electromagnetic emission measurement.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ac2a4ddc-ebb6-46d0-8dd3-77f763356142</app:SemanticID>
+        <app:ShortName>unitOfElectromagneticEmissionMeasurement</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>unit of electromagnetic emission measurement</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="InstantMessagingAddressType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A URI for instant messaging and presence protocol communications with an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:95b84c8c-a7cc-4594-8b8d-172add777864</app:SemanticID>
+        <app:DisplayName>Instant messaging address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="address:ElectronicAddressType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NetworkAddressAddress" type="address:AddressType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The means available on a network by which the Object can be accessed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2fc194d6-6691-40ae-bdf7-7e14b9233b05</app:SemanticID>
+        <app:ShortName>address</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkAddressCallSignIdentifier" type="address:NetworkAddressCallSignIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A combination of identifying letters, letters and numbers, or words assigned to an object (operator, office, vehicle, ...) for use in communication (as in the address of a message sent by radio).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2d3f928e-abef-4a4c-bbf1-8c334750a711</app:SemanticID>
+        <app:ShortName>callSignIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>call sign</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkAddressCallSignIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A combination of identifying letters, letters and numbers, or words assigned to an object (operator, office, vehicle, ...) for use in communication (as in the address of a message sent by radio).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2d3f928e-abef-4a4c-bbf1-8c334750a711</app:SemanticID>
+        <app:ShortName>callSignIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>call sign</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkAddressFrequency" type="generic:NetworkFrequencyType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The discrete frequency used to address the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44ded2de-dc56-43c2-8067-46288fd50e09</app:SemanticID>
+        <app:ShortName>frequency</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>frequency</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkAddressHaveQuickParameters" type="address:HaveQuickParametersType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific parameters required to contact another entity using Have Quick.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:349c1fab-652d-4b50-a007-5d406674269f</app:SemanticID>
+        <app:ShortName>haveQuickParameters</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>Have Quick parameters</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkAddressIsAuthorisedIndicator" type="address:NetworkAddressIsAuthorisedIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Object is permitted by command authority to use the ElectronicAddress (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c872ed08-bcc9-4b63-b672-60a84a3dde5b</app:SemanticID>
+        <app:ShortName>isAuthorisedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is authorised</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkAddressIsAuthorisedIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Object is permitted by command authority to use the ElectronicAddress (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c872ed08-bcc9-4b63-b672-60a84a3dde5b</app:SemanticID>
+        <app:ShortName>isAuthorisedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is authorised</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="NetworkAddressPrimacyCode" type="generic:PrimacyCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The priority that an Address has with respect to an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f7ef95c-60b5-47c5-9c10-5d738baa9283</app:SemanticID>
+        <app:ShortName>primacyCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>primacy</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkAddressSaturnParameters" type="address:SaturnParametersType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific parameters required to contact another entity using SATURN (Second generation Anti-jam Tactical UHF Radio for NATO).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dfc6aef4-241f-421b-a5fd-6dd8b55e63e7</app:SemanticID>
+        <app:ShortName>saturnParameters</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>saturn parameters</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkAddressTransmitReceiveCode" type="address:NetworkAddressTransmitReceiveCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Object usage of an ElectronicAddress in terms of transmission and reception.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:82ab18ae-45af-4e6c-aa4e-78234a94a969</app:SemanticID>
+        <app:ShortName>transmitReceiveCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>transmit/receive</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkAddressTransmitReceiveCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Object usage of an ElectronicAddress in terms of transmission and reception.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6dfcfeec-ac96-4f3a-b688-4b3a50532537</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Receive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ElectronicAddress is used only for reception purposes with respect to the specific Object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1a3103cc-052c-4bce-a1e2-e4953ac8cd22</app:SemanticID>
+            <app:DisplayName>Receive</app:DisplayName>
+            <app:PhysicalName>RECEIV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Transmit">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ElectronicAddress is used only for transmission purposes with respect to the specific Object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a6fe1d71-df98-4229-82ad-b36ad4ad866e</app:SemanticID>
+            <app:DisplayName>Transmit</app:DisplayName>
+            <app:PhysicalName>TRNSMT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TransmitAndReceive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ElectronicAddress is used both for transmission and reception purposes with respect to the specific Object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:62985aca-a13f-4f06-9170-f6bebb999b4e</app:SemanticID>
+            <app:DisplayName>Transmit and receive</app:DisplayName>
+            <app:PhysicalName>TRNREC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="NetworkAddressType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The means by which an Object can be accessed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9102dcd4-588d-4b58-8a96-b79cba26506e</app:SemanticID>
+        <app:Remarks>NetworkAddress is primarily used to specify access to Objects via radio communications networks.</app:Remarks>
+        <app:DisplayName>Network address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="address:NetworkAddressAddress" />
+          <xsd:element ref="address:NetworkAddressCallSignIdentifier" minOccurs="0" />
+          <xsd:element ref="address:NetworkAddressFrequency" minOccurs="0" />
+          <xsd:element ref="address:NetworkAddressHaveQuickParameters" minOccurs="0" />
+          <xsd:element ref="address:NetworkAddressIsAuthorisedIndicator" minOccurs="0" />
+          <xsd:element ref="address:NetworkAddressPrimacyCode" minOccurs="0" />
+          <xsd:element ref="address:NetworkAddressSaturnParameters" minOccurs="0" />
+          <xsd:element ref="address:NetworkAddressTransmitReceiveCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PhysicalAddressCategoryCode" type="address:PhysicalAddressCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of PhysicalAddress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6b505be3-fccb-49a8-91e4-c99f88008645</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of PhysicalAddress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:847fc0be-76f1-4cdc-8280-e0ba331204f6</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ActualAddress">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The actual physical address of an Object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7b31bd6e-4aa7-4fd9-acb2-f77dbe8e94e6</app:SemanticID>
+            <app:DisplayName>Physical address</app:DisplayName>
+            <app:PhysicalName>PHADDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MailingAddress">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An address to which a specific piece of mail is sent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:84f9bcf6-78fb-490a-aba3-bd7387ecb2e9</app:SemanticID>
+            <app:DisplayName>Mailing address</app:DisplayName>
+            <app:PhysicalName>MLADDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Postmark">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The mark affixed to a mailed item by the post office.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8523ba12-bd10-4220-ba44-8e545981d48a</app:SemanticID>
+            <app:DisplayName>Postmark</app:DisplayName>
+            <app:PhysicalName>PSTMRK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReturnAddress">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An address to which a specific piece of mail should be returned to if not delivered.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1d800dac-37fc-4e2f-b85b-03abf09bbdc6</app:SemanticID>
+            <app:DisplayName>Return address</app:DisplayName>
+            <app:PhysicalName>RTADDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressCityName" type="address:PhysicalAddressCityNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The city name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:11f47775-a782-44d5-bea3-81ed0143eb74</app:SemanticID>
+        <app:ShortName>cityName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>city</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressCityNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The city name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:11f47775-a782-44d5-bea3-81ed0143eb74</app:SemanticID>
+        <app:ShortName>cityName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>city</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressDistrictName" type="address:PhysicalAddressDistrictNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The district name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:599a239b-ac47-4ba9-be2f-f7765d61e62b</app:SemanticID>
+        <app:ShortName>districtName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>district</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressDistrictNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The district name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:599a239b-ac47-4ba9-be2f-f7765d61e62b</app:SemanticID>
+        <app:ShortName>districtName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>district</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressGeographicRegionName" type="address:PhysicalAddressGeographicRegionNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The geographic region name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8cb9934c-af81-4956-9deb-095104cca466</app:SemanticID>
+        <app:ShortName>geographicRegionName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>geographic region</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressGeographicRegionNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The geographic region name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8cb9934c-af81-4956-9deb-095104cca466</app:SemanticID>
+        <app:ShortName>geographicRegionName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>geographic region</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressPostOfficeBoxText" type="address:PhysicalAddressPostOfficeBoxTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The numbered box in a post office, assigned to the person or organisation, where mail for them is kept until called for.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:523aa70d-b25c-4961-b1e2-d658d4ce2970</app:SemanticID>
+        <app:ShortName>postOfficeBoxText</app:ShortName>
+        <app:Remarks>A post-office box is also commonly referred to as a PO box or a postal box.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>post office box</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressPostOfficeBoxTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The numbered box in a post office, assigned to the person or organisation, where mail for them is kept until called for.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:523aa70d-b25c-4961-b1e2-d658d4ce2970</app:SemanticID>
+        <app:ShortName>postOfficeBoxText</app:ShortName>
+        <app:Remarks>A post-office box is also commonly referred to as a PO box or a postal box.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>post office box</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="15" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressPostalCodeIdentifier" type="address:PhysicalAddressPostalCodeIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The postal code.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bf55b2f2-5f94-495a-84cb-0dadbbba0dd5</app:SemanticID>
+        <app:ShortName>postalCodeIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>postal code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressPostalCodeIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The postal code.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bf55b2f2-5f94-495a-84cb-0dadbbba0dd5</app:SemanticID>
+        <app:ShortName>postalCodeIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>postal code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="15" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressProvinceName" type="address:PhysicalAddressProvinceNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The province name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:00118afa-7bec-42d0-8843-9ace2cdb8121</app:SemanticID>
+        <app:ShortName>provinceName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>province</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressProvinceNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The province name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:00118afa-7bec-42d0-8843-9ace2cdb8121</app:SemanticID>
+        <app:ShortName>provinceName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>province</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressResidenceName" type="address:PhysicalAddressResidenceNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The residence name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bcb73e15-9c9c-475e-94d3-e0ba16fe7f43</app:SemanticID>
+        <app:ShortName>residenceName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>residence</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressResidenceNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The residence name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bcb73e15-9c9c-475e-94d3-e0ba16fe7f43</app:SemanticID>
+        <app:ShortName>residenceName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>residence</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressStreetAdditionalText" type="address:PhysicalAddressStreetAdditionalTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Additional information such as the house number, the apartment number, rural route number, building number, room number, office or equivalent number to complete the physical address.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6c56f101-5318-4b50-83c0-bee85a270312</app:SemanticID>
+        <app:ShortName>streetAdditionalText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>street (additional text)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressStreetAdditionalTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Additional information such as the house number, the apartment number, rural route number, building number, room number, office or equivalent number to complete the physical address.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6c56f101-5318-4b50-83c0-bee85a270312</app:SemanticID>
+        <app:ShortName>streetAdditionalText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>street (additional text)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PhysicalAddressStreetName" type="address:PhysicalAddressStreetNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The street name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2c0037f3-c3d7-41db-b05c-5066496ce8b8</app:SemanticID>
+        <app:ShortName>streetName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>street</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PhysicalAddressStreetNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The street name.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2c0037f3-c3d7-41db-b05c-5066496ce8b8</app:SemanticID>
+        <app:ShortName>streetName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>street</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PhysicalAddressType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Address that represents a physical location that is reachable by use of transportation, to include the use of postal services.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2c835ece-087a-46b0-9539-901a66ff8fc3</app:SemanticID>
+        <app:DisplayName>Physical address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="address:AddressType">
+        <xsd:sequence>
+          <xsd:element ref="address:PhysicalAddressCategoryCode" />
+          <xsd:element ref="address:PhysicalAddressCityName" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressDistrictName" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressGeographicRegionName" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressPostOfficeBoxText" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressPostalCodeIdentifier" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressProvinceName" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressResidenceName" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressStreetAdditionalText" minOccurs="0" />
+          <xsd:element ref="address:PhysicalAddressStreetName" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SaturnParametersNetworkNumber" type="address:SaturnParametersNetworkNumberType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The network number.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1e3e41a2-1ec0-4695-b80c-800ccde4c4d7</app:SemanticID>
+        <app:ShortName>networkNumber</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>number</app:MIMStereotype>
+        <app:DisplayName>network number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SaturnParametersNetworkNumberType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The network number.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1e3e41a2-1ec0-4695-b80c-800ccde4c4d7</app:SemanticID>
+        <app:ShortName>networkNumber</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>number</app:MIMStereotype>
+        <app:DisplayName>network number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="1" />
+      <xsd:maxInclusive value="9999" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SaturnParametersTimeOfDay" type="address:SaturnParametersTimeOfDayType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The time of the day.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c6ac965a-4cbc-4bce-8f62-fd7e5b6ddc69</app:SemanticID>
+        <app:ShortName>timeOfDay</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>time</app:MIMStereotype>
+        <app:DisplayName>time of day</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SaturnParametersTimeOfDayType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The time of the day.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c6ac965a-4cbc-4bce-8f62-fd7e5b6ddc69</app:SemanticID>
+        <app:ShortName>timeOfDay</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>time</app:MIMStereotype>
+        <app:DisplayName>time of day</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:complexType name="SaturnParametersType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific parameters required to contact another entity using SATURN (Second generation Anti-jam Tactical UHF Radio for NATO).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5428d077-494e-4a35-8469-071355ed57d3</app:SemanticID>
+        <app:DisplayName>SATURN Parameters</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="address:SaturnParametersNetworkNumber" minOccurs="0" />
+          <xsd:element ref="address:SaturnParametersTimeOfDay" minOccurs="0" />
+          <xsd:element ref="address:SaturnParametersWordOfTheDayName" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SaturnParametersWordOfTheDayName" type="address:SaturnParametersWordOfTheDayNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The word of the day.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:26ab7bba-24a4-4937-8a68-c28a5336bc8b</app:SemanticID>
+        <app:ShortName>wordOfTheDayName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>word of the day</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SaturnParametersWordOfTheDayNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The word of the day.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:26ab7bba-24a4-4937-8a68-c28a5336bc8b</app:SemanticID>
+        <app:ShortName>wordOfTheDayName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>word of the day</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="12" />
+      <xsd:pattern value="[A-Z0-9]{1,12}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="TelephoneNumberTelephoneTypeCode" type="address:TelephoneNumberTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The intended use of the telephone number.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c51b6ec7-2f7c-4d8d-aa40-2b31a0fa271d</app:SemanticID>
+        <app:ShortName>telephoneTypeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>telephone type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TelephoneNumberType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A telephone number for telephony communication with an Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5ce0e676-aef5-4796-bde8-ef0cc86a662c</app:SemanticID>
+        <app:DisplayName>Telephone number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="address:ElectronicAddressType">
+        <xsd:sequence>
+          <xsd:element ref="address:TelephoneNumberTelephoneTypeCode" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TelephoneNumberTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The intended use of the telephone number.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a846cb6a-894b-4ffa-92ce-1084dcb46b3e</app:SemanticID>
+        <app:Remarks>This property is based on the X.520 Telephone Number attribute [CCITT.X520.1988].</app:Remarks>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Cell">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number is a cellular or mobile number.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:56db1cf8-6cae-43a5-9ee9-92f0a11d78e3</app:SemanticID>
+            <app:DisplayName>Cell</app:DisplayName>
+            <app:PhysicalName>CELL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fax">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number supports facsimile.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:226b6817-40ee-42e5-a765-b1704c82bff2</app:SemanticID>
+            <app:DisplayName>Fax</app:DisplayName>
+            <app:PhysicalName>FAX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pager">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number is used for a paging device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bcd596af-46ca-4212-9293-ae7a993fa356</app:SemanticID>
+            <app:DisplayName>Pager</app:DisplayName>
+            <app:PhysicalName>PAGER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Text">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number supports text messages (SMS).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9c8d49fc-f986-4f1a-a22d-89c3207c510f</app:SemanticID>
+            <app:DisplayName>Text</app:DisplayName>
+            <app:PhysicalName>TEXT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Textphone">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number is used for a telecommunication device for people with hearing or speech difficulties.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f04c54fa-f055-4ae2-a4bc-48c6571de1b2</app:SemanticID>
+            <app:DisplayName>Textphone</app:DisplayName>
+            <app:PhysicalName>TXTPHN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Video">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number supports video conferencing.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ea926ff-1262-477e-bd93-b2b88464ff70</app:SemanticID>
+            <app:DisplayName>Video</app:DisplayName>
+            <app:PhysicalName>VIDEO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Voice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The telephone number supports voice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2aa17281-001b-4147-bc46-8e7bdd11fba2</app:SemanticID>
+            <app:DisplayName>Voice</app:DisplayName>
+            <app:PhysicalName>VOICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UnitOfElectromagneticEmissionMeasurementCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The unit of electromagnetic emission measurement.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:768ad006-69de-4386-9c14-6a07af0df0a3</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Gigahertz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Gigahertz</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0a78d65a-ec32-4bb6-937a-77ddde7ce729</app:SemanticID>
+            <app:DisplayName>Gigahertz</app:DisplayName>
+            <app:PhysicalName>GHZ</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hertz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Hertz</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3ab37d06-66f1-4db1-9001-b333a3ce8a18</app:SemanticID>
+            <app:DisplayName>Hertz</app:DisplayName>
+            <app:PhysicalName>HZ</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Kilohertz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Kilohertz</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7baf4ab2-9faf-48c7-9f8b-6a6ce116b7ad</app:SemanticID>
+            <app:DisplayName>Kilohertz</app:DisplayName>
+            <app:PhysicalName>KHZ</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Megahertz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Megahertz</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:945fe79d-cc8f-443d-8002-564294aeaf6f</app:SemanticID>
+            <app:DisplayName>Megahertz</app:DisplayName>
+            <app:PhysicalName>MHZ</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

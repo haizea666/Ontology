@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>32</TestCaseIdGroup>
+    <TestCaseIdNumber>5</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Process an anonymous (unknown and non-MIP4) payload.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability to process anonymous payloads.</TestCaseObjective>
+  <TestCaseScenario>A Consumer receives a valid anonymous payload and ignores it.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S, File</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>The consumer can ignore anonymous payloads.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error or ignore the payload. In any case, the Consumer should remain stable.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0012.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain the valid MIP4 content from the producer containing anonymous payloads.</TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer will ignore the anonymous payloads. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully ignore the anonymous content without error. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

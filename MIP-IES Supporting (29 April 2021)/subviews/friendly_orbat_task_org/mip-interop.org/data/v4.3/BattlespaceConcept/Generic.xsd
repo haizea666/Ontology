@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AbsoluteTimePeriodEndDateTime" type="generic:AbsoluteTimePeriodEndDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod ends.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5f893d2-bf71-4874-b90e-f2fc1c2210e5</app:SemanticID>
+        <app:ShortName>endDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AbsoluteTimePeriodEndDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod ends.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5f893d2-bf71-4874-b90e-f2fc1c2210e5</app:SemanticID>
+        <app:ShortName>endDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="AbsoluteTimePeriodStartDateTime" type="generic:AbsoluteTimePeriodStartDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod begins.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d8d7dbf9-3b41-4d87-a48b-23c20a2ed759</app:SemanticID>
+        <app:ShortName>startDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AbsoluteTimePeriodStartDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod begins.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d8d7dbf9-3b41-4d87-a48b-23c20a2ed759</app:SemanticID>
+        <app:ShortName>startDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:complexType name="AbsoluteTimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A TimePeriod that uses Universal Time as reference.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2f98c539-7afa-49f6-9f07-9d61dc10e165</app:SemanticID>
+        <app:DisplayName>Absolute time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:TimePeriodType">
+        <xsd:sequence>
+          <xsd:element ref="generic:AbsoluteTimePeriodEndDateTime" minOccurs="0" />
+          <xsd:element ref="generic:AbsoluteTimePeriodStartDateTime" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="HostilityCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The perceived hostility status of a BattlespaceConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d93bfd9f-5279-4fc9-9f56-ed5f21bb5140</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Friend">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept pertains to a declared, presumed or recognized friendly nation, faction or group.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c061579-d5fc-4b1a-87ed-dfd72071466e</app:SemanticID>
+            <app:DisplayName>Friend</app:DisplayName>
+            <app:PhysicalName>FR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Neutral">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is neither supporting friendly nor opposing forces according to its characteristics, behaviour, origin or nationality.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c7a391f8-2d9d-41ec-b99d-c06b7c2b1810</app:SemanticID>
+            <app:DisplayName>Neutral</app:DisplayName>
+            <app:PhysicalName>NEUTRL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="TextualTimePeriodDescriptionText" type="generic:TextualTimePeriodDescriptionTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of a portion of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:244a5814-4962-4db5-a71a-fb3d0b740150</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TextualTimePeriodDescriptionTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of a portion of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:244a5814-4962-4db5-a71a-fb3d0b740150</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TextualTimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A TimePeriod specified as free text.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0938920e-ed38-42c8-865e-ff16212ad15b</app:SemanticID>
+        <app:DisplayName>Textual time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:TimePeriodType">
+        <xsd:sequence>
+          <xsd:element ref="generic:TextualTimePeriodDescriptionText" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A portion of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:789b83c7-7f1d-4278-8870-22bdca827494</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

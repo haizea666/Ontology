@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList 
+	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd'
+>
+	<Identification>
+		<ShortName>ReligionCodeType</ShortName>
+		<Version>1.0.1</Version>
+		<CanonicalUri>urn:int:nato:standard:mip:mip4ies:managedList:religionCode</CanonicalUri>
+		<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:religionCode:1:0:1</CanonicalVersionUri>
+	</Identification>
+	<ColumnSet>
+		<ColumnRef Id="code" ExternalRef="code">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="label" ExternalRef="label">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="description" ExternalRef="description">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<KeyRef Id="managedListKey" ExternalRef="managedListKey">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</KeyRef>
+	</ColumnSet>
+	<SimpleCodeList>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PRTADV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Protestant (Adventist)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Protestant (Adventist) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ISLAMA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Islam (Alawite)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Islam (Alawite) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ANGLCN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Anglican</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Anglican doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ANIMSM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Animism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Animism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>APSTLC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Apostolic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Apostolic doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARMNAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Armenian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Armenian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARMORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Armenian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Armenian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ASMGOD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Assembly of God</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Assembly of God doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ATHEST</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Atheist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who denies or disbelieves the existence of any deity.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAHAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Baha'i</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Baha'i doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAPTST</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Baptist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Baptist doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BEHAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Beha'i</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Beha'i doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BUDHSM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Buddhism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Buddhism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BLGORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bulgarian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Bulgarian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CALVNS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Calvinist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Calvinist doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CATHLC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Catholic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Catholic doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHNDGY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chondogyo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Chondogyo doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHRSTN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Christian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Christian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHRENG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Church of England</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Church of England doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHRGOD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Church of God</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Church of God doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHRTVL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Church of Tuvalu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Church of Tuvalu doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CNFCNS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Confucianism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Confucianism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CNG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Congregational</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Congregational doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CNGCCH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Congregational Christian Church</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Congregational Christian Church doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CNGNCH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Congregational New Church</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Congregational New Church doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNCHCN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>United Church (Congregational)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the United Church (Congregational) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CPTCHR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Coptic Christian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Coptic Christian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DRUZE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Druze</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Druze doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ESTORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Eastern Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Eastern Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EKLNIE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ekalesia Nieue</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Ekalesia Nieue doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EPSCPL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Episcopalian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Episcopalian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ETHORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ethiopian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Ethiopian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EVNALL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Evangelical Alliance</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Evangelical Alliance doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EVNLUT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Evangelical Lutheran</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Evangelical Lutheran doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PRTEVN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Protestant (Evangelical Methodist)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Protestant (Evangelical Methodist) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EVNGCH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Evangelist Church</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Evangelist Church doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHRFRW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Christian (Free Wesleyan Church)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Christian (Free Wesleyan Church) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GEOORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Georgian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Georgian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GRKORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Greek Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Greek Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GRGARM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gregorian-Armenian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Gregorian-Armenian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HINDU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hinduism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Hinduism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IBDMUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ibadhi Muslim</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Ibadhi Muslim doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>INDGNS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Indigenous</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Indigenous doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ISLAMC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Islamic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Islamic doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ISLAMI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Islam (Isma'ilite)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Islam (Isma'ilite) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JAINS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Jains</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Jains doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JHVWTN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Jehovah's Witness</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Jehovah's Witness doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JUDASM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Judaism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Judaism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KIEVPT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kiev Patriarchate</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Kiev Patriarchate doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KMBNGS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kimbanguist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Kimbanguist doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAMBUD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lamaistic Buddhism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Lamaistic Buddhism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LTRSNT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Latter-day Saints</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Latter-day Saints doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHRSLB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Christian (Liebenzell Mission)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Christian (Liebenzell Mission) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LNDMSN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>London Missionary Society</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the London Missionary Society doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUTHRN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lutheran</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Lutheran doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MUSMLY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Muslim (Malays)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Muslim (Malays) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MARONT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Maronite</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Maronite doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MENNTE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mennonite</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Mennonite doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>METHDS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Methodist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Methodist doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNDMTH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>United (Methodist)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the United (Methodist) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MODKNG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Modekngei</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Modekngei doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PRTMRV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Protestant (Moravian)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Protestant (Moravian) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MORMON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mormon</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Mormon doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MSCWPT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Moscow Patriarchate</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Moscow Patriarchate doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MUSLIM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Muslim</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Muslim doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NIUNCH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Niuean Church</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Niuean Church doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NONE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>None</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who does not adhere to a religion.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ISLAMN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Islam (Nusayri)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Islam (Nusayri) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ORTHDX</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PGNAFR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pagan African</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Pagan African doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PARSI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Parsi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Parsi doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PNTCST</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pentecostal</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Pentecostal doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PRSBYT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Presbyterian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Presbyterian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNDPRB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>United (Presbyterian)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the United (Presbyterian) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNCHPR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>United Church (Presbyterian)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the United Church (Presbyterian) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PRT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Protestant</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Protestant doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RMNCTH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Roman Catholic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Roman Catholic doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ROMORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Romanian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Romanian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RUSORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Russian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Russian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SVNADV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Seventh-day Adventist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Seventh-day Adventist doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MUSSHF</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Muslim (Sha'fi)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Muslim (Sha'fi) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SHMNSM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Shamanism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Shamanism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SHIMUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Shi'a Muslim</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Shi'a Muslim doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SHINTO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Shinto</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Shinto doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SIKH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sikh</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Sikh doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SLVMUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Slavic Muslim</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Slavic Muslim doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SOCFRD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Society of Friends</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Society of Friends doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SPRCLT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Spiritual Cults</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Spiritual Cults doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SUNMUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sunni Muslim</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Sunni Muslim doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SYNCHN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Syncretic Chondogyo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Syncretic Chondogyo doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TAOISM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Taoism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Taoism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>THRVBD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Theravada Buddhism</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Theravada Buddhism doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TBTBUD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tibetan Buddhist</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Tibetan Buddhist doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TRD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Traditional</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Traditional doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TRDMYN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Traditional Mayan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Traditional Mayan doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TRBREL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tribal Religion</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Tribal Religion doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UKRAUT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ukrainian Autocephalous</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Ukrainian Autocephalous doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UKRORT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ukrainian Orthodox</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Ukrainian Orthodox doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNICTH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Uniate Catholic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Uniate Catholic doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RMNCTU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Roman Catholic (Uniate)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Roman Catholic (Uniate) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UKRCTH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ukrainian Catholic (Uniate)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Ukrainian Catholic (Uniate) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNCH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>United Church</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the United Church doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNFRCH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>United Free Church</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the United Free Church doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UNCHAU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Uniting Church in Australia</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Uniting Church in Australia doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>VOODOO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Voodoo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Voodoo doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MUSZYD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Muslim (Zaydi)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Muslim (Zaydi) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AFRMTH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>African Methodist Episcopal (Zion)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the African Methodist Episcopal (Zion) doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZRSTRN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zoroastrian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>One who adheres to or identifies with the Zoroastrian doctrine.</SimpleValue>
+            </Value>
+        </Row> 
+    </SimpleCodeList>
+</gc:CodeList>
+

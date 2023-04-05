@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+<Object ShortName="OrganisationType" ObjectName="XXX_OR_001" ObjectType="OrganisationType" LocationType="Point" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="ActorType" SemanticId="MIM:d4664893-6364-4594-a766-df7d575b110a" >
+<Property0 ShortName="Identifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:530766</Value>
+</Property1>
+<Property1 ShortName="Source" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>KMX458LP1A2OLXFHY77T</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>false</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="AlternateIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property1 ShortName="StandardCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StandardCodeWrapperType" SemanticId="MIM:cfdd1fc1-856f-4215-a0a7-09e58ea3d4c2" >
+<Value></Value>
+<Property2 ShortName="StandardCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateStandardCodeType" SemanticId="MIM:f22f4125-4ea2-48b0-a625-583fc78519be" >
+<Value>MIP31</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="StringIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>CSU66M8YBQ8NO4VKORQMU6MNOOD50RM91UVMLBOD2L17MK0MCWTCNFHGGGRSJD8UE9W4JJ8MCMUIFPAEY02D8JWWNOGEU63ZNH3NX6D2XGAAV9A0GM4TK4V4NAQ4D32GT448WWR1W9P1JVAONP8HBKOTV8AXPIZ4O3R0ECET5C6LO3U19CQY5VEIQLMXW3MOKVNPEJJKKOL9ODE1NJYN1B83ZIK20R7C0SB3QFWZ2GNQJE4NHUJNF9WIWUZ69RU2RJJ6CLKIW8UVXSTUO7VFHT6152G6P00LVV9958L5JB1GOBVEAFSB6OV7MRAJEO26IJ9CSUYPWZ5G2ZM4HB6KHYOG9BWO7B15I48FBTVQQCPGTPFWEFCCRSYT42CR7KRU89770H3YQQ3FIHXU5AJ29YNZGOKIQDSGU4ITRH56MOWBZSLWFRV7AZVJWH1M7VHM7XUO9DDYEMPUBMAXDXC9RVF5I87JPT91GJEC86XBO73YKBIKHEIJSI4LRZFAG3IUMYN1H8YHABVU2QVH0XCLLZI8P2UJ1X4UYJLVXQCIPAJRWKSBE7JT07IXPPMPOPQMGA5TF9UKV35KP1MFJTE3NL31AYGIDW49U7LVO95EN887B7HYCHF5KW84HESQ2MH8960SQ00KX9PON60DRSF5R9Y88QOJQPLA198FHYIMQ4IKHTQKOP9KHLQ9H1U9LR4HXOXN8V62K2OX1N1O9D5BPB3QT87PDIB99AX26DM3SGAP63I3AF9HV32WVH49XRYB1PX108S61CSJAOT0</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="AppraisalWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="AppraisalWrapperType" SemanticId="MIM:efcf8a49-9945-42c3-a35c-e3a645f626b1" >
+<Value></Value>
+<Property2 ShortName="Appraisal" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="IntelAppraisalType" DerivedSemanticId="MIM:5bdc0304-a9ee-4d9c-8de3-6c3655ffb222" SendIfOptional="true" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="AppraisalType" SemanticId="MIM:13132574-a1dd-4d4d-87b9-e870613613ae" >
+<Value></Value>
+<Property3 ShortName="AccuracyCodeWrapper" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IntelAppraisalAccuracyCodeWrapperType" SemanticId="MIM:8a525ac0-d4c9-4c09-be20-d66a98333b26" >
+<Value></Value>
+<Property4 ShortName="IntelAppraisalAccuracyCode" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IntelAppraisalAccuracyCodeType" SemanticId="MIM:c0dec873-a722-4086-bb3c-a4edc0e66b36" >
+<Value>Probable</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReliabilityCodeWrapper" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IntelAppraisalReliabilityCodeWrapperType" SemanticId="MIM:e16b96d8-2da4-4e5e-b625-3b8623286cb6" >
+<Value></Value>
+<Property4 ShortName="IntelAppraisalReliabilityCode" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IntelAppraisalReliabilityCodeType" SemanticId="MIM:aa11ffe2-0fbf-4130-a040-b0fc213f5dcc" >
+<Value>CompletelyReliable</Value>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+<Property1 ShortName="ClassificationWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationWrapperType" SemanticId="MIM:b54971bc-6194-4c53-9732-cb3fe01d4939" >
+<Value></Value>
+<Property2 ShortName="SecurityClassification" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationType" SemanticId="MIM:7a990bcf-74e4-4b40-afc2-52f5d1eb6c38" >
+<Value></Value>
+<Property3 ShortName="CaveatTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CaveatTextWrapperType" SemanticId="MIM:c72c36fb-e6be-496b-a786-842440d68c95" >
+<Value></Value>
+<Property4 ShortName="CaveatText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CaveatTextType" SemanticId="MIM:c72c36fb-e6be-496b-a786-842440d68c95" >
+<Value>J3OGHAGZIMGBR9XRGQCCXCQSLTWHXEJSC017BRT022XO6Q1A0CTJCMKHM54YN9BECX80I0PY7LJ4OCW41VRUUAP0PUVGW5M</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="LevelCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationLevelCodeWrapperType" SemanticId="MIM:061f9abf-e545-4441-93a3-9651d74e7888" >
+<Value></Value>
+<Property4 ShortName="SecurityClassificationLevelCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationLevelCodeType" SemanticId="MIM:abc1cf9a-cbd4-4d75-bb11-2994dd2ee1d7" >
+<Value>Secret</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="PolicyTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="PolicyTextWrapperType" SemanticId="MIM:9294b299-ea0d-4427-87d5-ed9a187b7318" >
+<Value></Value>
+<Property4 ShortName="PolicyText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="PolicyTextType" SemanticId="MIM:9294b299-ea0d-4427-87d5-ed9a187b7318" >
+<Value>TLIRA2AW5M0CQ2KIA62SRUCHHLYEJCC9QD50NN13Q7ZXZY91K7W8ULK8JBJZD5N2K1VN6U5WF8B</Value>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+<Property1 ShortName="CommentTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value></Value>
+<Property2 ShortName="CommentText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>5OSTL</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReferenceWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReferenceWrapperType" SemanticId="MIM:4689bbde-0865-4d71-8312-7839abe9b354" >
+<Value></Value>
+<Property2 ShortName="Reference" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReferenceType" SemanticId="MIM:e90cb12a-cda0-4012-8cfe-54128d75539a" >
+<Value></Value>
+<Property3 ShortName="PartTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="PartTextWrapperType" SemanticId="MIM:a1a1dc27-1685-443d-a6af-02e2b7cdebd8" >
+<Value></Value>
+<Property4 ShortName="PartText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="PartTextType" SemanticId="MIM:a1a1dc27-1685-443d-a6af-02e2b7cdebd8" >
+<Value>3MQDOF36QMDC0VU7N7CW40B93WK0D4S0NGBBLGNQTADTT</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="RoleCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReferenceRoleCodeWrapperType" SemanticId="MIM:efe8a538-4d36-4bd5-8725-b74f41fd04b5" >
+<Value></Value>
+<Property4 ShortName="ReferenceRoleCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReferenceRoleCodeType" SemanticId="MIM:5c26c5a8-0d4a-476e-891a-cfe076d4d826" >
+<Value>HasInstructionsProvidedIn</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="TransmittalTypeCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReferenceTransmittalTypeCodeWrapperType" SemanticId="MIM:a53d4573-7b19-4044-89e1-f9439bddcc25" >
+<Value></Value>
+<Property4 ShortName="ReferenceTransmittalTypeCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReferenceTransmittalTypeCodeType" SemanticId="MIM:49096bb9-26a0-4d32-bd11-1b56444d8284" >
+<Value>ElectronicTransfer</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="CitedResource" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IdentifiableReferenceType" SemanticId="MIM:a0c3cae7-e7c5-4d8f-bfa9-cb2032bab18e" >
+<Value></Value>
+<Property4 ShortName="Uri" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:629883</Value>
+</Property4>
+<Property4 ShortName="Source" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>MIPTT</Value>
+</Property4>
+<Property4 ShortName="ComplexType" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>nsct:OrganisationType</Value>
+</Property4>
+<Property4 ShortName="Discriminator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>87AURZCDKRK</Value>
+</Property4>
+<Property4 ShortName="AlternateIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property5 ShortName="StandardCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StandardCodeWrapperType" SemanticId="MIM:cfdd1fc1-856f-4215-a0a7-09e58ea3d4c2" >
+<Value></Value>
+<Property6 ShortName="StandardCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateStandardCodeType" SemanticId="MIM:f22f4125-4ea2-48b0-a625-583fc78519be" >
+<Value>NFFI13</Value>
+</Property6>
+</Property5>
+<Property5 ShortName="StringIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>C3W3NYTUSVHUVC4XSP0O42F37JYE7136UVRHRZGOY5PM395XHQ1CTNAKX25EAPW12K9AVXF3IMZ9M397NB6RA1MGUHTY3CNJJYTTA4BUK73HYB832709TE1A83PNDQ9F8Q0XJQ7T9LGC7ESTJ065MN0E7TUGPYQ47XIHKKTLAHAH7YD3K5ENUE3U0V0050EL4MEJ5KJ8GU5FNSGIP16TTDJ34YRZT2PJCZMVU379WFG9IYHHPSLE4U11CKPH2TPNFWCYGVYW466N6KVGQKKARLOS7VSJNZHC024VVTA34YK8XO41ZJ1SJP53IU0VCOIEZ4XEQ9U7JQG3BQ4T00UE8Y3L7ANB2P1PQFI310LZY3I3IC11ZH4L4EGAAMGPWTE4Z0M6HA1AP5PEP9C4JVLVUPVM9H2PT5CFYODS05UYP368YBUAJMGAHTJJEA79IMRT2JQB6TENBXF0TXX7X1FGYC8EE4OZ8UQDMMGPUTEZI28UOS0RN9MQHK5ZKL7BFOPRGCOGQIMEWP85EO0VD6M8HA5CRQEIVDT3NQOLEUAEWI31M9V6VL8ICRJFGMZ9DDST5ESXAORT6HL9HEZR5HXKEL15HIF14ABS0J6HQ86H4PM4FK8CWHE5QIPUNXP1IZY5G3J8ISB6LQQZ8706KDFW5FCR4L43SE8E0QYMBA3EFIU92ZWQ6TRFUBAA01E6YINGSL8RIO5KJBRXUCZEZN69X2TYQXVJ66P74ORQ1EHSYH6TUNPYCAHKMOTZ2KAV2VOMVU2GUIMUGNLP6AEDH6H5ZFUQ41YRDV0C3T7AUJD3XXD9DD31G7N5NSXQ9MM3U5QUXIWMCDT83OICBVM086LGH4ZL6RAI6KJ1GSM5RQYCOPC9JVPO9V5XUJ</Value>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Inferred</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="IsBasedOnCountIndicatorWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IsBasedOnCountIndicatorWrapperType" SemanticId="MIM:acfd1320-5027-47b6-890a-c6907a4c40cb" >
+<Value></Value>
+<Property4 ShortName="IsBasedOnCountIndicator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IsBasedOnCountIndicatorType" SemanticId="MIM:acfd1320-5027-47b6-890a-c6907a4c40cb" >
+<Value>false</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="IsRealDataInExerciseIndicatorWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IsRealDataInExerciseIndicatorWrapperType" SemanticId="MIM:503b504b-9937-47aa-8aac-907f68023060" >
+<Value></Value>
+<Property4 ShortName="IsRealDataInExerciseIndicator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IsRealDataInExerciseIndicatorType" SemanticId="MIM:503b504b-9937-47aa-8aac-907f68023060" >
+<Value>false</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2017-11-21T06:11:00.811Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2017-11-21T13:44:24.245Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>CKBTFR</Value>
+</Property6>
+</Property5>
+<Property5 ShortName="ActorReference" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="IdentifiableReferenceType" SemanticId="MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a" >
+<Value></Value>
+<Property6 ShortName="Uri" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:121269</Value>
+</Property6>
+<Property6 ShortName="Source" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>MIPTT</Value>
+</Property6>
+<Property6 ShortName="ComplexType" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>nsct:OrganisationType</Value>
+</Property6>
+<Property6 ShortName="Discriminator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>SIRIRII221ZBLCWILOVG6</Value>
+</Property6>
+<Property6 ShortName="AlternateIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property7 ShortName="StandardCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StandardCodeWrapperType" SemanticId="MIM:cfdd1fc1-856f-4215-a0a7-09e58ea3d4c2" >
+<Value></Value>
+<Property8 ShortName="StandardCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateStandardCodeType" SemanticId="MIM:f22f4125-4ea2-48b0-a625-583fc78519be" >
+<Value>Link11</Value>
+</Property8>
+</Property7>
+<Property7 ShortName="StringIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>LG9D9DOT32Z6FSMNPMRUA3JFTQC0ETK8MZFCREIZOI6JVFQZ8AG4PVSS74TTAXPKR1UQMK6KD1F269UN9M1DNQT0GWEXUZY03W24V9NYE50XP0V8JGTX6L6AH3K0GJZOCP9KG0299D9RZ5KPAGNOFB4RZ1W1ZXS4GMUA1K1TNUY2MPLLT4Z96LJBURVPDAKMVELNLJY0O3AUMBEJQKI48S84CSPJZLPNJMHID8AJF8UCKYZTML922PODFQK24PADNXKA46GRK8Y975UO366NMWU48ECXXHP07RZXNZYQFRS30OFK6597TX00CQBZ3S4CT8BPF6AEHPH4E0DT8202IRHK19U6X8XWXQK2N0E944ZDP5WMMS1A1C3B11YGMERI2VHYPLGIY07O2D45MITEHW4VWJAWB7X0NRK4Y76BMSMBEPJX633EUMBG0WBGKUH1DGBL3AGPLS2YJ3QHAN0HDTGAPEEC6Z12LV78N745WO2BUM76F3G639XT9A5Z6ESW1ANY6R3CT4UY1FQDHH6CS48M7O9NCF9S6GKT8IAX9EN9O924</Value>
+</Property7>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+<Property3 ShortName="ObserverWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObserverWrapperType" SemanticId="MIM:c8c0cbfe-9aff-4cee-8923-dca3a213d96f" >
+<Value></Value>
+<Property4 ShortName="Observer" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="ObserverType" DerivedSemanticId="MIM:e6f826c9-dacc-4d31-8806-2fd4f2b5a7c6" SendIfOptional="true" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObserverType" SemanticId="MIM:e6f826c9-dacc-4d31-8806-2fd4f2b5a7c6" >
+<Value></Value>
+<Property5 ShortName="ObserverNameWrapper" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObserverNameWrapperType" SemanticId="MIM:35b7f98b-23da-4936-b0ba-d0f7384e67b4" >
+<Value></Value>
+<Property6 ShortName="ObserverName" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObserverNameType" SemanticId="MIM:35b7f98b-23da-4936-b0ba-d0f7384e67b4" >
+<Value>1SZHPD</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+<Property1 ShortName="ValidityTimePeriodWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="TimePeriodWrapperType" SemanticId="MIM:b65e94c0-26ba-40d8-ae78-7749295f1dcb" >
+<Value></Value>
+<Property2 ShortName="TimePeriod" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" DerivedType="AbsoluteTimePeriodType" DerivedSemanticId="MIM:2f98c539-7afa-49f6-9f07-9d61dc10e165" SendIfOptional="true" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="TimePeriodType" SemanticId="MIM:789b83c7-7f1d-4278-8870-22bdca827494" >
+<Value></Value>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="Extension" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Extension" MIPType="ExtensionType" SemanticId="IDT::Extension" >
+<Value></Value>
+</Property0>
+<Property0 ShortName="IsInstanceIndicator" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="IsInstanceIndicatorType" SemanticId="MIP4IES:e821c670-009a-11e6-a837-0800200c9a66" >
+<Value>true</Value>
+</Property0>
+<Property0 ShortName="InstanceType" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="TypeReferenceType" SemanticId="MIP4IES:cc94200f-b744-49c8-b292-29759c53d08c" >
+<Value></Value>
+<Property1 ShortName="Uri" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:932704</Value>
+</Property1>
+<Property1 ShortName="Source" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>nsct:OrganisationType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>XV6FO06G9</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StandardCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StandardCodeWrapperType" SemanticId="MIM:cfdd1fc1-856f-4215-a0a7-09e58ea3d4c2" >
+<Value></Value>
+<Property3 ShortName="StandardCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateStandardCodeType" SemanticId="MIM:f22f4125-4ea2-48b0-a625-583fc78519be" >
+<Value>NFFI13</Value>
+</Property3>
+</Property2>
+<Property2 ShortName="StringIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>OVS5LXK273TO63BGFCWZ07HUQZ9RXLKDCOQXD9C83Q2TEH9MMU0DNAXRN7PWY3EVSPLRMOCG9X6KEXQJZWECUHZB19JGUQK9LGBY5R98RUE0ENM0RG6BYCBL0K0NE6VTM688W1NHWFV9C97OWSYOUJKJF08V1W4V8UNHONEZ2YOTRBI0NL0VHH8DWZ2632QAL9ASVZAJO9V5412ERHIP5IN1WKVZUI6AINIRA0FXLRGIVCI46YOVUAFCWJ5KELYGCVXRSLE1CUENBEGTC0263LPHHF4044TA3AF9P1LVUWS962ARDMINT2M1FQJNQN7HBDTB9GEKOGLH2QLPENXRWFRBXO38S8FHZL72J9S6I79MQF8ZF4ICZPV6WSOUMF2QAESRTSGF50JY</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="TypeNameWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="TypeNameWrapperType" SemanticId="MIM:118fa93e-4551-41d6-ba11-3ff5ae508699" >
+<Value></Value>
+<Property2 ShortName="TypeName" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="TypeNameType" SemanticId="MIM:118fa93e-4551-41d6-ba11-3ff5ae508699" >
+<Value>EVSPE3X0DRJ0BG1V7U</Value>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="HostilityStatusCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="HostilityStatusCodeWrapperType" SemanticId="MIM:b7ad5541-b980-4d50-862b-678f245ab489" >
+<Value></Value>
+<Property1 ShortName="HostilityStatusCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="HostilityStatusCodeType" SemanticId="MIM:d93bfd9f-5279-4fc9-9f56-ed5f21bb5140" >
+<Value>AssumedFriend</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="AdditionalInformationTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="AdditionalInformationTextWrapperType" SemanticId="MIM:99481d49-c773-457c-b8bc-2d43a693aad1" >
+<Value></Value>
+<Property1 ShortName="AdditionalInformationText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="AdditionalInformationTextType" SemanticId="MIM:99481d49-c773-457c-b8bc-2d43a693aad1" >
+<Value>TML</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="StaffCommentsTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="StaffCommentsTextWrapperType" SemanticId="MIM:4ba3cb6f-c968-4d6c-8b73-d5044ca31ac6" >
+<Value></Value>
+<Property1 ShortName="StaffCommentsText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="StaffCommentsTextType" SemanticId="MIM:4ba3cb6f-c968-4d6c-8b73-d5044ca31ac6" >
+<Value>RFWYCH9F6ZS65</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="NameWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameWrapperType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value></Value>
+<Property1 ShortName="Name" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value>XXX_OR_001</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="AlternateNameWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="AlternateNameWrapperType" SemanticId="MIM:a864c430-d79d-41b8-b4d6-fada0ec13274" >
+<Value></Value>
+<Property1 ShortName="AlternateName" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="AlternateNameType" SemanticId="MIM:a864c430-d79d-41b8-b4d6-fada0ec13274" >
+<Value>HMEZ7XI</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="GeographicLocationWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="CoreLocationWrapperType" SemanticId="MIM:d0270649-07d8-47c7-b540-eb2ed10628c2" >
+<Value></Value>
+<Property1 ShortName="CoreLocation" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/Locations" DerivedType="PointType" DerivedSemanticId="MIM::Classes::Location::AbsolutePoint" SendIfOptional="true" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="CoreLocationType" SemanticId="MIM:c9164dc3-1dfe-433d-be3c-6329610f2d7c" >
+<Value></Value>
+<Property2 ShortName="LineStyle" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Style" MIPType="LineStyleType" SemanticId="NVG::LineStyle" >
+<Value></Value>
+</Property2>
+<Property2 ShortName="FillStyle" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Style" MIPType="FillStyleType" SemanticId="NVG::FillStyle" >
+<Value></Value>
+</Property2>
+<Property2 ShortName="Name" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="NameType" SemanticId="MIM:417668b7-ec89-4abe-90f6-9159b8dce539" >
+<Value>Point Type</Value>
+</Property2>
+<Property2 ShortName="GeoPoint" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="GeoPointType" SemanticId="MIM::Classes::Location::AbsolutePoint" >
+<Value></Value>
+<Property3 ShortName="Lon" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="LongitudeSimpleType" SemanticId="MIM::Classes::Location::LongitudeCoordinate" >
+<Value>11.38</Value>
+</Property3>
+<Property3 ShortName="Lat" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="LatitudeSimpleType" SemanticId="MIM::Classes::Location::LatitudeCoordinate" >
+<Value>49.03</Value>
+</Property3>
+<Property3 ShortName="Alt" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="AltitudeSimpleType" SemanticId="MIM::Classes::Location::VerticalDistance::dimension" >
+<Value>0</Value>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AddressWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="AddressWrapperType" SemanticId="MIM:a3b8f71d-bb73-436d-9d01-892ccb52bb7e" >
+<Value></Value>
+<Property1 ShortName="Address" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressType" SemanticId="MIM:2087c4c6-4d2f-4596-b9a5-82d72c445cda" >
+<Value></Value>
+<Property2 ShortName="DescriptionTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="DescriptionTextWrapperType" SemanticId="MIM:4533baac-7165-48d0-b687-280b45957393" >
+<Value></Value>
+<Property3 ShortName="DescriptionText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="DescriptionTextType" SemanticId="MIM:4533baac-7165-48d0-b687-280b45957393" >
+<Value>RMPU7GGSX1J578G9X5RD3LX4Z2M0A3PYO0YKJRJ38NC0XAHIFFBBFF7GYU5F3QS3MVQGK60GWY</Value>
+</Property3>
+</Property2>
+<Property2 ShortName="TypeCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressTypeCodeWrapperType" SemanticId="MIM:1afbcbb8-cc2c-41bb-bec1-b4c803b85852" >
+<Value></Value>
+<Property3 ShortName="AddressTypeCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressTypeCodeType" SemanticId="MIM:199416e4-5221-44b5-8420-dd42b04f2f6c" >
+<Value>Deployment</Value>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AffiliationWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="AffiliationWrapperType" SemanticId="MIM:0b368104-7463-4555-bbf7-c86dad9a2223" >
+<Value></Value>
+<Property1 ShortName="Affiliation" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESAffiliations" DerivedType="OtherAffiliationType" DerivedSemanticId="MIM:f62414f4-d089-4728-b2ac-b6b1a1b3fbac" SendIfOptional="true" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAffiliations" MIPType="AffiliationType" SemanticId="MIM:50a3e476-0768-4947-bd52-911820b373dd" >
+<Value></Value>
+<Property2 ShortName="OtherAffiliationCodeWrapper" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAffiliations" MIPType="OtherAffiliationCodeWrapperType" SemanticId="MIM:1fadbf53-860c-4f16-984e-2fb5f6c94e8f" >
+<Value></Value>
+<Property3 ShortName="OtherAffiliationCode" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAffiliations" MIPType="OtherAffiliationCodeType" SemanticId="MIM:c572cbff-4677-411e-96e7-bbe2783b9cfd" >
+<Value></Value>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="NetworkAddressWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="NetworkAddressWrapperType" SemanticId="MIM:0bf1f284-36b2-4640-9bcb-bcac095676e6" >
+<Value></Value>
+<Property1 ShortName="NetworkAddress" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="NetworkAddressType" SemanticId="MIM:9102dcd4-588d-4b58-8a96-b79cba26506e" >
+<Value></Value>
+<Property2 ShortName="AddressWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressWrapperType" SemanticId="MIM:2fc194d6-6691-40ae-bdf7-7e14b9233b05" >
+<Value></Value>
+<Property3 ShortName="Address" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressType" SemanticId="MIM:2087c4c6-4d2f-4596-b9a5-82d72c445cda" >
+<Value></Value>
+<Property4 ShortName="DescriptionTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="DescriptionTextWrapperType" SemanticId="MIM:4533baac-7165-48d0-b687-280b45957393" >
+<Value></Value>
+<Property5 ShortName="DescriptionText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="DescriptionTextType" SemanticId="MIM:4533baac-7165-48d0-b687-280b45957393" >
+<Value>J7GYVEV51OSJ3SVYWE9S5IOCTA8IO5ORAS61OHTZ5WC</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="TypeCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressTypeCodeWrapperType" SemanticId="MIM:1afbcbb8-cc2c-41bb-bec1-b4c803b85852" >
+<Value></Value>
+<Property5 ShortName="AddressTypeCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="AddressTypeCodeType" SemanticId="MIM:199416e4-5221-44b5-8420-dd42b04f2f6c" >
+<Value>Work</Value>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+<Property2 ShortName="CallSignIdentifierWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="CallSignIdentifierWrapperType" SemanticId="MIM:2d3f928e-abef-4a4c-bbf1-8c334750a711" >
+<Value></Value>
+<Property3 ShortName="CallSignIdentifier" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="CallSignIdentifierType" SemanticId="MIM:2d3f928e-abef-4a4c-bbf1-8c334750a711" >
+<Value>HN2L</Value>
+</Property3>
+</Property2>
+<Property2 ShortName="FrequencyWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="NetworkFrequencyWrapperType" SemanticId="MIM:44ded2de-dc56-43c2-8067-46288fd50e09" >
+<Value></Value>
+<Property3 ShortName="NetworkFrequency" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="NetworkFrequencyType" SemanticId="MIM:1103812a-8a27-4464-aa7a-85d6abb9d220" >
+<Value></Value>
+<Property4 ShortName="AuthorisedTimePeriodWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="AbsoluteTimePeriodWrapperType" SemanticId="MIM:7c46fcda-80e0-42ef-8044-566327c6336b" >
+<Value></Value>
+<Property5 ShortName="AbsoluteTimePeriod" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="AbsoluteTimePeriodType" SemanticId="MIM:2f98c539-7afa-49f6-9f07-9d61dc10e165" >
+<Value></Value>
+<Property6 ShortName="EndDateTimeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="EndDateTimeWrapperType" SemanticId="MIM:b5f893d2-bf71-4874-b90e-f2fc1c2210e5" >
+<Value></Value>
+<Property7 ShortName="EndDateTime" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="EndDateTimeType" SemanticId="MIM:b5f893d2-bf71-4874-b90e-f2fc1c2210e5" >
+<Value>2017-11-20T18:59:54.381Z</Value>
+</Property7>
+</Property6>
+<Property6 ShortName="StartDateTimeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="StartDateTimeWrapperType" SemanticId="MIM:d8d7dbf9-3b41-4d87-a48b-23c20a2ed759" >
+<Value></Value>
+<Property7 ShortName="StartDateTime" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="StartDateTimeType" SemanticId="MIM:d8d7dbf9-3b41-4d87-a48b-23c20a2ed759" >
+<Value>2017-11-21T18:28:01.625Z</Value>
+</Property7>
+</Property6>
+</Property5>
+</Property4>
+<Property4 ShortName="BandCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="NetworkFrequencyBandCodeWrapperType" SemanticId="MIM:51879c49-88f7-46eb-b44a-330dc30bf015" >
+<Value></Value>
+<Property5 ShortName="NetworkFrequencyBandCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="NetworkFrequencyBandCodeType" SemanticId="MIM:fe170f23-8cc5-40bd-be03-25cda11a4aa6" >
+<Value>VeryHighFrequency</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="BandLowerFrequencyMeasureWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="BandLowerFrequencyMeasureWrapperType" SemanticId="MIM:d4491d1f-0f4d-4ef1-802c-d2f10d47c01f" >
+<Value></Value>
+<Property5 ShortName="BandLowerFrequencyMeasure" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="BandLowerFrequencyMeasureType" SemanticId="MIM:d4491d1f-0f4d-4ef1-802c-d2f10d47c01f" >
+<Value>688640595</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="BandUpperFrequencyMeasureWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="BandUpperFrequencyMeasureWrapperType" SemanticId="MIM:56d8c39a-a78f-41ab-a2f9-57c1f8b49dbb" >
+<Value></Value>
+<Property5 ShortName="BandUpperFrequencyMeasure" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="BandUpperFrequencyMeasureType" SemanticId="MIM:56d8c39a-a78f-41ab-a2f9-57c1f8b49dbb" >
+<Value>616891195</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="ChannelValueWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="ChannelValueWrapperType" SemanticId="MIM:b4813035-ea77-4d62-becf-9d50254ce129" >
+<Value></Value>
+<Property5 ShortName="ChannelValue" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="ChannelValueType" SemanticId="MIM:b4813035-ea77-4d62-becf-9d50254ce129" >
+<Value>ATE</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="DiscreteFrequencyMeasureWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="DiscreteFrequencyMeasureWrapperType" SemanticId="MIM:4ca4b092-2176-46f3-a1ba-eacbd17956bb" >
+<Value></Value>
+<Property5 ShortName="DiscreteFrequencyMeasure" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="DiscreteFrequencyMeasureType" SemanticId="MIM:4ca4b092-2176-46f3-a1ba-eacbd17956bb" >
+<Value>127871258</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="ModulationCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="NetworkFrequencyModulationCodeWrapperType" SemanticId="MIM:7b032204-b90b-427a-ba43-5999792815a8" >
+<Value></Value>
+<Property5 ShortName="NetworkFrequencyModulationCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="NetworkFrequencyModulationCodeType" SemanticId="MIM:a2e4742a-10e7-4afc-80a3-11e554e75b33" >
+<Value>LowerSideBand</Value>
+</Property5>
+</Property4>
+<Property4 ShortName="PurposeTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="PurposeTextWrapperType" SemanticId="MIM:ac4a29a8-4c38-437e-81f4-a958faf6502b" >
+<Value></Value>
+<Property5 ShortName="PurposeText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="PurposeTextType" SemanticId="MIM:ac4a29a8-4c38-437e-81f4-a958faf6502b" >
+<Value>NR69BILV4JOUKXIGQALWF6LL62O86HKC9TRFG8A9CG</Value>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+<Property2 ShortName="IsAuthorisedIndicatorWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="IsAuthorisedIndicatorWrapperType" SemanticId="MIM:c872ed08-bcc9-4b63-b672-60a84a3dde5b" >
+<Value></Value>
+<Property3 ShortName="IsAuthorisedIndicator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="IsAuthorisedIndicatorType" SemanticId="MIM:c872ed08-bcc9-4b63-b672-60a84a3dde5b" >
+<Value>true</Value>
+</Property3>
+</Property2>
+<Property2 ShortName="PrimacyCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="PrimacyCodeWrapperType" SemanticId="MIM:8f7ef95c-60b5-47c5-9c10-5d738baa9283" >
+<Value></Value>
+<Property3 ShortName="PrimacyCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESGenerics" MIPType="PrimacyCodeType" SemanticId="MIM:b8c2be59-4403-412d-b35d-ffced0da55b8" >
+<Value>Primary</Value>
+</Property3>
+</Property2>
+<Property2 ShortName="TransmitReceiveCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="NetworkAddressTransmitReceiveCodeWrapperType" SemanticId="MIM:82ab18ae-45af-4e6c-aa4e-78234a94a969" >
+<Value></Value>
+<Property3 ShortName="NetworkAddressTransmitReceiveCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESAddresses" MIPType="NetworkAddressTransmitReceiveCodeType" SemanticId="MIM:6dfcfeec-ac96-4f3a-b688-4b3a50532537" >
+<Value>Receive</Value>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="CbrnDressStateCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OrganisationCBRNDressStateCodeWrapperType" SemanticId="MIM:4b570a58-9a42-4e8a-8f07-d7c269743ca5" >
+<Value></Value>
+<Property1 ShortName="OrganisationCBRNDressStateCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OrganisationCBRNDressStateCodeType" SemanticId="MIM:97fed861-c702-471d-875a-b94f8e05c09d" >
+<Value>MOPP3</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="DescriptionTextWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="DescriptionTextWrapperType" SemanticId="MIM:4eda1cea-e629-4c6e-afc6-c0916aa3f628" >
+<Value></Value>
+<Property1 ShortName="DescriptionText" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="DescriptionTextType" SemanticId="MIM:4eda1cea-e629-4c6e-afc6-c0916aa3f628" >
+<Value>8K4CE27AQFUCJ4MZW9LV</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="HasCommandFunctionIndicatorWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="HasCommandFunctionIndicatorWrapperType" SemanticId="MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528" >
+<Value></Value>
+<Property1 ShortName="HasCommandFunctionIndicator" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="HasCommandFunctionIndicatorType" SemanticId="MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528" >
+<Value>false</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="OperationalStatusCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OperationalStatusCodeWrapperType" SemanticId="MIM:d8811012-ed46-45d6-83f6-0608bc973ede" >
+<Value></Value>
+<Property1 ShortName="OperationalStatusCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="OperationalStatusCodeType" SemanticId="MIM:b37617d2-c2d5-4f4f-94d9-1808b477679e" >
+<Value>MarginallyOperational</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="OperationalStatusQualifierCodeWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OrganisationOperationalStatusQualifierCodeWrapperType" SemanticId="MIM:8b3ecf5e-4d61-4f10-9d53-1b2ce482e211" >
+<Value></Value>
+<Property1 ShortName="OrganisationOperationalStatusQualifierCode" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OrganisationOperationalStatusQualifierCodeType" SemanticId="MIM:e59ae922-9890-4eac-b0f5-5141dd990a5b" >
+<Value>Destroyed</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="RadiationDoseMeasureWrapper" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="RadiationDoseMeasureWrapperType" SemanticId="MIM:2a945014-2f34-4410-8dc3-6002103de7e7" >
+<Value></Value>
+<Property1 ShortName="RadiationDoseMeasure" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="RadiationDoseMeasureType" SemanticId="MIM:2a945014-2f34-4410-8dc3-6002103de7e7" >
+<Value>4272</Value>
+</Property1>
+</Property0>
+</Object>
+<Settings>
+<UseActualDate>false</UseActualDate>
+<MetaDataDate>2017-05-05T14:12:00Z</MetaDataDate>
+<NrObjects>1</NrObjects>
+<NrFiles>1</NrFiles>
+<Interval>0</Interval>
+<CreateOneFile>true</CreateOneFile>
+<BoundingBox>
+<NorthLimit>90</NorthLimit>
+<SouthLimit>-90</SouthLimit>
+<EastLimit>180</EastLimit>
+<WestLimit>-180</WestLimit>
+</BoundingBox>
+<UseBoundingBox>false</UseBoundingBox>
+</Settings>
+</TestData>

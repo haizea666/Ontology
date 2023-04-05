@@ -1,0 +1,42 @@
+Test description
+
+Test IDMIP4SLT3IS_5918Test TitleLink IED explosion Event to IED discovery Event.Execution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create new IED explosion Event linking it to an existing IED discovery Event and the Consumers/Receivers are able to understand (and display) it correctly.ScenarioThe Producer creates an IED discovery Event with specific activity information.
+The Consumers receive the information and interpret it correctly.
+The Producer creates an IED explosion Event which is linked to the previously created IED discovery Event.
+The Consumers receive the information and interpret it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSApplicablePre-test ConditionsThe Producer/Provider has created a topic which includes message elements belonging to the Event message schema area.
+The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success once a newly created IED discovery Event is exchanged, followed by a newly created IED explosion which is "linked" to the IED Discovery and all the information is processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (1) creates an IEDEvent with name XXX_IEDD_918 and with the following activity information:
+* IncidentCode = 'IEDDiscovery'
+* GeometricDefinition
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the IEDEvent: ESP_ IEDD_918. ~~
+Consumers (2) receive and display the IEDEvent correctly. ~~122. The Producer (1) creates an IEDEvent with name XXX_IEDE_918 and with the following activity information:
+* IncidentCode = 'IEDExplosion'
+* GeometricDefinition same as for ESP_ IEDD_918
+* CommentText = 'linked to ESP_ IEDD_918'
+
+Notices:
+Example for the name of the IEDEvent: ESP_ IEDE_918.
+Source Element (originator of the information) must remain the same as for IED Discovery ~~
+Consumers (2) receive and display the IEDEvent correctly. ~~12
+Configuration
+ItemValueCommentIEDEventGeneration10 --> Combine steps to one IEDEvent in the MTMT, generate new MTMT IEDEvents on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate IEDEvent.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3102Test TitleP/S - File.Execution Priority1ObjectiveThe objective of this test is to assess if any problems arise in the presence of Concurrent MIP4 Exchange Patterns, P/S vs File.ScenarioMIP4 Data is exported via file and imported into a consumer system that is already subscribed for notifications to that producer. There are multiple updates on the Producer side prior to loading the file at the Consumer.EnvironmentInternet or Co-located. Exchange Pattern: P/S, FileParticipation2MTRSPre-test ConditionsMIP4SLT3SF_3101.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe consumer can process MIP4 content in the presence of Concurrent MIP4 Exchange Patterns.Test OutputsThe Consumer successfully acquires content from the Producer, in the presence of Concurrent MIP4 Exchange Patterns and is able to apply it to their system without error. Write down any arisen problems.TraceabilityREQ_SYS_0013.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain valid MIP4 content from the producer via subscription. ~~Content will be received from the Producer. ~~122. Process all the MIP4 content on the consumer. ~~The consumer will successfully process the MIP4 content without error. ~~123. MIP4 Data is exported to a file from the producer (without terminating the subscription). ~~A valid content file for the MIP4 File exchange pattern is obtained. ~~124. There are multiple updates on the Producer side. ~~The corresponding content will be received from the Producer. ~~125. The file is imported into the consumer system. ~~Content will be imported into the Consumer. ~~126. Process all the (file) MIP4 content on the consumer. ~~The consumer will successfully process the MIP4 content without error. Notice that the content of the yet received file is older than the previously received updates through P/S subscription. Any arisen problems will be written down for feedback. ~~ 12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>25</TestCaseIdGroup>
+    <TestCaseIdNumber>2</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>CommentText element 2500 char</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Verifies the ability to create, update and exchange an operational comment (CommentText) for a Facility in a nation's C2IS.IDT's remark: "There is no size limit on CommentText. We should test above and below the JC3IEDM equivalent limits."</TestCaseObjective>
+  <TestCaseScenario>Send a facility with an operational comment to the Gateway through the Test Tool (TT). The Gateway receives the information and interprets it correctly. Update and send the comment again. The Gateway must be able to receive and interpret it correctly. In either way the Gateway must remain stable.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nation's Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport.</TestCasePreCondition>
+  <TestCaseInput>Dataset_2502x.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Gateway remains stable and handles all messages correctly. Preferably all comments are displayed correctly.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0001</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2502a (a Facility with an operational CommentText containing more than 2500 characters) into their C2 system (2) through the TT (1).</TestCaseStepAction>
+    <TestCaseStepResult>Comments correctly visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2502b (StaffCommentsText additional to the previous CommentText) into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Both, CommentText and StaffCommentsText, correctly visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2502c (updated CommentText resulting Element is more than 2500 characters. The StaffCommentsText remains the same) into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Both, CommentText and StaffCommentsText, correctly visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2502d (updated StaffCommentsText) into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Both, CommentText and StaffCommentsText, correctly visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2502c (updated CommentText resulting Element is less than 2500 characters. The StaffCommentsText remains the same) into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Both, CommentText and StaffCommentsText, correctly visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,29 @@
+Test description
+
+Test IDMIP4SLT1_1116Test TitleCompressed HTTP Reception behavioural checkExecution Priority1ObjectiveThe objective is to check the behaviour of compressed HTTP reception at the ConsumerScenarioThe Consumer is interested (for instance) in retrieving the list of Topic expressions supported by the Producer, which will answer using compressed HTTPEnvironmentInternet or Co-located. Exchange Pattern: P/S and R/R.Participation2 MTRSN/APre-test ConditionsMIP4SLT1_1112
+
+Both Consumer and Producer systems conform to either MIP4.0 Publish/Subscribe Exchange Pattern Specification or MIP4.0 Request/Response Exchange Pattern Specification or both.
+Test InputsN/A.ConclusionThe test is concluded after the Consumer has received a list of Topic expressions over compressed HTTP. The list should be conformed to OASIS Topic specification.Test OutputsN/A.TraceabilityREQ_EM_0011.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The consumer sends a request for the list of dialect to the GetResourceProperty service of the producer. Requested property is :
+<rp:GetResourceProperty>
+b2:TopicExpression
+</rp:GetResourceProperty> ~~The Producer receives a valid request for resource properties using b2:TopicExpression ~~
+122. Producer sends the topic expressions it supports (over compressed HTTP). ~~Consumer receives the requested list of topic expressions. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>10</TestCaseIdGroup>
+    <TestCaseIdNumber>97</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Retrieve GetResourcePropertyDocument from Producer / Provider with custom root xml element</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is for the Consumer to retrieve the list of Resource Properties supported by the Producer</TestCaseObjective>
+  <TestCaseScenario>The Consumer is interested in receivig the list of Resource Properties supported by the Producer to use them for Request/Response and/or Publish/Subscribe exchanges. In the response the root xml element of the data is not WSMPPublishSubscribeRP and WSMPRequestResponseRP</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S and R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>Systems should be able to read WSMPPublishSubscribeRP and WSMPRequestResponseRP </TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer has received a list of Resource Properties.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>N/A</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The consumer sends a request for the GetResourcePropertyDocument to the producer.</TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request for resource properties.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer sends the resource property document with properties it supports </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives a valid response for resource properties not using WSMPPublishSubscribeRP and WSMPRequestResponseRP.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

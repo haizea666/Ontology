@@ -1,0 +1,2415 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:equipment="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:vehicle="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Vehicle" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Vehicle" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AmphibiousVehicle" type="vehicle:AmphibiousVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeVehicle designed to travel over land and on water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3e4699d-7502-4e63-af34-047077a4b5f6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Amphibious vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AmphibiousVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeVehicle designed to travel over land and on water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3e4699d-7502-4e63-af34-047077a4b5f6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Amphibious vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ArmouredPersonnelCarrier" type="vehicle:ArmouredPersonnelCarrierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A lightly armoured, highly mobile vehicle used primarily for transporting personnel and their individual equipment during tactical operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:68d631cd-8534-4659-8e86-d4e4744dcc6b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Armoured personnel carrier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ArmouredPersonnelCarrierRecoveryVehicle" type="vehicle:ArmouredPersonnelCarrierRecoveryVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A RecoveryVehicle designed to recover armoured personnel carriers.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:42c27afa-7560-461f-a6f8-3dcfd2cf9dd4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Armoured personnel carrier recovery vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ArmouredPersonnelCarrierRecoveryVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A RecoveryVehicle designed to recover armoured personnel carriers.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:42c27afa-7560-461f-a6f8-3dcfd2cf9dd4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Armoured personnel carrier recovery vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RecoveryVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ArmouredPersonnelCarrierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A lightly armoured, highly mobile vehicle used primarily for transporting personnel and their individual equipment during tactical operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:68d631cd-8534-4659-8e86-d4e4744dcc6b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Armoured personnel carrier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AssaultVehicle" type="vehicle:AssaultVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A vehicle designed to carry assault troops.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:feb8cdb6-1df2-4f3e-8298-cdd78bfc9753</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Assault vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AssaultVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A vehicle designed to carry assault troops.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:feb8cdb6-1df2-4f3e-8298-cdd78bfc9753</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Assault vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Automobile" type="vehicle:AutomobileType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A self-propelled passenger vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:262e40b2-c048-4367-9882-0a169beb868d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Automobile</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AutomobileType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A self-propelled passenger vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:262e40b2-c048-4367-9882-0a169beb868d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Automobile</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BattleTankRecoveryVehicle" type="vehicle:BattleTankRecoveryVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A RecoveryVehicle designed to recover battle tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d6f02d24-5592-4f5b-b3b1-b6326becb466</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Battle-tank recovery vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="BattleTankRecoveryVehicleBattleTankScalingCode" type="equipment:BattleTankScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the battle tanks that the vehicle is able to recover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2b000dfe-a26b-4440-9b37-2d951ece3a90</app:SemanticID>
+        <app:ShortName>battleTankScalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>battle tank scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BattleTankRecoveryVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A RecoveryVehicle designed to recover battle tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d6f02d24-5592-4f5b-b3b1-b6326becb466</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Battle-tank recovery vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RecoveryVehicleType">
+        <xsd:sequence>
+          <xsd:element ref="vehicle:BattleTankRecoveryVehicleBattleTankScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Bicycle" type="vehicle:BicycleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeneralPurposeVehicle with two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44ce216f-c535-465c-af2e-ca915ab21f09</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bicycle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BicycleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeneralPurposeVehicle with two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44ce216f-c535-465c-af2e-ca915ab21f09</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bicycle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BridgeLaunchingVehicle" type="vehicle:BridgeLaunchingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A BridgeVehicle carrying a bridge that is deployed from the vehicle for immediate use (VBPP, AVLB).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d49e5800-68a0-4ec8-98e7-8fcc64242197</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bridge launching vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BridgeLaunchingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A BridgeVehicle carrying a bridge that is deployed from the vehicle for immediate use (VBPP, AVLB).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d49e5800-68a0-4ec8-98e7-8fcc64242197</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bridge launching vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:BridgeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BridgeVehicle" type="vehicle:BridgeVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle used to deliver a bridge.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e686b6ee-17a4-448a-a405-f58ad3975041</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bridge vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BridgeVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle used to deliver a bridge.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e686b6ee-17a4-448a-a405-f58ad3975041</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bridge vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Bus" type="vehicle:BusType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A large passenger road vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30865bfe-af3f-4c22-9238-23db8cbde2ca</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bus</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BusType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A large passenger road vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30865bfe-af3f-4c22-9238-23db8cbde2ca</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Bus</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CBRNDecontaminationVehicle" type="vehicle:CBRNDecontaminationVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle that is equipped to decontaminate persons or equipment contaminated by a CBRN exposure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1796ab1-3805-4993-89bf-a04daeb0aa60</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>CBRN decontamination vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CBRNDecontaminationVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle that is equipped to decontaminate persons or equipment contaminated by a CBRN exposure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1796ab1-3805-4993-89bf-a04daeb0aa60</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>CBRN decontamination vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CBRNReconnaissanceVehicle" type="vehicle:CBRNReconnaissanceVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle that is equipped to perform by visual observation or other detection methods, information a particular area potentially contaminated by a CBRN event.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:123bbc4f-4450-4aef-9811-765911279d4e</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>CBRN reconnaissance vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CBRNReconnaissanceVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle that is equipped to perform by visual observation or other detection methods, information a particular area potentially contaminated by a CBRN event.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:123bbc4f-4450-4aef-9811-765911279d4e</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>CBRN reconnaissance vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CargoGeneralServiceVehicle" type="vehicle:CargoGeneralServiceVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle used for transporting (generally heavy) loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:27554b4e-48be-4b6f-a51c-f86c994667b8</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cargo general service vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CargoGeneralServiceVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle used for transporting (generally heavy) loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:27554b4e-48be-4b6f-a51c-f86c994667b8</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cargo general service vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Cart" type="vehicle:CartType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A non self-propelled vehicle with two or four wheels for carrying loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:75954e6a-c0bd-42f7-b4eb-f9d0bab781c6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cart</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CartType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A non self-propelled vehicle with two or four wheels for carrying loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:75954e6a-c0bd-42f7-b4eb-f9d0bab781c6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cart</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeAmbulance" type="vehicle:CivilianTypeAmbulanceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle for conveying sick, wounded, incapacitated, or injured persons.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f26e2fd0-a857-4daa-8a85-005a61d7c1a4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Ambulance, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeAmbulanceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle for conveying sick, wounded, incapacitated, or injured persons.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f26e2fd0-a857-4daa-8a85-005a61d7c1a4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Ambulance, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeCommandPostVehicle" type="vehicle:CivilianTypeCommandPostVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeCommandSupportVehicle designed to be used as a command post or as part of a command post.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:17f2b9ca-6095-4c11-a932-f841277d72dc</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command post vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeCommandPostVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeCommandSupportVehicle designed to be used as a command post or as part of a command post.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:17f2b9ca-6095-4c11-a932-f841277d72dc</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command post vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeCommandSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeCommandSupportVehicle" type="vehicle:CivilianTypeCommandSupportVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to provide services supporting the command and control function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bcc2a4df-65f0-4341-a45f-a5023a1b7bd6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command support vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeCommandSupportVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to provide services supporting the command and control function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bcc2a4df-65f0-4341-a45f-a5023a1b7bd6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command support vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeCommunicationVehicle" type="vehicle:CivilianTypeCommunicationVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeCommandSupportVehicle equipped with communication devices.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5cdb89ba-3e31-4248-bb68-aa6462e2a021</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bcc2a4df-65f0-4341-a45f-a5023a1b7bd6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Communication vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeCommunicationVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeCommandSupportVehicle equipped with communication devices.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5cdb89ba-3e31-4248-bb68-aa6462e2a021</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bcc2a4df-65f0-4341-a45f-a5023a1b7bd6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Communication vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeCommandSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeConstructionVehicle" type="vehicle:CivilianTypeConstructionVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to perform construction works.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30ad1afb-d1f5-4726-92e7-a48c58d27fa7</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Construction vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeConstructionVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to perform construction works.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30ad1afb-d1f5-4726-92e7-a48c58d27fa7</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Construction vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeDumpTruck" type="vehicle:CivilianTypeDumpTruckType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle having a body that tilts and opens for unloading materials.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:806c35f1-4087-4030-9b8e-8497180178d9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Dump truck, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeDumpTruckType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle having a body that tilts and opens for unloading materials.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:806c35f1-4087-4030-9b8e-8497180178d9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Dump truck, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeFirefightingVehicle" type="vehicle:CivilianTypeFirefightingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to carry fire-fighters and equipment to a fire and supports extinguishing operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f84e11f9-c04e-45ae-b821-ee706bfc1561</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Firefighting vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeFirefightingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to carry fire-fighters and equipment to a fire and supports extinguishing operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f84e11f9-c04e-45ae-b821-ee706bfc1561</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Firefighting vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeForklift" type="vehicle:CivilianTypeForkliftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeMaterielHandlingVehicle with a horizontal fork in front for lifting and carrying loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d44c14cf-639e-4539-9f82-5615ef591e5b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Forklift, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeForkliftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeMaterielHandlingVehicle with a horizontal fork in front for lifting and carrying loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d44c14cf-639e-4539-9f82-5615ef591e5b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Forklift, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeMaterielHandlingVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeHeavyEquipmentTransportVehicle" type="vehicle:CivilianTypeHeavyEquipmentTransportVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to carry cumbersome or heavy items.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:df5c5058-3945-4ea3-a9fe-164fe7870969</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Heavy equipment transport vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeHeavyEquipmentTransportVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to carry cumbersome or heavy items.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:df5c5058-3945-4ea3-a9fe-164fe7870969</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Heavy equipment transport vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeMaintenanceVehicle" type="vehicle:CivilianTypeMaintenanceVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to provide the ability to execute maintenance work.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c7f9d60a-50d7-470d-934a-df6a94f0fa7b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Maintenance vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeMaintenanceVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to provide the ability to execute maintenance work.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c7f9d60a-50d7-470d-934a-df6a94f0fa7b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Maintenance vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeMaterielHandlingVehicle" type="vehicle:CivilianTypeMaterielHandlingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to provide the ability to manipulate heavy materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3999cff9-a17c-4d91-844d-7db948d90db2</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Materiel handling vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeMaterielHandlingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to provide the ability to manipulate heavy materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3999cff9-a17c-4d91-844d-7db948d90db2</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Materiel handling vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeTractor" type="vehicle:CivilianTypeTractorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A powered civilian vehicle that pulls or draws machinery.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:420821ae-2eeb-48ce-ad8f-d484ac465555</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tractor, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeTractorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A powered civilian vehicle that pulls or draws machinery.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:420821ae-2eeb-48ce-ad8f-d484ac465555</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tractor, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeTrailer" type="vehicle:CivilianTypeTrailerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeneralPurposeVehicle designed to be towed by another vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3c274026-98fd-4f22-ba93-6cef73b9e609</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Trailer, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeTrailerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeneralPurposeVehicle designed to be towed by another vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3c274026-98fd-4f22-ba93-6cef73b9e609</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Trailer, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeUtilityVehicle" type="vehicle:CivilianTypeUtilityVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A civilian general purpose vehicle designed to carry out many tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad0ad896-6195-4095-84ec-5880202deb1b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Utility vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeUtilityVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A civilian general purpose vehicle designed to carry out many tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad0ad896-6195-4095-84ec-5880202deb1b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Utility vehicle, civilian type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CivilianTypeVehicle" type="vehicle:CivilianTypeVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Vehicle primarily designed for civilian purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bd95619b-6857-43c5-b975-c4b6c5b15496</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Civilian type vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CivilianTypeVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Vehicle primarily designed for civilian purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bd95619b-6857-43c5-b975-c4b6c5b15496</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Civilian type vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:VehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CombatEngineerVehicle" type="vehicle:CombatEngineerVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to perform engineer functions in direct support of combat operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b7290940-b7dd-4ccf-ac74-9231195bf5f4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat engineer vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CombatEngineerVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to perform engineer functions in direct support of combat operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b7290940-b7dd-4ccf-ac74-9231195bf5f4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat engineer vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CombatServiceSupportVehicle" type="vehicle:CombatServiceSupportVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to provide support to combat forces, primarily in the fields of administration and logistics.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat service support vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CombatServiceSupportVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to provide support to combat forces, primarily in the fields of administration and logistics.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat service support vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CombatSupportVehicle" type="vehicle:CombatSupportVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to provide critical combat functions in conjunction with combat arms units and soldiers.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5fd9b896-2468-4820-9430-a6b3dd62cc87</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat support vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CombatSupportVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to provide critical combat functions in conjunction with combat arms units and soldiers.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5fd9b896-2468-4820-9430-a6b3dd62cc87</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat support vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CombatVehicle" type="vehicle:CombatVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to participate to the closing with and destruction of enemy forces or to provide firepower and destructive capabilities in the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CombatVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to participate to the closing with and destruction of enemy forces or to provide firepower and destructive capabilities in the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Combat vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CrossCountryTruck" type="vehicle:CrossCountryTruckType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automotive vehicle designed to be used off-road for transporting loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30fe04db-862b-4e68-a47b-831577bc6d27</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cross-country truck</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CrossCountryTruckType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automotive vehicle designed to be used off-road for transporting loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30fe04db-862b-4e68-a47b-831577bc6d27</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cross-country truck</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:TruckType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="EngineeringVehicle" type="vehicle:EngineeringVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle used by engineers.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:5fd9b896-2468-4820-9430-a6b3dd62cc87">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Engineering vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="EngineeringVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle used by engineers.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:5fd9b896-2468-4820-9430-a6b3dd62cc87">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Engineering vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GeneralPurposeVehicle" type="vehicle:GeneralPurposeVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeVehicle designed for multiple uses.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>General purpose vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GeneralPurposeVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeVehicle designed for multiple uses.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>General purpose vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GeneralTransporter" type="vehicle:GeneralTransporterType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeneralPurposeVehicle whose primary role is the transportation of heavy equipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dbb532da-736a-4d93-9b2b-7a59c63da5e6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Transporter, general</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GeneralTransporterType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeneralPurposeVehicle whose primary role is the transportation of heavy equipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dbb532da-736a-4d93-9b2b-7a59c63da5e6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Transporter, general</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LandingVehicle" type="vehicle:LandingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatVehicle designed for rapid unloading of personnel or equipment over and on to a beach.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3b9bb41c-f1ea-4cf7-87bf-c2911cc40d37</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Landing vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LandingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatVehicle designed for rapid unloading of personnel or equipment over and on to a beach.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3b9bb41c-f1ea-4cf7-87bf-c2911cc40d37</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Landing vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Locomotive" type="vehicle:LocomotiveType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A detachable, wheeled engine used for pulling trains.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:43179d31-b03e-46fc-838b-a2a4cfcaed7f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Locomotive</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LocomotiveCategoryCode" type="vehicle:LocomotiveCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Locomotive.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a2394bfc-a348-47fe-881a-cd1198c701fc</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LocomotiveCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Locomotive.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c9654db-ebd6-439a-89de-58f78330a479</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="DieselElectricLocomotive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A locomotive that uses diesel engine(s) to produce electricity for electric engine(s) that provide the engine with its source of tractive power.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b96eb415-2cfc-4d7a-b1bd-fa7ea0ba7654</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Locomotive, diesel/electric</app:DisplayName>
+            <app:PhysicalName>LCMDSE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DieselLocomotive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A locomotive that uses diesel engine(s) as its source of tractive power.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f309be0a-ca77-4649-8233-9656eba29292</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Locomotive, diesel</app:DisplayName>
+            <app:PhysicalName>LCMDSL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ElectricLocomotive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A locomotive that uses electric engine(s) as its source of tractive power, the electricity being supplied from an external source, typically via a pantograph (overhead electrical cable).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:91e3dc87-e569-49f5-9324-f2c15769ee98</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Locomotive, electric</app:DisplayName>
+            <app:PhysicalName>LCMELC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SteamLocomotive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A locomotive that uses the principle of heating water above its boiling point to produce steam, the expansion in a sealed vessel the pressure becomes the engine(s) source of tractive power.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:69690844-0d41-4dc2-974f-7f0091e82bd0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Locomotive, steam</app:DisplayName>
+            <app:PhysicalName>LCMSTM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TenderLocomotive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A locomotive tender is used to carry coal and water for a steam locomotive when not integral to the locomotive design.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f073da8a-0a05-475d-90a3-ba72f25a8c39</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Locomotive, tender</app:DisplayName>
+            <app:PhysicalName>LCMTND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LocomotiveType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A detachable, wheeled engine used for pulling trains.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:43179d31-b03e-46fc-838b-a2a4cfcaed7f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Locomotive</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RailcarType">
+        <xsd:sequence>
+          <xsd:element ref="vehicle:LocomotiveCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MechanisedBridgeLayer" type="vehicle:MechanisedBridgeLayerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tracked vehicle designed to carry and lay a removable bridge.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e51fd8c6-e9e0-4662-b12f-fc4665700ab1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:e686b6ee-17a4-448a-a405-f58ad3975041">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Mechanised bridge layer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MechanisedBridgeLayerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tracked vehicle designed to carry and lay a removable bridge.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e51fd8c6-e9e0-4662-b12f-fc4665700ab1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:e686b6ee-17a4-448a-a405-f58ad3975041">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Mechanised bridge layer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:BridgeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeAmbulance" type="vehicle:MilitaryTypeAmbulanceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle for conveying sick, wounded, incapacitated, or injured persons.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ebb3c7ec-69ef-420d-b779-dd5f952e3eea</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Ambulance, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeAmbulanceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle for conveying sick, wounded, incapacitated, or injured persons.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ebb3c7ec-69ef-420d-b779-dd5f952e3eea</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Ambulance, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeCommandPostVehicle" type="vehicle:MilitaryTypeCommandPostVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeCommandSupportVehicle designed to be used as a command post or as part of a command post.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7de31824-9834-4251-b83e-3acf31217e70</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command post vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeCommandPostVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeCommandSupportVehicle designed to be used as a command post or as part of a command post.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7de31824-9834-4251-b83e-3acf31217e70</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command post vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeCommandSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeCommandSupportVehicle" type="vehicle:MilitaryTypeCommandSupportVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to provide services supporting the military command and control function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:eeeff570-b1f8-4b07-bf2e-f2a98f3d52fe</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command support vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeCommandSupportVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeVehicle designed to provide services supporting the military command and control function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:eeeff570-b1f8-4b07-bf2e-f2a98f3d52fe</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Command support vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeCommunicationVehicle" type="vehicle:MilitaryTypeCommunicationVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeCommandSupportVehicle equipped with communication devices.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:93b181a2-e6a7-4552-a17f-4a67df730126</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:eeeff570-b1f8-4b07-bf2e-f2a98f3d52fe">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Communication vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeCommunicationVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeCommandSupportVehicle equipped with communication devices.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:93b181a2-e6a7-4552-a17f-4a67df730126</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:eeeff570-b1f8-4b07-bf2e-f2a98f3d52fe">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Communication vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeCommandSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeConstructionVehicle" type="vehicle:MilitaryTypeConstructionVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle generally used in the construction trade.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c6b19390-5f7b-4abf-ba2c-13720edb9610</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Construction vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeConstructionVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle generally used in the construction trade.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c6b19390-5f7b-4abf-ba2c-13720edb9610</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Construction vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeDumpTruck" type="vehicle:MilitaryTypeDumpTruckType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle having a body that tilts and opens for unloading materials.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d7d29eeb-a6cc-485b-bbf2-024e547b63b9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Dump truck, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeDumpTruckType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle having a body that tilts and opens for unloading materials.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d7d29eeb-a6cc-485b-bbf2-024e547b63b9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Dump truck, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeFirefightingVehicle" type="vehicle:MilitaryTypeFirefightingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A large motor vehicle designed to carry fire-fighters and equipment to a fire and supports extinguishing operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aaef959a-602f-4cf8-b903-2134998bce7d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Firefighting vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeFirefightingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A large motor vehicle designed to carry fire-fighters and equipment to a fire and supports extinguishing operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aaef959a-602f-4cf8-b903-2134998bce7d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Firefighting vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeForklift" type="vehicle:MilitaryTypeForkliftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeMaterielHandlingVehicle with a horizontal fork in front for lifting and carrying loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a088d951-b02e-45d5-9700-c8a2411167f6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Forklift, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeForkliftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeMaterielHandlingVehicle with a horizontal fork in front for lifting and carrying loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a088d951-b02e-45d5-9700-c8a2411167f6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Forklift, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeMaterielHandlingVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeHeavyEquipmentTransportVehicle" type="vehicle:MilitaryTypeHeavyEquipmentTransportVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to carry cumbersome or heavy items.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e7117279-cfda-4ad2-b09e-99d2e2aaf77c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Heavy equipment transport vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeHeavyEquipmentTransportVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to carry cumbersome or heavy items.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e7117279-cfda-4ad2-b09e-99d2e2aaf77c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Heavy equipment transport vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeMaintenanceVehicle" type="vehicle:MilitaryTypeMaintenanceVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to provide equipment support facilities in or out of the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d9f24114-fafb-4980-81ea-fb09f1190fdd</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Maintenance vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeMaintenanceVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to provide equipment support facilities in or out of the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d9f24114-fafb-4980-81ea-fb09f1190fdd</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Maintenance vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeMaterielHandlingVehicle" type="vehicle:MilitaryTypeMaterielHandlingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to provide materiel handling facilities in or out of the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:21f29fcd-9234-4b0a-810f-8455add5648d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Materiel handling vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeMaterielHandlingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to provide materiel handling facilities in or out of the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:21f29fcd-9234-4b0a-810f-8455add5648d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Materiel handling vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeTractor" type="vehicle:MilitaryTypeTractorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A powered military vehicle that pulls or draws machinery.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:005d834a-cff6-44df-806e-2d11f705c603</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tractor, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeTractorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A powered military vehicle that pulls or draws machinery.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:005d834a-cff6-44df-806e-2d11f705c603</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tractor, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeTrailer" type="vehicle:MilitaryTypeTrailerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to be towed by another vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4fe7f87e-4b8a-4f12-af44-0ea56b227990</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Trailer, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeTrailerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle designed to be towed by another vehicle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4fe7f87e-4b8a-4f12-af44-0ea56b227990</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Trailer, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeUtilityVehicle" type="vehicle:MilitaryTypeUtilityVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A military general purpose vehicle designed to carry out many tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:67150133-f27b-4124-8ac0-ed7060ad9db6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Utility vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryTypeUtilityVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A military general purpose vehicle designed to carry out many tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:67150133-f27b-4124-8ac0-ed7060ad9db6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Utility vehicle, military type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryTypeVehicle" type="vehicle:MilitaryTypeVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Vehicle primarily designed for military purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:10455512-3a2c-4173-a210-74c73201bed3</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Military type vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MilitaryTypeVehicleIsArmouredIndicator" type="vehicle:MilitaryTypeVehicleIsArmouredIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the military vehicle is covered with or protected by armour (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:73d92ba5-3618-4ece-b46d-6fb0d6f6c398</app:SemanticID>
+        <app:ShortName>isArmouredIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>is armoured</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MilitaryTypeVehicleIsArmouredIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the military vehicle is covered with or protected by armour (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:73d92ba5-3618-4ece-b46d-6fb0d6f6c398</app:SemanticID>
+        <app:ShortName>isArmouredIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>is armoured</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="MilitaryTypeVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Vehicle primarily designed for military purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:10455512-3a2c-4173-a210-74c73201bed3</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Military type vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:VehicleType">
+        <xsd:sequence>
+          <xsd:element ref="vehicle:MilitaryTypeVehicleIsArmouredIndicator" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MineClearer" type="vehicle:MineClearerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle whose purpose is to remove or destroy mines.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02b38dee-2055-4971-9351-68e6d64ad0ce</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Mine clearer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MineClearerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle whose purpose is to remove or destroy mines.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02b38dee-2055-4971-9351-68e6d64ad0ce</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Mine clearer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MineLayer" type="vehicle:MineLayerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle whose purpose is to lay mines.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ac248250-e8c4-42d5-9507-20d8ba055a51</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Mine layer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MineLayerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle whose purpose is to lay mines.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ac248250-e8c4-42d5-9507-20d8ba055a51</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Mine layer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Moped" type="vehicle:MopedType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A motorized pedal cycle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c9199873-b4dd-4450-848e-f47f315a2307</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Moped</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MopedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A motorized pedal cycle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c9199873-b4dd-4450-848e-f47f315a2307</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Moped</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Motorcycle" type="vehicle:MotorcycleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A vehicle with two wheels in tandem, self-propelled and sometimes having a sidecar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1a212b4-26b9-4f8a-8965-478672ec3572</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Motorcycle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MotorcycleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A vehicle with two wheels in tandem, self-propelled and sometimes having a sidecar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1a212b4-26b9-4f8a-8965-478672ec3572</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Motorcycle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PackAnimal" type="vehicle:PackAnimalType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An animal (such as a mule, donkey, camel or horse) with the role of transport used to carry loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44c7cd31-70ae-41bb-b00e-cea284824e3f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Pack animal</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PackAnimalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An animal (such as a mule, donkey, camel or horse) with the role of transport used to carry loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44c7cd31-70ae-41bb-b00e-cea284824e3f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Pack animal</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Railcar" type="vehicle:RailcarType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Vehicle designed to operate on rail tracks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6c514aec-f347-43fb-a245-fe9d404e51d6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Railcar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RailcarGaugeDimension" type="vehicle:RailcarGaugeDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance measured from side to side and perpendicular to the central axis of the Railcar track.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9dcff91b-2b53-483f-9b6c-033f88b5e90d</app:SemanticID>
+        <app:ShortName>gaugeDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>gauge</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RailcarGaugeDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal distance measured from side to side and perpendicular to the central axis of the Railcar track.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9dcff91b-2b53-483f-9b6c-033f88b5e90d</app:SemanticID>
+        <app:ShortName>gaugeDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>gauge</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="4" />
+      <xsd:maxInclusive value="9.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RailcarType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Vehicle designed to operate on rail tracks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6c514aec-f347-43fb-a245-fe9d404e51d6</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Railcar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeVehicleType">
+        <xsd:sequence>
+          <xsd:element ref="vehicle:RailcarGaugeDimension" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RailedEquipment" type="vehicle:RailedEquipmentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Mobile equipment that uses rails to move on, for example, dockyard cranes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e66b234f-9850-4582-933c-f328198c61bb</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Railed equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RailedEquipmentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Mobile equipment that uses rails to move on, for example, dockyard cranes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e66b234f-9850-4582-933c-f328198c61bb</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Railed equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RailcarType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ReconnaissanceCarrier" type="vehicle:ReconnaissanceCarrierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A vehicle used to carry persons for reconnaissance activities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:50848dde-bb02-40ce-aa46-982f7a19c053</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Reconnaissance carrier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ReconnaissanceCarrierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A vehicle used to carry persons for reconnaissance activities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:50848dde-bb02-40ce-aa46-982f7a19c053</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Reconnaissance carrier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ReconnaissanceVehicle" type="vehicle:ReconnaissanceVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A highly mobile vehicle serving as the main reconnaissance in infantry and airborne operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:95ff10aa-557f-48a5-b63f-cd0841c64eca</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Reconnaissance vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ReconnaissanceVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A highly mobile vehicle serving as the main reconnaissance in infantry and airborne operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:95ff10aa-557f-48a5-b63f-cd0841c64eca</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:77f145ef-3fb2-4ec7-bbe3-cd8367e96e8f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Reconnaissance vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecoveryVehicle" type="vehicle:RecoveryVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle used in recovering a damaged one.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9a169682-9729-4ee3-a39e-8b2d341331b7</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Recovery vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecoveryVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle used in recovering a damaged one.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9a169682-9729-4ee3-a39e-8b2d341331b7</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Recovery vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RefuelVehicle" type="vehicle:RefuelVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle fitted with special equipment designed to refuel vehicles or aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:21c6ff68-8492-43ad-9c67-28a91f0e8ba1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Refuel vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RefuelVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatServiceSupportVehicle fitted with special equipment designed to refuel vehicles or aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:21c6ff68-8492-43ad-9c67-28a91f0e8ba1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:473b75a4-b468-4492-aff0-7ef87e5fd4ad">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Refuel vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatServiceSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RollingStock" type="vehicle:RollingStockType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Wagons, either passenger, freight or specialised that are used to form a train.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a8c370e2-cfb5-4180-a0d0-3b8896910ca8</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Rolling stock</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RollingStockCategoryCode" type="vehicle:RollingStockCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of RollingStock.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a70f5575-900b-4a29-a510-928820de9083</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RollingStockCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of RollingStock.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:80d12b82-9e7f-4a8b-9ab5-6cb94772e512</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ArticulatedVehicleTransporterWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock specifically designed to carry an articulated truck by rail (for example EUROSTAR).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8eb5da77-6ab8-4f28-aedb-5c4dcb538838</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, articulated vehicle transporter</app:DisplayName>
+            <app:PhysicalName>WGNART</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BrakeWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to assist with the control of a formed train, that when used are manned and contain auxiliary braking apparatus.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cd2eaae1-51bf-48ee-8aff-7657ac306ef2</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, brake</app:DisplayName>
+            <app:PhysicalName>WGNBRK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BulkFuelWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move bulk fuel by rail (Also often known as tank wagons).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2358f368-b076-42b9-a64a-cc1dc9164faf</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, bulk fuel</app:DisplayName>
+            <app:PhysicalName>WGNFUL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CarTransporterWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock specifically designed to carry civilian or military cars by rail (for example EURORAIL).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ae452512-6cca-4594-9564-a7f0a6b0f302</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, car transporter</app:DisplayName>
+            <app:PhysicalName>WGNCAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CattleWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move livestock by rail.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ac8af7b1-8f56-4397-a1b0-75dac89ae63f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, cattle</app:DisplayName>
+            <app:PhysicalName>WGNCTL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EnclosedCargoWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move boxed or palletised equipment/stores and closed by means of fixed doors either sliding or hinged.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:721906a2-05ef-470a-a85c-3925f24f1500</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, cargo (enclosed)</app:DisplayName>
+            <app:PhysicalName>WGNCRG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FlatbedWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move either large bulky cargoes, for example B vehicles, or large linear cargoes, for example logs/cut timber, replacement sections of track.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:44f55873-362c-4426-a63c-6edb3849efdc</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, flatbed</app:DisplayName>
+            <app:PhysicalName>WGNFLB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HopperWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move bulk loose material by rail and unloaded by gravity through bottom doors (Mineral or foodstuffs e.g. grain are typical cargoes).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ff4e76a4-30ac-4e77-be31-76e2fb1fd874</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, hopper</app:DisplayName>
+            <app:PhysicalName>WGNHPR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ISOContainerWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move standard ISO containers, either single or multiple containers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2948cd22-1992-4c2d-ad59-02e3116b31cf</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, ISO container(s)</app:DisplayName>
+            <app:PhysicalName>WGNISO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LiquidWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move bulk liquids by rail.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f16414b5-c015-4c2f-9b6a-bb2287659ba8</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, liquid</app:DisplayName>
+            <app:PhysicalName>WGNLQD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MineralWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move bulk mineral by rail with unloading facilities from either side.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2e592aa2-bf00-4953-addc-f20ee4dbdb89</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, mineral</app:DisplayName>
+            <app:PhysicalName>WGNMNR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OpenContainerWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move bulk loose items by rail.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7ff47a42-b742-4991-a93a-7d00d040187e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, open container</app:DisplayName>
+            <app:PhysicalName>WGNOPC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PassengerWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used for the transportation of passengers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:76e4272e-448f-4b40-afd6-e2fcf42d095f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, passenger</app:DisplayName>
+            <app:PhysicalName>WGNPAS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PotableWaterWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move potable water by rail.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:63463db9-d95d-4642-9a2f-7ca146c85225</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, potable water</app:DisplayName>
+            <app:PhysicalName>WGNWAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RefrigeratedWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move refrigerated cargoes by rail.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1b84a37c-1a7f-4d6f-9ee1-85d7681a0445</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, refrigerated</app:DisplayName>
+            <app:PhysicalName>WGNRFG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SlidingSidesCargoWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move boxed or palletised equipment/stores and closed by means of sliding curtained side panels.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f4fe0b3c-94de-401d-bddb-eebdb29e8c00</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, cargo, sliding sides</app:DisplayName>
+            <app:PhysicalName>WGNCSS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SpecialPurposeWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move specialised or outsized loads by rail, for example MBTs, other outsized loads.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1e2cf89c-37b3-40e2-91fd-3eb1ab9955c3</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, special purpose</app:DisplayName>
+            <app:PhysicalName>WGNSPP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TrackRepairAndMaintenanceWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to repair (replace track) or maintain the railway track and track bed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:de4fddde-ea54-4f3f-9687-e0fffd99e12b</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, track repair and maintenance</app:DisplayName>
+            <app:PhysicalName>WGNRPR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WarflatWagon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rolling stock used to move specific military loads, for example AIFVs (UK Warrior).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:16099622-8c5f-4f76-8cf9-143075ee18f5</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wagon, warflat</app:DisplayName>
+            <app:PhysicalName>WGNWFL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RollingStockType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Wagons, either passenger, freight or specialised that are used to form a train.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a8c370e2-cfb5-4180-a0d0-3b8896910ca8</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Rolling stock</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RailcarType">
+        <xsd:sequence>
+          <xsd:element ref="vehicle:RollingStockCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RouteClearingVehicle" type="vehicle:RouteClearingVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle designed to clear a safe path through explosive obstacles such as mines, IEDs, and unexploded ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c59ace70-c8ce-4d8b-b7fe-572698b16823</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Route clearing vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RouteClearingVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An EngineeringVehicle designed to clear a safe path through explosive obstacles such as mines, IEDs, and unexploded ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c59ace70-c8ce-4d8b-b7fe-572698b16823</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:7c31d3b7-1da2-4655-b22a-d15bea20ee07">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Route clearing vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:EngineeringVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SemiTrailer" type="vehicle:SemiTrailerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A road trailer that has a wheel system at the rear only and is coupled to a suitable tractor to form an articulated lorry.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:45cdc1d2-cd9d-48d0-9a14-7e6c5e37a31a</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Semi-trailer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SemiTrailerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A road trailer that has a wheel system at the rear only and is coupled to a suitable tractor to form an articulated lorry.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:45cdc1d2-cd9d-48d0-9a14-7e6c5e37a31a</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Semi-trailer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:TruckType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Snowplough" type="vehicle:SnowploughType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to push snow aside.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0094b818-842e-413d-9823-71d1733f73e8</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Snowplough</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SnowploughType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A SpecialPurposeVehicle designed to push snow aside.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0094b818-842e-413d-9823-71d1733f73e8</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Snowplough</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:SpecialPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SpecialPurposeVehicle" type="vehicle:SpecialPurposeVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeVehicle specifically designed for special use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aed731b4-1913-4255-9404-a7cbb7a76b4b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Special purpose vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SpecialPurposeVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CivilianTypeVehicle specifically designed for special use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aed731b4-1913-4255-9404-a7cbb7a76b4b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:bd95619b-6857-43c5-b975-c4b6c5b15496">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Special purpose vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CivilianTypeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SurveillanceVehicle" type="vehicle:SurveillanceVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle designed to perform systematic observation of aerospace, surface or subsurface areas, places, persons, or things by visual, aural, electronic, photographic, or other means.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:64b3ec8b-7f19-4d1c-b7f6-eefbcc9e3dc7</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:5fd9b896-2468-4820-9430-a6b3dd62cc87">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Surveillance vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SurveillanceVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A CombatSupportVehicle designed to perform systematic observation of aerospace, surface or subsurface areas, places, persons, or things by visual, aural, electronic, photographic, or other means.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:64b3ec8b-7f19-4d1c-b7f6-eefbcc9e3dc7</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:5fd9b896-2468-4820-9430-a6b3dd62cc87">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Surveillance vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:CombatSupportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TankTransporter" type="vehicle:TankTransporterType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeHeavyEquipmentTransportVehicle whose primary role is the transportation of main battle tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c7bc1512-bc6d-465e-9d75-4f9c60b3b442</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:e7117279-cfda-4ad2-b09e-99d2e2aaf77c">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tank transporter</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TankTransporterType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryTypeHeavyEquipmentTransportVehicle whose primary role is the transportation of main battle tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c7bc1512-bc6d-465e-9d75-4f9c60b3b442</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:e7117279-cfda-4ad2-b09e-99d2e2aaf77c">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tank transporter</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:MilitaryTypeHeavyEquipmentTransportVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Tanker" type="vehicle:TankerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Truck designed to carry liquids.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:acdb1738-7a53-4312-a22d-bd081ff0244d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tanker</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TankerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Truck designed to carry liquids.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:acdb1738-7a53-4312-a22d-bd081ff0244d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tanker</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:TruckType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Train" type="vehicle:TrainType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A self-propelled Railcar consisting of a number of different vehicles, e.g., railcars that run on rails.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1d3fe585-6797-4fdc-92f2-fa93a07546d3</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Train</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TrainType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A self-propelled Railcar consisting of a number of different vehicles, e.g., railcars that run on rails.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1d3fe585-6797-4fdc-92f2-fa93a07546d3</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Train</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RailcarType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Tram" type="vehicle:TramType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A passenger carrying vehicle that runs on rails normally along roads, with minimal earthworks, typically powered by electricity from overhead power cables via a pantograph.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2952b7b3-bb27-4e16-a61f-31983e3621d1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tram</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TramType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A passenger carrying vehicle that runs on rails normally along roads, with minimal earthworks, typically powered by electricity from overhead power cables via a pantograph.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2952b7b3-bb27-4e16-a61f-31983e3621d1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6c514aec-f347-43fb-a245-fe9d404e51d6">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tram</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:RailcarType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TrolleyBus" type="vehicle:TrolleyBusType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A bus powered by electricity obtained from an overhead cable by means of a trolley-wheel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bc1384a9-fd71-4fdc-91b7-505fbaea9d54</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:30865bfe-af3f-4c22-9238-23db8cbde2ca">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Trolley bus</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TrolleyBusType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A bus powered by electricity obtained from an overhead cable by means of a trolley-wheel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bc1384a9-fd71-4fdc-91b7-505fbaea9d54</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:30865bfe-af3f-4c22-9238-23db8cbde2ca">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Trolley bus</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:BusType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Truck" type="vehicle:TruckType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automotive vehicle used for transporting loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ebf525f5-12ea-4bdf-9cb6-b195f7b353f0</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Truck</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TruckType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automotive vehicle used for transporting loads.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ebf525f5-12ea-4bdf-9cb6-b195f7b353f0</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Truck</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Van" type="vehicle:VanType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A covered motor vehicle used for transporting goods or people.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:85365a97-a231-42fb-b0bd-56adf0b9fb17</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Van</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="VanType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A covered motor vehicle used for transporting goods or people.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:85365a97-a231-42fb-b0bd-56adf0b9fb17</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:97b7bf99-a175-4dc8-a4a4-27fcd3cacd31">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Van</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vehicle:GeneralPurposeVehicleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Vehicle" type="vehicle:VehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is designed to operate on land routes (other than rail) with a primary role of transporting personnel, equipment or supplies.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ea911fe-2544-4830-ba70-c69d50fe11b1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VehicleMilitaryLoadClassificationNumberCode" type="object:MilitaryLoadClassificationNumberCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The military load classification number of the Vehicle. It indicates the minimum MLC of Bridges that the Vehicle is authorized to use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5339210b-5d20-4580-93e2-bdb65747e4c1</app:SemanticID>
+        <app:ShortName>militaryLoadClassificationNumberCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>military load classification number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="VehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is designed to operate on land routes (other than rail) with a primary role of transporting personnel, equipment or supplies.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ea911fe-2544-4830-ba70-c69d50fe11b1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:EquipmentType">
+        <xsd:sequence>
+          <xsd:element ref="vehicle:VehicleMilitaryLoadClassificationNumberCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

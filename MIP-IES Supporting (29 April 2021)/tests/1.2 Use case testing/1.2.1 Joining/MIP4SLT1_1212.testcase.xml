@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>12</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>The Producer service description (WSDL) is available from the URL provided in the MIP4 Joining Questionnaire.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The purpose is to validate a portion of the information in the MIP4 Joining Questionnaire by using the provided URL to retrieve the service description.This includes the WSDL itself and the WSDL/XML Schema imports and includes relating to the WSDL. Each of these artefacts shall be available for automated retrieval by the Consumer.</TestCaseObjective>
+  <TestCaseScenario>After the exchange of MIP4 Joining Questionnaires, the service consumer shall verify the availability of the service description and validate its content.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211</TestCasePreCondition>
+  <TestCaseInput>The producer's completed MIP4 Joining Questionnaire.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the producer's service description(WSDL) is acquired and validated at the location provided in the MIP4 Joining Questionnaire.</TestCaseConclusion>
+  <TestCaseOutput>Validation that the producer's service description (WSDL) is available, well-formed and valid.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, MIP4_Publish_Subscribe_Exchange_Pattern,MIP4_Request_Response_Exchange_Pattern.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The service consumer will acquire the URL to the service description (WSDL) of the provider's service from the previously provided MIP4 Joining Questionnaire. </TestCaseStepAction>
+    <TestCaseStepResult>The URL is acquired and well-formed according to the URL specifications. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The service consumer will retrieve the service description (WSDL) in its entirety by subsequently retrieving all referenced documents through import and include statements. </TestCaseStepAction>
+    <TestCaseStepResult>The WSDL is retrieved in its entirety using the acquired URL. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The service consumer will validate the service description to ensure that it is well-formed and valid with respect to the XML Schema and WSDL specifications. </TestCaseStepAction>
+    <TestCaseStepResult>The WSDL is determined to be well-formed and valid. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

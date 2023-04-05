@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<affiliation:GeopoliticalAffiliationCode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:affiliation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">DEU</affiliation:GeopoliticalAffiliationCode>
+
+<!--
+Original example
+
+<orgstruct:AffiliationWrapper>
+	<orgstruct:GeopoliticalAffiliation>
+		<orgstruct:GeopoliticalAffiliationCodeWrapper>
+			<orgstruct:CountryCode> DEU </orgstruct:CountryCode>
+		</orgstruct:GeopoliticalAffiliationCodeWrapper>
+	</orgstruct:GeopoliticalAffiliation>
+</orgstruct:AffiliationWrapper>
+-->
+
+

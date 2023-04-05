@@ -1,0 +1,2809 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:actor="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:simpleType name="LanguageGeneralProficiencyLevelCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general level of proficiency of a Person in a language skill.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:37f32aaf-07f1-47c7-a2f4-41ea17aa6520</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower proficiency level than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Bad">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">No significant or practical proficiency.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9beb5649-b86d-469d-af9a-2ab28a6b1705</app:SemanticID>
+            <app:DisplayName>Bad</app:DisplayName>
+            <app:PhysicalName>BAD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Moderate">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Moderate performance ability.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2bea27df-dd5b-428d-83b7-d1a08620728e</app:SemanticID>
+            <app:DisplayName>Moderate</app:DisplayName>
+            <app:PhysicalName>MOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Good">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">High performance ability.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7f0f393d-e70a-4380-9380-e7a7fc62d279</app:SemanticID>
+            <app:DisplayName>Good</app:DisplayName>
+            <app:PhysicalName>GOOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Excellent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Very high performance ability.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:45dc9eaf-6f4f-4f47-be7e-07dd2694fcd3</app:SemanticID>
+            <app:DisplayName>Excellent</app:DisplayName>
+            <app:PhysicalName>EXCLNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LanguageProficiencyLevelCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The level of language skill or comprehension of a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ee1e2868-46ba-471a-8ee7-58607b52ae3d</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower language skill than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NoProficiency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">No practical ability.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1b3ed499-d256-4802-acbb-d3902e984a6a</app:SemanticID>
+            <app:DisplayName>0 - No proficiency</app:DisplayName>
+            <app:PhysicalName>0</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Survival">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to communicate for immediate personal needs.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7cd96164-cb41-4a72-a6a0-9282a6c04006</app:SemanticID>
+            <app:DisplayName>1 - Survival</app:DisplayName>
+            <app:PhysicalName>1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Functional">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to communicate in everyday social and routine workplace situations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c4ca0bf7-0003-4a81-baf2-01483a652e07</app:SemanticID>
+            <app:DisplayName>2 - Functional</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Professional">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to communicate effectively in a formal and informal manner on practical, social, and professional topics.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:399a69a5-c591-4bf8-aa28-ec30ebea7e8c</app:SemanticID>
+            <app:DisplayName>3 - Professional</app:DisplayName>
+            <app:PhysicalName>3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Expert">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to communicate with great precision, accuracy, and fluency for all professional purposes including the representation of an official policy or point of view, in lectures, and in negotiations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6f2df745-fa20-4398-b82b-085365415bc0</app:SemanticID>
+            <app:DisplayName>4 - Expert</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HighlyArticulateNative">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to communicate in a manner equivalent to a highly articulate, well-educated native person.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:28023d9f-04c5-41ec-b1c6-b06856d9222e</app:SemanticID>
+            <app:DisplayName>5 - Highly-articulate native</app:DisplayName>
+            <app:PhysicalName>5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LanguageSkillGeneralProficiencyLevelCode" type="person:LanguageGeneralProficiencyLevelCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general level of proficiency of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6e030b6b-7068-4ee1-8004-0c088501827d</app:SemanticID>
+        <app:ShortName>generalProficiencyLevelCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>general proficiency level</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LanguageSkillLanguageCode" type="person:LanguageSkillLanguageCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The language to which the skill applies.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:27dc7b66-da23-4578-98ed-d7cfbc419bad</app:SemanticID>
+        <app:ShortName>languageCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Object_LanguageCode.gc</app:ManagedList>
+        <app:DisplayName>language</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LanguageSkillLanguageCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The language to which the skill applies.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:27dc7b66-da23-4578-98ed-d7cfbc419bad</app:SemanticID>
+        <app:ShortName>languageCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Object_LanguageCode.gc</app:ManagedList>
+        <app:DisplayName>language</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:element name="LanguageSkillListeningProficiencyLevelCode" type="person:LanguageProficiencyLevelCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The level of listening comprehension of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18724f8f-c2b1-46d3-9caf-41044f0f8f20</app:SemanticID>
+        <app:ShortName>listeningProficiencyLevelCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>listening proficiency level</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LanguageSkillReadingProficiencyLevelCode" type="person:LanguageProficiencyLevelCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The level of reading comprehension of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2e865fa5-1f62-4249-9aea-f3f9e60bf236</app:SemanticID>
+        <app:ShortName>readingProficiencyLevelCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>reading proficiency level</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LanguageSkillSpeakingProficiencyLevelCode" type="person:LanguageProficiencyLevelCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The level of speaking proficiency of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dc024239-78a3-4ac0-b1d5-0a5ca5e6bcb5</app:SemanticID>
+        <app:ShortName>speakingProficiencyLevelCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>speaking proficiency level</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LanguageSkillType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A proficiency or ability of a Person with regard to a language.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:28fa6dbd-0a8c-46ec-9179-944ca5dfd476</app:SemanticID>
+        <app:DisplayName>Language skill</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="person:LanguageSkillGeneralProficiencyLevelCode" />
+          <xsd:element ref="person:LanguageSkillLanguageCode" />
+          <xsd:element ref="person:LanguageSkillListeningProficiencyLevelCode" minOccurs="0" />
+          <xsd:element ref="person:LanguageSkillReadingProficiencyLevelCode" minOccurs="0" />
+          <xsd:element ref="person:LanguageSkillSpeakingProficiencyLevelCode" minOccurs="0" />
+          <xsd:element ref="person:LanguageSkillWritingProficiencyLevelCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LanguageSkillWritingProficiencyLevelCode" type="person:LanguageProficiencyLevelCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The level of writing proficiency of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad519e50-5ec7-4057-9aac-622c83221734</app:SemanticID>
+        <app:ShortName>writingProficiencyLevelCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>writing proficiency level</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Person" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A human being of military or civilian significance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAccountedFacility" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person has the Facility on its account.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f2242e8c-dec6-4a0b-ad31-3c8b122d9609-2I</app:SemanticID>
+        <app:ShortName>accountedFacility</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is accounting authority for</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAccountedFacilityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person has the Facility on its account.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f2242e8c-dec6-4a0b-ad31-3c8b122d9609-2R</app:SemanticID>
+        <app:ShortName>accountedFacilityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>is accounting authority for</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAssigningOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has the Person assigned on a long-term basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:de2b6998-254e-4bc0-bc53-37abfb75f2b5-1I</app:SemanticID>
+        <app:ShortName>assigningOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>assigning Organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAssigningOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has the Person assigned on a long-term basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:de2b6998-254e-4bc0-bc53-37abfb75f2b5-1R</app:SemanticID>
+        <app:ShortName>assigningOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>assigning Organisation Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAttachingOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has the Person assigned on a temporary basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:abd65226-dc7c-402a-bd3a-3a607189afcd-1I</app:SemanticID>
+        <app:ShortName>attachingOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>attaching Organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAttachingOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has the Person assigned on a temporary basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:abd65226-dc7c-402a-bd3a-3a607189afcd-1R</app:SemanticID>
+        <app:ShortName>attachingOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>attaching Organisation Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAugmentedPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person extends the capacity of the object Person in his tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:836ed7fa-11af-4c8f-b1b8-0e015011ee42-2I</app:SemanticID>
+        <app:ShortName>augmentedPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>augmented Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAugmentedPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person extends the capacity of the object Person in his tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:836ed7fa-11af-4c8f-b1b8-0e015011ee42-2R</app:SemanticID>
+        <app:ShortName>augmentedPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>augmented Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAugmentingPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person extends the capacity of the object Person in his tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:836ed7fa-11af-4c8f-b1b8-0e015011ee42-1I</app:SemanticID>
+        <app:ShortName>augmentingPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>augmenting Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAugmentingPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person extends the capacity of the object Person in his tasks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:836ed7fa-11af-4c8f-b1b8-0e015011ee42-1R</app:SemanticID>
+        <app:ShortName>augmentingPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>augmenting Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAuntOrUncle" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the aunt or uncle of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:69e96c1a-a617-4119-8e37-48d146d4fc35-1I</app:SemanticID>
+        <app:ShortName>auntOrUncle</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>aunt Or Uncle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAuntOrUncleRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the aunt or uncle of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:69e96c1a-a617-4119-8e37-48d146d4fc35-1R</app:SemanticID>
+        <app:ShortName>auntOrUncleRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>aunt Or Uncle Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonBirthDate" type="person:PersonBirthDateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The date at which the Person was born.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b0116663-9643-430a-bb54-49cb396eadc8</app:SemanticID>
+        <app:ShortName>birthDate</app:ShortName>
+        <app:MIMStereotype>date</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>birth date</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonBirthDateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The date at which the Person was born.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b0116663-9643-430a-bb54-49cb396eadc8</app:SemanticID>
+        <app:ShortName>birthDate</app:ShortName>
+        <app:MIMStereotype>date</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>birth date</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonBloodTypeCode" type="person:PersonBloodTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The blood type of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1aa3c6be-e452-4a3b-ab4d-c2689c0ac034</app:SemanticID>
+        <app:ShortName>bloodTypeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>blood type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonBloodTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The blood type of a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:450a8f4e-ec58-49b2-8a38-98093968f930</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ABRhNegative">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells with 'A' and 'B' antigen and the absence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1fda4c1f-573a-4e2e-833a-372af4095871</app:SemanticID>
+            <app:DisplayName>AB Rh Negative</app:DisplayName>
+            <app:PhysicalName>ABMNUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ABRhPositive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells with 'A' and 'B' antigen and the presence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c0cbd46c-743d-4553-bef1-8246c1db1604</app:SemanticID>
+            <app:DisplayName>AB Rh Positive</app:DisplayName>
+            <app:PhysicalName>ABPLUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ARhNegative">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells with 'A' antigen and the absence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aa2b6fe1-e436-405b-806e-7d4ec04d487f</app:SemanticID>
+            <app:DisplayName>A Rh Negative</app:DisplayName>
+            <app:PhysicalName>AMNUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ARhPositive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells with 'A' antigen and the presence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9d8991af-99c2-48e0-8965-cbd4d28bfa7d</app:SemanticID>
+            <app:DisplayName>A Rh Positive</app:DisplayName>
+            <app:PhysicalName>APLUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BRhNegative">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells with 'B' antigen and the absence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c53a44e2-d701-4187-8bdd-df5fef260f58</app:SemanticID>
+            <app:DisplayName>B Rh Negative</app:DisplayName>
+            <app:PhysicalName>BMNUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BRhPositive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells with 'B' antigen and the presence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5b8adf8e-a5c1-48fb-b8d0-ef3eb5230d54</app:SemanticID>
+            <app:DisplayName>B Rh Positive</app:DisplayName>
+            <app:PhysicalName>BPLUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ORhNegative">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells that lack 'A' and 'B' antigen and the absence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9a0a625f-92ed-47b7-993a-c3213b7ba233</app:SemanticID>
+            <app:DisplayName>O Rh Negative</app:DisplayName>
+            <app:PhysicalName>OMNUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ORhPositive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The circulating red blood cells that lack 'A' and 'B' antigen and the presence of the 'Rh' antigen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b9c08609-3401-452f-83c5-52f75dbfe155</app:SemanticID>
+            <app:DisplayName>O Rh Positive</app:DisplayName>
+            <app:PhysicalName>OPLUS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonCharacteristicCode" type="person:PersonCharacteristicCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The profession, skill, social status, or legal or military involvement of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9208d9dd-2c9b-4268-ac95-67066793ddce</app:SemanticID>
+        <app:ShortName>characteristicCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>characteristic</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonCharacteristicCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The profession, skill, social status, or legal or military involvement of a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3d298986-49ec-409f-b63c-68b038ad3854</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Contractor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who contracts or undertakes to supply certain articles, or to perform any work or service (esp. for government or other public body) at a certain price or rate.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:27b3ccb6-f78a-4671-9bfb-1f174b263fb1</app:SemanticID>
+            <app:DisplayName>Contractor</app:DisplayName>
+            <app:PhysicalName>CNTRCT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Criminal">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who violates the law.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bff1526c-4c85-4ce6-82ae-7acb49c19e7d</app:SemanticID>
+            <app:DisplayName>Criminal</app:DisplayName>
+            <app:PhysicalName>CRIMIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Defector">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who has abandoned their country or cause for another country or cause.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cb0856fe-b703-4392-bf80-6d8b414e570b</app:SemanticID>
+            <app:DisplayName>Defector</app:DisplayName>
+            <app:PhysicalName>DEFCTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Deserter">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who has abandoned their country or cause.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c80d46ea-1120-4dc1-bf91-9efd5ffc3668</app:SemanticID>
+            <app:DisplayName>Deserter</app:DisplayName>
+            <app:PhysicalName>DSRTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Detainee">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A person detained in custody, especially for political reasons.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:584c84d3-8bec-4bac-aaad-6ae635fea1b9</app:SemanticID>
+            <app:DisplayName>Detainee</app:DisplayName>
+            <app:PhysicalName>DETNEE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DisplacedPerson">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who has been removed from their home country by military or political pressure and thereafter homeless.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:923dc4fc-1188-4dcb-a03b-a21c42db300f</app:SemanticID>
+            <app:DisplayName>Displaced person</app:DisplayName>
+            <app:PhysicalName>DSPLPR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Educational">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who provides labour and materiel for the educational process.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5969c37e-5bd7-464d-8155-4dcbc1f65af6</app:SemanticID>
+            <app:DisplayName>Educational</app:DisplayName>
+            <app:PhysicalName>EDUCAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Engineer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is identified as one who designs and constructs facilities.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d8622225-a1c4-48ef-a311-70462c8b10e3</app:SemanticID>
+            <app:DisplayName>Engineer</app:DisplayName>
+            <app:PhysicalName>ENGNER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Financial">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who provides financial support.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:05ffc4c4-410d-4f41-ae6d-4b3d129eefb3</app:SemanticID>
+            <app:DisplayName>Financial</app:DisplayName>
+            <app:PhysicalName>FINCAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ForeignFighter">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is a fighter, not from the country in which the fighting is taking place, supporting belligerents or irregular forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b19f113a-1e06-4487-b98f-077368645ee6</app:SemanticID>
+            <app:DisplayName>Foreign fighter</app:DisplayName>
+            <app:PhysicalName>FRNFGT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GovernmentEmployee">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is representing a Governmental Organisation and is not a uniformed member of a regular armed force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:079713ee-1328-4b08-855c-efee08afee80</app:SemanticID>
+            <app:DisplayName>Government employee</app:DisplayName>
+            <app:PhysicalName>GOVEMP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Insurgent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who rises in revolt against authority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d3598785-eecb-4a7e-aece-f71fce7ea923</app:SemanticID>
+            <app:DisplayName>Insurgent</app:DisplayName>
+            <app:PhysicalName>INSRGT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Intellectual">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is an intellectual being; a person possessing or supposed to possess superior powers of intellect.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eec6cadb-9e8f-4ec6-aa0b-2dc10d3c55c6</app:SemanticID>
+            <app:DisplayName>Intellectual</app:DisplayName>
+            <app:PhysicalName>INTLCT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Intelligence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is employed to gather information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:20163274-4827-4d64-b871-540a62d57b25</app:SemanticID>
+            <app:DisplayName>Intelligence</app:DisplayName>
+            <app:PhysicalName>INTEL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InternationalMedia">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is reporting for international mass communications, but not taking part in the actions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:18e1f55d-de2b-48b1-a17e-6a982a67780a</app:SemanticID>
+            <app:DisplayName>Media, international</app:DisplayName>
+            <app:PhysicalName>MEDINT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Journalist">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who earns a living by editing or writing for a public journal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a47b5c35-bc76-448a-909e-81b62e8549f4</app:SemanticID>
+            <app:DisplayName>Journalist</app:DisplayName>
+            <app:PhysicalName>JRNLST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Judicial">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who provides judgment in courts of justice or to the administration of justice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c654743b-ec5e-4000-b4de-51833b5de327</app:SemanticID>
+            <app:DisplayName>Judicial</app:DisplayName>
+            <app:PhysicalName>JUDCAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Landowner">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is an owner or proprietor of land.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e5c37e86-4cf1-4637-9b00-56f0d330e495</app:SemanticID>
+            <app:DisplayName>Landowner</app:DisplayName>
+            <app:PhysicalName>LNDOWN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LocalMedia">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is reporting for local mass communications, but not taking part in the actions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:90ceaafc-c0f8-40ee-bd5e-9559d95186d5</app:SemanticID>
+            <app:DisplayName>Media, local</app:DisplayName>
+            <app:PhysicalName>MEDLCL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ManufacturingWorker">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who manufactures products; excluding utility, transportation, and financial companies.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cf2fc7f6-946f-49ec-b7a0-f7df764ecfdb</app:SemanticID>
+            <app:DisplayName>Manufacturing worker</app:DisplayName>
+            <app:PhysicalName>MANFCT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medical">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is identified as a medical practitioner.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6913ca78-fb42-4433-b9e9-708f6d9b4f3c</app:SemanticID>
+            <app:DisplayName>Medical</app:DisplayName>
+            <app:PhysicalName>MEDCAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Merchant">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person whose occupation is the purchase and sale of marketable commodities for profit.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c7931ce9-213a-4632-96cf-96a741f023cc</app:SemanticID>
+            <app:DisplayName>Merchant</app:DisplayName>
+            <app:PhysicalName>MRCHNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Messenger">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is identified as a carrier of a message.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5703cb37-cbae-4777-a1dc-ae125c5dc09c</app:SemanticID>
+            <app:DisplayName>Messenger</app:DisplayName>
+            <app:PhysicalName>MESSNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Missionary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is concerned with religious missions in the form of missionary work.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f5153b82-e9ce-496b-9e52-b9f64ab5ba0e</app:SemanticID>
+            <app:DisplayName>Missionary</app:DisplayName>
+            <app:PhysicalName>MISSNR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NationalMedia">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is reporting for national mass communications, but not taking part in the actions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9491c596-38ba-4113-835c-8fa3be26eb6b</app:SemanticID>
+            <app:DisplayName>Media, national</app:DisplayName>
+            <app:PhysicalName>MEDNAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NonGovernmentEmployee">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is representing a Non-Governmental Organisation and is not a uniformed member of a regular armed force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:38ffa268-ede9-45ab-9468-4241ce1d4a11</app:SemanticID>
+            <app:DisplayName>Non-government employee</app:DisplayName>
+            <app:PhysicalName>NONGVE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NotOtherwiseSpecifiedMedia">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is reporting for mass communications (especially television, radio, and newspapers) of an origin not specified.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bba1aea1-2422-4c7a-82c9-23d51fd0170a</app:SemanticID>
+            <app:DisplayName>Media, not otherwise specified</app:DisplayName>
+            <app:PhysicalName>MEDNOS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PararescueJumper">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is specially trained and qualified to penetrate to the site of an incident by land or parachute, render medical aid, accomplish survival methods, and rescue survivors.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ceb36e52-515b-4f8c-baa1-045a49284d19</app:SemanticID>
+            <app:DisplayName>Pararescue jumper</app:DisplayName>
+            <app:PhysicalName>PARARS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Partisan">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is a member of a party of light or irregular troops employed in scouring the country, surprising the enemy's outposts and foraging parties.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0604528d-29ca-4f8a-9e10-2e5f284c6cb0</app:SemanticID>
+            <app:DisplayName>Partisan</app:DisplayName>
+            <app:PhysicalName>PARTSN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pilot">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person that is identified as one who controls an aircraft, balloon, spacecraft, or the like during flight, usually a person duly qualified to do so.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:456da494-e27b-4795-8bb0-3831c02a1c0a</app:SemanticID>
+            <app:DisplayName>Pilot</app:DisplayName>
+            <app:PhysicalName>PILOT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PoliceChief">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who has the responsibility for the regulation, discipline, and control of a community for the enforcement of law and public order.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fdd31bca-e4b2-41fa-9bd3-449a6f881b45</app:SemanticID>
+            <app:DisplayName>Police chief</app:DisplayName>
+            <app:PhysicalName>POLCHF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Policeman">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person that is identified as a member of a police force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e48ec419-dcbe-4a1d-b7ad-04765997ccad</app:SemanticID>
+            <app:DisplayName>Policeman</app:DisplayName>
+            <app:PhysicalName>POLCMN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Political">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is identified as being involved within a political area of activity and concerned with politics or has ties to a political party.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7eb9ec5d-1eb6-47b8-906c-40056b533126</app:SemanticID>
+            <app:DisplayName>Political</app:DisplayName>
+            <app:PhysicalName>POLTCL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Prisoner">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person in custody on a criminal charge and on trial.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5c2f81c6-5a9a-4a37-bc8b-711a8bcc0a93</app:SemanticID>
+            <app:DisplayName>Prisoner</app:DisplayName>
+            <app:PhysicalName>PRSNR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PrisonerOfWar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who, while engaged in combat under orders of his or her government, is captured by the armed forces of the enemy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:816857ed-383a-4958-b474-ee4974d74c91</app:SemanticID>
+            <app:DisplayName>Prisoner of war</app:DisplayName>
+            <app:PhysicalName>POW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Refugee">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who, because of real or imagined danger, moves of his own volition, spontaneously, or in violation of a “stay-put” policy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:718da056-2e24-4643-8467-4d75bfdb3198</app:SemanticID>
+            <app:DisplayName>Refugee</app:DisplayName>
+            <app:PhysicalName>REFUGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Repatriate">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who has returned to his or her native land.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:80083cfa-8b1a-4b21-a484-417cefafd144</app:SemanticID>
+            <app:DisplayName>Repatriate</app:DisplayName>
+            <app:PhysicalName>REPAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Saboteur">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who commits sabotage.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f75fd2d2-63fe-4e20-88f5-39992f4724c8</app:SemanticID>
+            <app:DisplayName>Saboteur</app:DisplayName>
+            <app:PhysicalName>SABOTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Social">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who seeks and enjoys companies of others, or is characterised by friendly companionship or relations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fca06911-329b-4b41-bb44-c13c3c5f2eef</app:SemanticID>
+            <app:DisplayName>Social</app:DisplayName>
+            <app:PhysicalName>SOCIAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Spy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is employed to obtain intelligence information to which he or she would not normally be allowed access.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d338756e-a727-4f1f-8d56-4ec999010672</app:SemanticID>
+            <app:DisplayName>Spy</app:DisplayName>
+            <app:PhysicalName>SPY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Terrorist">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who attempts to further their views by a system of coercive intimidation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d3af6307-de3e-46cc-a39e-65b7dc329073</app:SemanticID>
+            <app:DisplayName>Terrorist</app:DisplayName>
+            <app:PhysicalName>TERRST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnlawfulCombatant">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An Person who is not authorised to take part in hostilities but does.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c8a584e9-96dc-4be5-94b3-48c8a92f3d04</app:SemanticID>
+            <app:DisplayName>Unlawful combatant</app:DisplayName>
+            <app:PhysicalName>UNLCMB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryImportantPerson">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person of high ranking and/or an important individual.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:22e8293b-0b6b-4de7-b83c-92c78ae31e92</app:SemanticID>
+            <app:DisplayName>Very important person</app:DisplayName>
+            <app:PhysicalName>VIP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VillageElder">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person of ripe years and experience whose counsel is therefore sought and valued.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:43715c67-9337-40ab-a10b-cbcc7092e8f6</app:SemanticID>
+            <app:DisplayName>Village elder</app:DisplayName>
+            <app:PhysicalName>VILELD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Writer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who practices or performs writing.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3f11ed95-d4c7-4d66-9647-bd778bdb18a1</app:SemanticID>
+            <app:DisplayName>Writer</app:DisplayName>
+            <app:PhysicalName>WRITER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonChild" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the biological mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:853df5bf-b88c-4841-bc2f-64290d9dba1b-2I</app:SemanticID>
+        <app:ShortName>child</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>child</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonChildInLaw" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the mother-in-law or father-in-law of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e726cd3f-4f0e-4d6c-bae7-240f73098734-2I</app:SemanticID>
+        <app:ShortName>childInLaw</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>child In Law</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonChildInLawRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the mother-in-law or father-in-law of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e726cd3f-4f0e-4d6c-bae7-240f73098734-2R</app:SemanticID>
+        <app:ShortName>childInLawRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>child In Law Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonChildRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the biological mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:853df5bf-b88c-4841-bc2f-64290d9dba1b-2R</app:SemanticID>
+        <app:ShortName>childRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>child Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonCommandedActor" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is under command of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4c2e2557-aa8c-4964-b311-23cf001af7fa-2I</app:SemanticID>
+        <app:ShortName>commandedActor</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is under command of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonCommandedActorRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is under command of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4c2e2557-aa8c-4964-b311-23cf001af7fa-2R</app:SemanticID>
+        <app:ShortName>commandedActorRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>is under command of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonConsultingOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation uses the Person to provide expert of professional advice.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c082d237-f334-48d6-b56a-310904932e7c-1I</app:SemanticID>
+        <app:ShortName>consultingOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>consulting Organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonConsultingOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation uses the Person to provide expert of professional advice.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c082d237-f334-48d6-b56a-310904932e7c-1R</app:SemanticID>
+        <app:ShortName>consultingOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>consulting Organisation Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonCousinObject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the cousin of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:daf8e733-87aa-4799-bf63-ca9273c387cb-2I</app:SemanticID>
+        <app:ShortName>cousinObject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>cousin Object</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonCousinObjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the cousin of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:daf8e733-87aa-4799-bf63-ca9273c387cb-2R</app:SemanticID>
+        <app:ShortName>cousinObjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>cousin Object Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonCousinSubject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the cousin of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:daf8e733-87aa-4799-bf63-ca9273c387cb-1I</app:SemanticID>
+        <app:ShortName>cousinSubject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>cousin Subject</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonCousinSubjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the cousin of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:daf8e733-87aa-4799-bf63-ca9273c387cb-1R</app:SemanticID>
+        <app:ShortName>cousinSubjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>cousin Subject Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonDeathDate" type="person:PersonDeathDateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The date at which the Person died.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c44954f-bd7a-4416-b02f-711c9743b09f</app:SemanticID>
+        <app:ShortName>deathDate</app:ShortName>
+        <app:MIMStereotype>date</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>death date</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonDeathDateType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The date at which the Person died.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c44954f-bd7a-4416-b02f-711c9743b09f</app:SemanticID>
+        <app:ShortName>deathDate</app:ShortName>
+        <app:MIMStereotype>date</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>death date</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonDutyStatusCode" type="person:PersonDutyStatusCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The availability of the Person for duty at a military or civilian post of employment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a32873cc-9bcb-40fe-921b-79bf594b1b58</app:SemanticID>
+        <app:ShortName>dutyStatusCode</app:ShortName>
+        <app:Remarks>This attribute details Persons either as being present or holds the reason why a Person is not at duty.</app:Remarks>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>duty status</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonDutyStatusCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The availability of a Person for duty at a military or civilian post of employment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aeb81cc0-4639-45a9-b80e-f6a98dfb4358</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Absent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is not present at the place of duty for an as yet unspecified reason and has not been posted as either deceased or missing.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:397b4f31-f06c-4d4a-8d6d-b4e64ab77c76</app:SemanticID>
+            <app:DisplayName>Absent</app:DisplayName>
+            <app:PhysicalName>ABS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Arrested">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is being held by friendly forces military police or civilian police force on suspicion of having committed an offence against either military or civil law.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fd3c6aa6-f8b4-4078-9fb6-c948fc45fb42</app:SemanticID>
+            <app:DisplayName>Arrested</app:DisplayName>
+            <app:PhysicalName>ARR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AssumedKilledInAction">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is assumed dead as a result of a combat activity.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a6a81ff5-70c0-4e44-8682-c476ef6a5afc</app:SemanticID>
+            <app:DisplayName>Assumed killed in action</app:DisplayName>
+            <app:PhysicalName>AKIA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AtDuty">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is present at the place of duty.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c38790c-2d08-40e3-ab84-47604b581376</app:SemanticID>
+            <app:DisplayName>At duty</app:DisplayName>
+            <app:PhysicalName>ADU</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Deceased">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is dead.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:360ec4e0-15ce-441d-9221-a89f8cc72034</app:SemanticID>
+            <app:DisplayName>Deceased</app:DisplayName>
+            <app:PhysicalName>DEC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Deserted">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has left the place of duty permanently without permission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:122a670b-1393-4a58-b848-0331beb42451</app:SemanticID>
+            <app:DisplayName>Deserted</app:DisplayName>
+            <app:PhysicalName>DESRTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hospitalised">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is in a hospital.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ac8c7824-adc4-4726-abc7-5f90567516d4</app:SemanticID>
+            <app:DisplayName>Hospitalised</app:DisplayName>
+            <app:PhysicalName>HSP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hostage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has been captured by opposing forces or a terrorist organisation and is being held for the purpose of negotiation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f3503bde-9da4-4d4a-a8fe-d2ff7d5d6806</app:SemanticID>
+            <app:DisplayName>Hostage</app:DisplayName>
+            <app:PhysicalName>HST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Missing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is missing but has not been posted as absent or deceased.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:87d4e95c-39d9-4f51-8c0b-e0eff386d85e</app:SemanticID>
+            <app:DisplayName>Missing</app:DisplayName>
+            <app:PhysicalName>MIS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OnLeave">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is absent from duty with permission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fc7a802b-be76-4d2c-bb2c-571cdc1f247a</app:SemanticID>
+            <app:DisplayName>On leave</app:DisplayName>
+            <app:PhysicalName>OLV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PrisonerOfWar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has been captured by opposing forces and is being held in internment.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c88cb828-398f-4924-93d1-681236fdb5c9</app:SemanticID>
+            <app:DisplayName>Prisoner of war</app:DisplayName>
+            <app:PhysicalName>POW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonEmployingOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation uses the Person as a secret or trusted agent.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9068a1f6-9ec6-4c4a-91ae-abf1b0a38942-1I</app:SemanticID>
+        <app:ShortName>employingOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>employing Organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonEmployingOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation uses the Person as a secret or trusted agent.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9068a1f6-9ec6-4c4a-91ae-abf1b0a38942-1R</app:SemanticID>
+        <app:ShortName>employingOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>employing Organisation Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonEthnicGroupCode" type="person:PersonEthnicGroupCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The group of people, differentiated from the rest of the community by racial origins or cultural background, to which the Person belongs or from which the Person originates.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a642025a-a656-4ba8-b784-10d7dd9a8fc8</app:SemanticID>
+        <app:ShortName>ethnicGroupCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_EthnicGroupCode.gc</app:ManagedList>
+        <app:DisplayName>ethnic group</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonEthnicGroupCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The group of people, differentiated from the rest of the community by racial origins or cultural background, to which the Person belongs or from which the Person originates.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a642025a-a656-4ba8-b784-10d7dd9a8fc8</app:SemanticID>
+        <app:ShortName>ethnicGroupCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_EthnicGroupCode.gc</app:ManagedList>
+        <app:DisplayName>ethnic group</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonExploitedPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person takes advantage of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:29ebbd9c-1262-46da-845c-81f7cc7b8677-2I</app:SemanticID>
+        <app:ShortName>exploitedPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>exploited Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonExploitedPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person takes advantage of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:29ebbd9c-1262-46da-845c-81f7cc7b8677-2R</app:SemanticID>
+        <app:ShortName>exploitedPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>exploited Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonExploitingPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person takes advantage of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:29ebbd9c-1262-46da-845c-81f7cc7b8677-1I</app:SemanticID>
+        <app:ShortName>exploitingPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>exploiting Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonExploitingPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person takes advantage of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:29ebbd9c-1262-46da-845c-81f7cc7b8677-1R</app:SemanticID>
+        <app:ShortName>exploitingPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>exploiting Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonGenderCode" type="object:GenderCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The classification of the Person based on reproductive physiological traits.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b345035-3318-411b-8050-fb80719fb3cd</app:SemanticID>
+        <app:ShortName>genderCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>gender</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonGrandchild" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the grandmother or grandfather of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1d6a018-444c-4489-9bcd-01ba009b22f1-2I</app:SemanticID>
+        <app:ShortName>grandchild</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>grandchild</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonGrandchildRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the grandmother or grandfather of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1d6a018-444c-4489-9bcd-01ba009b22f1-2R</app:SemanticID>
+        <app:ShortName>grandchildRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>grandchild Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonGrandparent" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the grandmother or grandfather of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1d6a018-444c-4489-9bcd-01ba009b22f1-1I</app:SemanticID>
+        <app:ShortName>grandparent</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>grandparent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonGrandparentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the grandmother or grandfather of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b1d6a018-444c-4489-9bcd-01ba009b22f1-1R</app:SemanticID>
+        <app:ShortName>grandparentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>grandparent Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonHostingOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has in place the Person on a temporary basis with the objective of coordinating actions.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1c84bedc-92c6-4e06-875c-179e703a81f3-1I</app:SemanticID>
+        <app:ShortName>hostingOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>hosting Organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonHostingOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has in place the Person on a temporary basis with the objective of coordinating actions.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1c84bedc-92c6-4e06-875c-179e703a81f3-1R</app:SemanticID>
+        <app:ShortName>hostingOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>hosting Organisation Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonIdentificationDocument" type="person:PersonIdentificationDocumentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The documents used to identify the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:978bf201-cbb8-4425-857d-2c93dd33f826</app:SemanticID>
+        <app:ShortName>identificationDocument</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>identification document</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonIdentificationDocumentCategoryCode" type="person:PersonIdentificationDocumentCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of document used to identify a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:51dbf5f5-7df1-4e56-a83c-63e765c4ef53</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonIdentificationDocumentCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of document used to identify a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7e3c7d1b-bcf0-4346-a5da-fd06001315a9</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CivilianIdentificationCard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is identified by a civilian identification card.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:99ff3736-62f7-4b0c-98dc-4fb7da5a386b</app:SemanticID>
+            <app:DisplayName>Civilian identification card</app:DisplayName>
+            <app:PhysicalName>CIVID</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MilitaryIdentificationCard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is identified by a military identification card.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8b535363-289e-4396-ac48-f822ac85f486</app:SemanticID>
+            <app:DisplayName>Military identification card</app:DisplayName>
+            <app:PhysicalName>MILID</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MilitaryOrders">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is identified by military orders.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a23a8925-ee19-4d93-90d4-3f6a3d3af265</app:SemanticID>
+            <app:DisplayName>Military orders</app:DisplayName>
+            <app:PhysicalName>MILORD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Passport">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is identified by a passport.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e1cc23c3-ad77-44f5-8091-6452eb1fe743</app:SemanticID>
+            <app:DisplayName>Passport</app:DisplayName>
+            <app:PhysicalName>PSSPRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonIdentificationDocumentIdentifier" type="person:PersonIdentificationDocumentIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The number identifying the PersonIdentificationDocument.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4e3959a6-083a-43f9-9d2c-61a00401fd20</app:SemanticID>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonIdentificationDocumentIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The number identifying the PersonIdentificationDocument.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4e3959a6-083a-43f9-9d2c-61a00401fd20</app:SemanticID>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PersonIdentificationDocumentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A document used to identify a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:254f29c1-4145-42e7-ae71-2df292c32d80</app:SemanticID>
+        <app:DisplayName>Person identification document</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="person:PersonIdentificationDocumentCategoryCode" />
+          <xsd:element ref="person:PersonIdentificationDocumentIdentifier" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonInstitution" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has as a member the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad2c4ae8-34d3-4221-bdef-0bc052b0b1e1-1I</app:SemanticID>
+        <app:ShortName>institution</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>institution</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonInstitutionRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has as a member the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad2c4ae8-34d3-4221-bdef-0bc052b0b1e1-1R</app:SemanticID>
+        <app:ShortName>institutionRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>institution Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonIsInReserveIndicator" type="person:PersonIsInReserveIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Person has been placed in reserve (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0234408b-c062-4603-b6e9-559a6c38b32a</app:SemanticID>
+        <app:ShortName>isInReserveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is in reserve</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonIsInReserveIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Person has been placed in reserve (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0234408b-c062-4603-b6e9-559a6c38b32a</app:SemanticID>
+        <app:ShortName>isInReserveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is in reserve</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonIsProfessingReligiousPreferenceIndicator" type="person:PersonIsProfessingReligiousPreferenceIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Person professes a religious preference (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6bfc82e8-a908-4c14-8462-598043c3d6dc</app:SemanticID>
+        <app:ShortName>isProfessingReligiousPreferenceIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is professing religious preference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonIsProfessingReligiousPreferenceIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Person professes a religious preference (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6bfc82e8-a908-4c14-8462-598043c3d6dc</app:SemanticID>
+        <app:ShortName>isProfessingReligiousPreferenceIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is professing religious preference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonLanguageSkill" type="person:LanguageSkillType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The proficiencies or abilities of the Person with regard to different languages.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c3356aea-a358-46e3-a927-3242cac4eec4</app:SemanticID>
+        <app:ShortName>languageSkill</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>language skill</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonLegalChild" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the legal mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:273c3674-c61e-4fe5-ad01-45643219f7b2-2I</app:SemanticID>
+        <app:ShortName>legalChild</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>legal Child</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonLegalChildRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the legal mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:273c3674-c61e-4fe5-ad01-45643219f7b2-2R</app:SemanticID>
+        <app:ShortName>legalChildRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>legal Child Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonLegalParent" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the legal mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:273c3674-c61e-4fe5-ad01-45643219f7b2-1I</app:SemanticID>
+        <app:ShortName>legalParent</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>legal Parent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonLegalParentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the legal mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:273c3674-c61e-4fe5-ad01-45643219f7b2-1R</app:SemanticID>
+        <app:ShortName>legalParentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>legal Parent Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonMilitaryStatusCode" type="person:PersonMilitaryStatusCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The designation whether the Person is a civilian or belongs to a military or paramilitary force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:33bceed7-a859-4d0d-a9b3-e70e161df32f</app:SemanticID>
+        <app:ShortName>militaryStatusCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>military status</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonMilitaryStatusCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The designation whether a Person is a civilian or belongs to a military or paramilitary force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9764b3d0-b4ec-4c11-9513-563f4b9987f6</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Civilian">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is not a uniformed member of a regular armed force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:68edf7e7-ba32-424c-8d7b-fe96d3432aea</app:SemanticID>
+            <app:DisplayName>Civilian</app:DisplayName>
+            <app:PhysicalName>CIV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Military">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is a uniformed member of a regular armed force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d5821f3a-1b07-49f7-a9d4-9f0d51b88674</app:SemanticID>
+            <app:DisplayName>Military</app:DisplayName>
+            <app:PhysicalName>MILTRY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Paramilitary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Person who is a member of an irregular armed force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a333062f-3fc0-486d-b857-8c9327138f52</app:SemanticID>
+            <app:DisplayName>Paramilitary</app:DisplayName>
+            <app:PhysicalName>PAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonMotherInLawOrFatherInLaw" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the mother-in-law or father-in-law of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e726cd3f-4f0e-4d6c-bae7-240f73098734-1I</app:SemanticID>
+        <app:ShortName>MotherInLawOrFatherInLaw</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>Mother In Law Or Father In Law</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonMotherInLawOrFatherInLawRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the mother-in-law or father-in-law of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e726cd3f-4f0e-4d6c-bae7-240f73098734-1R</app:SemanticID>
+        <app:ShortName>MotherInLawOrFatherInLawRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>Mother In Law Or Father In Law Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonNationality" type="person:PersonNationalityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The citizenships of the Person, as a legal relationship between a state and an individual, involving reciprocal rights and duties.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:35d1ccba-73b1-44dd-89cf-4d5a22d180ef</app:SemanticID>
+        <app:ShortName>nationality</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>nationality</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonNationalityCountryCode" type="person:PersonNationalityCountryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The country that grants or withdraws a nationality.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0596d60e-4a93-403b-ac2a-18b5a180b634</app:SemanticID>
+        <app:ShortName>countryCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_CountryCode.gc</app:ManagedList>
+        <app:DisplayName>country</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonNationalityCountryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The country that grants or withdraws a nationality.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0596d60e-4a93-403b-ac2a-18b5a180b634</app:SemanticID>
+        <app:ShortName>countryCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_CountryCode.gc</app:ManagedList>
+        <app:DisplayName>country</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonNationalityReasonCode" type="person:PersonNationalityReasonCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The justification for the person's nationality.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7cdf96d6-b835-47c0-9f72-620cfc220299</app:SemanticID>
+        <app:ShortName>reasonCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>reason</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonNationalityReasonCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The justification for a person's nationality.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9ba1f238-1e7b-44df-b11c-7e044eaef4b0</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AcquiredByAdoption">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Nationality has been granted to the Person by explicit decision of national authorities.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8d21dd44-7050-4e87-a392-ed1a549c7778</app:SemanticID>
+            <app:DisplayName>Acquired by adoption</app:DisplayName>
+            <app:PhysicalName>ADOPTN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AcquiredByPlaceOfBirth">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Nationality has been granted because of the place of birth of the Person.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a86ef32a-079d-4795-b2f6-298b296406ba</app:SemanticID>
+            <app:DisplayName>Acquired by place of birth</app:DisplayName>
+            <app:PhysicalName>BIRTH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AcquiredFromFather">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Nationality has been granted because of the nationality of the father of the Person.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:15b11333-5dd8-45e4-a26f-439a2429d337</app:SemanticID>
+            <app:DisplayName>Acquired from father</app:DisplayName>
+            <app:PhysicalName>FATHER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AcquiredFromMother">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Nationality has been granted because of the nationality of the mother of the Person.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d11ed1c3-4146-4d7b-b4db-b401784cdde5</app:SemanticID>
+            <app:DisplayName>Acquired from mother</app:DisplayName>
+            <app:PhysicalName>MOTHER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AcquiredFromParents">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Nationality has been granted because of the nationality of the parents of the Person.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4dd9f96b-5ded-4684-abd2-523ab1050904</app:SemanticID>
+            <app:DisplayName>Acquired from parents</app:DisplayName>
+            <app:PhysicalName>PARNTS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Stateless">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The absence of nationality, as defined by the United Nations Convention on the Reduction of Statelessness (New York, 30 August 1961).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:73432dc1-ab09-4f3b-93e1-5b2d95294401</app:SemanticID>
+            <app:DisplayName>Stateless</app:DisplayName>
+            <app:PhysicalName>STTLSS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WithdrawnByCountry">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Nationality of the Person has been withdrawn by decision of national authorities.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:39a91c29-eb80-43ea-9a6d-24da43e9c8de</app:SemanticID>
+            <app:DisplayName>Withdrawn by country</app:DisplayName>
+            <app:PhysicalName>WTHDRN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PersonNationalityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The description (or indication of absence) of the citizenship(s) assigned to a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:945acc6f-84f8-4072-9d74-7c8d0988df03</app:SemanticID>
+        <app:DisplayName>Person nationality</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="person:PersonNationalityCountryCode" minOccurs="0" />
+          <xsd:element ref="person:PersonNationalityReasonCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PersonNieceOrNephew" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the aunt or uncle of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:69e96c1a-a617-4119-8e37-48d146d4fc35-2I</app:SemanticID>
+        <app:ShortName>nieceOrNephew</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>niece Or Nephew</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonNieceOrNephewRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the aunt or uncle of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:69e96c1a-a617-4119-8e37-48d146d4fc35-2R</app:SemanticID>
+        <app:ShortName>nieceOrNephewRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>niece Or Nephew Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonOwnedFacility" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person is the owner of the Facility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1598c439-4cfb-47b5-b75c-e6479fd47070-2I</app:SemanticID>
+        <app:ShortName>ownedFacility</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is owner of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonOwnedFacilityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person is the owner of the Facility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1598c439-4cfb-47b5-b75c-e6479fd47070-2R</app:SemanticID>
+        <app:ShortName>ownedFacilityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>is owner of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonParent" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the biological mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:853df5bf-b88c-4841-bc2f-64290d9dba1b-1I</app:SemanticID>
+        <app:ShortName>parent</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>parent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonParentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the biological mother or father of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:853df5bf-b88c-4841-bc2f-64290d9dba1b-1R</app:SemanticID>
+        <app:ShortName>parentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>parent Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonPeerObject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is peer of the object Person (they both have equivalent standing).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47968250-a539-44e4-9910-fe61bc2815ae-2I</app:SemanticID>
+        <app:ShortName>peerObject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is peer of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonPeerObjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is peer of the object Person (they both have equivalent standing).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47968250-a539-44e4-9910-fe61bc2815ae-2R</app:SemanticID>
+        <app:ShortName>peerObjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>is peer of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonPeerSubject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is peer of the object Person (they both have equivalent standing).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47968250-a539-44e4-9910-fe61bc2815ae-1I</app:SemanticID>
+        <app:ShortName>peerSubject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is peer of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonPeerSubjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is peer of the object Person (they both have equivalent standing).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47968250-a539-44e4-9910-fe61bc2815ae-1R</app:SemanticID>
+        <app:ShortName>peerSubjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>is peer of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonPhysicalStatusCode" type="person:PersonPhysicalStatusCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general physical status of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dd0d8dcb-7752-4686-9a15-59b7be8f7899</app:SemanticID>
+        <app:ShortName>physicalStatusCode</app:ShortName>
+        <app:Remarks>This attribute is a qualifier on the dutyStatusCode. Thus, this attribute describes qualifications or restrictions on a person's suitability for duty as a function of physical condition.</app:Remarks>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>physical status</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonPhysicalStatusCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general physical status of a Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1160ac7c-18b3-4119-8952-3adb21f21131</app:SemanticID>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower physical status than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NotWalkingIncapacitated">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is so seriously incapacitated that the person is not capable of walking and can only be moved by stretcher.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5de1f0d8-2a8e-456d-a0a5-6013532b531a</app:SemanticID>
+            <app:DisplayName>Incapacitated, not walking</app:DisplayName>
+            <app:PhysicalName>IN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WalkingIncapacitated">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is incapacitated, but is capable of walking.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:07cd2f91-eae5-4421-b2ff-684710410227</app:SemanticID>
+            <app:DisplayName>Incapacitated, walking</app:DisplayName>
+            <app:PhysicalName>IW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SlightlyIncapacitated">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is incapacitated, but without any major reduction of normal physical capabilities.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:07001b59-595d-48ff-9773-481e59a4c3a4</app:SemanticID>
+            <app:DisplayName>Slightly incapacitated</app:DisplayName>
+            <app:PhysicalName>SI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fit">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has normal physical capabilities.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3eb19178-4afd-47bd-bb35-169e93c5eb56</app:SemanticID>
+            <app:DisplayName>Fit</app:DisplayName>
+            <app:PhysicalName>FT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonPhysicalStatusQualifierCode" type="person:PersonPhysicalStatusQualifierCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The health conditions of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ff470a49-b057-4f01-99d7-60ba4f613066</app:SemanticID>
+        <app:ShortName>physicalStatusQualifierCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>physical status qualifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonPhysicalStatusQualifierCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The health conditions of a Person at a specific point in time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1b85a42c-553f-41ee-a54b-7ab08c275fe5</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ContagiousIll">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has an illness, caused by a disease that is likely to transmit to others.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c31d7452-0871-4e44-836e-39d349d65ba8</app:SemanticID>
+            <app:DisplayName>Ill, contagious</app:DisplayName>
+            <app:PhysicalName>ILLCNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Injured">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is incapacitated due to an injury resulting from an event other than an armed conflict.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2db97f4b-6e9b-487d-96f9-5f3e8a6c8d5e</app:SemanticID>
+            <app:DisplayName>Injured</app:DisplayName>
+            <app:PhysicalName>INJRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NonContagiousIll">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has an illness, caused by a disease that is not transmittable to others.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:acbfe598-b6d4-4680-a5ab-623cc6902ff3</app:SemanticID>
+            <app:DisplayName>Ill, non-contagious</app:DisplayName>
+            <app:PhysicalName>ILLNCN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pregnant">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is expecting a baby.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:881fa141-5f96-43a8-b7db-d0f3377b9d43</app:SemanticID>
+            <app:DisplayName>Pregnant</app:DisplayName>
+            <app:PhysicalName>PRGNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnknownDiseaseIll">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person has an illness, caused by an unidentified disease.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0a6617cf-f881-4278-b542-67322a6aecd1</app:SemanticID>
+            <app:DisplayName>Ill, unknown disease</app:DisplayName>
+            <app:PhysicalName>ILLUNK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Wounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Person is incapacitated due to an injury resulting from an armed conflict.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:72dfa0bc-a601-494e-86fb-7abf22c17edc</app:SemanticID>
+            <app:DisplayName>Wounded</app:DisplayName>
+            <app:PhysicalName>WNDD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonRadiationDoseMeasure" type="person:PersonRadiationDoseMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The total radiation dose to which the Person has been exposed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:859acfd5-7c6d-477a-be72-0c015436c7e5</app:SemanticID>
+        <app:ShortName>radiationDoseMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>radiation dose</app:DisplayName>
+        <app:UnitOfMeasure>centiGray (cGy)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonRadiationDoseMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The total radiation dose to which the Person has been exposed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:859acfd5-7c6d-477a-be72-0c015436c7e5</app:SemanticID>
+        <app:ShortName>radiationDoseMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>radiation dose</app:DisplayName>
+        <app:UnitOfMeasure>centiGray (cGy)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="6" />
+      <xsd:maxInclusive value="999999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PersonRank" type="actor:MilitaryRankType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The military grade that establishes the relative position or status of the Person in its organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c242a26e-1047-4a49-b3bb-c333eeb66894</app:SemanticID>
+        <app:ShortName>rank</app:ShortName>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>rank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonRatedOrAssessedPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person provides performance evaluations of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:465f0f57-8f8f-4173-b9a3-9e6bb3422257-2I</app:SemanticID>
+        <app:ShortName>ratedOrAssessedPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>rated Or Assessed Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonRatedOrAssessedPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person provides performance evaluations of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:465f0f57-8f8f-4173-b9a3-9e6bb3422257-2R</app:SemanticID>
+        <app:ShortName>ratedOrAssessedPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>rated Or Assessed Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonRatingOrAssessingPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person provides performance evaluations of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:465f0f57-8f8f-4173-b9a3-9e6bb3422257-1I</app:SemanticID>
+        <app:ShortName>ratingOrAssessingPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>rating Or Assessing Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonRatingOrAssessingPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person provides performance evaluations of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:465f0f57-8f8f-4173-b9a3-9e6bb3422257-1R</app:SemanticID>
+        <app:ShortName>ratingOrAssessingPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>rating Or Assessing Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonReligionCode" type="person:PersonReligionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The particular system of faith and worship to which the Person adheres.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:54bab8b8-5f94-4470-b9e2-14a753d9872d</app:SemanticID>
+        <app:ShortName>religionCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_ReligionCode.gc</app:ManagedList>
+        <app:DisplayName>religion</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PersonReligionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The particular system of faith and worship to which the Person adheres.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:54bab8b8-5f94-4470-b9e2-14a753d9872d</app:SemanticID>
+        <app:ShortName>religionCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_ReligionCode.gc</app:ManagedList>
+        <app:DisplayName>religion</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:element name="PersonReportedToPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is under the direction of the object Person for tasking.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a5095a0-e6ed-4e40-97c1-258d7d58cf6c-2I</app:SemanticID>
+        <app:ShortName>reportedToPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>reported To Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonReportedToPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is under the direction of the object Person for tasking.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a5095a0-e6ed-4e40-97c1-258d7d58cf6c-2R</app:SemanticID>
+        <app:ShortName>reportedToPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>reported To Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonReportingPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is under the direction of the object Person for tasking.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a5095a0-e6ed-4e40-97c1-258d7d58cf6c-1I</app:SemanticID>
+        <app:ShortName>reportingPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>reporting Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonReportingPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is under the direction of the object Person for tasking.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a5095a0-e6ed-4e40-97c1-258d7d58cf6c-1R</app:SemanticID>
+        <app:ShortName>reportingPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>reporting Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonResponsibleOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has on call the Person with the objective of coordinating details for each element of support required.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:607d0a02-cf01-4f3f-a036-d6b8f7344be3-1I</app:SemanticID>
+        <app:ShortName>responsibleOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>responsible Organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonResponsibleOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has on call the Person with the objective of coordinating details for each element of support required.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:607d0a02-cf01-4f3f-a036-d6b8f7344be3-1R</app:SemanticID>
+        <app:ShortName>responsibleOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>responsible Organisation Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSiblingObject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the sister or brother of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3dd4cc26-1ea8-49bf-bcc9-d93a03a52518-2I</app:SemanticID>
+        <app:ShortName>siblingObject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>sibling Object</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSiblingObjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the sister or brother of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3dd4cc26-1ea8-49bf-bcc9-d93a03a52518-2R</app:SemanticID>
+        <app:ShortName>siblingObjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>sibling Object Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSiblingSubject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the sister or brother of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3dd4cc26-1ea8-49bf-bcc9-d93a03a52518-1I</app:SemanticID>
+        <app:ShortName>siblingSubject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>sibling Subject</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSiblingSubjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the sister or brother of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3dd4cc26-1ea8-49bf-bcc9-d93a03a52518-1R</app:SemanticID>
+        <app:ShortName>siblingSubjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>sibling Subject Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSpouseObject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the wife or husband of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9e7d0596-1d87-4dcd-bcc6-f91efadf3f40-2I</app:SemanticID>
+        <app:ShortName>spouseObject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>spouse Object</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSpouseObjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the wife or husband of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9e7d0596-1d87-4dcd-bcc6-f91efadf3f40-2R</app:SemanticID>
+        <app:ShortName>spouseObjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>spouse Object Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSpouseSubject" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the wife or husband of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9e7d0596-1d87-4dcd-bcc6-f91efadf3f40-1I</app:SemanticID>
+        <app:ShortName>spouseSubject</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>spouse Subject</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSpouseSubjectRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is the wife or husband of the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9e7d0596-1d87-4dcd-bcc6-f91efadf3f40-1R</app:SemanticID>
+        <app:ShortName>spouseSubjectRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>spouse Subject Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSubordinatePerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is higher in rank, station or authority than the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0faaa1a0-89c3-4165-a23a-88e0b3fe15e2-2I</app:SemanticID>
+        <app:ShortName>subordinatePerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>subordinate Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSubordinatePersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is higher in rank, station or authority than the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0faaa1a0-89c3-4165-a23a-88e0b3fe15e2-2R</app:SemanticID>
+        <app:ShortName>subordinatePersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>subordinate Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSuperiorPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is higher in rank, station or authority than the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0faaa1a0-89c3-4165-a23a-88e0b3fe15e2-1I</app:SemanticID>
+        <app:ShortName>superiorPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>superior Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSuperiorPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Person is higher in rank, station or authority than the object Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0faaa1a0-89c3-4165-a23a-88e0b3fe15e2-1R</app:SemanticID>
+        <app:ShortName>superiorPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>superior Person Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSupportedPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person depends on the Person for its logistics or other assistance in the course of its functioning.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:003cb026-84c6-48db-a56a-d1ad962f4edf-1I</app:SemanticID>
+        <app:ShortName>supportedPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is supported by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSupportedPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person depends on the Person for its logistics or other assistance in the course of its functioning.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:003cb026-84c6-48db-a56a-d1ad962f4edf-1R</app:SemanticID>
+        <app:ShortName>supportedPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>is supported by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSupportingPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person depends on the Person for its logistics or other assistance in the course of its functioning.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:003cb026-84c6-48db-a56a-d1ad962f4edf-2I</app:SemanticID>
+        <app:ShortName>supportingPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is supported by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonSupportingPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Person depends on the Person for its logistics or other assistance in the course of its functioning.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:003cb026-84c6-48db-a56a-d1ad962f4edf-2R</app:SemanticID>
+        <app:ShortName>supportingPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>is supported by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonTransportingMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44cc65f4-6d4c-4f2a-95b7-f78a5e609ab9-1I</app:SemanticID>
+        <app:ShortName>transportingMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonTransportingMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44cc65f4-6d4c-4f2a-95b7-f78a5e609ab9-1R</app:SemanticID>
+        <app:ShortName>transportingMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PersonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A human being of military or civilian significance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Person</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="actor:ActorType">
+        <xsd:sequence>
+          <xsd:element ref="person:PersonBirthDate" minOccurs="0" />
+          <xsd:element ref="person:PersonBloodTypeCode" minOccurs="0" />
+          <xsd:element ref="person:PersonCharacteristicCode" minOccurs="0" />
+          <xsd:element ref="person:PersonDeathDate" minOccurs="0" />
+          <xsd:element ref="person:PersonDutyStatusCode" minOccurs="0" />
+          <xsd:element ref="person:PersonEthnicGroupCode" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonGenderCode" minOccurs="0" />
+          <xsd:element ref="person:PersonIdentificationDocument" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonIsInReserveIndicator" minOccurs="0" />
+          <xsd:element ref="person:PersonIsProfessingReligiousPreferenceIndicator" minOccurs="0" />
+          <xsd:element ref="person:PersonLanguageSkill" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonMilitaryStatusCode" />
+          <xsd:element ref="person:PersonNationality" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonPhysicalStatusCode" minOccurs="0" />
+          <xsd:element ref="person:PersonPhysicalStatusQualifierCode" minOccurs="0" />
+          <xsd:element ref="person:PersonRadiationDoseMeasure" minOccurs="0" />
+          <xsd:element ref="person:PersonRank" minOccurs="0" />
+          <xsd:element ref="person:PersonReligionCode" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAccountedFacilityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAccountedFacility" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAssigningOrganisationRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAssigningOrganisation" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAttachingOrganisationRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAttachingOrganisation" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAugmentingPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAugmentingPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAugmentedPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAugmentedPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonParentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonParent" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonChildRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonChild" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonMotherInLawOrFatherInLawRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonMotherInLawOrFatherInLaw" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonChildInLawRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonChildInLaw" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonCommandedActorRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonCommandedActor" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonConsultingOrganisationRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonConsultingOrganisation" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonCousinSubjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonCousinSubject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonCousinObjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonCousinObject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonEmployingOrganisationRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonEmployingOrganisation" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonExploitingPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonExploitingPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonExploitedPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonExploitedPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonGrandparentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonGrandparent" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonGrandchildRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonGrandchild" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonHostingOrganisationRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonHostingOrganisation" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonInstitutionRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonInstitution" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonLegalParentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonLegalParent" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonLegalChildRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonLegalChild" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAuntOrUncleRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonAuntOrUncle" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonNieceOrNephewRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonNieceOrNephew" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonOwnedFacilityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonOwnedFacility" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonPeerSubjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonPeerSubject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonPeerObjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonPeerObject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonRatingOrAssessingPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonRatingOrAssessingPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonRatedOrAssessedPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonRatedOrAssessedPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonReportingPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonReportingPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonReportedToPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonReportedToPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonResponsibleOrganisationRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonResponsibleOrganisation" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSiblingSubjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSiblingSubject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSiblingObjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSiblingObject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSpouseSubjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSpouseSubject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSpouseObjectRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSpouseObject" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSuperiorPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSuperiorPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSubordinatePersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSubordinatePerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSupportedPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSupportedPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSupportingPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonSupportingPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonTransportingMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="person:PersonTransportingMateriel" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

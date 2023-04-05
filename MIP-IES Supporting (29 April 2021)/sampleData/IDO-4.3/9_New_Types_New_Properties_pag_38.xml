@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:CombatSupportUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:extension="https://mip-interop.org/data/v4.3/Extension" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<extension:Extension extension:mustUnderstandIndicator="false">
+		<unit:AirTrafficControlUnit>
+			<extension:Extension extension:mustUnderstandIndicator="false">
+				<unit:UnitIsTaskForceIndicator>false</unit:UnitIsTaskForceIndicator>
+			</extension:Extension>
+			<base:ID>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:ID>
+			<concept:ConceptName>Air Traffic Control</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"></battlespaceconcept:BattlespaceConceptMetadata>
+			<organisation:OrganisationHasCommandFunctionIndicator>false</organisation:OrganisationHasCommandFunctionIndicator>
+			<organisation:MilitaryOrganisationServiceCode>AirForce</organisation:MilitaryOrganisationServiceCode>
+			<unit:UnitEchelon/>
+		</unit:AirTrafficControlUnit>
+	</extension:Extension>
+	<base:ID>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:ID>
+	<concept:ConceptName>Air Traffic Control</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"></battlespaceconcept:BattlespaceConceptMetadata>
+	<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+	<organisation:MilitaryOrganisationServiceCode>AirForce</organisation:MilitaryOrganisationServiceCode>
+	<unit:UnitEchelon/>
+</unit:CombatSupportUnit>
+<!--
+Original example
+
+<unit:CombatSupportUnit>
+  … wrapper type’s attributes ...
+  <ext:Extensionext:mustUnderstand="false">
+ 	<unit_4.2:AirTrafficControlUnit>
+            ... new type’s attributes ...
+            <ext:Extensionext:mustUnderstand="false">
+          	<unit_4.2:isTaskForceIndicator>False</unit_4.2:isTaskForceIndicator>
+            </ext:Extension>
+            ...
+ 	</unit_4.2:AirTrafficControlUnit>
+  </ext:Extension>
+  <ext:Extensionext:mustUnderstand="false">
+ 	<unit_4.2:isTaskForceIndicator>False</unit_4.2:isTaskForceIndicator>
+   </ext:Extension>
+...
+</unit:CombatSupportUnit>
+
+
+-->

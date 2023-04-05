@@ -1,0 +1,27 @@
+Test description
+
+Test IDMIP4SLT3IS_6019Test TitleCreate Canalise Task.Execution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the elements for a Canalise Task and the Consumers are able to correctly understand (and display) it.ScenarioThe Producer creates message with all elements for a Canalise Task. The Consumers receive the data and process them.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has created the 'Ground Picture > Intelligence Assessment' topic (for instance, a Topic where these kind of Tasks should belong). The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the Task and all elements are processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer creates the Canalise Task with name XXX_CT_6019 and fills ALL elements.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Facility: ESP_CT_6019 ~~Consumers receive and process (and display) the Canalise Task that the Producer created. ~~122. The Producer creates an update for the object by changing ALL elements. ~~ Consumers receive and process (and display) the Canalise Task and all elements that the Producer created. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one Task in the MTMT, generate new MTMT Tasks on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate Task.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

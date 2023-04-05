@@ -1,0 +1,35 @@
+Test description
+
+Test IDMIP4SLT3SF_3712Test TitleDiscriminator.Execution Priority1ObjectiveAssess how systems handle BSOs in the same Topic with common Source and URI (attributes 'source' and 'uri'), but different Discriminator (attribute 'discriminator') values.ScenarioThe MIP4 specification will need to support multiple concurrent perspectives of the same 'real-world' object, even coming from the same source.   The 'discriminator' attribute is then used to indicate that the Producer wants to share information about a BSO, but corresponding to different states.
+The Consumer is subscribed to at least one Topic of the Producer.
+One or more BSOs within this Topic will be published and updated sharing 'source' and 'uri' attributes but with different 'discriminator' and different values in other attributes ('Lat' and 'Lon' for its position, for instance).EnvironmentInternet, co-located.
+C2ISs have to receive information exchange from Producers regarding selected information that they are concerning about.
+Exchange Pattern: P/S (simpler), R/RParticipation2.MTRSPre-test Conditions3.6 Initialisation.
+Appropriate active subscriptions with at least one Topic must be in place. Test InputsN/AConclusionThis test will show that a recipient C2IS will always be able to identify to which of concurrent perspectives of the same 'real-world' object, the information received for it belongs.Test OutputsN/ATraceabilityREQ_SYS_0002, REQ_SYS_0020
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer inserts one or more BSOs in its C2IS, belonging in a topic to which the Consumer is subscribed, sharing 'source' and 'uri' attributes but with different 'discriminator' and different values in other attributes ('Lat' and 'Lon' for their positions, for instance).
+
+Notices: These steps have been written for the P/S case, but they can also be modified to be carried out via the R/R exchange pattern. ~~The insertions are automatically received at the Consumer.
+The Consumer is able to identify multiple concurrent perspectives of the same 'real-world' object, even coming from the same source and process them accordingly to its C2IS. ~~122. The Producer updates some attributes of the BSOs with various perspectives created at step 1. ~~
+The updates are automatically received at the Consumer.
+The Consumer is able to process them accordingly to its C2IS. ~~123. Consumer and Producer rotate roles. ~~Repeat steps 1 and 2. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

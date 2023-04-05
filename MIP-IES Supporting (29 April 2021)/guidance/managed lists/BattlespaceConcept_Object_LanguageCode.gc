@@ -1,0 +1,5171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList 
+	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd'
+>
+   <Identification>
+      <ShortName>LanguageCodeType</ShortName>
+		<Version>1.0.1</Version>
+		<CanonicalUri>urn:int:nato:standard:mip:mip4ies:managedList:languageCode</CanonicalUri>
+		<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:languageCode:1:0:1</CanonicalVersionUri>
+	</Identification>
+	<ColumnSet>
+		<ColumnRef Id="code" ExternalRef="code">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="label" ExternalRef="label">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="description" ExternalRef="description">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<KeyRef Id="managedListKey" ExternalRef="managedListKey">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</KeyRef>
+	</ColumnSet>
+    <SimpleCodeList>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ABK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Abkhazian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Abkhazian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ACE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Achinese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Achinese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ACH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Acoli</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Acoli.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ADA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Adangme</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Adangme.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ADY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Adyghe / Adygei</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Adyghe / Adygei.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Afar</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Afar.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AFH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Afrihili</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Afrihili.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AFR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Afrikaans</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Afrikaans.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AFA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Afro-Asiatic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Afro-Asiatic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ainu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ainu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AKA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Akan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Akan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AKK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Akkadian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Akkadian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SQI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Albanian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Albanian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ALE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Aleut</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Aleut.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ALG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Algonquian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Algonquian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TUT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Altaic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Altaic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AMH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Amharic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Amharic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ANP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Angika</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Angika.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>APA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Apache language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Apache language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Arabic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Arabic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Aragonese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Aragonese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Arapaho</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Arapaho.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Arawak</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Arawak.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HYE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Armenian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Armenian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RUP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Aromanian / Arumanian / Macedo-Romanian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Aromanian / Arumanian / Macedo-Romanian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ART</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Artificial language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Artificial language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ASM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Assamese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Assamese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AST</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Asturian / Bable / Leonese / Asturleonese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Asturian / Bable / Leonese / Asturleonese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ATH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Athapascan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Athapascan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DEN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Slave (Athapascan)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Slave (Athapascan).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Australian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Australian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Austronesian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Austronesian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AVA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Avaric</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Avaric.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AVE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Avestan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Avestan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AWA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Awadhi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Awadhi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AYM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Aymara</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Aymara.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>AZE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Azerbaijani</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Azerbaijani.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Balinese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Balinese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Baltic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Baltic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Baluchi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Baluchi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bambara</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bambara.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bamileke language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Bamileke language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Banda language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Banda language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BNT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bantu language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Bantu language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Basa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Basa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BAK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bashkir</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bashkir.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Basque</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Basque.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BTK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Batak language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Batak language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BEJ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Beja / Bedawiyet</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Beja / Bedawiyet.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BEL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Belarusian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Belarusian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BEM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bemba</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bemba.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BEN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bengali</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bengali.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BER</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Berber language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Berber language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BHO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bhojpuri</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bhojpuri.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BIH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bihari language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Bihari language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BIK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bikol</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bikol.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bini / Edo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bini / Edo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BIS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bislama</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bislama.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BYN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Blin / Bilin</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Blin / Bilin.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZBL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Blissymbols / Blissymbolics / Bliss</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Blissymbols / Blissymbolics / Bliss.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BOS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bosnian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bosnian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BRA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Braj</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Braj.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BRE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Breton</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Breton.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BUG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Buginese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Buginese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BUL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bulgarian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bulgarian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BUA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Buriat</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Buriat.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MYA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Burmese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Burmese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CAD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Caddo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Caddo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Catalan / Valencian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Catalan / Valencian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CAU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Caucasian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Caucasian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CEB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Cebuano</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Cebuano.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CEL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Celtic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Celtic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Central American Indian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Central American Indian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KHM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Central Khmer</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Central Khmer.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chagatai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chagatai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CMC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chamic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Chamic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chamorro</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chamorro.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chechen</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chechen.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Cherokee</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Cherokee.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Cheyenne</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Cheyenne.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chibcha</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chibcha.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NYA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chichewa / Chewa / Nyanja</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chichewa / Chewa / Nyanja.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZHO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chinese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chinese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chinook jargon</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chinook jargon.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chipewyan / Dene Suline</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chipewyan / Dene Suline.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Choctaw</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Choctaw.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Church Slavic / Old Slavonic / Church Slavonic / Old Bulgarian / Old Church Slavonic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Church Slavic / Old Slavonic / Church Slavonic / Old Bulgarian / Old Church Slavonic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chuukese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chuukese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Chuvash</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Chuvash.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NWC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Classical Newari / Old Newari / Classical Nepal Bhasa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Classical Newari / Old Newari / Classical Nepal Bhasa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SYC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Classical Syriac</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Classical Syriac.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>COP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Coptic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Coptic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>COR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Cornish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Cornish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>COS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Corsican</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Corsican.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CRE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Cree</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Cree.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Creek</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Creek.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CRP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Creoles and pidgins</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Creoles and pidgins.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CRH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Crimean Tatar / Crimean Turkish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Crimean Tatar / Crimean Turkish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HRV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Croatian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Croatian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Cushitic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Cushitic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CES</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Czech</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Czech.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DAK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dakota</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dakota.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Danish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Danish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dargwa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dargwa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DEL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Delaware</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Delaware.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dinka</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dinka.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DIV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Divehi / Dhivehi / Maldivian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Divehi / Dhivehi / Maldivian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DOI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dogri</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dogri.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DGR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dogrib</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dogrib.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DRA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dravidian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Dravidian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DUA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Duala</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Duala.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NLD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dutch / Flemish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dutch / Flemish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DYU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dyula</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dyula.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DZO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Dzongkha</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Dzongkha.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FRS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Eastern Frisian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Eastern Frisian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EFI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Efik</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Efik.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EKA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ekajuk</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ekajuk.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ELX</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Elamite</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Elamite.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ENG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>English</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of English.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CPE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Creoles and pidgins, English-based</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Creoles and pidgins, English based.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MYV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Erzya</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Erzya.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EPO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Esperanto</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Esperanto.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EST</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Estonian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Estonian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EWE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ewe</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ewe.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EWO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ewondo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ewondo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Fang</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Fang.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Fanti</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Fanti.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FAO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Faroese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Faroese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FIJ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Fijian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Fijian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FIL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Filipino / Pilipino</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Filipino / Pilipino.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Finnish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Finnish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FIU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Finno-Ugrian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Finno-Ugrian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Fon</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Fon.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FRA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>French</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of French.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CPF</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Creoles and pidgins, French-based</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Creoles and pidgins, French-based.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FUR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Friulian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Friulian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FUL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Fulah</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Fulah.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GAA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ga</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ga.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GLA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gaelic / Scottish Gaelic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gaelic / Scottish Gaelic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Galibi Carib</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Galibi Carib.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GLG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Galician</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Galician.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ganda</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ganda.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GAY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gayo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gayo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GBA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gbaya</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gbaya.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GEZ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Geez</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Geez.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Georgian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Georgian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DEU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>German</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of German.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GEM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Germanic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Germanic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GIL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gilbertese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gilbertese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gondi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gondi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GOR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gorontalo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gorontalo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GOT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gothic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gothic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GRB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Grebo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Grebo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GRN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Guarani</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Guarani.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GUJ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gujarati</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gujarati.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GWI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Gwich'in</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Gwich'in.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Haida</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Haida.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Haitian / Haitian Creole</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Haitian / Haitian Creole.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HAU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hausa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hausa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HAW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hawaiian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hawaiian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HEB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hebrew</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hebrew.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HER</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Herero</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Herero.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HIL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hiligaynon</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hiligaynon.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HIM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Himachali / Western Pahari language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Himachali / Western Pahari language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hindi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hindi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HMO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hiri Motu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hiri Motu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HIT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hittite</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hittite.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HMN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hmong / Mong</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hmong / Mong.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HUN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hungarian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hungarian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HUP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Hupa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Hupa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IBA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Iban</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Iban.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ISL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Icelandic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Icelandic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IDO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ido</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ido.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IBO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Igbo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Igbo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IJO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ijo language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Ijo language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ILO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Iloko</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Iloko.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SMN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Inari Sami</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Inari Sami.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>INC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Indic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Indic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>INE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Indo-European language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Indo-European language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IND</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Indonesian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Indonesian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>INH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ingush</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ingush.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>INA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Interlingua (International Auxiliary Language Association)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Interlingua (International Auxiliary Language Association).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ILE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Interlingue / Occidental</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Interlingue / Occidental.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IKU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Inuktitut</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Inuktitut.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IPK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Inupiaq</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Inupiaq.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IRA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Iranian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Iranian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GLE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Irish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Irish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>IRO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Iroquoian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An Iroquoian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ITA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Italian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Italian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JPN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Japanese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Japanese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JAV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Javanese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Javanese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JRB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Judeo-Arabic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Judeo-Arabic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JPR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Judeo-Persian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Judeo-Persian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KBD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kabardian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kabardian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kabyle</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kabyle.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kachin / Jingpho</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kachin / Jingpho.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kalaallisut / Greenlandic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kalaallisut / Greenlandic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>XAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kalmyk / Oirat</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kalmyk / Oirat.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kamba</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kamba.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kannada</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kannada.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kanuri</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kanuri.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kara-Kalpak</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kara-Kalpak.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KRC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Karachay-Balkar</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Karachay-Balkar.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KRL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Karelian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Karelian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Karen language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Karen language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kashmiri</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kashmiri.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CSB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kashubian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kashubian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kawi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kawi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KAZ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kazakh</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kazakh.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Luo (Kenya and Tanzania)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Luo (Kenya and Tanzania).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KHA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Khasi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Khasi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KHI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Khoisan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Khoisan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KHO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Khotanese / Sakan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Khotanese / Sakan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KIK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kikuyu / Gikuyu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kikuyu / Gikuyu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KMB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kimbundu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kimbundu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kinyarwanda</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kinyarwanda.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KIR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kirghiz / Kyrgyz</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kirghiz / Kyrgyz.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TLH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Klingon / tlhIngan-Hol</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Klingon / tlhIngan-Hol.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KOM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Komi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Komi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kongo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kongo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KOK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Konkani</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Konkani.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KOR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Korean</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Korean.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KOS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kosraean</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kosraean.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KPE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kpelle</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kpelle.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KRO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kru language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Kru language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KUA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kuanyama / Kwanyama</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kuanyama / Kwanyama.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KUM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kumyk</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kumyk.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KUR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kurdish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kurdish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KRU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kurukh</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kurukh.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>KUT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Kutenai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Kutenai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ladino</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ladino.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lahnda</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lahnda.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lamba</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lamba.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DAY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Land Dayak language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Land Dayak language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lao</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lao.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Latin</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Latin.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LAV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Latvian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Latvian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LEZ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lezghian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lezghian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LIM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Limburgan / Limburger / Limburgish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Limburgan / Limburger / Limburgish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lingala</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lingala.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LIT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lithuanian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lithuanian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>JBO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lojban</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lojban.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NDS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Low German / Low Saxon / German, Low / Saxon, Low</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Low German / Low Saxon / German, Low / Saxon, Low.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DSB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lower Sorbian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lower Sorbian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LOZ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lozi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lozi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Luba-Katanga</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Luba-Katanga.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Luba-Lulua</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Luba-Lulua.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Luiseno</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Luiseno.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SMJ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lule Sami</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lule Sami.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lunda</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lunda.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Lushai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Lushai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LTZ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Luxembourgish / Letzeburgesch</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Luxembourgish / Letzeburgesch.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MKD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Macedonian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Macedonian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Madurese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Madurese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Magahi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Magahi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Maithili</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Maithili.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Makasar</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Makasar.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MLG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Malagasy</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Malagasy.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MSA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Malay</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Malay.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Malayalam</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Malayalam.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MLT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Maltese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Maltese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MNC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Manchu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Manchu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MDR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mandar</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mandar.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mandingo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mandingo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MNI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Manipuri</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Manipuri.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MNO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Manobo language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Manobo language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GLV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Manx</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Manx.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MRI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Maori</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Maori.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ARN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mapudungun / Mapuche</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mapudungun / Mapuche.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Marathi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Marathi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CHM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mari</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mari.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Marshallese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Marshallese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MWR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Marwari</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Marwari.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MAS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Masai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Masai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MYN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mayan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Mayan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MEN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mende</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mende.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MIC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mi'kmaq / Micmac</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mi'kmaq / Micmac.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Minangkabau</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Minangkabau.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MWL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mirandese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mirandese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ELL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Greek, Modern (1453-)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Greek, Modern (1453-).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MOH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mohawk</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mohawk.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MDF</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Moksha</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Moksha.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MKH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mon-Khmer language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Mon-Khmer language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>LOL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mongo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mongo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mongolian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mongolian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MOS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Mossi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Mossi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MUN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Munda language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Munda language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NQO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>N'Ko</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of N'Ko.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NAH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nahuatl language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Nahuatl language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NAU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nauru</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nauru.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NAV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Navajo / Navaho</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Navajo / Navaho.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NDO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ndonga</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ndonga.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NAP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Neapolitan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Neapolitan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NEW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nepal Bhasa / Newari</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nepal Bhasa / Newari.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NEP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nepali</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nepali.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NIA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nias</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nias.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NIC</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Niger-Kordofanian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Niger-Kordofanian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SSA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nilo-Saharan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Nilo-Saharan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NIU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Niuean</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Niuean.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NOG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nogai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nogai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>North American Indian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A North American Indian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NDE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ndebele, North / North Ndebele</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ndebele, North / North Ndebele.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FRR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Northern Frisian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Northern Frisian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SME</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Northern Sami</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Northern Sami.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NOR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Norwegian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Norwegian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NOB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Bokmal, Norwegian / Norwegian Bokmal</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Bokmal, Norwegian / Norwegian Bokmal.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NNO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Norwegian Nynorsk / Nynorsk, Norwegian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Norwegian Nynorsk / Nynorsk, Norwegian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NUB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nubian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Nubian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NYM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nyamwezi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nyamwezi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NYN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nyankole</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nyankole.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TOG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tonga (Nyasa)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tonga (Nyasa).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NYO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nyoro</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nyoro.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NZI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Nzima</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Nzima.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>OCI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Occitan (post 1500)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Occitan (post 1500).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>OJI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ojibwa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ojibwa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Norse, Old</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Norse, Old.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ORI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Oriya</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Oriya.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ORM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Oromo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Oromo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>OSA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Osage</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Osage.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>OSS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ossetian / Ossetic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ossetian / Ossetic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>OTO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Otomian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Otomian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pahlavi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pahlavi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAU</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Palauan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Palauan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PLI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pali</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pali.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pampanga / Kapampangan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pampanga / Kapampangan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pangasinan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pangasinan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Panjabi / Punjabi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Panjabi / Punjabi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Papiamento</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Papiamento.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PAA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Papuan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Papuan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NSO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pedi / Sepedi / Northern Sotho</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pedi / Sepedi / Northern Sotho.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FAS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Persian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Persian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PHI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Philippine language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Philippine language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PHN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Phoenician</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Phoenician.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pohnpeian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pohnpeian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>POL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Polish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Polish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>POR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Portuguese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Portuguese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CPP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Creoles and pidgins, Portuguese-based</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Creoles and pidgins, Portuguese-based.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PRA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Prakrit language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Prakrit language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Pushto / Pashto</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Pushto / Pashto.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>QUE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Quechua</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Quechua.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RAJ</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Rajasthani</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Rajasthani.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RAP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Rapanui</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Rapanui.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Rarotongan / Cook Islands Maori</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Rarotongan / Cook Islands Maori.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ROA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Romance language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Romance language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Romanian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Romanian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ROH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Romansh</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Romansh.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ROM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Romany</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Romany.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RUN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Rundi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Rundi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>RUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Russian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Russian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Salishan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Salishan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Samaritan Aramaic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Samaritan Aramaic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SMI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sami language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Sami language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SMO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Samoan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Samoan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sandawe</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sandawe.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sango</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sango.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sanskrit</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sanskrit.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Santali</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Santali.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SRD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sardinian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sardinian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sasak</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sasak.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SCO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Scots</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Scots.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SEL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Selkup</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Selkup.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SEM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Semitic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Semitic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SRP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Serbian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Serbian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SRR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Serer</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Serer.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SHN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Shan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Shan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SNA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Shona</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Shona.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>III</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sichuan Yi / Nuosu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sichuan Yi / Nuosu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SCN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sicilian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sicilian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SID</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sidamo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sidamo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SGN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sign Language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A sign language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BLA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Siksika</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Siksika.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SND</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sindhi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sindhi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SIN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sinhala / Sinhalese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sinhala / Sinhalese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SIT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sino-Tibetan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Sino-Tibetan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SIO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Siouan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Siouan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SMS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Skolt Sami</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Skolt Sami.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SLA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Slavic language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Slavic language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SLK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Slovak</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Slovak.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SLV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Slovenian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Slovenian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SOG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sogdian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sogdian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SOM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Somali</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Somali.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Songhai language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Songhai language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SNK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Soninke</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Soninke.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WEN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sorbian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Sorbian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SOT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sotho, Southern</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sotho, Southern.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>South American Indian language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A South American Indian language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>NBL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ndebele, South / South Ndebele</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ndebele, South / South Ndebele.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ALT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Southern Altai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Southern Altai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SMA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Southern Sami</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Southern Sami.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SPA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Spanish / Castilian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Spanish / Castilian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SRN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sranan Tongo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sranan Tongo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZGH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Standard Moroccan Tamazight</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Standard Moroccan Tamazight.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SUK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sukuma</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sukuma.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SUX</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sumerian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sumerian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SUN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Sundanese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Sundanese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SUS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Susu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Susu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SWA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Swahili</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Swahili.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SSW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Swati</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Swati.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SWE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Swedish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Swedish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>GSW</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Swiss German / Alemannic / Alsatian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Swiss German / Alemannic / Alsatian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SYR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Syriac</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Syriac.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TGL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tagalog</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tagalog.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TAH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tahitian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tahitian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tai language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Tai language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TGK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tajik</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tajik.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TMH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tamashek</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tamashek.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TAM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tamil</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tamil.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TAT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tatar</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tatar.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TEL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Telugu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Telugu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TER</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tereno</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tereno.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TET</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tetum</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tetum.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>THA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Thai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Thai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BOD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tibetan</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tibetan.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TIG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tigre</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tigre.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TIR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tigrinya</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tigrinya.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TEM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Timne</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Timne.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TIV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tiv</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tiv.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TLI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tlingit</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tlingit.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TPI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tok Pisin</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tok Pisin.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TKL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tokelau</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tokelau.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TON</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tonga (Tonga Islands)</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tonga (Tonga Islands).</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TSI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tsimshian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tsimshian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TSO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tsonga</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tsonga.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TSN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tswana</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tswana.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TUM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tumbuka</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tumbuka.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TUP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tupi language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Tupi language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TUR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Turkish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Turkish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TUK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Turkmen</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Turkmen.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TVL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tuvalu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tuvalu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TYV</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Tuvinian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Tuvinian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TWI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Twi</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Twi.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UDM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Udmurt</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Udmurt.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UGA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ugaritic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ugaritic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UIG</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Uighur / Uyghur</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Uighur / Uyghur.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UKR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Ukrainian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Ukrainian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UMB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Umbundu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Umbundu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>MIS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Uncoded language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>An uncoded language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>HSB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Upper Sorbian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Upper Sorbian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>URD</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Urdu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Urdu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>UZB</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Uzbek</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Uzbek.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>VAI</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Vai</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Vai.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>VEN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Venda</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Venda.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>VIE</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Vietnamese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Vietnamese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>VOL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Volapuk</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Volapuk.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>VOT</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Votic</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Votic.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WAK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Wakashan language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Wakashan language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WLN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Walloon</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Walloon.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WAR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Waray</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Waray.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WAS</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Washo</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Washo.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CYM</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Welsh</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Welsh.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>FRY</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Western Frisian</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Western Frisian.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WAL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Wolaitta / Wolaytta</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Wolaitta / Wolaytta.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>WOL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Wolof</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Wolof.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>XHO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Xhosa</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Xhosa.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SAH</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Yakut</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Yakut.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>YAO</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Yao</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Yao.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>YAP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Yapese</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Yapese.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>YID</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Yiddish</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Yiddish.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>YOR</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Yoruba</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Yoruba.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>YPK</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Yupik language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Yupik language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZND</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zande language</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>A Zande language.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZAP</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zapotec</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Zapotec.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZZA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zaza / Dimili / Dimli / Kirdki / Kirmanjki / Zazaki</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Zaza / Dimili / Dimli / Kirdki / Kirmanjki / Zazaki.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZEN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zenaga</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Zenaga.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZHA</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zhuang / Chuang</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Zhuang / Chuang.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZUL</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zulu</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Zulu.</SimpleValue>
+            </Value>
+        </Row> 
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>ZUN</SimpleValue>
+            </Value>
+            <Value ColumnRef="label">
+                <SimpleValue>Zuni</SimpleValue>
+            </Value>
+            <Value ColumnRef="description">
+                <SimpleValue>The language of Zuni.</SimpleValue>
+            </Value>
+        </Row> 
+    </SimpleCodeList>
+</gc:CodeList>
+

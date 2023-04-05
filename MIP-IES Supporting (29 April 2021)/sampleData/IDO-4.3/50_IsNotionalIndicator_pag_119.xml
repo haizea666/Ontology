@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:UnitIsNotionalIndicator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">true</unit:UnitIsNotionalIndicator>
+
+<!--
+Original example
+
+<unit_4.2:IsNotionalIndicatorWrapper>
+	<unit_4.2:IsNotionalIndicator>true</unit_4.2:IsNotionalIndicator>
+</unit_4.2:IsNotionalIndicatorWrapper>
+-->

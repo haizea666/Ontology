@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>11</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Update of received information.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Assess how systems handle updates to BSOs they received.</TestCaseObjective>
+  <TestCaseScenario>One System distributes one or more BSO(s). A receiving system then updates some information on one or more of the received BSO(s) and sends this back to the originating system. The "source" part of the three-part identifier of the BSOs should be changed to reflect the fact that another source updated the information, while the "uri" part should remain the same, as it is referring to the same real-world object.</TestCaseScenario>
+  <TestCaseEnvironment>Internet, co-located.Both C2ISs must be able to exchange MIP4 information between them.Exchange Pattern: P/S (simpler), R/R</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nations have established and verified connectivity via a MIP4-IES Exchange Mechanism.Appropriate active subscriptions with at least one Topic must be in place between them (bi-directional). Test group SLT3SF &gt; 3.6 Initialisation already passed.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test will show that a recipient C2IS will always be able to identify the most recent updates on the elements or attributes of a BSO whatever the creator or source of information received is.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0002, REQ_SYS_0019, REQ_SYS_0020</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The two Producer Nations (A,C) insert at least one BSO in their C2IS, belonging in a topic to which the Consumer is subscribed.
+These BSOs must share the same URI (attribute 'uri'), but have different Source (attribute 'source'). One of them might be first created in Nation A, and then exchanged to Nation C, which will update the 'source' to her.
+Notices: These steps have been written for the P/S case, but they can also be modified to be carried out via the R/R exchange pattern. </TestCaseStepAction>
+    <TestCaseStepResult>The insertions are automatically received at the Consumer Nation B.
+The Consumer is always able to identify the most recent information and incorporate it accordingly to the current operational picture shown on its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1,3</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer Nation A updates some attributes of the BSOs created at step 1. </TestCaseStepAction>
+    <TestCaseStepResult>The updates are automatically received at the Consumer Nation.
+The Consumer is always able to incorporate them correctly to the current operational picture shown on its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Producer Nation C updates some attributes of the BSOs created at step 1 (which will have exactly the same 'uri' as from Nation A's, but different 'source'). </TestCaseStepAction>
+    <TestCaseStepResult>The updates are automatically received at the Consumer Nation.
+The Consumer is always able to identify the most recent information and incorporate it accordingly to the current operational picture shown on its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>3</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nations rotate roles (former Consumer becomes Producer and vice versa for one of former Producers) and conduct Steps 1-3 again. </TestCaseStepAction>
+    <TestCaseStepResult>As steps 1, 2 and 3. </TestCaseStepResult>
+    <TestCaseStepDestination>3</TestCaseStepDestination>
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

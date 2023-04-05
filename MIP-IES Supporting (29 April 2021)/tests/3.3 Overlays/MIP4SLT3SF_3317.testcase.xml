@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>33</TestCaseIdGroup>
+    <TestCaseIdNumber>17</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Deletion of Identifiables referenced by other Identifiables</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>Verify correct exchange behavior when deleting Identifiables which are referenced by other Identifiables </TestCaseObjective>
+  <TestCaseScenario>Nation A creates an Identifiable which is referenced by another Identifiable.
+Nation B receives the information. 
+Nation A deletes the Identifiable which is referenced by another Identifiable. 
+Nation B receives this information and Identifiable are deleted from Overlay and the references too.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-locates. Exchange Pattern: R/R, P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a topic, which includes the Overlay. 
+Nation B has subscribed to this topic.
+The Overlay was already exchanged after it was created by Nation A so that it is available on both systems.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the updates are display correctly on both Nations’ C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an Identifiable which is referenced by another Identifiable.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the information and displays the Identifiable correct.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A deletes the Identifiable which is referenced by another Identifiable. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives this information and Identifiable are deleted from Overlay and the references too.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

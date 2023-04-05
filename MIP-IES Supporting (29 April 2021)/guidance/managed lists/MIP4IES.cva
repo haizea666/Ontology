@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cva:ContextValueAssociation name="MIP4IES.cva"
+	xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"   
+	xmlns:aff="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation"
+	xmlns:obj="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object"
+	xmlns:per="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person"
+	xmlns:inf="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource"
+	xmlns:mat="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/ConsumableMateriel">
+	<ValueLists>
+		<ValueList xml:id="OtherAffiliations" uri="BattlespaceConcept_Affiliation_OtherAffiliationCode.gc"/>
+		<ValueList xml:id="Countries" uri="BattlespaceConcept_Generic_CountryCode.gc"/>
+		<ValueList xml:id="EthnicGroups" uri="BattlespaceConcept_Generic_EthnicGroupCode.gc"/>
+		<ValueList xml:id="Religions" uri="BattlespaceConcept_Generic_ReligionCode.gc"/>
+		<ValueList xml:id="Languages" uri="BattlespaceConcept_Object_LanguageCode.gc"/>
+		<ValueList xml:id="OilGrades" uri="BattlespaceConcept_Object_Materiel_ConsumableMateriel_OilGradeCode.gc"/>
+		<ValueList xml:id="OxygenPressures" uri="BattlespaceConcept_Object_Materiel_ConsumableMateriel_OxygenPressureCode.gc"/>
+	</ValueLists>
+	<Contexts>
+		<Context address="//aff:EthnicAffiliationCode" values="EthnicGroups"/>
+		<Context address="//aff:EthnicAffiliationCodeType" values="EthnicGroups"/>
+		<Context address="//aff:GeopoliticalAffiliationCode" values="Countries"/>
+		<Context address="//aff:GeopoliticalAffiliationCodeType" values="Countries"/>
+		<Context address="//aff:OtherAffiliationCode" values="OtherAffiliations"/>
+		<Context address="//aff:OtherAffiliationCodeType" values="OtherAffiliations"/>
+		<Context address="//aff:ReligiousAffiliationCode" values="Religions"/>
+		<Context address="//aff:ReligiousAffiliationCodeType" values="Religions"/>
+		<Context address="//obj:GroupAccountDetailLanguageCode" values="Languages"/>
+		<Context address="//obj:GroupAccountDetailLanguageCodeType" values="Languages"/>
+		<Context address="//per:LanguageSkillLanguageCode" values="Languages"/>
+		<Context address="//per:LanguageSkillLanguageCodeType" values="Languages"/>
+		<Context address="//per:PersonEthnicGroupCode" values="EthnicGroups"/>
+		<Context address="//per:PersonEthnicGroupCodeType" values="EthnicGroups"/>
+		<Context address="//per:PersonNationalityCountryCode" values="Countries"/>
+		<Context address="//per:PersonNationalityCountryCodeType" values="Countries"/>
+		<Context address="//per:PersonReligionCode" values="Religions"/>
+		<Context address="//per:PersonReligionCodeType" values="Religions"/>
+		<Context address="//inf:InformationResourceLanguageCode" values="Languages"/>
+		<Context address="//inf:InformationResourceLanguageCodeType" values="Languages"/>
+		<Context address="//mat:AircraftOxygenReplacementBottlePressureCode" values="OxygenPressures"/>
+		<Context address="//mat:AircraftOxygenReplacementBottlePressureCodeType" values="OxygenPressures"/>
+		<Context address="//mat:OilGradeCode" values="OilGrades"/>
+		<Context address="//mat:OilGradeCodeType" values="OilGrades"/>
+	</Contexts>
+</cva:ContextValueAssociation>

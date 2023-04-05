@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3IS_5220Test TitleAdd Air ControlFeature and AirspaceControlMeans Sub-Types.Execution Priority1ObjectiveBSO validation. Verify the ability to create and add several Air ControlFeature and AirspaceControlMeans in a nation's C2IS.ScenarioNation A creates several Air ControlFeatures and AirspaceControlMeans. 
+Nation B receives the information and interprets it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2MTRSApplicablePre-test ConditionsNation A has created a Topic which includes Airspace Control Measures (ControlFeature message schema area) message elements, for instance Ground Picture > Air Defence. 
+Nation B has subscribed to this Topic.Test InputsN/A.ConclusionThis test is considered a success if the created Air ControlFeature and AirspaceControlMeans are displayed correctly on both Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates a LowLevelTransitRoute. ~~Nation B receives and displays the LowLevelTransitRoute correctly. ~~122. Nation A creates a CoordinatingAltitude. ~~Nation B receives and displays the CoordinatingAltitude correctly. ~~123. Nation A creates a SpecialUseAirspace. ~~ Nation B receives and displays the SpecialUseAirspace correctly. ~~124. Nation A creates a StandardUseArmyAircraftFlightRoute. ~~Nation B receives and displays the StandardUseArmyAircraftFlightRoute correctly. ~~125. Nation A creates an AirControlPoint. ~~Nation B receives and displays the AirControlPoint correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

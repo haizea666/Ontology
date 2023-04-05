@@ -1,0 +1,23 @@
+Test description
+
+Test IDMIP4SLT1_1274Test TitleRestart - Consumer (R/R)Execution Priority1ObjectiveAssess systems behaviour after Consumer restart within the Request/Response exchange pattern.  ScenarioA Consumer sends a Request and restarts before receiving the Response as prescribed utilising the Request/Response exchange pattern.  EnvironmentInternet or Co-located. Exchange Pattern: R/R.Participation2.MTRSN/APre-test ConditionsMIP4SLT1_1222 - Consumer (R/R) initialisation started.Test InputsN/A.ConclusionNominal restart. 
+Assess (record) how systems behave if the Consumer restarts in the middle of the initialisation process. Test OutputsN/A.TraceabilityREQ_EM_0006, REQ_EM_0008, REQ_EM_0010
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Provider (1) is processing initialisation request from Consumer (2) as prescribed utilising the Request/Response exchange pattern. ~~Consumer (2) has not yet received the requested initialisation data. ~~ 122. Consumer restarts before receiving the Provider's response. ~~Assess (record) how both systems, Provider and Consumer behave after Consumer's restart. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

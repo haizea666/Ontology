@@ -1,0 +1,40 @@
+Test description
+
+Test IDMIP4SLT3IS_5256Test TitleCreate BattlePosition.Execution Priority1ObjectiveBSO validation. Verify the ability to create, update and exchange a BattlePosition in a nation's C2IS.ScenarioNation A creates a BattlePosition with specific information. 
+Nation B receives the information and interprets it correctly.
+Nation A updates the BattlePosition.
+Nation B receives the information and interprets it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2MTRSApplicablePre-test ConditionsNation A has created a Topic which includes message elements belonging in the ControlFeature message schema area, for instance Ground Picture > Battlespace Geometry. 
+Nation B has subscribed to this Topic.Test InputsN/A.ConclusionThis test is considered a success if the BattlePosition is displayed correctly on both Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002, REQ_INF_0003.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates the tactical graphic for a BattlePosition with specific information for the following attributes:
+* Name
+* Location
+* HostilityStatus=Friend
+* ValidityPeriod
+* IsActive=No
+* ReportingDataCategory=Planned ~~Nation B receives and displays the BattlePosition correctly. ~~
+122. Nation A updates the BattlePosition with new values for the following attributes:
+* Location
+* HostilityStatus=Hostile
+* ValidityPeriod
+* IsActive=Yes
+* ReportingDataCategory=Reported ~~Nation B receives and displays the updated BattlePosition correctly. ~~
+12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

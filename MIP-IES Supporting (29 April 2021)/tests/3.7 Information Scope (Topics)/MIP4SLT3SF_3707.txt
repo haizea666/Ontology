@@ -1,0 +1,33 @@
+Test description
+
+Test IDMIP4SLT3SF_3707Test TitlePredefined Topics by C2IS.Execution PriorityHP (3 originally)Objective1. The National C2IS system must provide categorisation of data to the MIP gateway. Users enter data into a set of predefined MIP-agreed categories (Topics).
+2. The MIP Solution shall not change the information context between Provider and Consumer.  The MIP Gateway shall handle the exchange of information without human Intervention.ScenarioNation A creates objects in each of the following Topics:
+- Friendly Forces
+- Enemy Situation
+- CBRN
+- Engineer Support
+- Artillery / Fire Support
+Note: These 5 topics have been selected as examples of predefined MIP-agreed, after the MSG-19 suggested initial set. But this is an issue still to be defined by PMG.EnvironmentCo-located. Exchange Pattern: P/SParticipation2MTRSPre-test ConditionsNation A has pre-defined Topics: Friendly Forces, Enemy Situation, CBRN, Engineer Support, Artillery / Fire Support. Nation B is subscribed to all Topics of nation A. Test InputsN/AConclusionThe test is considered a success if both nations have the ability to enter, send and receive the data using the predefined MIP-agreed Topics (provided such a predefinition exists) and the information context (i.e. the Topic to which information is linked) does not change between Producer and Consumer.Test OutputsN/ATraceabilityREQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates Friendly / Neutral Organisations within the Friendly Forces Topic. ~~ Nation B displays the objects on the Friendly Forces Topic. ~~122. Nation A creates Hostile / Unknown Organisations within the Enemy Situation Topic. ~~Nation B displays the objects on the Enemy Situation Topic. ~~123. Nation A creates Control Features within the CBRN Topic. ~~Nation B displays the objects on the CBRN Topic. ~~124. Nation A creates Organisations, Persons and Equipment within the Engineer Support Topic. ~~Nation B displays the objects on the Engineer Support Topic. ~~125. Nation A creates Organisations, Units, Persons, Control Features, Facilities, Equipment, Events and Tasks within the Artillery / Fire Support Topic. ~~Nation B displays the objects on the Artillery / Fire Support Topic. ~~12
+
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

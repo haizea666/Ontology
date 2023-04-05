@@ -1,0 +1,34 @@
+Test description
+
+Test IDMIP4SLT3IS_5481Test TitleUndefined GeometricDefinition for an example FacilityExecution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create and update a Facility with undefined GeometricDefinition and the Consumers/Receivers are able to understand (and display) it correctly.ScenarioThe Producer creates a Facility (Camp) with undefined GeometricDefinition.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this Camp with a GeometricDefinition=Polygon.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this Camp again with an undefined GeometricDefintion. 
+The Consumers receive the information and interpret it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSApplicablePre-test ConditionsThe Producer/Provider has created a topic which includes message elements belonging to the Facility message schema area.
+The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the Facility is processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (A) creates a Camp (Facility) with name XXX_CAMP_5481 and with undefined GeometricDefinition
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_ CAMP_5481 ~~Consumers (B) receive and display the Camp correctly (not on the map). ~~122. The Producer (A) updates the Camp with GeometricDefinition=Polygon. ~~Consumers (B) receive and display the Camp correctly (also on the map). ~~123. The Producer (A) updates the Camp again with an undefined GeometricDefinition. ~~Consumers (B) receive and display the Camp correctly (again not on the map). ~~12
+
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

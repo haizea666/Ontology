@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>63</TestCaseIdGroup>
+    <TestCaseIdNumber>33</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Update an ORBAT by deleting elements</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Test whether the Producer/Provider is able to update a ORBAT by removing units and the Consumers are able to correctly understand (and display) it.</TestCaseObjective>
+  <TestCaseScenario>The Producer updates an ORBAT by removing units. The Consumers receive the data and process them.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a topic. 
+Nation B has subscribed to this topic. ORBAT of MIP4SLT3IS_6332 is loaded.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the updated ORBAT is displayed correctly on both Nations’ C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates an ORBAT by removing Units</TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the data correctly.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

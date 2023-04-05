@@ -1,0 +1,30 @@
+Test description
+
+Test IDMIP4SLT1_1235Test TitleMoving entities into and out of a TopicExecution Priority3 (HP)ObjectiveAsses Producer and Consumer behaviour when the Consumer is receiving subscription updates to desired Topics and entities (BSOs as for MIP4.0) move into and out of them.  Scenario MIP4SLT1_1231 has been executed successfully, the Consumer(s) is (are) receiving subscription updates to desired Topics via the Publish/Subscribe EP.  
+Entities (BSOs as for MIP4.0) are moving into and out of these Topics.  EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 or more.MTRSN/APre-test ConditionsMIP4SLT1_1231: Current situation nominal consumption established and working between Producer/Provider and Consumer(s).
+The Consumer(s) is (are) receiving subscription updates to desired Topics via the Publish/Subscribe EP.  Test InputsN/A.ConclusionAsses Producer and Consumer behaviour as Entities (BSOs as for MIP4.0) are moving into and out of Consumer subscribed Topics.
+The simplest minimum behaviour would be:
+* Entity moves into a Topic: Producer starts to provide update information on that Entity to Consumer as prescribed by the P/S EP (probably as it enters the Topic for the first time)
+* Entity moves out of a Topic: Producer stops providing update information on that Entity to Consumer (and it is not required to do anything else as for MIP4.0)Test OutputsN/A.TraceabilityREQ_EM_0008, REQ_EM_0010, REQ_EM_0012
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Producer (1) is processing subscription request from Consumer (2) and providing update information as prescribed utilising the Publish/Subscribe exchange mechanism. ~~Consumer (2) receives updates of subscription data. ~~ 122. Entity (BSO as for MIP4.0) moves into a Topic to which the Consumer is subscribed. ~~Producer starts to provide update information on that Entity to Consumer as prescribed by the P/S EP. 
+Take notice of exact behaviour regarding to that Entity on both sides, Producer and Consumer. ~~123. Entity (BSO as for MIP4.0) moves out of a Topic to which the Consumer is subscribed. ~~Producer stops providing update information on that Entity to Consumer. 
+Take notice of exact behaviour regarding to that Entity on both sides, Producer and Consumer. ~~124. Repeat steps 2 and 3 several times, with new entities belonging in different Message Schema Areas if possible.
+Also try re-entry of entities that were in and left the topic. ~~Take notice of exact Producer's and Consumer's behaviour in each case. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,2720 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:feature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:meteorologicfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/MeteorologicFeature" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/MeteorologicFeature" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Atmosphere" type="meteorologicfeature:AtmosphereType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The mixture of gases that surround the earth, characterized by humidity, pressure, and temperature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:05e99e56-3bb2-4387-a9ee-5e16e1341fe9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Atmosphere</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AtmosphereHumidity" type="meteorologicfeature:HumidityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The moisture in the Atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5e39dc16-000f-4aad-af12-6199a70945e9</app:SemanticID>
+        <app:ShortName>humidity</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>humidity</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AtmosphereInversionLayerCode" type="meteorologicfeature:AtmosphereInversionLayerCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The height of the inversion layer in the Atmosphere. The stability class describes the degree of mixing of released material in the Atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:01b8d3ad-23b9-4154-8de3-26f6d243cfb3</app:SemanticID>
+        <app:ShortName>inversionLayerCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>inversion layer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AtmosphereInversionLayerCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The height of the inversion layer in the atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:92356b4b-93f8-4450-8071-3591ec1c383c</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower altitude than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="_200Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Top of inversion layer lower than 200 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ec6ea396-83b2-42a4-b316-77b52ce2df7b</app:SemanticID>
+            <app:DisplayName>C - 200 metres</app:DisplayName>
+            <app:PhysicalName>C</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_400Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Top of inversion layer lower than 400 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:adb495b6-b406-4201-919b-9ed92823eb1e</app:SemanticID>
+            <app:DisplayName>B - 400 metres</app:DisplayName>
+            <app:PhysicalName>B</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_800Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Top of inversion layer lower than 800 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b174a6a1-8b92-4c8a-a935-d9153f1da02d</app:SemanticID>
+            <app:DisplayName>A - 800 metres</app:DisplayName>
+            <app:PhysicalName>A</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AtmospherePressureMeasure" type="meteorologicfeature:AtmospherePressureMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ambient air pressure in terms of force per unit area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f7f561a-c78a-4160-b37b-2df09547610e</app:SemanticID>
+        <app:ShortName>pressureMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>pressure</app:DisplayName>
+        <app:UnitOfMeasure>pascal (Pa)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AtmospherePressureMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ambient air pressure in terms of force per unit area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f7f561a-c78a-4160-b37b-2df09547610e</app:SemanticID>
+        <app:ShortName>pressureMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>pressure</app:DisplayName>
+        <app:UnitOfMeasure>pascal (Pa)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="1" />
+      <xsd:totalDigits value="7" />
+      <xsd:maxInclusive value="999999.9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AtmospherePressureSystemCategoryCode" type="meteorologicfeature:AtmospherePressureSystemCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of a pressure system in the Atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9c095fdb-35ec-490e-a703-e27b2ce702ac</app:SemanticID>
+        <app:ShortName>pressureSystemCategoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>pressure system category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AtmospherePressureSystemCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of pressure system used to qualify an Atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e671d545-533b-4bf4-84ac-e5d5158692e6</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ColdFront">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The discontinuity at the forward edge of an advancing cold air mass that is displacing warmer air in its path.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:81e2d3d7-8360-447e-9060-a836896805f9</app:SemanticID>
+            <app:DisplayName>Cold Front</app:DisplayName>
+            <app:PhysicalName>CLDFRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HighPressureCentre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An area of high atmospheric pressure that has a closed circulation that is anticyclonic, i.e., as viewed from above, the circulation is clockwise in the Northern Hemisphere, counterclockwise in the southern Hemisphere, undefined at the Equator.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2ba3b9c3-a3c2-4e35-88a3-380b1e145aa1</app:SemanticID>
+            <app:DisplayName>High pressure centre</app:DisplayName>
+            <app:PhysicalName>HGHPRS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LowPressureCentre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">1. An area of low atmospheric pressure that has a closed circulation that is cyclonic, i.e., as viewed from above, the circulation is counterclockwise in the Northern Hemisphere, clockwise in the Southern Hemisphere, undefined at the Equator. Because cyclonic circulation and relatively low atmospheric pressure usually coexist, in common practice the terms cyclone and low are used interchangeably. Also, because cyclones often are accompanied by inclement (sometimes destructive) weather, they are frequently referred to simply as storms. 2. Frequently misused to denote a tornado. 3. In the Indian Ocean, a tropical cyclone of hurricane or typhoon force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dfab655d-a6a7-41a3-a1fc-bcac4ca32f5b</app:SemanticID>
+            <app:DisplayName>Low pressure centre</app:DisplayName>
+            <app:PhysicalName>LOWPRS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OccludedFront">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The line along which a cold front has overtaken a warm front at ground level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:508fcf58-b310-4a56-b01c-dbcd99328484</app:SemanticID>
+            <app:DisplayName>Occluded front</app:DisplayName>
+            <app:PhysicalName>OCCFRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RidgeLine">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An elongated region of high atmospheric pressure.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ae0f0f0a-9a7c-4615-bbcf-636ccdbd6d4d</app:SemanticID>
+            <app:DisplayName>Ridge line</app:DisplayName>
+            <app:PhysicalName>RDGLIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SquallLine">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A line of high winds and thunderstorms in convectively unstable air, an instability line (of non-frontal nature); it may be generated by a cold front.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:37df63d4-7315-48a5-9224-1ddad4248cf3</app:SemanticID>
+            <app:DisplayName>Squall line</app:DisplayName>
+            <app:PhysicalName>SQLLIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StationaryFront">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A situation in which the surface position of a front does not move; the flow on either side of such a boundary is nearly parallel to the position of the front.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ab75d1a3-3731-40d2-b850-db8333570019</app:SemanticID>
+            <app:DisplayName>Stationary front</app:DisplayName>
+            <app:PhysicalName>STAFRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TroughLine">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An elongated region of low atmospheric pressure.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:27f8b027-a307-444f-b03f-7fee0c691b24</app:SemanticID>
+            <app:DisplayName>Trough line</app:DisplayName>
+            <app:PhysicalName>TRGLIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UpperColdFront">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Occurs when discontinuity at the forward edge of an advancing cold air mass is displacing warmer air in its path and the two air masses intersect above ground level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:98dc87a6-a812-4f93-a5d0-18d9783e1646</app:SemanticID>
+            <app:DisplayName>Upper cold front</app:DisplayName>
+            <app:PhysicalName>UPCFRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UpperWarmFront">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Occurs when discontinuity at the forward edge of an advancing warm air mass is displacing cooler air in its path and the two air masses intersect above ground level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9e898f9a-6a48-42c4-b95a-056887ffc9d1</app:SemanticID>
+            <app:DisplayName>Upper warm front</app:DisplayName>
+            <app:PhysicalName>UPWFRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WarmFront">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The discontinuity at the forward edge of an advancing warm air mass that is displacing cooler air in its path.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:331b5850-1489-44fe-a2f0-924c39db876d</app:SemanticID>
+            <app:DisplayName>Warm front</app:DisplayName>
+            <app:PhysicalName>WRMFRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AtmosphereTemperature" type="meteorologicfeature:AtmosphereTemperatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The heat of the ambient air in the Atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aed1ce03-c3f3-4deb-b4e8-0bc413e51a71</app:SemanticID>
+        <app:ShortName>temperature</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>temperature</app:MIMStereotype>
+        <app:DisplayName>temperature</app:DisplayName>
+        <app:UnitOfMeasure>degree Celsius (°C)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AtmosphereTemperatureGradientCode" type="meteorologicfeature:AtmosphereTemperatureGradientCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The heat change with respect to the ground and 100 m in elevation in a certain area. Acts as an indication of vertical air movement between the ground and higher elevations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d5579a85-359c-4254-be9d-3ef25bb2f679</app:SemanticID>
+        <app:ShortName>temperatureGradientCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>temperature gradient</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AtmosphereTemperatureGradientCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The heat change with respect to the ground and 100 m in elevation in a certain area. Acts as an indication of vertical air movement between the ground and higher elevations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3e469e9e-ea1c-45b0-9a04-843bf36f3c4b</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Neutral">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A one degree Kelvin, or less, temperature gradient between the ground and 100 metres above ground level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:68383ba3-be8e-4602-bc5b-f83e29d9ee2f</app:SemanticID>
+            <app:DisplayName>Neutral</app:DisplayName>
+            <app:PhysicalName>NEUTRL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Stable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">More than one degree Kelvin positive temperature gradient between the ground and 100 metres above ground level. (colder lower layers)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4802860e-4bd1-45ff-a363-0ca368d137dc</app:SemanticID>
+            <app:DisplayName>Stable</app:DisplayName>
+            <app:PhysicalName>STABLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Unstable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">More than one degree Kelvin negative temperature gradient between the ground and 100 metres above ground level. (hotter lower layers)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7428fd91-38f8-4ed0-a4e0-123a9f31c969</app:SemanticID>
+            <app:DisplayName>Unstable</app:DisplayName>
+            <app:PhysicalName>UNSTAB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AtmosphereTemperatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The heat of the ambient air in the Atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aed1ce03-c3f3-4deb-b4e8-0bc413e51a71</app:SemanticID>
+        <app:ShortName>temperature</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>temperature</app:MIMStereotype>
+        <app:DisplayName>temperature</app:DisplayName>
+        <app:UnitOfMeasure>degree Celsius (°C)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="-273.1" />
+      <xsd:fractionDigits value="1" />
+      <xsd:totalDigits value="5" />
+      <xsd:maxInclusive value="9999.9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AtmosphereType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The mixture of gases that surround the earth, characterized by humidity, pressure, and temperature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:05e99e56-3bb2-4387-a9ee-5e16e1341fe9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Atmosphere</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:AtmosphereHumidity" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:AtmosphereInversionLayerCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:AtmospherePressureMeasure" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:AtmospherePressureSystemCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:AtmosphereTemperature" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:AtmosphereTemperatureGradientCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AverageCoverageInOktaCode" type="meteorologicfeature:AverageCoverageInOktaCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b9bf245e-aafc-4e72-9ccd-6173172c6bc6</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AverageCoverageInOktaCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density of a CloudCover as fractional coverage.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:001aaed9-b842-4c5b-8e46-387eecbc7af9</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is less coverage than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="_0Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Clear sky.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:90fa2d9a-d06d-49f0-9870-008e039bf3ed</app:SemanticID>
+            <app:DisplayName>0/8</app:DisplayName>
+            <app:PhysicalName>0</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_1Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Sky partially obscured 12 ½ percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cdcff91b-62ef-422f-94dd-9168f22a3f71</app:SemanticID>
+            <app:DisplayName>1/8</app:DisplayName>
+            <app:PhysicalName>1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_2Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Sky partially obscured 25 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d4e7dc4c-476b-4568-bd85-f0f14f0a24aa</app:SemanticID>
+            <app:DisplayName>2/8</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_3Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Scattered sky or sky partially obscured 37 ½ percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a2fc089b-b5c1-458f-93b3-16714dbae5f4</app:SemanticID>
+            <app:DisplayName>3/8</app:DisplayName>
+            <app:PhysicalName>3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_4Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Scattered sky or sky partially obscured 50 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fd74a1ed-76be-4202-a12e-3885fb898a07</app:SemanticID>
+            <app:DisplayName>4/8</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_5Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Broken sky or sky partially obscured 62 ½ percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6057d976-2a8a-4bad-96e7-50363bd823d4</app:SemanticID>
+            <app:DisplayName>5/8</app:DisplayName>
+            <app:PhysicalName>5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_6Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Broken sky or sky partially obscured 75 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ffec7576-86cb-4b35-8c6f-0faeea54a58c</app:SemanticID>
+            <app:DisplayName>6/8</app:DisplayName>
+            <app:PhysicalName>6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_7Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Sky partially obscured or overcast with breaks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:98172a55-61ea-4a40-a9c6-062017b1fef3</app:SemanticID>
+            <app:DisplayName>7/8</app:DisplayName>
+            <app:PhysicalName>7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_7To8Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A condition in which an overcast layer has discernible break(s) totalling less than 1 octal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:11c75c0b-7afd-4ca3-9f0a-c79103f5f699</app:SemanticID>
+            <app:DisplayName>7-8/8</app:DisplayName>
+            <app:PhysicalName>78</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_8Okta">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Complete overcast.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:18f4f1ed-b7ff-4b3d-b359-11a268995b5d</app:SemanticID>
+            <app:DisplayName>8/8</app:DisplayName>
+            <app:PhysicalName>8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AverageCoverageInOktaType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density of a CloudCover as fractional coverage.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:36eafe8a-c340-4398-a5f6-a8a86ee703e8</app:SemanticID>
+        <app:DisplayName>Average coverage in Okta</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:AverageCoverageType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:AverageCoverageInOktaCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AverageCoverageRangeCode" type="meteorologicfeature:AverageCoverageRangeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2a2b5167-3040-4355-a035-62b435a03070</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AverageCoverageRangeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density of a CloudCover expressed in ranges.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7cda39d0-a59a-4639-87fe-fcec69a3c5e3</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is less covered than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ClearSky">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Cloud coverage is less than 1 Okta (or less than 0.1 sky cover).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:478e1b2c-03b5-48ae-8b15-c066f6a4ffd5</app:SemanticID>
+            <app:DisplayName>Clear sky</app:DisplayName>
+            <app:PhysicalName>CLRSKY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ScatteredCoverage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Cloud coverage is 1 to 4 Okta (0.1 through 0.5 sky cover).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:613c4345-729c-4c30-9dee-99035335a0ce</app:SemanticID>
+            <app:DisplayName>Scattered coverage</app:DisplayName>
+            <app:PhysicalName>SCTTRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BrokenCoverage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Cloud coverage is 5 to 7 Oktas (0.6 through 0.9 sky cover).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:325a7c77-cfe2-4684-9eb7-7c331252b3be</app:SemanticID>
+            <app:DisplayName>Broken coverage</app:DisplayName>
+            <app:PhysicalName>BROKEN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OvercastCoverage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Cloud coverage is 8 Oktas (more than 0.9 sky coverage).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:91cd3f28-44c9-4ff3-a3d0-61c34c22c3d3</app:SemanticID>
+            <app:DisplayName>Overcast coverage</app:DisplayName>
+            <app:PhysicalName>OVRCST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AverageCoverageRangeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density of a CloudCover expressed in ranges.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:03cc52c5-7383-4d78-812b-de949c8554a4</app:SemanticID>
+        <app:DisplayName>Average coverage range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:AverageCoverageType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:AverageCoverageRangeCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AverageCoverageType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average density of a CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:75454358-ca72-456b-b9ea-65fbe7919aed</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Average coverage</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CloudCover" type="meteorologicfeature:CloudCoverType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characteristics of the presence or absence of clouds above Earth's surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:72b0c346-c218-426e-ba05-07e2edc9230a</app:SemanticID>
+        <app:Remarks>CloudCover is characterized by both the lowest elevation and the highest elevation. These attributes are important in air operations, particularly in airborne and reconnaissance activities, as well as for targeting.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cloud cover</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CloudCoverAverageCoverage" type="meteorologicfeature:AverageCoverageType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The average coverage of the CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bed9ba31-e130-4052-84bd-b24d8777096d</app:SemanticID>
+        <app:ShortName>averageCoverage</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>average coverage</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CloudCoverBaseElevationDimension" type="meteorologicfeature:CloudCoverBaseElevationDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The elevation of the lowest cloud base of the CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bc219e1f-b0eb-4426-948b-a31582bc6c1d</app:SemanticID>
+        <app:ShortName>baseElevationDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>base elevation</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CloudCoverBaseElevationDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The elevation of the lowest cloud base of the CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bc219e1f-b0eb-4426-948b-a31582bc6c1d</app:SemanticID>
+        <app:ShortName>baseElevationDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>base elevation</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CloudCoverCategoryCode" type="meteorologicfeature:CloudCoverCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The prevailing class of CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a73b6f8c-e831-4c22-9e4b-b84cf69629a7</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CloudCoverCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The prevailing class of CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d16e4d92-2697-4823-a669-12c8ada648a3</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Clouds">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A weather condition in which the sky or part of the sky is covered or partly covered by clouds.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cbd2d1fa-705b-4516-9e1f-0b7d35834300</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:72b0c346-c218-426e-ba05-07e2edc9230a">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Clouds</app:DisplayName>
+            <app:PhysicalName>C</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioactiveCloud">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A cloud that contains the hot gases, smoke, dust and other particulate matter from the nuclear bomb itself or other sources that are carried aloft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8d8fdb04-7a10-4dcc-87d3-710429bb757e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:72b0c346-c218-426e-ba05-07e2edc9230a">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Radioactive cloud</app:DisplayName>
+            <app:PhysicalName>RDACCL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Smoke">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A weather condition in which the sky or part of the sky is covered by smoke.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:177f0c82-f9b5-4889-a815-3f7e4bbf173a</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:72b0c346-c218-426e-ba05-07e2edc9230a">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Smoke</app:DisplayName>
+            <app:PhysicalName>SMOKE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CloudCoverLightRefractionRatio" type="meteorologicfeature:CloudCoverLightRefractionRatioType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The velocity of light in the CloudCover as a fraction of the velocity of light in a vacuum, based on cloud height. This represents the inverse of the index of refraction.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:912595d7-2fe3-473f-87fa-906dba9a876c</app:SemanticID>
+        <app:ShortName>lightRefractionRatio</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>ratio</app:MIMStereotype>
+        <app:DisplayName>light refraction ratio</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CloudCoverLightRefractionRatioType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The velocity of light in the CloudCover as a fraction of the velocity of light in a vacuum, based on cloud height. This represents the inverse of the index of refraction.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:912595d7-2fe3-473f-87fa-906dba9a876c</app:SemanticID>
+        <app:ShortName>lightRefractionRatio</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>ratio</app:MIMStereotype>
+        <app:DisplayName>light refraction ratio</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:maxInclusive value="1" />
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="6" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CloudCoverTopElevationDimension" type="meteorologicfeature:CloudCoverTopElevationDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The elevation of the highest cloud ceiling of the CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:36fce4ab-ae22-49aa-83b6-316242ce790e</app:SemanticID>
+        <app:ShortName>topElevationDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>top elevation</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CloudCoverTopElevationDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The elevation of the highest cloud ceiling of the CloudCover.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:36fce4ab-ae22-49aa-83b6-316242ce790e</app:SemanticID>
+        <app:ShortName>topElevationDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>top elevation</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CloudCoverType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characteristics of the presence or absence of clouds above Earth's surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:72b0c346-c218-426e-ba05-07e2edc9230a</app:SemanticID>
+        <app:Remarks>CloudCover is characterized by both the lowest elevation and the highest elevation. These attributes are important in air operations, particularly in airborne and reconnaissance activities, as well as for targeting.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cloud cover</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:CloudCoverAverageCoverage" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:CloudCoverBaseElevationDimension" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:CloudCoverCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:CloudCoverLightRefractionRatio" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:CloudCoverTopElevationDimension" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="HumidityPercentagePercent" type="meteorologicfeature:HumidityPercentagePercentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The proportion of water present in the air to the maximum amount of water (saturation point) possible at a given temperature and pressure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b7403ccb-1495-422a-b10e-df6e742e6167</app:SemanticID>
+        <app:ShortName>percent</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>percent</app:MIMStereotype>
+        <app:DisplayName>percent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HumidityPercentagePercentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The proportion of water present in the air to the maximum amount of water (saturation point) possible at a given temperature and pressure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b7403ccb-1495-422a-b10e-df6e742e6167</app:SemanticID>
+        <app:ShortName>percent</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>percent</app:MIMStereotype>
+        <app:DisplayName>percent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxInclusive value="100" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="HumidityPercentageType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Humidity expressed as a percentage value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ca48ce19-c52e-4317-8998-942f377acae8</app:SemanticID>
+        <app:DisplayName>Humidity percentage</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:HumidityType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:HumidityPercentagePercent" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="HumidityRangeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The proportion of water present in the air to the maximum amount of water (saturation point) possible at a given temperature and pressure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8e8d2b82-54dd-4462-83f5-4557dcadbe04</app:SemanticID>
+        <app:Remarks>The code values are expressed as a range of percentages, as specified by ATP-45.</app:Remarks>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower humidity than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="_0To9Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 0 and 9 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0c0e30cd-bee3-4f59-a272-5145ba023095</app:SemanticID>
+            <app:DisplayName>0 to 9 percent</app:DisplayName>
+            <app:PhysicalName>0</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_10To19Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 10 and 19 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f28ce3a9-ac47-4ecc-ad16-31057224a7c2</app:SemanticID>
+            <app:DisplayName>10 to 19 percent</app:DisplayName>
+            <app:PhysicalName>1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_20To29Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 20 and 29 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:55041cb6-004a-4b0b-9bcb-957915c3aa14</app:SemanticID>
+            <app:DisplayName>20 to 29 percent</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_30To39Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 30 and 39 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:46930437-3bb7-45a2-af6b-cfa8c09755fe</app:SemanticID>
+            <app:DisplayName>30 to 39 percent</app:DisplayName>
+            <app:PhysicalName>3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_40To49Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 40 and 49 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0951c596-034b-4efa-9d71-375ed5bc912a</app:SemanticID>
+            <app:DisplayName>40 to 49 percent</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_50To59Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 50 and 59 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0db34b40-0e86-4cd0-80ee-bf783742d5c7</app:SemanticID>
+            <app:DisplayName>50 to 59 percent</app:DisplayName>
+            <app:PhysicalName>5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_60To69Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 60 and 69 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ae69d5fd-70cc-4c1b-8394-faeb72522d02</app:SemanticID>
+            <app:DisplayName>60 to 69 percent</app:DisplayName>
+            <app:PhysicalName>6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_70To79Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 70 and 79 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b625a421-34da-45b8-8c5b-b4328d24507e</app:SemanticID>
+            <app:DisplayName>70 to 79 percent</app:DisplayName>
+            <app:PhysicalName>7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_80To89Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 80 and 89 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b1039265-2462-4462-8691-e9285321b0fa</app:SemanticID>
+            <app:DisplayName>80 to 89 percent</app:DisplayName>
+            <app:PhysicalName>8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_90To99Percent">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The relative humidity is between 90 and 100 percent.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b9e069e7-d967-4714-9c01-79224f5e4461</app:SemanticID>
+            <app:DisplayName>90 to 100 percent</app:DisplayName>
+            <app:PhysicalName>9</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="HumidityRangeRangeCode" type="meteorologicfeature:HumidityRangeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The proportion of water present in the air to the maximum amount of water (saturation point) possible at a given temperature and pressure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c891e945-9f85-4cd2-8ca2-e491ad391cc5</app:SemanticID>
+        <app:ShortName>rangeCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="HumidityRangeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Humidity expressed as a range of percentages.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:49961738-683e-4fda-8206-0b6467510c04</app:SemanticID>
+        <app:DisplayName>Humidity range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:HumidityType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:HumidityRangeRangeCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="HumidityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The amount of water vapour in the atmosphere or in a gas.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f72d259c-1ca6-4e90-9344-96c9f529254d</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Humidity</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Icing" type="meteorologicfeature:IcingType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The accumulation of frozen water on stationary or moving surfaces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f2e42f76-358f-45ca-b1df-a0b6727a5974</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Icing</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="IcingCategoryCode" type="meteorologicfeature:IcingCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Icing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:933fd65c-a877-4758-a1c8-7a8c83ae017c</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IcingCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Icing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e5943243-1b88-4e28-bcab-1cfe27930872</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ClearIcing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Glossy, clear, or translucent ice formed by the relatively slow freezing of large supercooled droplets. The droplets spread out over the airframe surface before completely freezing.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ac17a9a9-9d47-428c-88db-cb4d634b31df</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:f2e42f76-358f-45ca-b1df-a0b6727a5974">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Clear icing</app:DisplayName>
+            <app:PhysicalName>CLRICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MixedIcing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A hard rough conglomerate of ice that can cause very rough accumulation and severe loss of lift.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:edb402b3-09a4-4a12-915d-e33e83bdc988</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:f2e42f76-358f-45ca-b1df-a0b6727a5974">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Mixed icing</app:DisplayName>
+            <app:PhysicalName>MIXICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RimeIcing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rough, milky opaque ice formed by the instantaneous freezing of small supercooled droplets which trap air within the ice as they strike the aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:767874b9-2518-4ad3-b711-839bbdd70d38</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:f2e42f76-358f-45ca-b1df-a0b6727a5974">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Rime icing</app:DisplayName>
+            <app:PhysicalName>RIMICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="IcingSeverityQualifierCode" type="meteorologicfeature:IcingSeverityQualifierCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The severity of the Icing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:655ea9a9-5c16-48a2-b9e5-db4eab1c9f3b</app:SemanticID>
+        <app:ShortName>severityQualifierCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>severity qualifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IcingSeverityQualifierCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The severity of an Icing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:59fc3310-400a-4bb6-9345-7469a0c59d6b</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower severity than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9c95c3b3-1944-42c3-a557-5420b8f6afb9</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Moderate">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:71cdefad-682f-4b46-b10e-b12320dda801</app:SemanticID>
+            <app:DisplayName>Moderate</app:DisplayName>
+            <app:PhysicalName>MODER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Severe">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1c0bb379-c0da-4b18-9af4-fe152da953ff</app:SemanticID>
+            <app:DisplayName>Severe</app:DisplayName>
+            <app:PhysicalName>SEVERE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="IcingType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The accumulation of frozen water on stationary or moving surfaces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f2e42f76-358f-45ca-b1df-a0b6727a5974</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Icing</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:IcingCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:IcingSeverityQualifierCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Light" type="meteorologicfeature:LightType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characteristics of natural illumination by type and time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Light</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LightCategoryCode" type="meteorologicfeature:LightCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Light.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3c3f1a24-7fd3-4bc0-859b-d07532e464f9</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LightCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Light.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3c334260-a371-405c-a255-3c1483ec7f02</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CivilTwilight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The periods of incomplete darkness following sunset and preceding sunrise. The darker limit occurs when the centre of the sun is 6 degrees below the celestial horizon.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d78a5b66-d717-4031-a817-671161e2cddd</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Civil twilight</app:DisplayName>
+            <app:PhysicalName>CIVIL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Darkness">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The absence of light.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a9a20f28-7cc3-4996-b8c3-83406353b5f8</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Darkness</app:DisplayName>
+            <app:PhysicalName>DARK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Daylight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Ambient atmospheric light resulting from the sun.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1f3caf56-7452-4504-9e9a-ea62a793be55</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Daylight</app:DisplayName>
+            <app:PhysicalName>DAY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Moonlight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Ambient atmospheric light resulting from the moon.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a19bd6b8-a781-4497-a6ae-107ec03a071a</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Moonlight</app:DisplayName>
+            <app:PhysicalName>MOON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NauticalTwilight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The periods of incomplete darkness following sunset and preceding sunrise. The darker limit occurs when the centre of the sun is 12 degrees below the celestial horizon.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:51159528-2cac-4f44-bd55-7a66b3458e18</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Nautical twilight</app:DisplayName>
+            <app:PhysicalName>NAUTIC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LightDownTime" type="meteorologicfeature:LightDownTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time during a day at which the period of effectiveness ends.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:17ed6d0c-b107-43ff-8a97-591bfd4959f6</app:SemanticID>
+        <app:ShortName>downTime</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>time</app:MIMStereotype>
+        <app:DisplayName>down time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LightDownTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time during a day at which the period of effectiveness ends.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:17ed6d0c-b107-43ff-8a97-591bfd4959f6</app:SemanticID>
+        <app:ShortName>downTime</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>time</app:MIMStereotype>
+        <app:DisplayName>down time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="LightMoonPhaseCode" type="meteorologicfeature:LightMoonPhaseCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The phase of the moon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5216aa9-51d8-478c-9e94-606d3ff2ef4c</app:SemanticID>
+        <app:ShortName>moonPhaseCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>moon phase</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LightMoonPhaseCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The phase of the moon for a Light.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0a6fc75-6988-4e5b-a629-ad2ff0e46375</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="FullMoon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The moon with its entire disc illuminated.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:20ed45dc-3456-4f0f-bf87-ac86526f2a8f</app:SemanticID>
+            <app:DisplayName>Full moon</app:DisplayName>
+            <app:PhysicalName>FUL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NewMoon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The moon when first seen as a slender crescent shortly after its conjunction with the sun.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1daead0b-6234-42d5-a279-e30210d8f947</app:SemanticID>
+            <app:DisplayName>New moon</app:DisplayName>
+            <app:PhysicalName>NEW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WaningMoon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The moon is decreasing in phase.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9ba6b257-10fb-472f-a61f-8bf2f312342e</app:SemanticID>
+            <app:DisplayName>Waning moon</app:DisplayName>
+            <app:PhysicalName>WAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WaxingMoon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The moon is increasing in phase.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f85379b7-46ce-450b-acd6-464b18a00cfe</app:SemanticID>
+            <app:DisplayName>Waxing moon</app:DisplayName>
+            <app:PhysicalName>WAX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LightType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characteristics of natural illumination by type and time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d45aea9f-fd2b-4345-8c23-4c72dff74a73</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Light</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:LightCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:LightDownTime" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:LightMoonPhaseCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:LightUpTime" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LightUpTime" type="meteorologicfeature:LightUpTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time during a day at which the period of effectiveness begins.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:532b3aeb-0bfe-4685-8f82-a8f43a326beb</app:SemanticID>
+        <app:ShortName>upTime</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>time</app:MIMStereotype>
+        <app:DisplayName>up time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LightUpTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time during a day at which the period of effectiveness begins.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:532b3aeb-0bfe-4685-8f82-a8f43a326beb</app:SemanticID>
+        <app:ShortName>upTime</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>time</app:MIMStereotype>
+        <app:DisplayName>up time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="MeteorologicFeature" type="meteorologicfeature:MeteorologicFeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reported or forecast weather or light conditions.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ce5c1293-c2e9-442e-972f-db5fb433ec34</app:SemanticID>
+        <app:Remarks>Several types of meteorological (MET) information are used in tactical operations and provided for various periods of use (e.g., 12 hours, 24 hours).
+A MeteorologicFeature describes a meteorological condition at a specific location. This location (e.g., a specific area or point) is identified using ObjectLocationAssociation. A MeteorologicFeature may depend on altitude; in such a case, it is associated with a Point or Surface representing the correct altitude or a GeometricVolume specifying a range of altitudes.
+A MeteorologicFeature also describes a meteorological condition at a specific time, either a past time for observations or a future time for weather predictions. The effective starting datetime is specified by Metadata (attribute validityTimePeriod). A prediction can be made for an entire period of time by also specifying the ending datetime of the prediction in the same metadata. To support the creation of predictions, MeteorologicFeature allows to specify the probability of the condition occurring at the specified location within the specified timeframe.
+Each MeteorologicFeature describes only a single meteorological condition. However, it is possible to construct a composite weather image by grouping multiple MeteorologicFeatures that all share the same metadata.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Meteorologic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MeteorologicFeatureInterpretationCode" type="meteorologicfeature:MeteorologicFeatureInterpretationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The statistical meaning of the MeteorologicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a45a5e98-44df-47e2-9e91-84b5b78f404b</app:SemanticID>
+        <app:ShortName>interpretationCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>interpretation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MeteorologicFeatureInterpretationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The statistical meaning of a MeteorologicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5814ec5b-07f1-4f53-ba3a-a70c8a496b61</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AbsoluteMaximum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The highest actual value.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fdfa949b-ce6c-4107-8d93-430c55234f98</app:SemanticID>
+            <app:DisplayName>Absolute maximum</app:DisplayName>
+            <app:PhysicalName>ABMAX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AbsoluteMinimum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The lowest actual value.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:178293e7-75af-47ab-aaa2-66203af1aa8d</app:SemanticID>
+            <app:DisplayName>Absolute minimum</app:DisplayName>
+            <app:PhysicalName>ABMIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AverageMaximum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The average of maximum readings over a period of time.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d3267e26-ef5a-441c-a5a8-206a8478af51</app:SemanticID>
+            <app:DisplayName>Average maximum</app:DisplayName>
+            <app:PhysicalName>AVMAX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AverageMinimum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The average of minimum readings over a period of time.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c913827c-414d-47ac-921d-9b4aaa480690</app:SemanticID>
+            <app:DisplayName>Average minimum</app:DisplayName>
+            <app:PhysicalName>AVMIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Nominal">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The actual or expected value.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0d0be047-c7f3-48f1-a165-442f03a7e134</app:SemanticID>
+            <app:DisplayName>Nominal</app:DisplayName>
+            <app:PhysicalName>NOMIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MeteorologicFeatureProbabilityPercent" type="meteorologicfeature:MeteorologicFeatureProbabilityPercentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The likelihood that the MeteorologicFeature will occur.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e0a5169c-1ef9-466d-910e-01550bc62a70</app:SemanticID>
+        <app:ShortName>probabilityPercent</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>percent</app:MIMStereotype>
+        <app:DisplayName>probability</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MeteorologicFeatureProbabilityPercentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The likelihood that the MeteorologicFeature will occur.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e0a5169c-1ef9-466d-910e-01550bc62a70</app:SemanticID>
+        <app:ShortName>probabilityPercent</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>percent</app:MIMStereotype>
+        <app:DisplayName>probability</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxInclusive value="100" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MeteorologicFeatureSourceCode" type="meteorologicfeature:MeteorologicFeatureSourceCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The basis for the estimate of the MeteorologicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:eacd9b14-f220-49a0-8f21-e7532ddebb8c</app:SemanticID>
+        <app:ShortName>sourceCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>source</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MeteorologicFeatureSourceCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The basis for the estimate of a condition for a MeteorologicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:51c41576-9458-47f0-9d58-dd49b09d545d</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Forecast">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A statement of anticipated (meteorological) conditions for a specified place (or area, route, etc.) and period of time.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ed08440-6f90-4fa5-aae0-d85852c7b621</app:SemanticID>
+            <app:DisplayName>Forecast</app:DisplayName>
+            <app:PhysicalName>FOR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Observed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported based on observation, in meteorological context, a record of measurement or assessment of one or more meteorological elements - e.g. temperature pressure, cloud type and amount - at a particular time and place.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:17369e3d-f3bd-4348-bec7-4741d4f52111</app:SemanticID>
+            <app:DisplayName>Observed</app:DisplayName>
+            <app:PhysicalName>OBSRVD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MeteorologicFeatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reported or forecast weather or light conditions.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ce5c1293-c2e9-442e-972f-db5fb433ec34</app:SemanticID>
+        <app:Remarks>Several types of meteorological (MET) information are used in tactical operations and provided for various periods of use (e.g., 12 hours, 24 hours).
+A MeteorologicFeature describes a meteorological condition at a specific location. This location (e.g., a specific area or point) is identified using ObjectLocationAssociation. A MeteorologicFeature may depend on altitude; in such a case, it is associated with a Point or Surface representing the correct altitude or a GeometricVolume specifying a range of altitudes.
+A MeteorologicFeature also describes a meteorological condition at a specific time, either a past time for observations or a future time for weather predictions. The effective starting datetime is specified by Metadata (attribute validityTimePeriod). A prediction can be made for an entire period of time by also specifying the ending datetime of the prediction in the same metadata. To support the creation of predictions, MeteorologicFeature allows to specify the probability of the condition occurring at the specified location within the specified timeframe.
+Each MeteorologicFeature describes only a single meteorological condition. However, it is possible to construct a composite weather image by grouping multiple MeteorologicFeatures that all share the same metadata.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Meteorologic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="feature:FeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:MeteorologicFeatureInterpretationCode" />
+          <xsd:element ref="meteorologicfeature:MeteorologicFeatureProbabilityPercent" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:MeteorologicFeatureSourceCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OtherMeteorologicFeature" type="meteorologicfeature:OtherMeteorologicFeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MeteorologicFeature for which no further information is given other than its category.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b644db3c-7ee5-4cda-af31-54e79976f949</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Other meteorologic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OtherMeteorologicFeatureCategoryCode" type="meteorologicfeature:OtherMeteorologicFeatureCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of OtherMeteorologicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:97f2d79a-e0e8-4491-962a-fc860567043c</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OtherMeteorologicFeatureCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of OtherMeteorologicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:448dcf98-1a1f-4fd3-86cb-1b03a5aa91b1</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Cyclone">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The atmospheric pressure distribution in which there is a low central pressure relative to the surroundings. Cyclonic circulation is anticlockwise round the centre in the northern hemisphere and clockwise in the southern hemisphere; in either case the sense of rotation about the vertical is the same as that of the earth's rotation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2e9f7c1a-34c7-4808-98a0-1348ee56e42e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Cyclone</app:DisplayName>
+            <app:PhysicalName>CYCL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FunnelCloud">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A violent, rotating column of air that does not touch the ground, usually appended to a cumulonimbus cloud. Also called a tuba.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7a24fef6-d9bf-4444-9aaf-e385e19b869f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Funnel cloud</app:DisplayName>
+            <app:PhysicalName>FNLCLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hurricane">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tropical cyclone, especially in the West Indies, in which wind velocity equals or exceeds 64 knots (118.5 km/hr).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:37ab945a-cccb-49e7-8086-dbe894f36a3c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Hurricane</app:DisplayName>
+            <app:PhysicalName>HURR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JetStream">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A narrow belt of strong winds, with speeds of 50 to 200 knots (92.6 to 370.4 km/hr), in the upper troposphere.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:863e5b22-a928-4526-8f8e-83743a14dc41</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:8f6c6cdc-d604-4bcc-b4c8-0d627745cacc">Arrow</app:Geometry>
+            <app:DisplayName>Jet stream</app:DisplayName>
+            <app:PhysicalName>JTSTRM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Lightning">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A luminous manifestation accompanying a sudden electrical discharge, which takes place from or inside a cloud or, less often, from high structures on the ground, or from mountains.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e9668098-20e9-4e6a-8c9d-75380bb62e19</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Lightning</app:DisplayName>
+            <app:PhysicalName>LGTNNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Storm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An atmospheric disturbance manifested in strong winds with precipitation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d41a24ed-0cfc-4aab-a060-917160e887bc</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Storm</app:DisplayName>
+            <app:PhysicalName>STORM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Thunderstorm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A local storm produced by a cumulonimbus cloud accompanied by strong gusty winds, vertical currents at higher levels, and heavy precipitation with lightning and/or thunder. It is usually a few miles in both horizontal and vertical dimensions, extending from the ground up to 6,000, 12,000 or even 18,000 metres in the most vigorous examples.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:318d6606-5fe0-4a03-b51f-d1a9e77c3ec4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Thunderstorm</app:DisplayName>
+            <app:PhysicalName>THST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ThunderstormsAndRain">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A local storm produced by a cumulonimbus cloud accompanied by lightning and/or thunder and precipitation, either in the form of drops larger than 0.5 mm, or smaller drops, which in contrast to drizzle, are widely separated.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b7055a8f-275a-4a88-bb22-a68f8ef83351</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Thunderstorms and rain</app:DisplayName>
+            <app:PhysicalName>THSTRN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tornado">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A violent, rotating column of air touching the ground; funnel cloud touching the ground. A tornado nearly always starts as a funnel cloud and is accompanied by a loud, roaring noise.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:04921a3f-64b6-4a28-a912-7545a4707c6a</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Tornado</app:DisplayName>
+            <app:PhysicalName>TORN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TropicalStorm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tropical cyclone having winds ranging from approximately 48 to 121 kilometres per hour.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:27644dab-4a5b-4554-818d-7514b35e6505</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Tropical storm</app:DisplayName>
+            <app:PhysicalName>TRST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Typhoon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A severe tropical hurricane.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c74f68d8-954e-4b75-9839-f27d0d338d5c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Typhoon</app:DisplayName>
+            <app:PhysicalName>TYPH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Waterspout">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A violent, rotating column of air that forms over a body of water, such as a bay, gulf, or lake, and touches the water surface; a tornado or funnel cloud that touches a body of water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8ac12321-5533-4309-9e85-6078cb1202b4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Waterspout</app:DisplayName>
+            <app:PhysicalName>WTRSPT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Whirlwind">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small revolving storm of wind in which the air whirls around a core of low pressure. Whirlwinds sometimes extend upwards to a height of many hundreds of metres and cause dust whirls formed over a desert.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8bc518da-39e0-49e5-9414-51d5dd54578b</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Whirlwind</app:DisplayName>
+            <app:PhysicalName>WHIR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OtherMeteorologicFeatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MeteorologicFeature for which no further information is given other than its category.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b644db3c-7ee5-4cda-af31-54e79976f949</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Other meteorologic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:OtherMeteorologicFeatureCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Precipitation" type="meteorologicfeature:PrecipitationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of particulate matter in the Earth's atmosphere and the rate of its descent onto the Earth's surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:40506e0c-299e-4315-9f1e-4519b7b80b93</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Precipitation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PrecipitationCategoryCode" type="meteorologicfeature:PrecipitationCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The prevailing class of Precipitation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:129d3b28-f755-4533-ae40-5865b968ac4b</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PrecipitationCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The prevailing class of Precipitation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c1820ca5-8779-4b93-842f-ee6d39638413</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Drizzle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Fairly uniform precipitation composed exclusively of fine drops (diameter less than 0.5 mm) very close together. Drizzle appears to float while following air currents although, unlike fog droplets, it falls to the ground. It usually falls from low stratus clouds and is frequently accompanied by low visibility and fog.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:927d2ff8-5223-48fd-ae06-e71b3736be1b</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Drizzle</app:DisplayName>
+            <app:PhysicalName>DRZLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FreezingDrizzle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Drizzle which freezes upon impact with the ground, with objects in flight, or with objects on the ground. Produces glaze (clear) ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:43a33cf3-18b4-4f4d-a1bb-56f9d2c05b6f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Freezing drizzle</app:DisplayName>
+            <app:PhysicalName>FDRZLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FreezingRain">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Rain that freezes on impact with the ground, with objects in flight, or with objects on the ground. Produces glaze (clear) ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e8491a3f-066a-4888-8edf-b2f00afe76d1</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Freezing rain</app:DisplayName>
+            <app:PhysicalName>FRAIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hail">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Precipitation in the form of small balls or other pieces of ice falling separately or frozen together in irregular lumps. Hailstones consist of alternate opaque and clear layers of ice in most cases. Hail is normally associated with thunderstorms and surface temperatures above freezing.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:155ff0d7-e8ea-4df4-8fbe-84a325a056a4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Hail</app:DisplayName>
+            <app:PhysicalName>HAIL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IceCrystalsPrecipitation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A fall of unbranched (snow crystals are branched) ice crystals in the form of needles, columns, or plates. They are termed "ice prisms" in synoptic observations. Ice crystals are often so tiny they seem to be suspended in air. They may fall from a cloud or from clear air. The crystals are visible mainly when they glitter in the sunshine or other bright light (diamond dust), thus producing a luminous pillar or other optical phenomena. This hydrometer (rarely more than the lightest precipitation), which is frequent in polar regions, occurs only at very low temperatures in stable air masses.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:728b54a1-a9b7-46a6-bb0d-e3197b32d21b</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Ice crystals precipitation</app:DisplayName>
+            <app:PhysicalName>ICECRY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IcePelletsPrecipitation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Precipitation of transparent or translucent pellets of ice, which are round or irregular, rarely conical, and have a diameter of 5 mm or less. The pellets usually rebound when striking hard ground and make a sound on impact. There are two main types: hard grains of ice consisting of frozen raindrops or melted and refrozen snowflakes and pellets of snow encased in a thin layer of ice formed from the freezing, either of droplets intercepted by the pellets, or of water resulting from the partial melting of the pellets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1924b511-ef5a-401d-8075-36b97367b1d0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Ice pellets precipitation</app:DisplayName>
+            <app:PhysicalName>ICEPLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NoPrecipitation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">No measurable precipitation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7d80169c-e3a2-4c45-8566-0f67e451de60</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>No precipitation</app:DisplayName>
+            <app:PhysicalName>NPR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Rain">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Precipitation, either in the form of drops larger than 0.5 mm, or smaller drops, which in contrast to drizzle, are widely separated.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a923ce1d-0a8e-43fb-a167-15a6c71139df</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Rain</app:DisplayName>
+            <app:PhysicalName>RAIN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RainShower">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The rain changes intensity or starts and stops abruptly. These showers fall exclusively from cumuliform clouds.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dce74270-5139-4c00-966e-7795cfa7ec50</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Rain shower</app:DisplayName>
+            <app:PhysicalName>RAINSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sleet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A condition with precipitation of rain and snow.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a709f7d9-c638-49a4-88a7-ef83e7cc72ab</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Sleet</app:DisplayName>
+            <app:PhysicalName>SLEET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SnowGrains">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Precipitation of very small, white, opaque particles of ice; the solid equivalent of drizzle. The grains are fairly flat or elongated. Diameters are generally less than 1 mm. When the grains hit hard ground, they do not bounce or shatter. They usually fall in very small quantities from stratus clouds (or occasionally from fog).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f0c77407-8877-4e39-8961-81ba9e0b769d</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Snow grains</app:DisplayName>
+            <app:PhysicalName>SNWGRN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SnowPrecipitation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Frozen precipitation in the form of white or translucent hexagonal ice crystals that fall in soft, white flakes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:66e5f0e8-59f4-4261-9ab5-30d98009564b</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Snow precipitation</app:DisplayName>
+            <app:PhysicalName>SNOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SnowShower">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Snow changes intensity or starts and stops abruptly. These showers fall exclusively from cumuliform clouds.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7ed33798-b5d2-494d-ba02-61d9127b860c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:40506e0c-299e-4315-9f1e-4519b7b80b93">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Snow shower</app:DisplayName>
+            <app:PhysicalName>SNWSHR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PrecipitationIntensityMeasure" type="meteorologicfeature:PrecipitationIntensityMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The amount of Precipitation deposited per unit time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8b99bf41-5680-4d60-b9d5-c0804f3d7dfd</app:SemanticID>
+        <app:ShortName>intensityMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>intensity</app:DisplayName>
+        <app:UnitOfMeasure>millimetre per hour (mm/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PrecipitationIntensityMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The amount of Precipitation deposited per unit time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8b99bf41-5680-4d60-b9d5-c0804f3d7dfd</app:SemanticID>
+        <app:ShortName>intensityMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>intensity</app:DisplayName>
+        <app:UnitOfMeasure>millimetre per hour (mm/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="1" />
+      <xsd:totalDigits value="4" />
+      <xsd:maxInclusive value="999.9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PrecipitationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of particulate matter in the Earth's atmosphere and the rate of its descent onto the Earth's surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:40506e0c-299e-4315-9f1e-4519b7b80b93</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Precipitation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:PrecipitationCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:PrecipitationIntensityMeasure" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Visibility" type="meteorologicfeature:VisibilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characteristics of the ability of detecting, in a specific direction, an object illuminated by light in the visual spectrum.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5d0e935f-51f8-4685-a76f-79b1ca459493</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Visibility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VisibilityDirectionCode" type="object:DirectionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The direction for which the Visibility is valid.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:118fd308-d3fe-420f-ba45-77f1251a4ba5</app:SemanticID>
+        <app:ShortName>directionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>direction</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VisibilityObscurantCode" type="meteorologicfeature:VisibilityObscurantCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of obscurant that governs the Visibility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2cafb40a-3695-400c-8749-5f03dd968179</app:SemanticID>
+        <app:ShortName>obscurantCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>obscurant</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="VisibilityObscurantCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of obscurant that governs a Visibility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4504a8b6-ff7d-4dfb-9b75-92164197604a</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="BlowingDustOrSand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Dust or sand raised by the wind to a height of 1.8 metres or more.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a31b6bfb-ba8a-45b0-bbd0-9eff2ed1176f</app:SemanticID>
+            <app:DisplayName>Blowing dust or sand</app:DisplayName>
+            <app:PhysicalName>DSTSND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BlowingSnow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Snow particles raised and stirred violently by the wind to moderate or great heights. Prevailing visibility is reduced to less than 11,260 metres and the sky may become obscured when the particles are raised to great heights.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:21a9fad7-40c5-400e-8f69-34abcb2b01bf</app:SemanticID>
+            <app:DisplayName>Blowing snow</app:DisplayName>
+            <app:PhysicalName>BLWSNW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DustDevil">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Well-developed dust/sand whirls (PO). An ensemble of particles of dust or sand, sometimes accompanied by small litter, raised from the ground in the form of a whirling column of varying height with a small diameter and an approximately vertical axis. Reported regardless of the visibility.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b537af34-92ef-4a5d-8a86-6d50ec451675</app:SemanticID>
+            <app:DisplayName>Dust devil</app:DisplayName>
+            <app:PhysicalName>DSTDVL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DustStorm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An unusual, frequently severe weather condition characterised by strong winds and dust-filled air over an extensive area. Report a dust storm if the prevailing visibility is reduced to less than 1,000 meters, but not less than 500 metres. Report a heavy (severe) dust storm (+DS) if the visibility is reduced to less than 500 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cddbe86e-e277-40e7-afd8-d9a494f0b56c</app:SemanticID>
+            <app:DisplayName>Dust storm</app:DisplayName>
+            <app:PhysicalName>DSTSTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FogOrMist">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A visible aggregate of minute water particles (droplets), which are based on the Earth’s surface, extends vertically, and reduces horizontal visibility to less than 1,000 metres. When fog is further described by the descriptors BC, MI, or PR, the prevailing visibility may be equal to or greater than 1,000 metres. Unlike drizzle, Fog does not fall to the ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:47ecea37-dfb9-4014-a28a-0a354ee75d10</app:SemanticID>
+            <app:DisplayName>Fog/mist</app:DisplayName>
+            <app:PhysicalName>FOG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FreezingFog">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A suspension of numerous minute ice crystals in the air, or water droplets at temperatures below 0 degrees Celsius, based at the Earth’s surface and extending vertically to greater than 1.8 metres. FZFG reduces prevailing visibility to less than 1000 metres and, unlike drizzle, does not fall to the ground. The water droplets may freeze upon contact with exposed objects to form a coating of rime or glaze and it can occur even though the air temperature is above freezing. Also called Ice Fog.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f8cf9a1b-af31-4274-84cf-7106946677bd</app:SemanticID>
+            <app:DisplayName>Freezing fog</app:DisplayName>
+            <app:PhysicalName>FRZFOG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Haze">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A suspension in the air of extremely small, dry particles invisible to the naked eye and sufficiently numerous to give the air an opalescent appearance. This phenomenon resembles a uniform veil over the landscape and subdues all colours. Dark objects viewed through this veil tend to have a bluish tinge while bright objects, such as the sun or distant lights, tend to have a dirty yellow or reddish hue. When haze is present and the sun is well above the horizon, its light may have a peculiar silvery tinge. Haze particles may be composed of a variety of substances; e.g., dust, salt, residue from distant fires or volcanoes, pollen, etc., which generally are well diffused through the atmosphere.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eb2d9b4a-2b5c-4559-adff-b31574c9e0ca</app:SemanticID>
+            <app:DisplayName>Haze</app:DisplayName>
+            <app:PhysicalName>HAZE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sandstorm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Particles of sand ranging in diameter from 0.2 millimetres to 1 millimetre carried aloft by a strong wind. A sandstorm is reported if the prevailing visibility is reduced to less than 1,000 metres, but not less than 500 metres. Report a heavy (severe) sandstorm (+SS) if the visibility is reduced to less than 500 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a51f4f60-2a7b-4665-a862-67cff00b4d66</app:SemanticID>
+            <app:DisplayName>Sandstorm</app:DisplayName>
+            <app:PhysicalName>SNDSTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Smoke">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A suspension in the air of small particles produced by combustion. A transition to haze may occur when smoke particles have travelled great distances (40 to 160 kilometres or more) and when the larger particles have settled out and the remaining particles have become widely scattered through the atmosphere. When viewed through smoke, the disk of the sun at sunrise and sunset appears very red. The disk may have an orange tinge when the sun is above the horizon. Evenly distributed smoke from distant sources generally has a light greyish or bluish appearance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:54b9f0e0-4d6b-4e30-9749-398526c14baa</app:SemanticID>
+            <app:DisplayName>Smoke</app:DisplayName>
+            <app:PhysicalName>SMOKE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="VisibilityRangeDimension" type="meteorologicfeature:VisibilityRangeDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance which can be surveyed using visual observation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d28b1353-5616-458d-af95-0f4ad3346c8c</app:SemanticID>
+        <app:ShortName>rangeDimension</app:ShortName>
+        <app:Remarks>Note (US Army AR 310-25): In US weather observing practice, the greatest distance in a given direction at which it is just possible to see and identify with the unaided eye (a) in the daytime, a prominent dark object against the sky at the horizon, and (b) at night, a known, preferably unfocused, moderately intense light source. After the visibility has been determined through the entire horizon circle, they are resolved into a single value of prevailing visibility for reporting purposes.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="VisibilityRangeDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance which can be surveyed using visual observation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d28b1353-5616-458d-af95-0f4ad3346c8c</app:SemanticID>
+        <app:ShortName>rangeDimension</app:ShortName>
+        <app:Remarks>Note (US Army AR 310-25): In US weather observing practice, the greatest distance in a given direction at which it is just possible to see and identify with the unaided eye (a) in the daytime, a prominent dark object against the sky at the horizon, and (b) at night, a known, preferably unfocused, moderately intense light source. After the visibility has been determined through the entire horizon circle, they are resolved into a single value of prevailing visibility for reporting purposes.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="VisibilityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characteristics of the ability of detecting, in a specific direction, an object illuminated by light in the visual spectrum.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5d0e935f-51f8-4685-a76f-79b1ca459493</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Visibility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:VisibilityDirectionCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:VisibilityObscurantCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:VisibilityRangeDimension" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Wind" type="meteorologicfeature:WindType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Atmospheric movement specified by velocity and directional characteristics.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Wind</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="WindAirStabilityCategoryCode" type="meteorologicfeature:WindAirStabilityCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of air stability.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:29ad5b1a-56e6-40f3-9886-60ef178a2fbe</app:SemanticID>
+        <app:ShortName>airStabilityCategoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>air stability category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WindAirStabilityCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of air stability, with implications on the degree of mixing of released material in the atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6f209f20-e19e-4658-b0e4-c954e68a6900</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NeutralDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is neutral in stability, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:29d46757-f3c8-4947-9316-f80e0dba68bf</app:SemanticID>
+            <app:DisplayName>Detailed, neutral</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NeutralSimplified">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The degree of mixing is intermediate between that for stable and unstable conditions, and the range of effectiveness is intermediate between that for stable and unstable conditions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a9a9e8b9-d2f7-4e4a-bf69-c904f7981dd8</app:SemanticID>
+            <app:DisplayName>Simplified, neutral</app:DisplayName>
+            <app:PhysicalName>N</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SlightlyStableDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is slightly stable, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7e35a55b-91ae-4442-85f7-7c77ab20bcc1</app:SemanticID>
+            <app:DisplayName>Detailed, slightly stable</app:DisplayName>
+            <app:PhysicalName>5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SlightlyUnstableDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is slightly unstable, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f2e9baa0-2484-421c-9f50-6a3022d745ed</app:SemanticID>
+            <app:DisplayName>Detailed, slightly unstable</app:DisplayName>
+            <app:PhysicalName>3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StableDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is stable, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:958876fa-5f53-48ad-a295-283f025305cd</app:SemanticID>
+            <app:DisplayName>Detailed, stable</app:DisplayName>
+            <app:PhysicalName>6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StableSimplified">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is stable, so there is little mixing, and the material is effective over longer distances.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:845fd605-4c37-4de5-95fa-bd626142eeca</app:SemanticID>
+            <app:DisplayName>Simplified, stable</app:DisplayName>
+            <app:PhysicalName>S</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnstableDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is unstable, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0bdd8a39-622e-4eb0-9a6d-91c81129d3fa</app:SemanticID>
+            <app:DisplayName>Detailed, unstable</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnstableSimplified">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is unstable, so there is strong mixing, and the material is effective over shorter distances.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:709dea3e-2965-4ca3-b464-0ba0a1cbfd32</app:SemanticID>
+            <app:DisplayName>Simplified, unstable</app:DisplayName>
+            <app:PhysicalName>U</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryStableDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is very stable, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e890f66c-69fc-41c7-8845-8450bf0fe1d0</app:SemanticID>
+            <app:DisplayName>Detailed, very stable</app:DisplayName>
+            <app:PhysicalName>7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryUnstableDetailed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The air is very unstable, with reference to the detailed class. This is determined from observations of wind speed, cloud cover, and time of day based on a standard table, developed from the work of Pasquill, Gifford, and Turner. The more unstable the conditions, the greater the degree of mixing, and the shorter the range of effectiveness.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:33bf919d-a641-4681-a40f-f210abf08fff</app:SemanticID>
+            <app:DisplayName>Detailed, very unstable</app:DisplayName>
+            <app:PhysicalName>1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WindAltitudeLayerCode" type="meteorologicfeature:WindAltitudeLayerCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of the altitude at which the Wind is measured.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47e6809e-c9b8-4e84-a32a-fb084ec4219c</app:SemanticID>
+        <app:ShortName>altitudeLayerCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>altitude layer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WindAltitudeLayerCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of altitude for a set of reported wind data.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:30b9e956-2d5f-47e6-af4d-cf12cb5124e8</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower altitude than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="_2000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes less than 2000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:04b845be-e4ae-44f5-b40e-e2baa85771f6</app:SemanticID>
+            <app:DisplayName>2000 metres</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_4000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 2000 and less than 4000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:78dc4de2-4255-4ef3-85ac-594a4437fe10</app:SemanticID>
+            <app:DisplayName>4000 metres</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_6000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 4000 and less than 6000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fd9dbf42-039f-4e76-98d3-6cb573480fdd</app:SemanticID>
+            <app:DisplayName>6000 metres</app:DisplayName>
+            <app:PhysicalName>6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_8000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 6000 and less than 8000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:14085944-2410-46f5-b132-bb4aa921754b</app:SemanticID>
+            <app:DisplayName>8000 metres</app:DisplayName>
+            <app:PhysicalName>8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_10000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 8000 and less than 10000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:335b4994-3bc8-4385-af99-381d113ea986</app:SemanticID>
+            <app:DisplayName>10,000 metres</app:DisplayName>
+            <app:PhysicalName>10</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_12000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 10000 and less than 12000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ae5e84d0-28ec-4f2a-85b5-635c0ba1378d</app:SemanticID>
+            <app:DisplayName>12,000 metres</app:DisplayName>
+            <app:PhysicalName>12</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_14000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes between 12000 and less than 14000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f42a57cc-38de-4b48-b892-b1f7a0371b45</app:SemanticID>
+            <app:DisplayName>14,000 metres</app:DisplayName>
+            <app:PhysicalName>14</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_16000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 14000 and less than 16000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:785393d5-3931-4113-8e1c-a4d45197b1e4</app:SemanticID>
+            <app:DisplayName>16,000 metres</app:DisplayName>
+            <app:PhysicalName>16</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_18000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 16000 and less than 18000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:516c612d-32fc-41fa-be81-3e7b0267ecd3</app:SemanticID>
+            <app:DisplayName>18,000 metres</app:DisplayName>
+            <app:PhysicalName>18</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_20000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 18000 and less than 20000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b0012c00-8b3c-4df9-a460-814e5f834a89</app:SemanticID>
+            <app:DisplayName>20,000 metres</app:DisplayName>
+            <app:PhysicalName>20</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_22000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 20000 and less than 22000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a1b38eaf-0109-48e9-8f8e-ec48e778ec7a</app:SemanticID>
+            <app:DisplayName>22,000 metres</app:DisplayName>
+            <app:PhysicalName>22</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_24000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 22000 and less than 24000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d7319588-44af-4505-824a-d4f85d373635</app:SemanticID>
+            <app:DisplayName>24,000 metres</app:DisplayName>
+            <app:PhysicalName>24</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_26000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 24000 and less than 26000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:edd85a38-526c-4ef2-a4af-d0c457391c7f</app:SemanticID>
+            <app:DisplayName>26,000 metres</app:DisplayName>
+            <app:PhysicalName>26</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_28000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 26000 and less than 28000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7e71de5d-6d34-4d04-aae0-e9efcba6c9f0</app:SemanticID>
+            <app:DisplayName>28,000 metres</app:DisplayName>
+            <app:PhysicalName>28</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_30000Metres">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported wind data are valid for altitudes greater than or equal to 28000 and less than 30000 metres above ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c399f92c-7da9-4373-807a-8297a0a8db47</app:SemanticID>
+            <app:DisplayName>30,000 metres</app:DisplayName>
+            <app:PhysicalName>30</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WindCategoryCode" type="meteorologicfeature:WindCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Wind.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9d3dc48c-e466-4560-bf1b-2516556236b7</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WindCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Wind.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b110a83f-a273-4e6e-acc5-d226a4de5f48</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ConstantWind">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Winds that have a constant force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2fca7683-8131-4c45-8fc0-1d44a59fbf73</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Constant wind</app:DisplayName>
+            <app:PhysicalName>CONST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ExtremeTurbulence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Extreme turbulence is a transitory atmospheric condition that has varying effects on aircraft operations. It is a serious hazard to pilots that may occur without warning.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6f07f50d-c80e-4c2a-a0da-4d9ba6eb4e24</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Turbulence, extreme</app:DisplayName>
+            <app:PhysicalName>TRBLEX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Gusting">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A rapid increase in the strength of the wind relative to the mean strength at the time.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:23b90fa1-96c5-44fe-910b-b3293c5d6f61</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Gusting</app:DisplayName>
+            <app:PhysicalName>GUST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LightTurbulence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Light turbulence is a transitory atmospheric condition that has varying effects on aircraft operations. It is a serious hazard to pilots that may occur without warning.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dcbc7631-701c-4f99-8751-cdf83c5df30e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Turbulence, light</app:DisplayName>
+            <app:PhysicalName>TRBLLI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ModerateTurbulence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Moderate turbulence is a transitory atmospheric condition that has varying effects on aircraft operations. It is a serious hazard to pilots that may occur without warning.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:729a292b-2d30-4c9a-a913-9255bc27d322</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Turbulence, moderate</app:DisplayName>
+            <app:PhysicalName>TRBLMO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SevereTurbulence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Severe turbulence is a transitory atmospheric condition that has varying effects on aircraft operations. It is a serious hazard to pilots that may occur without warning.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1f084152-b812-4645-88e4-b8c32fe34ba3</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Turbulence, severe</app:DisplayName>
+            <app:PhysicalName>TRBLSE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Squalls">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A strong wind that rises suddenly, generally lasts for some minutes, and dies comparatively suddenly away. It is distinguished from a gust by its longer duration.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:00f84c5f-d190-433f-910f-efb5412bde44</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Squalls</app:DisplayName>
+            <app:PhysicalName>SQUAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VariableWind">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Winds that have a variable force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:27b02d0a-b4fc-42ce-9471-d385740e5d4e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Variable wind</app:DisplayName>
+            <app:PhysicalName>VRB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WindShear">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A variation in wind velocity at right angles to the wind's direction.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9f68e1c5-a4e1-40fb-ae17-92488382e745</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wind shear</app:DisplayName>
+            <app:PhysicalName>WSHEAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WindDirectionAngle" type="meteorologicfeature:WindDirectionAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise between the line of true North and the direction from which the Wind originates.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6e3dc312-c858-4b89-a882-7e4eee602907</app:SemanticID>
+        <app:ShortName>directionAngle</app:ShortName>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>direction</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WindDirectionAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement clockwise between the line of true North and the direction from which the Wind originates.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6e3dc312-c858-4b89-a882-7e4eee602907</app:SemanticID>
+        <app:ShortName>directionAngle</app:ShortName>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>direction</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WindEffectiveDownwindDirectionAngle" type="meteorologicfeature:WindEffectiveDownwindDirectionAngleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement of the mean downwind direction at ground level in the hazard area towards which the cloud travels.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6bf040ed-e996-47c9-8189-edb97677b9ed</app:SemanticID>
+        <app:ShortName>effectiveDownwindDirectionAngle</app:ShortName>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>effective downwind direction</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WindEffectiveDownwindDirectionAngleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rotational measurement of the mean downwind direction at ground level in the hazard area towards which the cloud travels.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6bf040ed-e996-47c9-8189-edb97677b9ed</app:SemanticID>
+        <app:ShortName>effectiveDownwindDirectionAngle</app:ShortName>
+        <app:MIMStereotype>angle</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>effective downwind direction</app:DisplayName>
+        <app:UnitOfMeasure>degree (deg)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:maxExclusive value="360" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WindNuclearYieldGroupCode" type="generic:NuclearYieldGroupCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The predicted wind values associated with nuclear fallout prediction for a Nuclear yield group.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ba1467b9-22de-4efd-97e2-01b444f330b5</app:SemanticID>
+        <app:ShortName>nuclearYieldGroupCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>nuclear yield group</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="WindSpeed" type="meteorologicfeature:WindSpeedType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance per unit time of the Wind.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3124bf0e-e33d-4098-9dd1-20701405daa0</app:SemanticID>
+        <app:ShortName>speed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>speed</app:DisplayName>
+        <app:UnitOfMeasure>kilometre per hour (km/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WindSpeedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance per unit time of the Wind.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3124bf0e-e33d-4098-9dd1-20701405daa0</app:SemanticID>
+        <app:ShortName>speed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>speed</app:DisplayName>
+        <app:UnitOfMeasure>kilometre per hour (km/h)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="4" />
+      <xsd:totalDigits value="7" />
+      <xsd:maxInclusive value="999.9999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="WindType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Atmospheric movement specified by velocity and directional characteristics.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8564bfa9-6e0e-4fe9-b094-f26257c0b095</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Wind</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="meteorologicfeature:MeteorologicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="meteorologicfeature:WindAirStabilityCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:WindAltitudeLayerCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:WindCategoryCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:WindDirectionAngle" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:WindEffectiveDownwindDirectionAngle" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:WindNuclearYieldGroupCode" minOccurs="0" />
+          <xsd:element ref="meteorologicfeature:WindSpeed" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

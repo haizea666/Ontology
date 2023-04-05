@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:militarypost="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/MilitaryPost" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/MilitaryPost" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="CommandingMilitaryPost" type="militarypost:CommandingMilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost that provides command support elements to assist commanders in the exercise of command.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1e6e3d13-38fd-4e70-9241-3e194c631f34</app:SemanticID>
+        <app:DisplayName>Commanding military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CommandingMilitaryPostCategoryCode" type="militarypost:CommandingMilitaryPostCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CommandingMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5ab347bf-8bc1-4bf8-a8e3-ce6135274d0b</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CommandingMilitaryPostCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CommandingMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5fde30bc-afac-4c0d-af97-690bf272659d</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirborneMissionCommander">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that executes component’s rescue coordination centre (RCC) and coordinates the combat search and rescue (CSAR) effort between the combat search and rescue task force (CSARTF) and the RCC (or joint search and rescue centre) by monitoring the status of all CSARTF elements, requesting additional assets when needed, and ensuring the recovery and supporting forces arrive at their designated areas to accomplish the CSAR mission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bf72fc77-244d-4f6b-b27c-acad2c5dc4b5</app:SemanticID>
+            <app:DisplayName>Airborne mission commander</app:DisplayName>
+            <app:PhysicalName>ARBNMC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ApprovingAuthority">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the authority with the right and power to approve plans, orders or other official documents.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:783ba7fd-bfe6-41cd-be80-02a2d88d39c0</app:SemanticID>
+            <app:DisplayName>Approving authority</app:DisplayName>
+            <app:PhysicalName>APAUTH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AttackHelicopterCommander">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the designated commander of an attack helicopter unit.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:85da847e-48cc-4f11-8834-c14ce93eea89</app:SemanticID>
+            <app:DisplayName>Attack helicopter commander</app:DisplayName>
+            <app:PhysicalName>AHLCDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AuthorisedCommander">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the duly appointed officer in charge of a unit, post, camp, or operation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:97348c58-2df7-49c0-bc79-5f0a67023e87</app:SemanticID>
+            <app:DisplayName>Authorised commander</app:DisplayName>
+            <app:PhysicalName>AUTCDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GroundManoeuvreCommander">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the designated commander of a ground manoeuvre unit.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2ff96d6b-7466-4dfa-b7d8-02dde1b13940</app:SemanticID>
+            <app:DisplayName>Ground manoeuvre commander</app:DisplayName>
+            <app:PhysicalName>GMCDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OperationsOfficer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the officer who is responsible for activities relating to planning and directing military operations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6565be3a-e293-42ce-947a-940dd1025aed</app:SemanticID>
+            <app:DisplayName>Operations officer</app:DisplayName>
+            <app:PhysicalName>OPSOFF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SecondInCommand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost denoting that the holder of the title is the second-highest authority within a certain.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:48c7f7a5-6937-4829-a364-02f40f80ea08</app:SemanticID>
+            <app:DisplayName>Second in command</app:DisplayName>
+            <app:PhysicalName>SIC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CommandingMilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost that provides command support elements to assist commanders in the exercise of command.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1e6e3d13-38fd-4e70-9241-3e194c631f34</app:SemanticID>
+        <app:DisplayName>Commanding military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:MilitaryPostType">
+        <xsd:sequence>
+          <xsd:element ref="militarypost:CommandingMilitaryPostCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ControllingMilitaryPost" type="militarypost:ControllingMilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which principal designation is to maintain influence over a specified area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bdc48f42-60c5-4947-a3b9-dfc5c3c98146</app:SemanticID>
+        <app:DisplayName>Controlling military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ControllingMilitaryPostCategoryCode" type="militarypost:ControllingMilitaryPostCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of ControllingMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b23d3ae1-fb81-4931-95f1-bdc9abb599be</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ControllingMilitaryPostCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of ControllingMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:669f6608-ed81-4387-9e0a-8dd18654c03b</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirborneForwardAirController">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is a specifically trained and qualified aviation officer who exercises control from the air of aircraft engaged in close air support of ground troops. The forward air controller (airborne) is normally an airborne extension of the tactical air control party.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0a07b676-e523-4a7a-b474-cc611d4e6b3a</app:SemanticID>
+            <app:DisplayName>Forward air controller, airborne</app:DisplayName>
+            <app:PhysicalName>FACAIR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AlternativeJAATController">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the designated alternate controller of a Joint Air Attack Team.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d8159616-651e-4f52-9a5a-831c84284d65</app:SemanticID>
+            <app:DisplayName>Alternative JAAT controller</app:DisplayName>
+            <app:PhysicalName>AJAATC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FieldArtilleryObserver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is responsible for directing artillery and mortar fire onto a target.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:af53328e-efbe-4bf4-94e5-d0e884c81d97</app:SemanticID>
+            <app:DisplayName>Field artillery observer</app:DisplayName>
+            <app:PhysicalName>FAO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ForwardAirController">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the member of the tactical air control party who, from a forward ground or airborne position, controls aircraft in close air support of ground troops.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:880147f9-23b1-40b2-a4e0-7a94359fa553</app:SemanticID>
+            <app:DisplayName>Forward air controller</app:DisplayName>
+            <app:PhysicalName>FAC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JAATController">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the designated controller of a Joint Air Attack Team.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:019bed05-3252-440b-9d80-f99ec7e1be71</app:SemanticID>
+            <app:DisplayName>JAAT controller</app:DisplayName>
+            <app:PhysicalName>JAATC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JointFireSupportPost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is responsible for directing artillery fire and close air support.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b24ebb06-00f9-4050-90f9-ea6372862c31</app:SemanticID>
+            <app:DisplayName>Joint fire support post</app:DisplayName>
+            <app:PhysicalName>JFSPST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TacticalAirController">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is a subordinate operational component of a tactical air control system designed to provide air liaison to land forces and for the control of aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7f56f134-b0f2-4f0f-a6ad-4b27bb2fa126</app:SemanticID>
+            <app:DisplayName>Tactical air controller</app:DisplayName>
+            <app:PhysicalName>TAC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ControllingMilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which principal designation is to maintain influence over a specified area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bdc48f42-60c5-4947-a3b9-dfc5c3c98146</app:SemanticID>
+        <app:DisplayName>Controlling military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:MilitaryPostType">
+        <xsd:sequence>
+          <xsd:element ref="militarypost:ControllingMilitaryPostCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CoordinatingMilitaryPost" type="militarypost:CoordinatingMilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost that provides coordination over a specified area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:499c0df9-3114-4d09-8ce5-20004ca900f7</app:SemanticID>
+        <app:DisplayName>Coordinating military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CoordinatingMilitaryPostCategoryCode" type="militarypost:CoordinatingMilitaryPostCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CoordinatingMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:683442f6-0685-4de9-a3d5-8dc38cf83227</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CoordinatingMilitaryPostCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CoordinatingMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:620fc52f-70b2-46cb-bffe-c6a60319a4e1</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirLiaisonOfficer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tactical air force or naval aviation officer attached to a ground or naval unit or formation as the advisor on tactical air operation matters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cd9fece3-ed6b-4146-bc65-35593da70ffb</app:SemanticID>
+            <app:DisplayName>Air liaison officer</app:DisplayName>
+            <app:PhysicalName>AIRLSN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirObservationPost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the observer operating in the air and trained to adjust ground or naval gunfire and pass back battlespace information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:30284a11-1363-4ef9-9096-966a69201141</app:SemanticID>
+            <app:DisplayName>Air observation post</app:DisplayName>
+            <app:PhysicalName>AOP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirborneAssaultSupportCoordinator">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that provides air coordination and control during helicopter operations within the Marine Air Command and Control System (MACCS). Serves as an extension of Direct Air Support Centre (DASC) or Helicopter Direction Centre (HDC) in support of the air mission commander.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:94dc5587-4a64-4e57-95f6-1c0b44cdbb82</app:SemanticID>
+            <app:DisplayName>Assault support coordinator, airborne</app:DisplayName>
+            <app:PhysicalName>ASCAIR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirborneTacticalAirCoordinator">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is an officer who coordinates, from an aircraft, the action of combat aircraft engaged in close support of ground or sea forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a825fe53-3412-4acf-a078-ba78393596de</app:SemanticID>
+            <app:DisplayName>Tactical air coordinator, airborne</app:DisplayName>
+            <app:PhysicalName>TACAIR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ForwardObservationOfficer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the observer operating with front line troops on the ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:29b807e7-0fe6-4d4c-a0a8-5bd9c13a7400</app:SemanticID>
+            <app:DisplayName>Forward observation officer post</app:DisplayName>
+            <app:PhysicalName>FOOP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IntelligenceOfficer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the officer who is responsible for activities relating to gathering and analysing information about an actual or potential foe.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a9b7b0f7-4656-40dd-95d5-70c0427f351a</app:SemanticID>
+            <app:DisplayName>Intelligence officer</app:DisplayName>
+            <app:PhysicalName>INTOFF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LiaisonOfficer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost responsible for liaison duties.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cc9150ee-590f-4ac3-ad4d-d20d8906b38e</app:SemanticID>
+            <app:DisplayName>Liaison officer</app:DisplayName>
+            <app:PhysicalName>LIAISN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Messenger">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a dispatch bearer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8dc85b19-8b6f-4145-bb30-b8c50f8fa6d5</app:SemanticID>
+            <app:DisplayName>Messenger</app:DisplayName>
+            <app:PhysicalName>MSSGNR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PointOfContact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost responsible to coordinate details for each element of support required.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7cac4325-e70d-42a3-b4c4-5691516dbcba</app:SemanticID>
+            <app:DisplayName>Point of contact</app:DisplayName>
+            <app:PhysicalName>POC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CoordinatingMilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost that provides coordination over a specified area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:499c0df9-3114-4d09-8ce5-20004ca900f7</app:SemanticID>
+        <app:DisplayName>Coordinating military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:MilitaryPostType">
+        <xsd:sequence>
+          <xsd:element ref="militarypost:CoordinatingMilitaryPostCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CrowdAndRiotControlPost" type="militarypost:CrowdAndRiotControlPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost that is identified as police, military or other security forces to control, disperse, and arrest people who are involved in a riot, demonstration, or protest.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:994f34a1-4cbc-4235-819f-15ef6f343701</app:SemanticID>
+        <app:DisplayName>Crowd and riot control post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CrowdAndRiotControlPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost that is identified as police, military or other security forces to control, disperse, and arrest people who are involved in a riot, demonstration, or protest.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:994f34a1-4cbc-4235-819f-15ef6f343701</app:SemanticID>
+        <app:DisplayName>Crowd and riot control post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:PoliceMilitaryPostType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ExecutionMilitaryPost" type="militarypost:ExecutionMilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which main duty is to carry out a specified action.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e368ab80-2215-4a19-a8e6-54f70d1a2a43</app:SemanticID>
+        <app:DisplayName>Execution military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ExecutionMilitaryPostCategoryCode" type="militarypost:ExecutionMilitaryPostCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of ExecutionMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8870a1c6-3173-4f8d-9a58-3b5038b3c737</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ExecutionMilitaryPostCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of ExecutionMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:080de62e-4631-4d3c-b1ba-abcb53204f8e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CloseProtectionPost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a security guard, government law enforcement officer, or soldier who protects a person or a group of people.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:befc168b-3982-42f6-af26-d4067daeb627</app:SemanticID>
+            <app:DisplayName>Close protection post</app:DisplayName>
+            <app:PhysicalName>CLPRPT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DesignatedMarksman">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as military marksman role in an infantry squad.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5c3d164e-2229-45eb-a6e5-2f0452b0acff</app:SemanticID>
+            <app:DisplayName>Designated marksman</app:DisplayName>
+            <app:PhysicalName>DESMKM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ExplosiveOrdnanceDisposalTechnician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that requires expertise in the most conventional and unconventional explosives to ensure the secure disposal of explosive weaponry.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:04086692-57aa-4282-bf9d-57177e4495ee</app:SemanticID>
+            <app:DisplayName>Explosive Ordnance Disposal (EOD) technician</app:DisplayName>
+            <app:PhysicalName>EODTEC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Gunner">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as one who operates a gun.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1ff42707-f906-42a7-8d10-c28cecc71e05</app:SemanticID>
+            <app:DisplayName>Gunner</app:DisplayName>
+            <app:PhysicalName>GUNNER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InfantryMan">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that involves specialization that engages in military combat on foot, distinguished from cavalry, artillery, and tank forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5aa78f73-4197-4532-9587-a346079382fa</app:SemanticID>
+            <app:DisplayName>Infantry man</app:DisplayName>
+            <app:PhysicalName>INFMAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MaintenanceTechnician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as the person specialised to take all actions to retain materiel in or to restore it to a specified condition.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cafd36b2-c332-4703-b8bf-a00c6878e28a</app:SemanticID>
+            <app:DisplayName>Maintenance technician</app:DisplayName>
+            <app:PhysicalName>MANTCH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Rifleman">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a soldier armed with a rifle.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8ef5990d-aa43-40d1-aae4-6d92de9e5888</app:SemanticID>
+            <app:DisplayName>Rifleman</app:DisplayName>
+            <app:PhysicalName>RFLEMN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sapper">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as one who designs and constructs military works for attack or defence.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7579bb33-6e32-442e-aa45-8491e2dc2293</app:SemanticID>
+            <app:DisplayName>Sapper</app:DisplayName>
+            <app:PhysicalName>SAPPER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Scout">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as one sent out ahead of the main force in order to reconnoitre the position and movement of the enemy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3c12cead-11f3-4615-b9cd-b234d292d366</app:SemanticID>
+            <app:DisplayName>Scout</app:DisplayName>
+            <app:PhysicalName>SCOUT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SecurityPost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost whose duty is to protect an individual or property.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0c9f6ccc-3d22-418d-88ae-f0c7672321d8</app:SemanticID>
+            <app:DisplayName>Security post</app:DisplayName>
+            <app:PhysicalName>SECOFR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Signaller">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost responsible for military communications (signals).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d9bdb603-da0c-4592-b782-6b98eb4e1f37</app:SemanticID>
+            <app:DisplayName>Signaller</app:DisplayName>
+            <app:PhysicalName>SIGNLR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sniper">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as one who snipes, or shoots from concealment.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5fd4d99e-a06e-4002-bbcd-80ce4453a87e</app:SemanticID>
+            <app:DisplayName>Sniper</app:DisplayName>
+            <app:PhysicalName>SNIPER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SpecialOperationForcesPost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as military unit trained to conduct special operations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:79358ea0-e39a-455c-8f7f-57e86c710a6e</app:SemanticID>
+            <app:DisplayName>Special Operation Forces (SOF) post</app:DisplayName>
+            <app:PhysicalName>SOFPST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ExecutionMilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which main duty is to carry out a specified action.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e368ab80-2215-4a19-a8e6-54f70d1a2a43</app:SemanticID>
+        <app:DisplayName>Execution military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:MilitaryPostType">
+        <xsd:sequence>
+          <xsd:element ref="militarypost:ExecutionMilitaryPostCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MedicalMilitaryPost" type="militarypost:MedicalMilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which principal designation is the provision of medical and dental services and the evacuation of casualties.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:25edafd6-c6dc-4e6c-a2f4-30fc4b4c1bb1</app:SemanticID>
+        <app:DisplayName>Medical military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MedicalMilitaryPostCategoryCode" type="militarypost:MedicalMilitaryPostCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MedicalMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:365d87e4-b73b-4f63-9ac6-62f9b27f2498</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MedicalMilitaryPostCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MedicalMilitaryPost.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f3cab6b-6fc0-4f3f-869c-02951ca0f45f</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AnaestheticsPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Anaesthetics.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c4bdc46-6e8b-4d1b-b740-27aae289d605</app:SemanticID>
+            <app:DisplayName>Anaesthetics physician</app:DisplayName>
+            <app:PhysicalName>ANSPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DentistryPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Dentistry.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e27c83ad-f7a6-4fc0-bfc4-f172b375b643</app:SemanticID>
+            <app:DisplayName>Dentistry physician</app:DisplayName>
+            <app:PhysicalName>DNTPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GynaecologyPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Gynaecology.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:529944a4-6890-406e-a5ed-4424267ab878</app:SemanticID>
+            <app:DisplayName>Gynaecology physician</app:DisplayName>
+            <app:PhysicalName>GYNPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HeadOrNeckPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Head/neck.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f9bb6e8f-804c-4268-b007-1ed60dfd957f</app:SemanticID>
+            <app:DisplayName>Head/neck physician</app:DisplayName>
+            <app:PhysicalName>HDNPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InternalMedicinePhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Internal medicine.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4cfccb9e-a8dc-4017-9273-a9786284d5fc</app:SemanticID>
+            <app:DisplayName>Internal medicine physician</app:DisplayName>
+            <app:PhysicalName>INMPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OrthopaedicsPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Orthopaedics.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1658603a-96ae-4866-acee-e4bc17c922b7</app:SemanticID>
+            <app:DisplayName>Orthopaedics physician</app:DisplayName>
+            <app:PhysicalName>ORTPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PathologyPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Pathology.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6de1d158-0c30-4df7-bc61-2f0c896cf98f</app:SemanticID>
+            <app:DisplayName>Pathology physician</app:DisplayName>
+            <app:PhysicalName>PTHPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PrimaryCarePhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Primary care.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:54e78cb2-cc49-4a2a-b130-674dff1d0545</app:SemanticID>
+            <app:DisplayName>Primary care physician</app:DisplayName>
+            <app:PhysicalName>PRCPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PsychologyPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Psychology.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0b835b54-c22f-4a69-98e3-97e7272fef83</app:SemanticID>
+            <app:DisplayName>Psychology physician</app:DisplayName>
+            <app:PhysicalName>PSYPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadiologyPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Radiology.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bdf533a4-5199-4e58-9058-c639e2c0ebfd</app:SemanticID>
+            <app:DisplayName>Radiology physician</app:DisplayName>
+            <app:PhysicalName>RADPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SurgicalPhysician">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A MilitaryPost that is identified as a physician specialising in Surgery.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:98b93405-602c-40ca-9dcc-a894f0764f99</app:SemanticID>
+            <app:DisplayName>Surgical physician</app:DisplayName>
+            <app:PhysicalName>SURPHY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MedicalMilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which principal designation is the provision of medical and dental services and the evacuation of casualties.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:25edafd6-c6dc-4e6c-a2f4-30fc4b4c1bb1</app:SemanticID>
+        <app:DisplayName>Medical military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:MilitaryPostType">
+        <xsd:sequence>
+          <xsd:element ref="militarypost:MedicalMilitaryPostCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MilitaryPost" type="militarypost:MilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryOrganisation with a set of duties that can be fulfilled by one person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0192e80-e95a-4590-8ec6-54fc369d657f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryOrganisation with a set of duties that can be fulfilled by one person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0192e80-e95a-4590-8ec6-54fc369d657f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="organisation:MilitaryOrganisationType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PoliceMilitaryPost" type="militarypost:PoliceMilitaryPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which primary function is to provide police services.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fef3432a-c970-4d6b-8109-338c3ec03267</app:SemanticID>
+        <app:DisplayName>Police military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PoliceMilitaryPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MilitaryPost which primary function is to provide police services.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fef3432a-c970-4d6b-8109-338c3ec03267</app:SemanticID>
+        <app:DisplayName>Police military post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:MilitaryPostType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SWATPost" type="militarypost:SWATPostType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A PoliceMilitaryPost which uses specialized or military equipment and tactics.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:abb5656a-4177-47dd-b4a1-c4c58841b0af</app:SemanticID>
+        <app:DisplayName>Special Weapons And Tactics (SWAT) Post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SWATPostType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A PoliceMilitaryPost which uses specialized or military equipment and tactics.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:abb5656a-4177-47dd-b4a1-c4c58841b0af</app:SemanticID>
+        <app:DisplayName>Special Weapons And Tactics (SWAT) Post</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="militarypost:PoliceMilitaryPostType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

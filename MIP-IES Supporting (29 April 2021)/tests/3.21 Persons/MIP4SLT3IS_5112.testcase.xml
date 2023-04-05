@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>51</TestCaseIdGroup>
+    <TestCaseIdNumber>12</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Person StatusCode update.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to update a Person StatusCode in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates Person with StatusCode.
+Nation B receives the information and interprets it correctly.
+Nation A updates the StatusCode of the Person.
+Nation B receives the information and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes message elements belonging in the Person message schema area (for instance the 'Ground Picture &gt; Intelligence Assessment' topic). Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Person with updated StatusCode information is displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a Person with the following StatusCode information:
+HostilityStatusCode=Friend
+DutyStatusCode=AtDuty
+MilitaryStatusCode=Military
+PhysicalStatusCode=Fit </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the Person and the StatusCode information correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates StatusCode of the Person with the following StatusCode information:
+HostilityStatusCode=Joker
+DutyStatusCode=Hospitalised
+MilitaryStatusCode=Paramilitary
+PhysicalStatusCode=SlightlyIncapacitated
+PersonPhysicalStatusQualifierCode=Injured </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the Person and the updated StatusCode information correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

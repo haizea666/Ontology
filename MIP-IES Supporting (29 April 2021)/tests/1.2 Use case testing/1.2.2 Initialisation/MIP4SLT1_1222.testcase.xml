@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>22</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Consumer initialisation</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The purpose is to verify that the consumer system being initialised is able to obtain the current situation as known by one or more systems playing the provider role. There are three options to test:
+1) The system being initialised obtains the current situation by using the MIP4.0 Request/Response Exchange Pattern (playing the Consumer role) interacting with one or more systems (playing the Provider role) capable of providing the current situation as known by them, and,
+2) The system being initialised obtains the current situation by using the MIP4.0 File-Based Exchange Pattern,
+3) The system being initialised obtains the current situation by using the MIP4.0 Publish-Subscribe Exchange Pattern. Under the File-Based Exchange Pattern the current situation is received in one or more files created by one or more systems playing the Provider role.  Under the Publish-Subscribe Exchange Pattern the Consumer subscribes to the messages published by one or more Providers. This test case will also test the cross-pattern requirements common to multiple exchange patterns (see page 15 of MIP Information Exchange Specification (MIP IES) MIP4.0 Exchange Mechanism Overview). </TestCaseObjective>
+  <TestCaseScenario>A MIP4.0 conformant Consumer must implement all three MIP4.0 Exchange Patterns (Request-Response, Publish-Subscribe and File-Based) according to the applicable MIP4.0 Specifications. It must also accommodate cross-pattern requirements common to multiple exchange patterns.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-locate</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>At least 3</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1212, MIP4SLT1_1213, MIP4SLT1_1214, MIP4SLT1_1215
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]</TestCasePreCondition>
+  <TestCaseInput>Current situation as known by one or more providers.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the consumer system is able to correctly receive the current situation from multiple providers through all three MIP4.0 protocols: MIP4.0 Request-Response, MIP4.0 Publish-Subscribe and MIP4.0 file-based information transfer.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the current situation is received correctly from multiple providers through all three exchange patterns: the Request-Response exchange pattern, the Publish-Subscribe exchange pattern, and the File-Based exchange pattern.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0010MIP4_Request_Response_Exchange_PatternMIP4_File_Based_Exchange_PatternMIP4_Publish_Subscribe_Exchange_Pattern</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Request current situation from Provider 1. </TestCaseStepAction>
+    <TestCaseStepResult>Received response and correctly received current situation data. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Request current situation from Provider 2. </TestCaseStepAction>
+    <TestCaseStepResult>Received response and correctly received current situation data. </TestCaseStepResult>
+    <TestCaseStepDestination>3</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>. . . </TestCaseStepAction>
+    <TestCaseStepResult />
+    <TestCaseStepDestination>...+1</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Request current situation from Provider N. </TestCaseStepAction>
+    <TestCaseStepResult>Current situation transmitted correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>N+1</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Provider 1 sends current situation file. </TestCaseStepAction>
+    <TestCaseStepResult>Provider 1 transmits current situation data correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer receives and interprets current situation file 1. </TestCaseStepAction>
+    <TestCaseStepResult>Current situation data received correctly from Provider 1. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>Provider 2 sends current situation file. </TestCaseStepAction>
+    <TestCaseStepResult>Provider 2 transmits current situation data correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>3</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>8</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer receives and interprets current situation file 2. </TestCaseStepAction>
+    <TestCaseStepResult>Current situation data received correctly from Provider 2. </TestCaseStepResult>
+    <TestCaseStepDestination>3</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>9</TestCaseStepNumber>
+    <TestCaseStepAction>. . . </TestCaseStepAction>
+    <TestCaseStepResult />
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>10</TestCaseStepNumber>
+    <TestCaseStepAction>Provider N sends current situation file. </TestCaseStepAction>
+    <TestCaseStepResult>Provider N transmits current situation data correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>N+1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>11</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer receives and interprets current situation file N. </TestCaseStepAction>
+    <TestCaseStepResult>Current situation data received correctly from Provider N. </TestCaseStepResult>
+    <TestCaseStepDestination>N+1</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>12</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer queries Provider's WS server to obtain WSDL. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives WSDL correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>13</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer queries Provider's WS server at design time (Repository) and/or runtime (Registry, where each Provider has published its WSDL). </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives WSDL correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>14</TestCaseStepNumber>
+    <TestCaseStepAction>Provider shares the WSDL file by appropriate means (email, network folders, etc.) and the Consumer processes it at configuration and/or runtime. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives WSDL correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>15</TestCaseStepNumber>
+    <TestCaseStepAction>Confirm Provider's WSDL file satisfies requirements of Section 8 of MIP4.0_Exchange_Mechanism_Overview_V1.2. and Consumer receives the data correctly. </TestCaseStepAction>
+    <TestCaseStepResult>WSDL file contains all required information and Consumer receives it correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

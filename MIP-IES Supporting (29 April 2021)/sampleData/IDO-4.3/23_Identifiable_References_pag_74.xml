@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<vehicle:Automobile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:battlespaceconceptmetadata="https://mip-interop.org/data/v4.3/BattlespaceConcept/Metadata" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:vehicle="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Vehicle" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>urn:guid:E3DBFD5C-EBB2-11E6-B7BA-592201A7C586</base:ID>
+	<concept:ConceptName>IDT</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata xsi:type="battlespaceconceptmetadata:BattlespaceConceptMetadataType">
+		<conceptmetadata:ConceptMetadataReference>
+			<conceptmetadata:ReferenceRoleCode>IsDescribedIn</conceptmetadata:ReferenceRoleCode>
+			<conceptmetadata:ReferenceCitedResourceRef xsi:nil="true"/>
+			<conceptmetadata:ReferenceCitedResource>
+				<base:ID>urn:guid:792C2DE6-EBB3-11E6-BF41-032301A7C586</base:ID>
+				<concept:ConceptName>IDT</concept:ConceptName>
+				<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+				<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+			</conceptmetadata:ReferenceCitedResource>
+		</conceptmetadata:ConceptMetadataReference>
+		<conceptmetadata:ConceptMetadataReportingData>
+			<conceptmetadata:ReportingDataCategoryCode xsi:nil="true"/>
+			<conceptmetadata:ReportingDataObservationDateTime>2020-04-05T16:53:00Z</conceptmetadata:ReportingDataObservationDateTime>
+			<conceptmetadata:ReportingDataReportingDateTime>2020-04-05T17:06:00Z</conceptmetadata:ReportingDataReportingDateTime>
+			<conceptmetadata:ReportingDataObserver>
+				<conceptmetadata:ObserverName>a</conceptmetadata:ObserverName>
+				<conceptmetadata:ObserverActorReference>
+					<base:ID>urn:guid:F9077F94-EBB2-11E6-AB9D-B42201A7C586</base:ID>
+					<app:SemanticId>MIM:8aa4b4a1-14c4-475b-8b06-79eb05ea6a1f</app:SemanticId>
+					<base:IsLocalIndicator>false</base:IsLocalIndicator>
+				</conceptmetadata:ObserverActorReference>
+			</conceptmetadata:ReportingDataObserver>
+			<conceptmetadata:ReportingDataReporter>
+				<conceptmetadata:ReporterName>Jimmy Newtron</conceptmetadata:ReporterName>
+				<conceptmetadata:ReporterActorReference>
+					<base:ID>urn:guid:F9077F94-EBB2-11E6-AB9D-B42201A7C586</base:ID>
+					<app:SemanticId>MIM:03924031-0e07-4030-a39c-52f0fa816e69</app:SemanticId>
+					<base:IsLocalIndicator>false</base:IsLocalIndicator>
+				</conceptmetadata:ReporterActorReference>
+			</conceptmetadata:ReportingDataReporter>
+		</conceptmetadata:ConceptMetadataReportingData>
+	</battlespaceconcept:BattlespaceConceptMetadata>
+	<materiel:MaterielOperationalStatusCode xsi:nil="true"/>
+</vehicle:Automobile>
+<!--
+Original example
+
+<?xml version="1.0" encoding="utf-16"?>
+<equ:Vehicle>
+    ....
+    <base:BaseMetadata xsi:type="meta:MetadataType">
+       <meta:ReferenceWrapper>        
+            <meta:Reference>
+                <meta:RoleCodeWrapper>
+                     <meta:ReferenceRoleCode>IsDescribedIn</meta:ReferenceRoleCode>
+                </meta:RoleCodeWrapper>
+                <meta:CitedResource>
+                     <base:Uri>urn:guid:792C2DE6-EBB3-11E6-BF41-032301A7C586</base:Uri>
+                     <base:Source>IDT</base:Source>
+                     <base:ComplexType>obj:ObjectType</base:ComplexType>
+                </meta:CitedResource>
+            </meta:Reference>
+        </meta:ReferenceWrapper> 
+        <meta:ReportingDataWrapper>
+            <meta:ReportingData>              
+               <meta:ReporterWrapper>
+                  <meta:Reporter>
+                     <meta:ActorReference>
+                        <base:Uri>urn:guid:F9077F94-EBB2-11E6-AB9D-B42201A7C586</base:Uri>
+                        <base:Source>IDT</base:Source>
+                        <base:ComplexType>unit:ReconnaissanceUnitType</base:ComplexType>
+                     </meta:ActorReference>             
+                  </meta:Reporter>
+               </meta:ReporterWrapper>
+               <meta:ObserverWrapper>
+                    <meta:Observer>
+                        <meta:ActorReference>
+                            <base:Uri>urn:guid:F9077F94-EBB2-11E6-AB9D-B42201A7C586</base:Uri>
+                            <base:Source>IDT</base:Source>
+                            <base:ComplexType>unit:ReconnaissanceUnitType</base:ComplexType>
+                        </meta:ActorReference>
+                    </meta:Observer>
+                </meta:ObserverWrapper>
+            </meta:ReportingData>
+        </meta:ReportingDataWrapper>
+    </base:BaseMetadata>
+    ....
+    <core:IsInstanceIndicator>true</core:IsInstanceIndicator>
+    <core:InstanceType>
+        <base:Uri>urn:guid:E3DBFD5C-EBB2-11E6-B7BA-592201A7C586</base:Uri>
+        <base:Source>IDT</base:Source>
+        <base:ComplexType>equ:VehicleType</base:ComplexType>
+    </core:InstanceType>
+    ....
+</equ:Vehicle>
+
+-->

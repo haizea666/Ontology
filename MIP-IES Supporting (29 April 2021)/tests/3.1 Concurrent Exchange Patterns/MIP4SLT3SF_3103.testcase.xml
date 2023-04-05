@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>3</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Data state changes on the Provider / Producer during initialisation.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to confirm how systems behave when they receive different information via R/R and P/S.</TestCaseObjective>
+  <TestCaseScenario>The Consumer requires a re-synchronisation and hence, sends an initialisation request to the Provider / Producer.The consumer system was already subscribed for notifications to that producer. There are multiple updates on the Producer side in the time between the Request happens and the corresponding Response becomes effective on the Consumer side (both nations' C2IS have completed the exchange of operational data via the R/R EM).</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S, R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>3.6 Initialisation.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>The consumer can process MIP4 content in the presence of Concurrent MIP4 Exchange Patterns, correctly synchronising to the current situation.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Provider / Producer, in the presence of concurrent MIP4 Exchange Patterns and is able to apply it to their system. Write down any arisen problems.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0013.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain valid MIP4 content from the producer via subscription.</TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Process all the MIP4 content on the consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The consumer will successfully process the MIP4 content without error.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The consumer sends an initialisation request (R/R) to synchronise its data with the producer / provider for the topic(s) it is already subscribed to (without terminating the P/S subscription). </TestCaseStepAction>
+    <TestCaseStepResult>At this stage, re-synchronisation initiates. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>There are multiple updates on the Producer side. </TestCaseStepAction>
+    <TestCaseStepResult>The corresponding content will be received (P/S) from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>The consumer system receives the requested data via R/R. </TestCaseStepAction>
+    <TestCaseStepResult>Content will be received into the Consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Process all the MIP4 content on the consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The consumer will successfully process the MIP4 content without error. Notice that part of the data received in step 5 (R/R) later will be older than the ones received in step 4 (P/S).
+Any arisen problems will be written down for feedback. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>The consumer has synchronised its data with the producer / provider for the topic(s) it is subscribed to. </TestCaseStepAction>
+    <TestCaseStepResult>C2IS at the consumer should display the same information as the provider, regarding the topic(s) it has subscribed to.
+At this stage, re-synchronisation is complete. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

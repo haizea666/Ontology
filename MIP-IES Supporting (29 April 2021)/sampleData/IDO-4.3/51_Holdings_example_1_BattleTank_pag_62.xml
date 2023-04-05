@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<weapon:BattleTank xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:weapon="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Weapon" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object"  xsi:schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Weapon BattlespaceConcept.Object.Materiel.Equipment.Weapon.xsd">
+	<base:ID>56165197-4c01-5241-d1f23824cca3e</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<object:ObjectProperty>
+		<base:ID>56165197-4c01-5241-d1f23824cca3e</base:ID>
+		<object:HoldingOperationalQuantityNumber>94</object:HoldingOperationalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>102</object:HoldingTotalQuantityNumber>
+		<object:HoldingPropertyRef xsi:nil="true"/>
+		<object:HoldingProperty xsi:type="weapon:BattleTankType">
+			<base:ID>56165197-4c01-5241-d1f23824cca3e</base:ID>
+			<concept:ConceptName>M2 Bradley IFV</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<materiel:MaterielOperationalStatusCode>Operational</materiel:MaterielOperationalStatusCode>
+			<weapon:BattleTankScalingCode>Medium</weapon:BattleTankScalingCode>
+		</object:HoldingProperty>
+	</object:ObjectProperty>
+	<object:ObjectProperty>
+		<base:ID>56165197-4c01-5241-d1f23824cca3e</base:ID>
+		<object:HoldingOperationalQuantityNumber>55</object:HoldingOperationalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>58</object:HoldingTotalQuantityNumber>
+		<object:HoldingPropertyRef xsi:nil="true"/>
+		<object:HoldingProperty xsi:type="weapon:BattleTankType">
+			<base:ID>56165197-4c01-5241-d1f23824cca3e</base:ID>
+			<concept:ConceptName>M1A1 Abrams MBT</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<materiel:MaterielOperationalStatusCode>Operational</materiel:MaterielOperationalStatusCode>
+			<weapon:BattleTankScalingCode>Heavy</weapon:BattleTankScalingCode>
+		</object:HoldingProperty>
+	</object:ObjectProperty>
+	<materiel:MaterielOperationalStatusCode>NotOperational</materiel:MaterielOperationalStatusCode>
+	<weapon:BattleTankScalingCode>Light</weapon:BattleTankScalingCode>
+</weapon:BattleTank>

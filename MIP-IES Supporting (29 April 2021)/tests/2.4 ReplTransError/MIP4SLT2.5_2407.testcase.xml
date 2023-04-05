@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>24</TestCaseIdGroup>
+    <TestCaseIdNumber>7</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Implicit Value-Ranges - Invalid Domain Value Range</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Check if the systems verifies the number ranges according MIM attributes minInclusive, minExclusive, maxInclusive, maxExclusive</TestCaseObjective>
+  <TestCaseScenario>Send objects with values greater or smaller as the defined range according MIM attributes .</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. </TestCasePreCondition>
+  <TestCaseInput>MIP4SLT2.5_2407_x</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success the Gateway remains stable and handles all messages correctly.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2407_a into their C2 system (2) through the TT (1).
+This file includes a radiological event with value -1 for an attribute with minIncl=0  according MIM.</TestCaseStepAction>
+    <TestCaseStepResult>The system reports correctly the invalid value.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2407_b into their C2 system (2) through the TT (1).
+This file includes a radiological event with value 101 for an attribute with maxIncl=100  according MIM.</TestCaseStepAction>
+    <TestCaseStepResult>The system reports correctly the invalid value.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2407_c into their C2 system (2) through the TT (1).
+This file includes a radiological event with value 100 for an attribute with maxIncl=100  according MIM.</TestCaseStepAction>
+    <TestCaseStepResult>The system displays correctly the object.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2407_d into their C2 system (2) through the TT (1).
+This file includes a radiological event with value 0 for an attribute with minIncl=0  according MIM.</TestCaseStepAction>
+    <TestCaseStepResult>The system displays correctly the object.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2407_e into their C2 system (2) through the TT (1).
+This file includes a nuclear weapon event with value 0 for an attribute with minExcl=0  according MIM.</TestCaseStepAction>
+    <TestCaseStepResult>The system reports correctly the invalid value.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2407_f into their C2 system (2) through the TT (1).
+This file includes an instrument landing system with value 180 for an attribute with maxExcl=180  according MIM.</TestCaseStepAction>
+    <TestCaseStepResult>The system reports correctly the invalid value.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

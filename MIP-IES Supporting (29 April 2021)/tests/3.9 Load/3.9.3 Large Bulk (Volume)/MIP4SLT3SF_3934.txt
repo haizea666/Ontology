@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT3SF_3934Test TitleReceive Message Element that exceeds size limit.Execution Priority1ObjectiveThe objective of this test is to assess the ability of consumers and producers to handle large data volumes (quantity checking).ScenarioA Producer/Provider publishes / responds with a MIP4 (syntactically) valid message (Message Element) that exceeds the MIP4 Message size limit. The Consumer receives and processes it into their system, being able to capture the issue with no error.EnvironmentInternet or Co-located. Exchange Pattern: All.Participation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionConsumers and producers can handle large and complex MIP4 data volumes.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0017.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Produce a MIP4 (syntactically) valid Message Element that exceeds the MIP4 Message size limit.
+An open question is what that MIP4 Message size limit is. A trial exceeded found quota for ADEM R/R client has been 65,536 bytes, resulting in having to put a limit below it at the provider side. This figure might be used within MIP4 as a starter. ~~The producer/provider publishes a MIP4 valid message that exceeds the MIP4 Message size limit or is ready to respond with it or send it as a file to the consumer. ~~122. Obtain the MIP4 valid message that exceeds the MIP4 Message size limit. ~~Content will be received from the producer/provider. ~~123. Process the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

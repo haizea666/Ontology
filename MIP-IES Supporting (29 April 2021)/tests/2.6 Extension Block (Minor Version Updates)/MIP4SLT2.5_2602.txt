@@ -1,0 +1,23 @@
+Test description
+
+Test IDMIP4SLT2.5_2602Test TitleExtension compatibility received data correlation testExecution Priority0 ("high risk" aspect)ObjectiveTo confirm the ability of the systems to handle the receipt of a message where the schema has been extended (using the Extension Block) with additional information, but the namespace of the schema remains unchanged. Ideally, all systems will be able to receive these messages, even if they are not capable of interpreting the extension.ScenarioA dataset with one or more objects that have extended data is loaded with the Test Tool (TT) in a C2 system from, that does not support the extended data. Extended properties might be processed differently by the receiving gateway, but this should be no reason for errors. The data is transferred back to the TT through either R/R or P/S protocol. The received data in the TT is logged and compared with the original data. If the systems work correct the Minimum Required Set Of Properties (MRSOP) is transferred correctly. The optimum result would be the extended properties being sent back to the TT, with no modification.EnvironmentCo-located, Internet through VPN.Participation1MTRSPre-test ConditionsThe nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. The Gateway is configured with the elements from the nationality code list contained in dataset_2602x.Test InputsDataset_2602x.ConclusionThis test is considered a success the Gateway remains stable and handles all messages correctly. Preferably the objects are displayed at the nations C2 system with correct information as far as understood by it.Test OutputsPass or fail.TraceabilityREQ_SYS_0011
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The nation loads dataset_2602a into their C2 system (2) through the TT (1).~~Objects visible in the C2 system correctly though extended data are ignored.~~122. The data is transferred back to the TT (1) through either R/R or P/S.~~The data is received in the TT, resulting in a data file.~~213. Compare the processed logged data at the TT with the original dataset_2602.~~The MRSOP are transferred and the values are the same as in the original dataset_2602. Optimally, the extended properties are back in the TT, with no modification.
+Notice: Test result not clearly specified, as there are multiple possible outcomes.~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

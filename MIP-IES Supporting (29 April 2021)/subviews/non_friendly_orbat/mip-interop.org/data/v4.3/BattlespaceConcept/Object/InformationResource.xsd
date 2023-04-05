@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:informationresource="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:simpleType name="InformationResourceLifecycleCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The state of an InformationResource in its lifecycle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6f837fe8-0202-4ee8-bc16-d00ec2066e06</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Draft">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource has been produced in a preliminary version.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a930ef28-ed21-4a11-93a5-add04803f428</app:SemanticID>
+            <app:DisplayName>Draft</app:DisplayName>
+            <app:PhysicalName>DRAFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Final">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource has been produced in a completed version.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1028693b-7e3c-40e1-9fd4-c02d6c107f42</app:SemanticID>
+            <app:DisplayName>Final</app:DisplayName>
+            <app:PhysicalName>FINAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Obsolete">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is no longer valid.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:29036ddb-fbd4-4735-a941-c3f780bdc923</app:SemanticID>
+            <app:DisplayName>Obsolete</app:DisplayName>
+            <app:PhysicalName>OBSLTE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

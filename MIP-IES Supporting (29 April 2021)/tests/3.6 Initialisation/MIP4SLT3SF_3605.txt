@@ -1,0 +1,32 @@
+Test description
+
+Test IDMIP4SLT3SF_3605Test TitleStandard time zone and time.Execution Priority1ObjectiveTo verify that the system is able to perform time adjustment in order to be synchronised with the other systems. All exchanged data in the MIP solution concerning date and time must be measured using Coordinated Universal Time (UTC) ISO 8601:2000 as a standard of reference, constrained to "zero meridian" i.e. 'Zulu' (GMT) time zone only.ScenarioOfficial time synchronisation will be done.EnvironmentCo-located. Exchange Pattern: AllParticipation2MTRSPre-test ConditionsNations have joined the MIP network. Nation A and B connect and subscribe to each other topic(s). Nation A and B are synchronised with regard to operational data.Test InputsN/AConclusionMIP Gateways process time-related-data correctly and reports are not interpreted as being 'future' reports because the sender's system clock is running ahead of the receiver's clock.Test OutputsN/ATraceabilityREQ_SYS_0005
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A and Nation B synchronise their time on system servers, using a common official time source established for the operation (e.g. by using GPS time, a time service, 'synchronise watch' procedure, etc.)
+
+Comment
+During MIP Block 2 testing, some nations did not process data correctly because their systems did not have synchronised system clocks.
+If a national system is configured to use a time zone other than UTC (e.g. if the system operates in local time), it is a national implementation responsibility to convert all times to/from UTC when communicating via a MIP exchange interface. ~~A common official time source is established for both nations. The date and time zone information stored in the national MIP data base is transferred in Zulu time when sending data via a MIP exchange interface. ~~1,22. Nation A and B create and exchange current time-related -data (e. g. updating current locations of organisations).
+(This can be checked when performing other arbitrary test cases between Nation A and Nation B). ~~A.  Time data exchanged between Nations A and B shall be stored in Zulu time i.e. check exchanged files / messages for exchanged time data.
+B.  Time data in the database of Nations A and B shall be stored in Zulu time for all time fields, i.e. check the field corresponding to the message element 'ReportingDateTime' in the national MIP data base.
+Neither Nation A nor Nation B interprets the received data as being in the future / past. ~~1,22,1
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

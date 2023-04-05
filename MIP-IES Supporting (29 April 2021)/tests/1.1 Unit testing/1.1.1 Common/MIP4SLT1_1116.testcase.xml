@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>16</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Compressed HTTP Reception behavioural check</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is to check the behaviour of compressed HTTP reception at the Consumer</TestCaseObjective>
+  <TestCaseScenario>The Consumer is interested (for instance) in retrieving the list of Topic expressions supported by the Producer, which will answer using compressed HTTP</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S and R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1112Both Consumer and Producer systems conform to either MIP4.0 Publish/Subscribe Exchange Pattern Specification or MIP4.0 Request/Response Exchange Pattern Specification or both.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer has received a list of Topic expressions over compressed HTTP. The list should be conformed to OASIS Topic specification.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0011.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The consumer sends a request for the list of dialect to the GetResourceProperty service of the producer. Requested property is :
+&lt;rp:GetResourceProperty&gt;
+b2:TopicExpression
+&lt;/rp:GetResourceProperty&gt; </TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request for resource properties using b2:TopicExpression </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer sends the topic expressions it supports (over compressed HTTP). </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the requested list of topic expressions. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

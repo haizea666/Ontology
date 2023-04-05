@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:conceptmetadata2="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:confidentialitylabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/Concept/Metadata" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" />
+  <xsd:import schemaLocation="https://nmrr.nc3a.nato.int/rest/doc/NATO/Information%20Assurance/OLP/nl-cl.xsd" namespace="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="ConceptMetadataCommentText" type="conceptmetadata2:ConceptMetadataCommentTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Remarks that provide additional free-text information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510</app:SemanticID>
+        <app:ShortName>commentText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>comment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ConceptMetadataCommentTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Remarks that provide additional free-text information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510</app:SemanticID>
+        <app:ShortName>commentText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>comment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ConceptMetadataOriginatorConfidentialityLabel" type="confidentialitylabel:ConfidentialityLabelType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The confidentiality label which the originator associated with the information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b54971bc-6194-4c53-9732-cb3fe01d4939</app:SemanticID>
+        <app:ShortName>originatorConfidentialityLabel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>originator confidentiality label</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataValidityTimePeriod" type="generic:TimePeriodType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The effective date and time of the information characterised by the Metadata.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b65e94c0-26ba-40d8-ae78-7749295f1dcb</app:SemanticID>
+        <app:ShortName>validityTimePeriod</app:ShortName>
+        <app:Remarks>Multiple time periods may be specified to indicate a discontinued time period of validity.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>validity time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Originator" type="conceptmetadata2:OriginatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that creates or provides information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c414dc6d-a7fd-4dc4-a39b-57af8a014e17</app:SemanticID>
+        <app:DisplayName>Originator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OriginatorActorReference" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to the actual Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d63c07a6-cbe5-4bcd-947a-252a4a731aff</app:SemanticID>
+        <app:ShortName>actorReference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>actor Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OriginatorName" type="conceptmetadata2:OriginatorNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Originator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cd7c0057-421e-4031-9651-d778c00426a6</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OriginatorNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Originator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cd7c0057-421e-4031-9651-d778c00426a6</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OriginatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that creates or provides information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c414dc6d-a7fd-4dc4-a39b-57af8a014e17</app:SemanticID>
+        <app:DisplayName>Originator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata2:OriginatorName" />
+          <xsd:element ref="conceptmetadata2:OriginatorActorReference" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

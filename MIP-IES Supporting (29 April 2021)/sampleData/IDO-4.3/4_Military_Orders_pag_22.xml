@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:app="https://mip-interop.org/xsds/data/v4.3/BattlespaceConcept/Object/Actor/Person.xsd">
+	<xsd:enumeration value="MilitaryOrders">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The Person is identified by military orders.</xsd:documentation>
+			<xsd:appinfo>
+				<app:SemanticId>MIM:a23a8925-ee19-4d93-90d4-3f6a3d3af265</app:SemanticId>
+				<app:ValueOrNilReason>1</app:ValueOrNilReason>
+				<app:DisplayName>Military orders</app:DisplayName>
+				<app:PhysicalName>MILORD</app:PhysicalName>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:enumeration>
+</xsd:schema>
+
+<!--
+Original example
+
+<xsd:schema xmlns:app="https://mip-interop.org/xsds/2017/05/12/AppInfo"  ...>
+
+    <xsd:element name="MilitaryOrders" type="tns:MilitaryOrdersType" nillable="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Person is identified by military orders.</xsd:documentation>
+            <xsd:appinfo>
+                <app:SemanticId>MIM:a23a8925-ee19-4d93-90d4-3f6a3d3af265</app:SemanticId>
+            </xsd:appinfo>
+        </xsd:annotation>
+    </xsd:element>
+
+</xsd:schema>
+
+-->

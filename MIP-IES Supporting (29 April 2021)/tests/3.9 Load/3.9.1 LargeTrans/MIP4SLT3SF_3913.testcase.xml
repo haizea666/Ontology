@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>39</TestCaseIdGroup>
+    <TestCaseIdNumber>13</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>8MB.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability of consumers and producers to handle large MIP4 payloads and messages (quantity checking).</TestCaseObjective>
+  <TestCaseScenario>A Producer/Provider publishes / responds with one / multiple MIP4 valid messages making a particular size. The Consumer receives and processes them into their system.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: All.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>Consumers and producers can handle large MIP4 payloads and messages.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0017.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Produce one valid 8MB MIP4 message or a set of them, making together an 8MB size (27K MIP4 typical messages roughly). </TestCaseStepAction>
+    <TestCaseStepResult>The producer/provider publishes an 8MB sequence of valid MIP4 messages or is ready to respond them or send them as a file to the consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain the valid 8MB MIP4 content from the producer, all together once and for all.</TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the producer/provider. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Process all together once and for all, the 8MB MIP4 content on the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully process the MIP4 content without error. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

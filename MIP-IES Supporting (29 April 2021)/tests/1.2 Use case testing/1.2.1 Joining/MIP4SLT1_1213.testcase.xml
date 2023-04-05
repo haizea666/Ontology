@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>13</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>The Producer service description (WSDL) shall comply withthe minimum specified for compliance with WS-I BasicProfile 1.1.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The purpose is to verify that the service description (WSDL) of the producer conforms to the desired subset of the WSDL and SOAP specifications.</TestCaseObjective>
+  <TestCaseScenario>After acquiring the producer's service description (WSDL)examine it for conformance with the desirable aspects of theWS-I Basic Profile 1.1.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1212</TestCasePreCondition>
+  <TestCaseInput>The producer's service description (WSDL) and related included and imported artefacts.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the producer's service description(WSDL) is verified to conform to the desirable aspects of theWS-I Basic Profile 1.1.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the producer's service description (WSDL)conforms to the desirable aspects of the WS-I Basic Profile1.1.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the binding style specified for each binding relating to an MIP4 PortType. </TestCaseStepAction>
+    <TestCaseStepResult>The binding style is specified as 'document'. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the binding transport specified for each binding relating to an MIP4 PortType. </TestCaseStepAction>
+    <TestCaseStepResult>The binding transport is specified as 'http://schemas.xmlsoap.org/soap/http'. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the operation style specified for each binding related to an MIP4 PortType. </TestCaseStepAction>
+    <TestCaseStepResult>The operation style is specified as 'document'. Note: If the attribute is not specified directly, it defaults to the value specified in the soap:binding element. If the soap:binding element does not specify a style, it is assumed to be "document". </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) for to determine the input and output body style specified for each binging related to an MIP4 PortType. </TestCaseStepAction>
+    <TestCaseStepResult>The body style is specified as 'literal'. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the specified port names associated with the defined service. </TestCaseStepAction>
+    <TestCaseStepResult>The port names within the defined service are unique. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the port address location associated with each port. </TestCaseStepAction>
+    <TestCaseStepResult>The port address location will be specified and contain a valid URL. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

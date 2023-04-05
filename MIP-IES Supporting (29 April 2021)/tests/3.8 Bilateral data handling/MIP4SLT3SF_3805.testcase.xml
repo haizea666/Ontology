@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>38</TestCaseIdGroup>
+    <TestCaseIdNumber>5</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Reporting BSO position when position is unknown.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To verify that a national MIP solution does not add a position to an object when the position is not known. It is incorrect (and misleading) to knowingly report false information. Systems are expected to set unknown objects to an "undefined" location if a location has already been set before.</TestCaseObjective>
+  <TestCaseScenario>Two nations, linked with their C2IS, exchange objects without locations. Afterwards a location is set and finally updated by sending an undefined location.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: P/S, R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has a topic. Nation B has a subscription to Nation A's topic.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is passed if Nation A publishes / provides BSOs without locations and undefined locations. Nation B receives them and does not add locations and can handle the undefined locations in a proper way.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0009</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds BSOs to the topic without a location.
+Notice: "Undefined location" was a reserved term in the JC3IEDM documentation but it does not exist within the MIM. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the objects and checks that the BSOs do not have a location. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds locations to the objects and sends the update. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the update and shows the BSOs at the locations as defined by Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A sets the locations to undefined and sends the update. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the update and checks that the BSOs have undefined locations. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

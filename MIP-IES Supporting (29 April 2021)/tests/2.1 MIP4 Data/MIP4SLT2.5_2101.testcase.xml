@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>21</TestCaseIdGroup>
+    <TestCaseIdNumber>1</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Received data correlation test.</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>To check if a prepared set of data is correctly send from A to B.</TestCaseObjective>
+  <TestCaseScenario>A dataset is loaded with the Test Tool (TT) in the C2 system from the nation. The data is transferred back to the TT through either R/R or P/S protocol. The received data in the TT is logged and compared with the original data. If the systems work correctly, at least the IDT Schemas Mandatory Elements are transferred correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nation and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport.</TestCasePreCondition>
+  <TestCaseInput>Dataset_2101.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the data received by the TT at least has the Mandatory Elements filled with the same data as in the test data set. Additional data might be omitted.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>REQ_TST_0001, REQ_TST_0002, REQ_TST_0003</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2101 into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Objects visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The data is transferred to the TT (1) through either R/R or P/S. </TestCaseStepAction>
+    <TestCaseStepResult>The data is received in the TT, resulting in a data file. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Compare the processed logged data at the TT with the original dataset_2101.</TestCaseStepAction>
+    <TestCaseStepResult>The Mandatory Elements are transferred and the values are the same as in the original dataset_2101.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

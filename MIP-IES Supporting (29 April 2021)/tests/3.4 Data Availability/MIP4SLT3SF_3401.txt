@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3401Test TitleSchema content without effective date time start or end.Execution Priority1ObjectiveThe objective of this test is to assess the ability to process MIP4 payloads without effective date time start or end, indicating if the content is applicable or not to the Current Situation.ScenarioA Consumer receives MIP4 schema without effective date time start or end and processes it into their system.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S, FileParticipation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe consumer can process MIP4 schema without effective date time start or end.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0010, REQ_SYS_0015.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain a MIP4 schema without effective date time start or end, from the producer. ~~Content will be received from the Producer. ~~122. Process all the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error, and indicates if it is applicable or not to the Current Situation. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

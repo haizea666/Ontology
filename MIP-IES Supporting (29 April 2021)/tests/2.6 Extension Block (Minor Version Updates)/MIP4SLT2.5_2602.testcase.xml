@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>26</TestCaseIdGroup>
+    <TestCaseIdNumber>2</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Extension compatibility received data correlation test</TestCaseTitle>
+  <TestCaseExecutionPriority>0</TestCaseExecutionPriority>
+  <TestCaseObjective>To confirm the ability of the systems to handle the receipt of a message where the schema has been extended (using the Extension Block) with additional information, but the namespace of the schema remains unchanged. Ideally, all systems will be able to receive these messages, even if they are not capable of interpreting the extension.</TestCaseObjective>
+  <TestCaseScenario>A dataset with one or more objects that have extended data is loaded with the Test Tool (TT) in a C2 system from, that does not support the extended data. Extended properties might be processed differently by the receiving gateway, but this should be no reason for errors. The data is transferred back to the TT through either R/R or P/S protocol. The received data in the TT is logged and compared with the original data. If the systems work correct the Minimum Required Set Of Properties (MRSOP) is transferred correctly. The optimum result would be the extended properties being sent back to the TT, with no modification.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. The Gateway is configured with the elements from the nationality code list contained in dataset_2602x.</TestCasePreCondition>
+  <TestCaseInput>Dataset_2602x.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success the Gateway remains stable and handles all messages correctly. Preferably the objects are displayed at the nations C2 system with correct information as far as understood by it.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0011</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2602a into their C2 system (2) through the TT (1).</TestCaseStepAction>
+    <TestCaseStepResult>Objects visible in the C2 system correctly though extended data are ignored.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The data is transferred back to the TT (1) through either R/R or P/S.</TestCaseStepAction>
+    <TestCaseStepResult>The data is received in the TT, resulting in a data file.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Compare the processed logged data at the TT with the original dataset_2602.</TestCaseStepAction>
+    <TestCaseStepResult>The MRSOP are transferred and the values are the same as in the original dataset_2602. Optimally, the extended properties are back in the TT, with no modification.
+Notice: Test result not clearly specified, as there are multiple possible outcomes.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

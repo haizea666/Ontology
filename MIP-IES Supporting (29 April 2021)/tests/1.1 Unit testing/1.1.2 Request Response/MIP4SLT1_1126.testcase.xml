@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>26</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Retrieve items using a filter on bounding box.  Bounding box contains items</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To retrieve items using a filter on a bounding box where the bounding box contains items</TestCaseObjective>
+  <TestCaseScenario>Test to be derived with (bounding box "contains" items). The requestor must provide a valid bounding box.There must be at least one valid entity contained within the valid bounding box.'Retrieve' is the term used within MIP Information Exchange Specification (MIP IES) - REQUEST/RESPONSE EXCHANGE PATTERN.
+Notice: There is 'TopicExpression' yet not 'ConcreteTopicExpression' within MIP4.0- REQUEST/RESPONSE EXCHANGE PATTERN - IPT4V0.1.2, not even the term 'Concrete' is once found. EMT: Please assess</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1214, MIP4SLT1_1213
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+
+The Provider should confirm that his system contains at least one valid entity within the bounding box which the Consumer is going to provide for the test.</TestCasePreCondition>
+  <TestCaseInput>A valid bounding box to use as filter criterion.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the Consumer system is able to correctly receive all information associated with the items contained within the specified bounding box, over a request-response exchange. The Provider must identify contained items which lie within the bounding box specified by the Consumer.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the information associated with the specified bounding box is received correctly. The set of information contained within the bounding box must not be empty.</TestCaseOutput>
+  <TestCaseTraceability>MIP4_Request_Response_Exchange_Pattern, REQ_SYS_0021, REQ_EM_0012</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (1) requests information about items contained within a bounding box from the Provider (2) using a Request/Response exchange. </TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets request correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Provider sends requested information (whether bounding box "contains" items; bounding box does not "contain" items). Consumer receives and interprets requested data correctly. For this test, the bounding box must contain at least one item. </TestCaseStepAction>
+    <TestCaseStepResult>Requested data is received and interpreted correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

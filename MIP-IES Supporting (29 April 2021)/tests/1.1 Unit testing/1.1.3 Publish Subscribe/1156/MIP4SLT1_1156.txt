@@ -1,0 +1,35 @@
+Test description
+
+Test IDMIP4SLT1_1156Test TitleNotify multiple consumers with overlapping subscriptionsExecution Priority1ObjectiveThe objective is for the Producer to notify the Consumers of updates to the Current Situation according to the filtering criteria provided on overlapping subscriptions.ScenarioThe Consumers receive notifications from the Producer matching the current subscriptions. Test to be derived on multiple kinds of subscriptions (topic, geographical filter, sources) and shapes.This test case requires more than 2 participants (multi-node test).EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation3 or moreMTRSN/APre-test ConditionsMIP4.0_Publish_Subscribe_Exchange_Pattern, MIP4SLT1_1130, MIP4SLT1_1131, MIP4SLT1_1154.
+ 
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumers and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.
+Consumers successfully discovered the target Producer.  The systems on the Consumer sides have been properly configured and are ready to interact with the Producer system.Test InputsN/A.ConclusionThe test is concluded after the Consumers receive notifications published to the given topic / geographical / source filters, from the Producer.Test OutputsN/A.TraceabilityREQ_EM_0008, REQ_EM_0010, REQ_SYS_0016, REQ_SYS_0021
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Consumers (1, 3) subscribe to the Producer (2) in order to advertise their interest in a subset of the data space. ~~The Producer receives  valid requests for resource properties ~~1,322. Producer sends the topics requested to the Consumers. ~~Consumers receive the requested topics. ~~21,33. The Consumers process the list of exposed topics, prepare their filter set, and request their overlapping subscriptions on multiple topics to the Producer. 
+Notice: the overlap must be two-dimesional:
+* Subscriptions from a single Consumer overlap (some data shared by different topics)
+* Subscriptions to the same topic from different Consumers ~~Producer receives overlapping subscription requests for multiple topics. ~~1,324. Producer accepts the subscription requests.
+
+Producer checks subscription filters and determines if data match specified filters.  If they do, the Producer sends a wsn-b:Notify to the address specified in the wsn-b:ConsumerReference for EACH matching subscription and Consumer. 
+
+Notice: Matching data must not be sent more than once to a single Consumer in case of overlapping subscriptions for that consumer. ~~The Producer sends notifications to the Consumers.
+
+The Consumers process the data contained in the messages. ~~21,35. Consumers unsubscribe using wsn-b:Unsubscribe operation with the SubscriptionReference issued from the initial Subscribe responses. ~~Producer destroys the corresponding subscriptions. ~~1,326. Repeat steps 1 to 5 for geographical, source and / or any other kind of subscription filters that should be tested. ~~Corresponding results in 1 to 5 for geographical, source and / or any other kind of subscription filter. ~~
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

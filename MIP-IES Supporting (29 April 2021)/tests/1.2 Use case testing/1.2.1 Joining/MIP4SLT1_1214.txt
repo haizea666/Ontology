@@ -1,0 +1,27 @@
+Test description
+
+Test IDMIP4SLT1_1214Test TitleVerify that the Producer`s service description (WSDL) contains the required WS-Addressing operations to meet the minimum required functionality of the MIP4 Request / Response service.Execution Priority1ObjectiveThe purpose is to verify that the producer's service description (WSDL) implements at least the minimum level of required functionality for Request / Response.ScenarioAfter acquiring the producer's service description (WSDL), examine it to determine that the minimum required functionality is provided.EnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1212Test InputsThe producer's service description (WSDL) and related included and imported artefacts.ConclusionThe test is completed when the producer's service description
+(WSDL) is verified to contain the minimum required
+functionality described through WS-Addressing operations.Test OutputsVerification that the required operations are implemented.TraceabilityREQ_EM_0004
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Examine the producer's service description (WSDL) to determine the operations associated with the MIP4 PortTypes (through port binding) and associated with the defined service. ~~The defined service will contain at least the following required operations for the exchange pattern:
+* http://docs.oasis-open.org/wsrf/rpw-2/GetResourceProperty/GetResourcePropertyRequest
+* http://mip-interop.org/wsdls/MIP4/MIPRequestResponse/GetItemsRequest (will be changed with WSMP) ~~
+12
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<staffconceptorganisationstructure:OrganisationStructureRootOrganisation xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:staffconceptorganisationstructure="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd" xsi:type="unit:InfantryUnitType">
+	<base:ID>92f6f338-42a4-4bd4-9182-2acc1848bbcd</base:ID>
+	<concept:ConceptName>ALPHA</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<organisation:OrganisationHasCommandFunctionIndicator>false</organisation:OrganisationHasCommandFunctionIndicator>
+	<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+	<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+		<object:ArmyEchelonCode>Brigade</object:ArmyEchelonCode>
+	</unit:UnitEchelon>
+	<unit:UnitFormalAbbreviatedName>ALPHA</unit:UnitFormalAbbreviatedName>
+</staffconceptorganisationstructure:OrganisationStructureRootOrganisation>
+
+<!--
+Original example
+
+<orgstruct:RootOrganisationWrapper>
+	<orgstruct:Unit xsi:type ="orgstruct:InfantryUnitType">
+		<Uri>92f6f338-42a4-4bd4-9182-2acc1848bbcd</Uri>
+		<core:NameWrapper>
+			<core:Name>ALPHA</core:Name>
+		</core:NameWrapper>
+		<org:HasCommandFunctionIndicatorWrapper>
+			<org:HasCommandFunctionIndicator>false</org:HasCommandFunctionIndicator>
+		</org:HasCommandFunctionIndicatorWrapper>
+		<org:ServiceCodeWrapper>
+			<org:MilitaryOrganisationServiceCode>Army</org:MilitaryOrganisationServiceCode>
+		</org:ServiceCodeWrapper>
+		<unit:FormalAbbreviatedNameWrapper>
+			<unit:FormalAbbreviatedName>ALPHA</unit:FormalAbbreviatedName>
+		</unit:FormalAbbreviatedNameWrapper>
+		<orgstruct:SizeCodeWrapper>
+			<orgstruct:EchelonSizeCode>Brigade</orgstruct:EchelonSizeCode>
+		</orgstruct:SizeCodeWrapper>
+	</orgstruct:Unit>
+</orgstruct:RootOrganisationWrapper>
+-->

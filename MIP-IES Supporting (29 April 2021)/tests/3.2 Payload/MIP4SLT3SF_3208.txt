@@ -1,0 +1,29 @@
+Test description
+
+Test IDMIP4SLT3SF_3208Test TitleHandling of IsDependent indicatorExecution Priority2ObjectiveThe objective of this test is to assess the ability to process the IsDependent indicator.ScenarioA Consumer receives a valid MIP4 payload and processes it into their system.EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 MTRSN/APre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe consumer can process MIP4 payloads properly based on the state of the IsDependent indicator and change of state of the IsDependent indicator.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0023.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain the valid MIP4 content from the producer containing payloads in which the object instance has a IsDependent indicator set to FALSE. ~~Content is received from the Producer. ~~ 122. The Consumer processes the payloads. ~~The Consumer successfully processes the content without error and display the object in the consumer system. ~~213. Obtain the valid MIP4 content from the producer containing payloads in which the object instance has a IsDependent indicator set to TRUE. ~~Content is received from the Producer. ~~124. The Consumer processes the payloads. ~~MIP 4.0 expected behaviour; since there is no association in MIP 4.0, the consumer successfully ignores the content without error and the object is NOT displayed by the consumer system.
+
+MIP 4.1 expected behaviour; the consumer successfully process and display the object instance if all dependencies are present in the payload or are already in their system. If a dependency is missing, the object instance is successfully ignored and NOT displayed by the consumer system. ~~215. Obtain an update of a valid MIP4 content from the producer containing payloads in which the object instance has a change of state from FALSE to TRUE of the IsDependent indicator. ~~Content is received from the Producer. ~~126. The Consumer processes the payloads. ~~MIP 4.0 expected behaviour; since there is no association in MIP 4.0, the consumer successfully ignores the content without error and the displayed object is removed from the display on the consumer system.
+
+MIP 4.1 expected behaviour; successfully process and the object are displayed on the consumer system if all dependencies are present in the payload or are already in their system. If a dependency is missing, the object instance is successfully ignored and object was already displayed it should be remove from the display on the consumer system. ~~217. Obtain an update of a valid MIP4 content from the producer containing payloads in which the object instance has a change of state from TRUE to FALSE of the IsDependent indicator. ~~Content is received from the Producer. ~~128. The Consumer processes the payloads. ~~MIP 4.0 expected behaviour; the consumer successfully processes the content without error and the object is displayed object on the consumer system.
+
+MIP 4.1 expected behaviour; successfully process or update and the object is displayed on the consumer system if all dependencies are present in the payload or are already in their system. If a dependency is missing, the object instance is successfully ignored and object was already displayed it should be remove from the display on the consumer system. ~~21
+
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

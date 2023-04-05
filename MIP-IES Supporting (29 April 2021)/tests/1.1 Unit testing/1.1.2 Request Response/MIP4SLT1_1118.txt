@@ -1,0 +1,32 @@
+Test description
+
+Test IDMIP4SLT1_1118Test TitleRetrieve items using an unsupported filter (from provider's point of view): malformed topic expressionExecution Priority2 (High Priority area)ObjectiveTo retrieve items using a filter on a from the provider malformed topic expression (using a TopicExpression).ScenarioTest of faults (to be derived with "malformed topic expression "). 'Retrieve' is the term used within MIP Information Exchange Specification (MIP IES) - REQUEST/RESPONSE EXCHANGE PATTERN.EnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1214, MIP4SLT1_1213
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Test InputsName of single topic to be testedConclusionThe test is completed when the Consumer system is able to correctly receive all information associated with the topic, i.e. that the topic expression has been malformed at the Provider, over a request-response exchange.Test OutputsVerification that the information associated with the single topic requested is received correctly.TraceabilityMIP4_Request_Response_Exchange_Pattern, REQ_SYS_0021, REQ_EM_0012
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (1) requests information about items contained by a single topic from the Provider (2) using a TopicExpression. ~~Provider receives and interprets request correctly. ~~122. Provider response contains a malformed topic expression.   Consumer receives and interprets requested information correctly. ~~Requested data is received and interpreted correctly (i.e. realizing a malformed topic expression). ~~21Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

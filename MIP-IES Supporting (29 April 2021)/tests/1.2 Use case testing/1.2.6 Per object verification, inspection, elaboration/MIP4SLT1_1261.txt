@@ -1,0 +1,32 @@
+Test description
+
+Test IDMIP4SLT1_1261Test TitleNominal elaboration (duplicates test 11213 and 11214 - should be eliminated)Execution Priority1ObjectiveConsumer retrieves items from their identifiers, in order to enhance the current situation it has already received.ScenarioThe consumer knows the identifier for an item and wishes to obtain more information about that item.  EnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1214
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Test InputsIdentifier for desired item  ConclusionThe test is completed when the consumer system is able to correctly receive all information associated with a single item after using that item's identifier to initiate a request-response exchange. Test OutputsVerification that the information associated with the item requested is received correctly.TraceabilityMIP4_Request_Response_Exchange_Pattern
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (1) requests an item from Provider (2) by specifying item identifier. ~~Provider receives and interprets request correctly. ~~122. Provider sends requested information.   Consumer receives and interprets requested data. ~~Requested data is received and interpreted correctly. ~~213. Consumer requests an item from Provider but specifies invalid item identifier. ~~Provider receives and interprets request correctly. ~~124. Provider sends error message saying identifier is invalid.   Consumer receives and interprets error message and takes appropriate action. ~~Provider rejects request due to invalid identifier. ~~21Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

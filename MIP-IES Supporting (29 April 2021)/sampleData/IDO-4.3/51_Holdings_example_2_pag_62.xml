@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:SignalUnit xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:mobility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Mobility" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:consumablemateriel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/ConsumableMateriel" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:confidentialitymetadatalabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xmlns:networkservice="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/NetworkService" xmlns:actor="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit BattlespaceConcept.Object.Actor.Organisation.Unit.xsd">
+	<base:ID>-</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	 <object:ObjectOrientation xsi:nil="true"/>
+    <object:ObjectVelocity xsi:nil="true"/>
+    <object:ObjectAssignedEstablishmentRef xsi:nil="true"/>
+    <object:ObjectAssignedEstablishment xsi:nil="true"/>
+    <object:ObjectProperty>
+        <base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+        <object:HoldingOperationalQuantityNumber>25</object:HoldingOperationalQuantityNumber>
+        <object:HoldingRequiredTotalQuantityNumber>32</object:HoldingRequiredTotalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>30</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="networkservice:TacticalDataLinkType">
+			<base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+			<concept:ConceptName>Data link radios</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<networkservice:NetworkServiceExchangeClassification>
+				<confidentialitymetadatalabel:ConfidentialityInformation>
+					<confidentialitymetadatalabel:PolicyIdentifier>Unmarked</confidentialitymetadatalabel:PolicyIdentifier>
+					<confidentialitymetadatalabel:Classification>Unmarked</confidentialitymetadatalabel:Classification>
+				</confidentialitymetadatalabel:ConfidentialityInformation>
+				<confidentialitymetadatalabel:CreationDateTime>2019-12-24T10:00:00.000Z</confidentialitymetadatalabel:CreationDateTime>
+			</networkservice:NetworkServiceExchangeClassification>
+			<networkservice:TacticalDataLinkCategoryCode>DataLink16</networkservice:TacticalDataLinkCategoryCode>
+		</object:HoldingProperty>
+    </object:ObjectProperty>
+    <object:ObjectProperty>
+        <base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+        <object:HoldingOperationalQuantityNumber>2</object:HoldingOperationalQuantityNumber>
+        <object:HoldingRequiredTotalQuantityNumber>2</object:HoldingRequiredTotalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>2</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="facility:CommunicationTowerType">
+			<base:ID>c4a997a2-8f3d-4d97-bbe9-2a1fde54f418</base:ID>
+			<concept:ConceptName>Communication Tower</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<facility:FacilityOperationalStatusCode>Operational</facility:FacilityOperationalStatusCode>
+		</object:HoldingProperty>
+    </object:ObjectProperty>
+	<object:ObjectProperty>
+        <base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+        <object:HoldingOperationalQuantityNumber>23</object:HoldingOperationalQuantityNumber>
+        <object:HoldingRequiredTotalQuantityNumber>27</object:HoldingRequiredTotalQuantityNumber>
+        <object:HoldingTotalQuantityNumber>25</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="person:PersonType">
+			<base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+			<concept:ConceptName>Military Personnel</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<person:PersonMilitaryStatusCode>Military</person:PersonMilitaryStatusCode>
+			<person:PersonRank xsi:type="actor:OtherRankType">
+				<actor:OtherRankCode>OR1</actor:OtherRankCode>
+			</person:PersonRank>
+		</object:HoldingProperty>
+    </object:ObjectProperty>
+	<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+	<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+	<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+		<object:ArmyEchelonCode>Battalion</object:ArmyEchelonCode>
+	</unit:UnitEchelon>
+</unit:SignalUnit>

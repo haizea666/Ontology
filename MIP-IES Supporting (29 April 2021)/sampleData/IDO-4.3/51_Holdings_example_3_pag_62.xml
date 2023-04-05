@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facility:Depot xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:mobility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Mobility" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:consumablemateriel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/ConsumableMateriel" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xsi:schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility BattlespaceConcept.Object.Facility.xsd">
+    <base:ID>833399cb-d46f-458c-8db1-79f9eba9b980</base:ID>
+    <concept:ConceptName>Name</concept:ConceptName>
+    <battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+    <battlespaceconcept:BattlespaceConceptMetadata/>
+    <object:ObjectProperty>
+        <base:ID>51975616-014c-4329-bf86-f8f4824cca3e</base:ID>
+        <object:HoldingTotalQuantityNumber>83</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="consumablemateriel:RocketOrMissileType">
+            <base:ID>c4a997a2-8f3d-4d97-bbe9-2a1fde54f418</base:ID>
+            <concept:ConceptName>Rocket</concept:ConceptName>
+            <battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+            <battlespaceconcept:BattlespaceConceptMetadata/>
+            <materiel:MaterielOperationalStatusCode xsi:nil="true"/>
+            <consumablemateriel:RocketOrMissileCategoryCode>Rocket</consumablemateriel:RocketOrMissileCategoryCode>
+        </object:HoldingProperty>
+    </object:ObjectProperty>
+    <object:ObjectProperty>
+        <base:ID>329d0f03-b2f3-4057-b573-298ee1f3446e</base:ID>
+        <object:HoldingRequiredCalculationMethodCode xsi:nil="true"/>
+        <object:HoldingTotalQuantityNumber>41</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="consumablemateriel:RocketOrMissileType">
+            <base:ID>c4a997a2-8f3d-4d97-bbe9-2a1fde54f418</base:ID>
+            <concept:ConceptName>Anti-tank Rocket/Missile</concept:ConceptName>
+            <battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+            <battlespaceconcept:BattlespaceConceptMetadata/>
+            <materiel:MaterielOperationalStatusCode xsi:nil="true"/>
+            <consumablemateriel:RocketOrMissileCategoryCode>AntiTankRocketOrMissile</consumablemateriel:RocketOrMissileCategoryCode>
+        </object:HoldingProperty>
+    </object:ObjectProperty>
+    <object:ObjectProperty>
+        <base:ID>329d0f03-b2f3-4057-b573-298ee1f3446e</base:ID>
+        <object:HoldingRequiredCalculationMethodCode xsi:nil="true"/>
+        <object:HoldingTotalQuantityNumber>27</object:HoldingTotalQuantityNumber>
+        <object:HoldingPropertyRef xsi:nil="true"/>
+        <object:HoldingProperty xsi:type="consumablemateriel:RocketOrMissileType">
+            <base:ID>1caad265-fb03-487c-a96c-d842ccbc7de7</base:ID>
+            <concept:ConceptName>Anti-tank Guided Weapon</concept:ConceptName>
+            <battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+            <battlespaceconcept:BattlespaceConceptMetadata/>
+            <materiel:MaterielOperationalStatusCode xsi:nil="true"/>
+            <consumablemateriel:RocketOrMissileCategoryCode>GuidedMissile</consumablemateriel:RocketOrMissileCategoryCode>
+        </object:HoldingProperty>
+    </object:ObjectProperty>
+    <facility:FacilityOperationalStatusCode>Operational</facility:FacilityOperationalStatusCode>
+</facility:Depot>

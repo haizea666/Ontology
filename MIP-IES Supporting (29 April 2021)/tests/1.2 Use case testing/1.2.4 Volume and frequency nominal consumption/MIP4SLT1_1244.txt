@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT1_1244Test TitleNumerous messages situationExecution Priority1ObjectiveVolumetric quantity checking incorporating OSG analysis for a nominal consumption initial use case.ScenarioThe Producer (A) provides update information to the Consumer as prescribed utilising the P/S EM on a nominal consumption Numerous messages situation (after OSG analysis).EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 or more.MTRSN/APre-test ConditionsMIP4SLT1_1231.
+The Consumer has already achieved initialisation data and requested routine subscription to desired Topics.  Test InputsN/A.ConclusionThis test is considered a success if the Consumer successfully receives update information to which it is subscribed on a nominal consumption numerous messages situation.
+Check volumetric behaviour on both sides, Producer and Consumer. Test OutputsN/A.TraceabilityREQ_EM_0008, REQ_EM_0010
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Producer (1) processes subscription request from Consumer (2) and provides update information as prescribed utilising the Publish/Subscribe exchange mechanism, on a nominal consumption numerous messages situation (A trial exceeded found quota for ADEM R/R client has been 65,536 bytes, resulting in having to put a limit below it at the provider side. but further advice from SME would be needed). ~~Consumer (2) receives updates of subscription data, on a nominal consumption Numerous messages situation. 
+Check and register behaviour for a quantity volumetric analysis, i.e. what happens when the Producer needs to provide numerous messages in a row, exceeding a quota limit as a result of processing a Consumer's subscription. ~~ 12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

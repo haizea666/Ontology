@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Version History
+v1.5.1 (12 Sep 2017): Official release as part of MIP4.0 baseline [ref MSG-DL-26 at MSG20; July 2017].  Details of internal releases removed from Version History.
+v1.6.0 (06 Feb 2020): Updated the schema to reflect the proposed changes to MIP 4.3 Information Definitions and WSMP 1.3.0  
+ -->
+<xsd:schema targetNamespace="https://mip-interop.org/exchange/v4.3/Common" version="1.6.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:common="https://mip-interop.org/exchange/v4.3/Common" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/Base" schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" />
+  <xsd:complexType name="UnhandledItemType">
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence>
+          <xsd:element name="TextualReason" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The character string (optional) representing the reason why a data provider could not handle a given request in a human readable text format.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="Reason" type="common:ItemRequestFailureReasonEx" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The enumerated value that identifies the reason why a data provider could not handle a given request.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="UnhandledItem" type="common:UnhandledItemType" />
+  <xsd:simpleType name="ItemRequestFailureReasonEx">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Extensible enumeration of ItemRequestFailureReason. For reasons of forward compatibility the enumeration can hold xsd:Token values which are not known in the current schema.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:union memberTypes="common:ItemRequestFailureReason xsd:token" />
+  </xsd:simpleType>
+  <xsd:simpleType name="ItemRequestFailureReason">
+    <xsd:annotation>
+      <xsd:documentation>The value that identifies the reason why a data provider could not handle a given request.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="unknownIdentifier">
+        <xsd:annotation>
+          <xsd:documentation>The provider could not handle the request since he does not know the Identifier specified in the request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="processingError">
+        <xsd:annotation>
+          <xsd:documentation>The provider could not handle the request for any other reason. In this case it is advised to also provide the textual reason for the failure.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

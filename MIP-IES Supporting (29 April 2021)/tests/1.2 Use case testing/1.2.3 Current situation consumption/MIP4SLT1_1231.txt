@@ -1,0 +1,23 @@
+Test description
+
+Test IDMIP4SLT1_1231Test TitleNominal ConsumptionExecution Priority1ObjectiveA Consumer receives initialization data on desired Topics through the use of Request - Response exchange pattern. Once received the Consumer requests and receives subscription updates to desired Topics using the Publish/Subscribe exchange pattern.  ScenarioA Consumer requests "start state" Topic information from a Producer prior to subscribing to routine or repeat notifications. This initialization data is achieved through the use of Request/Response exchange pattern. Once received, the Consumer requests routine subscription to desired Topics using the Publish/Subscribe exchange pattern.  EnvironmentInternet or Co-located. Exchange Pattern: R/R and P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has published Topics containing a list of message types that are supported and grouped by functional areas that are relevant to the current deployment scenario. Test InputsN/A.ConclusionThis test is considered a success if the Consumer successfully requests and receives initialization information on the Topics requested through the Request/Response exchange pattern and successfully subscribes to routine updates of the selected Topics through the use of Publish and Subscribe exchange mechanismTest OutputsN/A.TraceabilityREQ_EM_0006, REQ_EM_0008, REQ_EM_0010
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (A) has established and published Topic List with Message Types that are supported for Request/Response and Publish/Subscribe exchange mechanisms. ~~
+Consumer (B) has visibility of the Topics/Message Lists available from the Producer (A) and requests initialisation "start state" information utilizing the Request/Response exchange mechanism. ~~ 122. The Producer (A) receives initialisation request from Consumer (B) and provides "Start State" information requested. ~~Consumer (B) receives initialisation data and requests subscription information from Producer (A) on the same Topic/Message information utilizing Publish/Subscribe exchange mechanism. ~~ 123. Producer (A) processes subscription request from Consumer (B) and provides update information as prescribed utilizing the Publish/Subscribe exchange mechanism. ~~Consumer (B) received updates of subscription data. ~~ 12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

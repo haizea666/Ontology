@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>16</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>?</TestCaseTitle>
+  <TestCaseExecutionPriority>0</TestCaseExecutionPriority>
+  <TestCaseObjective>?</TestCaseObjective>
+  <TestCaseScenario>?</TestCaseScenario>
+  <TestCaseEnvironment>?</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>?</TestCaseMaximumParticipation>
+  <TestCasePreCondition>?</TestCasePreCondition>
+  <TestCaseInput>?</TestCaseInput>
+  <TestCaseConclusion>?</TestCaseConclusion>
+  <TestCaseOutput>?</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

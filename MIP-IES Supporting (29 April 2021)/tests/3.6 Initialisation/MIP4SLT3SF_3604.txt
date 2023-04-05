@@ -1,0 +1,28 @@
+Test description
+
+Test IDMIP4SLT3SF_3604Test TitleHandle duplicate instances.Execution Priority5ObjectiveTo verify that the national C2IS can handle these duplicate instances.
+It must be possible to introduce MIP at any stage in the deployment process. This includes the case when nations have not yet exchanged initial MIP data (initialisation), but already want to create plans and orders that involve BSOs of other nations (e.g. creation of ORBAT, Action Tasks / Action Events and control features, etc.).
+In this case, one nation has to create data that would normally be provided by another nation.  Therefore, when the MIP gateways eventually initialise, this can lead to duplicate instances for plans and orders data.ScenarioThe C2IS of Nations A and B are not connected.  As part of the process of constructing plans and orders for a multilateral deployment, Nation A will create BSOs (organisations, etc.) that are part of the organisation of subordinate Nation B. Both nations then open a connection and Nation B subscribes to a topic from Nation A and creates its own BSOs in its Friendly and Neutral (Forces) topic, as described in the topic received from Nation A.
+Notice: This refers to plans and orders, which are out of MIP4.0 exchange scope.EnvironmentCo-located. Exchange Pattern: P/S, R/RParticipation2MTRSPre-test ConditionsNation A and Nation B are ready to connect their C2IS.Test InputsN/AConclusionThis test is considered a success if both nations are able to correctly handle the duplicate instances of a BSO.Test OutputsN/ATraceabilityREQ_SYS_0004
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates organisations belonging to Nation B in its (Forces) topic. ~~Organisations are created. ~~12. Nation A and B set up connectivity between their C2IS. ~~Nation A and Nation B's C2IS are connected. ~~1,22,13. Nation A sends a list of available topics (including the Forces topic). ~~Nation B is notified that it can subscribe to the topics of Nation A. ~~124. Nation B subscribes to the (Forces) topic of Nation A. ~~Nation B receives the (Forces) topic from Nation A, including the organisations created in Step 1 by Nation A. ~~125. Nation B creates the same organisations as Nation A in its Friendly and Neutral (Forces) topics. ~~No operational issues are experienced by Nation B, which now has duplicate instances of some organisations. ~~26. Nation A subscribes to the Friendly and Neutral (Forces) topic of Nation B and receives the organisations created in this topic by Nation B. ~~No operational issues are experienced by Nation A, which now has duplicate instances of certain organisations. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

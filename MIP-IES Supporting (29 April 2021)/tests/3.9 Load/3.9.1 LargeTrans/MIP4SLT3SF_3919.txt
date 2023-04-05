@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3919Test Title200MB.Execution Priority1ObjectiveThe objective of this test is to assess the ability of consumers and producers to handle large MIP4 payloads and messages (quantity checking).ScenarioA Producer/Provider publishes / responds with one / multiple MIP4 valid messages making a particular size. The Consumer receives and processes them into their system.EnvironmentInternet or Co-located. Exchange Pattern: All.Participation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionConsumers and producers can handle large MIP4 payloads and messages.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0017.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Produce one valid 200MB MIP4 message or a set of them, making together an 200MB size (667K MIP4 typical messages roughly). ~~The producer/provider publishes an 200MB sequence of valid MIP4 messages or is ready to respond them or send them as a file to the consumer. ~~122. Obtain the valid 200MB MIP4 content from the producer, all together once and for all. ~~Content will be received from the producer/provider. ~~123. Process all together once and for all, the 200MB MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error. ~~12
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

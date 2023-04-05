@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+<Object ShortName="PersonType" ObjectName="PersonType" ObjectType="PersonType" LocationType="none" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESPersons" MIPType="ActorType" SemanticId="MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9" >
+<Property0 ShortName="Identifier" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>urn:680733e1-54c3-456d-b21a-a6a3573b0870</Value>
+</Property1>
+<Property1 ShortName="Source" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>IDT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>T</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" DerivedNameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="ClassificationWrapper" SendIfOptional="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationWrapperType" SemanticId="MIM:b54971bc-6194-4c53-9732-cb3fe01d4939" >
+<Value></Value>
+<Property2 ShortName="SecurityClassification" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationType" SemanticId="MIM:7a990bcf-74e4-4b40-afc2-52f5d1eb6c38" >
+<Value></Value>
+<Property3 ShortName="LevelCodeWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationLevelCodeWrapperType" SemanticId="MIM:061f9abf-e545-4441-93a3-9651d74e7888" >
+<Value></Value>
+<Property4 ShortName="SecurityClassificationLevelCode" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="SecurityClassificationLevelCodeType" SemanticId="MIM:abc1cf9a-cbd4-4d75-bb11-2994dd2ee1d7" >
+<Value>Unmarked</Value>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+<Property1 ShortName="CommentTextWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>I think it is a Russian hoax</Value>
+<Property2 ShortName="CommentText" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>Where the f**k are the Yanks</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Reported</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2016-09-20T09:48:00Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2016-09-20T09:49:00Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>C6TJA5HG</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="Extension" SendIfOptional="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/Extension" MIPType="ExtensionType" SemanticId="IDT::Extension" >
+<Value></Value>
+</Property0>
+<Property0 ShortName="IsInstanceIndicator" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="IsInstanceIndicatorType" SemanticId="MIP4IES:e821c670-009a-11e6-a837-0800200c9a66" >
+<Value>true</Value>
+</Property0>
+<Property0 ShortName="HostilityStatusCodeWrapper" SendIfOptional="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="HostilityStatusCodeWrapperType" SemanticId="MIM:b7ad5541-b980-4d50-862b-678f245ab489" >
+<Value></Value>
+<Property1 ShortName="HostilityStatusCode" SendIfOptional="true" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="HostilityStatusCodeType" SemanticId="MIM:d93bfd9f-5279-4fc9-9f56-ed5f21bb5140" >
+<Value>Suspect</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="NameWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameWrapperType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value></Value>
+<Property1 ShortName="Name" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value>Billy Bob</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="GenderCodeWrapper" SendIfOptional="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESPersons" MIPType="GenderCodeWrapperType" SemanticId="MIM:7b345035-3318-411b-8050-fb80719fb3cd" >
+<Value></Value>
+<Property1 ShortName="GenderCode" SendIfOptional="true" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="GenderCodeType" SemanticId="MIM:6213abb0-5605-4806-9be9-7824c6f1c6f8" >
+<Value>Male</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="MilitaryStatusCodeWrapper" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESPersons" MIPType="PersonMilitaryStatusCodeWrapperType" SemanticId="MIM:33bceed7-a859-4d0d-a9b3-e70e161df32f" >
+<Value></Value>
+<Property1 ShortName="PersonMilitaryStatusCode" UserDefined="true" ShowOptionals="true" NameSpace="https://mip-interop.org/xsds/2017/05/12/IESPersons" MIPType="PersonMilitaryStatusCodeType" SemanticId="MIM:9764b3d0-b4ec-4c11-9513-563f4b9987f6" >
+<Value>Civilian</Value>
+</Property1>
+</Property0>
+</Object>
+</TestData>

@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3502Test TitleMIP4 Message Elements breakdown.Execution Priority1ObjectiveTo verify that it is possible to resume operational data exchange between C2ISs after the MIP4 database of one nation (understood as the national database in which the exchanged MIP4 data are stored, whatever kind of database it is) has broken down or has crashed. The time between when the 'crash' occurs and at which operational data-exchange is resumed does not exceed 60 minutes (MTTR).Scenario
+Nation A and Nation B are exchanging operational data between C2IS systems. Nation B's MIP4 database crashes. Nation B is able to restore some backed up data according to national procedures. Nation A and Nation B re-subscribe to each other's Topics, and operational data exchange is resumed. After recovery from the crash, identifiers previously used by Nation B are never re-used.EnvironmentCo-located. Exchange Pattern: P/S, R/RParticipation2MTRSPre-test ConditionsBoth nations have subscribed to all of each other's available Topics. Operational data flows between Nation A and Nation B. This test shall be performed after several other ones to enable Nation A and Nation B to get a minimum of information in their database.
+Nation B is assumed to have its own national recovery procedure enabling to resume from a database 'crash'. The Nation B recovery procedure is turned 'on'.Test InputsN/AConclusionBoth Nation A and Nation B are able to resume operational data exchange via their respective C2ISs.Test OutputsN/ATraceabilityREQ_SYS_0001, REQ_SYS_0002
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A and Nation B are into an operational state, and operational data is being exchanged between Nation A and Nation B (bi-directional, P/S and/or R/R). ~~Gateways are in an operational state and exchange operational data. ~~1,22,12. To simulate a 'crash', Nation B deletes all the tables in its MIP4 database or changes of machine. The crash occurs at time T1. ~~The connections between A and B could be broken or let 'alive' (depending on implementation). ~~23. The operator of Nation A is informed by an alternative means of communication that Nation B's MIP4 database has 'crashed'. The time at which the 'crash' occurs is recorded. ~~Nation A is aware of the situation. ~~214. Nation B proceeds to re-establish its MIP4 database, as per national procedures. Some own data previously sent may be missing. In that later case Nation B has to create new information to recover from the missing own data. In any case, Nation B has to guarantee uniqueness of identifiers. ~~25. Both nations re-establish connection, resynchronise (R/R) and subscribe to all of each other's Topics. ~~Nation A and Nation B are resynchronised with the proper batch or event updates. The time T2 when the resynchronisation process is ended is recorded. It should be such than T2-T1 is less than one hour. ~~1,22,16. Nation A publishes new data (P/S). ~~Nation B receives and displays new data from Nation A. ~~
+127. Nation B publishes new data (P/S). ~~Nation A receives and displays new data from Nation B. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

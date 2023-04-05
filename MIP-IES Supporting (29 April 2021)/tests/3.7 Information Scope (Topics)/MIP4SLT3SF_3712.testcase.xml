@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>12</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Discriminator.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Assess how systems handle BSOs in the same Topic with common Source and URI (attributes 'source' and 'uri'), but different Discriminator (attribute 'discriminator') values.</TestCaseObjective>
+  <TestCaseScenario>The MIP4 specification will need to support multiple concurrent perspectives of the same 'real-world' object, even coming from the same source.
+The 'discriminator' attribute is then used to indicate that the Producer wants to share information about a BSO, but corresponding to different states.
+The Consumer is subscribed to at least one Topic of the Producer.
+One or more BSOs within this Topic will be published and updated sharing 'source' and 'uri' attributes but with different 'discriminator' and different values in other attributes ('Lat' and 'Lon' for its position, for instance).</TestCaseScenario>
+  <TestCaseEnvironment>Internet, co-located.C2ISs have to receive information exchange from Producers regarding selected information that they are concerning about.Exchange Pattern: P/S (simpler), R/R</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>3.6 Initialisation.Appropriate active subscriptions with at least one Topic must be in place. </TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test will show that a recipient C2IS will always be able to identify to which of concurrent perspectives of the same 'real-world' object, the information received for it belongs.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0002, REQ_SYS_0020</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer inserts one or more BSOs in its C2IS, belonging in a topic to which the Consumer is subscribed, sharing 'source' and 'uri' attributes but with different 'discriminator' and different values in other attributes ('Lat' and 'Lon' for their positions, for instance).
+Notices: These steps have been written for the P/S case, but they can also be modified to be carried out via the R/R exchange pattern. </TestCaseStepAction>
+    <TestCaseStepResult>The insertions are automatically received at the Consumer.
+The Consumer is able to identify multiple concurrent perspectives of the same 'real-world' object, even coming from the same source and process them accordingly to its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer updates some attributes of the BSOs with various perspectives created at step 1. </TestCaseStepAction>
+    <TestCaseStepResult>The updates are automatically received at the Consumer.
+The Consumer is able to process them accordingly to its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer and Producer rotate roles. </TestCaseStepAction>
+    <TestCaseStepResult>Repeat steps 1 and 2. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

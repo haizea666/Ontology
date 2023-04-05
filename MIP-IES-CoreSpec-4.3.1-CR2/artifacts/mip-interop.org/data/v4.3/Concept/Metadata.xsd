@@ -1,0 +1,1958 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:address="https://mip-interop.org/data/v4.3/BattlespaceConcept/Address" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:confidentialitylabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:informationresource="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/Concept/Metadata" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Address.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Address" />
+  <xsd:import schemaLocation="https://nmrr.nc3a.nato.int/rest/doc/NATO/Information%20Assurance/OLP/nl-cl.xsd" namespace="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:complexType name="AppraisalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A general assessment of information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:13132574-a1dd-4d4d-87b9-e870613613ae</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Appraisal</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ConceptMetadataAlternativeConfidentialityLabel" type="confidentialitylabel:ConfidentialityLabelType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An equivalent representation, in an alternative policy, of the originator confidentiality label.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c47aff19-f80b-4a8e-9bb9-4afa65c95fdd</app:SemanticID>
+        <app:ShortName>alternativeConfidentialityLabel</app:ShortName>
+        <app:Remarks>An alternativeConfidentialityLabel is assigned to an information item when that item is shared across boundaries that have different Governing Security Policies. E.g., it is applied when an information item is introduced into NATO from a non-NATO nation or international organisation(s). In that case, the originatorConfidentialityLabel will include the nation or external entity label information and the alternative confidentiality label will include the NATO equivalent.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>alternative confidentiality label</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataAppraisal" type="conceptmetadata:AppraisalType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general assessment of the information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:efcf8a49-9945-42c3-a35c-e3a645f626b1</app:SemanticID>
+        <app:ShortName>appraisal</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>appraisal</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataCommentText" type="conceptmetadata:ConceptMetadataCommentTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Remarks that provide additional free-text information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510</app:SemanticID>
+        <app:ShortName>commentText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>comment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ConceptMetadataCommentTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Remarks that provide additional free-text information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510</app:SemanticID>
+        <app:ShortName>commentText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>comment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ConceptMetadataCorrelation" type="conceptmetadata:CorrelationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The correlation of raw intelligence information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:07b7ee43-278f-434e-af32-5180c76b6763</app:SemanticID>
+        <app:ShortName>correlation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>correlation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataMetadataConfidentialityLabel" type="confidentialitylabel:ConfidentialityLabelType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The confidentiality label that is assigned to metadata associated with the information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1ab841f3-ea4b-4f67-b905-11dc50eec391</app:SemanticID>
+        <app:ShortName>metadataConfidentialityLabel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>metadata confidentiality label</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataModificationDateTime" type="conceptmetadata:ConceptMetadataModificationDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The points in time at which information about the Concept was changed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7f75aa27-7d1b-4f91-b506-84b4ba81c16a</app:SemanticID>
+        <app:ShortName>modificationDateTime</app:ShortName>
+        <app:Remarks>Modified dates may be used to record either all instances of modification or only the latest. When only one modified date is recorded, it is assumed to be the latest.</app:Remarks>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>modification date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ConceptMetadataModificationDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The points in time at which information about the Concept was changed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7f75aa27-7d1b-4f91-b506-84b4ba81c16a</app:SemanticID>
+        <app:ShortName>modificationDateTime</app:ShortName>
+        <app:Remarks>Modified dates may be used to record either all instances of modification or only the latest. When only one modified date is recorded, it is assumed to be the latest.</app:Remarks>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>modification date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="ConceptMetadataOriginatorConfidentialityLabel" type="confidentialitylabel:ConfidentialityLabelType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The confidentiality label which the originator associated with the information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b54971bc-6194-4c53-9732-cb3fe01d4939</app:SemanticID>
+        <app:ShortName>originatorConfidentialityLabel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>originator confidentiality label</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataPointOfContact" type="conceptmetadata:PointOfContactType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A person or organisation who can be contacted to obtain more information about a specific subject.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e91d94af-420d-411e-ab4a-81caee89d42e</app:SemanticID>
+        <app:ShortName>pointOfContact</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataReference" type="conceptmetadata:ReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">References to external sources made for the information characterised by the Metadata.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4689bbde-0865-4d71-8312-7839abe9b354</app:SemanticID>
+        <app:ShortName>reference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptMetadataReportingData" type="conceptmetadata:ReportingDataType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The source and timing that applies to the reported information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef</app:SemanticID>
+        <app:ShortName>reportingData</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>reporting data</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ConceptMetadataType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Descriptive information about information specified for a Concept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:983b9943-28ff-4818-923c-5a23ee1d2de9</app:SemanticID>
+        <app:Remarks>This data type does not describe physical characteristics of concepts but characteristics of the information available for a Concept.</app:Remarks>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Concept metadata</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:ConceptMetadataAlternativeConfidentialityLabel" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataAppraisal" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataCommentText" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataCorrelation" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataMetadataConfidentialityLabel" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataModificationDateTime" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataOriginatorConfidentialityLabel" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataReference" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataReportingData" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataValidityTimePeriod" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="conceptmetadata:ConceptMetadataPointOfContact" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ConceptMetadataValidityTimePeriod" type="generic:TimePeriodType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The effective date and time of the information characterised by the Metadata.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b65e94c0-26ba-40d8-ae78-7749295f1dcb</app:SemanticID>
+        <app:ShortName>validityTimePeriod</app:ShortName>
+        <app:Remarks>Multiple time periods may be specified to indicate a discontinued time period of validity.</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>validity time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CorrelationBaseInformationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Correlation indicates correlation based on the CorrelationGroup.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:07b1e532-ea7e-4478-b0fc-9ba98168ae10R</app:SemanticID>
+        <app:ShortName>baseInformationRef</app:ShortName>
+        <app:Remarks>The information tagged with the Correlation metadata is to be considered with respect to the data being aggregated in the CorrelationGroup in the way defined by the categoryCode attribute in Correlation.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c2b0ac53-0617-43cd-97fb-bba550adbd1d</app:ReferenceType>
+        <app:DisplayName>indicates correlation based on</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CorrelationCategoryCode" type="conceptmetadata:CorrelationCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of Correlation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:04b97d23-cf70-4460-9668-6edd1f36d6a4</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CorrelationCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of Correlation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3bd837cd-7a00-4a34-8fcf-ecec811db3bb</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Confirms">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information associated with the Correlation affirms the information given in the InformationGroup.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:356b76af-d888-416a-9b61-ee59e7dfbcfd</app:SemanticID>
+            <app:DisplayName>confirms</app:DisplayName>
+            <app:PhysicalName>CONF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Corrects">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information associated with the Correlation amends the information given in the InformationGroup.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6b3dcb02-d51b-4f4c-9b31-34a96d7540a1</app:SemanticID>
+            <app:DisplayName>corrects</app:DisplayName>
+            <app:PhysicalName>CORR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Defines">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information associated with the Correlation defines the information given in the InformationGroup.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8ad4d53b-ac3f-4841-86ec-da71688d226b</app:SemanticID>
+            <app:DisplayName>defines</app:DisplayName>
+            <app:PhysicalName>ISDFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsImpliedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information associated with the Correlation is the logical consequence of the information given in the InformationGroup.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:857e4404-af75-44cb-8a09-7e4462e2fb71</app:SemanticID>
+            <app:DisplayName>is implied by</app:DisplayName>
+            <app:PhysicalName>IMPL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Negates">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information associated with the Correlation is in some way contradictory to the information given in the InformationGroup.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b3dc7d4e-ddd8-4d3f-afe0-a248519eaf97</app:SemanticID>
+            <app:DisplayName>negates</app:DisplayName>
+            <app:PhysicalName>NEGA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Supersedes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information associated with the Correlation replaces the information given in the InformationGroup.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ca52342a-c1c8-4eb3-908a-c7fd0f9b88c1</app:SemanticID>
+            <app:DisplayName>supersedes</app:DisplayName>
+            <app:PhysicalName>SUPR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CorrelationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The correlation of raw intelligence information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9ed640f5-d7b4-4d73-b5a8-0af626a33585</app:SemanticID>
+        <app:DisplayName>Correlation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:CorrelationCategoryCode" />
+          <xsd:element ref="conceptmetadata:CorrelationBaseInformationRef" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IntelAppraisalAccuracyCode" type="conceptmetadata:IntelAppraisalAccuracyCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">For intelligence purpose, the general appraisal of the subject matter in graded terms to indicate the extent or degree to which it has been judged to be free from mistake or error or to conform to truth or some recognised standard value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8a525ac0-d4c9-4c09-be20-d66a98333b26</app:SemanticID>
+        <app:ShortName>accuracyCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>accuracy</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IntelAppraisalAccuracyCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general appraisal, for intelligence purpose, of the subject matter in graded terms to indicate the extent or degree to which it has been judged to be free from mistake or error or to conform to truth or some recognised standard value.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0dec873-a722-4086-bb3c-a4edc0e66b36</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Confirmed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data is confirmed by at least 3 independent sources.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2ff66049-29f5-461c-8f48-6c4281b7b3a6</app:SemanticID>
+            <app:DisplayName>Confirmed</app:DisplayName>
+            <app:PhysicalName>1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Doubtful">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data can be viewed with suspicion.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ebe1a368-1314-4699-abaf-9fb2ff19e12b</app:SemanticID>
+            <app:DisplayName>Doubtful</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Improbable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data shall be considered as probably erroneous.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9fc0b076-fdce-4154-8617-cb7d7f4f8b9c</app:SemanticID>
+            <app:DisplayName>Improbable</app:DisplayName>
+            <app:PhysicalName>5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Possible">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data is given by only one source.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1e9656ec-f229-425a-a9a8-5ecfcec4e969</app:SemanticID>
+            <app:DisplayName>Possible</app:DisplayName>
+            <app:PhysicalName>3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Probable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data is confirmed by 2 independent sources.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:33ea56e1-e130-45d7-829c-db9ff5c09e18</app:SemanticID>
+            <app:DisplayName>Probable</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TruthCannotBeJudged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Basis for the estimate of Reported data cannot be estimated.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:67effffb-ad3c-4522-886a-7cdd45dad1a3</app:SemanticID>
+            <app:DisplayName>Truth cannot be judged</app:DisplayName>
+            <app:PhysicalName>6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="IntelAppraisalReliabilityCode" type="conceptmetadata:IntelAppraisalReliabilityCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">For intelligence purpose, the general appraisal of the source in graded terms to indicate the extent to which it has been proven it can be counted on or trusted in to do as expected.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e16b96d8-2da4-4e5e-b625-3b8623286cb6</app:SemanticID>
+        <app:ShortName>reliabilityCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>reliability</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IntelAppraisalReliabilityCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The general appraisal of the source, for intelligence purpose, in graded terms to indicate the extent to which it has been proven it can be counted on or trusted in to do as expected.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:aa11ffe2-0fbf-4130-a040-b0fc213f5dcc</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CompletelyReliable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The source of the reported data can be considered as completely reliable, i.e. erroneous information cannot be produced.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d71ed023-3b74-439d-a170-2ea180816245</app:SemanticID>
+            <app:DisplayName>Completely reliable</app:DisplayName>
+            <app:PhysicalName>A</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FairlyReliable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The source of the reported data can be considered as fairly reliable, i.e. erroneous information can be produced, with a probability that cannot be neglected.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8a3dddf5-ecf3-4a91-9e87-d88ecf76bc49</app:SemanticID>
+            <app:DisplayName>Fairly reliable</app:DisplayName>
+            <app:PhysicalName>C</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NotUsuallyReliable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The source of the reported data is not usually reliable, i.e. the probability of producing erroneous information is high (&gt;30%).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a82446b9-22cc-4fe8-a636-27c4a286cc1e</app:SemanticID>
+            <app:DisplayName>Not usually reliable</app:DisplayName>
+            <app:PhysicalName>D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReliabilityCannotBeJudged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The reliability of the source of the reported data cannot be estimated.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1626f80c-f5bc-44d4-83d0-8b0e89dcc96e</app:SemanticID>
+            <app:DisplayName>Reliability cannot be judged</app:DisplayName>
+            <app:PhysicalName>F</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Unreliable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The source of the reported data is not reliable, i.e. the produced reported data can generally be considered as erroneous.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:96024183-e2b3-4574-bf6a-2f228a2ad5ee</app:SemanticID>
+            <app:DisplayName>Unreliable</app:DisplayName>
+            <app:PhysicalName>E</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UsuallyReliable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The source of the reported data can be considered as usually reliable, i.e. erroneous information can be produced, but the probability of such events can be neglected.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3683b72e-7a30-4173-8677-1958b778a9b6</app:SemanticID>
+            <app:DisplayName>Usually reliable</app:DisplayName>
+            <app:PhysicalName>B</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="IntelAppraisalSourceTypeCode" type="conceptmetadata:IntelAppraisalSourceTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The source type from which intelligence information referenced by a Metadata was obtained.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:05fca33a-2865-4293-98b8-1e759bc81e7d</app:SemanticID>
+        <app:ShortName>sourceTypeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>source type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IntelAppraisalSourceTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The source type from which intelligence information is obtained.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e4d9f636-1942-43c6-95b4-0ffe9981448a</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirObserver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from an individual whose primary mission is to observe or take photographs from an aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5d705a68-f1a6-450d-9c07-357cabbb419a</app:SemanticID>
+            <app:DisplayName>Air observer</app:DisplayName>
+            <app:PhysicalName>AOBSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirReconnaissance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is gathered either by visual observation from the air or through the use of airborne sensors.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:976d47ae-c3dd-4ea4-b978-ae4541959596</app:SemanticID>
+            <app:DisplayName>Air reconnaissance</app:DisplayName>
+            <app:PhysicalName>AIRREC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirborneInfrared">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from airborne infrared systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eb59a6be-9fb3-433b-8dfb-fde50b74be03</app:SemanticID>
+            <app:DisplayName>Airborne infrared</app:DisplayName>
+            <app:PhysicalName>AIRIFR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArtilleryObservation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from artillery unit surveillance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:71a96883-2b90-4b04-a52a-92f63e35283e</app:SemanticID>
+            <app:DisplayName>Artillery observation</app:DisplayName>
+            <app:PhysicalName>ARTOBS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CapturedDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from documentation seized from the enemy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c9e4dbe2-ad1d-4dc2-8a4d-eb5c96e70565</app:SemanticID>
+            <app:DisplayName>Captured document</app:DisplayName>
+            <app:PhysicalName>CAPDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CapturedMaterial">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from equipment or supplies seized from the enemy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:098feb61-6e58-47c2-89b0-75a485b662ff</app:SemanticID>
+            <app:DisplayName>Captured material</app:DisplayName>
+            <app:PhysicalName>CAPMAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CommunicationsIntelligence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from electromagnetic communications and communications systems by other than intended recipients or users.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f28218b2-99c4-46cb-a6a2-d0440bc09703</app:SemanticID>
+            <app:DisplayName>Communications intelligence</app:DisplayName>
+            <app:PhysicalName>COMINT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Contact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The discrete airborne, surface or subsurface intelligence information is collected from electronic, acoustic, and/or visual sensors.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b4b46702-a635-41f3-b9d7-2c5774a57467</app:SemanticID>
+            <app:DisplayName>Contact</app:DisplayName>
+            <app:PhysicalName>CONTAC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CounterBatteryRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from counter battery radar systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:671b72c7-6dae-4b44-9d4e-db7dac04072d</app:SemanticID>
+            <app:DisplayName>Radar, counter battery</app:DisplayName>
+            <app:PhysicalName>CBRR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CounterMortarRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from counter mortar radar systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fa7cfd4c-cfa7-4b46-a3a8-69928fd6bd82</app:SemanticID>
+            <app:DisplayName>Radar, counter mortar</app:DisplayName>
+            <app:PhysicalName>CMRR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Defector">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is collected from a person who repudiates his or her country when beyond its jurisdiction or control.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2b2c19fd-769a-4bd7-af65-1141a5acd15a</app:SemanticID>
+            <app:DisplayName>Defector</app:DisplayName>
+            <app:PhysicalName>DEFECT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ElectronicIntelligence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from electromagnetic non-communications transmissions by other than intended recipients or users.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:57fee478-33d7-4da0-af80-dada69fadf72</app:SemanticID>
+            <app:DisplayName>Electronic intelligence</app:DisplayName>
+            <app:PhysicalName>ELINT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EyeballObservation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from a human observation without any device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d611e914-3b21-4ae9-9f9d-b16e55301c4f</app:SemanticID>
+            <app:DisplayName>Eyeball observation</app:DisplayName>
+            <app:PhysicalName>EYOBSN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FlashRanging">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from flash ranging devices.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2fe95137-54f4-4698-a715-3bfcb2e9aaf2</app:SemanticID>
+            <app:DisplayName>Flash ranging</app:DisplayName>
+            <app:PhysicalName>FLRNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ForwardObserver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from an observer with forward troops trained to call for and adjust supporting fire and pass battlefield information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0b31ae98-2190-4b52-881a-d7b3d347e333</app:SemanticID>
+            <app:DisplayName>Forward observer</app:DisplayName>
+            <app:PhysicalName>FO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ForwardObserverWithoutLaser">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from an observer with forward troops without laser systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f6b41a06-aea1-41c7-8da1-d213ed25e820</app:SemanticID>
+            <app:DisplayName>Forward observer without laser</app:DisplayName>
+            <app:PhysicalName>FOWOL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GroundReconnaissance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from ground reconnaissance tasks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1e3e1221-3fb6-4ef1-acb9-482d2b2c59e4</app:SemanticID>
+            <app:DisplayName>Ground reconnaissance</app:DisplayName>
+            <app:PhysicalName>GRDREC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GroundSurveillanceRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from ground surveillance radar systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:21ee79a8-7952-4a2b-a7cd-3c6eb7ca5306</app:SemanticID>
+            <app:DisplayName>Radar, ground surveillance</app:DisplayName>
+            <app:PhysicalName>GSRA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HumanIntelligence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is collected and provided by human sources.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:53414ded-e893-4b09-87dc-29cdd1eaab97</app:SemanticID>
+            <app:DisplayName>Human intelligence</app:DisplayName>
+            <app:PhysicalName>HUMINT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Inflight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is reported as mission results by aircrews while in flight.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a9f5b6b4-77b3-46bc-a411-620a97eda566</app:SemanticID>
+            <app:DisplayName>Inflight</app:DisplayName>
+            <app:PhysicalName>INFLIT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LongRangeReconnaissancePatrol">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from ground reconnaissance behind the FLOT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9e3c2785-377d-49bb-b11f-af5b5a291fec</app:SemanticID>
+            <app:DisplayName>Long range reconnaissance patrol</app:DisplayName>
+            <app:PhysicalName>LRRP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NotArtilleryObserver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from non-artillery observation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:628ddf78-7cae-4391-b6c2-62887a34ee6d</app:SemanticID>
+            <app:DisplayName>Observer, not artillery</app:DisplayName>
+            <app:PhysicalName>OBSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PhotoInterpretation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from extraction from photographs or other recorded images.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:485a101a-bb4a-442d-9f5c-55d969002b41</app:SemanticID>
+            <app:DisplayName>Photo interpretation</app:DisplayName>
+            <app:PhysicalName>PI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PrisonerOfWar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from captured forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4225a149-d7d8-4835-b70e-d9e048e66847</app:SemanticID>
+            <app:DisplayName>Prisoner of war</app:DisplayName>
+            <app:PhysicalName>POW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Refugee">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from persons who, owing to religious persecution or political troubles, move within their own country (national refugees) or across international boundaries.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b9e9053b-1f45-4632-9be7-4006087c9d6a</app:SemanticID>
+            <app:DisplayName>Refugee</app:DisplayName>
+            <app:PhysicalName>REFUGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RemotelyPilotedVehicle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from an unmanned vehicle capable of being controlled from a distant location through a communication link.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2e3f76a4-2d63-4b1f-b311-1a1b68d1a37b</app:SemanticID>
+            <app:DisplayName>Remotely-piloted vehicle</app:DisplayName>
+            <app:PhysicalName>RPV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Satellite">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from satellite surveillance or reconnaissance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:58bf783e-75db-4403-ac11-0747639765d8</app:SemanticID>
+            <app:DisplayName>Satellite</app:DisplayName>
+            <app:PhysicalName>SAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SideLookingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from an airborne radar, viewing at right angles to the axis of the vehicle, which produces a presentation of terrain or moving targets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cbbcadcf-db98-4b91-897b-9117a38fbf87</app:SemanticID>
+            <app:DisplayName>Radar, side looking</app:DisplayName>
+            <app:PhysicalName>SLAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SignalIntelligence">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is collected either by communications intelligence or electronic intelligence when there is no requirement to differentiate between these two types of intelligence, or represents a fusion of information from the two.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a472a01e-a21b-40d9-8905-acc12fc261a2</app:SemanticID>
+            <app:DisplayName>Signal intelligence</app:DisplayName>
+            <app:PhysicalName>SIGINT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SoundRanging">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from sound ranging devices.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cb916f54-5f4d-489d-a391-f726663250ec</app:SemanticID>
+            <app:DisplayName>Sound ranging</app:DisplayName>
+            <app:PhysicalName>SORNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TacticalAir">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from tactical air operations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:21534d97-303a-4429-909e-6ba1eb5df30b</app:SemanticID>
+            <app:DisplayName>Tactical air</app:DisplayName>
+            <app:PhysicalName>TACAIR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TargetBase">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from target bases.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3f91bf57-3e72-406c-8a54-3c196bba02bd</app:SemanticID>
+            <app:DisplayName>Target base</app:DisplayName>
+            <app:PhysicalName>TGTB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnattendedGroundSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from an unmanned ground sensor device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e58921a8-3a80-4f73-9424-ee3c8fc48504</app:SemanticID>
+            <app:DisplayName>Unattended ground sensor</app:DisplayName>
+            <app:PhysicalName>UGS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnspecifiedSensitiveSource">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The source of the intelligence information is not specified.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:169fcf95-4a73-44db-a4f9-0f3af31b56c0</app:SemanticID>
+            <app:DisplayName>Unspecified sensitive source</app:DisplayName>
+            <app:PhysicalName>UNSPEC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VariousSources">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The intelligence information is derived from different sources.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:73fb81cc-807f-41b4-a89d-643743e72e85</app:SemanticID>
+            <app:DisplayName>Various sources</app:DisplayName>
+            <app:PhysicalName>VARI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="IntelAppraisalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An intelligence assessment of information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5bdc0304-a9ee-4d9c-8de3-6c3655ffb222</app:SemanticID>
+        <app:DisplayName>Intel appraisal</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="conceptmetadata:AppraisalType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:IntelAppraisalAccuracyCode" />
+          <xsd:element ref="conceptmetadata:IntelAppraisalReliabilityCode" />
+          <xsd:element ref="conceptmetadata:IntelAppraisalSourceTypeCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Observer" type="conceptmetadata:ObserverType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that notices or perceives something and registers it as being significant.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e6f826c9-dacc-4d31-8806-2fd4f2b5a7c6</app:SemanticID>
+        <app:DisplayName>Observer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ObserverActorReference" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to the actual Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8aa4b4a1-14c4-475b-8b06-79eb05ea6a1f</app:SemanticID>
+        <app:ShortName>actorReference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>actor Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ObserverName" type="conceptmetadata:ObserverNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Observer.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:35b7f98b-23da-4936-b0ba-d0f7384e67b4</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ObserverNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Observer.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:35b7f98b-23da-4936-b0ba-d0f7384e67b4</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ObserverType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that notices or perceives something and registers it as being significant.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e6f826c9-dacc-4d31-8806-2fd4f2b5a7c6</app:SemanticID>
+        <app:DisplayName>Observer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:RoleType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:ObserverName" />
+          <xsd:element ref="conceptmetadata:ObserverActorReference" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OperationalAppraisalCredibilityCode" type="conceptmetadata:OperationalAppraisalCredibilityCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">For normal operational use, the degree of trustworthiness of data referenced by a Metadata.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1be81c5f-550c-4d11-9614-ef24e2d9b720</app:SemanticID>
+        <app:ShortName>credibilityCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>credibility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OperationalAppraisalCredibilityCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The degree of trustworthiness of data, for normal operational use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1204bf3c-6002-4bed-abd0-84b8a0ab8dfd</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower credibility than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ReportedAsUncertain">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data is open to or can be viewed with suspicion.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ef862a7e-7e53-421c-bf1d-6424caaa5b70</app:SemanticID>
+            <app:DisplayName>Reported as uncertain</app:DisplayName>
+            <app:PhysicalName>RPTUNC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReportedAsPlausible">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Reported data is considered as possible or probable.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3dc9540a-28f9-465e-9758-76cc4f4b1dba</app:SemanticID>
+            <app:DisplayName>Reported as plausible</app:DisplayName>
+            <app:PhysicalName>RPTPLA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReportedAsAFact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Data is reported by different sources whose integrity is not in question.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:682c5403-edd8-42c3-a135-f28d1c8c4464</app:SemanticID>
+            <app:DisplayName>Reported as a fact</app:DisplayName>
+            <app:PhysicalName>RPTFCT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OperationalAppraisalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An operational assessment of information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5075d9b4-ca66-4812-adf1-9af2a3da941c</app:SemanticID>
+        <app:DisplayName>Operational appraisal</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="conceptmetadata:AppraisalType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:OperationalAppraisalCredibilityCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Originator" type="conceptmetadata:OriginatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that creates or provides information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c414dc6d-a7fd-4dc4-a39b-57af8a014e17</app:SemanticID>
+        <app:DisplayName>Originator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OriginatorActorReference" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to the actual Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d63c07a6-cbe5-4bcd-947a-252a4a731aff</app:SemanticID>
+        <app:ShortName>actorReference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>actor Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OriginatorName" type="conceptmetadata:OriginatorNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Originator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cd7c0057-421e-4031-9651-d778c00426a6</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OriginatorNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Originator.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cd7c0057-421e-4031-9651-d778c00426a6</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OriginatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that creates or provides information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c414dc6d-a7fd-4dc4-a39b-57af8a014e17</app:SemanticID>
+        <app:DisplayName>Originator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:RoleType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:OriginatorName" />
+          <xsd:element ref="conceptmetadata:OriginatorActorReference" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PointOfContact" type="conceptmetadata:PointOfContactType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A person or organisation who can be contacted to obtain more information about a specific subject.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:97c1b118-1387-43cb-a2fe-0f13119e2e31</app:SemanticID>
+        <app:DisplayName>Point of contact</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PointOfContactActorReference" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to the actual Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:21f8fb21-540a-4d76-9f1c-d30381363697</app:SemanticID>
+        <app:ShortName>actorReference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>actor Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PointOfContactAddress" type="address:AddressType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The address (physical or electronic) of the PointOfContact.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3188afea-a910-4914-8337-8a297190efa3</app:SemanticID>
+        <app:ShortName>address</app:ShortName>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PointOfContactCategoryCode" type="conceptmetadata:PointOfContactCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of PointOfContact.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c26a764b-4997-4208-925d-fadb99b8e3cf</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PointOfContactCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of PointOfContact.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f61c1146-3836-407a-9a1e-bbc1bf87a2b2</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="LocalPointOfContact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The person and/or organisation responsible for the daily management of the site.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:821293e2-621e-4901-b002-2916148379ae</app:SemanticID>
+            <app:DisplayName>Local point of contact</app:DisplayName>
+            <app:PhysicalName>LOCPOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NationalPointOfContact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Head Office or national point of contact.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e1c25969-6a5a-436c-b833-95414f7f212d</app:SemanticID>
+            <app:DisplayName>National point of contact</app:DisplayName>
+            <app:PhysicalName>NATPOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RegionalPointOfContact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Regional Office.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c971eec7-a557-418b-9dc8-19ddf5b0fe2a</app:SemanticID>
+            <app:DisplayName>Regional point of contact</app:DisplayName>
+            <app:PhysicalName>REGPOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PointOfContactName" type="conceptmetadata:PointOfContactNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the PointOfContact.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2fb761db-bb76-4392-a33c-458ae9e74a65</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="PointOfContactNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the PointOfContact.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2fb761db-bb76-4392-a33c-458ae9e74a65</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="PointOfContactType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A person or organisation who can be contacted to obtain more information about a specific subject.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:97c1b118-1387-43cb-a2fe-0f13119e2e31</app:SemanticID>
+        <app:DisplayName>Point of contact</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:RoleType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:PointOfContactAddress" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:PointOfContactCategoryCode" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:PointOfContactName" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:PointOfContactActorReference" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ReferenceCitedResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Reference indicates a citation of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a0c3cae7-e7c5-4d8f-bfa9-cb2032bab18eI</app:SemanticID>
+        <app:ShortName>citedResource</app:ShortName>
+        <app:Remarks>The role of the InformationResource that is cited by the information tagged with the Reference metadata is described in the Reference.roleCode.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>indicates the citation of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReferenceCitedResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Reference indicates a citation of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a0c3cae7-e7c5-4d8f-bfa9-cb2032bab18eR</app:SemanticID>
+        <app:ShortName>citedResourceRef</app:ShortName>
+        <app:Remarks>The role of the InformationResource that is cited by the information tagged with the Reference metadata is described in the Reference.roleCode.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>indicates the citation of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReferencePartText" type="conceptmetadata:ReferencePartTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific part of the InformationResource that is cited.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1a1dc27-1685-443d-a6af-02e2b7cdebd8</app:SemanticID>
+        <app:ShortName>partText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>part</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReferencePartTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific part of the InformationResource that is cited.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1a1dc27-1685-443d-a6af-02e2b7cdebd8</app:SemanticID>
+        <app:ShortName>partText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>part</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ReferenceRoleCode" type="conceptmetadata:ReferenceRoleCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The meaning of the relationship between the information characterised by the Metadata and the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:efe8a538-4d36-4bd5-8725-b74f41fd04b5</app:SemanticID>
+        <app:ShortName>roleCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>role</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReferenceRoleCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The meaning of a relationship between information characterised by Metadata and an InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5c26c5a8-0d4a-476e-891a-cfe076d4d826</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="HasCapabilitiesDefinedIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The object characterised by metadata is competent to perform according to provisions in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2785cd5d-656f-4424-8b57-b59db38ba926</app:SemanticID>
+            <app:DisplayName>Has capabilities defined in</app:DisplayName>
+            <app:PhysicalName>HASCAP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HasInstructionsProvidedIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is subject to guidance provided in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3ce337b9-0419-4b43-8b13-047537fab52e</app:SemanticID>
+            <app:DisplayName>Has instructions provided in</app:DisplayName>
+            <app:PhysicalName>HASINS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HasTrainingSupportedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The training for the object characterised by metadata is aided by the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8c256280-d689-47ba-b656-5721a96bff1e</app:SemanticID>
+            <app:DisplayName>Has training supported by</app:DisplayName>
+            <app:PhysicalName>HASTNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsAmplifiedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata has additional detail provided in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:efe8090d-e53d-448a-ace4-9030ffbc1841</app:SemanticID>
+            <app:DisplayName>Is amplified by</app:DisplayName>
+            <app:PhysicalName>ISAMPL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsAuthorisedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is sanctioned by the provisions in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:731c595d-c1a9-4034-9fd8-5a187bca9c77</app:SemanticID>
+            <app:DisplayName>Is authorised by</app:DisplayName>
+            <app:PhysicalName>ISAUTH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsDescribedIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is depicted/explained in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:efd74a38-6c52-44ce-9936-143d55452d29</app:SemanticID>
+            <app:DisplayName>Is described in</app:DisplayName>
+            <app:PhysicalName>ISDSCR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsDirectedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is to be executed as ordered in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8e6a4cc7-bdd2-4332-a6bd-221f595f49c7</app:SemanticID>
+            <app:DisplayName>Is directed by</app:DisplayName>
+            <app:PhysicalName>ISDRCT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsGraphicallyDepictedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is pictorially described in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c63001d4-b9cc-4b6d-987a-66adbd3d0146</app:SemanticID>
+            <app:DisplayName>Is graphically depicted by</app:DisplayName>
+            <app:PhysicalName>ISGRPH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsMaintainedUsing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The maintenance of the object characterised by metadata is performed according to the provisions in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f206fedc-9967-4805-b046-9f6d6cdebc47</app:SemanticID>
+            <app:DisplayName>Is maintained using</app:DisplayName>
+            <app:PhysicalName>ISMNTN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsPrescribedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata has prescriptive rules in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:21309968-7a26-43a7-b324-87794915267c</app:SemanticID>
+            <app:DisplayName>Is prescribed by</app:DisplayName>
+            <app:PhysicalName>ISPRSC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsProcuredUsing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The object characterised by metadata is acquired according to provisions in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:08225193-5df0-4cba-9ce8-db19e25ba067</app:SemanticID>
+            <app:DisplayName>Is procured using</app:DisplayName>
+            <app:PhysicalName>ISPRCR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsProvidedBackgroundInformationBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is provided supplementary information in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:99289cf3-f22e-4578-83c5-0ee2a31da632</app:SemanticID>
+            <app:DisplayName>Is provided background information by</app:DisplayName>
+            <app:PhysicalName>ISPRBK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsRecordedIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is physically stored in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dbd4c76b-339e-4c1c-8512-c9a1d0fd9b3a</app:SemanticID>
+            <app:DisplayName>Is recorded in</app:DisplayName>
+            <app:PhysicalName>ISRCRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsReferencedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is alluded to in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d4feb46d-ca25-4e29-808c-ee09795fbc02</app:SemanticID>
+            <app:DisplayName>Is referenced by</app:DisplayName>
+            <app:PhysicalName>ISRFNC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsReportedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is given a formal account in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:abaac8b6-87fe-4b8a-80b8-2eda61f9e0c1</app:SemanticID>
+            <app:DisplayName>Is reported by</app:DisplayName>
+            <app:PhysicalName>ISRPTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsSpecifiedBy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is specified by the provisions in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:02fc08cd-243b-4f89-941d-28e8482effbe</app:SemanticID>
+            <app:DisplayName>Is specified by</app:DisplayName>
+            <app:PhysicalName>ISSPCF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsSupportedByChartsAndMapsIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is supplemented by geographic mapping products in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c548949-6e65-4ef5-a319-264aed54a675</app:SemanticID>
+            <app:DisplayName>Is supported by charts and maps in</app:DisplayName>
+            <app:PhysicalName>ISSPCM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsSupportedByPictorialMaterialIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information characterised by metadata is supplemented by relevant pictorial material in the InformationResource.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d8457ff4-9a03-424d-9b35-2b27ca5205b1</app:SemanticID>
+            <app:DisplayName>Is supported by pictorial material in</app:DisplayName>
+            <app:PhysicalName>ISSPPM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ReferenceTransmittalTypeCode" type="conceptmetadata:ReferenceTransmittalTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The means by which the InformationResource is transmitted to the recipient.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a53d4573-7b19-4044-89e1-f9439bddcc25</app:SemanticID>
+        <app:ShortName>transmittalTypeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>transmittal type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReferenceTransmittalTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The means by which an InformationResource is transmitted to a recipient.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:49096bb9-26a0-4d32-bd11-1b56444d8284</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CourierMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received by courier.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e5b9ab6e-0d2f-437e-b672-ee067e96289e</app:SemanticID>
+            <app:DisplayName>Courier message</app:DisplayName>
+            <app:PhysicalName>COUMSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EMailMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received through an E-mail system.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f399357c-d679-45dc-9e72-4889567c5328</app:SemanticID>
+            <app:DisplayName>E-mail message</app:DisplayName>
+            <app:PhysicalName>EMLMSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ElectronicTransfer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information was received through electronic transfer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ed154fa-69b2-478a-b311-efa1516ae8eb</app:SemanticID>
+            <app:DisplayName>Electronic transfer</app:DisplayName>
+            <app:PhysicalName>ELCTRF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FaxMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received by fax.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0a1b3c54-a63f-41e4-af6c-c59a7b68aeb0</app:SemanticID>
+            <app:DisplayName>Fax message</app:DisplayName>
+            <app:PhysicalName>FAXMSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PhoneMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received by telephone.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:330653ee-d659-46ee-ba9f-3790d43ce81a</app:SemanticID>
+            <app:DisplayName>Phone message</app:DisplayName>
+            <app:PhysicalName>PHNMSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received from a radio transmission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e4ec79a3-214b-439b-b6cf-2310d163597c</app:SemanticID>
+            <app:DisplayName>Radio message</app:DisplayName>
+            <app:PhysicalName>RADMSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SecureFaxMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received by secure fax.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2f01d5f5-62df-41fe-81c9-6787a41601f8</app:SemanticID>
+            <app:DisplayName>Secure fax message</app:DisplayName>
+            <app:PhysicalName>SFXMSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TelexMessage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A message received by a certain kind of civilian means.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:76338a29-7a31-476e-b4c2-cde07d2134fe</app:SemanticID>
+            <app:DisplayName>Telex message</app:DisplayName>
+            <app:PhysicalName>TELEX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Video">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The information was received via video.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:64987d0d-016a-4325-9a8a-1af92d89745e</app:SemanticID>
+            <app:DisplayName>Video</app:DisplayName>
+            <app:PhysicalName>VIDEO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ReferenceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The reference to an external source made for the information characterised by the Metadata.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e90cb12a-cda0-4012-8cfe-54128d75539a</app:SemanticID>
+        <app:DisplayName>Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:ReferencePartText" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ReferenceRoleCode" />
+          <xsd:element ref="conceptmetadata:ReferenceTransmittalTypeCode" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ReferenceCitedResourceRef" />
+          <xsd:element ref="conceptmetadata:ReferenceCitedResource" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Reporter" type="conceptmetadata:ReporterType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that is responsible for providing information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd</app:SemanticID>
+        <app:DisplayName>Reporter</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReporterActorReference" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to the actual Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:03924031-0e07-4030-a39c-52f0fa816e69</app:SemanticID>
+        <app:ShortName>actorReference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>actor Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReporterAddress" type="address:AddressType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The address (physical or electronic) of the Reporter.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e3ad12d4-9d76-4c9d-bf4f-5506a017b038</app:SemanticID>
+        <app:ShortName>address</app:ShortName>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>address</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReporterName" type="conceptmetadata:ReporterNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Reporter.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReporterNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Reporter.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ReporterType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that is responsible for providing information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd</app:SemanticID>
+        <app:DisplayName>Reporter</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:RoleType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:ReporterAddress" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ReporterName" />
+          <xsd:element ref="conceptmetadata:ReporterActorReference" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ReportingDataCategoryCode" type="conceptmetadata:ReportingDataCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characterisation of the information with respect to how it is considered by the reporting organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8fb25866-a8fe-4324-999c-69b1262b821f</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReportingDataCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The characterisation of information by the reporting organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Assumed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information is considered to be valid without being based on fact or observation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7da1e392-5c98-4f21-a488-3f151dfc544e</app:SemanticID>
+            <app:DisplayName>Assumed</app:DisplayName>
+            <app:PhysicalName>ASS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Erroneous">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information is considered to be wrong.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:da8fcc08-d41d-40dd-a38e-f965b83e28d9</app:SemanticID>
+            <app:DisplayName>Erroneous</app:DisplayName>
+            <app:PhysicalName>ERR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Inferred">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information is derived from multiple sources.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ef28a5e6-de9e-4ec5-b99d-cc6671083773</app:SemanticID>
+            <app:DisplayName>Inferred</app:DisplayName>
+            <app:PhysicalName>INFER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Planned">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information is expected to be true in the future.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a0da1244-3d31-4163-9b8f-d9c1c506b1a2</app:SemanticID>
+            <app:DisplayName>Planned</app:DisplayName>
+            <app:PhysicalName>PLAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Predicted">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information results from extrapolating, estimating, or foretelling a future condition or state.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eb9f968d-2a1b-4ccf-b481-8ff1e1f7731d</app:SemanticID>
+            <app:DisplayName>Predicted</app:DisplayName>
+            <app:PhysicalName>PRDCTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Reported">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information is based on fact or observation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:38d36a7b-eaef-4e75-b8bf-361ade410c36</app:SemanticID>
+            <app:DisplayName>Reported</app:DisplayName>
+            <app:PhysicalName>REP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Suspected">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The referenced information is suspected.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3c1ed4b2-2334-4bb7-b748-2a8c1ac411c9</app:SemanticID>
+            <app:DisplayName>Suspected</app:DisplayName>
+            <app:PhysicalName>SSPCTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ReportingDataIsBasedOnCountIndicator" type="conceptmetadata:ReportingDataIsBasedOnCountIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the information referred to is based on a count of objects (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:acfd1320-5027-47b6-890a-c6907a4c40cb</app:SemanticID>
+        <app:ShortName>isBasedOnCountIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is based on count</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReportingDataIsBasedOnCountIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the information referred to is based on a count of objects (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:acfd1320-5027-47b6-890a-c6907a4c40cb</app:SemanticID>
+        <app:ShortName>isBasedOnCountIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is based on count</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="ReportingDataIsRealDataInExerciseIndicator" type="conceptmetadata:ReportingDataIsRealDataInExerciseIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the information referred to is real data in an exercise scenario (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:503b504b-9937-47aa-8aac-907f68023060</app:SemanticID>
+        <app:ShortName>isRealDataInExerciseIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is real data in exercise</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReportingDataIsRealDataInExerciseIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the information referred to is real data in an exercise scenario (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:503b504b-9937-47aa-8aac-907f68023060</app:SemanticID>
+        <app:ShortName>isRealDataInExerciseIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is real data in exercise</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="ReportingDataObservationDateTime" type="conceptmetadata:ReportingDataObservationDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the information referred to was observed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d</app:SemanticID>
+        <app:ShortName>observationDateTime</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>observation date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReportingDataObservationDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the information referred to was observed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d</app:SemanticID>
+        <app:ShortName>observationDateTime</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>observation date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="ReportingDataObserver" type="conceptmetadata:ObserverType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that notices or perceives something and registers it as being significant.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c8c0cbfe-9aff-4cee-8923-dca3a213d96f</app:SemanticID>
+        <app:ShortName>observer</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReportingDataReporter" type="conceptmetadata:ReporterType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that is responsible for providing information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0</app:SemanticID>
+        <app:ShortName>reporter</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReportingDataReportingDateTime" type="conceptmetadata:ReportingDataReportingDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the information referred to is provided.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27</app:SemanticID>
+        <app:ShortName>reportingDateTime</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>reporting date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReportingDataReportingDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the information referred to is provided.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27</app:SemanticID>
+        <app:ShortName>reportingDateTime</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>reporting date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:complexType name="ReportingDataType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The source and timing that applies to reported information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3</app:SemanticID>
+        <app:DisplayName>Reporting data</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata:ReportingDataCategoryCode" />
+          <xsd:element ref="conceptmetadata:ReportingDataIsBasedOnCountIndicator" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ReportingDataIsRealDataInExerciseIndicator" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ReportingDataObservationDateTime" />
+          <xsd:element ref="conceptmetadata:ReportingDataReportingDateTime" />
+          <xsd:element ref="conceptmetadata:ReportingDataObserver" minOccurs="0" />
+          <xsd:element ref="conceptmetadata:ReportingDataReporter" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,1384 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:action="https://mip-interop.org/data/v4.3/BattlespaceConcept/Action" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Action.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Action" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AbsoluteTimePeriodEndDateTime" type="generic:AbsoluteTimePeriodEndDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod ends.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5f893d2-bf71-4874-b90e-f2fc1c2210e5</app:SemanticID>
+        <app:ShortName>endDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AbsoluteTimePeriodEndDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod ends.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5f893d2-bf71-4874-b90e-f2fc1c2210e5</app:SemanticID>
+        <app:ShortName>endDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="AbsoluteTimePeriodStartDateTime" type="generic:AbsoluteTimePeriodStartDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod begins.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d8d7dbf9-3b41-4d87-a48b-23c20a2ed759</app:SemanticID>
+        <app:ShortName>startDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AbsoluteTimePeriodStartDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the AbsoluteTimePeriod begins.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d8d7dbf9-3b41-4d87-a48b-23c20a2ed759</app:SemanticID>
+        <app:ShortName>startDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:complexType name="AbsoluteTimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A TimePeriod that uses Universal Time as reference.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2f98c539-7afa-49f6-9f07-9d61dc10e165</app:SemanticID>
+        <app:DisplayName>Absolute time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:TimePeriodType">
+        <xsd:sequence>
+          <xsd:element ref="generic:AbsoluteTimePeriodEndDateTime" minOccurs="0" />
+          <xsd:element ref="generic:AbsoluteTimePeriodStartDateTime" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DayNightCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The period to be considered within any twenty-four hour period lasting from sunrise to sunrise.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8e3073eb-1953-4971-9f90-cf7a79efdeb9</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Day">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The period from sunrise to sunset.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b2b620b0-7412-4831-84d2-95c2b29a6078</app:SemanticID>
+            <app:DisplayName>Day</app:DisplayName>
+            <app:PhysicalName>D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DayAndNight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The period from sunrise to sunrise, i.e. any time.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c57017d8-60e9-4039-a239-78aed3d70118</app:SemanticID>
+            <app:DisplayName>Day and night</app:DisplayName>
+            <app:PhysicalName>DN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Night">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The period from sunset to sunrise.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6a9e11c7-1cb6-4315-a394-bbb08c30997a</app:SemanticID>
+            <app:DisplayName>Night</app:DisplayName>
+            <app:PhysicalName>N</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="HostilityCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The perceived hostility status of a BattlespaceConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d93bfd9f-5279-4fc9-9f56-ed5f21bb5140</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AssumedFriend">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is assumed to be friendly because of its characteristics, behaviour or origin.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:018dc5fb-d1ca-4443-94a2-133ba4504912</app:SemanticID>
+            <app:DisplayName>Assumed friend</app:DisplayName>
+            <app:PhysicalName>AFR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AssumedHostile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is likely to pertain to enemy forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:019b5f17-bcc8-434b-b926-31847be0f64e</app:SemanticID>
+            <app:DisplayName>Assumed hostile</app:DisplayName>
+            <app:PhysicalName>AHO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AssumedInvolved">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is likely to pertain to involved forces different from own, allied and enemy forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e97c1195-3709-4281-96b1-c31c6ad60977</app:SemanticID>
+            <app:DisplayName>Assumed involved</app:DisplayName>
+            <app:PhysicalName>AIV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AssumedNeutral">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is likely to pertain to neither own, allied, enemy or otherwise involved forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5c559fec-51d8-4e21-96b0-21b963d1cf9e</app:SemanticID>
+            <app:DisplayName>Assumed neutral</app:DisplayName>
+            <app:PhysicalName>ANT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Faker">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is a friendly aircraft simulating a hostile aircraft in an air defence exercise.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d9efca33-a4c5-4786-8584-137b85504a16</app:SemanticID>
+            <app:DisplayName>Faker</app:DisplayName>
+            <app:PhysicalName>FAKER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Friend">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept pertains to a declared, presumed or recognized friendly nation, faction or group.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c061579-d5fc-4b1a-87ed-dfd72071466e</app:SemanticID>
+            <app:DisplayName>Friend</app:DisplayName>
+            <app:PhysicalName>FR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hostile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is positively identified as enemy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9a6bb39a-bef0-455f-b6e8-a49e79dd744d</app:SemanticID>
+            <app:DisplayName>Hostile</app:DisplayName>
+            <app:PhysicalName>HO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Involved">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept pertains to involved forces different from own, allied and enemy forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b7582ffe-c478-4c76-93df-0adcbbeec61a</app:SemanticID>
+            <app:DisplayName>Involved</app:DisplayName>
+            <app:PhysicalName>IV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Joker">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is acting as a suspect track for exercise purposes only.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c80e8f3a-666d-4d7a-a4cf-96851de28353</app:SemanticID>
+            <app:DisplayName>Joker</app:DisplayName>
+            <app:PhysicalName>JOKER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Neutral">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is neither supporting friendly nor opposing forces according to its characteristics, behaviour, origin or nationality.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c7a391f8-2d9d-41ec-b99d-c06b7c2b1810</app:SemanticID>
+            <app:DisplayName>Neutral</app:DisplayName>
+            <app:PhysicalName>NEUTRL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pending">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The identification of the BattlespaceConcept is to be determined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f474450d-1553-4c98-a2d3-012f919d753e</app:SemanticID>
+            <app:DisplayName>Pending</app:DisplayName>
+            <app:PhysicalName>PENDNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Suspect">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The BattlespaceConcept is potentially hostile because of its characteristics, behaviour or origin.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ccb2553b-9c5b-45a1-bdf0-5a6e2024fa7f</app:SemanticID>
+            <app:DisplayName>Suspect</app:DisplayName>
+            <app:PhysicalName>SUSPCT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Unknown">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The identification of the BattlespaceConcept is not available.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0b3c2500-466e-4e37-88d9-3213df80cbcd</app:SemanticID>
+            <app:DisplayName>Unknown</app:DisplayName>
+            <app:PhysicalName>UNK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyAuthorisedTimePeriod" type="generic:AbsoluteTimePeriodType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The authorised period of effectiveness for the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7c46fcda-80e0-42ef-8044-566327c6336b</app:SemanticID>
+        <app:ShortName>authorisedTimePeriod</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>authorised time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkFrequencyBandCode" type="generic:NetworkFrequencyBandCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The frequency band of a Network.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:51879c49-88f7-46eb-b44a-330dc30bf015</app:SemanticID>
+        <app:ShortName>bandCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>band</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyBandCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The frequency band of a Network.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fe170f23-8cc5-40bd-be03-25cda11a4aa6</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower frequency than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="VeryLowFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 3 - 30 kilohertz. (VLF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7b2c6fcb-9553-4d90-9bfe-11e56fb5bca6</app:SemanticID>
+            <app:DisplayName>Very low frequency</app:DisplayName>
+            <app:PhysicalName>VLF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LowFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 30 - 300 kilohertz. (LF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:97d6b860-3e42-490a-8355-2a57b68a16af</app:SemanticID>
+            <app:DisplayName>Low frequency</app:DisplayName>
+            <app:PhysicalName>LF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MediumFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 300 - 3000 kilohertz. (MF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6d72982c-f53e-47e0-88ea-b048c444ac0d</app:SemanticID>
+            <app:DisplayName>Medium frequency</app:DisplayName>
+            <app:PhysicalName>MF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HighFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 3 - 30 megahertz. (HF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:94272755-7b52-4283-8d4e-e0e804935aca</app:SemanticID>
+            <app:DisplayName>High frequency</app:DisplayName>
+            <app:PhysicalName>HF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryHighFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 30 - 300 megahertz. (VHF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c7a273ff-6e2a-462b-8f38-4b2b370cdb45</app:SemanticID>
+            <app:DisplayName>Very high frequency</app:DisplayName>
+            <app:PhysicalName>VHF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UltraHighFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 300 - 3000 megahertz. (UHF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:11219897-7f38-4b01-8595-89fb6d17c91d</app:SemanticID>
+            <app:DisplayName>Ultra high frequency</app:DisplayName>
+            <app:PhysicalName>UHF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SuperHighFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 3 - 30 gigahertz. (SHF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7abcece5-ce85-4d11-9912-302545e4ed38</app:SemanticID>
+            <app:DisplayName>Super high frequency</app:DisplayName>
+            <app:PhysicalName>SHF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ExtraHighFrequency">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A frequency of 30 - 300 gigahertz. (EHF)</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:15f3ad0f-8cbe-4fb0-8595-002bb44f3484</app:SemanticID>
+            <app:DisplayName>Extra high frequency</app:DisplayName>
+            <app:PhysicalName>EHF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyBandLowerFrequencyMeasure" type="generic:NetworkFrequencyBandLowerFrequencyMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The lowest radio frequency of a specific contiguous band that a Network may use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d4491d1f-0f4d-4ef1-802c-d2f10d47c01f</app:SemanticID>
+        <app:ShortName>bandLowerFrequencyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>band lower frequency</app:DisplayName>
+        <app:UnitOfMeasure>kilohertz (kHz)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyBandLowerFrequencyMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The lowest radio frequency of a specific contiguous band that a Network may use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d4491d1f-0f4d-4ef1-802c-d2f10d47c01f</app:SemanticID>
+        <app:ShortName>bandLowerFrequencyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>band lower frequency</app:DisplayName>
+        <app:UnitOfMeasure>kilohertz (kHz)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="9" />
+      <xsd:maxInclusive value="999999999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyBandUpperFrequencyMeasure" type="generic:NetworkFrequencyBandUpperFrequencyMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The highest radio frequency of a specific contiguous band that a Network may use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:56d8c39a-a78f-41ab-a2f9-57c1f8b49dbb</app:SemanticID>
+        <app:ShortName>bandUpperFrequencyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>band upper frequency</app:DisplayName>
+        <app:UnitOfMeasure>kilohertz (kHz)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyBandUpperFrequencyMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The highest radio frequency of a specific contiguous band that a Network may use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:56d8c39a-a78f-41ab-a2f9-57c1f8b49dbb</app:SemanticID>
+        <app:ShortName>bandUpperFrequencyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>band upper frequency</app:DisplayName>
+        <app:UnitOfMeasure>kilohertz (kHz)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="9" />
+      <xsd:maxInclusive value="999999999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyChannelValue" type="generic:NetworkFrequencyChannelValueType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The channel number associated with the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b4813035-ea77-4d62-becf-9d50254ce129</app:SemanticID>
+        <app:ShortName>channelValue</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>value</app:MIMStereotype>
+        <app:DisplayName>channel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyChannelValueType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The channel number associated with the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b4813035-ea77-4d62-becf-9d50254ce129</app:SemanticID>
+        <app:ShortName>channelValue</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>value</app:MIMStereotype>
+        <app:DisplayName>channel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyDiscreteFrequencyMeasure" type="generic:NetworkFrequencyDiscreteFrequencyMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The radio frequency that a Network may use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ca4b092-2176-46f3-a1ba-eacbd17956bb</app:SemanticID>
+        <app:ShortName>discreteFrequencyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>discrete frequency</app:DisplayName>
+        <app:UnitOfMeasure>kilohertz (kHz)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyDiscreteFrequencyMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The radio frequency that a Network may use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ca4b092-2176-46f3-a1ba-eacbd17956bb</app:SemanticID>
+        <app:ShortName>discreteFrequencyMeasure</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>measure</app:MIMStereotype>
+        <app:DisplayName>discrete frequency</app:DisplayName>
+        <app:UnitOfMeasure>kilohertz (kHz)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="9" />
+      <xsd:maxInclusive value="999999999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyModulationCode" type="generic:NetworkFrequencyModulationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The modulation of a Network.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b032204-b90b-427a-ba43-5999792815a8</app:SemanticID>
+        <app:ShortName>modulationCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>modulation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyModulationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The modulation of a Network.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a2e4742a-10e7-4afc-80a3-11e554e75b33</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AmplitudeModulation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a radio or other wave by variation of its amplitude.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6f1f6e73-9ba5-4846-84bc-7ec1e6a98d10</app:SemanticID>
+            <app:DisplayName>Amplitude modulation</app:DisplayName>
+            <app:PhysicalName>AMPMOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DoubleSideBand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a wave by varying its amplitude across the whole channel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:76492425-ba57-4658-8325-931f10879439</app:SemanticID>
+            <app:DisplayName>Double side band</app:DisplayName>
+            <app:PhysicalName>DBSBND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FrequencyModulation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a radio or other wave by variation of its frequency.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a60dec2a-b7d8-4e52-a83d-d6b4aa7200a0</app:SemanticID>
+            <app:DisplayName>Frequency modulation</app:DisplayName>
+            <app:PhysicalName>FRQMOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FrequencyShiftKeying">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a radio or other wave by shifting central frequency of the signal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:557dc660-2e57-47cf-b86d-f592722ecf38</app:SemanticID>
+            <app:DisplayName>Frequency shift keying</app:DisplayName>
+            <app:PhysicalName>FRQSHF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LowerSideBand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a wave by varying its amplitude with modulation on the lower side band of the channel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0cfc16ac-36a6-4d08-be3f-b0c0bd669cc7</app:SemanticID>
+            <app:DisplayName>Lower side band</app:DisplayName>
+            <app:PhysicalName>LWSBND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PhaseShiftKeying">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a radio or other wave by shifting phase of the signal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:73bd830f-f3f0-4ac0-a6ff-e0ed90c32e2d</app:SemanticID>
+            <app:DisplayName>Phase shift keying</app:DisplayName>
+            <app:PhysicalName>PHSHKY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UpperSideBand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The modulation of a wave by varying its amplitude with modulation on the upper side band of the channel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9ba85f5e-f315-4178-bb0a-8137d2b45f6f</app:SemanticID>
+            <app:DisplayName>Upper side band</app:DisplayName>
+            <app:PhysicalName>UPSBND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyName" type="generic:NetworkFrequencyNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The designation of the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:72cc85b4-9bac-4953-ab9d-77c78414a9f0</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The designation of the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:72cc85b4-9bac-4953-ab9d-77c78414a9f0</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="8" />
+      <xsd:pattern value="[A-Z0-9]{1,8}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkFrequencyPurposeText" type="generic:NetworkFrequencyPurposeTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific purpose of the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ac4a29a8-4c38-437e-81f4-a958faf6502b</app:SemanticID>
+        <app:ShortName>purposeText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>purpose</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkFrequencyPurposeTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific purpose of the NetworkFrequency.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ac4a29a8-4c38-437e-81f4-a958faf6502b</app:SemanticID>
+        <app:ShortName>purposeText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>purpose</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="NetworkFrequencyType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A single frequency or range of frequencies in a spectrum between two limits, used in telecommunications.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1103812a-8a27-4464-aa7a-85d6abb9d220</app:SemanticID>
+        <app:DisplayName>Network frequency</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="generic:NetworkFrequencyAuthorisedTimePeriod" />
+          <xsd:element ref="generic:NetworkFrequencyBandCode" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyBandLowerFrequencyMeasure" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyBandUpperFrequencyMeasure" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyChannelValue" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyDiscreteFrequencyMeasure" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyModulationCode" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyName" minOccurs="0" />
+          <xsd:element ref="generic:NetworkFrequencyPurposeText" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="NuclearYieldGroupCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The explosive yield of a nuclear weapon that is the amount of energy discharged when the weapon is detonated, expressed in the equivalent mass of trinitrotoluene (TNT), either in kilotons (thousands of tons of TNT) or megatons (millions of tons of TNT).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84a5a177-e30f-4e56-8ea3-ca5a0d82c121</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is less energy than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ALFA">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group ALFA is less than 2 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:929af288-3a1d-4817-858e-b7a4acf8dcfb</app:SemanticID>
+            <app:DisplayName>ALFA</app:DisplayName>
+            <app:PhysicalName>ALFA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BRAVO">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group BRAVO is 2 KT to less than 5 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0428282d-2643-4c39-8226-4b1e103aaf0c</app:SemanticID>
+            <app:DisplayName>BRAVO</app:DisplayName>
+            <app:PhysicalName>BRAVO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CHARLIE">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group CHARLIE is 5 KT to less than 30 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f2922c5a-394e-4d2b-a86a-0f4489fb545e</app:SemanticID>
+            <app:DisplayName>CHARLIE</app:DisplayName>
+            <app:PhysicalName>CHARLI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DELTA">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group DELTA is 30 KT to less than 100 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:15d8b124-7801-4ea4-aa20-bb1a2e09da4c</app:SemanticID>
+            <app:DisplayName>DELTA</app:DisplayName>
+            <app:PhysicalName>DELTA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ECHO">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group ECHO is 100 KT to less than 300 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6a9276c5-3d44-4eda-9ff5-8d26d400e35a</app:SemanticID>
+            <app:DisplayName>ECHO</app:DisplayName>
+            <app:PhysicalName>ECHO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FOXTROT">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group FOXTROT is 300 KT to less than 1000 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:964405d9-eb3f-4be0-b211-5c4d8478b832</app:SemanticID>
+            <app:DisplayName>FOXTROT</app:DisplayName>
+            <app:PhysicalName>FOXTRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GOLF">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Yield Group GOLF is 1000 KT to less than 3000 KT.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7803213a-3094-4b98-a1e7-06a92b9eaabe</app:SemanticID>
+            <app:DisplayName>GOLF</app:DisplayName>
+            <app:PhysicalName>GOLF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ObjectDimensionsHeightDimension" type="generic:ObjectDimensionsHeightDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance measured perpendicularly to the horizontal base plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e019ee16-23e5-46d1-b2fd-87d3a447dbd2</app:SemanticID>
+        <app:ShortName>heightDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>height</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ObjectDimensionsHeightDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance measured perpendicularly to the horizontal base plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e019ee16-23e5-46d1-b2fd-87d3a447dbd2</app:SemanticID>
+        <app:ShortName>heightDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>height</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="8" />
+      <xsd:maxInclusive value="99999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ObjectDimensionsLengthDimension" type="generic:ObjectDimensionsLengthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance measured from end to end and parallel to the longest side of the horizontal base plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8a992f2e-cc26-4584-a75d-aa58c45a1394</app:SemanticID>
+        <app:ShortName>lengthDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>length</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ObjectDimensionsLengthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance measured from end to end and parallel to the longest side of the horizontal base plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8a992f2e-cc26-4584-a75d-aa58c45a1394</app:SemanticID>
+        <app:ShortName>lengthDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>length</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="9999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ObjectDimensionsType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The dimensions of a three-dimensional shape which faces are rectangles, two of them being horizontal, and that is defined by its length, width, and height.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d030e43f-899f-4e6d-9d72-62c941bfde26</app:SemanticID>
+        <app:DisplayName>Object dimensions</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="generic:ObjectDimensionsHeightDimension" minOccurs="0" />
+          <xsd:element ref="generic:ObjectDimensionsLengthDimension" minOccurs="0" />
+          <xsd:element ref="generic:ObjectDimensionsWidthDimension" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ObjectDimensionsWidthDimension" type="generic:ObjectDimensionsWidthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance measured from side to side and parallel to the shortest side of the horizontal base plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b37ba71b-5ab6-49e7-a75c-378e8da1c4db</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ObjectDimensionsWidthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance measured from side to side and parallel to the shortest side of the horizontal base plane of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b37ba71b-5ab6-49e7-a75c-378e8da1c4db</app:SemanticID>
+        <app:ShortName>widthDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>width</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="3" />
+      <xsd:totalDigits value="10" />
+      <xsd:maxInclusive value="9999999.999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrganisationTaskFunctionalAssociation" type="generic:OrganisationTaskFunctionalAssociationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The nature of the non-executing role of the Organisation with regard to the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ef0f617e-eb99-4bc2-9b69-3fe543be93bb</app:SemanticID>
+        <app:DisplayName>Organisation - task functional association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationTaskFunctionalAssociationCategoryCode" type="generic:OrganisationTaskFunctionalAssociationCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of functional relationship between the Organisation and the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e543c4d0-7233-4397-8918-18c5f264345c</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OrganisationTaskFunctionalAssociationCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of relationship between an Organisation and a Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:38b588a9-5981-4f39-8bf3-1a924c4c6c22</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Approves">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation authorises the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e0c9cf4c-4d4b-48c6-a07c-5a5f1f2768df</app:SemanticID>
+            <app:DisplayName>Approves</app:DisplayName>
+            <app:PhysicalName>APPR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Controls">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation directs, coordinates and executes the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:05777208-c103-42ba-8013-4e35d64fd771</app:SemanticID>
+            <app:DisplayName>Controls</app:DisplayName>
+            <app:PhysicalName>CONTRL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Initiates">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation starts the planning or execution of the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:434acd46-3868-42da-bf6d-13123a68d7fa</app:SemanticID>
+            <app:DisplayName>Initiates</app:DisplayName>
+            <app:PhysicalName>INIT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsCoordinatingAgentFor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation coordinates the Task when two, or more, resources are involved.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8506fd50-733f-430f-8eec-8473fa25cb88</app:SemanticID>
+            <app:DisplayName>Is coordinating agent for</app:DisplayName>
+            <app:PhysicalName>COOR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsInterestedIn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation takes an interest in the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:27933e0d-f7d3-4ff1-be87-6ebfb55748bd</app:SemanticID>
+            <app:DisplayName>Is interested in</app:DisplayName>
+            <app:PhysicalName>INTRST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsLiaisonFor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation acts as the liaison in connection with the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:14dfa09f-3b17-4256-ac0b-64b9e2dfedcf</app:SemanticID>
+            <app:DisplayName>Is liaison for</app:DisplayName>
+            <app:PhysicalName>LIAISN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsPointOfContactFor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation serves as the coordinator or focal point of information concerning the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:22984a50-0c4b-4af9-b63f-87b972688204</app:SemanticID>
+            <app:DisplayName>Is point of contact for</app:DisplayName>
+            <app:PhysicalName>POC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IsScrambleAgencyFor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation (agency) has the authority to issue an order directing take-off of aircraft as quickly as possible usually followed by mission instructions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:80fab71f-0bdb-427d-8ef0-fe0bff8c665b</app:SemanticID>
+            <app:DisplayName>Is scramble agency for</app:DisplayName>
+            <app:PhysicalName>ISSCRM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Plans">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation performs the detailing of the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:23a764a9-47ce-45bf-872a-b6b5444a09c8</app:SemanticID>
+            <app:DisplayName>Plans</app:DisplayName>
+            <app:PhysicalName>PLAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ProvidesDirectionFor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation states the commander's guidance or intent for the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f1b12c45-e3f3-4d9f-aae8-a77b60b36da0</app:SemanticID>
+            <app:DisplayName>Provides direction for</app:DisplayName>
+            <app:PhysicalName>PROVDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Requests">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Organisation indicates a need for the Task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d9c89422-6bdc-4e61-8d90-bede5b19d540</app:SemanticID>
+            <app:DisplayName>Requests</app:DisplayName>
+            <app:PhysicalName>REQUST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrganisationTaskFunctionalAssociationIntentText" type="generic:OrganisationTaskFunctionalAssociationIntentTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The statement by the Organisation outlining the commander's intent or the concept of operations with regard to the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bd60358b-d74b-40df-ae82-6424dbab1332</app:SemanticID>
+        <app:ShortName>intentText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>intent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OrganisationTaskFunctionalAssociationIntentTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The statement by the Organisation outlining the commander's intent or the concept of operations with regard to the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bd60358b-d74b-40df-ae82-6424dbab1332</app:SemanticID>
+        <app:ShortName>intentText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>intent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="4000" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrganisationTaskFunctionalAssociationNonExecutingOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation plays a non-executing role in the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0e7a434-d010-4e1d-89e8-a4f160a8dae9-1I</app:SemanticID>
+        <app:ShortName>nonExecutingOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>plays a non-executing role in</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationTaskFunctionalAssociationNonExecutingOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation plays a non-executing role in the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0e7a434-d010-4e1d-89e8-a4f160a8dae9-1R</app:SemanticID>
+        <app:ShortName>nonExecutingOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>plays a non-executing role in</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationTaskFunctionalAssociationTask" type="action:TaskType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation plays a non-executing role in the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0e7a434-d010-4e1d-89e8-a4f160a8dae9-2I</app:SemanticID>
+        <app:ShortName>task</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>plays a non-executing role in</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationTaskFunctionalAssociationTaskRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation plays a non-executing role in the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0e7a434-d010-4e1d-89e8-a4f160a8dae9-2R</app:SemanticID>
+        <app:ShortName>taskRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:1f109ba1-99af-4ab1-bce3-adde85d2b418</app:ReferenceType>
+        <app:DisplayName>plays a non-executing role in</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrganisationTaskFunctionalAssociationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The nature of the non-executing role of the Organisation with regard to the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ef0f617e-eb99-4bc2-9b69-3fe543be93bb</app:SemanticID>
+        <app:DisplayName>Organisation - task functional association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:AssociationType">
+        <xsd:sequence>
+          <xsd:element ref="generic:OrganisationTaskFunctionalAssociationCategoryCode" />
+          <xsd:element ref="generic:OrganisationTaskFunctionalAssociationIntentText" minOccurs="0" />
+          <xsd:element ref="generic:OrganisationTaskFunctionalAssociationTaskRef" minOccurs="0" />
+          <xsd:element ref="generic:OrganisationTaskFunctionalAssociationTask" minOccurs="0" />
+          <xsd:element ref="generic:OrganisationTaskFunctionalAssociationNonExecutingOrganisationRef" minOccurs="0" />
+          <xsd:element ref="generic:OrganisationTaskFunctionalAssociationNonExecutingOrganisation" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="PrimacyCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The relative priority.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b8c2be59-4403-412d-b35d-ffced0da55b8</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower priority than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Tertiary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The third highest priority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0ad7e085-0d57-459d-8a1b-c52bea3369eb</app:SemanticID>
+            <app:DisplayName>Tertiary</app:DisplayName>
+            <app:PhysicalName>THIRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Secondary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The second highest priority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c9eb43b9-9046-4d19-af62-ea06967facb0</app:SemanticID>
+            <app:DisplayName>Secondary</app:DisplayName>
+            <app:PhysicalName>SCNDRY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Primary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The highest priority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0a628039-83ff-40cd-b03c-6b04db26792e</app:SemanticID>
+            <app:DisplayName>Primary</app:DisplayName>
+            <app:PhysicalName>PRIME</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RelativeTimePeriodEndOffsetDuration" type="generic:RelativeTimePeriodEndOffsetDurationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The quantity of time to be added to the given time reference to designate the end of the RelativeTimePeriod.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:13619371-7aa1-4238-aa6f-5dfbeaf2686e</app:SemanticID>
+        <app:ShortName>endOffsetDuration</app:ShortName>
+        <app:MIMStereotype>duration</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end offset</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RelativeTimePeriodEndOffsetDurationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The quantity of time to be added to the given time reference to designate the end of the RelativeTimePeriod.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:13619371-7aa1-4238-aa6f-5dfbeaf2686e</app:SemanticID>
+        <app:ShortName>endOffsetDuration</app:ShortName>
+        <app:MIMStereotype>duration</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>end offset</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimeDurationType">
+      <xsd:pattern value="(-)?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+(\.\d+)?S)?)?" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RelativeTimePeriodStartOffsetDuration" type="generic:RelativeTimePeriodStartOffsetDurationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The quantity of time to be added to the given time reference to designate the beginning of the RelativeTimePeriod.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0f7019a6-b49f-4dcd-853c-f65986f1d0b6</app:SemanticID>
+        <app:ShortName>startOffsetDuration</app:ShortName>
+        <app:MIMStereotype>duration</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start offset</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RelativeTimePeriodStartOffsetDurationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The quantity of time to be added to the given time reference to designate the beginning of the RelativeTimePeriod.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0f7019a6-b49f-4dcd-853c-f65986f1d0b6</app:SemanticID>
+        <app:ShortName>startOffsetDuration</app:ShortName>
+        <app:MIMStereotype>duration</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>start offset</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimeDurationType">
+      <xsd:pattern value="(-)?P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+(\.\d+)?S)?)?" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RelativeTimePeriodTimingReference" type="action:TaskType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The RelativeTimePeriod is defined by reference to the start of the planned period of the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44776589-8211-4c69-ad6e-3947db31533aI</app:SemanticID>
+        <app:ShortName>timingReference</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is defined by reference to the start time of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RelativeTimePeriodTimingReferenceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The RelativeTimePeriod is defined by reference to the start of the planned period of the Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44776589-8211-4c69-ad6e-3947db31533aR</app:SemanticID>
+        <app:ShortName>timingReferenceRef</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:1f109ba1-99af-4ab1-bce3-adde85d2b418</app:ReferenceType>
+        <app:DisplayName>is defined by reference to the start time of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RelativeTimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A TimePeriod that is expressed by reference to the timing of a Task.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:40c07efc-5180-4e72-902f-fa9c6e2153e0</app:SemanticID>
+        <app:DisplayName>Relative time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:TimePeriodType">
+        <xsd:sequence>
+          <xsd:element ref="generic:RelativeTimePeriodEndOffsetDuration" minOccurs="0" />
+          <xsd:element ref="generic:RelativeTimePeriodStartOffsetDuration" minOccurs="0" />
+          <xsd:element ref="generic:RelativeTimePeriodTimingReferenceRef" />
+          <xsd:element ref="generic:RelativeTimePeriodTimingReference" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Role" type="generic:RoleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An entity that captures dynamic and temporal aspects of a real-world object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3956c789-0e90-4003-ac90-beaefafbc64e</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Role</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RoleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An entity that captures dynamic and temporal aspects of a real-world object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3956c789-0e90-4003-ac90-beaefafbc64e</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Role</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="SpeedPrecisionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The maximum degree of discrimination or resolution for which speed is stated.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e9c62783-ee14-4460-9bda-656adf5d075f</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="KilometresPerHour">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The speed is defined to the precision of kilometres per hour.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:816b1b1e-4dd2-4969-97a0-9b83ce70850c</app:SemanticID>
+            <app:DisplayName>Kilometres per hour</app:DisplayName>
+            <app:PhysicalName>KPH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Knots">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The speed is defined to the precision of a knot.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0aababdd-ee8e-439a-9b9c-614091b8130c</app:SemanticID>
+            <app:DisplayName>Knots</app:DisplayName>
+            <app:PhysicalName>KNOTS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MetresPerSecond">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The speed is defined to the precision of metres per second.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ada67ed6-e93c-4c43-b680-01f8a74e9dc4</app:SemanticID>
+            <app:DisplayName>Metres per second</app:DisplayName>
+            <app:PhysicalName>MPS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="TextualTimePeriodDescriptionText" type="generic:TextualTimePeriodDescriptionTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of a portion of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:244a5814-4962-4db5-a71a-fb3d0b740150</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TextualTimePeriodDescriptionTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of a portion of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:244a5814-4962-4db5-a71a-fb3d0b740150</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TextualTimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A TimePeriod specified as free text.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0938920e-ed38-42c8-865e-ff16212ad15b</app:SemanticID>
+        <app:DisplayName>Textual time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="generic:TimePeriodType">
+        <xsd:sequence>
+          <xsd:element ref="generic:TextualTimePeriodDescriptionText" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TimePeriodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A portion of time.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:789b83c7-7f1d-4278-8870-22bdca827494</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Time period</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

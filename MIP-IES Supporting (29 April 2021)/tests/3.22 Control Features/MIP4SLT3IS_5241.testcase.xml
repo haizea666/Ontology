@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>41</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create ObstacleLane (GeometricDefinition Sub-Type = Line).</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to create ObstacleLane (ControlFeature) represented as Line in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates two ObstacleLanes (ControlFeatures) represented as Line with different orientation. Nation B receives the information and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes message elements for Obstacles (belonging in the ControlFeature message schema area), for instance Ground Picture &gt; Mobility/Counter-Mobility.
+Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the created ObstacleLane ControlFeatures are displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an ObstacleLane ControlFeature represented as Line with a horizontal orientation. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the ObstacleLane correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an ObstacleLane ControlFeature represented as Line with a vertical orientation. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the ObstacleLane correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

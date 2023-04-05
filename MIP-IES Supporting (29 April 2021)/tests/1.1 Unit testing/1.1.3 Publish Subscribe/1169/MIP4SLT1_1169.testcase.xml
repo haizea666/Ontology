@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>69</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Notification size limit: Large Notifications - 2 reasonable amount of large payloads</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>Objective is for the producer to exchange to a consumer two (2) large payloads containing a reasonable amount of data.</TestCaseObjective>
+  <TestCaseScenario>Producer notifies the consumer of two separated payloads containing ?????? (need to consider that a notificaiton can only contain one update....)</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4.0_Publish_Subscribe_Exchange_Pattern, MIP4SLT1_1130, MIP4SLT1_1131.
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer receives all small notifications published to a given topic / geographical / source filter, from the Producer.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail</TestCaseOutput>
+  <TestCaseTraceability>MPR_1885</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Producer (1) starts notifying the Consumer (2) with the payloads includes in this test case</TestCaseStepAction>
+    <TestCaseStepResult>Consumer (2) receives and process the payloads and remains responsive. The information is displayed on the Consumer (2) C2 System.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

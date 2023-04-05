@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>71</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Handling of Create, Update and Delete operations. Provider must return a ResourceUnavailableFault</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To call unsupported operations inherited from WSMP but not used in MIP4. Validate the proper fault is returned, ResourceUnavailableFault.</TestCaseObjective>
+  <TestCaseScenario>Test of th fault ResourceUnavailableFault when Create, Update or Delete operation is called on the Request/Response exchange.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2, (or 1 and SOAPUI)</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211,  MIP4SLT1_1213, MIP4SLT1_1214
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+*	Inform exchange partners of the capabilities of a partner system
+*	Allow partners to exchange source identifiers
+*	Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1: Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]</TestCasePreCondition>
+  <TestCaseInput>Any Create, Update or Delete over the request and response exchange</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the Consumer is able to receive the proper fault exception.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the Provider has answered with a ResourceUnavailableFault.</TestCaseOutput>
+  <TestCaseTraceability>MIP4_Request_Response_Exchange_Pattern</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (1) request the creation of information on the Provider (2)</TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets the request correctly</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Provider answers with a ResourceUnavailableFault</TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the fault from the Provider</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (1) request the update of information on the Provider (2)</TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets the request correctly</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Provider answers with a ResourceUnavailableFault</TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the fault from the Provider</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (1) request the deletion of information on the Provider (2)</TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets the request correctly</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Provider answers with a ResourceUnavailableFault</TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the fault from the Provider</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

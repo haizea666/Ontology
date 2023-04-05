@@ -1,0 +1,28 @@
+Test description
+
+Test IDMIP4SLT2.5_2408Test TitleInvalid Element Value NILExecution PriorityHP (3 originally)ObjectiveCheck Optionality of Elements (specifically attributes that were mandatory within MIP3.1 and are optional within MIP4-IES Schema Documentation).
+Confirm systems correctly accommodate 'NIL' values for optional elements.ScenarioSend an object with all its mandatory as well as optional elements filled in with valid values to the Gateway through the Test Tool (TT). 
+The restrictions for the elements' values are specified within the MIP4-IES Schema Documentation. 
+Send the object again with all its optional elements set to NIL. 
+The Gateway must be able to handle the NIL values for optional elements, by either correct mapping to the C2 system, translate NIL values to comment or any other means. In either way the Gateway must remain stable.EnvironmentCo-located, Internet through VPN.Participation1MTRSPre-test ConditionsThe nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. 
+MIP4SLT2.5_2408-n.xml data are available at the TT to be sent.Test InputsMIP4SLT2.5_2408-1.xml (all elements), MIP4SLT2.5_2408-2.xml (NIL optional elements).
+In order to generate these XML files, special attention must be paid to attributes that were mandatory within MIP3.1 (they can be checked within MIG-Annex-F-MOR-List-v3.1.13), whose corresponding MIP4-IES Elements are now optional.ConclusionThis test is considered a success the Gateway remains stable and handles all messages correctly. Preferably the object is displayed at the nation's C2 system with correct mandatory information.Test OutputsPass or fail.TraceabilityREQ_IDT_0004
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The nation loads MIP4SLT2.5_2408-1.xml into their C2 system (2) through the TT (1). ~~Objects visible in the C2 system with the correct received elements values. ~~122. The nation loads MIP4SLT2.5_2408-2.xml into their C2 system (2) through the TT (1). ~~Objects displayed at the nation's C2 system with correct mandatory elements' information and and optional elements NIL values handled correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

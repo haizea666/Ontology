@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:confidentialitylabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xmlns:networkservice="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/NetworkService" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/NetworkService" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://nmrr.nc3a.nato.int/rest/doc/NATO/Information%20Assurance/OLP/nl-cl.xsd" namespace="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="DataTransfer" type="networkservice:DataTransferType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for the electronic transfer of data.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:375a4d23-5eb4-41e1-8557-d731556794df</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Data transfer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DataTransferCategoryCode" type="networkservice:DataTransferCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of DataTransfer.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d867c440-364c-4661-81be-f0d580b2bb39</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="DataTransferCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of DataTransfer.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:303575ed-cfc1-4e1d-b721-0d0cfef9a282</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="FileTransferProtocol">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements of file sharing between hosts.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ef4857a4-b2ae-478e-aa4d-b4d1163300d0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>File transfer protocol</app:DisplayName>
+            <app:PhysicalName>FTP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HypertextTransferProtocol">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service provided through Hypertext Transfer Protocol (HTTP) that is an application-level protocol with the lightness and speed necessary for distributed, collaborative, hypermedia information systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:414681a3-b589-4ace-be1b-4a91fdc32f8e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Hypertext transfer protocol</app:DisplayName>
+            <app:PhysicalName>HTTP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RemoteAccess">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that enable the operation of a remote node from a local node.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fb023c77-a7c3-4788-890d-2d50f0da9d07</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Remote access</app:DisplayName>
+            <app:PhysicalName>RMTACC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Telnet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service using the terminal emulation protocol of TCP/IP. Options give TELNET the ability to transfer binary data, support byte macros, emulate graphics terminals, and convey information to support centralised terminal management.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:db27d0c3-ae68-43e5-b534-7464c6d0c500</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Telnet</app:DisplayName>
+            <app:PhysicalName>TELNET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="DataTransferType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for the electronic transfer of data.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:375a4d23-5eb4-41e1-8557-d731556794df</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Data transfer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:DataTransferCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Facsimile" type="networkservice:FacsimileType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service provided by means of electronic scanning of a document, transmitting it as data by telecommunications links, and producing an exact copy at the receiver.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c35be75c-4448-4e91-8813-70a843f688f4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Facsimile</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FacsimileType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service provided by means of electronic scanning of a document, transmitting it as data by telecommunications links, and producing an exact copy at the receiver.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c35be75c-4448-4e91-8813-70a843f688f4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Facsimile</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IdentificationFriendOrFoe" type="networkservice:IdentificationFriendOrFoeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for distinguishing friendly from enemy forces. This service is typically provided by a system using electromagnetic transmissions to which equipment carried by friendly forces automatically responds, for example, by emitting pulses.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d1893aff-858f-45ab-8880-d60532ffe398</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Identification friend or foe</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="IdentificationFriendOrFoeCategoryCode" type="networkservice:IdentificationFriendOrFoeCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of IdentificationFriendOrFoe.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5569e8d-25e2-4c3c-9cdc-dee5df3ea7f5</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IdentificationFriendOrFoeCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of IdentificationFriendOrFoe.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4fbe72ee-bad0-4991-93b2-8110ac952e40</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="IFFMode1">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode 1.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f156ee98-071a-4237-b580-b1497ed663a5</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode 1</app:DisplayName>
+            <app:PhysicalName>IFFM1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFMode2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode 2.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:48fe7666-36dc-4b92-93ab-cacbe3ed8d68</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode 2</app:DisplayName>
+            <app:PhysicalName>IFFM2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFMode3">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode 3.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5bdeee6b-7727-4785-9314-cd4df2eeebf0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode 3</app:DisplayName>
+            <app:PhysicalName>IFFM3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFMode3A">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode 3A.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:19a75759-fbd0-4d85-8fe3-24875dc7746b</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode 3A</app:DisplayName>
+            <app:PhysicalName>IFFM3A</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFMode4">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode 4.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4795970a-73c4-4aa5-b055-08431c07261d</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode 4</app:DisplayName>
+            <app:PhysicalName>IFFM4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFMode5">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode 5.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dbb91ec6-0a68-47f6-bd3c-8837539129f4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode 5</app:DisplayName>
+            <app:PhysicalName>IFFM5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFModeC">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode C.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a5301d92-f6b9-4329-b6c6-f307ac808eb6</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode C</app:DisplayName>
+            <app:PhysicalName>IFFMC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IFFModeS">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the data for IFF mode S.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e6c628f8-1e73-45df-bd53-3723906af934</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>IFF mode S</app:DisplayName>
+            <app:PhysicalName>IFFMS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="IdentificationFriendOrFoeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for distinguishing friendly from enemy forces. This service is typically provided by a system using electromagnetic transmissions to which equipment carried by friendly forces automatically responds, for example, by emitting pulses.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d1893aff-858f-45ab-8880-d60532ffe398</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Identification friend or foe</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:IdentificationFriendOrFoeCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ImageService" type="networkservice:ImageServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for electronic transfer of static or slowly refreshed images.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5966b57d-3390-4c6b-a58e-d2acfb1feb0f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Image service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ImageServiceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for electronic transfer of static or slowly refreshed images.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5966b57d-3390-4c6b-a58e-d2acfb1feb0f</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Image service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MIPGatewayService" type="networkservice:MIPGatewayServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service based on the MIP Solution to achieve multinational interoperability.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:af7c2b70-2a83-48a0-abfe-10d403658e94</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>MIP gateway service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MIPGatewayServiceSpecificationCode" type="networkservice:MIPGatewayServiceSpecificationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The supported MIP specification.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:94da7dc5-b4e3-4128-b524-d1a192bd1f58</app:SemanticID>
+        <app:ShortName>specificationCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>specification</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MIPGatewayServiceSpecificationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A MIP specification supported by a MIPGatewayService.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:072f828f-6f67-4c06-9a64-525c2e7f3806</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ADEM">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MIP gateway service is based on the Alternate Development and Exchange Method (ADEM).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c1abad1d-b092-4526-8e6a-9019fa2c57d3</app:SemanticID>
+            <app:DisplayName>ADEM</app:DisplayName>
+            <app:PhysicalName>ADEM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Baseline2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MIP gateway service is based on MIP Baseline 2.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e79dfb97-2132-46a6-8b04-c5b6fe889c26</app:SemanticID>
+            <app:DisplayName>Baseline 2</app:DisplayName>
+            <app:PhysicalName>BL2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Baseline31">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MIP gateway service is based on MIP Baseline 3.1.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7ce050c0-45df-442e-9da3-12c9dbf0202e</app:SemanticID>
+            <app:DisplayName>Baseline 3.1</app:DisplayName>
+            <app:PhysicalName>BL31</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MIP4IES">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MIP gateway service is based on the MIP 4 Information Exchange Specification.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d00694b3-1d82-43a2-b9cf-59def134965f</app:SemanticID>
+            <app:DisplayName>MIP 4 Information Exchange Specification</app:DisplayName>
+            <app:PhysicalName>MIP4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MIPGatewayServiceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service based on the MIP Solution to achieve multinational interoperability.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:af7c2b70-2a83-48a0-abfe-10d403658e94</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>MIP gateway service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:MIPGatewayServiceSpecificationCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MessageHandlingService" type="networkservice:MessageHandlingServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An application service that provides a generalised facility for exchanging electronic messages between systems.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:943dee34-975d-4838-ba13-94bf59cc9fb2</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Message handling service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MessageHandlingServiceCategoryCode" type="networkservice:MessageHandlingServiceCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MessageHandlingService.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:189d4014-f040-4972-ba80-81a52a515dfa</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MessageHandlingServiceCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MessageHandlingService.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ebbaf396-0430-4995-b1a7-46ffec92541e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Directory">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service provided through capabilities used by OSI applications, OSI management processes, other OSI layer entities, and telecommunication services, providing a dynamic "name-to-address mapping".</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c1057dc-d6a8-41b1-ba3d-367bbd15cb66</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Directory</app:DisplayName>
+            <app:PhysicalName>DRCTRY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ElectronicMail">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A communications service that provides correspondence in the form of messages transmitted between user terminals over a network.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b4698350-3eaf-40d8-82f8-a0a7efa1e964</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Electronic mail</app:DisplayName>
+            <app:PhysicalName>EMAIL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pager">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A communications service making use of a small radio device which bleeps or vibrates to inform the wearer that someone wishes to contact them or that it has received a short text message.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e3932de0-f6ea-4132-a6ac-1967e6a0af62</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Pager</app:DisplayName>
+            <app:PhysicalName>PAGER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Telex">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A communications service using a system consisting of teletypewriters connected to a telephonic network to send and receive signals.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:70274065-ca35-4231-94a7-c26e35675fba</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Telex</app:DisplayName>
+            <app:PhysicalName>TELEX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MessageHandlingServiceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An application service that provides a generalised facility for exchanging electronic messages between systems.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:943dee34-975d-4838-ba13-94bf59cc9fb2</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Message handling service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:MessageHandlingServiceCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NetworkService" type="networkservice:NetworkServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A communications service provided by a Network.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cd5e1225-15dd-4f7e-b418-215977248c1d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Network service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkServiceCryptographicAuthenticationSystemName" type="networkservice:NetworkServiceCryptographicAuthenticationSystemNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the cryptographic authentication system in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f635f6c7-b97e-4321-b867-a889fe9c6220</app:SemanticID>
+        <app:ShortName>cryptographicAuthenticationSystemName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>cryptographic authentication system</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceCryptographicAuthenticationSystemNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the cryptographic authentication system in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f635f6c7-b97e-4321-b867-a889fe9c6220</app:SemanticID>
+        <app:ShortName>cryptographicAuthenticationSystemName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>cryptographic authentication system</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="3" />
+      <xsd:maxLength value="8" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkServiceCryptographicCodeDayNumberText" type="networkservice:NetworkServiceCryptographicCodeDayNumberTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The effective day of the crypto codes in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c57c38a-8c7b-4700-9801-44525b5b2166</app:SemanticID>
+        <app:ShortName>cryptographicCodeDayNumberText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>cryptographic code day number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceCryptographicCodeDayNumberTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The effective day of the crypto codes in use.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c57c38a-8c7b-4700-9801-44525b5b2166</app:SemanticID>
+        <app:ShortName>cryptographicCodeDayNumberText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>cryptographic code day number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="4" />
+      <xsd:maxLength value="5" />
+      <xsd:pattern value="[A-Z0-9]{4,5}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkServiceCryptographicCodeShortTitleText" type="networkservice:NetworkServiceCryptographicCodeShortTitleTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The cryptographic code.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:376a449c-b636-456c-96ab-e56eee054266</app:SemanticID>
+        <app:ShortName>cryptographicCodeShortTitleText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>cryptographic code short title</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceCryptographicCodeShortTitleTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The cryptographic code.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:376a449c-b636-456c-96ab-e56eee054266</app:SemanticID>
+        <app:ShortName>cryptographicCodeShortTitleText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>cryptographic code short title</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkServiceCryptographicPlanShortTitleText" type="networkservice:NetworkServiceCryptographicPlanShortTitleTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The cryptographic plan.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a3b2d7a8-941f-4621-98d7-738996ab6515</app:SemanticID>
+        <app:ShortName>cryptographicPlanShortTitleText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>cryptographic plan short title</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceCryptographicPlanShortTitleTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The cryptographic plan.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a3b2d7a8-941f-4621-98d7-738996ab6515</app:SemanticID>
+        <app:ShortName>cryptographicPlanShortTitleText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>cryptographic plan short title</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkServiceExchangeClassification" type="confidentialitylabel:ConfidentialityLabelType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The security classification for the data exchanged via the NetworkService.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:eb2d6b7f-6b31-4a02-b639-5210fd4c9ea5</app:SemanticID>
+        <app:ShortName>exchangeClassification</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>exchange classification</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NetworkServiceIffModeCodeText" type="networkservice:NetworkServiceIffModeCodeTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The IFF mode code combination.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2eaa2cf6-6d05-4278-937f-1ea2e41813cc</app:SemanticID>
+        <app:ShortName>iffModeCodeText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>IFF mode code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceIffModeCodeTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The IFF mode code combination.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2eaa2cf6-6d05-4278-937f-1ea2e41813cc</app:SemanticID>
+        <app:ShortName>iffModeCodeText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>IFF mode code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NetworkServiceIsActiveIndicator" type="networkservice:NetworkServiceIsActiveIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the NetworkService is active (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d636b802-7c24-4809-b33a-2ecdf9a26eb1</app:SemanticID>
+        <app:ShortName>isActiveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is active</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceIsActiveIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the NetworkService is active (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d636b802-7c24-4809-b33a-2ecdf9a26eb1</app:SemanticID>
+        <app:ShortName>isActiveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is active</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="NetworkServiceIsEncryptedIndicator" type="networkservice:NetworkServiceIsEncryptedIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the NetworkService is encrypted (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a173a2c9-d2eb-4921-aaed-0040894c54de</app:SemanticID>
+        <app:ShortName>isEncryptedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is encrypted</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NetworkServiceIsEncryptedIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the NetworkService is encrypted (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a173a2c9-d2eb-4921-aaed-0040894c54de</app:SemanticID>
+        <app:ShortName>isEncryptedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is encrypted</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="NetworkServiceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A communications service provided by a Network.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cd5e1225-15dd-4f7e-b418-215977248c1d</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Network service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:ObjectType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:NetworkServiceCryptographicAuthenticationSystemName" minOccurs="0" />
+          <xsd:element ref="networkservice:NetworkServiceCryptographicCodeDayNumberText" minOccurs="0" />
+          <xsd:element ref="networkservice:NetworkServiceCryptographicCodeShortTitleText" minOccurs="0" />
+          <xsd:element ref="networkservice:NetworkServiceCryptographicPlanShortTitleText" minOccurs="0" />
+          <xsd:element ref="networkservice:NetworkServiceExchangeClassification" />
+          <xsd:element ref="networkservice:NetworkServiceIffModeCodeText" minOccurs="0" />
+          <xsd:element ref="networkservice:NetworkServiceIsActiveIndicator" minOccurs="0" />
+          <xsd:element ref="networkservice:NetworkServiceIsEncryptedIndicator" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TacticalDataLink" type="networkservice:TacticalDataLinkType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">One or more data links organised within a given architecture and supporting a standard set of binary messages exchanged between users of that system, for use in military operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e5f90481-bc53-461b-a3b6-d75343318e72</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tactical data link</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TacticalDataLinkCategoryCode" type="networkservice:TacticalDataLinkCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of TacticalDataLink.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3f48af30-ce98-44e3-b584-ca7257a2dc67</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TacticalDataLinkCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of TacticalDataLink.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:025b19bd-059c-40e0-afed-066c6940c7f8</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="DataLink16">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of data of Link 16.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f9ccee21-febc-4c38-9d49-3591cb9cdf87</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 16, data</app:DisplayName>
+            <app:PhysicalName>LNK16D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Link1">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of a specific message of Link 1.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cdeacfb1-d6d8-40e6-9967-9260af7251d0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 1</app:DisplayName>
+            <app:PhysicalName>LNK1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Link11">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of a specific message of Link 11.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:528b04c9-515d-4c50-91b0-c15e6104674a</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 11</app:DisplayName>
+            <app:PhysicalName>LNK11</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Link11B">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of a specific message of Link 11B.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e391bacb-87f5-4859-89bb-86bf3200cae6</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 11B</app:DisplayName>
+            <app:PhysicalName>LNK11B</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Link14">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of a specific message of Link 14.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9df01cdd-acba-4f42-b873-23534867e2cb</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 14</app:DisplayName>
+            <app:PhysicalName>LNK14</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Link22">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of a specific message of Link 22.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:87dd5f6e-5e7b-4b50-a782-989b556d1509</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 22</app:DisplayName>
+            <app:PhysicalName>LNK22</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Link4">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of a specific message of Link 4.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a8d7aa7a-8c16-44a0-a919-86484690b5ee</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 4</app:DisplayName>
+            <app:PhysicalName>LNK4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VoiceLink16">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A service that provides the basic elements for the transmission of voice of Link 16.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:42b4e1a8-fd0c-4289-b365-0c32d3bb8789</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Link 16, voice</app:DisplayName>
+            <app:PhysicalName>LNK16V</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TacticalDataLinkType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">One or more data links organised within a given architecture and supporting a standard set of binary messages exchanged between users of that system, for use in military operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e5f90481-bc53-461b-a3b6-d75343318e72</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Tactical data link</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:TacticalDataLinkCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="VideoService" type="networkservice:VideoServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for electronic transfer of video information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:34326bf0-9cb4-482b-bed5-0af9633e5a4c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Video service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="VideoServiceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for electronic transfer of video information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:34326bf0-9cb4-482b-bed5-0af9633e5a4c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Video service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="VoiceService" type="networkservice:VoiceServiceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for electronic transfer of voice information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:003e64b6-59c7-4659-ac6a-2673dc3078c5</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Voice service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VoiceServiceIsMobileServiceIndicator" type="networkservice:VoiceServiceIsMobileServiceIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the VoiceService supports communication to non-fixed devices (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:78950b36-e34c-4ac9-819a-676c2f2fb120</app:SemanticID>
+        <app:ShortName>isMobileServiceIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>is mobile service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="VoiceServiceIsMobileServiceIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the VoiceService supports communication to non-fixed devices (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:78950b36-e34c-4ac9-819a-676c2f2fb120</app:SemanticID>
+        <app:ShortName>isMobileServiceIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>is mobile service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="VoiceServiceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A service for electronic transfer of voice information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:003e64b6-59c7-4659-ac6a-2673dc3078c5</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:cd5e1225-15dd-4f7e-b418-215977248c1d">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Voice service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="networkservice:NetworkServiceType">
+        <xsd:sequence>
+          <xsd:element ref="networkservice:VoiceServiceIsMobileServiceIndicator" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

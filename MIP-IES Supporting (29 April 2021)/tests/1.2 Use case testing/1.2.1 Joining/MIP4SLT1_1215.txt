@@ -1,0 +1,33 @@
+Test description
+
+Test IDMIP4SLT1_1215Test TitleVerify that the Producer`s service description (WSDL) contains the required WS-Addressing operations to meet the minimum required functionality of the MIP4 Publish / Subscribe serviceExecution Priority1ObjectivePublish/SubscribeScenarioAfter acquiring the producer's service description (WSDL) examine it to determine that the minimum required functionality is provided.EnvironmentCo-located, Internet through VPN.Participation2MTRSPre-test ConditionsMIP4SLT1_Test_1212Test InputsThe producer's service description (WSDL) and related included and imported artifacts.ConclusionThe test is completed when the producer's service description
+(WSDL) is verified to contain the minimum required functionality described through MIP4 WS-Addressing operations. Test OutputsPass or fail.TraceabilityREQ_EM_0005
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Examine the producer's service description (WSDL) to determine the MIP4 WS-Addressing operations and associated with the defined service. ~~The defined service will contain at least the
+following required operations for the exchange
+pattern:
+* http://docs.oasis-open.org/wsrf/rpw-2/GetResourceProperty/GetResourcePropertyRequest
+* http://mip-interop.org/wsdls/MIP4/MIPRequestResponse/GetItemsRequest (will be changed with WSMP)
+* http://docs.oasis-open.org/wsn/bw-2/NotificationConsumer/Notify
+* http://docs.oasis-open.org/wsn/bw-2/NotificationProducer/SubscribeRequest
+* http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/UnsubscribeRequest
+* http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/RenewRequest ~~
+12
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

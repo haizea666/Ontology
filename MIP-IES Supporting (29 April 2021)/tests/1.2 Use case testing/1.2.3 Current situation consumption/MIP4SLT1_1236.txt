@@ -1,0 +1,22 @@
+Test description
+
+Test IDMIP4SLT3IS_1236Test TitleConsumer Unexpected DisconnectionExecution Priority1ObjectiveTo verify fault tolerance of the MIP4 IES to resume operational data exchange between a Consumer (A) and Provider (B) after the network has unexpectedly disconnected Consumer (A) by completing a stand-alone Request/Response exchange pattern to re-synchronize and establish ground truth and resume publish/subscribe services established prior to the network disruption. ScenarioConsumer (A) and Produced (B) have established a Publish/Subscribe exchange pattern that is satisfying the subscription as of the moment when Consumer (A) loses network connectivity to Producer (B).  Once network is re-established Consumer (A) requests stand-alone initialization data using a request/response exchange mechanism and resumes the subscription data that was established prior to network interruption. EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSN/APre-test ConditionsA subscription between Consumer (A) and Producer (B) has been initialized and routine updates are occurring using Publish/Subscribe exchange patterns.  Test InputsN/A.ConclusionThis test is considered a success if the Consumer (A) has successfully re-connected to the network, re-synchronized with Producer (B) and established ground truth without data loss.Test OutputsN/A.TraceabilityREQ_EM_0006, REQ_EM_0008, REQ_EM_0010
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (A) is subscribed to receive routine operational data from Producer (B). ~~Network and MIP4 Gateways are in an operational state and Consumer (A) is receiving routine operational data. ~~122. Simulate a Consumer (A) network disruption losing connectivity with Provider (B). ~~ The connections between Consumer (A) and Provider (B) prevents the Consumer from receiving operational data. ~~ 123. Upon re-establishment of Network and MIP Gateway operational state, Consumer (A) requests a stand-alone request/response exchange from Produced (B). ~~Producer (B) provides the request/response exchange update to Consumer (A), and resumes the publish/subscribe information flow as previously established between Consumer (A) and Producer (B) prior to the network disruption. ~~ 12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

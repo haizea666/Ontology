@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:UnitPersonnelStrength xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<unit:PersonnelCountEnlistedPrivateQuantity>100</unit:PersonnelCountEnlistedPrivateQuantity>
+	<unit:PersonnelCountNonCommissionedOfficerQuantity>10</unit:PersonnelCountNonCommissionedOfficerQuantity>
+	<unit:PersonnelCountOfficerQuantity>100</unit:PersonnelCountOfficerQuantity>
+</unit:UnitPersonnelStrength>
+<!--
+Original example
+
+<orgstruct:PersonnelStrengthWrapper>
+	<unit_4.2:PersonnelCount>
+		<unit_4.2:EnlistedPrivateQuantityWrapper>
+			<unit_4.2:EnlistedPrivateQuantity>100</unit_4.2:EnlistedPrivateQuantity>
+		</unit_4.2:EnlistedPrivateQuantityWrapper>
+		<unit_4.2:NonCommissionedOfficerQuantityWrapper>
+			<unit_4.2:NonCommissionedOfficerQuantity>10</unit_4.2:NonCommissionedOfficerQuantity>
+		</unit_4.2:NonCommissionedOfficerQuantityWrapper>
+		<unit_4.2:OfficerQuantityWrapper>
+			<unit_4.2:OfficerQuantity>100</unit_4.2:OfficerQuantity>
+		</unit_4.2:OfficerQuantityWrapper>
+	</unit_4.2:PersonnelCount>
+</orgstruct:PersonnelStrengthWrapper>
+-->

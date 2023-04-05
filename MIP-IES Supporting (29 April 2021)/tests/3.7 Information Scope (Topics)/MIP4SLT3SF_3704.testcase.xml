@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>4</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Globally Significant Topics.</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to verify that the MIP4-IES is able to support the exchange of globally significant information (e.g.: 'CBRN', 'Enemy Situation', 'Engineer Support', etc.).The dissemination rule for a Globally Significant Topic is that the information (message elements) belonging in that Topic is sent to everybody, except the Source of the information.</TestCaseObjective>
+  <TestCaseScenario>Nation A establishes and fills Globally Significant Topics (e.g.: 'CBRN', 'Enemy Situation', 'Engineer Support', etc.). Nation A will send data to Nation B containing new and updated BSOs. The data will appear on the display of the C2IS of Nation B.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A and Nation B have both established the Globally Significant Topics.Nation B subscribes to Nation A Globally Significant Topics.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This System Functionality Test is considered a success if, when checked, the "Globally Significant" Topic contains identical content in both, Producer and Receiver sides, and the receiving system processes the information contained in the "Globally Significant" topic without error.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A (Producer) creates information of own choice (e.g.: 'CBRN', 'Enemy Situation', 'Engineer Support', etc.) and identifies it as belonging in globally significant Topics. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B (Consumer) displays this globally significant information. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates some of the previously created information identified as globally significant. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays this updated globally significant information. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

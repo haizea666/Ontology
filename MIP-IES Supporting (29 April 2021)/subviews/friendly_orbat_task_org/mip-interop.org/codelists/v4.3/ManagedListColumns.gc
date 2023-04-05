@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:ColumnSet
+	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd'
+>
+	<Identification>
+		<ShortName>ManagedListColumns</ShortName>
+		<Version>1.0.0</Version>
+		<CanonicalUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet</CanonicalUri>
+		<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+	</Identification>
+	<Column Id="code" Use="required">
+		<ShortName>Code</ShortName>
+		<Data Type="string"/>
+	</Column>
+	<Column Id="label" Use="required">
+		<ShortName>Label</ShortName>
+		<Data Type="string"/>
+	</Column>
+	<Column Id="description" Use="optional">
+		<ShortName>Description</ShortName>
+		<Data Type="string"/>
+	</Column>
+	<Key Id="managedListKey">
+		<ShortName>CodeCode</ShortName>
+		<ColumnRef Ref="code"/>
+	</Key>
+</gc:ColumnSet>

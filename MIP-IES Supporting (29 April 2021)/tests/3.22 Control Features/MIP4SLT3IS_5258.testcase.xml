@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>58</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create StrongPoint.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the elements for a StrongPoint and the Consumers are able to correctly understand (and display) it.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates a StrongPoint with specific information.
+Nation B receives the information and interprets it correctly.
+Nation A updates the StrongPoint.
+Nation B receives the information and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Battlespace Geometry' topic (for instance, any topic where the tested BSO is included). The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Control Feature and all its elements are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates the tactical graphic for a StrongPoint with specific information for the following attributes:
+* Name
+* Location
+* HostilityStatus=Friend
+* ValidityPeriod
+* IsActive=No
+* ReportingDataCategory=Planned </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the StrongPoint correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the StrongPoint with new values for the following attributes:
+* Location
+* HostilityStatus=Hostile
+* ValidityPeriod
+* IsActive=Yes
+* ReportingDataCategory=Reported </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the updated StrongPoint correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

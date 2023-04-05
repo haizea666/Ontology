@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>39</TestCaseIdGroup>
+    <TestCaseIdNumber>25</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Handle frequent subscribes and unsubscribes (periodicity checking).</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability to handle frequent subscribes and unsubscribes of consumers to the notification stream of producers.</TestCaseObjective>
+  <TestCaseScenario>A Consumer performs repeated (frequent) subscribes and unsubscribes to all or part of the Topic list of a Producer. </TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation', specially test case 3603 'Subscribe to updates and represent current information'. </TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using the MIP4 P/S exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>Both producer and consumer can handle and process frequent subscribes and unsubscribes. More precisely, when the sequence of frequent subscribes and unsubscribes is completed, both partners will share the same tactical picture (for the shared topics).</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0017.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer is already subscribed or subscribes now to one or more topics from the Producer.
+Note: This test is done bilaterally. Partners will switch roles at the end of the test.
+After the sequence of frequent subscribes and unsubscribes is completed, and both nations have theoretically the same tactical picture, each nation will notify its partner nation that this is complete. </TestCaseStepAction>
+    <TestCaseStepResult></TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates BSOs in a topic with positions and status. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer receives the operational situation in the Producer and displays it unmodified on its C2IS (for the subscribed topics). </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer updates the BSOs created at step 2. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the updates and reflects it correctly on its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Within a considered short time lapse (10 seconds or less if possible), the consumer requests unsubscription from the producer. </TestCaseStepAction>
+    <TestCaseStepResult>Unsubscribe (affirmative) Response will be received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Repeat actions on steps 1 to 4 several times, changing the topics the Consumer subscribes to in case. This should be carried out at the highest rate that both, Consumer and Producer are able to handle and for a quite long period (5 minutes...). </TestCaseStepAction>
+    <TestCaseStepResult>The Producer will successfully handle subscribe / unsubscribe requests from the Consumer, and the latter will successfully process the MIP4 content without error, both handling frequent transactions. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

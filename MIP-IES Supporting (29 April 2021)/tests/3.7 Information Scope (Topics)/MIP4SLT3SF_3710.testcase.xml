@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>10</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>1 BSO update (implicit update) in two topics.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Assess how systems handle BSOs that are included in multiple Topics (and subsequently updated), especially when a Consumer receives both topics.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates two BSOs in its National C2I which are included in two topics. Nation B requests from Nation A both topics and receives them. Nation A updates one BSOs in one of the two topics. Nation B requests the new BSO status from Nation A and receives it. The BSOs will be updated in both topics.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Consumer (R/R) initialisation started.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is passed if Nation B receives the updated BSOs status from Nation A. The BSOs should be updated in all affected Topics.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates two BSOs included in two Topics.</TestCaseStepAction>
+    <TestCaseStepResult>Nation A can see BSOs in its C2IS</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B requests from Nation A both topics.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives BSOs from Nation A</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates one BSO from one Topic</TestCaseStepAction>
+    <TestCaseStepResult>Nation A can see the BSO updated in all affected Topics.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B requests new situation.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays BSO updated in all affected Topics.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

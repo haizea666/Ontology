@@ -1,0 +1,27 @@
+Test description
+
+Test IDMIP4SLT3SF_3705Test Title"Enemy Situation" Topic.Execution PriorityHP (3 originally)ObjectiveThe objective of this test is to verify that the MIP4-IES is able to support the exchange of the "Enemy Situation" Topic.
+Note: The operationally equivalent interest within MIP3.1 was the "Correlated Enemy and Unknown" OIG.ScenarioNation A establishes "Enemy Situation" Topic. Nation B subscribes to newly created Topic of Nation A. 
+Nation A creates and updates data on "Enemy Situation" Topic, which Nation B has to display.EnvironmentCo-located. Exchange Pattern: P/SParticipation2MTRSPre-test ConditionsNation B subscribes to "Enemy Situation" Topic of Nation A.Test InputsN/AConclusionThis test is considered a success when the active Topic contains identical and expected content between Producer and Consumer, and the subscribing system detects the information contained in the "Enemy Situation" Topic and handles it without error.Test OutputsN/ATraceabilityREQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A (Producer) creates enemy information. ~~Newly created data is displayed in the C2IS of Nation B (Consumer). ~~122. Nation A updates all enemy information created in Step 1. ~~Updated data is correctly displayed in the C2IS of Nation B. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

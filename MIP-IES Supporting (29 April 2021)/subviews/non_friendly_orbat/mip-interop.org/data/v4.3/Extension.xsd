@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:tns="https://mip-interop.org/data/v4.3/Extension" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" targetNamespace="https://mip-interop.org/data/v4.3/Extension" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.0">
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/AppInfo" schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The extension element concept.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Extension" type="tns:ExtensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Community of interest extension point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Extension</app:SemanticID>
+        <app:ShortName>extension</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ExtensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A community of interest extension point.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Extension</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+    <xsd:attribute ref="tns:mustUnderstandIndicator" />
+  </xsd:complexType>
+  <xsd:attribute name="mustUnderstandIndicator" type="xsd:boolean">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The semantics of the extension must be understood to process the entire payload.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT::Extension::mustUnderstand</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:attribute>
+</xsd:schema>

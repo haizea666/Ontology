@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>50</TestCaseIdGroup>
+    <TestCaseIdNumber>86</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>OrganisationOperationalStatusCode update.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to update and exchange OrganisationOperationalStatusCode information of an Organisation in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates an Organisation with a specific OrganisationOperationalStatusCode.
+Nation B receives the information and interprets it correctly.
+Nation A updates the OrganisationOperationalStatusCode of the Organisation.
+Nation B receives and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes message elements belonging in the Organisation (and Unit) message schema area ('Ground Picture &gt; Forces' for instance). Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the updated OrganisationOperationalStatusCode of the Organisation is displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a message element for an Organisation with OrganisationOperationalStatusCode Operational. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the Organisation correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the OrganisationOperationalStatusCode to this Organisation to NotOperational. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the Organisation with the new OrganisationOperationalStatusCode correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

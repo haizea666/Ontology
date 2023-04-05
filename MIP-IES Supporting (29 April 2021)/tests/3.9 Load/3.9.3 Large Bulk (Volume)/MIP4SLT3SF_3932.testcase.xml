@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>39</TestCaseIdGroup>
+    <TestCaseIdNumber>32</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Split data with Objects and Action clusters.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability of consumers and producers to handle large data volumes (quantity checking).</TestCaseObjective>
+  <TestCaseScenario>A Producer/Provider publishes / responds with multiple MIP4 valid messages representing split clusters of BSOs and Actions (BSOs and Actions grouped by means of Associations among them, making complex Business Objects). The Consumer receives and processes them into their system.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: All.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>Consumers and producers can handle large and complex MIP4 data volumes.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0017.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Produce sequence of multiple MIP4 valid messages representing split clusters of BSOs and Actions (BSOs and Actions grouped by means of Associations among them, making complex Business Objects) that will be exchanged split (various messages).
+Each of such split clusters shall be scrambled, i.e. its partial messages shall be divided and intercalated in several messages with other clusters' messages.
+An open question is how large this split should be, after the 3.9.1 'LargeTrans' test group, together with the OSG volume analysis, maybe a figure of at least 3K messages (&lt; 1MB) should suffice. </TestCaseStepAction>
+    <TestCaseStepResult>The producer/provider publishes a sequence of intercalated split MIP4 valid messages representing split clusters of BSOs and Actions, or is ready to respond them or send them as a file to the consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain the valid sequence of MIP4 valid messages representing split clusters of BSOs and Actions from the producer / provider, as they are produced / provided. </TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the producer/provider. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Process the MIP4 content as it is received on the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully process the MIP4 content without error. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

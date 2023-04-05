@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList 
+	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+	<Identification>
+		<ShortName>GeopoliticalAffiliationCodeType</ShortName>
+		<Version>0.9.9</Version>
+		<CanonicalUri>urn:int:nato:standard:mip:mip4ies:managedList:countryCode</CanonicalUri>
+		<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:countryCode:0:9:9</CanonicalVersionUri>
+	</Identification>
+	<ColumnSet>
+		<ColumnRef Id="code" ExternalRef="code">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="label" ExternalRef="label">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="description" ExternalRef="description">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<KeyRef Id="managedListKey" ExternalRef="managedListKey">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</KeyRef>
+	</ColumnSet>
+	<SimpleCodeList>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>NLD</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Netherlands</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>Netherlands</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>AUT</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Austria</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>Austria</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>DEU</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Germany</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>Germany</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>RED</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>RedLand</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>RedLand</SimpleValue>
+			</Value>
+		</Row> 
+	</SimpleCodeList>
+</gc:CodeList>
+

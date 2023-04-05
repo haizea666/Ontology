@@ -1,0 +1,27 @@
+Test description
+
+Test IDMIP4SLT3IS_5083Test TitleControlFeature Type update.Execution Priority1ObjectiveBSO validation. Verify the ability to update and exchange the Type information of a ControlFeature Message Element in a nation's C2IS.ScenarioNation A creates a control feature with Type information of AirControlPoint (ACP, for instance). 
+Nation B receives the information and interprets it correctly.
+Nation A updates the Type of the ACP to CommunicationCheckpoint (CCP, for instance).
+Nation B receives the information and interprets it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2MTRSApplicablePre-test ConditionsNation A has created a Topic which includes message elements belonging to the control feature message schema area. 
+Nation B has subscribed to this Topic.Test InputsN/A.ConclusionThis test is considered a success if the updated Type of the ControlFeature is displayed correctly on both Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002, REQ_INF_0003.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates a control feature with Type AirControlPoint (ACP) ~~Nation B receives and displays the ACP correctly. ~~122. Nation A updates the Type of the AirControlPoint (ACP) to  CommunicationCheckpoint (CCP) ~~Nation B receives and displays the CCP correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<organisation:OrganisationCommandAndControlAssociation xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:affiliation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>c63dc007-94d5-4640-b85f-7f4e14ce098f</base:ID>
+	<organisation:OrganisationFunctionalAssociationFunctionalObjectOrganisation xsi:type="unit:AdministrativeUnitType">
+		<base:ID>c63dc007-94d5-4640-b85f-7f4e14ce098f</base:ID>
+		<concept:ConceptName>102</concept:ConceptName>
+		<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+		<battlespaceconcept:BattlespaceConceptHostilityCode>Friend</battlespaceconcept:BattlespaceConceptHostilityCode>
+		<battlespaceconcept:BattlespaceConceptMetadata/>
+		<object:ObjectAffiliation xsi:type="affiliation:GeopoliticalAffiliationType">
+			<affiliation:GeopoliticalAffiliationCode>CAN</affiliation:GeopoliticalAffiliationCode>
+		</object:ObjectAffiliation>
+		<organisation:OrganisationHasCommandFunctionIndicator>false</organisation:OrganisationHasCommandFunctionIndicator>
+		<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+		<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+			<object:ArmyEchelonCode>Battalion</object:ArmyEchelonCode>
+		</unit:UnitEchelon>
+		<unit:UnitFormalAbbreviatedName>102</unit:UnitFormalAbbreviatedName>
+	</organisation:OrganisationFunctionalAssociationFunctionalObjectOrganisation>
+	<organisation:OrganisationCommandAndControlAssociationCategoryCode>HasFullCommandOf</organisation:OrganisationCommandAndControlAssociationCategoryCode>
+</organisation:OrganisationCommandAndControlAssociation>
+
+<!--
+Original example
+
+<orgstruct:OrganisationCommandAndControlAssociationWrapper>
+	<orgstruct:OrganisationCommandAndControlAssociation>
+		<orgstruct:OrganisationCommandAndControlAssociationCategoryCode>HasTacticalCommandOf</orgstruct:OrganisationCommandAndControlAssociationCategoryCode>
+		<orgstruct:FunctionalObjectOrganisationWrapper>
+			<orgstruct:Unit xsi:type ="orgstruct:AdministrativeUnitType">
+				<core:uri>c63dc007-94d5-4640-b85f-7f4e14ce098f</core:uri>
+				<core:NameWrapper>
+				<core:Name>102</core:Name>
+				</core:NameWrapper>
+				<org:HasCommandFunctionIndicatorWrapper>
+					<org:HasCommandFunctionIndicator>false</org:HasCommandFunctionIndicator>
+				</org:HasCommandFunctionIndicatorWrapper>
+				<org:ServiceCodeWrapper>
+					<org:MilitaryOrganisationServiceCode>Army</org:MilitaryOrganisationServiceCode>
+				</org:ServiceCodeWrapper>
+				<unit:FormalAbbreviatedNameWrapper>
+					<unit:FormalAbbreviatedName>102</unit:FormalAbbreviatedName>
+				</unit:FormalAbbreviatedNameWrapper>
+				<orgstruct:SizeCodeWrapper>
+					<orgstruct:EchelonSizeCode>Battalion</orgstruct:EchelonSizeCode>
+				</orgstruct:SizeCodeWrapper>
+				<orgstruct:AffiliationWrapper>
+					<orgstruct:GeopoliticalAffiliation>
+						<affl:GeopoliticalAffiliationCodeWrapper>
+							<gen:CountryCode>CAN</gen:CountryCode>
+						</affl:GeopoliticalAffiliationCodeWrapper>
+					</orgstruct:GeopoliticalAffiliation>
+				</orgstruct:AffiliationWrapper>
+				<orgstruct:HostilityStatusCodeWrapper>
+					<orgstruct:HostilityStatusCode>Friend</orgstruct:HostilityStatusCode>
+				</orgstruct:HostilityStatusCodeWrapper>
+			</orgstruct:Unit>
+		</orgstruct:FunctionalObjectOrganisationWrapper>
+	</orgstruct:OrganisationCommandAndControlAssociation>
+</orgstruct:OrganisationCommandAndControlAssociationWrapper>
+-->

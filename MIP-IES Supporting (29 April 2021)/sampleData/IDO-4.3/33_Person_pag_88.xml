@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<person:Person xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:affiliation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>ID</base:ID>
+	<concept:ConceptName>Name</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<object:ObjectAffiliation xsi:type="affiliation:GeopoliticalAffiliationType">
+		<affiliation:GeopoliticalAffiliationCode>UnitedStatesOfAmerica</affiliation:GeopoliticalAffiliationCode>
+	</object:ObjectAffiliation>
+	<object:ObjectAffiliation xsi:type="affiliation:EthnicAffiliationType">
+		<affiliation:EthnicAffiliationCode>AfricanAmerican</affiliation:EthnicAffiliationCode>
+	</object:ObjectAffiliation>
+	<person:PersonEthnicGroupCode>Kurd</person:PersonEthnicGroupCode>
+	<person:PersonMilitaryStatusCode>Paramilitary</person:PersonMilitaryStatusCode>
+	<person:PersonNationality>
+		<person:PersonNationalityCountryCode>TUR</person:PersonNationalityCountryCode>
+		<person:PersonNationalityReasonCode>AcquiredFromParents</person:PersonNationalityReasonCode>
+	</person:PersonNationality>
+	<person:PersonNationality>
+		<person:PersonNationalityCountryCode>DEU</person:PersonNationalityCountryCode>
+		<person:PersonNationalityReasonCode>AcquiredByPlaceOfBirth</person:PersonNationalityReasonCode>
+	</person:PersonNationality>
+</person:Person>
+
+<!--
+Original example
+
+<?xml version="1.0" encoding="UTF-8"?>
+<pers:Person>
+...
+	<obj:AffiliationWrapper>
+		<affl:Affiliation xsi:type ="affl:GeopoliticalAffiliationType">
+			<affl:GeopoliticalAffiliationCodeWrapper>
+				<gen:CountryCode>UnitedStatesOfAmerica</gen:CountryCode>
+			</affl:GeopoliticalAffiliationCodeWrapper>
+		</affl:Affiliation>
+	</obj:AffiliationWrapper>
+	<obj:AffiliationWrapper>
+		<affl:Affiliation xsi:type ="affl:EthnicAffiliationType">
+			<affl:EthnicAffiliationCodeWrapper>
+				<gen:EthnicGroupCode>AfricanAmerican</gen:EthnicGroupCode>
+			</affl:EthnicAffiliationCodeWrapper>
+		</affl:Affiliation>
+	</obj:AffiliationWrapper>
+...
+	<pers:EthnicGroupCodeWrapper>
+		<gen:EthnicGroupCode>Kurd</gen:EthnicGroupCode>
+	</pers:EthnicGroupCodeWrapper>
+...
+	<pers:NationalityWrapper>
+		<pers:PersonNationality>
+			<pers:CountryCodeWrapper>
+				<gen:CountryCode>TUR</gen:CountryCode>
+			</pers:CountryCodeWrapper>
+			<pers:ReasonCodeWrapper>
+				<pers:PersonNationalityReasonCode>AcquiredFromParents</pers:PersonNationalityReasonCode>
+			</pers:ReasonCodeWrapper>
+		</pers:PersonNationality>
+	</pers:NationalityWrapper>
+	<pers:NationalityWrapper>
+		<pers:PersonNationality>
+			<pers:CountryCodeWrapper>
+				<gen:CountryCode>DEU</gen:CountryCode>
+			</pers:CountryCodeWrapper>
+			<pers:ReasonCodeWrapper>
+				<pers:PersonNationalityReasonCode>AcquiredByPlaceOfBirth</pers:PersonNationalityReasonCode>
+			</pers:ReasonCodeWrapper>
+		</pers:PersonNationality>
+	</pers:NationalityWrapper>
+...
+</pers:Person>
+-->

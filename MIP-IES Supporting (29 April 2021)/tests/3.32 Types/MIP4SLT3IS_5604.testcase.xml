@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>56</TestCaseIdGroup>
+    <TestCaseIdNumber>4</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>CBRNEquipment Sub-Type update.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create and update a CBRNEquipment Sub-Type and the Consumers/Receivers are able to understand (and display) it correctly.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates a CBRNEquipment Sub-Type with values for all attributes.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this CBRNEquipment with new values for all attributes, specifically for the Sub-Type.
+The Consumers receive the information and interpret it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created a topic which includes message elements belonging to the Equipment message schema area.
+The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the CBRN Equipment is processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates a CBRNEquipment Sub-Type (BiologicalIntegratedDetector for instance) with name XXX_CBRNEQU_5604 and with values for all possible attributes
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_OR_001 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the CBRNEquipment correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the CBRNEquipment with new values for all possible attributes, specifically its Sub-Type (to RadiationSpectrometer for instance). </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the CBRNEquipment correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

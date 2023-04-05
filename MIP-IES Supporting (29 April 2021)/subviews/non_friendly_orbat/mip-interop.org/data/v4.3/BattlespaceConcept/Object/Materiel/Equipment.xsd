@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:equipment="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Aircraft" type="equipment:AircraftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is designed to fly within the earth's atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f33ebb31-8e5e-4460-9a87-2caf4d463e29</app:SemanticID>
+        <app:DisplayName>Aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AircraftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is designed to fly within the earth's atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f33ebb31-8e5e-4460-9a87-2caf4d463e29</app:SemanticID>
+        <app:DisplayName>Aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:EquipmentType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="BattleTankScalingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of a BattleTank.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d9d01b7d-0340-4ed8-8eba-9b78de3809af</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lighter than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The battle-tank has less than 20 metric tons.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b102a07f-ffd9-4eda-9df3-fa16043400c2</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medium">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The battle-tank has more than 20 and less than 50 metric tons.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5f339e2a-f7a5-4d4e-ac37-55b46806086e</app:SemanticID>
+            <app:DisplayName>Medium</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The battle-tank has more than 50 metric tons.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:443c7d0b-e53f-42c2-a6df-98a2b7a24771</app:SemanticID>
+            <app:DisplayName>Heavy</app:DisplayName>
+            <app:PhysicalName>HEAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CommunicationEquipment" type="equipment:CommunicationEquipmentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment utilising the electromagnetic spectrum for the transmission and/or receiving of speech and data information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4901caba-4224-4155-ad00-b4aa2b98af05</app:SemanticID>
+        <app:DisplayName>Communication equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CommunicationEquipmentCategoryCode" type="equipment:CommunicationEquipmentCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of communication equipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5a799718-7aea-4dc2-9937-374262bba022</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CommunicationEquipmentCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CommunicationEquipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:50c82959-862b-4b2c-b0b4-1377806a1185</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AmateurRadioDevice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The transmission and reception of radio-frequency electromagnetic waves as a means of communication usually as a hobby.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e65d2843-fc66-4a03-8895-bf785d581b10</app:SemanticID>
+            <app:DisplayName>Amateur radio device</app:DisplayName>
+            <app:PhysicalName>AMTRAD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Brahms">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A voice encryption Terminal that provides secure speech over a civil or military phone system.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5cb5bf0f-8394-4ee1-9302-fba0a6261d1b</app:SemanticID>
+            <app:DisplayName>Brahms</app:DisplayName>
+            <app:PhysicalName>BRAHMS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CommunicationAntenna">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An equipment for sending or receiving electromagnetic waves.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8d177564-3642-4262-97c5-7d5d33f41b84</app:SemanticID>
+            <app:DisplayName>Communication antenna</app:DisplayName>
+            <app:PhysicalName>COMANT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CommunicationSystem">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A set of equipment designed for communications purposes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3fa6f78d-04b9-4dc2-af8f-c177a3cd445a</app:SemanticID>
+            <app:DisplayName>Communication system</app:DisplayName>
+            <app:PhysicalName>COMSYS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ComputerPeripheral">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Any device that can communicate with a computer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bedf1777-2d65-4d2e-9ef1-acffda7b5226</app:SemanticID>
+            <app:DisplayName>Computer peripheral</app:DisplayName>
+            <app:PhysicalName>COMPER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CoveredRadioTeletype">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tactical format or encipher relay of messages.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:55aba268-1a16-4839-b8dd-c0305719ba34</app:SemanticID>
+            <app:DisplayName>Covered radio teletype</app:DisplayName>
+            <app:PhysicalName>CVRRAD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DataLink">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The equipment providing the means of transmitting and receiving data.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:af735673-eddb-4b5a-854e-35ae3e6b5227</app:SemanticID>
+            <app:DisplayName>Data link</app:DisplayName>
+            <app:PhysicalName>DATLNK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ElectroopticalCommunicationEquipment">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Equipment that deals with the translation of electromagnetic radiation in the visible and infrared portion of the spectrum into a format suitable for electronic application and vice versa.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3d761771-ec6c-4086-a81a-612b55f86a43</app:SemanticID>
+            <app:DisplayName>Electrooptical communication equipment</app:DisplayName>
+            <app:PhysicalName>ELTOPT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Loudspeaker">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An instrument for converting variations in an applied electrical current or voltage into corresponding sound waves.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:83d3247f-a0e0-4c4b-8d36-9da717424e40</app:SemanticID>
+            <app:DisplayName>Loudspeaker</app:DisplayName>
+            <app:PhysicalName>LOUDSP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LowFrequencyActiveSystem">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Large shipboard sonar that uses intense sound for long-range surveillance and detecting submarines.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:35bce86c-5edf-42cd-b327-16247d8611b5</app:SemanticID>
+            <app:DisplayName>Low frequency active system</app:DisplayName>
+            <app:PhysicalName>LFRACS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MicrowaveTransmitter">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An apparatus producing microwave frequency energy intended to be radiated by an antenna, normally for the purpose of radio communication.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e2d7facc-c6fa-44d6-9903-7b9a618c1fb4</app:SemanticID>
+            <app:DisplayName>Transmitter, microwave</app:DisplayName>
+            <app:PhysicalName>TRTMWV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NESTOR">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A secure voice communication security systems device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9e89ad09-2cc8-4761-a6e8-5fe6e8bec873</app:SemanticID>
+            <app:DisplayName>NESTOR</app:DisplayName>
+            <app:PhysicalName>NESTOR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OpticalDataLink">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Those parts of two data terminal equipments that are controlled by a protocol along with the interconnecting optical data circuit, that together enable data transfer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a18b86fe-7539-4fb6-8451-3033c9dc383b</app:SemanticID>
+            <app:DisplayName>Data link, optical</app:DisplayName>
+            <app:PhysicalName>DTLOPT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PARKHILL">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A secure voice communications terminal.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9084bf0a-ee64-4b87-a109-38cd2b60a6a9</app:SemanticID>
+            <app:DisplayName>PARKHILL</app:DisplayName>
+            <app:PhysicalName>PRKHLL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioBroadcastDevice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Organised wireless broadcasting in sound as a medium of communication or as an art form.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bcec1347-851b-48da-89b0-570572f4f6b0</app:SemanticID>
+            <app:DisplayName>Radio broadcast device</app:DisplayName>
+            <app:PhysicalName>RADBRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioDataLink">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Those parts of two data terminal equipments that are controlled by a protocol along with the interconnecting radio data circuit, that together enable data transfer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5de40cf3-c7c6-477c-a549-a8670bc9e64f</app:SemanticID>
+            <app:DisplayName>Data link, radio</app:DisplayName>
+            <app:PhysicalName>DTLRAD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioDirectionFinder">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Equipment that uses radio signal intercepts and their azimuths to determine a location of a transmitter.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0f1700c4-0652-4d9e-8396-f523736ea495</app:SemanticID>
+            <app:DisplayName>Radio direction finder</app:DisplayName>
+            <app:PhysicalName>RADDFD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioGuidanceEquipment">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Remote control of the motion of a craft or vehicle by means of radio waves.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a26d3f98-d3b5-40db-b03c-1d063232e345</app:SemanticID>
+            <app:DisplayName>Radio guidance equipment</app:DisplayName>
+            <app:PhysicalName>RADGDN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioTelephone">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Telephone set that may be carried by a person and that uses a radio link with a telepoint base station or a base station of a mobile radio communication cellular system.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:af51cb61-56af-488a-9a8b-8914dcd9dcdd</app:SemanticID>
+            <app:DisplayName>Radio telephone</app:DisplayName>
+            <app:PhysicalName>RADTLP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadioTeletype">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The system for communication by teleprinter over radio circuits (RATT).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:efcd80db-26e0-4c62-b827-17294a8501b5</app:SemanticID>
+            <app:DisplayName>Radio teletype</app:DisplayName>
+            <app:PhysicalName>RADTLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SingleSideBand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A secure voice communications security systems device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e9b7a3f7-4b95-4793-ba97-f7c6505370ff</app:SemanticID>
+            <app:DisplayName>Single side band</app:DisplayName>
+            <app:PhysicalName>SNGSDE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Switchboard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A board for frame bearing a set of switches for connecting and disconnecting the various circuits of an electrical system, such as a telegraph or telephone.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a09133ee-b465-4464-b017-f81645bcd5fc</app:SemanticID>
+            <app:DisplayName>Switchboard</app:DisplayName>
+            <app:PhysicalName>SWCBRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Telegraph">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Pertaining to or designating equipments connected to the end of a subscriber´s line or telegraph circuit, which can either establish or receive calls, or store and retransmit signals, and which can be uniquely identified.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:86b9744b-6ffd-406b-8d6d-eb2690e6d3e2</app:SemanticID>
+            <app:DisplayName>Telegraph</app:DisplayName>
+            <app:PhysicalName>TELGPH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Telephone">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device for conveying sound and other digital services from a subscriber to a network.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c7136c12-a9c5-4e22-9922-b386515b3831</app:SemanticID>
+            <app:DisplayName>Telephone</app:DisplayName>
+            <app:PhysicalName>TELEPH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TelephoneSwitch">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device for making and breaking the connections in a telephone system.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:958bf6a2-ad27-4a65-a095-a30ab23bacee</app:SemanticID>
+            <app:DisplayName>Telephone switch</app:DisplayName>
+            <app:PhysicalName>TELSWT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Teletype">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A telegraph instrument for transmitting telegraph messages as they are typed on a keyboard and printing incoming ones.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8c4c5e8e-3541-40f9-89ac-7c1ec4d0cfa7</app:SemanticID>
+            <app:DisplayName>Teletype</app:DisplayName>
+            <app:PhysicalName>TELTYP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Television">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device for the transmission of signals representing scenes, images of the scenes being reproduced on a screen as they are received.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a71e9bbc-f535-4dbe-a271-f1de6cbb78f4</app:SemanticID>
+            <app:DisplayName>Television</app:DisplayName>
+            <app:PhysicalName>TELEVS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ThreatWarningSystem">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A system that provides platform threat warning or targeting support through passive reception of electromagnetic energy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0b9621e8-f6d5-4fe8-98fd-ce4786a8fc96</app:SemanticID>
+            <app:DisplayName>Threat warning system</app:DisplayName>
+            <app:PhysicalName>THRTWS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TransitReceiver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A satellite based navigation system.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:543786e9-4b68-4bb8-9fe5-be9f6d4b2ff1</app:SemanticID>
+            <app:DisplayName>Transit receiver</app:DisplayName>
+            <app:PhysicalName>TRNRCV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Troposcatter">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Equipment that uses the troposphere for the propagation of radio or television signals enabling transmission beyond the line of sight.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bd2bbe62-4a5f-4939-8d8c-c2a36a415c64</app:SemanticID>
+            <app:DisplayName>Troposcatter</app:DisplayName>
+            <app:PhysicalName>TROPO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VINSON">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A secure device for voice and FM communications.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a2a1fdbd-c9b4-477d-b4e8-0223690d5430</app:SemanticID>
+            <app:DisplayName>VINSON</app:DisplayName>
+            <app:PhysicalName>VINSON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VideoBroadcastDevice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device that stores images to be displayed on a television screen or other cathode-ray tube device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:17ad5db4-8d0a-4e38-84f4-b45a570f11ea</app:SemanticID>
+            <app:DisplayName>Video broadcast device</app:DisplayName>
+            <app:PhysicalName>VIDBRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CommunicationEquipmentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment utilising the electromagnetic spectrum for the transmission and/or receiving of speech and data information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4901caba-4224-4155-ad00-b4aa2b98af05</app:SemanticID>
+        <app:DisplayName>Communication equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:ElectronicEquipmentType">
+        <xsd:sequence>
+          <xsd:element ref="equipment:CommunicationEquipmentCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ElectronicEquipment" type="equipment:ElectronicEquipmentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is designed to use electronic processing to realise its primary function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:afc57c7e-c204-456e-8d5d-4f7eea5dcf12</app:SemanticID>
+        <app:DisplayName>Electronic equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ElectronicEquipmentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is designed to use electronic processing to realise its primary function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:afc57c7e-c204-456e-8d5d-4f7eea5dcf12</app:SemanticID>
+        <app:DisplayName>Electronic equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:EquipmentType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Equipment" type="equipment:EquipmentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Materiel that is neither intended for consumption nor an unexploded piece of ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bc3effdb-6a60-4cd4-917b-0f925de68aa1</app:SemanticID>
+        <app:Remarks>Expressed in another way, Equipment is a durable good and not intended for consumption.</app:Remarks>
+        <app:DisplayName>Equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="EquipmentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Materiel that is neither intended for consumption nor an unexploded piece of ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bc3effdb-6a60-4cd4-917b-0f925de68aa1</app:SemanticID>
+        <app:Remarks>Expressed in another way, Equipment is a durable good and not intended for consumption.</app:Remarks>
+        <app:DisplayName>Equipment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="object:ObjectTypeName" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielModelName" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FixedWingAircraft" type="equipment:FixedWingAircraftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A machine or device capable of atmospheric flight and dependent on wings for lift.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:38e0f5d8-e3fa-4157-8d73-cd3517bd7370</app:SemanticID>
+        <app:DisplayName>Fixed wing aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FixedWingAircraftAirframeDesignCode" type="equipment:FixedWingAircraftAirframeDesignCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of FixedWingAircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:49edbe37-c8c4-4ffd-9972-8ec0877cf3be</app:SemanticID>
+        <app:ShortName>airframeDesignCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>airframe design</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FixedWingAircraftAirframeDesignCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of FixedWingAircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0a2213c8-ddbe-4a41-848f-0dbcd0209e38</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Bomber">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An aircraft capable of air operations using air to ground ordnance to destroy or neutralize enemy forces or installations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:88a5cec2-aff5-4cea-845b-a22a24d5240c</app:SemanticID>
+            <app:DisplayName>Bomber</app:DisplayName>
+            <app:PhysicalName>BOMBER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fighter">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A generic term to describe a type of fast and manoeuvrable fixed wing aircraft capable of tactical air operations against air and/or surface targets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:be71c40b-4fdb-4538-84de-201f056dac96</app:SemanticID>
+            <app:DisplayName>Fighter</app:DisplayName>
+            <app:PhysicalName>FIGHTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Glider">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A fixed wing aircraft that flies without an engine.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fb8c202a-7355-426a-8e6e-196498ebbc0d</app:SemanticID>
+            <app:DisplayName>Glider</app:DisplayName>
+            <app:PhysicalName>GLIDER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Transport">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An aircraft designed primarily for the carriage of personnel and/or cargo, and/or fuel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2db00cdd-7514-4932-9f2a-d8165cefbae9</app:SemanticID>
+            <app:DisplayName>Transport</app:DisplayName>
+            <app:PhysicalName>CARGO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="FixedWingAircraftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A machine or device capable of atmospheric flight and dependent on wings for lift.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:38e0f5d8-e3fa-4157-8d73-cd3517bd7370</app:SemanticID>
+        <app:DisplayName>Fixed wing aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:AircraftType">
+        <xsd:sequence>
+          <xsd:element ref="equipment:FixedWingAircraftAirframeDesignCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LighterThanAirAircraft" type="equipment:LighterThanAirAircraftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A machine or device capable of atmospheric flight weighing less than the air it displaces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e5c2cc12-6b53-402e-9173-31fe8f872175</app:SemanticID>
+        <app:DisplayName>Lighter than air aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LighterThanAirAircraftAirframeDesignCode" type="equipment:LighterThanAirAircraftAirframeDesignCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of LighterThanAirAircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:961c23ae-febc-41bf-ad53-0c1f440f0c8e</app:SemanticID>
+        <app:ShortName>airframeDesignCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>airframe design</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LighterThanAirAircraftAirframeDesignCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of LighterThanAirAircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3e43abe-8ea8-45af-80aa-d3b17665b6d7</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Balloon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An unpowered lighter than air aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2570f799-8510-44c9-953c-8a920ab7a0a1</app:SemanticID>
+            <app:DisplayName>Balloon</app:DisplayName>
+            <app:PhysicalName>BALOON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Dirigible">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A powered lighter than air aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:921c570e-7c14-4241-a2ef-7aeb74e22def</app:SemanticID>
+            <app:DisplayName>Dirigible</app:DisplayName>
+            <app:PhysicalName>DIRIG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LighterThanAirAircraftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A machine or device capable of atmospheric flight weighing less than the air it displaces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e5c2cc12-6b53-402e-9173-31fe8f872175</app:SemanticID>
+        <app:DisplayName>Lighter than air aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:AircraftType">
+        <xsd:sequence>
+          <xsd:element ref="equipment:LighterThanAirAircraftAirframeDesignCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RotaryWingAircraft" type="equipment:RotaryWingAircraftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A machine or device capable of atmospheric flight and dependent on rotating blades for lift.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cdb63e9d-8cb6-4484-98ef-67fa4a2a988d</app:SemanticID>
+        <app:DisplayName>Rotary wing aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RotaryWingAircraftAirframeDesignCode" type="equipment:RotaryWingAircraftAirframeDesignCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of RotaryWingAircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:32accc13-d636-437a-9d27-bbbb98319a63</app:SemanticID>
+        <app:ShortName>airframeDesignCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>airframe design</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RotaryWingAircraftAirframeDesignCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of RotaryWingAircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:289022ab-0e36-4631-8c5a-f8532b531e4d</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Autogyro">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An aircraft powered by a conventional propeller and a freewheeling, horizontal rotor.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8fb63e6b-c88a-4e1f-a13b-fb0ae7b81c41</app:SemanticID>
+            <app:DisplayName>Autogyro</app:DisplayName>
+            <app:PhysicalName>AUTOGY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Helicopter">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A rotary wing aircraft capable of atmospheric flight and dependent on rotating blades for lift.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2f2641a5-ce9e-402a-a7e4-c65cfe4f7adf</app:SemanticID>
+            <app:DisplayName>Helicopter</app:DisplayName>
+            <app:PhysicalName>HELO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Transport">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An aircraft designed primarily for the carriage of personnel and/or cargo, and/or fuel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4eea23e8-5e93-4a6b-b90e-ce1c7e814d25</app:SemanticID>
+            <app:DisplayName>Transport</app:DisplayName>
+            <app:PhysicalName>CARGO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RotaryWingAircraftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A machine or device capable of atmospheric flight and dependent on rotating blades for lift.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cdb63e9d-8cb6-4484-98ef-67fa4a2a988d</app:SemanticID>
+        <app:DisplayName>Rotary wing aircraft</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:AircraftType">
+        <xsd:sequence>
+          <xsd:element ref="equipment:RotaryWingAircraftAirframeDesignCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Satellite" type="equipment:SatelliteType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Spacecraft that orbits the earth.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5b7db755-5140-479e-873a-7e8b996fa33a</app:SemanticID>
+        <app:DisplayName>Satellite</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SatelliteType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Spacecraft that orbits the earth.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5b7db755-5140-479e-873a-7e8b996fa33a</app:SemanticID>
+        <app:DisplayName>Satellite</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:SpacecraftType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Spacecraft" type="equipment:SpacecraftType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is capable of operating beyond the earth's atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:830b2dc7-06d8-46f6-b970-7d037a0e9fd5</app:SemanticID>
+        <app:DisplayName>Space vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SpacecraftType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment that is capable of operating beyond the earth's atmosphere.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:830b2dc7-06d8-46f6-b970-7d037a0e9fd5</app:SemanticID>
+        <app:DisplayName>Space vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:EquipmentType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

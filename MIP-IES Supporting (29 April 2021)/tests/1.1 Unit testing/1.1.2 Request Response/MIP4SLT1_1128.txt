@@ -1,0 +1,37 @@
+Test description
+
+Test IDMIP4SLT1_1128Test TitleRetrieve items using a filter on source.  Execution Priority1 (and High Priority area)ObjectiveTo retrieve items using a filter on sourceScenarioTest to be derived with specified source(s) (e.g. source is Canada). 
+The requestor must provide a filter on valid sources.
+'Retrieve' is the term used within MIP Information Exchange Specification (MIP IES) - REQUEST/RESPONSE EXCHANGE PATTERN.
+Notice: There is 'TopicExpression' yet not 'ConcreteTopicExpression' within MIP4.0- REQUEST/RESPONSE EXCHANGE PATTERN - IPT4
+V0.1.2, not even the term 'Concrete' is once found. EMT: Please assessEnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1214, MIP4SLT1_1213
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+The Provider should confirm that his system contains valid entities whose source is contained in the set of sources which the Consumer is going to provide for the filter.
+Test InputsA non-null set of sources to use as filter criteria.ConclusionThe test is completed when the Consumer system is able to correctly receive an indication that there are items whose sources satisfy the filter criteria, over a request-response exchange, and the Consumer has verified that the information associated with the specified items has been received correctly.Test OutputsThe Consumer should receive an indication that his filter has been performed successfully, and must receive the information associated with the item(s) satisfying his filter criteria. The Consumer must verify that the information associated with items from the requested sources is received correctly.  The set of information satisfying the filter criteria must not be empty.  TraceabilityMIP4_Request_Response_Exchange_Pattern, REQ_SYS_0021, REQ_EM_0012
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (1) requests information about items whose source is contained in a specified set of sources from the Provider (2) using a Request/Response exchange. ~~Provider receives and interprets request correctly. ~~122. Provider sends requested information or an indication that no items satisfy the specified search criteria.  Consumer receives and interprets requested data correctly. For this test, returned data set should not be empty. ~~Requested data is received and interpreted correctly. ~~21Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

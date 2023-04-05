@@ -1,0 +1,29 @@
+Test description
+
+Test IDMIP4SLT3SF_3701Test TitleInformation context immutability.Execution PriorityHP (2 originally)ObjectiveAssess how systems handle BSOs that are published in multiple Topics.
+The MIP Solution shall not change the information context (Topic) between Producer and Consumer.  The MIP Gateway shall handle the exchange of information without human Intervention (but the actual mapping from message to topic is a national C2IS issue within MIP4-IES).ScenarioNation A sends data belonging in a Topic (Friendly Forces, Routes, Civilian Infrastructure) to Nation B.
+Nation B receives the data and displays it without human intervention (hence some short of automated topic mapping is required at the national C2IS).
+Remark: The information can be displayed at the Consumer system little time after Producer updates the information in its system (< 180s was the mark for MIP3.1, the Producer provides the content to the Consumer on an asynchronous basis as updates become available).EnvironmentCo-located. Exchange Pattern: P/SParticipation2MTRSPre-test ConditionsNation A has pre-defined Topics: 'Friendly Forces', 'Routes', and 'Civilian Infrastructure' for instance, to which Nation B will subscribe.Test InputsN/AConclusionThe test is a success when the information is exchanged without human intervention, and the information context (i.e. the Topic to which information is linked) does not change between producer and consumer.
+When the Producer's intention with its Topic definition is to convey the current/actual situation, Consumer C2IS must display the Topic in such a way that the exact same current/actual situation is presented as intended by the source.Test OutputsN/ATraceabilityREQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation B (Consumer, 2) subscribes to three Topics ('Friendly Forces' 'Routes', and 'Civilian Infrastructure' for instance) of Nation A (Producer, 1). ~~A subscription exists between Nation A and Nation B. ~~122. Nation B synchronises its data for the subscribed Topics. ~~C2IS of Nation B should contain the same information as Nation A regarding the subscribed Topics. ~~123. Nation A creates an Organisation in one of the Topics ('Friendly Forces' for instance) to which Nation B has subscribed to. ~~Nation B displays the Organisation in the same Topic with all the details provided from Nation A. ~~124. Nation A creates a Control Feature in one of the Topics ('Routes' for instance) to which Nation B has subscribed to. ~~Nation B displays the Control Feature in the same Topic with all the details provided from Nation A. ~~125. Nation A creates a Facility in one of the Topics ('Civilian Infrastructure' for instance) to which Nation B has subscribed to. ~~Nation B displays the Facility in the same Topic with all the details provided from Nation A. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,29 @@
+Test description
+
+Test IDMIP4SLT1_1211Test TitleProvision Of Joining QuestionnaireExecution Priority1ObjectiveEnsure that the exchange partners are informed of the capabilities of their partner systems, and the specifics relating to service endpoints, prior to actual MIP4 Information Exchange.ScenarioPrior to initiating MIP4 Information Exchange, the exchange partners shall complete and share the MIP4 Joining Questionnaire.EnvironmentCo-located, Internet. Exchange Pattern: All.Participation2 or moreMTRSPre-test ConditionsNone.Test InputsUse MIP4SLT1_1211 - MIP4-IES_Joining_Questionnaire_v1.0.0.docx as template to be filled in.ConclusionThe test is completed when the completed MIP4 Joining Questionnaire is provided, read and understood by the Consumer.Test OutputsThe Producer will provide a completed Joining Questionnaire to Consumer.TraceabilityREQ_EM_0003, REQ_EM_0008.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Consumer will request the completed MIP4 Joining Questionnaire from the Producer. ~~The Producer will make available a completed MIP4 Joining Questionnaire. ~~122. The Consumer will examine the Producer's MIP4 Joining Questionnaire for completeness, including:
+* The supported exchange patterns
+* The presence and uniqueness of the source identifier
+* The MIP4 messages supported
+* Any caveats regarding the service endpoint
+* Any caveats regarding the MIP4 payloads.
+* The provision of the URL for each MIP4 R/R and P/S service WSDL. ~~The consumer will understand what to expect from the Producer and how to initiate exchange of information. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

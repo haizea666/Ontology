@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>54</TestCaseIdGroup>
+    <TestCaseIdNumber>56</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create MedicalFacility with FacilityOperationalStatusCode.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create the correct MIP data for a MedicalFacility with FacilityOperationalStatusCode and the Consumers are able to correctly understand (and display) it.
+This case is focused on the MedicalFacility's FacilityOperationalStatusCode element.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates message elements for MedicalFacility including a FacilityOperationalStatusCode element. The Consumers receive the data and process them.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Infrastructure and Environment' topic (for instance, a Topic where these kind of facilities should belong).
+The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Facility and all attributes and elements are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates the MedicalFacility with name XXX_MFO_456 and fills ALL elements with values, taking special care to set FacilityOperationalStatusCode.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Facility: ESP_MFO_456 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the MedicalFacility with FacilityOperationalStatusCode that the Producer created. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates an update for the object by changing its FacilityOperationalStatusCode element with other value, keeping the values of the rest of elements.  </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the MedicalFacility with another FacilityOperationalStatusCode and all elements that the Producer created. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

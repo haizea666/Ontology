@@ -1,0 +1,41 @@
+Test description
+
+Test IDMIP4SLT1_1150Test TitleSubscribe, but do not specify topicExecution Priority3ObjectiveThe objective is for the Consumer to subscribe to a topic provided by the Provider and to receive updates until a specified termination time.ScenarioThe Consumer is interested in receiving regular updates on a topic in an asynchronous way (i.e. without polling the Producer).EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 MTRSN/APre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1213, MIP4SLT1_1215, MIP4SLT1_1130
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.
+
+Consumer successfully discovered the target Producer.  The system on the Consumer side has been properly configured and is ready to interact with the Producer system.  The Producer system broadcasts at least some of the topics requested.
+Test InputsN/A.ConclusionThe Consumer should receive an error message indicating that no topic was specified.  The test is concluded when the Consumer receives the error notification.Test OutputsN/A.TraceabilityREQ_INF_0002.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Consumer subscribes to the Producer in order to advertise its interest in a subset of the data space.  
+rpw:GetResourceProperty
+with parameters wsn:FullTopicExpression,  wsn:FixedTopicSet, wsn:TopicExpressionDialect and wstop:TopicSet. ~~The Producer receives a valid request for resource properties.  The producer receives a subscription request without a valid topic specified. ~~122Producer accepts or rejects the subscription requests. ~~
+The Producer rejects the request.
+The Producer sends subscription rejection notification to the Consumer and indicates that no topic was specified. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+3
+
+
+
+					          
+
+
+1
+

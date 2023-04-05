@@ -1,0 +1,24 @@
+Test description
+
+Test IDMIP4SLT1_1272Test TitleRestart - Consumer (P/S)Execution Priority1ObjectiveAssess systems behaviour after Consumer restart within the Publish/Subscribe exchange pattern.  ScenarioProducer is processing a subscription request from Consumer and providing update information as prescribed utilizing the Publish/Subscribe exchange mechanism.  
+Consumer restarts. Data events occur on the Producer side during the 'outage'.EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2.MTRSN/APre-test ConditionsMIP4SLT1_1231 - Current situation P/S nominal consumption established and working.Test InputsN/A.ConclusionNominal restart. c
+Assess (record) how systems behave if the Consumer restarts.Test OutputsN/A.TraceabilityREQ_EM_0008, REQ_EM_0010
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Producer (1) processes subscription request from Consumer (2) and provides update information as prescribed utilizing the Publish/Subscribe exchange mechanism. ~~Consumer (2) receives updates of subscription data. ~~ 122. Consumer restarts. Data events occur on the Producer side during the 'outage'. ~~Assess (record) how both systems, Producer and Consumer behave after Consumer's restart. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT1_1252Test TitleBase Consumer Nominal Recovery with partial data already synchronizedExecution Priority1ObjectiveA MIP4 Base Consumer is able to achieve Nominal Recovery of the current situation utilising Request/Response Exchange Pattern.     ScenarioA Base Consumer (A) loses data and requires a re-synchronisation of Current Situation from Provider (B). 
+Partial data have been already synchronized. There is no optimisation mechanism for now.EnvironmentInternet or Co-located. Exchange Pattern: R/R Participation2MTRSN/APre-test ConditionsMIP4SLT1_1221 - Consumer (A) is a Base Consumer exchanging data with Provider (B) through a Request/Response pattern. 
+Partial data have been already synchronized when the re-synchronisation request occurs.Test InputsN/A.ConclusionThis test is considered a success if the Consumer successfully requests and receives a re-synchronisation of the current situation data from the Provider through the Request/Response exchange pattern, taking into account that partial data have been already synchronised.
+Keep in mind that data payload has not to be validated at SLT1.Test OutputsN/A.TraceabilityREQ_EM_0009, MIP4 Request/Response Exchange Pattern. 
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. A Base Consumer (A) requires re-synchronization of the current situation from Provider (B) and requests a standalone update utilizing the Request/Response Exchange Pattern.
+Partial data have been already synchronised. ~~ Provider (B) receives Request from Consumer (A) and successfully provides a Situation Update utilizing the Request Response Exchange Pattern (dealing with the fact that partial data have been already synchronised). ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,22 @@
+Test description
+
+Test IDMIP4SLT1_1251Test TitleBase Consumer Nominal RecoveryExecution Priority1ObjectiveA MIP4 Base Consumer is able to achieve Nominal Recovery of the current situation utilizing Request/Response Exchange Patterns.     ScenarioA Base Consumer (A) loses data and requires a re-synchronization of Current Situation from Producer (B).   EnvironmentInternet or Co-located. Exchange Pattern: R/R Participation2 or more.MTRSN/APre-test ConditionsMIP4SLT1_1221 - Consumer (A) is a Base Consumer exchanging data with Provider (B) through a Request/Response pattern. Test InputsN/A.ConclusionThis test is considered a success if the Consumer successfully requests and receives a re-synchronization of the current situation data from the Producer through the Request/Response exchange pattern. Test OutputsN/A.TraceabilityREQ_EM_0009, MIP4 Request/Response Exchange Pattern. 
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. A Base Consumer (A) requires re-synchronization of the current situation from Provider (B) and requests a standalone update utilizing the Request/Response Exchange Pattern. ~~ Provider (B) receives Request from Consumer (A) and successfully provides a Situation Update utilizing the Request Response Exchange Pattern. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

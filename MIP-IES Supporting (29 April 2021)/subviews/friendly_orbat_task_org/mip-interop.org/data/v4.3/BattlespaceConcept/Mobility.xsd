@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:mobility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Mobility" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Mobility" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AirMobilityCategoryCode" type="mobility:AirMobilityCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of AirMobility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3c29f0ab-4543-437e-b93b-dcee14c5b6fb</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AirMobilityCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of AirMobility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dc82624f-414b-4298-80aa-971d5d19c160</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirAssaultMobility">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility in the air to provide an assault capability.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-fffd-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Air assault mobility</app:DisplayName>
+            <app:PhysicalName>AIRASS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Airborne">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The capability to be employed, following transport by air, in an assault debarkation either by parachuting or touchdown.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6543df1d-b69d-41da-9c6a-1e2af42af4bd</app:SemanticID>
+            <app:DisplayName>Airborne</app:DisplayName>
+            <app:PhysicalName>AIRBRN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Composite">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility through the air by means that combine deriving lift from fixed wings or from airfoils that rotate.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2743dd81-8988-4a74-b75f-afc1f948f888</app:SemanticID>
+            <app:DisplayName>Composite</app:DisplayName>
+            <app:PhysicalName>AIRCMP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FixedWing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility through the air by deriving lift from fixed wings.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:12e3247a-aba8-464b-a833-aca199122ac6</app:SemanticID>
+            <app:DisplayName>Fixed wing</app:DisplayName>
+            <app:PhysicalName>AIRFW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LighterThanAir">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability of an air vehicle to remain airborne and move by displacing a weight of air greater than its own.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:90da8191-b405-4c73-b24a-acf6bf72d3f4</app:SemanticID>
+            <app:DisplayName>Lighter than air</app:DisplayName>
+            <app:PhysicalName>AIRLGT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RotaryWing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility through the air by deriving lift from airfoils that rotate.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5386e8d2-0f58-4c79-a09f-3d3056619924</app:SemanticID>
+            <app:DisplayName>Rotary wing</app:DisplayName>
+            <app:PhysicalName>AIRRW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VTOLOrVSTOL">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility through the air by using aircraft able to take off and land vertically or in very short distances.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:94bfacd0-a909-4404-a72b-079c482b1dd9</app:SemanticID>
+            <app:DisplayName>VTOL/VSTOL</app:DisplayName>
+            <app:PhysicalName>AIRVST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AirMobilityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Mobility in the air domain.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c0440dad-ddc1-49f9-beac-da1393be420e</app:SemanticID>
+        <app:DisplayName>Air mobility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="mobility:MobilityType">
+        <xsd:sequence>
+          <xsd:element ref="mobility:AirMobilityCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AmphibiousMobilityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Mobility both on land and in water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:28f717c2-7671-42ae-b189-12f3dc289af4</app:SemanticID>
+        <app:DisplayName>Amphibious mobility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="mobility:MobilityType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LandMobilityCategoryCode" type="mobility:LandMobilityCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of LandMobility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:445a59b3-1867-4a40-9882-393e8c1425b8</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LandMobilityCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of LandMobility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d49742a8-861c-49b1-9c00-e292bad0f13f</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Arctic">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on or through ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d9c2aedb-0c05-40a5-bd63-cbc00fcaee17</app:SemanticID>
+            <app:DisplayName>Arctic</app:DisplayName>
+            <app:PhysicalName>ARCTIC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Bicycle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground by means of a bicycle.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-fffe-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Bicycle</app:DisplayName>
+            <app:PhysicalName>BCYCLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Dismounted">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility over the ground by soldier/person on foot.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:89afb310-d784-45dc-a148-072919dd1b8d</app:SemanticID>
+            <app:DisplayName>Dismounted</app:DisplayName>
+            <app:PhysicalName>DSMNTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Horse">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility by using horses.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f140f668-7cdb-477d-a681-405e55dd7f3d</app:SemanticID>
+            <app:DisplayName>Horse</app:DisplayName>
+            <app:PhysicalName>HORSE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OverSnowPrimeMover">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility over snow as the prime mover.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-ff3f-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Over-snow (prime mover)</app:DisplayName>
+            <app:PhysicalName>OVRSNW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PackAnimal">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility by using an animal as a carrier.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:05c146bd-9fde-412e-b417-8c9442dcc47b</app:SemanticID>
+            <app:DisplayName>Pack animal</app:DisplayName>
+            <app:PhysicalName>ANIMNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Railed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility along rails.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3eb9285f-10aa-4ba9-89cb-049d15915a43</app:SemanticID>
+            <app:DisplayName>Railed</app:DisplayName>
+            <app:PhysicalName>LNDRAI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Ski">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground over snow using skis.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-ff0f-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Ski</app:DisplayName>
+            <app:PhysicalName>SKI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sled">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground over snow using sleds.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d57591de-d254-4796-b86e-de1fca6c40d3</app:SemanticID>
+            <app:DisplayName>Sled</app:DisplayName>
+            <app:PhysicalName>SLED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Towed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground by means of external propulsion (mechanical or animal).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:10fb8431-1fa6-4c53-8dd0-db8325c962e9</app:SemanticID>
+            <app:DisplayName>Towed</app:DisplayName>
+            <app:PhysicalName>LNDTWD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tracked">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground by means of vehicles using caterpillar treads.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ee2039fd-11cd-4e16-bac4-2e4aa488ce5d</app:SemanticID>
+            <app:DisplayName>Tracked</app:DisplayName>
+            <app:PhysicalName>LNDTRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Wheeled">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground by means of vehicles using wheels with limited cross-country capability.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:326b0c4d-317f-43b6-a228-11013a521754</app:SemanticID>
+            <app:DisplayName>Wheeled</app:DisplayName>
+            <app:PhysicalName>LNDWHL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WheeledAndTracked">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground by means of vehicles using wheels and caterpillar treads combination.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-ff2f-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Wheeled and tracked</app:DisplayName>
+            <app:PhysicalName>WHLTRK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WheeledCrossCountry">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on the ground cross-country by means of vehicles using wheels.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-ff1f-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Wheeled (cross-country)</app:DisplayName>
+            <app:PhysicalName>WHLXCY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LandMobilityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Mobility in the land domain.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0e920ce1-1122-41b0-a87f-d7d0b8d9b9c3</app:SemanticID>
+        <app:DisplayName>Land mobility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="mobility:MobilityType">
+        <xsd:sequence>
+          <xsd:element ref="mobility:LandMobilityCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MaritimeMobilityCategoryCode" type="mobility:MaritimeMobilityCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MaritimeMobility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d4e19780-6b2a-4a94-b653-bfd3b72fb9e5</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaritimeMobilityCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MaritimeMobility.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:19b709c5-1bc1-40db-8ae3-97cb3825a7de</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Barge">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mobility on water by means of a barge.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f97ceebc-767d-44c1-ffff-0e84e6df54a2</app:SemanticID>
+            <app:DisplayName>Barge</app:DisplayName>
+            <app:PhysicalName>BARGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Bay">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate in bays.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9aa98c61-e43e-4184-9ed8-5a93b8a1b4b2</app:SemanticID>
+            <app:DisplayName>Bay</app:DisplayName>
+            <app:PhysicalName>WATBAY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Canal">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate canals.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eac42147-59b1-4273-a285-ac9a71186314</app:SemanticID>
+            <app:DisplayName>Canal</app:DisplayName>
+            <app:PhysicalName>WATCNL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Creek">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate in creeks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cf1e2f59-7f83-4b50-b8a6-03755d5a6025</app:SemanticID>
+            <app:DisplayName>Creek</app:DisplayName>
+            <app:PhysicalName>WATCRK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fjord">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate fjords.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2da43db9-7690-4002-822f-3b702987d334</app:SemanticID>
+            <app:DisplayName>Fjord</app:DisplayName>
+            <app:PhysicalName>WATFJR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Lake">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate in lakes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ac0a015-ac52-4acb-a486-ac727a22f44c</app:SemanticID>
+            <app:DisplayName>Lake</app:DisplayName>
+            <app:PhysicalName>WATLAK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NontidalWater">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate non-tidal waters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ba8ad944-a631-4217-b143-049191e808cc</app:SemanticID>
+            <app:DisplayName>Nontidal water</app:DisplayName>
+            <app:PhysicalName>WATNTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="River">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate rivers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cb54d00b-c7b9-40fa-a8d1-e09c5725f1c6</app:SemanticID>
+            <app:DisplayName>River</app:DisplayName>
+            <app:PhysicalName>WATRVR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sea">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate seas.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:33e5d910-a875-416d-b094-0ddd36c33007</app:SemanticID>
+            <app:DisplayName>Sea</app:DisplayName>
+            <app:PhysicalName>WATSEA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Subsurface">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to move on or under the water surface.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fdb31c2c-70d1-4601-ab77-d3d95fde2a01</app:SemanticID>
+            <app:DisplayName>Subsurface</app:DisplayName>
+            <app:PhysicalName>WATSUB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Surface">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to move on the water surface.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2b52106c-6db7-4dde-963a-cdda510a9489</app:SemanticID>
+            <app:DisplayName>Surface</app:DisplayName>
+            <app:PhysicalName>WATSUR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Swamp">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate swamps.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:42749114-49e6-48ac-b1a9-7ab2bc2617e9</app:SemanticID>
+            <app:DisplayName>Swamp</app:DisplayName>
+            <app:PhysicalName>WATSWM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TidalWater">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ability to navigate tidal waters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f8fb3fcd-4895-40a3-bd69-a992c260a1f3</app:SemanticID>
+            <app:DisplayName>Tidal water</app:DisplayName>
+            <app:PhysicalName>WATTDL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MaritimeMobilityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Mobility in the maritime domain.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:13cb1e9a-6730-4d2f-9719-3d9404dd79aa</app:SemanticID>
+        <app:DisplayName>Maritime mobility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="mobility:MobilityType">
+        <xsd:sequence>
+          <xsd:element ref="mobility:MaritimeMobilityCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MobilityIsSelfPropelledIndicator" type="mobility:MobilityIsSelfPropelledIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Object is able to move under its own power (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:48704c2e-a8dd-4362-8681-f22972f1882e</app:SemanticID>
+        <app:ShortName>isSelfPropelledIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is self-propelled</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MobilityIsSelfPropelledIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Object is able to move under its own power (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:48704c2e-a8dd-4362-8681-f22972f1882e</app:SemanticID>
+        <app:ShortName>isSelfPropelledIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is self-propelled</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="MobilityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The mobility, e.g., of a unit or equipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3a949265-66ca-42ea-bfab-427dfcce55e2</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Mobility</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="mobility:MobilityIsSelfPropelledIndicator" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

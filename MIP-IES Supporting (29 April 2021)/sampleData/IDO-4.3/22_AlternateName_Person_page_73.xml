@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<person:Person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>urn:guid:730C9870-EBAD-11E6-93C9-471D01A7C586</base:ID>
+	<concept:ConceptName>Jimmy Neutron</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptAlternateName>James Isaac Neutron</battlespaceconcept:BattlespaceConceptAlternateName>
+	<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+	<person:PersonMilitaryStatusCode xsi:nil="true"/>
+</person:Person>
+
+<!--
+Original example
+
+<pers:Person>
+    <base:Identifier>
+        <base:Uri>urn:guid:730C9870-EBAD-11E6-93C9-471D01A7C586</base:Uri>
+        <base:Source>IDT</base:Source>
+        <base:IsDependentIndicator>false</base:IsDependentIndicator>
+    </base:Identifier>
+    <core:NameWrapper>
+        <core:Name>Jimmy Neutron</core:Name>
+    </core:NameWrapper>
+    <core:AlternateNameWrapper>
+        <core:AlternateName>James Isaac Neutron</core:AlternateName>
+    </core:AlternateNameWrapper>
+....
+</pers:Person>
+-->

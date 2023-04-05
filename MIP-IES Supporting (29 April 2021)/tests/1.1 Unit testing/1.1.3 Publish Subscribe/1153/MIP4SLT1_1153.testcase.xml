@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>53</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Get the latest notification on a single topic, using FullTopicExpression</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is for the Consumer to subscribe to a single topic and get the latest notification provided by the Provider.</TestCaseObjective>
+  <TestCaseScenario>The Consumer is interested in receiving the latest notification of the Current Situation. Test to be derived with "topic contains items, topic does not contain items, producer supports or not getCurrentMessage".</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4.0_Publish_Subscribe_Exchange_Pattern, MIP4SLT1_1130.
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer retrieves the last notification published to a given topic from the Producer (or is informed instead that the producer does not support getCurrentMessage operation).</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, REQ_EM_0010.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer subscribes to a topic using the NotificationProducer PortType. Sample: 
+* Topic QName = ns0:Default
+
+Request only the following notifications:
+* unt:Unit
+* ovl:View
+* ovl:Includes
+* ovl:IsPartOf
+
+Include only notifications that overlap the specified &lt;mip4:BoundingBox/&gt;. Deliver notifications to the following Consumer endpoint:
+* http://localhost:8080/WebUI/services/notify </TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request to initiate a subscription and, if supported, retrieve the latest notification associated with a specific Topic </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer sends the topic requested to the Consumer </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the requested topic. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer requests the last notification published to that topic, using the GetCurrentMessage operation </TestCaseStepAction>
+    <TestCaseStepResult>Producer receives the request and either responds with the last notification published to that topic, or either informs that it does not support the getCurrentMessage operation). </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer unsubscribes using wsn-b:Unsubscribe operation. </TestCaseStepAction>
+    <TestCaseStepResult>Producer destroys the corresponding subscription. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

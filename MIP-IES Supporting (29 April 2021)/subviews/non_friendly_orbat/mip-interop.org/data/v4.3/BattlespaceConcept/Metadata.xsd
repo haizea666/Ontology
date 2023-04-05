@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:battlespaceconceptmetadata1="https://mip-interop.org/data/v4.3/BattlespaceConcept/Metadata" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Metadata" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:complexType name="BattlespaceConceptMetadataType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Descriptive information about information given in a BattlespaceConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:43852bb9-e50e-4951-87eb-8ba521e4b785</app:SemanticID>
+        <app:Remarks>This data type does not describe physical characteristics of objects and actions but characteristics of the information available for a BattlespaceConcept.</app:Remarks>
+        <app:DisplayName>Metadata</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

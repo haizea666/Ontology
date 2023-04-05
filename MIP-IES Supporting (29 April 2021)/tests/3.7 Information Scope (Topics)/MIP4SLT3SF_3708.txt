@@ -1,0 +1,27 @@
+Test description
+
+Test IDMIP4SLT3SF_3708Test TitleRepresent deletions from Topics.Execution Priority1ObjectiveTo verify that the National MIP solution provides the ability to logically delete information from a topic. 
+The schemas contain an element "Operation" in the Message Holder metadata. This element is intended to carry the information about what kind of operation is supposed to be performed on/with the associated data (e.g. deletion).ScenarioNation A creates some tactical objects in its National C2IS in predefined topics. Nation B subscribes to Nation A's topics. Nation A deletes some BSOs. The deletion is carried within the "Operation" element. Nation B receives the new BSO status from Nation A. The BSOs are logically deleted from the topic.EnvironmentCo-located. Exchange Pattern: P/SParticipation2MTRSPre-test ConditionsNation A has pre-defined Topics: Forces - Friendly and Neutral, Forces - Unknown, Control Features, Control Measures - Obstacles and Facilities, Fire Support - TargetsTest InputsN/AConclusionThe test is passed if Nation B receives the logical delete object status from Nation A. The deleted objects shall be removed from the situation picture.Test OutputsN/ATraceabilityREQ_SYS_0008
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates a number of BSOs. ~~Nation A can see all the objects in its C2IS. ~~
+12. Nation B subscribes to Nation A's topics. ~~Nation B receives and can see all the BSOs from Nation A in Nation A's topics. ~~123. Nation A deletes a number of BSOs from those created in Step 1. ~~Nation A can see those objects logically deleted from the topics. ~~14. Nation B receives "Operation" = 'Deletion' in the Message Holder metadata for each of the deleted objects. ~~Nation B displays the same objects as Nation A. The deleted objects are logically deleted from the topics. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

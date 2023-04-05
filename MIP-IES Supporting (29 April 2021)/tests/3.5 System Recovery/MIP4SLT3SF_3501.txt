@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT3SF_3501Test TitleRe-connection after Outage Period.Execution Priority1ObjectiveTo check what happens when a MIP4 system re-connects (as a Producer / Provider and a Consumer) after a period of disconnection (during this period, BSOs will be created/updated in all systems). Is information lost? Are there conflicts?ScenarioNation A and Nation B are exchanging operational data between C2IS systems. Nation B's MIP4 gateway is disconnected from the MIP4 network for whatever reason. After a period Nation B is able to reconnect its MIP4 gateway. During this period both Nations have been creating/updating BSOs on their C2ISs. Nation A and Nation B re-subscribe to each other's Topics, and operational data exchange is resumed. After reconnection, identifiers previously used by Nation B are never re-used.EnvironmentInternet, Co-located. Exchange Pattern: P/S, R/RParticipation2MTRSPre-test ConditionsBoth nations have subscribed to all of each other's available Topics. Operational data flows between Nation A and Nation B. This test shall be performed after several other ones to enable Nation A and Nation B to get a minimum of information in their database.
+Nation B is assumed to have its own national reconnection procedure turned 'on'.Test InputsN/AConclusionBoth Nation A and Nation B are able to resume operational data exchange via their respective C2ISs. There is no loss of created / updated information during the period of disconnection and there are no conflicts.Test OutputsN/ATraceabilityREQ_SYS_0001, REQ_SYS_0002
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A and Nation B are into an operational state, and operational data is being exchanged between Nation A and Nation B (bi-directional, P/S and/or R/R). ~~Gateways are in an operational state and exchange operational data. ~~1,22,12. Nation B disconnects it MIP4 gateway from the MIP4 network. The disconnection occurs at time T1. ~~The connections between Nation A and the MIP4 network is left 'alive'. ~~213. The operator of Nation A is informed by an alternative means of communication that Nation B's MIP4 gateway has been disconnected. The time at which the disconnection occurs is recorded. ~~Nation A is aware of the situation. ~~214. BSOs are created and updated in both, Nation A and B national C2IS unilaterally. ~~Both nations process their creations and updates correctly (Nation A might even exchange them with other participant nations), but cannot share them. ~~1,25. Nation B proceeds to re-connect its MIP4 gateway, as per national procedures. Some own data previously sent will have been updated (deleted...) and some newly created on both nations, meanwhile the Nation B's disconnection period. ~~~~26. Both nations re-establish their MIP4 connection, resynchronise (R/R) and subscribe to all of each other's Topics. ~~Both Nations update the information on their systems to the current situation, recovering from the disconnection. Nation B has to guarantee uniqueness of identifiers. Nation A and Nation B are resynchronised. The time T2 when the resynchronisation process is ended is recorded. It should be such than T2-T1 is less than one hour. ~~1,22,17. Nation A publishes new data (P/S). ~~Nation B receives and displays new data from Nation A. ~~
+128. Nation B publishes new data (P/S). ~~Nation A receives and displays new data from Nation B. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

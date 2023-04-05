@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>21</TestCaseIdGroup>
+    <TestCaseIdNumber>2</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Deleting data test.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To check if deletion of objects within the data is correctly send from A to B.</TestCaseObjective>
+  <TestCaseScenario>Remove an object from the test data created in 2101 at the TT. Transfer the data back to the TT using R/R. Check if the object is deleted. Do the same for another object but now with P/S. At the TT check if  a notification is received indicating the deletion of the object.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nation and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. Dataset_2101 is loaded and transferred as described in test MIP4SLT2.5_2101.</TestCasePreCondition>
+  <TestCaseInput>Dataset_2101.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success when objects are correctly deleted at the nations C2 system.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0001, REQ_EM_0002</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2101 into their C2 system (2) through the TT (1).</TestCaseStepAction>
+    <TestCaseStepResult>Objects visible in the C2 system. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>An object is deleted at the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>The deleted object should disappear from the C2 system or be marked as deleted by producer </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The data is transferred to the TT (1) through R/R. </TestCaseStepAction>
+    <TestCaseStepResult>The data is received in the TT, resulting in a data file. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Compare the processed logged data at the TT (1) with the original dataset_2101. </TestCaseStepAction>
+    <TestCaseStepResult>The object is deleted in both datasets. In this case the test is passed. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Delete another object at the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>The deleted object should disappear from the C2 system or be marked as deleted by producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>The data is transferred to the TT (1) through P/S. </TestCaseStepAction>
+    <TestCaseStepResult>At the TT a notification has to be received indicating the deletion of the object.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

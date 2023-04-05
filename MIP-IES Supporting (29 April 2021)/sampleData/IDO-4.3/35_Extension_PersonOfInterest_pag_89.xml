@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<ext:Extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="https://mip-interop.org/data/v4.3/Extension" ext:mustUnderstandIndicator="true" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+<!--
+PersonOfInterest (poi) has been removed
+<poi:PersonOfInterestReasonCode>List</poi:PersonOfInterestReasonCode>
+-->
+</ext:Extension>
+
+<!--
+Original example
+
+<ext:Extension ext:mustUnderstand ="true">
+	<poi:PersonOfInterestReasonCode>List</poi:PersonOfInterestReasonCode>
+</ext:Extension>
+-->

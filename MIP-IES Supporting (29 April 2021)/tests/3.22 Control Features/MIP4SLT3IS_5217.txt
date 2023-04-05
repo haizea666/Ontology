@@ -1,0 +1,30 @@
+Test description
+
+Test IDMIP4SLT3IS_5217Test TitleCreate and update Holdings as ControlFeatures.Execution Priority1ObjectiveBSO validation. To verify basic functionality regarding Holdings (not yet clear what a 'Holding' within MIP4 will be, see remarks on MIP4-IES Test Case Directory): test adding and updating Persons, Equipment and Consumable Materiel Holdings.ScenarioTwo nations are exchanging information between their C2ISs. Nation A will add Holding information to an Organisation and send it to Nation B. Nation A will then update the Holding information, and send the updated information to Nation B.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2MTRSApplicablePre-test ConditionsNation B has a subscription to Nation A's 'Forces' topic. A friend Organisation has been created by Nation A in the 'Forces' topic.Test InputsN/A.ConclusionHolding information created by Nation A is received by Nation B. Updates to existing Holding information made by Nation A are received by Nation B. Holding information is shared correctly by the C2ISs of both nations.Test OutputsN/A.TraceabilityREQ_INF_0002.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates three types of Holdings (just a raw 'ControlFeature' message element with associations to the Persons, Equipment and Materiel it contains?) for an existing Organisation (How can this figures be specified?): 
+- Person Holding (e.g. 30 with an officer RankCode)
+- Equipment Holding (e.g. 50 PowerTransmissionLines)
+- Consumable Materiel Holding (e.g. 100 with ClassV (Ammunition) MaterielSupplyClassCode) ~~Holding information is added to the organisation in Nation A's C2IS.
+Nation B receives Holding information. The Holding information for the Organisation is the same in the C2ISs of both nations. ~~122. Nation A updates the Holding information created in Step 1:
+- Number of officers changed to 28
+- Number of PowerTransmissionLines changed to 75
+- Number of ClassV changed to 0. ~~Holding information is updated in the C2IS of Nation A. Nation B receives and applies the updated information. The Holding information for the Organisation is the same in the C2IS of both nations. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

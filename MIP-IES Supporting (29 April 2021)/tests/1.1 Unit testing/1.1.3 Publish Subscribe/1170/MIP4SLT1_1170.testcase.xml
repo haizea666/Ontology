@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>70</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Publishing when ConsumerReferences are conflicting</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Usage of correct EndpointReference after providing different EndpointAddress for ConsumerReference upon subscription.</TestCaseObjective>
+  <TestCaseScenario>Consumer subscribes to a Producer's topic with a defined EndpointReference for the NotificationConsumer. When subscribing the System also provides a different EntpointAddress for the ConsumerReference.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created th 'Ground Picture &gt; Forces'topic. The Consumer has subscribed to this topic</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the NotificationProducer uses the EnpointReference that was supplied upon subscription.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>N/A</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer subscribes to a Producer's topic with a defined EndpointReference for the NotificationConsumer. When subscribing the System also provides a different EntpointAddress for the ConsumerReference.</TestCaseStepAction>
+    <TestCaseStepResult>The Producer uses the EnpointReference that was supplied upon subscription.
+</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

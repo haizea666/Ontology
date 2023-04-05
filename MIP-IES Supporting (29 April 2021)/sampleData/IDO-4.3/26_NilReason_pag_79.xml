@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:element name="AmplificationText" type="base:AmplificationTextType">
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">An explanation indicating why information is not provided or other amplifying information.</xsd:documentation>
+		<xsd:appinfo>
+			<app:SemanticId>IDT:3baa2e0c-146a-4cb4-a8f3-e92c0e168347</app:SemanticId>
+			<app:ShortName>nilReasonText</app:ShortName>
+		</xsd:appinfo>
+	</xsd:annotation>
+</xsd:element>
+<!--
+Original example:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:element name="NameWrapper" type="core:NameWrapperType">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">The name of the Object.</xsd:documentation>
+        <xsd:appinfo>
+            <app:SemanticId>MIM:0c967c16-93a1-4e43-aef4-2a6c97489336</app:SemanticId>
+            <app:MIMStereotype>instance</app:MIMStereotype>
+            <app:MIMStereotype>name</app:MIMStereotype>
+            <app:MIMStereotype>type</app:MIMStereotype>
+        </xsd:appinfo>
+    </xsd:annotation>
+</xsd:element>
+<xsd:complexType name="NameWrapperType">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">The name of the Object.</xsd:documentation>
+        <xsd:appinfo>
+            <app:SemanticId>MIM:0c967c16-93a1-4e43-aef4-2a6c97489336</app:SemanticId>
+            <app:MIMStereotype>instance</app:MIMStereotype>
+            <app:MIMStereotype>name</app:MIMStereotype>
+            <app:MIMStereotype>type</app:MIMStereotype>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+        <xsd:extension base="prim:NilWrapperType">
+            <xsd:sequence>
+                <xsd:choice>
+                    <xsd:element ref="core:Name" />
+                    <xsd:element ref="prim:NilReason" />
+                </xsd:choice>
+            </xsd:sequence>
+        </xsd:extension>
+    </xsd:complexContent>
+</xsd:complexType>
+-->

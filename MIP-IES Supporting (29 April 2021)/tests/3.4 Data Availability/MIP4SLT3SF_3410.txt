@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT3SF_3410Test TitleData Availability during a participant's Outage PeriodExecution Priority1ObjectiveTo assess what happens when a System disconnects for a period to the rest of participant systems that remain connected. Is information lost? Are there conflicts?ScenarioA producer notifies two or more consumers and at least one of the consumers goes offline. Other consumers need to keep receiving the notifications from the producer.EnvironmentInternet or Co-located. Exchange Pattern: P/SParticipation4MTRSPre-test ConditionsTest group 3.6 'Initialisation'.
+Nation B,C and D have subscribed to the same topic from Nation A.Test InputsNation A will have to produce a payload to the other subscribed nations.ConclusionAll online consumers keep receiving the notifications from the producer event if one consumer is offline.Test OutputsNation C and D have all the payloads from the notifications sent from Nation A. (Nation B will not for it has gone offline during this test scenario; recovery is covered in another test scenario).TraceabilityREQ_SYS_0001, REQ_SYS_0002
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A produces a payload and sends the notification to the subscribers. ~~Nations B, C and D receive the notification. ~~12,3,42. Nation B goes offline (unplug network cable or shutdown the system but DO NOT unsubscribe). ~~Nation A can still see the subscription from Nations B, C and D. ~~213. Nation A produces a payload and sends the notification to the subscribers. ~~Nations C and D receive the notification. Nation A might have timed out on the notification to Nation B but won't stop sending to others that are still reachable. ~~13,4
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

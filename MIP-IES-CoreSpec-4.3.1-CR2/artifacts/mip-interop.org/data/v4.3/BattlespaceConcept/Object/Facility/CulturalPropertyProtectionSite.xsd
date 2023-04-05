@@ -1,0 +1,1399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:culturalpropertyprotectionsite="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility/CulturalPropertyProtectionSite" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility/CulturalPropertyProtectionSite" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="ArchaeologicalSite" type="culturalpropertyprotectionsite:ArchaeologicalSiteType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A place in which evidence of past activity is preserved, and which has been, or may be, investigated using the discipline of archaeology and represents a part of the archaeological record.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f6a77b06-3250-4310-83ba-799e6dcbf24e</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Archaeological site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ArchaeologicalSiteCategoryCode" type="culturalpropertyprotectionsite:ArchaeologicalSiteCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of ArchaeologicalSite.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1367272e-3a53-46f8-a8f9-dc7b05130939</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ArchaeologicalSiteCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of ArchaeologicalSite.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6f82a7e8-269b-4e80-bbb0-3a5b747a0fb1</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ArchaeologicalSiteBuried">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An archaeological site primarily composed of buried remains that are not visible from the ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9d4b5206-3843-4331-81cf-96e80f06166f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Archaeological site (buried)</app:DisplayName>
+            <app:PhysicalName>ARCBUR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArchaeologicalSiteMixedFeatures">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An archaeological site composed of mixture of buried, standing and/or surface features.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:785531f4-d18c-45eb-9a5c-2e621d280c60</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Archaeological site (mixed features)</app:DisplayName>
+            <app:PhysicalName>ARCMIX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArchaeologicalSiteStandingRemainsOrRuins">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An archaeological site composed standing remains / ruins. This would include, for example, ruined buildings such as ancient temples and churches.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ced18b04-bba5-4bbe-b083-661d047745b8</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Archaeological site (standing remains/ruins)</app:DisplayName>
+            <app:PhysicalName>ARCSTD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArchaeologicalSiteSurfaceFeatures">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An archaeological site composed primarily of surface features, such as archaeoloigical soils and cropmarks, earthworks, roads, ruined cairns, and other features that have little or no height remaining. If it is unknown whether the surface feature links to significant buried remains, then surface feature should be chosen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7a6e3eaa-35c5-4c77-932e-3e7dd36e384a</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Archaeological site (surface features)</app:DisplayName>
+            <app:PhysicalName>ARCSUR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ArchaeologicalSiteType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A place in which evidence of past activity is preserved, and which has been, or may be, investigated using the discipline of archaeology and represents a part of the archaeological record.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f6a77b06-3250-4310-83ba-799e6dcbf24e</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Archaeological site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType">
+        <xsd:sequence>
+          <xsd:element ref="culturalpropertyprotectionsite:ArchaeologicalSiteCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CulturalPropertyBuildingOrStructure" type="culturalpropertyprotectionsite:CulturalPropertyBuildingOrStructureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A building or structure representing or containing a cultural property.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:386a730b-ed35-4f95-84d3-d52350284bdd</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cultural property building or structure</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CulturalPropertyBuildingOrStructureCategoryCode" type="culturalpropertyprotectionsite:CulturalPropertyBuildingOrStructureCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CulturalPropertyBuildingOrStructure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:561131fc-59f7-4e1f-9327-9328d27b5a84</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyBuildingOrStructureCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CulturalPropertyBuildingOrStructure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b27f6cf4-ab7e-4b22-967a-45041cb9bcb1</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="GroupOfBuildingsOrSitesOrFeaturesOrCentresContainingMonuments">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A group of buildings, sites, features or centres containing monuments of cultural interest that are placed under Cultural Property Protection.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b430e995-5b92-484e-aa0e-ee76a14b191b</app:SemanticID>
+            <app:Remarks>For example, a historic city centre, or World Heritage site that contains a group of features. If possible, individual features should give their own linked record.</app:Remarks>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Cultural property protection monuments enclosure</app:DisplayName>
+            <app:PhysicalName>MONENC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ObjectCollectionPermanentStorageBuilding">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Buildings which are normally the permanent location of a collections; these may be museums or private buildings. If the building is also historic in its own right, then that takes primacy, and is the category that should be entered. This field indicates buildings which are only significant due to their storage facilities.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:09f21a27-7308-463a-96e9-9f00130bf377</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Object collection permanent storage building</app:DisplayName>
+            <app:PhysicalName>PRMBLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ObjectCollectionRefugeBuilding">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A purpose built refuge for collections, or a temporary storage location for collections in the event the collection has been evacuated due to natural disaster or armed conflict (as recommended in the 1954 Hague Convention). The collection may not often be present at the location, and may not be present at the time of entry.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bc59b2f2-c09d-4d73-98af-3d37d6342ccd</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Object collection refuge building</app:DisplayName>
+            <app:PhysicalName>REFBLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReligiousBuildingOrStructure">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A religious building or structure (Church, Chapel, cathedral, mosque, madrasa, shrine, synagogue, etc).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2e7dc564-be1a-498f-8654-17de07b14dcf</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Religious building or structure</app:DisplayName>
+            <app:PhysicalName>RELBLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReligiousComplex">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Religious complex of buildings and structures, such as a monastic complex.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4b10086f-db63-48e0-af99-f096d78a6bc7</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Religious complex</app:DisplayName>
+            <app:PhysicalName>RELCMP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SecularBuildingOrStructure">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A historic or otherwise significant building or structure, such as bridge, windmill, and so on.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f2a60592-8a15-4333-b94f-b368e96f8c55</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Secular building or structure</app:DisplayName>
+            <app:PhysicalName>SECBLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SecularComplex">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Complex of buildings and structures, such as a listed terrace of old houses, or an old airfield and buildings.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:149a794c-fd71-46d7-ab16-bf1b8a7b007c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Secular complex</app:DisplayName>
+            <app:PhysicalName>SECCMP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CulturalPropertyBuildingOrStructureMoveableCulturalPropertyCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteMoveableCulturalPropertyCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of moveable cultural property within the CulturalPropertyBuilding.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fabf9914-d6f9-4979-9b8e-6d31fd5ee766</app:SemanticID>
+        <app:ShortName>moveableCulturalPropertyCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>moveable cultural property</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CulturalPropertyBuildingOrStructureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A building or structure representing or containing a cultural property.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:386a730b-ed35-4f95-84d3-d52350284bdd</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cultural property building or structure</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType">
+        <xsd:sequence>
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyBuildingOrStructureCategoryCode" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyBuildingOrStructureMoveableCulturalPropertyCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CulturalPropertyProtectionSite" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A site under Cultural Property Protection (CPP).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cultural property protection site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CulturalPropertyProtectionSiteIsUnderWaterIndicator" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteIsUnderWaterIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site is under water (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d566d21c-84cb-482b-a7e3-2b642888e977</app:SemanticID>
+        <app:ShortName>isUnderWaterIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is under water</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteIsUnderWaterIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site is under water (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d566d21c-84cb-482b-a7e3-2b642888e977</app:SemanticID>
+        <app:ShortName>isUnderWaterIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is under water</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteJCTDSCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of target according to the Joint Common Target Data Set.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:22609046-e429-4fb8-8a15-4f9ac659083e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="_70210">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Municipality/city.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7297f99e-bdd4-46fb-939e-52dca213dac3</app:SemanticID>
+            <app:DisplayName>70210 - Municipality/city</app:DisplayName>
+            <app:PhysicalName>70210</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_70220">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Town/village.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:46d478b5-a89b-4730-85d5-74dc235d02a5</app:SemanticID>
+            <app:DisplayName>70220 - Town/village</app:DisplayName>
+            <app:PhysicalName>70220</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77265">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Monuments and statues.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:28431f46-e5d0-4bb0-995e-841cdf9dc388</app:SemanticID>
+            <app:DisplayName>77265 - Monuments and statues</app:DisplayName>
+            <app:PhysicalName>77265</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77510">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Beaches less than 200 meters in length.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8888a876-31c7-475e-bc1f-ea6e07f63d36</app:SemanticID>
+            <app:DisplayName>77510 - Beaches (&lt;200 metres)</app:DisplayName>
+            <app:PhysicalName>77510</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77520">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Beaches 200 meters to 499.9 meters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:285350c5-9b95-40c9-a65c-8341f7a04070</app:SemanticID>
+            <app:DisplayName>77520 - Beaches (200 to 499.9 metres)</app:DisplayName>
+            <app:PhysicalName>77520</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77530">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Beaches 500 meters to 999.9 meters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:131d87c5-08d2-44e8-a6df-cbe4c1aa439a</app:SemanticID>
+            <app:DisplayName>77530 - Beaches (500 to 999.9 metres)</app:DisplayName>
+            <app:PhysicalName>77530</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77540">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Beaches 1,000 meters to 1,999.9 meters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6e519c15-6dc6-493c-9562-646cca3c0319</app:SemanticID>
+            <app:DisplayName>77540 - Beaches (1,000 to 1,999.9 metres).</app:DisplayName>
+            <app:PhysicalName>77540</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77550">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Beaches 2,000 meters or more in length.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1b81f51a-08ff-4b38-9abd-cae96cfa6df5</app:SemanticID>
+            <app:DisplayName>77550 - Beaches (&gt;=2,000 metres)</app:DisplayName>
+            <app:PhysicalName>77550</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77570">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Costal segments.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d82d0125-ecfa-45ae-a35b-5c0c0e909065</app:SemanticID>
+            <app:DisplayName>77570 - Costal segments</app:DisplayName>
+            <app:PhysicalName>77570</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77600">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">General religious, cultural and historical institutions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a8fd5be8-e83a-4c92-9d0d-dec5a1c3b8cd</app:SemanticID>
+            <app:DisplayName>77600 - General religious, cultural and historical institutions</app:DisplayName>
+            <app:PhysicalName>77600</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77610">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Religious institutions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:43332946-511b-497c-9bb4-11b1bc74b1b2</app:SemanticID>
+            <app:DisplayName>77610 - Religious institutions</app:DisplayName>
+            <app:PhysicalName>77610</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77620">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">General historical and cultural institutions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9ba79ed2-fc55-4ae8-ad04-0ea96a1a53f8</app:SemanticID>
+            <app:DisplayName>77620 - General historical and cultural institutions</app:DisplayName>
+            <app:PhysicalName>77620</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77621">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Museums.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bdb6b467-98e2-47ab-822b-cccb9c155f7e</app:SemanticID>
+            <app:DisplayName>77621 - Museums</app:DisplayName>
+            <app:PhysicalName>77621</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77622">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Archives.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6565a044-a4ab-415d-98c4-8b7ac76cb93b</app:SemanticID>
+            <app:DisplayName>77622 - Archives</app:DisplayName>
+            <app:PhysicalName>77622</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77623">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Libraries.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:547cd077-051e-47f5-b546-7a4db3eed208</app:SemanticID>
+            <app:DisplayName>77623 - Libraries</app:DisplayName>
+            <app:PhysicalName>77623</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77624">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Cultural and ideological centers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bd7ce059-08a4-4247-a9b7-d3e1aac321a8</app:SemanticID>
+            <app:DisplayName>77624 - Cultural and ideological centres</app:DisplayName>
+            <app:PhysicalName>77624</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77626">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Monuments and statues (on military base).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aa1f8869-4b61-420f-b902-4836b91c233f</app:SemanticID>
+            <app:DisplayName>77626 - Monuments and statues (on military base)</app:DisplayName>
+            <app:PhysicalName>77626</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77627">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Ruins, antiquities, archaeological sites, citadels, castles.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:65d1fa81-01a1-4411-b9ff-34304c5fabeb</app:SemanticID>
+            <app:DisplayName>77627 - Ruins, antiquities, archaeological sites, citadels, castles</app:DisplayName>
+            <app:PhysicalName>77627</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77630">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Cemeteries.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:00da9d46-c991-4889-82f6-8bf2e1799b9e</app:SemanticID>
+            <app:DisplayName>77630 - Cemeteries</app:DisplayName>
+            <app:PhysicalName>77630</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_77631">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Tombs.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e2d605a9-09b4-42c2-a35e-8fc6b69c5a93</app:SemanticID>
+            <app:DisplayName>77631 - Tombs</app:DisplayName>
+            <app:PhysicalName>77631</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CulturalPropertyProtectionSiteJctdsCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteJCTDSCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of target according to the Joint Common Target Data Set.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dbc056a8-e7d2-49ca-b037-466247ccabf4</app:SemanticID>
+        <app:ShortName>jctdsCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>Joint Common Target Data Set code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CulturalPropertyProtectionSiteLegalRightsCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteLegalRightsCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The protection laws that are applied to the site.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b6627940-3c7b-4cc0-8441-508e4b8b3d90</app:SemanticID>
+        <app:ShortName>legalRightsCode</app:ShortName>
+        <app:Remarks>In addition to any domestic laws providing protection, Cultural property of a certain significance may be eligible for additional protection in armed conflict. Sites eligible under the 1954 Hague Convention may be provided with greater protection, equating to higher command authorisation.</app:Remarks>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>legal rights</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteLegalRightsCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The protection laws that are applied to the site.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1a9acdf-e692-47e0-a9a9-78e9bf90a0c5</app:SemanticID>
+        <app:Remarks>In addition to any domestic laws providing protection, Cultural property of a certain significance may be eligible for additional protection in armed conflict. Sites eligible under the 1954 Hague Convention may be provided with greater protection, equating to higher command authorisation.</app:Remarks>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="EnhancedProtection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A cultural property under enhanced protection benefits from high level immunity which requires the parties to a conflict to refrain from making such property the object of attack or from any use of the property or its immediate surroundings to support military action.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:252e18e1-0e41-45e9-80e3-f8c499edea77</app:SemanticID>
+            <app:Remarks>A property of greatest importance for humanity according to the 1954 Hague Convention may have been entered on the register for Enhanced protection.</app:Remarks>
+            <app:DisplayName>Enhanced protection</app:DisplayName>
+            <app:PhysicalName>ENHPRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hague1907Geneva1977Protection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protection under customary international law, such as the 1907 Hague Regulations or the Additional Protocols of the Geneva Convention.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4f641f63-eea6-4d78-a3da-fa624aa1266d</app:SemanticID>
+            <app:Remarks>Sites not eligible for general protection under the 1954 Hague Convention may still be eligible for protection under customary international law, such as the 1907 Hague Regulations or the Additional Protocols of the Geneva Convention, which for the purposes here, include "buildings dedicated to religion, art, science, or historic monuments" and "works of art".</app:Remarks>
+            <app:DisplayName>Hague Regulations 1907 / Geneva Convention Additional Protocols 1977 Protection</app:DisplayName>
+            <app:PhysicalName>HGPRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NoAdditionalProtection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protection as civilian property only.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b18a9bcc-c30c-4266-a569-e3d098ce5a3c</app:SemanticID>
+            <app:DisplayName>No additional protection</app:DisplayName>
+            <app:PhysicalName>NOAPRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ProtectionGivenToPropertyOfGreatImportance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protection under the Laws of Distinction.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a396de59-d24f-4270-8feb-250f3469608f</app:SemanticID>
+            <app:Remarks>Property deemed to be of great importance to the nation according to the 1954 Hague Convention is eligible for additional protection under the Laws of Distinction.</app:Remarks>
+            <app:DisplayName>Protection given to property of great importance</app:DisplayName>
+            <app:PhysicalName>PGTPGI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SpecialProtection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A higher level of protection in comparison with the general protection derived from Article 1 of the Convention concerning all cultural property falling its scope, irrespective of origin or ownership.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1605374e-afb2-47e4-a472-2b351822dcc5</app:SemanticID>
+            <app:Remarks>A property of very great importance to the heritage of a people according to the 1954 Hague Convention may have been entered on the international register for special protection.</app:Remarks>
+            <app:DisplayName>Special protection</app:DisplayName>
+            <app:PhysicalName>SPCPRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteMoveableCulturalPropertyCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A collection of heritage items that can be relocated or transported to an alternate location; typically a museum collection or a collection of artefacts.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:726affb6-413c-4da6-8818-8e68af3e251d</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ArchaeologicalCollection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A collection of archaeological objects, or important reproductions. As collections of objects are moveable, they should be entered separately to the building that houses them. This can include excavation find storage.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ee6bf42a-5e0d-4cdc-9541-57bb252d49b8</app:SemanticID>
+            <app:DisplayName>Archaeological collection</app:DisplayName>
+            <app:PhysicalName>COLARC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Art">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A collection of art, or important reproductions. As collections of objects are moveable, they should be entered separately to the building that houses them.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:96aa2ada-0462-460b-9584-1b44eae1f9ed</app:SemanticID>
+            <app:DisplayName>Art</app:DisplayName>
+            <app:PhysicalName>COLART</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DocumentsManuscriptsBooksEtc">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An archival collection, or important reproductions. As collections of objects are moveable, they should be entered separately to the building that houses them.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:34f83a6c-0cbc-4f3e-811a-0a2baad318d0</app:SemanticID>
+            <app:DisplayName>Documents, manuscripts, books, etc</app:DisplayName>
+            <app:PhysicalName>OCLDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MixedCollection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A mixed collection of objects. As collections of objects are moveable, they should be entered separately to the building that houses them.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ca9def08-6f4b-4221-a97f-061c223a472d</app:SemanticID>
+            <app:DisplayName>Mixed collection</app:DisplayName>
+            <app:PhysicalName>COLMIX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ScientificCollection">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A scientific collection, such as instruments, botanical collections, fossils, etc. As collections of objects are moveable, they should be entered separately to the building that houses them into a new record. This can include excavation find storage.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b5e31188-3eb3-4c26-b2b9-74294ed1599f</app:SemanticID>
+            <app:DisplayName>Scientific collection</app:DisplayName>
+            <app:PhysicalName>COLSCI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CulturalPropertyProtectionSiteSignificanceCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteSignificanceCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The significance of the site to humanity, peoples, or communities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:96329722-e852-4264-bd86-256affaa59c7</app:SemanticID>
+        <app:ShortName>significanceCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>significance</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteSignificanceCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Site significance assessed according to the criteria in the 1954 Hague Convention and by Blue Shield International and determined by nations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3f49cb0-3243-4f32-82fd-d3e8472145b5</app:SemanticID>
+        <app:Remarks>The Hague Convention offers categories of significance which MAY equate to increased protection. However, registers of significance should be submitted by nation states, and may exclude properties of critical community significance, or may not cover the full breadth of heritage accorded importance under the 1954 Hague Convention. However, if a nation has not provided information on which sites it considers to be of greatest importance, or if a class of sites are excluded, other State parties are still bound to Respect CP (article 4.5), therefore expert testimony may also stand to assess sites. 
+The 1954 Hague Convention recognises in its preamble that "damage to the CP belonging to any people whatsoever means damage to the cultural heritage of mankind". As such, it is important to recognise that for any number of reasons, a site may not be registered as being of national importance, but nonetheless may be of national or international importance.
+However, the category of "greatest importance" should be attributed to only a very limited selection of cultural property.
+As far as possible, status assessments should be accorded by an authorised representative of a State party. However, the 1954 Hague Convention allows that cultural heritage can be nominated for protection by other parties, although in such cases it is unlikely (but not impossible) that it will be accorded more than the general protection due to cultural heritage of "great importance to a people". 
+If no State Party representative is available to complete the inventory and assign significance, then expert opinion may be used instead.</app:Remarks>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="GreatImportanceToAPeople">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is of great importance to the cultural heritage of a people.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:87deed4b-4b2a-430d-b05f-3b36048d0dd4</app:SemanticID>
+            <app:Remarks>Most nationally important heritage will fall into this category. It can cover: nationally-designated archaeological sites and monuments, nationally designated historic landscape of outstanding interest, Nationally designated areas or activities associated with globally important Intangible Cultural Heritage activities, or - in cases where national listing is incomplete, or only focussed on certain types of CP - other cultural property deemed to be of equal importance by international experts.</app:Remarks>
+            <app:DisplayName>Great importance to a people</app:DisplayName>
+            <app:PhysicalName>GREAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GreatestImportanceToHumanity">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is of greatest importance to humanity.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3a424c10-d6b0-45f1-95e5-9d08dc7097f4</app:SemanticID>
+            <app:Remarks>This category can cover:
+Sites, structures, or landscapes / areas of acknowledged outstanding international importance such as World Heritage and Tentative World heritage sites, or other locations which are of recognised international importance.
+World Heritage sites and locations physically linked to the Intangible Cultural heritage register have been submitted by the nation state and assessed by a panel of international experts and may be assumed to be of greatest importance for humanity, even if no other activities have been undertaken by the State (HC Article 4.5).
+Physical CP covered by the convention may be underwater, and may have intangible anthropological elements, detailed in the site description. However, these must be linked to a bounded geographic entity (physical or natural).</app:Remarks>
+            <app:DisplayName>Greatest importance to humanity</app:DisplayName>
+            <app:PhysicalName>GRTST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LocalOrCommunityImportance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is of local or community importance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dd5af8b3-6674-417e-8f21-f3646ff2c183</app:SemanticID>
+            <app:Remarks>Sites which are of significant value to local communities, damage to which can impede operations, but which are not considered by those making a national list (who may only be from one field) to be of national importance, physical CP covered by the convention may be underwater, and may have intangible anthropological elements, detailed in the site description. However, these must be linked to a bounded geographic entity (physical or natural)</app:Remarks>
+            <app:DisplayName>Local/community importance</app:DisplayName>
+            <app:PhysicalName>LOCAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NotYetAssessed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The importance of the site is not yet assessed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ebb6a2e-1e97-473d-a643-4c6e77a2be47</app:SemanticID>
+            <app:Remarks>Data which is the result of mining openly available data sources, .e.g. Pleiades or another large repository, but which has not been assessed for significance (and which may not have been verified at all).</app:Remarks>
+            <app:DisplayName>Not yet assessed</app:DisplayName>
+            <app:PhysicalName>NOTASS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ScientificImportance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is of scientific importance (local/not national).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f1bb5ae6-15d5-415d-aefb-0d9694500afe</app:SemanticID>
+            <app:Remarks>Sites which are of scientific interest, such as minor archaeological sites, which are not on the national list, but which can still contribute to our understanding of human history.</app:Remarks>
+            <app:DisplayName>Scientific importance (local/not national)</app:DisplayName>
+            <app:PhysicalName>SCNTFC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryGreatImportanceToAPeople">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site of is very great importance to the cultural heritage of a people.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7909aad7-a8c1-4fbf-bb7d-2b227f95d980</app:SemanticID>
+            <app:Remarks>A limited number of: refuges intended to shelter movable cultural property in the event of armed conflict, centres containing monuments and other immovable cultural property should be categorised as being of very great importance. This category can cover major national museums, and the most important sites to a nation, that are registered under and protected by national laws, nationally designated historic landscape of great importance, or areas physically associated with the Intangible cultural heritage register.</app:Remarks>
+            <app:DisplayName>Very great importance to a people</app:DisplayName>
+            <app:PhysicalName>VRYGRT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CulturalPropertyProtectionSiteSignificanceDescriptionText" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteSignificanceDescriptionTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of the significance of the site.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ed45094a-3e45-4f86-b51a-29213867da28</app:SemanticID>
+        <app:ShortName>significanceDescriptionText</app:ShortName>
+        <app:Remarks>Operationally, it should not matter why a CulturalPropertyProtectionSite is significant, only that it is. The description should provide key points (national listing, World Heritage, Special or Enhanced listing, community status of note, not its scientific interest).</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>significance description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteSignificanceDescriptionTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of the significance of the site.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ed45094a-3e45-4f86-b51a-29213867da28</app:SemanticID>
+        <app:ShortName>significanceDescriptionText</app:ShortName>
+        <app:Remarks>Operationally, it should not matter why a CulturalPropertyProtectionSite is significant, only that it is. The description should provide key points (national listing, World Heritage, Special or Enhanced listing, community status of note, not its scientific interest).</app:Remarks>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>significance description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CulturalPropertyProtectionSiteThreatCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteThreatCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of threat to the CulturalPropertyProtectionSite.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:15b04073-d78c-4bce-b457-095e62eedad8</app:SemanticID>
+        <app:ShortName>threatCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>threat</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteThreatCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of threat to a CulturalPropertyProtectionSite.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5e49aea8-3300-4f11-8fe9-fe147337732d</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ChemicalLeaching">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened by a chemical leaching.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ea030374-608c-43cd-8d2f-4e58af9c7b3a</app:SemanticID>
+            <app:Remarks>Common sources: construction (roads, foundations, etc.), petrol / oil.</app:Remarks>
+            <app:DisplayName>Chemical leaching</app:DisplayName>
+            <app:PhysicalName>CHLEAC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DiggingOrExcavation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened by a digging or excavation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:607e210a-d3de-42ce-9721-f4e0b239acc5</app:SemanticID>
+            <app:Remarks>Common sources: bulldozing, construction, looting, mining, drilling, earthwork creation, tunneling.</app:Remarks>
+            <app:DisplayName>Digging / excavation</app:DisplayName>
+            <app:PhysicalName>DIGEXC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KineticForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened by kinetic forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6dea4f7c-63e8-41b8-9e2b-b947c1971710</app:SemanticID>
+            <app:Remarks>Common sources: Explosives, landmines, heavy weaponry.</app:Remarks>
+            <app:DisplayName>Kinetic force</app:DisplayName>
+            <app:PhysicalName>KINFRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LootingOfMaterials">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened to have its materials looted.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a97a48fc-022d-4a34-bf2f-eae64a1c6a07</app:SemanticID>
+            <app:Remarks>Common sources: stone robbing, looting of fixtures and fittings.</app:Remarks>
+            <app:DisplayName>Looting (of materials)</app:DisplayName>
+            <app:PhysicalName>LOOTMA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LootingOfObjects">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened to have its objects looted.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e0b4e369-72c7-4bb9-8cfb-0d6eb8b2175f</app:SemanticID>
+            <app:Remarks>Common sources: pillage / spoils of war, criminal activity.</app:Remarks>
+            <app:DisplayName>Looting (of objects)</app:DisplayName>
+            <app:PhysicalName>LOOTOB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Vandalism">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened by vandalism.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d5c33630-ae03-45a8-a630-c6890d36091c</app:SemanticID>
+            <app:Remarks>Common sources: people.</app:Remarks>
+            <app:DisplayName>Vandalism</app:DisplayName>
+            <app:PhysicalName>VANDAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Vibrations">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened by vibrations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:85bb2195-1166-4791-9677-539e7979d36c</app:SemanticID>
+            <app:Remarks>Common source: heavy machinery, heavy vehicles.</app:Remarks>
+            <app:DisplayName>Vibrations</app:DisplayName>
+            <app:PhysicalName>VIBRAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WearOrAttritionOrErosion">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site is threatened by wear, attrition or erosion.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d50a9009-de8c-4c4e-979b-d4d43c28c84b</app:SemanticID>
+            <app:Remarks>Common sources : inappropriate reuse of cultural locations.</app:Remarks>
+            <app:DisplayName>Wear / attrition / erosion</app:DisplayName>
+            <app:PhysicalName>WEAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CulturalPropertyProtectionSiteType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A site under Cultural Property Protection (CPP).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Cultural property protection site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="facility:FacilityType">
+        <xsd:sequence>
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteIsUnderWaterIndicator" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteJctdsCode" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteLegalRightsCode" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteSignificanceCode" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteSignificanceDescriptionText" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteThreatCode" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteTypeCode" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteVulnerabilityCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CulturalPropertyProtectionSiteTypeCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of the CulturalPropertyProtectionSite, whether it is natural, cultural or mixed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8d382035-ffd9-468c-85e0-f9a3b28a0dae</app:SemanticID>
+        <app:ShortName>typeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of a CulturalPropertyProtectionSite, whether it is natural, cultural or mixed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:14e79953-6f40-4178-8799-fe436a6ee27e</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Cultural">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A site that is recognised in the 1954 Hague Convention for the Protection of Cultural Property in the Event of Armed Conflict.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bc8b570a-5df0-4818-87b1-ad1ebc59b9aa</app:SemanticID>
+            <app:Remarks>The Convention gives non-exhaustive examples of CP including
+a. Movable or immovable property of great importance to the cultural heritage of every people, such as monuments of architecture, art or history, whether religious or secular; archaeological sites; groups of buildings which, as a whole, are of historical or artistic interest; works of art; manuscripts, books and other objects of artistic, historical or archaeological interest; as well as scientific collections and important collections of books or archives or of reproductions of the property defined above;
+b. buildings whose main and effective purpose is to preserve or exhibit the movable cultural property defined in sub-paragraph (a) such as museums, large libraries and depositories of archives, and refuges intended to shelter, in the event of armed conflict, the movable cultural property defined in sub-paragraph (a);
+c. Centres containing a large amount of cultural property as defined in subparagraphs (a) and (b), to be known as "centres containing monuments".
+Physical CP covered by the convention may be underwater, and may have intangible anthropological elements, detailed in the site description. However, these must be linked to a bounded geographic entity (physical or natural).</app:Remarks>
+            <app:DisplayName>Cultural</app:DisplayName>
+            <app:PhysicalName>CULTRL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mixed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The site contains both cultural and natural elements.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:869d0aff-0d95-408f-9ac2-1a3b425fd295</app:SemanticID>
+            <app:DisplayName>Mixed</app:DisplayName>
+            <app:PhysicalName>MIXED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Natural">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A site that is recognized due to its ecological value.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b2dc5a07-b718-4109-9d8b-249295a0b230</app:SemanticID>
+            <app:Remarks>Natural resources may include but are not limited to: (1) Species and/or habitats of endangered, vulnerable, and/or threatened fauna and flora, (2) Protected geographical areas and the flora/fauna within those areas; protected areas include, but are not limited to, trans-national/national/regional parks, wildlife/forest/marine reserves, and sanctuaries; (3) Geological/physiographical formations; and (4) Challenged environments.
+Natural resources may have intangible anthropological elements, detailed in the site description. However, these must be linked to a bounded geographic entity (physical or natural).</app:Remarks>
+            <app:DisplayName>Natural</app:DisplayName>
+            <app:PhysicalName>NATURL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CulturalPropertyProtectionSiteVulnerabilityCode" type="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteVulnerabilityCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The natural or man-made events/risks that may result in damage to the CPP site.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:775d1569-e37a-478e-b843-217b2f756350</app:SemanticID>
+        <app:ShortName>vulnerabilityCode</app:ShortName>
+        <app:Remarks>These may be immediate and likely to have an effect within 1-2 years. Many Japanese structures, for example, are particularly vulnerable to fire. However, whilst mud-brick is vulnerable to rain, it will not typically have an immediate effect in the short-term.</app:Remarks>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>vulnerability</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CulturalPropertyProtectionSiteVulnerabilityCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The natural or man-made events/risks that may result in damage to a CPP site.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:33ac25ca-51f1-4c18-bfa5-8a7c3f56af2e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Criminals">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Illegal activity carried out by individuals or groups that result in disappearance, destruction, disfiguration, etc of the CPP site or objects.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3b97fb9b-959f-4016-8d46-1c5422a0087e</app:SemanticID>
+            <app:Remarks>The motivation for such acts can be political, ideological, economic motivation, etc.</app:Remarks>
+            <app:DisplayName>Criminals</app:DisplayName>
+            <app:PhysicalName>CRIMNL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Dissociation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The susceptibility of a CPP site due to loss of information about heritage assets, (temporary) loss or inability to access heritage items, etc as a result of the lack of inventory, poor documentation or identification, misplacing objects, hardware and software obsolescence, staff retirement, etc.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3d0bf899-aa3e-4f1b-91df-3000acd01380</app:SemanticID>
+            <app:DisplayName>Dissociation</app:DisplayName>
+            <app:PhysicalName>DISSOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fire">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The susceptibility to the total or partial burning, collapse or deformation by heating, soot deposition, etc of the CPP site.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:28ec6c1e-f7b3-43f4-bbfa-504d46c3ddca</app:SemanticID>
+            <app:Remarks>This may be caused by lightning, forest fires, gas leaks, fireworks, faulty electrical installations or equipment, smoking, candles, arson, construction and renovation works, etc.</app:Remarks>
+            <app:DisplayName>Fire</app:DisplayName>
+            <app:PhysicalName>FIRE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PestsOrLossOfEnvironmentControl">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The susceptibility to the invasion of a CPP site by local fauna (insects, rodents, birds, bats, etc). Sources of food and nesting materials attract pests resulting in staining, perforation, weakening, loss of parts, etc of the site.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:228a6aa8-6311-4deb-8ec5-8381ac1e02df</app:SemanticID>
+            <app:Remarks>The loss of site climactic control resulting in colour fading (primary effect of light); yellowing, weakening and disintegration (primary effects of UV), due to Sun, electrical light sources (lamps);  or the faster deterioration by chemical reactions, deformation, dehydration, embrittlement, softening, etc due to incorrect temperature due to changes in local climate, sunlight, incandescent lamps, heaters, etc.
+Damage caused by incorrect relative humidity which can cause damage to the site for example deformation, cracking, flaking, delamination, weakening, corrosion, mould growth, staining, etc as a result of changes in the local climate, ground water, inadequate air conditioning, micro-climates, etc.</app:Remarks>
+            <app:DisplayName>Pests / loss of environment control</app:DisplayName>
+            <app:PhysicalName>PSTENC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PhysicalForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">These are related to damage that may be caused to a CPP site due to; incorrect handling, storage, transportation; collisions, wind erosion, excavations, construction works, armed conflict, earthquakes, traffic, overload, etc.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:121e07dd-fe7f-4103-8c3f-cf8fcee19f78</app:SemanticID>
+            <app:Remarks>These may result in collapse, deformation, breakage, abrasion, wear, tearing, etc of the CPPsite.</app:Remarks>
+            <app:DisplayName>Physical force</app:DisplayName>
+            <app:PhysicalName>PHSFRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pollutants">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The susceptibility of a CPP site to suffer discoloration, weakening, staining, darkening, erosion, corrosion, etc as a direct result of the following sources, industrial processes, vehicles, construction and renovation works, storage and display materials that emit gases, visitors, restoration materials that contaminate the object, etc.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ef619a05-55b2-496e-83a6-fbe8a70fa80d</app:SemanticID>
+            <app:DisplayName>Pollutants</app:DisplayName>
+            <app:PhysicalName>PLLTNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Water">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The susceptibility of the CPP site to staining, weakening, deformation, dissolution, corrosion, weathering, salt efflorescence, biological growth, etc.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:16a82d43-11e4-4350-8746-d4ef99430545</app:SemanticID>
+            <app:Remarks>This may be as a result of Tsunami, flooded rivers, rain, ground water, water pipes, cleaning procedures, firefighting, etc.</app:Remarks>
+            <app:DisplayName>Water</app:DisplayName>
+            <app:PhysicalName>WATER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="HumanRemainsSite" type="culturalpropertyprotectionsite:HumanRemainsSiteType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A site which contains the human remains which may be old or modern.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7369160e-0670-4ddd-b067-fecf01ee3fca</app:SemanticID>
+        <app:Remarks>Human internments can include burials under floors, in walls, and other locations, as well as more obvious cemeteries. They may be scattered across the site, and found in multiple locations.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Human remains site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="HumanRemainsSiteHasArchaeologicalBurialsIndicator" type="culturalpropertyprotectionsite:HumanRemainsSiteHasArchaeologicalBurialsIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site contains archaeological burials (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f7c1401-e735-415b-a1eb-538b8de8e99e</app:SemanticID>
+        <app:ShortName>hasArchaeologicalBurialsIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>has archaeological burials</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HumanRemainsSiteHasArchaeologicalBurialsIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site contains archaeological burials (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f7c1401-e735-415b-a1eb-538b8de8e99e</app:SemanticID>
+        <app:ShortName>hasArchaeologicalBurialsIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>has archaeological burials</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="HumanRemainsSiteHasModernBurialsIndicator" type="culturalpropertyprotectionsite:HumanRemainsSiteHasModernBurialsIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site contains modern burials (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3f344cb-10c2-4663-8aa3-8a2c392023c0</app:SemanticID>
+        <app:ShortName>hasModernBurialsIndicator</app:ShortName>
+        <app:Remarks>Modern is not dictated by age, but by association with an existing community. For example, a 12th century AD cemetery would be archaeological, but a shrine associated with a companion of the prophet Mohammed would be modern.</app:Remarks>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>has modern burials</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HumanRemainsSiteHasModernBurialsIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site contains modern burials (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3f344cb-10c2-4663-8aa3-8a2c392023c0</app:SemanticID>
+        <app:ShortName>hasModernBurialsIndicator</app:ShortName>
+        <app:Remarks>Modern is not dictated by age, but by association with an existing community. For example, a 12th century AD cemetery would be archaeological, but a shrine associated with a companion of the prophet Mohammed would be modern.</app:Remarks>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>has modern burials</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="HumanRemainsSiteHasMoreThan5GravesIndicator" type="culturalpropertyprotectionsite:HumanRemainsSiteHasMoreThan5GravesIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site has more than 5 graves (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e61a8194-9f48-4f2d-a07d-2e7d9c99e3ed</app:SemanticID>
+        <app:ShortName>hasMoreThan5GravesIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>has more than 5 graves</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="HumanRemainsSiteHasMoreThan5GravesIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the site has more than 5 graves (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e61a8194-9f48-4f2d-a07d-2e7d9c99e3ed</app:SemanticID>
+        <app:ShortName>hasMoreThan5GravesIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>has more than 5 graves</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="HumanRemainsSiteType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A site which contains the human remains which may be old or modern.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7369160e-0670-4ddd-b067-fecf01ee3fca</app:SemanticID>
+        <app:Remarks>Human internments can include burials under floors, in walls, and other locations, as well as more obvious cemeteries. They may be scattered across the site, and found in multiple locations.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Human remains site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType">
+        <xsd:sequence>
+          <xsd:element ref="culturalpropertyprotectionsite:HumanRemainsSiteHasArchaeologicalBurialsIndicator" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:HumanRemainsSiteHasModernBurialsIndicator" minOccurs="0" />
+          <xsd:element ref="culturalpropertyprotectionsite:HumanRemainsSiteHasMoreThan5GravesIndicator" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Monument" type="culturalpropertyprotectionsite:MonumentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A monument associated with a current community.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bee7e52c-873f-4d37-aa6d-25c5d448f45c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Monument</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MonumentIsReligiousIndicator" type="culturalpropertyprotectionsite:MonumentIsReligiousIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the monument is religious (true) or secular (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1c1f99cd-85f0-42d0-a0ed-20829e56ec60</app:SemanticID>
+        <app:ShortName>isReligiousIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>is religious</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MonumentIsReligiousIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the monument is religious (true) or secular (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1c1f99cd-85f0-42d0-a0ed-20829e56ec60</app:SemanticID>
+        <app:ShortName>isReligiousIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>is religious</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="MonumentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A monument associated with a current community.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bee7e52c-873f-4d37-aa6d-25c5d448f45c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Monument</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType">
+        <xsd:sequence>
+          <xsd:element ref="culturalpropertyprotectionsite:MonumentIsReligiousIndicator" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NaturalSite" type="culturalpropertyprotectionsite:NaturalSiteType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An area that has been designated as a natural location that should receive some form of protected status.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0baf1c40-e5c1-45c5-a1a9-be4e38dfcd13</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Natural site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="NaturalSiteCategoryCode" type="culturalpropertyprotectionsite:NaturalSiteCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of NaturalSite.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7fcb8cc1-f2a8-46e6-a448-4459a9badcb3</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NaturalSiteCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of NaturalSite.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:09651031-0593-4a44-8539-3e0d18b8ff7c</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ForestReserveOrSanctuary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protected or significant area of woodland.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:566e83a4-1ca2-4fe7-aa49-bad729516a0d</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Forest reserve / sanctuary</app:DisplayName>
+            <app:PhysicalName>FORRES</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GeologicalOrPhysiographicalFormations">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protected or significant area of geological or physiographical formations, such as fossil cliffs.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fea50563-f9a5-409a-b77a-2b902589af32</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Geological/physiographical formations</app:DisplayName>
+            <app:PhysicalName>GEOFRM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HistoricParksAndGardens">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Historic parks and gardens. These are often associated with historic buildings, and should be entered separately.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5a1029c7-8366-4e36-a005-355777beb303</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Historic parks and gardens</app:DisplayName>
+            <app:PhysicalName>HSTPRK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MarineReserveOrSanctuary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protected or significant areas of marine or coastal areas, such as the Great Barrier Reefs, or parts of the Socotra Archipelago.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f386c526-b2ed-4327-8131-28ef24880cbf</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Marine reserve / sanctuary</app:DisplayName>
+            <app:PhysicalName>MARRES</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MixedCulturalAndNaturalSite">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A natural site that includes areas on land and marine areas, or other combination which may also contain a site of cultural importance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c60d1241-46ca-4bd1-9c4d-7603310db776</app:SemanticID>
+            <app:Remarks>The Grand Canyon contains not only the natural element but also ruins of the Anastasi Indian which are of cultural importance to Native (US) Indians.</app:Remarks>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Mixed cultural and natural site</app:DisplayName>
+            <app:PhysicalName>MIXSTE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MixedNaturalSite">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A natural site that includes areas on land and marine areas, or other combination.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6c68dd4d-cdb9-4917-8428-1d8b9e15f580</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Mixed natural site</app:DisplayName>
+            <app:PhysicalName>MIXNAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SignificantFeature">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Significant natural feature, such as a sacred tree or waterfall that is not otherwise part of a larger site, or which is worthy of particular note.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:32d527eb-f119-4390-aed2-98c069a77889</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Significant feature</app:DisplayName>
+            <app:PhysicalName>SIGFEA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TransNationalOrNationalOrRegionalPark">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Large area of protected or significant land that contains multiple habitats, such as wildlife sanctuaries and protected woodland.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:59d9e93e-227a-4c49-ad8a-bf12d9c506b5</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Trans-national/national/regional parks</app:DisplayName>
+            <app:PhysicalName>PARKS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WildlifeReserveOrSanctuary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Protected or significant area of land associated with wildlife.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7e6051df-957b-4d53-9db3-17f177c3b1e0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Wildlife reserve / sanctuary</app:DisplayName>
+            <app:PhysicalName>WLDLIF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="NaturalSiteType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An area that has been designated as a natural location that should receive some form of protected status.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0baf1c40-e5c1-45c5-a1a9-be4e38dfcd13</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Natural site</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType">
+        <xsd:sequence>
+          <xsd:element ref="culturalpropertyprotectionsite:NaturalSiteCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="StatueOrSculptureOrPublicWorkOfArt" type="culturalpropertyprotectionsite:StatueOrSculptureOrPublicWorkOfArtType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An object made by an artist.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c4ff5972-e7f5-424a-9f2d-50da7c9ba93c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Statue / sculpture / public work of art</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="StatueOrSculptureOrPublicWorkOfArtType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An object made by an artist.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c4ff5972-e7f5-424a-9f2d-50da7c9ba93c</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9d37c42d-06ab-42ec-af2f-b857beac8cc5">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Statue / sculpture / public work of art</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="culturalpropertyprotectionsite:CulturalPropertyProtectionSiteType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

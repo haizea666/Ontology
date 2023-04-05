@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>39</TestCaseIdGroup>
+    <TestCaseIdNumber>34</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Receive Message Element that exceeds size limit.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability of consumers and producers to handle large data volumes (quantity checking).</TestCaseObjective>
+  <TestCaseScenario>A Producer/Provider publishes / responds with a MIP4 (syntactically) valid message (Message Element) that exceeds the MIP4 Message size limit. The Consumer receives and processes it into their system, being able to capture the issue with no error.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: All.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>Consumers and producers can handle large and complex MIP4 data volumes.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0017.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Produce a MIP4 (syntactically) valid Message Element that exceeds the MIP4 Message size limit.
+An open question is what that MIP4 Message size limit is. A trial exceeded found quota for ADEM R/R client has been 65,536 bytes, resulting in having to put a limit below it at the provider side. This figure might be used within MIP4 as a starter. </TestCaseStepAction>
+    <TestCaseStepResult>The producer/provider publishes a MIP4 valid message that exceeds the MIP4 Message size limit or is ready to respond with it or send it as a file to the consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain the MIP4 valid message that exceeds the MIP4 Message size limit. </TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the producer/provider. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Process the MIP4 content on the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully process the MIP4 content without error.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

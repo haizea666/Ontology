@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<staffconceptorganisationstructure:OrderOfBattle xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" xmlns:staffconceptorganisationstructure="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>0f0d20fa-7e04-4ded-8361-f8acfc32909f</base:ID>
+	<concept:ConceptName>TestOrbat</concept:ConceptName>
+	<staffconcept:StaffConceptMetadata xsi:nil="true"/>
+	<staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef xsi:nil="true"/>
+	<staffconceptorganisationstructure:OrganisationStructureRootOrganisation xsi:nil="true"/>
+</staffconceptorganisationstructure:OrderOfBattle>
+
+<!--
+Original example
+
+<frorbat:OrderOfBattle ... >
+	<base:Identifier>
+		<base:Uri>0f0d20fa-7e04-4ded-8361-f8acfc32909f</Uri>
+		<base:Source>IDT</Source>
+		<base:IsDependentIndicator>false</IsDependentIndicator>
+	</base:Identifier>
+	<core:NameWrapper>
+		<core:Name>TestOrbat</core:Name>
+	</core:NameWrapper>
+</<frorbat:OrderOfBattle>
+-->

@@ -1,0 +1,1721 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:actor="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Materiel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An apparatus, equipment or supply of military interest without distinction as to its application for administrative or combat purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielAccountingAuthority" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has the Materiel on its account.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b3b509e3-1847-49f6-b284-9e7714da765b-1I</app:SemanticID>
+        <app:ShortName>accountingAuthority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is accounting authority for</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielAccountingAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has the Materiel on its account.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b3b509e3-1847-49f6-b284-9e7714da765b-1R</app:SemanticID>
+        <app:ShortName>accountingAuthorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>is accounting authority for</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielAttachedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is temporarily attached to the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c50fd6c0-ab88-4ca6-9f30-a360e6e38377-1I</app:SemanticID>
+        <app:ShortName>attachedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>attached Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielAttachedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is temporarily attached to the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c50fd6c0-ab88-4ca6-9f30-a360e6e38377-1R</app:SemanticID>
+        <app:ShortName>attachedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>attached Materiel Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielAuthority" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is granted formal entitlement to the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f15e7fd7-a904-43ef-ab66-50bf83638b47-1I</app:SemanticID>
+        <app:ShortName>authority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is authorised to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is granted formal entitlement to the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f15e7fd7-a904-43ef-ab66-50bf83638b47-1R</app:SemanticID>
+        <app:ShortName>authorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>is authorised to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielBodyColourCode" type="materiel:MaterielBodyColourCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The colour scheme of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:65d905e4-4f58-41d4-911f-463a6ea84463</app:SemanticID>
+        <app:ShortName>bodyColourCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>body colour</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielBodyColourCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The colour scheme of a Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b2f7ec4a-b26f-4859-a4a4-db951431e171</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Auburn">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d7439940-3106-4a16-be19-4af0dac16106</app:SemanticID>
+            <app:DisplayName>Auburn</app:DisplayName>
+            <app:PhysicalName>AUBURN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Beige">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7d13c3f3-06b0-41c4-bbea-285d21824142</app:SemanticID>
+            <app:DisplayName>Beige</app:DisplayName>
+            <app:PhysicalName>BEIGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Black">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:23b76278-b725-4db3-81d3-aa1fe356abe3</app:SemanticID>
+            <app:DisplayName>Black</app:DisplayName>
+            <app:PhysicalName>BLACK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Blue">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:43173441-0ab0-437d-8d57-2bcda35e0296</app:SemanticID>
+            <app:DisplayName>Blue</app:DisplayName>
+            <app:PhysicalName>BLUE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Bronze">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:452e9664-f50b-45ce-8cb0-7a4ce89b1091</app:SemanticID>
+            <app:DisplayName>Bronze</app:DisplayName>
+            <app:PhysicalName>BRONZE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Brown">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:800ba25e-c0a6-45f3-bdb6-912808ce079b</app:SemanticID>
+            <app:DisplayName>Brown</app:DisplayName>
+            <app:PhysicalName>BROWN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Chrome">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a254d4e8-879a-40ed-8e5e-67365161c86d</app:SemanticID>
+            <app:DisplayName>Chrome</app:DisplayName>
+            <app:PhysicalName>CHROME</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Copper">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:077e0cd1-1708-4bde-a25b-43be7f0eaa2a</app:SemanticID>
+            <app:DisplayName>Copper</app:DisplayName>
+            <app:PhysicalName>COPPER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Cream">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8253daee-f90f-4eb8-b9a9-7295638597c2</app:SemanticID>
+            <app:DisplayName>Cream</app:DisplayName>
+            <app:PhysicalName>CREAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DarkGreen">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:002c05d5-c96f-485b-a49f-848a12d6726e</app:SemanticID>
+            <app:DisplayName>Green, dark</app:DisplayName>
+            <app:PhysicalName>GREEND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Gold">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:30313634-190d-4887-ac2c-a1829fb7332a</app:SemanticID>
+            <app:DisplayName>Gold</app:DisplayName>
+            <app:PhysicalName>GOLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Green">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d108fc89-6323-4f6e-80e8-e410d32dc30d</app:SemanticID>
+            <app:DisplayName>Green</app:DisplayName>
+            <app:PhysicalName>GREEN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Grey">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a9858ea9-380e-4c05-82cc-bf56b87d19fc</app:SemanticID>
+            <app:DisplayName>Grey</app:DisplayName>
+            <app:PhysicalName>GREY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GreyDesertCamouflage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:87f1fafe-3947-4a6f-90f4-c0c68b535789</app:SemanticID>
+            <app:DisplayName>Camouflage, desert, grey</app:DisplayName>
+            <app:PhysicalName>CAMDSG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Lavender">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f347385e-1141-4d76-951b-ae6fcd56ef64</app:SemanticID>
+            <app:DisplayName>Lavender</app:DisplayName>
+            <app:PhysicalName>LAVNDR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LightBlue">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ffe10cb7-e9da-4cfd-a134-95eb11d1514d</app:SemanticID>
+            <app:DisplayName>Blue, light</app:DisplayName>
+            <app:PhysicalName>BLUELG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LightGreen">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d6901eba-6bc3-4380-8c9f-bf1eaf7d8a65</app:SemanticID>
+            <app:DisplayName>Green, light</app:DisplayName>
+            <app:PhysicalName>GREENL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Maroon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3a56b4ee-7253-47f3-904a-1d7d74fb8468</app:SemanticID>
+            <app:DisplayName>Maroon</app:DisplayName>
+            <app:PhysicalName>MAROON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Multicoloured">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:86587fe7-cf6b-4fa7-aae9-06649fdc1dad</app:SemanticID>
+            <app:DisplayName>Multicoloured</app:DisplayName>
+            <app:PhysicalName>MULTI</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Orange">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:207cb41c-abd1-4276-91d2-3a84ae958598</app:SemanticID>
+            <app:DisplayName>Orange</app:DisplayName>
+            <app:PhysicalName>ORANGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Purple">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a2aa9ae1-13c0-4a6d-ba37-f3cad85d2391</app:SemanticID>
+            <app:DisplayName>Purple</app:DisplayName>
+            <app:PhysicalName>PURPLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Red">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7863b3be-49f8-441d-bd36-6e3d7b7a1fb5</app:SemanticID>
+            <app:DisplayName>Red</app:DisplayName>
+            <app:PhysicalName>RED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RedDesertCamouflage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bec24655-2ed8-4f39-809e-5bb42a5446a4</app:SemanticID>
+            <app:DisplayName>Camouflage, desert, red</app:DisplayName>
+            <app:PhysicalName>CAMDSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Rust">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:86f3457e-6ce4-4678-99ea-22e950485f4e</app:SemanticID>
+            <app:DisplayName>Rust</app:DisplayName>
+            <app:PhysicalName>RUST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Silver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b8b6b672-7040-4f7d-a1c2-4c6c74363728</app:SemanticID>
+            <app:DisplayName>Silver</app:DisplayName>
+            <app:PhysicalName>SILVER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tan">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aebfe9b2-f075-456c-bac1-eff9163eddb8</app:SemanticID>
+            <app:DisplayName>Tan</app:DisplayName>
+            <app:PhysicalName>TAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Turquoise">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:af9101b9-c4ab-4e97-b7c8-628f42e018ed</app:SemanticID>
+            <app:DisplayName>Turquoise</app:DisplayName>
+            <app:PhysicalName>TURQSE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="White">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6d273d36-2ca3-409b-9c86-65fc14ef3744</app:SemanticID>
+            <app:DisplayName>White</app:DisplayName>
+            <app:PhysicalName>WHITE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WinterCamouflage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:813561b7-e7f2-4814-9a73-8aec5cc6ca6f</app:SemanticID>
+            <app:DisplayName>Camouflage, winter</app:DisplayName>
+            <app:PhysicalName>CAMWNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WoodlandCamouflage">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:042ffb6b-3690-4d53-b7fa-4234436b52e2</app:SemanticID>
+            <app:DisplayName>Camouflage, woodland</app:DisplayName>
+            <app:PhysicalName>CAMWOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Yellow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:98ada6b7-91af-4c6e-ac92-c89e0970271c</app:SemanticID>
+            <app:DisplayName>Yellow</app:DisplayName>
+            <app:PhysicalName>YELLOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielCarryingMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is loaded on the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02646f3a-ad3f-40cb-b8f3-1610915eb4d1-2I</app:SemanticID>
+        <app:ShortName>carryingMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>carrying Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielCarryingMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is loaded on the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02646f3a-ad3f-40cb-b8f3-1610915eb4d1-2R</app:SemanticID>
+        <app:ShortName>carryingMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>carrying Materiel Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielContent" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject (container) Materiel contains the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d390c0eb-a4b9-4571-8dc9-c3a4263a4812I</app:SemanticID>
+        <app:ShortName>content</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>contains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielContentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject (container) Materiel contains the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d390c0eb-a4b9-4571-8dc9-c3a4263a4812R</app:SemanticID>
+        <app:ShortName>contentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>contains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielController" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has authority over the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0e4c29af-b764-48c5-a318-cccbf090fbfd-1I</app:SemanticID>
+        <app:ShortName>controller</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielControllerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor has authority over the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0e4c29af-b764-48c5-a318-cccbf090fbfd-1R</app:SemanticID>
+        <app:ShortName>controllerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielConveyedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is the conveyance for the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1de1946-5b49-4dcc-a1a4-61be3ca82a52-2I</app:SemanticID>
+        <app:ShortName>conveyedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>conveyed Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielConveyedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is the conveyance for the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1de1946-5b49-4dcc-a1a4-61be3ca82a52-2R</app:SemanticID>
+        <app:ShortName>conveyedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>conveyed Materiel Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielConveyingMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is the conveyance for the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1de1946-5b49-4dcc-a1a4-61be3ca82a52-1I</app:SemanticID>
+        <app:ShortName>conveyingMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>conveying Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielConveyingMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is the conveyance for the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a1de1946-5b49-4dcc-a1a4-61be3ca82a52-1R</app:SemanticID>
+        <app:ShortName>conveyingMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>conveying Materiel Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielDemolitionStatusCode" type="object:DemolitionStatusCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The status of the Materiel concerning its possible demolition.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:980b6b72-5faf-42ac-b595-8d972820b231</app:SemanticID>
+        <app:ShortName>demolitionStatusCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>demolition status</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielFacilityAuthority" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Facility is granted formal entitlement to the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:979da7f5-5280-4932-9359-062ed29c2966-1I</app:SemanticID>
+        <app:ShortName>facilityAuthority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is authorised to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielFacilityAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Facility is granted formal entitlement to the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:979da7f5-5280-4932-9359-062ed29c2966-1R</app:SemanticID>
+        <app:ShortName>facilityAuthorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>is authorised to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielHoldingMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is temporarily attached to the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c50fd6c0-ab88-4ca6-9f30-a360e6e38377-2I</app:SemanticID>
+        <app:ShortName>holdingMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>holding Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielHoldingMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is temporarily attached to the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c50fd6c0-ab88-4ca6-9f30-a360e6e38377-2R</app:SemanticID>
+        <app:ShortName>holdingMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>holding Materiel Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielInstaller" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor installs the Materiel (emplaces it/assembles it/connects it/adjusts it for use).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3a945db-d0c9-4848-bcfe-53f0c266db71-1I</app:SemanticID>
+        <app:ShortName>installer</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>installs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielInstallerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor installs the Materiel (emplaces it/assembles it/connects it/adjusts it for use).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d3a945db-d0c9-4848-bcfe-53f0c266db71-1R</app:SemanticID>
+        <app:ShortName>installerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>installs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielIsActiveIndicator" type="materiel:MaterielIsActiveIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Materiel is performing the function or service for which it is designed (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:17493926-6498-4bbd-a0b5-207f12bc50c7</app:SemanticID>
+        <app:ShortName>isActiveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is active</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielIsActiveIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Materiel is performing the function or service for which it is designed (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:17493926-6498-4bbd-a0b5-207f12bc50c7</app:SemanticID>
+        <app:ShortName>isActiveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is active</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="MaterielIsInReserveIndicator" type="materiel:MaterielIsInReserveIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Materiel has been placed in reserve (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:50905ff1-cf3a-46e8-a523-954723db347a</app:SemanticID>
+        <app:ShortName>isInReserveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is in reserve</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielIsInReserveIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Materiel has been placed in reserve (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:50905ff1-cf3a-46e8-a523-954723db347a</app:SemanticID>
+        <app:ShortName>isInReserveIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>is in reserve</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="MaterielIssuingDimensions" type="generic:ObjectDimensionsType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The size of the Materiel when it is prepared for shipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b347b9c8-954e-4698-97ef-5267949b6657</app:SemanticID>
+        <app:ShortName>issuingDimensions</app:ShortName>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>issuing dimensions</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielLoadedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is loaded on the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02646f3a-ad3f-40cb-b8f3-1610915eb4d1-1I</app:SemanticID>
+        <app:ShortName>loadedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>loaded Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielLoadedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Materiel is loaded on the object Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02646f3a-ad3f-40cb-b8f3-1610915eb4d1-1R</app:SemanticID>
+        <app:ShortName>loadedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>loaded Materiel Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielLotIdentifier" type="materiel:MaterielLotIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific production of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5c16dd4b-165c-4032-89da-9afb3a6a5189</app:SemanticID>
+        <app:ShortName>lotIdentifier</app:ShortName>
+        <app:Remarks>For example, lotIdentifier might be used to specify the production lot of propellant or other munitions.</app:Remarks>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>lot identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielLotIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The specific production of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5c16dd4b-165c-4032-89da-9afb3a6a5189</app:SemanticID>
+        <app:ShortName>lotIdentifier</app:ShortName>
+        <app:Remarks>For example, lotIdentifier might be used to specify the production lot of propellant or other munitions.</app:Remarks>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>lot identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielMaintainer" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor keeps the Materiel in good repair or efficiency on a routine basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1dfcea7a-4414-48e9-a10e-92b693687176-1I</app:SemanticID>
+        <app:ShortName>maintainer</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>maintains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielMaintainerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor keeps the Materiel in good repair or efficiency on a routine basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1dfcea7a-4414-48e9-a10e-92b693687176-1R</app:SemanticID>
+        <app:ShortName>maintainerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>maintains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielMaintainingFacility" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Facility keeps the Materiel in good repair or efficiency on a routine basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12b3f716-da01-4b0c-bd41-5555caffb343-1I</app:SemanticID>
+        <app:ShortName>maintainingFacility</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>maintains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielMaintainingFacilityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Facility keeps the Materiel in good repair or efficiency on a routine basis.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12b3f716-da01-4b0c-bd41-5555caffb343-1R</app:SemanticID>
+        <app:ShortName>maintainingFacilityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>maintains</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielMarkingCode" type="materiel:MaterielMarkingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of marking of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:eb529dbe-bade-48c8-8986-2c460356a10a</app:SemanticID>
+        <app:ShortName>markingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>marking</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielMarkingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of marking of a Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a48593b8-4d13-4314-987e-84a10965e392</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Numbers">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A set of integers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:46c6180c-5ede-4918-bd58-b0063b12de78</app:SemanticID>
+            <app:DisplayName>Numbers</app:DisplayName>
+            <app:PhysicalName>NUMBER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Stripe">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A long narrow band distinguished, as by colour, from the surrounding material or surface. This value includes band.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8c4c7af3-6b2a-45a6-bdf6-101424003788</app:SemanticID>
+            <app:DisplayName>Stripe</app:DisplayName>
+            <app:PhysicalName>STRIPE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Stripes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Multiple long narrow bands distinguished, as by colour, from the surrounding material or surface. This value includes bands.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7fdb597c-32d7-418b-be1a-2d847d5c75ec</app:SemanticID>
+            <app:DisplayName>Stripes</app:DisplayName>
+            <app:PhysicalName>STRIPS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Symbols">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A token for identification.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a18e9cfc-7fc0-4974-8558-a9d5e198a917</app:SemanticID>
+            <app:DisplayName>Symbols</app:DisplayName>
+            <app:PhysicalName>SYMBOL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Writing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Language symbols or characters written or imprinted on a surface.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2ce0bcb1-ac40-41c6-b1f8-d0a687e82ab7</app:SemanticID>
+            <app:DisplayName>Writing</app:DisplayName>
+            <app:PhysicalName>WRITNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielMarkingColourCode" type="materiel:MaterielMarkingColourCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The colour of the markings of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:46c6e3c9-ff9e-49ee-9510-b06e7bf28914</app:SemanticID>
+        <app:ShortName>markingColourCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>marking colour</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielMarkingColourCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The colour of the markings of a Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0ee0e227-c188-404e-bc36-d062fed4c3d6</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Black">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c9111776-2dc6-47ec-b204-500de12b65f4</app:SemanticID>
+            <app:DisplayName>Black</app:DisplayName>
+            <app:PhysicalName>BLACK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Blue">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c4c49b3a-a9b9-49e4-9d0c-e689875e600a</app:SemanticID>
+            <app:DisplayName>Blue</app:DisplayName>
+            <app:PhysicalName>BLUE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Brown">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:63d73498-971b-4adc-81c6-90e20cf10273</app:SemanticID>
+            <app:DisplayName>Brown</app:DisplayName>
+            <app:PhysicalName>BROWN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Green">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eb9663ef-c152-40dd-927d-0cd14a5602df</app:SemanticID>
+            <app:DisplayName>Green</app:DisplayName>
+            <app:PhysicalName>GREEN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Grey">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2284aba5-c42f-4e00-9c3a-b79c5b4317df</app:SemanticID>
+            <app:DisplayName>Grey</app:DisplayName>
+            <app:PhysicalName>GREY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Orange">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:985f8f0e-12fe-47e9-a492-f36b5bdc0d25</app:SemanticID>
+            <app:DisplayName>Orange</app:DisplayName>
+            <app:PhysicalName>ORANGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Purple">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:30b104d4-f81c-4896-8dbe-9e0a881129cb</app:SemanticID>
+            <app:DisplayName>Purple</app:DisplayName>
+            <app:PhysicalName>PURPLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Red">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dd892f6c-a6c1-4e8d-bd59-d75665f13aee</app:SemanticID>
+            <app:DisplayName>Red</app:DisplayName>
+            <app:PhysicalName>RED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Silver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b6bca833-5383-4b86-a3ee-5284c523a770</app:SemanticID>
+            <app:DisplayName>Silver</app:DisplayName>
+            <app:PhysicalName>SILVER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tan">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aaf4a52f-1380-462d-9c0b-1a55e0bb5b88</app:SemanticID>
+            <app:DisplayName>Tan</app:DisplayName>
+            <app:PhysicalName>TAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="White">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:16334f3b-65e5-43f9-aa88-3b3ef0a0ac5f</app:SemanticID>
+            <app:DisplayName>White</app:DisplayName>
+            <app:PhysicalName>WHITE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Yellow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Self defined.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2a61d6c2-47cf-46a5-966e-fa17abc61e5b</app:SemanticID>
+            <app:DisplayName>Yellow</app:DisplayName>
+            <app:PhysicalName>YELLOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielModelName" type="materiel:MaterielModelNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The model name of the type of Materiel assigned either by its manufacturer or by its operating organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4787523a-7e18-4bbf-850e-2a64e3abacc4</app:SemanticID>
+        <app:ShortName>modelName</app:ShortName>
+        <app:Remarks>The model name must not be confused with the type name. The model name denotes the product (e.g., 'HF-9000D'), whereas the type name is used to classify the object (e.g., 'High Frequency Radio').</app:Remarks>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>model name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielModelNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The model name of the type of Materiel assigned either by its manufacturer or by its operating organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4787523a-7e18-4bbf-850e-2a64e3abacc4</app:SemanticID>
+        <app:ShortName>modelName</app:ShortName>
+        <app:Remarks>The model name must not be confused with the type name. The model name denotes the product (e.g., 'HF-9000D'), whereas the type name is used to classify the object (e.g., 'High Frequency Radio').</app:Remarks>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>model name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielOperationalStatusCode" type="object:OperationalStatusCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The operational status of the Materiel with regard to the functions for which it is designed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:676e395b-ccb6-4045-8bab-042741ca0ee2</app:SemanticID>
+        <app:ShortName>operationalStatusCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>operational status</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielOperationalStatusQualifierCode" type="materiel:MaterielOperationalStatusQualifierCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The qualification of the operational status of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:69d3a67f-18ad-43bc-87a4-2d4f7ad02d84</app:SemanticID>
+        <app:ShortName>operationalStatusQualifierCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>operational status qualifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielOperationalStatusQualifierCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The qualification of the operational status of a Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bcdbef26-ebf4-45b3-92a5-6f282ff4bd83</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Cleared">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is weapon and explosive free.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f332d52a-df5f-43e4-b8f3-f7f38b1f3fb8</app:SemanticID>
+            <app:DisplayName>Cleared</app:DisplayName>
+            <app:PhysicalName>CLEARD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Denied">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is unavailable through means such as removal, contamination or erection of obstructions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:af8bc843-769b-4a17-8110-cabc3c494c37</app:SemanticID>
+            <app:DisplayName>Denied</app:DisplayName>
+            <app:PhysicalName>DENIED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Destroyed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is not, and not expected ever to be, capable of performing the missions or functions for which it is designed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:285d792c-01f2-4e2a-8f2e-acc3375d1797</app:SemanticID>
+            <app:DisplayName>Destroyed</app:DisplayName>
+            <app:PhysicalName>DSTRYD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Disassembled">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is taken apart in a way that it can be reassembled.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e4092c55-9728-4293-befe-3ccab943bd7d</app:SemanticID>
+            <app:DisplayName>Disassembled</app:DisplayName>
+            <app:PhysicalName>DISASM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HeavilyDamaged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel has suffered severe harm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e30806b8-7a08-439c-8bd2-38b2ae64332f</app:SemanticID>
+            <app:DisplayName>Heavily damaged</app:DisplayName>
+            <app:PhysicalName>HVYDAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Immobilised">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel or its component is incapable of movement in its current condition.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:465fd627-f905-4e01-851b-a8d1b6eba243</app:SemanticID>
+            <app:DisplayName>Immobilised</app:DisplayName>
+            <app:PhysicalName>IMMBLS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InMaintenance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is under some kind of service.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a679cae7-ec3f-427c-a30d-ed44906526cf</app:SemanticID>
+            <app:DisplayName>In maintenance</app:DisplayName>
+            <app:PhysicalName>INMNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IntactButUnrecoverable">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is in an area unsuitable for recovery due to political, military, or geographic/environmental considerations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:641b9bd1-e4cb-42fa-866e-8076dcd5a2a4</app:SemanticID>
+            <app:DisplayName>Intact but unrecoverable</app:DisplayName>
+            <app:PhysicalName>INTREC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LackingVitalResources">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is deficient or lacking of some mission-critical resources (e.g., fuel, ammunition).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:25166e71-3b47-4801-9dff-1b982254e69c</app:SemanticID>
+            <app:DisplayName>Lacking vital resources</app:DisplayName>
+            <app:PhysicalName>LVR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LightlyDamaged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel has suffered limited harm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:27f4ab0f-a086-4079-addb-18014a6bc1a0</app:SemanticID>
+            <app:DisplayName>Lightly damaged</app:DisplayName>
+            <app:PhysicalName>LGTDAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Lost">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is missing under unknown circumstances.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f3ea0272-6ef0-49e8-b25f-4fb6a26f56c2</app:SemanticID>
+            <app:DisplayName>Lost</app:DisplayName>
+            <app:PhysicalName>LST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ModeratelyDamaged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel has suffered medium harm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:233b42f3-4ee1-4fa2-8f36-dd34404bd529</app:SemanticID>
+            <app:DisplayName>Moderately damaged</app:DisplayName>
+            <app:PhysicalName>MODDAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mothballed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel has been preserved to some degree.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:db7235e4-86c2-40de-97ed-65d1dea4a9e1</app:SemanticID>
+            <app:DisplayName>Mothballed</app:DisplayName>
+            <app:PhysicalName>MTHBLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Neutralized">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel has been made incapable of functioning productively or effectively.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7065b4cd-a8db-4dbd-b219-afc3a1f5fbbd</app:SemanticID>
+            <app:DisplayName>Neutralized</app:DisplayName>
+            <app:PhysicalName>STERLZ</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Scrapped">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is dismantled or taken apart into pieces to store or destroy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aca3a01c-3b32-40cf-9fa0-12c86b0190ff</app:SemanticID>
+            <app:DisplayName>Scrapped</app:DisplayName>
+            <app:PhysicalName>SCRPPD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielOwner" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is the owner of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f06058b5-86b5-4769-b382-456b33b8b048-1I</app:SemanticID>
+        <app:ShortName>owner</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is owner of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielOwnerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is the owner of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f06058b5-86b5-4769-b382-456b33b8b048-1R</app:SemanticID>
+        <app:ShortName>ownerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>is owner of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielRepairer" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor restores the Materiel to sound condition after damage or failure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:df0ccbb1-a725-4aa8-932c-d3a1938a2d2f-1I</app:SemanticID>
+        <app:ShortName>repairer</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>repairs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielRepairerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor restores the Materiel to sound condition after damage or failure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:df0ccbb1-a725-4aa8-932c-d3a1938a2d2f-1R</app:SemanticID>
+        <app:ShortName>repairerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>repairs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielRepairingFacility" type="facility:FacilityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Facility restores the Materiel to sound condition after damage or failure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:665697d0-2fc1-4b42-b767-68cf0005e806-1I</app:SemanticID>
+        <app:ShortName>repairingFacility</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>repairs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielRepairingFacilityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Facility restores the Materiel to sound condition after damage or failure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:665697d0-2fc1-4b42-b767-68cf0005e806-1R</app:SemanticID>
+        <app:ShortName>repairingFacilityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:3b27d26e-8432-43e1-bd8f-582c0165be5a</app:ReferenceType>
+        <app:DisplayName>repairs</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielReportableItemIdentifier" type="materiel:MaterielReportableItemIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type defined by the Reportable Item Code list.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:780bb25f-5d4e-49a5-aba5-b672a7052923</app:SemanticID>
+        <app:ShortName>reportableItemIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>reportable item identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielReportableItemIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type defined by the Reportable Item Code list.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:780bb25f-5d4e-49a5-aba5-b672a7052923</app:SemanticID>
+        <app:ShortName>reportableItemIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>reportable item identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielSerialNumberIdentifier" type="materiel:MaterielSerialNumberIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The serial number of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:827913a3-4122-44b5-8465-993554e8b26f</app:SemanticID>
+        <app:ShortName>serialNumberIdentifier</app:ShortName>
+        <app:Remarks>The serial number, frequently found stamped on an object, may be unique only for a type of Materiel with a specific model number.</app:Remarks>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>serial number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielSerialNumberIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The serial number of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:827913a3-4122-44b5-8465-993554e8b26f</app:SemanticID>
+        <app:ShortName>serialNumberIdentifier</app:ShortName>
+        <app:Remarks>The serial number, frequently found stamped on an object, may be unique only for a type of Materiel with a specific model number.</app:Remarks>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>serial number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielStockNumberIdentifier" type="materiel:MaterielStockNumberIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The NATO stock number of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e80c7b81-c994-477d-9687-577134bb7506</app:SemanticID>
+        <app:ShortName>stockNumberIdentifier</app:ShortName>
+        <app:Remarks>The NATO stock number is a 13-digit number of which four digits designate a class, two digits designate a nation, and seven digits designate a national code number.</app:Remarks>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>stock number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielStockNumberIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The NATO stock number of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e80c7b81-c994-477d-9687-577134bb7506</app:SemanticID>
+        <app:ShortName>stockNumberIdentifier</app:ShortName>
+        <app:Remarks>The NATO stock number is a 13-digit number of which four digits designate a class, two digits designate a nation, and seven digits designate a national code number.</app:Remarks>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>stock number</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="15" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielSupplyClassCode" type="materiel:MaterielSupplyClassCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The NATO supply class of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0316213c-cdd7-4033-a0c4-a3f1c70e84de</app:SemanticID>
+        <app:ShortName>supplyClassCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>supply class</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielSupplyClassCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The NATO supply class of a Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:038acde3-05ea-474f-8b77-ccc25c548e68</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ClassI">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Items that are consumed by personnel and animals at an approximately uniform rate, irrespective of local changes in combat or terrain conditions, e.g. food and forage.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6f4afdf8-94c8-412e-b508-b4569db55469</app:SemanticID>
+            <app:DisplayName>Class I</app:DisplayName>
+            <app:PhysicalName>CLS1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ClassII">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Supplies for which allowances are established by tables of organisation and equipment, e.g. clothing, weapons, tools, spare parts, vehicles.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9608b347-3975-4aaf-a377-c21fd8dea0b5</app:SemanticID>
+            <app:DisplayName>Class II</app:DisplayName>
+            <app:PhysicalName>CLS2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ClassIII">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Fuel and lubricants for all purposes, except for operating aircraft or for use in weapons such as flame-throwers, e.g. gasoline, fuel oil, greases, coal and coke.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0ada7389-b82c-45a9-af1b-7da10f036f18</app:SemanticID>
+            <app:DisplayName>Class III</app:DisplayName>
+            <app:PhysicalName>CLS3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ClassIIIa">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Aviation fuel and lubricants.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:301ad82d-320d-4dae-bf03-146e1159fcf0</app:SemanticID>
+            <app:DisplayName>Class IIIa</app:DisplayName>
+            <app:PhysicalName>CLS3A</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ClassIV">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Supplies for which initial use allowances are not prescribed by approved issue tables. Normally includes fortification and construction materials, as well as additional quantities of items identical to those authorised for initial issue (Class II) such as additional vehicles.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0f5138e5-52b1-402f-abab-38be6cd72d54</app:SemanticID>
+            <app:DisplayName>Class IV</app:DisplayName>
+            <app:PhysicalName>CLS4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ClassV">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Ammunition, explosives and chemical agents of all types.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ba0b19d2-be40-4ba7-8325-40506b0b93ef</app:SemanticID>
+            <app:DisplayName>Class V</app:DisplayName>
+            <app:PhysicalName>CLS5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="MaterielTransportedMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3e512a74-034d-4afa-9df5-647eba2ecae9-2I</app:SemanticID>
+        <app:ShortName>transportedMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransportedMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3e512a74-034d-4afa-9df5-647eba2ecae9-2R</app:SemanticID>
+        <app:ShortName>transportedMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransportedPerson" type="person:PersonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44cc65f4-6d4c-4f2a-95b7-f78a5e609ab9-2I</app:SemanticID>
+        <app:ShortName>transportedPerson</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransportedPersonRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Person.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:44cc65f4-6d4c-4f2a-95b7-f78a5e609ab9-2R</app:SemanticID>
+        <app:ShortName>transportedPersonRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:8d69accb-eb26-4af2-9090-076e8db3e6b9</app:ReferenceType>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransporter" type="actor:ActorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cc175044-c7b4-4694-8d7e-307f42715374-1I</app:SemanticID>
+        <app:ShortName>transporter</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransporterRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Actor is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cc175044-c7b4-4694-8d7e-307f42715374-1R</app:SemanticID>
+        <app:ShortName>transporterRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransportingMateriel" type="materiel:MaterielType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3e512a74-034d-4afa-9df5-647eba2ecae9-1I</app:SemanticID>
+        <app:ShortName>transportingMateriel</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaterielTransportingMaterielRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Materiel is responsible for the movement of the Materiel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3e512a74-034d-4afa-9df5-647eba2ecae9-1R</app:SemanticID>
+        <app:ShortName>transportingMaterielRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:ReferenceType>
+        <app:DisplayName>transports</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MaterielType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An apparatus, equipment or supply of military interest without distinction as to its application for administrative or combat purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Materiel</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:ObjectType">
+        <xsd:sequence>
+          <xsd:element ref="materiel:MaterielBodyColourCode" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielDemolitionStatusCode" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielIsActiveIndicator" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielIsInReserveIndicator" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielIssuingDimensions" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielLotIdentifier" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielMarkingCode" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielMarkingColourCode" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielModelName" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielOperationalStatusCode" />
+          <xsd:element ref="materiel:MaterielOperationalStatusQualifierCode" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielReportableItemIdentifier" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielSerialNumberIdentifier" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielStockNumberIdentifier" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielSupplyClassCode" minOccurs="0" />
+          <xsd:element ref="materiel:MaterielAccountingAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielAccountingAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielLoadedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielLoadedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielCarryingMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielCarryingMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielContentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielContent" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielControllerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielController" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielConveyingMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielConveyingMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielConveyedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielConveyedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielFacilityAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielFacilityAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielAttachedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielAttachedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielHoldingMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielHoldingMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielInstallerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielInstaller" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielMaintainerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielMaintainer" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielMaintainingFacilityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielMaintainingFacility" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielOwnerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielOwner" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielRepairerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielRepairer" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielRepairingFacilityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielRepairingFacility" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransportingMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransportingMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransportedMaterielRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransportedMateriel" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransportedPersonRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransportedPerson" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransporterRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="materiel:MaterielTransporter" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="SafetyStatusCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The arming state of a Materiel that is a Weapon or Ammunition.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:36b1194c-c338-47a6-a9b1-ca8e6f88ff58</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Armed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is ready to fire or explode.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:114de9b6-40bb-4f02-bdf1-aff08a09a484</app:SemanticID>
+            <app:DisplayName>Armed</app:DisplayName>
+            <app:PhysicalName>ARMED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Neutralized">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel has been rendered incapable of firing or exploding, although it may remain dangerous to handle.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d5eb902e-eed0-4b03-a30d-d78e0a62f6d6</app:SemanticID>
+            <app:DisplayName>Neutralized</app:DisplayName>
+            <app:PhysicalName>NUTRLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Safe">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The state in which material cannot function and in which it is safe to handle and transport.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7deb093b-5470-4be0-a173-ec93c0339444</app:SemanticID>
+            <app:DisplayName>Safe</app:DisplayName>
+            <app:PhysicalName>SAFE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Unassembled">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Materiel is dismantled or taken apart so that it is not operable, but it can be operable if reassembled.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:599fe334-9283-43a9-8b85-c041121051a6</app:SemanticID>
+            <app:DisplayName>Unassembled</app:DisplayName>
+            <app:PhysicalName>UNASMB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

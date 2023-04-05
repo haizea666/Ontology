@@ -1,0 +1,42 @@
+Test description
+
+Test IDMIP4SLT3IS_5282Test TitleUpdate to every possible GeometricDefinition for a ControlFeature.Execution Priority1ObjectiveBSO validation. Verify the ability to create and update every possible GeometricDefinition for a Control Feature in a nation's C2IS.ScenarioNation A creates a Control Feature AreaOfInterest with LocationType = PolygonType. 
+Nation B receives the information and interprets it correctly.
+Nation A updates the Control Feature to LocationType = ArcType.
+Nation B receives the information and interprets it correctly.
+Nation A continues to update the Control Feature to all possible LocationTypes and Nation B receives the information and interprets it every time correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2MTRSApplicablePre-test ConditionsNation A has created a Topic which includes message elements belonging to the control feature message schema area. 
+Nation B has subscribed to this Topic.Test InputsN/A.ConclusionThis test is considered a success if the Control Feature is displayed correctly on both Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002, REQ_INF_0003
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates a Control Feature AreaOfInterest with LocationType = PolygonType. ~~
+Nation B receives and displays the AOI correctly. ~~
+122. Nation A updates the AOI with LocationType = ArcType. ~~Nation B receives and displays the AOI correctly. ~~
+123. Nation A updates the AOI with LocationType = ArrowType. ~~Nation B receives and displays the AOI correctly. ~~
+124. Nation A updates the AOI with LocationType = CircleType. ~~Nation B receives and displays the AOI correctly. ~~
+125. Nation A updates the AOI wCith LocationType = CorridorType. ~~Nation B receives and displays the AOI correctly. ~~
+126. Nation A updates the AOI with LocationType = EllipseType. ~~Nation B receives and displays the AOI correctly. ~~
+127. Nation A updates the AOI with LocationType = FanType. ~~Nation B receives and displays the AOI correctly. ~~
+128. Nation A updates the AOI with LocationType = LineType. ~~Nation B receives and displays the AOI correctly. ~~
+129. Nation A updates the AOI with LocationType = MultipointType. ~~Nation B receives and displays the AOI correctly. ~~
+1210. Nation A updates the AOI with LocationType = OrbitType. ~~Nation B receives and displays the AOI correctly. ~~
+1211. Nation A updates the AOI with LocationType = PointType. ~~Nation B receives and displays the AOI correctly. ~~
+1212. Nation A updates the AOI with LocationType = RectangleType. ~~Nation B receives and displays the AOI correctly. ~~
+1213. Nation A updates the AOI with LocationType = SphereType. ~~Nation B receives and displays the AOI correctly. ~~
+12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

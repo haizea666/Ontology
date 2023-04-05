@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>33</TestCaseIdGroup>
+    <TestCaseIdNumber>16</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Handling of recursive Overlays</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>Verify correct exchange behavior when creating recursive Overlays</TestCaseObjective>
+  <TestCaseScenario>Nation A creates recursive Overlays.
+Nation B receives the information.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-locates. Exchange Pattern: R/R, P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a topic. 
+Nation B has subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the recursive Overlays are displayed correctly on both Nations’ C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a recursive Overlay.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the data correctly</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

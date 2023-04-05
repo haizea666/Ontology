@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>14</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Verify that the Producer`s service description (WSDL) contains the required WS-Addressing operations to meet the minimum required functionality of the MIP4 Request / Response service.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The purpose is to verify that the producer's service description (WSDL) implements at least the minimum level of required functionality for Request / Response.</TestCaseObjective>
+  <TestCaseScenario>After acquiring the producer's service description (WSDL), examine it to determine that the minimum required functionality is provided.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1212</TestCasePreCondition>
+  <TestCaseInput>The producer's service description (WSDL) and related included and imported artefacts.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the producer's service description(WSDL) is verified to contain the minimum requiredfunctionality described through WS-Addressing operations.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the required operations are implemented.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0004</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the operations associated with the MIP4 PortTypes (through port binding) and associated with the defined service. </TestCaseStepAction>
+    <TestCaseStepResult>The defined service will contain at least the following required operations for the exchange pattern:
+* http://docs.oasis-open.org/wsrf/rpw-2/GetResourceProperty/GetResourcePropertyRequest
+* http://mip-interop.org/wsdls/MIP4/MIPRequestResponse/GetItemsRequest (will be changed with WSMP) </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

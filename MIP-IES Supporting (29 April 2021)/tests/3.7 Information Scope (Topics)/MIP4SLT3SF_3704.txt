@@ -1,0 +1,28 @@
+Test description
+
+Test IDMIP4SLT3SF_3704Test TitleGlobally Significant Topics.Execution PriorityHP (2 originally)ObjectiveThe objective of this test is to verify that the MIP4-IES is able to support the exchange of globally significant information (e.g.: 'CBRN', 'Enemy Situation', 'Engineer Support', etc.).
+The dissemination rule for a Globally Significant Topic is that the information (message elements) belonging in that Topic is sent to everybody, except the Source of the information.ScenarioNation A establishes and fills Globally Significant Topics (e.g.: 'CBRN', 'Enemy Situation', 'Engineer Support', etc.).  
+Nation A will send data to Nation B containing new and updated BSOs. The data will appear on the display of the C2IS of Nation B.EnvironmentCo-located. Exchange Pattern: P/SParticipation2MTRSPre-test ConditionsNation A and Nation B have both established the Globally Significant Topics.
+Nation B subscribes to Nation A Globally Significant Topics.Test InputsN/AConclusionThis System Functionality Test is considered a success if, when checked, the "Globally Significant" Topic contains identical content in both, Producer and Receiver sides, and the receiving system processes the information contained in the "Globally Significant" topic without error.Test OutputsN/ATraceabilityREQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A (Producer) creates information of own choice (e.g.: 'CBRN', 'Enemy Situation', 'Engineer Support', etc.) and identifies it as belonging in globally significant Topics. ~~Nation B (Consumer) displays this globally significant information. ~~122. Nation A updates some of the previously created information identified as globally significant. ~~Nation B displays this updated globally significant information. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

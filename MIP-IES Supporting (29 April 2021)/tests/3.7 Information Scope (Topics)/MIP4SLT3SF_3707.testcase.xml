@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>7</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Predefined Topics by C2IS.</TestCaseTitle>
+  <TestCaseExecutionPriority>3</TestCaseExecutionPriority>
+  <TestCaseObjective>1. The National C2IS system must provide categorisation of data to the MIP gateway. Users enter data into a set of predefined MIP-agreed categories (Topics).2. The MIP Solution shall not change the information context between Provider and Consumer. The MIP Gateway shall handle the exchange of information without human Intervention.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates objects in each of the following Topics:- Friendly Forces- Enemy Situation- CBRN- Engineer Support- Artillery / Fire SupportNote: These 5 topics have been selected as examples of predefined MIP-agreed, after the MSG-19 suggested initial set. But this is an issue still to be defined by PMG.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has pre-defined Topics: Friendly Forces, Enemy Situation, CBRN, Engineer Support, Artillery / Fire Support. Nation B is subscribed to all Topics of nation A. </TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is considered a success if both nations have the ability to enter, send and receive the data using the predefined MIP-agreed Topics (provided such a predefinition exists) and the information context (i.e. the Topic to which information is linked) does not change between Producer and Consumer.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates Friendly / Neutral Organisations within the Friendly Forces Topic. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the objects on the Friendly Forces Topic. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates Hostile / Unknown Organisations within the Enemy Situation Topic. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the objects on the Enemy Situation Topic. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates Control Features within the CBRN Topic. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the objects on the CBRN Topic. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates Organisations, Persons and Equipment within the Engineer Support Topic. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the objects on the Engineer Support Topic. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates Organisations, Units, Persons, Control Features, Facilities, Equipment, Events and Tasks within the Artillery / Fire Support Topic. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the objects on the Artillery / Fire Support Topic. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

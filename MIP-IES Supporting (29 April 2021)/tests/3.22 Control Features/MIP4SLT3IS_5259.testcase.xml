@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>59</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create AirspaceCoordinationArea.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to create, update and exchange an AirspaceCoordinationArea in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates an AirspaceCoordinationArea with specific information.
+Nation B receives the information and interprets it correctly.
+Nation A updates the AirspaceCoordinationArea.
+Nation B receives the information and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes AirspaceCoordination (ControlFeature) message elements, for instance Ground Picture &gt; Air Defence.Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the created AirspaceCoordinationArea is displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates the tactical graphic for an AirspaceCoordinationArea with specific information for the following attributes:
+* Name
+* Location
+* HostilityStatus=Friend
+* ValidityPeriod
+* IsActive=No
+* ReportingDataCategory=Planned
+* TransitInstructionText="Fly right" </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the AirspaceCoordinationArea correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the AirspaceCoordinationArea with new values for the following attributes:
+* Location
+* HostilityStatus=Hostile
+* ValidityPeriod
+* IsActive=Yes
+* ReportingDataCategory=Reported
+* TransitInstructionText="Fly left" </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the updated AirspaceCoordinationArea correctly. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

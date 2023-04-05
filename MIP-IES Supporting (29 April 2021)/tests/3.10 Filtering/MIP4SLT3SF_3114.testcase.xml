@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>14</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Filter by Area - data moving into.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Evaluate the behaviour associated with Filtering. Assess the impact of data moving 'into the filter' by Area. </TestCaseObjective>
+  <TestCaseScenario>A Consumer specifies a rectangular area indicating its geographical area of interest. Several BSOs out of this subscription will be updated moving 'into the filter' at the Producer.
+The easiest way to test a BSO moving into an Area filter is by keeping its 'LocationType' to be a 'Point' and then changing its 'Lat' and 'Lon' Elements to move it inside the Consumer's area of interest borders (without changing any other of its elements or attributes).</TestCaseScenario>
+  <TestCaseEnvironment>Internet, co-located. Exchange Pattern: P/S, R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>31003 - Filter by Area test case.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>Even though the Consumer may specify a Filter, it remains the responsibility of the Provider to determine how best to satisfy the request, which should be considered a 'best effort' requirement.
+In case the Producer decides to implement a Filter by Area mechanism, no insertion or updates should be received for BSOs that have never been within the Consumer's Area of Interest. It is expected that the Consumer will begin to receive such notifications once they do, and then it is its (system) responsibility to incorporate them into its current operational picture.
+Consequently, the conclusion of this test is just to evaluate the behaviour associated with Filtering, assessing the impact of data moving 'into the filter' by Area.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0016, REQ_SYS_0021</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer inserts BSOs in its C2IS, outside the Area of Interest of the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>It remains the responsibility of the Provider to determine how best to satisfy the Consumer's Filter specification request.
+In case the Producer has implemented a Filter by Area mechanism, the Consumer should not receive any of these insertions.
+If for whatever reason, the insertions are received at the Consumer, it will be its (system) responsibility not to incorporate them to the current operational picture shown on its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>At the producer, update the positions ('Lat' and 'Lon' Elements) of some of these BSOs, making them fall inside the consumer's Area of Interest. Rest of these BSOs' attributes and elements will stay unchanged. Obtain them on the consumer. </TestCaseStepAction>
+    <TestCaseStepResult>In any case (whether the Provider implements or not a Filtering mechanism), these updates are automatically received at the Consumer, which is able to incorporate them to the current operational picture shown on its C2IS.
+The Filtering behaviour will be evaluated on both Producer and Consumer sides. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Producer and Consumer rotate roles and conduct Step 1 again. </TestCaseStepAction>
+    <TestCaseStepResult>As steps 1 and 2. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

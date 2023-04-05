@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>73</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Restart - Provider (R/R)</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Assess systems behaviour after Provider restart within the Request/Response exchange pattern.</TestCaseObjective>
+  <TestCaseScenario>Provider is processing a Consumer initialisation request as prescribed utilising the Request/Response exchange pattern. Provider restarts before the response has been completed.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1222 - Consumer (R/R) initialisation started.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>Nominal restart. Assess (record) how systems behave if the Provider restarts in the middle of the initialisation process.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0006, REQ_EM_0008, REQ_EM_0010</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Provider (1) is processing initialisation request from Consumer (2) as prescribed utilising the Request/Response exchange pattern. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer (2) receiving the requested initialisation data. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Provider restarts before its response ends. </TestCaseStepAction>
+    <TestCaseStepResult>Assess (record) how both systems, Provider and Consumer behave after Provider's restart. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

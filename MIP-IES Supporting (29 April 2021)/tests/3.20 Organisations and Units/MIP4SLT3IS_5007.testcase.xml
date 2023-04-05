@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>50</TestCaseIdGroup>
+    <TestCaseIdNumber>7</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create Unit with focus on its Alt, Course and Speed.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the elements (defined at IDT Schemas &gt; Units.xsd &gt; Unit) and the Consumers are able to correctly understand (and display) it. This case focuses specifically on these Elements (choose for instance PointPosition LocationType), all of which are mandatory and must be &gt; 0 for this test case: * Alt: The distance with respect to the specified vertical datum.* Course: The direction the object is moving in, expressed as an angle.* Speed: The numeric value that denotes the motion of a specific OBJECT-ITEM at a specific LOCATION in terms of distance per unit time.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates message elements for Unit with at least Alt, Course and Speed and all its mandatory Elements. The Consumers receive the data and process them.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Forces' topic. The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the unit is created and all attributes are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates the Unit with name XXX_UV_016 and fills ALL its mandatory elements with values. Specifically, Its GeometricDefinition &gt; Alt, Course and Speed elements must be &gt; 0
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the unit: ITA_UV_016 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the created Unit with Alt, Course, Speed and all the rest of attributes and elements that the Producer created. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates an update for the object by changing its GeometricDefinition &gt; Alt, Course and Speed elements, keeping the values of the rest of elements. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the created Unit with Alt, Course, Speed and all the rest of attributes and elements that the Producer created. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

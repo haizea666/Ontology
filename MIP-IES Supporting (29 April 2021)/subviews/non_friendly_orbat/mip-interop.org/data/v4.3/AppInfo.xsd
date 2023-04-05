@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:tns="https://mip-interop.org/data/v4.3/AppInfo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://mip-interop.org/data/v4.3/AppInfo" xmlns:xml="http://www.w3.org/XML/1998/namespace" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.0">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">IDT specific AppInfo content</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="SemanticID" type="tns:SemanticIDSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A Semantic Identifier.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:a3d57a9b-9e58-45e4-8fed-de999852b2d5</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SemanticIDSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the Semantic Identifier.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:a3d57a9b-9e58-45e4-8fed-de999852b2d5</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:element name="ShortName" type="tns:ShortNameSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A short Name.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:006b02b5-f636-4393-b383-cb700f2f1958</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ShortNameSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A short Name.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:006b02b5-f636-4393-b383-cb700f2f1958</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:element name="ValueOrAmplification" type="tns:ValueOrAmplificationSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tag to identify elements that should either have an Amplification or a value set.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:195925c4-cfe3-4c80-aa90-f2f1c891caea</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ValueOrAmplificationSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tag to identify elements that should either have an Amplification or a value set.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:195925c4-cfe3-4c80-aa90-f2f1c891caea</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:element name="ReferenceType" type="tns:ReferenceTypeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of the reference. The referenced identifiable is expected to be of the given type or a subtype.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:81c02aa7-2c5c-4ee9-8ebf-b059c627e8c1</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ReferenceTypeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing a name of the file describing the List.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:81c02aa7-2c5c-4ee9-8ebf-b059c627e8c1</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="tns:SemanticIDSimpleType">
+        <xsd:attribute ref="tns:qname" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:attribute name="qname" type="xsd:QName" />
+  <xsd:element name="ManagedList" type="tns:ManagedListType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A name of the file describing the List.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:6fb97218-cabf-4b3d-9c03-447202df843e</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ManagedListType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type representing a name of the file describing the List.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:6fb97218-cabf-4b3d-9c03-447202df843e</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="DisplayName" type="tns:DisplayNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A name suitible for display to the user.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:6c6c51aa-6714-4dcf-b1a3-0cb0e61af142</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DisplayNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the name suitible for display to the user.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:6c6c51aa-6714-4dcf-b1a3-0cb0e61af142</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="Remarks" type="tns:RemarksType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Additional Remarks.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:b3a6fd7a-812f-4776-ac51-866f5ada130f</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RemarksType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Additional Remarks.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:b3a6fd7a-812f-4776-ac51-866f5ada130f</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="BusinessRule" type="tns:BusinessRuleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A business rule associated with the component.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:db43415f-9cca-48fa-8e17-6706fdbdf12e</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BusinessRuleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the business rule associated with the component.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:db43415f-9cca-48fa-8e17-6706fdbdf12e</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="tns:name" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:attribute name="name" type="tns:NameSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name associated with the AppInfo content.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:394f1fbe-57d1-47e6-a83d-6b3da7900bed</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:attribute>
+  <xsd:simpleType name="NameSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the name associated with AppInfo content.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:394f1fbe-57d1-47e6-a83d-6b3da7900bed</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="128" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="UnitOfMeasure" type="tns:UnitOfMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A magnitude of a physical quantity, defined and adopted by convention or by law, that is used as a standard for measurement of the same physical quantity.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:c687c955-4156-4251-8c4a-baa5e146d5ac</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="UnitOfMeasureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the magnitude of a physical quantity, defined and adopted by convention or by law, that is used as a standard for measurement of the same physical quantity.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:c687c955-4156-4251-8c4a-baa5e146d5ac</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="MIMStereotype" type="tns:MIMStereotypeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A stereotype assigned to the element in the MIM.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:04299206-6cd9-4552-8904-b074b54f9446</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MIMStereotypeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A stereotype assigned to the element in the MIM.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:04299206-6cd9-4552-8904-b074b54f9446</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="Deprecated" type="tns:DeprecatedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A deprecated element provides a method for identifying schema constructs as being deprecated. A deprecated schema construct is one that is provided, but the use of which is not recommended.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:8fe652fd-cfde-46e2-9f64-c074ab906b3a</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DeprecatedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the deprecated element provides a method for identifying schema constructs as being deprecated.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:8fe652fd-cfde-46e2-9f64-c074ab906b3a</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="OrderRelation" type="tns:OrderRelationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An ordered enumeration imposing a strict order among the code values. The lowest-to-highest order relationship is defined by attribute 'relationship'.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:2e1a329c-bf5f-4580-949d-fe4226b64728</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrderRelationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the ordered enumeration imposing a strict order among the code values.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:2e1a329c-bf5f-4580-949d-fe4226b64728</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="PhysicalName" type="tns:PhysicalNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A physical name of the literal.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:66f89ec4-9d53-4e72-93cb-2d35f098a2ef</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PhysicalNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A data type of the physical name of the literal.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:66f89ec4-9d53-4e72-93cb-2d35f098a2ef</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="Geometry" type="tns:GeometryType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The geometry for the given type.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:bd4a49ba-6efc-4b61-be9c-0a67754db350</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GeometryType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The geometry for the given type.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:bd4a49ba-6efc-4b61-be9c-0a67754db350</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="tns:semanticID" />
+        <xsd:attribute ref="tns:inheritedFrom" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:attribute name="semanticID" type="tns:SemanticIDSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The SemanticID for the geometry to be used.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:a3d57a9b-9e58-45e4-8fed-de999852b2d5</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:attribute>
+  <xsd:attribute name="inheritedFrom" type="tns:SemanticIDSimpleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The SemanticID of the type that the geometry was inherited from.</xsd:documentation>
+      <xsd:appinfo>
+        <tns:SemanticID>IDT:ad2d7cda-3977-4ef4-bae7-5ac6e3c3ec76</tns:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:attribute>
+</xsd:schema>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/Concept" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Concept" type="concept:ConceptType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of all military or civilian artefacts.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c7516e17-19e0-414d-b522-e3b805416ee5</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Concept</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ConceptName" type="concept:ConceptNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Concept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c967c16-93a1-4e43-aef4-2a6c97489336</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:Remarks>If the Concept is an Organisation, the name may be the designator (but not a call sign) for an observer, forward air controller, laser designator team, or a specific flight of an aircraft. (Ref. ADatP-3, FFIRN 1028, "Unit Identifier" - The identification of a military, paramilitary, or government agency unit as used in official communications with military establishments.)</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ConceptNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Concept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0c967c16-93a1-4e43-aef4-2a6c97489336</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:Remarks>If the Concept is an Organisation, the name may be the designator (but not a call sign) for an observer, forward air controller, laser designator team, or a specific flight of an aircraft. (Ref. ADatP-3, FFIRN 1028, "Unit Identifier" - The identification of a military, paramilitary, or government agency unit as used in official communications with military establishments.)</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ConceptType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of all military or civilian artefacts.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c7516e17-19e0-414d-b522-e3b805416ee5</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Concept</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="concept:ConceptName" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

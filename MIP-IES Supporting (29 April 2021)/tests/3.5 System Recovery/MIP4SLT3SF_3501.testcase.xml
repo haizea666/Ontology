@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>35</TestCaseIdGroup>
+    <TestCaseIdNumber>1</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Re-connection after Outage Period.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To check what happens when a MIP4 system re-connects (as a Producer / Provider and a Consumer) after a period of disconnection (during this period, BSOs will be created/updated in all systems). Is information lost? Are there conflicts?</TestCaseObjective>
+  <TestCaseScenario>Nation A and Nation B are exchanging operational data between C2IS systems. Nation B's MIP4 gateway is disconnected from the MIP4 network for whatever reason. After a period Nation B is able to reconnect its MIP4 gateway. During this period both Nations have been creating/updating BSOs on their C2ISs. Nation A and Nation B re-subscribe to each other's Topics, and operational data exchange is resumed. After reconnection, identifiers previously used by Nation B are never re-used.</TestCaseScenario>
+  <TestCaseEnvironment>Internet, Co-located. Exchange Pattern: P/S, R/R</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Both nations have subscribed to all of each other's available Topics. Operational data flows between Nation A and Nation B. This test shall be performed after several other ones to enable Nation A and Nation B to get a minimum of information in their database.Nation B is assumed to have its own national reconnection procedure turned 'on'.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>Both Nation A and Nation B are able to resume operational data exchange via their respective C2ISs. There is no loss of created / updated information during the period of disconnection and there are no conflicts.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0001, REQ_SYS_0002</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A and Nation B are into an operational state, and operational data is being exchanged between Nation A and Nation B (bi-directional, P/S and/or R/R). </TestCaseStepAction>
+    <TestCaseStepResult>Gateways are in an operational state and exchange operational data. </TestCaseStepResult>
+    <TestCaseStepDestination>2,1</TestCaseStepDestination>
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B disconnects it MIP4 gateway from the MIP4 network. The disconnection occurs at time T1.</TestCaseStepAction>
+    <TestCaseStepResult>The connections between Nation A and the MIP4 network is left 'alive'.</TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The operator of Nation A is informed by an alternative means of communication that Nation B's MIP4 gateway has been disconnected. The time at which the disconnection occurs is recorded. </TestCaseStepAction>
+    <TestCaseStepResult>Nation A is aware of the situation. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>BSOs are created and updated in both, Nation A and B national C2IS unilaterally. </TestCaseStepAction>
+    <TestCaseStepResult>Both nations process their creations and updates correctly (Nation A might even exchange them with other participant nations), but cannot share them. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B proceeds to re-connect its MIP4 gateway, as per national procedures. Some own data previously sent will have been updated (deleted...) and some newly created on both nations, meanwhile the Nation B's disconnection period. </TestCaseStepAction>
+    <TestCaseStepResult />
+    <TestCaseStepDestination />
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Both nations re-establish their MIP4 connection, resynchronise (R/R) and subscribe to all of each other's Topics. </TestCaseStepAction>
+    <TestCaseStepResult>Both Nations update the information on their systems to the current situation, recovering from the disconnection. Nation B has to guarantee uniqueness of identifiers. Nation A and Nation B are resynchronised. The time T2 when the resynchronisation process is ended is recorded. It should be such than T2-T1 is less than one hour. </TestCaseStepResult>
+    <TestCaseStepDestination>2,1</TestCaseStepDestination>
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A publishes new data (P/S). </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays new data from Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>8</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B publishes new data (P/S). </TestCaseStepAction>
+    <TestCaseStepResult>Nation A receives and displays new data from Nation B. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

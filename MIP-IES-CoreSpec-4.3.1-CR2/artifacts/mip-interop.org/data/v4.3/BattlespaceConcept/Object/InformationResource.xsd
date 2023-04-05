@@ -1,0 +1,1762 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:confidentialitylabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xmlns:informationresource="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" />
+  <xsd:import schemaLocation="https://nmrr.nc3a.nato.int/rest/doc/NATO/Information%20Assurance/OLP/nl-cl.xsd" namespace="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Image" type="informationresource:ImageType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An imagery product.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b3a9b0db-2ea3-4859-b149-7676b9ce50f5</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Image</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ImageInverseScaleNumber" type="informationresource:ImageInverseScaleNumberType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The denominator of the ratio between the distance on the original photograph (numerator) and the corresponding distance on the print (denominator) with the numerator fixed as 1.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e28283c5-620c-4503-a252-fa1d1a6a0bb3</app:SemanticID>
+        <app:ShortName>inverseScaleNumber</app:ShortName>
+        <app:MIMStereotype>number</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>inverse scale</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ImageInverseScaleNumberType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The denominator of the ratio between the distance on the original photograph (numerator) and the corresponding distance on the print (denominator) with the numerator fixed as 1.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e28283c5-620c-4503-a252-fa1d1a6a0bb3</app:SemanticID>
+        <app:ShortName>inverseScaleNumber</app:ShortName>
+        <app:MIMStereotype>number</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>inverse scale</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="9" />
+      <xsd:maxInclusive value="999999999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ImageType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An imagery product.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b3a9b0db-2ea3-4859-b149-7676b9ce50f5</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Image</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="informationresource:InformationResourceType">
+        <xsd:sequence>
+          <xsd:element ref="informationresource:ImageInverseScaleNumber" minOccurs="0" />
+          <xsd:element ref="informationresource:ImageTypeCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ImageTypeCode" type="informationresource:ImageTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The media used to record the photographic product.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:285b3ab5-8f86-4a58-a2f3-3a73cb026b5a</app:SemanticID>
+        <app:ShortName>typeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ImageTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The media used to record the photographic product.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5d4239cc-a1b2-4bc7-a2a9-c68e826dd440</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="_10X10Print">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Hardcopy 10 by 10 inch imagery product.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8bd014cc-96b8-4a96-a166-05f444c46f8a</app:SemanticID>
+            <app:DisplayName>10 x 10 print</app:DisplayName>
+            <app:PhysicalName>10PRNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_10X12Print">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Hardcopy 10 by 12 inch imagery product.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:13330162-91f3-47d8-a776-cacc4be2dc11</app:SemanticID>
+            <app:DisplayName>10 x 12 print</app:DisplayName>
+            <app:PhysicalName>12PRNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="_8X10Print">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Hardcopy 8 by 10 inch imagery product.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9ccfed47-e790-45da-b5c5-92d83a6eba6f</app:SemanticID>
+            <app:DisplayName>8 x 10 print</app:DisplayName>
+            <app:PhysicalName>8PRNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AnaglyphPrintWithViewer">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">3-dimensional imagery print with a 3D viewer.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c75ab2a9-958a-48f4-a88a-9311968e6cfd</app:SemanticID>
+            <app:DisplayName>Anaglyph print with viewer</app:DisplayName>
+            <app:PhysicalName>ANPRNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CDRom">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Hardcopy imagery product using a compact disc format.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8ea818a8-b400-4585-815d-49da7239bb2f</app:SemanticID>
+            <app:DisplayName>Cd Rom</app:DisplayName>
+            <app:PhysicalName>CDROM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ContactPrint">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A print made from a negative or a diapositive in direct contact with sensitized material.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dbcf6aa8-c3d5-4355-909f-29c0a98fd7b2</app:SemanticID>
+            <app:DisplayName>Contact print</app:DisplayName>
+            <app:PhysicalName>CNPRNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DVD">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Hardcopy imagery product using a DVD format.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ad03966f-8856-4b7b-bdc2-56286d3015ae</app:SemanticID>
+            <app:DisplayName>DVD</app:DisplayName>
+            <app:PhysicalName>DVD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DupeFile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A file that is an exact duplicate of an original.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bffa84df-f62a-45e7-9208-674123b93076</app:SemanticID>
+            <app:DisplayName>Dupe file</app:DisplayName>
+            <app:PhysicalName>DUPFLE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DupeNegative">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A duplicate negative reproduced from a negative or a diapositive.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:76e84385-b0d2-4ec7-a186-d8d20f2e6647</app:SemanticID>
+            <app:DisplayName>Dupe negative</app:DisplayName>
+            <app:PhysicalName>DUPNEG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DupePositive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A positive copy made from the original negative.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8ca9d7c0-ab8a-49a2-9ba1-379887c9aa19</app:SemanticID>
+            <app:DisplayName>Dupe positive</app:DisplayName>
+            <app:PhysicalName>DUPPOS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DupeTape">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tape that is an exact duplicate of an original.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6b0cc74b-8d13-43e7-8efc-fb6feef08485</app:SemanticID>
+            <app:DisplayName>Dupe tape</app:DisplayName>
+            <app:PhysicalName>DUPTAP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MaxEnlargement">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A photo magnified to the point before the image loses its identity and becomes a random series of tonal impressions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:692ee553-684e-4364-88dc-956524bebe71</app:SemanticID>
+            <app:DisplayName>Max enlargement</app:DisplayName>
+            <app:PhysicalName>MAXENL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mosaic">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An assembly of overlapping photographs that have been matched to form a continuous photographic representation of a portion of the surface of the Earth.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fdd2ba64-3dcc-4be8-a771-e52d5d7fa38d</app:SemanticID>
+            <app:DisplayName>Mosaic</app:DisplayName>
+            <app:PhysicalName>MOSAIC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PlanningGraphic">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A photo that is prepared for use as a planning graphic.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e749eaec-498b-4b1d-b987-74fd59ddc516</app:SemanticID>
+            <app:DisplayName>Planning graphic</app:DisplayName>
+            <app:PhysicalName>PLNGRP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sonne">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A one to one contact photograph on long rolled paper.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3256f8e5-adf6-488a-9f6e-a07b281a6cc7</app:SemanticID>
+            <app:DisplayName>Sonne</app:DisplayName>
+            <app:PhysicalName>SONNE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TargetGraphic">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A photo that is prepared for use as a target graphic.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6b2c9997-101d-471a-9484-403922bca879</app:SemanticID>
+            <app:DisplayName>Target graphic</app:DisplayName>
+            <app:PhysicalName>TGTGRP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Object that conveys meaning and which is broadly conceived as 'document'.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:SemanticID>
+        <app:Remarks>This concept includes the full range of web resources (video, images, web pages, etc.) and physical resources such as books and objects like artworks.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Information resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAmendedInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is an amendment to the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:82e8e94f-44e8-42a5-a7c3-356f79a804f9-2I</app:SemanticID>
+        <app:ShortName>amendedInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>amended Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAmendedInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is an amendment to the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:82e8e94f-44e8-42a5-a7c3-356f79a804f9-2R</app:SemanticID>
+        <app:ShortName>amendedInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>amended Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAmendingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is an amendment to the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:82e8e94f-44e8-42a5-a7c3-356f79a804f9-1I</app:SemanticID>
+        <app:ShortName>amendingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>amending Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAmendingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is an amendment to the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:82e8e94f-44e8-42a5-a7c3-356f79a804f9-1R</app:SemanticID>
+        <app:ShortName>amendingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>amending Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceApprovalAuthority" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is authorised to approve the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:67cd61e4-dfae-487e-9735-17e8b98f3f59-1I</app:SemanticID>
+        <app:ShortName>approvalAuthority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>approval Authority</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceApprovalAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is authorised to approve the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:67cd61e4-dfae-487e-9735-17e8b98f3f59-1R</app:SemanticID>
+        <app:ShortName>approvalAuthorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>approval Authority Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceApprovalDateTime" type="informationresource:InformationResourceApprovalDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the InformationResource was approved.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b2205b1-13c2-4e81-a2ed-dde03f29ae7c</app:SemanticID>
+        <app:ShortName>approvalDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>approval date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceApprovalDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the InformationResource was approved.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b2205b1-13c2-4e81-a2ed-dde03f29ae7c</app:SemanticID>
+        <app:ShortName>approvalDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>approval date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceAttachment" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource includes the object (attachment) InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ec7155b4-d9a1-4a27-ada4-7ad7126a13f9I</app:SemanticID>
+        <app:ShortName>attachment</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>has as attachment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAttachmentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource includes the object (attachment) InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ec7155b4-d9a1-4a27-ada4-7ad7126a13f9R</app:SemanticID>
+        <app:ShortName>attachmentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>has as attachment</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAuthorityProvidedInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The stipulations of the subject InformationResource provide authority for the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12d527ed-64b6-4a6d-b762-83b31f2f2d51-2I</app:SemanticID>
+        <app:ShortName>authorityProvidedInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>authority Provided Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAuthorityProvidedInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The stipulations of the subject InformationResource provide authority for the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12d527ed-64b6-4a6d-b762-83b31f2f2d51-2R</app:SemanticID>
+        <app:ShortName>authorityProvidedInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>authority Provided Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAuthorityProvidingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The stipulations of the subject InformationResource provide authority for the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12d527ed-64b6-4a6d-b762-83b31f2f2d51-1I</app:SemanticID>
+        <app:ShortName>authorityProvidingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>authority Providing Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceAuthorityProvidingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The stipulations of the subject InformationResource provide authority for the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12d527ed-64b6-4a6d-b762-83b31f2f2d51-1R</app:SemanticID>
+        <app:ShortName>authorityProvidingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>authority Providing Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceCancelledInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource cancels the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c19c6c83-776a-4800-b600-05de5ae732bd-2I</app:SemanticID>
+        <app:ShortName>cancelledInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>cancelled Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceCancelledInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource cancels the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c19c6c83-776a-4800-b600-05de5ae732bd-2R</app:SemanticID>
+        <app:ShortName>cancelledInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>cancelled Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceCancellingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource cancels the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c19c6c83-776a-4800-b600-05de5ae732bd-1I</app:SemanticID>
+        <app:ShortName>cancellingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>cancelling Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceCancellingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource cancels the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c19c6c83-776a-4800-b600-05de5ae732bd-1R</app:SemanticID>
+        <app:ShortName>cancellingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>cancelling Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceClassificationAuthority" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is the classification authority of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:10ae8cfe-dff9-405d-af28-33ec45c8f7e8-1I</app:SemanticID>
+        <app:ShortName>classificationAuthority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>classification Authority</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceClassificationAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is the classification authority of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:10ae8cfe-dff9-405d-af28-33ec45c8f7e8-1R</app:SemanticID>
+        <app:ShortName>classificationAuthorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>classification Authority Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceComponent" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject (composite) InformationResource includes the object InformationResource as a component.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:205673b2-9f31-4bde-b202-391a85941e1dI</app:SemanticID>
+        <app:ShortName>component</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>includes</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceComponentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject (composite) InformationResource includes the object InformationResource as a component.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:205673b2-9f31-4bde-b202-391a85941e1dR</app:SemanticID>
+        <app:ShortName>componentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>includes</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceConfigurationManager" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is responsible for maintaining the configuration of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:492e7642-757f-49bb-83e6-2f8d746077c1-1I</app:SemanticID>
+        <app:ShortName>configurationManager</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>configuration Manager</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceConfigurationManagerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is responsible for maintaining the configuration of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:492e7642-757f-49bb-83e6-2f8d746077c1-1R</app:SemanticID>
+        <app:ShortName>configurationManagerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>configuration Manager Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceContentCategoryCode" type="informationresource:InformationResourceContentCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The classification of the general content of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:269b9564-de03-4a12-a834-b3f0183820c2</app:SemanticID>
+        <app:ShortName>contentCategoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>content category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceContentCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The classification of the general content of an InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02f6cc13-242d-41d1-a0a7-bce460da0389</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AdministrativeDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides administrative information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e46a9faf-fa8e-4d95-9564-6ca0c19bdd0e</app:SemanticID>
+            <app:DisplayName>Administrative document</app:DisplayName>
+            <app:PhysicalName>ADMDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Authorisation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource constitutes an authorising document.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dcd758d9-87ff-49f2-9305-f638bd7ead29</app:SemanticID>
+            <app:DisplayName>Authorisation</app:DisplayName>
+            <app:PhysicalName>AUTHRS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Certificate">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is an official document authorised for a specific use.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3d58d13b-a401-41e8-b4da-7b4528850153</app:SemanticID>
+            <app:DisplayName>Certificate</app:DisplayName>
+            <app:PhysicalName>CERTFC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Directive">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides compulsory instructions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6625ad37-a20f-4756-a554-81e620ef3845</app:SemanticID>
+            <app:DisplayName>Directive</app:DisplayName>
+            <app:PhysicalName>DRCTV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Guidance">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides advisory information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:34622531-e572-4f23-bc8a-2ddba853affb</app:SemanticID>
+            <app:DisplayName>Guidance</app:DisplayName>
+            <app:PhysicalName>GUIDNC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HealthDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource records medical information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:048fe7db-35a2-416d-9cb0-d7c9873cddb2</app:SemanticID>
+            <app:DisplayName>Health document</app:DisplayName>
+            <app:PhysicalName>HLTDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HistoricalDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource records historical information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6aa5ae6f-3c2e-4cea-ad53-0ac9a750bdf7</app:SemanticID>
+            <app:DisplayName>Historical document</app:DisplayName>
+            <app:PhysicalName>HISDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IdentificationDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is an official document to ascertain identity.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:50865830-1b29-41dc-9819-58805f8487c4</app:SemanticID>
+            <app:DisplayName>Identification document</app:DisplayName>
+            <app:PhysicalName>IDDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Instruction">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides information to support learning.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3722ecf0-100b-4851-a539-85c53ad365d4</app:SemanticID>
+            <app:DisplayName>Instruction</app:DisplayName>
+            <app:PhysicalName>INSTRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LegalDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource records information regarding legal matters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8e663f3b-abf3-49ec-ae2f-6bad56d519b4</app:SemanticID>
+            <app:DisplayName>Legal document</app:DisplayName>
+            <app:PhysicalName>LGLDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Map">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides graphic geographic information.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:145d89de-15ca-49fc-a677-edb5f7614efe</app:SemanticID>
+            <app:DisplayName>Map</app:DisplayName>
+            <app:PhysicalName>MAP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MessageTextFormat">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is a message text format (MTF), i.e. it is composed of several sets ordered in a specified sequence, each set characterised by an identifier and containing information of a specified type, coded and arranged in an ordered sequence of character fields in accordance with the NATO message text formatting rules.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e8b8e2be-9edc-4efc-9b5a-60abdd583fe4</app:SemanticID>
+            <app:DisplayName>Message text format</app:DisplayName>
+            <app:PhysicalName>MTF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Order">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is a document that is directive in nature and generally used within the military sphere.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:49f894d7-fd62-4f08-9a92-a04dd680047c</app:SemanticID>
+            <app:DisplayName>Order</app:DisplayName>
+            <app:PhysicalName>ORDER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PersonnelDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource records information regarding matters affecting personnel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c3ce3d18-ba2a-4bbc-8ef4-dd2b4e1b8662</app:SemanticID>
+            <app:DisplayName>Personnel document</app:DisplayName>
+            <app:PhysicalName>PERDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Report">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is an authoritative account of an event or situation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8710b833-9be4-4058-b212-083f7225a389</app:SemanticID>
+            <app:DisplayName>Report</app:DisplayName>
+            <app:PhysicalName>REPORT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StaffJournalOrLog">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is a detailed account of the activities of a staff.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5f10c861-679f-42ed-80a4-d245c18f2421</app:SemanticID>
+            <app:DisplayName>Staff journal/log</app:DisplayName>
+            <app:PhysicalName>STFFJR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TechnicalDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides technical description.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:93c04669-daa5-48c4-90a6-78cb02ddf8ca</app:SemanticID>
+            <app:DisplayName>Technical document</app:DisplayName>
+            <app:PhysicalName>TECDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Template">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides a pre-defined guide.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:443017b5-2ba9-433a-a830-1247c9c2aef9</app:SemanticID>
+            <app:DisplayName>Template</app:DisplayName>
+            <app:PhysicalName>TEMPLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TestDocument">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource provides information about test design or test results.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b45ec6b0-1469-4557-a38c-555cba189cb4</app:SemanticID>
+            <app:DisplayName>Test document</app:DisplayName>
+            <app:PhysicalName>TSTDOC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceContentClassification" type="confidentialitylabel:ConfidentialityLabelType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The security classification of the information resource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:51f069b3-fb5a-48c5-8fc9-9500c601f47f</app:SemanticID>
+        <app:ShortName>contentClassification</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>content classification</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceCreationDateTime" type="informationresource:InformationResourceCreationDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the InformationResource was created.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e9bcb231-7810-485d-a970-5980afcdc284</app:SemanticID>
+        <app:ShortName>creationDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>creation date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceCreationDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the InformationResource was created.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e9bcb231-7810-485d-a970-5980afcdc284</app:SemanticID>
+        <app:ShortName>creationDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>creation date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceCreator" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is responsible for producing the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e1b267b7-8908-44b2-9998-c6b766d31af3-1I</app:SemanticID>
+        <app:ShortName>creator</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>creator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceCreatorRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is responsible for producing the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e1b267b7-8908-44b2-9998-c6b766d31af3-1R</app:SemanticID>
+        <app:ShortName>creatorRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>creator Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDepictedInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource graphically depicts the information in the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d894e44c-8c91-4cfa-83cb-2e796dad23df-2I</app:SemanticID>
+        <app:ShortName>depictedInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>depicted Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDepictedInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource graphically depicts the information in the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d894e44c-8c91-4cfa-83cb-2e796dad23df-2R</app:SemanticID>
+        <app:ShortName>depictedInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>depicted Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDepictingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource graphically depicts the information in the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d894e44c-8c91-4cfa-83cb-2e796dad23df-1I</app:SemanticID>
+        <app:ShortName>depictingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>depicting Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDepictingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource graphically depicts the information in the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d894e44c-8c91-4cfa-83cb-2e796dad23df-1R</app:SemanticID>
+        <app:ShortName>depictingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>depicting Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDerivedInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is derived from the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f74042ff-316f-4598-a8b4-7307e32f1571-1I</app:SemanticID>
+        <app:ShortName>derivedInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>derived Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDerivedInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is derived from the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f74042ff-316f-4598-a8b4-7307e32f1571-1R</app:SemanticID>
+        <app:ShortName>derivedInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>derived Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceDescriptionText" type="informationresource:InformationResourceDescriptionTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a45fbe39-0c69-4725-8c9c-057c78812fa0</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceDescriptionTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The textual description of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a45fbe39-0c69-4725-8c9c-057c78812fa0</app:SemanticID>
+        <app:ShortName>descriptionText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>description</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceElectronicSourceIdentifier" type="informationresource:InformationResourceElectronicSourceIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The electronic source of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d7ea8d99-443e-4321-b721-42de4e6deb18</app:SemanticID>
+        <app:ShortName>electronicSourceIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>electronic source identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceElectronicSourceIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The electronic source of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d7ea8d99-443e-4321-b721-42de4e6deb18</app:SemanticID>
+        <app:ShortName>electronicSourceIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>electronic source identifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="2000" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceFileSizeQuantity" type="informationresource:InformationResourceFileSizeQuantityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The size of the electronic version of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e22d49bc-4cad-4182-b6f5-77606d191fb0</app:SemanticID>
+        <app:ShortName>fileSizeQuantity</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>quantity</app:MIMStereotype>
+        <app:DisplayName>file size</app:DisplayName>
+        <app:UnitOfMeasure>kilobyte (kB) [1000 byte]</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceFileSizeQuantityType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The size of the electronic version of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e22d49bc-4cad-4182-b6f5-77606d191fb0</app:SemanticID>
+        <app:ShortName>fileSizeQuantity</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>quantity</app:MIMStereotype>
+        <app:DisplayName>file size</app:DisplayName>
+        <app:UnitOfMeasure>kilobyte (kB) [1000 byte]</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="9" />
+      <xsd:maxInclusive value="999999999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceIsVerifiedIndicator" type="informationresource:InformationResourceIsVerifiedIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the information provided by the InformationResource is verified (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3620456b-2063-4d4a-881f-e14227c1a8b1</app:SemanticID>
+        <app:ShortName>isVerifiedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is verified</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceIsVerifiedIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the information provided by the InformationResource is verified (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3620456b-2063-4d4a-881f-e14227c1a8b1</app:SemanticID>
+        <app:ShortName>isVerifiedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is verified</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceLanguageCode" type="informationresource:InformationResourceLanguageCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The language used in the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:80648d2e-31e0-49e2-b092-96e19f6a7a0d</app:SemanticID>
+        <app:ShortName>languageCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Object_LanguageCode.gc</app:ManagedList>
+        <app:DisplayName>language</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceLanguageCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The language used in the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:80648d2e-31e0-49e2-b092-96e19f6a7a0d</app:SemanticID>
+        <app:ShortName>languageCode</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Object_LanguageCode.gc</app:ManagedList>
+        <app:DisplayName>language</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceLifecycleCode" type="informationresource:InformationResourceLifecycleCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The state of the InformationResource in its lifecycle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3a340ba1-932f-4035-920e-a7200905dd86</app:SemanticID>
+        <app:ShortName>lifecycleCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>lifecycle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceLifecycleCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The state of an InformationResource in its lifecycle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6f837fe8-0202-4ee8-bc16-d00ec2066e06</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Draft">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource has been produced in a preliminary version.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a930ef28-ed21-4a11-93a5-add04803f428</app:SemanticID>
+            <app:DisplayName>Draft</app:DisplayName>
+            <app:PhysicalName>DRAFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Final">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource has been produced in a completed version.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1028693b-7e3c-40e1-9fd4-c02d6c107f42</app:SemanticID>
+            <app:DisplayName>Final</app:DisplayName>
+            <app:PhysicalName>FINAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Obsolete">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is no longer valid.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:29036ddb-fbd4-4735-a941-c3f780bdc923</app:SemanticID>
+            <app:DisplayName>Obsolete</app:DisplayName>
+            <app:PhysicalName>OBSLTE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceMediumTypeCode" type="informationresource:InformationResourceMediumTypeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of medium recording the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47c03d1b-8322-4605-915e-a8f2aba5ba3e</app:SemanticID>
+        <app:ShortName>mediumTypeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>medium type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceMediumTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of medium recording an InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:28fe27a0-4bf2-4468-8df2-c631c32a3b65</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="DetachedPhysicalStorageElectronicFile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is available as an electronic file on a discrete physical storage device (e.g., CD, DVD, USB stick, etc.).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f7b583bd-6bef-44d2-ad64-3f31657c2758</app:SemanticID>
+            <app:DisplayName>Electronic file, detached physical storage</app:DisplayName>
+            <app:PhysicalName>ELCFLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Film">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is available on negative or positive film.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:58aa8ec7-11c3-44a8-859e-08c3c3c1bf15</app:SemanticID>
+            <app:DisplayName>Film</app:DisplayName>
+            <app:PhysicalName>FILM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MagneticTape">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is available as a magnetic recording containing audio, data, or video.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f942977b-5393-4962-a089-596b8eb337a7</app:SemanticID>
+            <app:DisplayName>Magnetic tape</app:DisplayName>
+            <app:PhysicalName>MAGTPE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NetworkElectronicFile">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is available as an electronic file on a network device.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d5e748dd-09eb-4b2f-8b54-ad6d4baa3a76</app:SemanticID>
+            <app:DisplayName>Electronic file, network</app:DisplayName>
+            <app:PhysicalName>ELCFLN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PaperBased">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The InformationResource is available as text or imagery printed on paper.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:62ebeb4c-0023-4931-8b6f-33878d5f47a5</app:SemanticID>
+            <app:DisplayName>Paper-based</app:DisplayName>
+            <app:PhysicalName>PAPERB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceMimeTypeIdentifier" type="informationresource:InformationResourceMimeTypeIdentifierType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The media type of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5676ce2c-eb25-4b9b-884f-353aa75ef596</app:SemanticID>
+        <app:ShortName>mimeTypeIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>MIME type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceMimeTypeIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The media type of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5676ce2c-eb25-4b9b-884f-353aa75ef596</app:SemanticID>
+        <app:ShortName>mimeTypeIdentifier</app:ShortName>
+        <app:MIMStereotype>identifier</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>MIME type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceModifyingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is a modification of the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6da4e6e7-f1c1-48f4-8f01-1de3a43e0d8f-1I</app:SemanticID>
+        <app:ShortName>modifyingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>modifying Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceModifyingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is a modification of the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6da4e6e7-f1c1-48f4-8f01-1de3a43e0d8f-1R</app:SemanticID>
+        <app:ShortName>modifyingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>modifying Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceOriginalInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is a modification of the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6da4e6e7-f1c1-48f4-8f01-1de3a43e0d8f-2I</app:SemanticID>
+        <app:ShortName>originalInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>original Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceOriginalInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is a modification of the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6da4e6e7-f1c1-48f4-8f01-1de3a43e0d8f-2R</app:SemanticID>
+        <app:ShortName>originalInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>original Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceOriginatorName" type="informationresource:InformationResourceOriginatorNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the originator of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f850bb15-c6eb-4bf9-9a9c-10782c2b02da</app:SemanticID>
+        <app:ShortName>originatorName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>originator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceOriginatorNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the originator of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f850bb15-c6eb-4bf9-9a9c-10782c2b02da</app:SemanticID>
+        <app:ShortName>originatorName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>originator</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourcePhysicalSizeText" type="informationresource:InformationResourcePhysicalSizeTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The size of the physical version of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b993840f-6ff7-4986-a000-7cf4f5235cf1</app:SemanticID>
+        <app:ShortName>physicalSizeText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>physical size</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourcePhysicalSizeTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The size of the physical version of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b993840f-6ff7-4986-a000-7cf4f5235cf1</app:SemanticID>
+        <app:ShortName>physicalSizeText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>physical size</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourcePlanningAuthority" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is responsible for the planning aspects of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:005630df-c0a5-466b-9630-84e358d43099-1I</app:SemanticID>
+        <app:ShortName>planningAuthority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>planning Authority</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourcePlanningAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is responsible for the planning aspects of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:005630df-c0a5-466b-9630-84e358d43099-1R</app:SemanticID>
+        <app:ShortName>planningAuthorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>planning Authority Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourcePrimaryLocationName" type="informationresource:InformationResourcePrimaryLocationNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the primary physical or electronic location of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fd89d13c-e76b-413d-9462-4863967d1e3c</app:SemanticID>
+        <app:ShortName>primaryLocationName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>primary location</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourcePrimaryLocationNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the primary physical or electronic location of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fd89d13c-e76b-413d-9462-4863967d1e3c</app:SemanticID>
+        <app:ShortName>primaryLocationName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>primary location</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="2000" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourcePublicationDateTime" type="informationresource:InformationResourcePublicationDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the InformationResource was published.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b968c148-aa79-4fff-8708-425953946410</app:SemanticID>
+        <app:ShortName>publicationDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>publication date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourcePublicationDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the InformationResource was published.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b968c148-aa79-4fff-8708-425953946410</app:SemanticID>
+        <app:ShortName>publicationDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>publication date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceReferencedInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource references the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:774c0098-51ee-4da6-977a-ea03dfb1b984-2I</app:SemanticID>
+        <app:ShortName>referencedInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>referenced Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceReferencedInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource references the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:774c0098-51ee-4da6-977a-ea03dfb1b984-2R</app:SemanticID>
+        <app:ShortName>referencedInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>referenced Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceReferringInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource references the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:774c0098-51ee-4da6-977a-ea03dfb1b984-1I</app:SemanticID>
+        <app:ShortName>referringInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>referring Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceReferringInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource references the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:774c0098-51ee-4da6-977a-ea03dfb1b984-1R</app:SemanticID>
+        <app:ShortName>referringInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>referring Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceReleasabilityText" type="informationresource:InformationResourceReleasabilityTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The releasability restrictions for the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:64ff59bf-d34b-488f-8b6b-8a0553ad904d</app:SemanticID>
+        <app:ShortName>releasabilityText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>releasability</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceReleasabilityTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The releasability restrictions for the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:64ff59bf-d34b-488f-8b6b-8a0553ad904d</app:SemanticID>
+        <app:ShortName>releasabilityText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>releasability</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceReleaseAuthority" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is the release authority of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:07d759a9-d80b-4082-a1db-2293d694e105-1I</app:SemanticID>
+        <app:ShortName>releaseAuthority</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>release Authority</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceReleaseAuthorityRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is the release authority of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:07d759a9-d80b-4082-a1db-2293d694e105-1R</app:SemanticID>
+        <app:ShortName>releaseAuthorityRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>release Authority Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceShortTitleName" type="informationresource:InformationResourceShortTitleNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The abbreviated title or name of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6d6bc9d7-dfcd-4b6b-92f4-7b577dd3a7e0</app:SemanticID>
+        <app:ShortName>shortTitleName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>short title</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceShortTitleNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The abbreviated title or name of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6d6bc9d7-dfcd-4b6b-92f4-7b577dd3a7e0</app:SemanticID>
+        <app:ShortName>shortTitleName</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>short title</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="InformationResourceSourceInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is derived from the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f74042ff-316f-4598-a8b4-7307e32f1571-2I</app:SemanticID>
+        <app:ShortName>sourceInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>source Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSourceInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource is derived from the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f74042ff-316f-4598-a8b4-7307e32f1571-2R</app:SemanticID>
+        <app:ShortName>sourceInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>source Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupersededInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supersedes the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ed46237-66d2-417d-9fda-5a6b6edab069-2I</app:SemanticID>
+        <app:ShortName>supersededInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>superseded Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupersededInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supersedes the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ed46237-66d2-417d-9fda-5a6b6edab069-2R</app:SemanticID>
+        <app:ShortName>supersededInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>superseded Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupersedingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supersedes the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ed46237-66d2-417d-9fda-5a6b6edab069-1I</app:SemanticID>
+        <app:ShortName>supersedingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>superseding Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupersedingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supersedes the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ed46237-66d2-417d-9fda-5a6b6edab069-1R</app:SemanticID>
+        <app:ShortName>supersedingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>superseding Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupplementedInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supplements the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a87195de-b2fb-4441-8162-2651e02cfef6-2I</app:SemanticID>
+        <app:ShortName>supplementedInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>supplemented Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupplementedInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supplements the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a87195de-b2fb-4441-8162-2651e02cfef6-2R</app:SemanticID>
+        <app:ShortName>supplementedInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>supplemented Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupplementingInformationResource" type="informationresource:InformationResourceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supplements the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a87195de-b2fb-4441-8162-2651e02cfef6-1I</app:SemanticID>
+        <app:ShortName>supplementingInformationResource</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>supplementing Information Resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InformationResourceSupplementingInformationResourceRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject InformationResource supplements the object InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a87195de-b2fb-4441-8162-2651e02cfef6-1R</app:SemanticID>
+        <app:ShortName>supplementingInformationResourceRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:ReferenceType>
+        <app:DisplayName>supplementing Information Resource Ref</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="InformationResourceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Object that conveys meaning and which is broadly conceived as 'document'.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c653fe0f-9711-486f-8aa6-7622f7d9d384</app:SemanticID>
+        <app:Remarks>This concept includes the full range of web resources (video, images, web pages, etc.) and physical resources such as books and objects like artworks.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Information resource</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:ObjectType">
+        <xsd:sequence>
+          <xsd:element ref="informationresource:InformationResourceApprovalDateTime" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceContentCategoryCode" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceContentClassification" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceCreationDateTime" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceDescriptionText" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceElectronicSourceIdentifier" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceFileSizeQuantity" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceIsVerifiedIndicator" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceLanguageCode" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceLifecycleCode" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceMediumTypeCode" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceMimeTypeIdentifier" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceOriginatorName" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourcePhysicalSizeText" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourcePrimaryLocationName" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourcePublicationDateTime" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceReleasabilityText" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceShortTitleName" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceVersionValue" minOccurs="0" />
+          <xsd:element ref="informationresource:InformationResourceAmendingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAmendingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAmendedInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAmendedInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceApprovalAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceApprovalAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAttachmentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAttachment" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAuthorityProvidingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAuthorityProvidingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAuthorityProvidedInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceAuthorityProvidedInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceCancellingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceCancellingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceCancelledInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceCancelledInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceClassificationAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceClassificationAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceComponentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceComponent" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceConfigurationManagerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceConfigurationManager" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceCreatorRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceCreator" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceDepictingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceDepictingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceDepictedInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceDepictedInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceModifyingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceModifyingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceOriginalInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceOriginalInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourcePlanningAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourcePlanningAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceReferringInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceReferringInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceReferencedInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceReferencedInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceReleaseAuthorityRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceReleaseAuthority" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceDerivedInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceDerivedInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSourceInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSourceInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupersedingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupersedingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupersededInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupersededInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupplementingInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupplementingInformationResource" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupplementedInformationResourceRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="informationresource:InformationResourceSupplementedInformationResource" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="InformationResourceVersionValue" type="informationresource:InformationResourceVersionValueType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The version of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:99b1452d-a5d8-4b2d-9d3b-33d421f5c5e8</app:SemanticID>
+        <app:ShortName>versionValue</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>value</app:MIMStereotype>
+        <app:DisplayName>version</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InformationResourceVersionValueType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The version of the InformationResource.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:99b1452d-a5d8-4b2d-9d3b-33d421f5c5e8</app:SemanticID>
+        <app:ShortName>versionValue</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>value</app:MIMStereotype>
+        <app:DisplayName>version</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

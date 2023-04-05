@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>49</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Send a set of extended characters allowed by XML (Spanish, French, German... languages) to a Consumer who's C2IS has character set restrictions.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Test what happens when the Consumer C2IS dos not understand the charset, in order to explain the behaviour of the gateways.</TestCaseObjective>
+  <TestCaseScenario>Nation A C2IS allows XML messages with extended charset and creates some BSOs (GeographicFeatures and Persons are suggested) with Names in Spanish, French, German... languages and their not covered in English special characters. Nation B C2IS native working language is English, has character set restrictions and receives the objects. </TestCaseScenario>
+  <TestCaseEnvironment>Internet or co-located. Exchange Pattern: P/S, R/R</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has published a topic, containing GeographicFeatures and Persons. Nation B has subscribed to Nation A's topic.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is passed if the Consumer can cope well with the Names of the received BSOs. Register gateways behaviour in any case.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0022</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates BSOs in its C2IS such as GeographicFeatures and Persons, which Name Elements include characters not existing in Nation B's with character set restrictions C2IS. 
+Comments
+The desired behaviour of a receiving system encountering an Unicode charset not included in its restricted charset, should be a convenient mapping of the special stranger characters (for instance German 'Stra�e' to 'Strasse') in case they cannot be represented. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B C2IS native working language is English, has character set restrictions and receives the BSOs.
+The receiving C2IS should cope well with the objects. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

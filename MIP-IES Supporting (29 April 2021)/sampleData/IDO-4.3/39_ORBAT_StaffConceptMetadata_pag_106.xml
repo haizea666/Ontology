@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<staffconceptorganisationstructure:OrderOfBattle xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" xmlns:confidentialitymetadatalabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xmlns:staffconceptorganisationstructure="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>ID</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<staffconcept:StaffConceptMetadata>
+		<conceptmetadata:ConceptMetadataMetadataConfidentialityLabel>
+			<confidentialitymetadatalabel:ConfidentialityInformation>
+				<confidentialitymetadatalabel:PolicyIdentifier>Unmarked</confidentialitymetadatalabel:PolicyIdentifier>
+				<confidentialitymetadatalabel:Classification>Unmarked</confidentialitymetadatalabel:Classification>
+			</confidentialitymetadatalabel:ConfidentialityInformation>
+			<confidentialitymetadatalabel:CreationDateTime>2019-12-24T10:00:00.000Z</confidentialitymetadatalabel:CreationDateTime>
+		</conceptmetadata:ConceptMetadataMetadataConfidentialityLabel>
+		<conceptmetadata:ConceptMetadataValidityTimePeriod xsi:type="generic:AbsoluteTimePeriodType">
+			<generic:AbsoluteTimePeriodEndDateTime>2019-12-24T10:00:00.000Z</generic:AbsoluteTimePeriodEndDateTime>
+			<generic:AbsoluteTimePeriodStartDateTime>2019-04-09T16:38:00.000Z</generic:AbsoluteTimePeriodStartDateTime>
+		</conceptmetadata:ConceptMetadataValidityTimePeriod>
+		<staffconceptmetadata:StaffConceptMetadataIsAcknowledgementRequiredIndicator>false</staffconceptmetadata:StaffConceptMetadataIsAcknowledgementRequiredIndicator>
+		<staffconceptmetadata:StaffConceptMetadataIssuingDateTime>2019-12-31T09:41:52.000Z</staffconceptmetadata:StaffConceptMetadataIssuingDateTime>
+		<staffconceptmetadata:StaffConceptMetadataVersionValue>1.0</staffconceptmetadata:StaffConceptMetadataVersionValue>
+		<staffconceptmetadata:StaffConceptMetadataRecipient>
+			<staffconceptmetadata:RecipientDistributionReasonCode>DistributedForInformation</staffconceptmetadata:RecipientDistributionReasonCode>
+			<staffconceptmetadata:RecipientName>TIGER BRIGADE</staffconceptmetadata:RecipientName>
+		</staffconceptmetadata:StaffConceptMetadataRecipient>
+		<staffconceptmetadata:StaffConceptMetadataOriginator>
+			<conceptmetadata:OriginatorName>JOINT FORCE COMMAND</conceptmetadata:OriginatorName>
+		</staffconceptmetadata:StaffConceptMetadataOriginator>
+	</staffconcept:StaffConceptMetadata>
+	<staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef>
+		<base:ID>ID</base:ID>
+		<app:SemanticId>MIM:7c992ebb-f7cf-491c-bf37-ac9d1256ba64R</app:SemanticId>
+		<base:IsLocalIndicator>true</base:IsLocalIndicator>
+	</staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef>
+	<staffconceptorganisationstructure:OrganisationStructureRootOrganisation>
+		<base:ID>-</base:ID>
+		<concept:ConceptName>a</concept:ConceptName>
+		<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+		<battlespaceconcept:BattlespaceConceptMetadata>
+			<conceptmetadata:ConceptMetadataReportingData>
+				<conceptmetadata:ReportingDataCategoryCode>Inferred</conceptmetadata:ReportingDataCategoryCode>
+				<conceptmetadata:ReportingDataObservationDateTime>2019-12-24T09:41:52.000Z</conceptmetadata:ReportingDataObservationDateTime>
+				<conceptmetadata:ReportingDataReportingDateTime>2019-12-24T09:51:52.000Z</conceptmetadata:ReportingDataReportingDateTime>
+				<conceptmetadata:ReportingDataReporter>
+					<conceptmetadata:ReporterName>JOINT FORCE COMMAND</conceptmetadata:ReporterName>
+				</conceptmetadata:ReportingDataReporter>
+			</conceptmetadata:ConceptMetadataReportingData>
+		</battlespaceconcept:BattlespaceConceptMetadata>
+		<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+	</staffconceptorganisationstructure:OrganisationStructureRootOrganisation>
+</staffconceptorganisationstructure:OrderOfBattle>
+<!--
+Original example
+
+<meta:BaseMetadata xsi:type ="orgstruct:StaffConceptMetadataType">
+	<meta:ValidityTimePeriodWrapper>
+		<gen:TimePeriod xsi:type ="gen:AbsoluteTimePeriodType">
+			<gen:EndDateTimeWrapper>
+				<gen:EndDateTime>2019-12-24T10:00:00,000Z</gen:EndDateTime>
+			</gen:EndDateTimeWrapper>
+			<gen:StartDateTimeWrapper>
+				<gen:StartDateTime>2019-04-09T16:38:00,000Z</gen:StartDateTime>
+			</gen:StartDateTimeWrapper>
+		</gen:TimePeriod>
+	</meta:ValidityTimePeriodWrapper>
+	<meta:ClassificationWrapper>
+		<meta:SecurityClassification>
+			<meta:LevelCodeWrapper>
+				<meta:SecurityClassificationLevelCode>Unmarked</meta:SecurityClassificationLevelCode>
+			</meta:LevelCodeWrapper>
+		</meta:SecurityClassification>
+	</meta:ClassificationWrapper>
+	<meta_4.2:IsAcknowledgementRequiredIndicatorWrapper>
+		<meta_4.2:IsAcknowledgementRequiredIndicator>false</meta_4.2:IsAcknowledgementRequiredIndicator>
+	</meta_4.2:IsAcknowledgementRequiredIndicatorWrapper>
+	<meta_4.2:IssuingDateTimeWrapper>
+		<meta_4.2:IssuingDateTime>2001-12-31T09:41:52.000Z</meta_4.2:IssuingDateTime>
+	</meta_4.2:IssuingDateTimeWrapper>
+	<meta:ReportingDataWrapper>
+		<meta:ReportingData>
+			<meta:ReportingDataCategoryCodeWrapper>
+				<meta:ReportingDataCategoryCode>Reported</meta:ReportingDataCategoryCode>
+			</meta:ReportingDataCategoryCodeWrapper>
+			<meta:ObservationDateTimeWrapper>
+				<meta:ObservationDateTime>2001-12-31T09:41:52.000Z</meta:ObservationDateTime>
+			</meta:ObservationDateTimeWrapper>
+			<meta:ReportingDateTimeWrapper>
+				<meta:ReportingDateTime>2001-12-31T09:41:52.000Z</meta:ReportingDateTime>
+			</meta:ReportingDateTimeWrapper>
+			<meta:ReporterWrapper>
+				<meta:Reporter>
+				<meta:ReporterNameWrapper>
+					<meta:ReporterName>JOINT FORCE COMMAND</meta:ReporterName>
+				</meta:ReporterNameWrapper>
+				</meta:Reporter>
+			</meta:ReporterWrapper>
+		</meta:ReportingData>
+	</meta:ReportingDataWrapper>
+	<meta_4.2:VersionValueWrapper>
+		<meta_4.2:VersionValue>1.0</meta_4.2:VersionValue>
+	</meta_4.2:VersionValueWrapper>
+	<meta_4.2:OriginatorWrapper>
+		<meta_4.2:Originator>
+			<meta_4.2:OriginatorNameWrapper>
+				<meta_4.2:OriginatorName>JOINT FORCE COMMAND</meta_4.2:OriginatorName>
+			</meta_4.2:OriginatorNameWrapper>
+		</meta_4.2:Originator>
+	</meta_4.2:OriginatorWrapper>
+	<meta_4.2:RecipientWrapper>
+		<meta_4.2:Recipient>
+			<meta_4.2:DistributionReasonCodeWrapper>
+				<meta_4.2:RecipientDistributionReasonCode>DistributedForInformation</meta_4.2:RecipientDistributionReasonCode>
+			</meta_4.2:DistributionReasonCodeWrapper>
+			<meta_4.2:RecipientNameWrapper>
+				<meta_4.2:RecipientName>TIGER BRIGADE</meta_4.2:RecipientName>
+			</meta_4.2:RecipientNameWrapper>
+		</meta_4.2:Recipient>
+	</meta_4.2:RecipientWrapper>
+</meta:BaseMetadata>
+-->

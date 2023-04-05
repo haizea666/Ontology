@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<controlfeature:OrganisationBoundary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:location="https://mip-interop.org/data/v4.3/BattlespaceConcept/Location" xmlns:controlfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/ControlFeature" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>urn:mim:5767eff8-9120-42b1-8a19-8ad32886c601</base:ID>
+	<concept:ConceptName>Boundary 1</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptGeographicLocation xsi:type="location:LineType">
+		<location:LinePoint xsi:type="location:AbsolutePointType">
+			<location:AbsolutePointLatitudeCoordinate>
+				<location:LatitudeCoordinateCoordinate>34.526982</location:LatitudeCoordinateCoordinate>
+			</location:AbsolutePointLatitudeCoordinate>
+			<location:AbsolutePointLongitudeCoordinate>
+				<location:LongitudeCoordinateCoordinate>69.154783</location:LongitudeCoordinateCoordinate>
+			</location:AbsolutePointLongitudeCoordinate>
+		</location:LinePoint>
+		<location:LinePoint xsi:type="location:AbsolutePointType">
+			<location:AbsolutePointLatitudeCoordinate>
+				<location:LatitudeCoordinateCoordinate>34.502778</location:LatitudeCoordinateCoordinate>
+			</location:AbsolutePointLatitudeCoordinate>
+			<location:AbsolutePointLongitudeCoordinate>
+				<location:LongitudeCoordinateCoordinate>69.110924</location:LongitudeCoordinateCoordinate>
+			</location:AbsolutePointLongitudeCoordinate>
+		</location:LinePoint>
+		<location:LinePoint xsi:type="location:AbsolutePointType">
+			<location:AbsolutePointLatitudeCoordinate>
+				<location:LatitudeCoordinateCoordinate>34.489216</location:LatitudeCoordinateCoordinate>
+			</location:AbsolutePointLatitudeCoordinate>
+			<location:AbsolutePointLongitudeCoordinate>
+				<location:LongitudeCoordinateCoordinate>69.078823</location:LongitudeCoordinateCoordinate>
+			</location:AbsolutePointLongitudeCoordinate>
+		</location:LinePoint>
+	</battlespaceconcept:BattlespaceConceptGeographicLocation>
+	<battlespaceconcept:BattlespaceConceptHostilityCode>AssumedFriend</battlespaceconcept:BattlespaceConceptHostilityCode>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<controlfeature:ControlFeatureEchelon xsi:type="object:ArmyEchelonType">
+		<object:ArmyEchelonCode>Brigade</object:ArmyEchelonCode>
+	</controlfeature:ControlFeatureEchelon>
+</controlfeature:OrganisationBoundary>
+<!--
+Original example
+
+<cfeat:OrganisationBoundary>
+    <base:Identifier>
+        <base:Uri>urn:mim:5767eff8-9120-42b1-8a19-8ad32886c601</base:Uri>
+        <base:Source>IDT</base:Source>
+        <base:Discriminator>urn:guid:b6d509fd-3ef7-4f5d-926b-8884c52bd15d</base:Discriminator>
+        <base:IsDependentIndicator>false</base:IsDependentIndicator>
+    </base:Identifier>
+    <core:IsInstanceIndicator>true</core:IsInstanceIndicator>
+    <core:NameWrapper>
+        <core:Name>Boundary 1</core:Name>
+    </core:NameWrapper>
+...
+    <core:GeographicLocationWrapper>
+        <core:CoreLocation xsi:type="loc:LineType" loc:legType="great-circle">
+            <loc:GeoPoint>
+                <loc:Lon>69.154783</loc:Lon>
+                <loc:Lat>34.526982</loc:Lat>
+            </loc:GeoPoint>
+            <loc:GeoPoint>
+                <loc:Lon>69.110924</loc:Lon>
+                <loc:Lat>34.502778</loc:Lat>
+            </loc:GeoPoint>
+            <loc:GeoPoint>
+                <loc:Lon>69.078823</loc:Lon>
+                <loc:Lat>34.489216</loc:Lat>
+            </loc:GeoPoint>
+        </core:CoreLocation>
+    </core:GeographicLocationWrapper>
+...
+    <cfeat:EchelonCodeWrapper>
+        <obj:EchelonSizeCode>Brigade</obj:EchelonSizeCode>
+    </cfeat:EchelonCodeWrapper>
+...
+    <cfeat:LeftOrganisationNameWrapper>
+        <cfeat:LeftOrganisationName>6(USA)</cfeat:LeftOrganisationName>
+    </cfeat:LeftOrganisationNameWrapper>
+    <cfeat:RightOrganisationNameWrapper>
+        <cfeat:RightOrganisationName>52(DEU)Bde</cfeat:RightOrganisationName>
+    </cfeat:RightOrganisationNameWrapper>
+...
+</cfeat:OrganisationBoundary>
+
+-->

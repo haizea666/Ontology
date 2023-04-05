@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:CombatUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:ext="https://mip-interop.org/data/v4.3/Extension" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<ext:Extension>
+		<unit:AirTrafficControlUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+			<base:ID>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:ID>
+			<concept:ConceptName>ATC ALPHA</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata/>
+			<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+			<organisation:OrganisationOperationalStatusCode>MarginallyOperational</organisation:OrganisationOperationalStatusCode>
+			<organisation:MilitaryOrganisationServiceCode>CoastGuard</organisation:MilitaryOrganisationServiceCode>
+			<unit:UnitEchelon/>
+			<unit:UnitFormalAbbreviatedName>ALPHA</unit:UnitFormalAbbreviatedName>
+			<unit:UnitUsesUnmannedVehiclesIndicator>true</unit:UnitUsesUnmannedVehiclesIndicator>
+		</unit:AirTrafficControlUnit>
+	</ext:Extension>
+	<base:ID>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:ID>
+	<concept:ConceptName>Air Traffic Control Unit  ATC ALPHA</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+	<organisation:MilitaryOrganisationServiceCode>CoastGuard</organisation:MilitaryOrganisationServiceCode>
+	<unit:UnitEchelon/>
+</unit:CombatUnit>
+
+<!--
+Original example
+
+    <unit:CombatSupportUnit>
+	<base:Identifier>
+            <base:Uri>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:Uri>
+            <base:Source>DEU</base:Source>
+            <base:IsDependentIndicator>false</base:IsDependentIndicator>
+	</base:Identifier>
+	<base:BaseMetadata xsi:type="meta:MetadataType">
+            ...
+	</base:BaseMetadata>
+	<ext:Extension>
+            <unit_4.2:AirTrafficControlUnit>
+                	<base:Identifier>
+                        	<base:Uri>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:Uri>
+                        	<base:Source>DEU</base:Source>
+                    	<base:IsDependentIndicator>false</base:IsDependentIndicator>
+                	</base:Identifier>
+                	<base:BaseMetadata xsi:type="meta:MetadataType">
+                        	...
+                	</base:BaseMetadata>
+                	<core:IsInstanceIndicator>true</core:IsInstanceIndicator>
+                	<core:NameWrapper>
+                        	<core:Name>ATC ALPHA</core:Name>
+                	</core:NameWrapper>
+                	<org:HasCommandFunctionIndicatorWrapper>
+                    	<org:HasCommandFunctionIndicator>true</org:HasCommandFunctionIndicator>
+                	</org:HasCommandFunctionIndicatorWrapper>
+                	<org:OperationalStatusCodeWrapper>
+                    	<obj:OperationalStatusCode>MarginallyOperational</obj:OperationalStatusCode>
+                	</org:OperationalStatusCodeWrapper>
+                	<org:ServiceCodeWrapper>
+                  	<org:MilitaryOrganisationServiceCode>CoastGuard</org:MilitaryOrganisationServiceCode>
+                	</org:ServiceCodeWrapper>
+                	<unit:FormalAbbreviatedNameWrapper>
+                  	      <unit:FormalAbbreviatedName>ALPHA</unit:FormalAbbreviatedName>
+                	</unit:FormalAbbreviatedNameWrapper>
+                	<unit:SizeCodeWrapper>
+                        	<obj:EchelonSizeCode>Squad</obj:EchelonSizeCode>
+          	      </unit:SizeCodeWrapper>
+                	<unit:UsesUnmannedVehiclesIndicatorWrapper>
+                    	<unit:UsesUnmannedVehiclesIndicator>true</unit:UsesUnmannedVehiclesIndicator>
+                	</unit:UsesUnmannedVehiclesIndicatorWrapper>
+            </unit_4.2:AirTrafficControlUnit>
+	</ext:Extension>
+	<core:IsInstanceIndicator>true</core:IsInstanceIndicator>
+	<core:NameWrapper>
+            <core:Name>Air Traffic Control Unit  ATC ALPHA</core:Name>
+	</core:NameWrapper>
+	<org:HasCommandFunctionIndicatorWrapper>
+            <org:HasCommandFunctionIndicator>true</org:HasCommandFunctionIndicator>
+	</org:HasCommandFunctionIndicatorWrapper>
+	<org:OperationalStatusCodeWrapper>
+            <obj:OperationalStatusCode>MarginallyOperational</obj:OperationalStatusCode>
+	</org:OperationalStatusCodeWrapper>
+	<org:ServiceCodeWrapper>
+        <org:MilitaryOrganisationServiceCode>CoastGuard</org:MilitaryOrganisationServiceCode>
+	</org:ServiceCodeWrapper>
+	<unit:FormalAbbreviatedNameWrapper>
+            <unit:FormalAbbreviatedName>ALPHA</unit:FormalAbbreviatedName>
+	</unit:FormalAbbreviatedNameWrapper>
+	<unit:SizeCodeWrapper>
+            <obj:EchelonSizeCode>Squad</obj:EchelonSizeCode>
+	</unit:SizeCodeWrapper>
+	<unit:UsesUnmannedVehiclesIndicatorWrapper>
+            <unit:UsesUnmannedVehiclesIndicator>true</unit:UsesUnmannedVehiclesIndicator>
+	</unit:UsesUnmannedVehiclesIndicatorWrapper>
+</unit:CombatSupportUnit>
+
+-->

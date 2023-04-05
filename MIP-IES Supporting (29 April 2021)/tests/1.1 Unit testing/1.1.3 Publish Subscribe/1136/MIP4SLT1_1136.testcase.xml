@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>36</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Subscribe using a filter on source</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is for the Consumer to subscribe to messages provided by the Provider which involve objects coming from a particular source.</TestCaseObjective>
+  <TestCaseScenario>The Consumer is interested in receiving regular updates on multiple topics in an asynchronous way (i.e. without polling the Producer). He wishes to receive only messages coming from a particular source.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1213, MIP4SLT1_1215, MIP4SLT1_1128, MIP4SLT1_1130
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system. The Producer system broadcasts at least some messages coming from the source specified by the Consumer.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer is receiving from the Producer regular asynchronous updates on one or more topics whose source is the one specified by the Consumer. The data received in these updates is valid and complete. The subscription with the termination time will have timed out and the Consumer will have unsubscribed from the subscription without a specified duration. Once the Producer has successfully destroyed the subscriptions, the test is complete.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, REQ_EM_0010.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer subscribes to the Producer in order to advertise its interest in a subset of the data space.
+rpw:GetResourceProperty
+with parameters wsn:FullTopicExpression, wsn:FixedTopicSet, wsn:TopicExpressionDialect and wstop:TopicSet. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer specifies a filter defined by a valid source.
+The Producer receives a valid request for resource properties using FullTopicExpression </TestCaseStepResult>
+    <TestCaseStepDestination>The Producer receives a valid filter request based on a valid particular source.</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer sends the topics requested to the Consumer </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives the requested topics. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer processes the list of exposed topics, prepares a filter set, and requests a subscription on multiple topics to the Producer using the wsn-b:Subscribe operation. Filter is specified using topic "contains" items. The Consumer specifies a filter based on a valid source.
+The Consumer requests a subscription on multiple topics to the Producer using the wsn-b:Subscribe operation but specifies his filter using topic "does not contain" items. The Consumer specifies a filter based on a valid source.
+The Consumer requests a subscription on multiple different topics to the Producer using the wsn-b:Subscribe operation and requests a termination time for the subscription. The Consumer specifies a filter based on a valid source.
+</TestCaseStepAction>
+    <TestCaseStepResult>Producer receives two subscription requests for multiple topics (one using topic "contains" and one using topic "does not contain") and a third subscription request for multiple topics with a desired termination time. All use FullTopicExpression. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Producer accepts or rejects the subscription requests.
+Producer checks subscription filters and determines if data matches specified filters. If it does, the Producer sends a wsn-b:Notify to the address specified in the wsn-b:ConsumerReference for EACH matching subscription. </TestCaseStepAction>
+    <TestCaseStepResult>The Producer accepts the requests.
+The Producer sends notification to the Consumer using FullTopicExpression.
+The Consumer processes the data contained in the messages using FullTopicExpression. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Producer continuously sends notifications to the Consumer until the Consumer unsubscribes or the subscription expires.
+Subscription with termination time expires </TestCaseStepAction>
+    <TestCaseStepResult>Producer sends notifications.
+Producer raises ResourceUnknownFault according to WS-BaseNotification[Ref-6] </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer unsubscribes using wsn-b:Unsubscribe operation with the SubscriptionReference issued from the initial Subscribe responses. </TestCaseStepAction>
+    <TestCaseStepResult>Producer tries to destroy the corresponding subscriptions. If Producer cannot destroy the subscriptions it sends a fault message to the Consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

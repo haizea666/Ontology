@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>15</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Verify that the Producer`s service description (WSDL) contains the required WS-Addressing operations to meet the minimum required functionality of the MIP4 Publish / Subscribe service</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Publish/Subscribe</TestCaseObjective>
+  <TestCaseScenario>After acquiring the producer's service description (WSDL) examine it to determine that the minimum required functionality is provided.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_Test_1212</TestCasePreCondition>
+  <TestCaseInput>The producer's service description (WSDL) and related included and imported artifacts.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the producer's service description(WSDL) is verified to contain the minimum required functionality described through MIP4 WS-Addressing operations. </TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0005</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Examine the producer's service description (WSDL) to determine the MIP4 WS-Addressing operations and associated with the defined service. </TestCaseStepAction>
+    <TestCaseStepResult>The defined service will contain at least the following required operations for the exchange pattern:
+* http://docs.oasis-open.org/wsrf/rpw-2/GetResourceProperty/GetResourcePropertyRequest
+* http://mip-interop.org/wsdls/MIP4/MIPRequestResponse/GetItemsRequest (will be changed with WSMP)
+* http://docs.oasis-open.org/wsn/bw-2/NotificationConsumer/Notify
+* http://docs.oasis-open.org/wsn/bw-2/NotificationProducer/SubscribeRequest
+* http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/UnsubscribeRequest
+* http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/RenewRequest </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

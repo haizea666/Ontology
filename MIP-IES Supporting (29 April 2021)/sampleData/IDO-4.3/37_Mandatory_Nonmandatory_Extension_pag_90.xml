@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<facility:Airfield xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:ext="https://mip-interop.org/data/v4.3/Extension" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:facility="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Facility" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<ext:Extension ext:mustUnderstandIndicator="true">
+		<ext:Extension ext:mustUnderstandIndicator="false"/>
+	</ext:Extension>
+	<base:ID>-</base:ID>
+	<concept:ConceptName>a</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<facility:FacilityOperationalStatusCode>Operational</facility:FacilityOperationalStatusCode>
+</facility:Airfield>
+
+<!--
+Original example
+
+<?xml version ="1.0" encoding ="utf-16"?>
+<fac:Airfield>
+...
+<ext:Extension ext:mustUnderstand ="true">
+<example:MandatoryExtension>A</example:MandatoryExtension>
+<example:OptionalExtension>B</example:OptionalExtension> now mandatory
+</ext:Extension>
+...
+</fac:Airfield>
+-->

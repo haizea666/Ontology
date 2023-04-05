@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:affiliation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:complexType name="AffiliationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Membership or allegiance to an ethnic group, country, functional group, exercise group, or religion.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:50a3e476-0768-4947-bd52-911820b373dd</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Affiliation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="EthnicAffiliationCode" type="affiliation:EthnicAffiliationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ethnic group.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5dd9d7a9-2c85-4387-80f0-fe0ec244fdc6</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_EthnicGroupCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="EthnicAffiliationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ethnic group.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5dd9d7a9-2c85-4387-80f0-fe0ec244fdc6</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_EthnicGroupCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:complexType name="EthnicAffiliationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Membership or allegiance to a social group that has a common national or cultural tradition.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ba768615-4b1c-40f0-b9de-ca36c5f74d80</app:SemanticID>
+        <app:DisplayName>Ethnic affiliation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="affiliation:AffiliationType">
+        <xsd:sequence>
+          <xsd:element ref="affiliation:EthnicAffiliationCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GeopoliticalAffiliationCode" type="affiliation:GeopoliticalAffiliationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The identification of the independent first-level geographic-political area and its dependencies, areas of quasi-independence, and areas with special unrecognised sovereignty, including outlying and disputed areas.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a45eca88-b9a5-4948-a664-a95ced1df8cb</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_CountryCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeopoliticalAffiliationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The identification of the independent first-level geographic-political area and its dependencies, areas of quasi-independence, and areas with special unrecognised sovereignty, including outlying and disputed areas.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a45eca88-b9a5-4948-a664-a95ced1df8cb</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_CountryCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:complexType name="GeopoliticalAffiliationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Membership or allegiance to a country or political entity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b09b27f6-336f-4ece-b226-10f7b235200e</app:SemanticID>
+        <app:DisplayName>Geopolitical affiliation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="affiliation:AffiliationType">
+        <xsd:sequence>
+          <xsd:element ref="affiliation:GeopoliticalAffiliationCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OtherAffiliationCode" type="affiliation:OtherAffiliationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The affiliation that is not a purely religious, geopolitical, or ethnic affiliation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1fadbf53-860c-4f16-984e-2fb5f6c94e8f</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Affiliation_OtherAffiliationCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OtherAffiliationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The affiliation that is not a purely religious, geopolitical, or ethnic affiliation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1fadbf53-860c-4f16-984e-2fb5f6c94e8f</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Affiliation_OtherAffiliationCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:complexType name="OtherAffiliationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Affiliation that is not a purely religious, geopolitical, or ethnic affiliation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f62414f4-d089-4728-b2ac-b6b1a1b3fbac</app:SemanticID>
+        <app:DisplayName>Other affiliation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="affiliation:AffiliationType">
+        <xsd:sequence>
+          <xsd:element ref="affiliation:OtherAffiliationCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ReligiousAffiliationCode" type="affiliation:ReligiousAffiliationCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The religion.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4b7a1795-7fca-4f7d-8fdd-5aefbfae2c09</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_ReligionCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ReligiousAffiliationCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The religion.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4b7a1795-7fca-4f7d-8fdd-5aefbfae2c09</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:ManagedList>BattlespaceConcept_Generic_ReligionCode.gc</app:ManagedList>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType" />
+  </xsd:simpleType>
+  <xsd:complexType name="ReligiousAffiliationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Belief in and worship of a superhuman controlling power.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:87216f94-7863-46f9-bc34-250b001452ce</app:SemanticID>
+        <app:DisplayName>Religious affiliation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="affiliation:AffiliationType">
+        <xsd:sequence>
+          <xsd:element ref="affiliation:ReligiousAffiliationCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

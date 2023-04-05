@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>2</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>P/S - File.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess if any problems arise in the presence of Concurrent MIP4 Exchange Patterns, P/S vs File.</TestCaseObjective>
+  <TestCaseScenario>MIP4 Data is exported via file and imported into a consumer system that is already subscribed for notifications to that producer. There are multiple updates on the Producer side prior to loading the file at the Consumer.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S, File</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT3SF_3101.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>The consumer can process MIP4 content in the presence of Concurrent MIP4 Exchange Patterns.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer, in the presence of Concurrent MIP4 Exchange Patterns and is able to apply it to their system without error. Write down any arisen problems.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0013.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain valid MIP4 content from the producer via subscription.</TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the Producer.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Process all the MIP4 content on the consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The consumer will successfully process the MIP4 content without error. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>MIP4 Data is exported to a file from the producer (without terminating the subscription). </TestCaseStepAction>
+    <TestCaseStepResult>A valid content file for the MIP4 File exchange pattern is obtained. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>There are multiple updates on the Producer side. </TestCaseStepAction>
+    <TestCaseStepResult>The corresponding content will be received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>The file is imported into the consumer system. </TestCaseStepAction>
+    <TestCaseStepResult>Content will be imported into the Consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Process all the (file) MIP4 content on the consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The consumer will successfully process the MIP4 content without error. Notice that the content of the yet received file is older than the previously received updates through P/S subscription. Any arisen problems will be written down for feedback. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,33 @@
+Test description
+
+Test IDMIP4SLT3IS_5283Test TitleUndefined GeometricDefinition for an example Control FeatureExecution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create and update a Control Feature with undefined GeometricDefinition and the Consumers/Receivers are able to understand (and display) it correctly.ScenarioThe Producer creates a Control Feature (AreaOfInterest) with undefined GeometricDefinition.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this AOI with a GeometricDefinition=Polygon.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this AOI again with an undefined GeometricDefintion. 
+The Consumers receive the information and interpret it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has created a topic which includes message elements belonging to the Control Feature message schema area.
+The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the Control Feature is processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (A) creates an AreaOfInterest (Control Feature) with name XXX_AOI_283 with undefined GeometricDefinition.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Control Feature: ITA_AOI_283 ~~
+Consumers (B) receive and display (not on the map) the AOI correctly. ~~122. The Producer (A) updates the AOI with GeometricDefinition=Polygon. ~~Consumers (B) receive and display (also on the map) the AOI correctly. ~~123. The Producer (A) updates the AOI again with an undefined GeometricDefinition. ~~Consumers (B) receive and display (again not on the map) the AOI correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

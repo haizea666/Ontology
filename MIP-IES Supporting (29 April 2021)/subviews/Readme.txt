@@ -1,0 +1,1 @@
+As described in Section 5.3 of the Information Definition Overview, some capabilities in MIP4IES are further defined by an xml subset schema which defines the expected structures when exchanging instances related to the Business Object (BO). This folder contains the XML schemas that should be use to validate the outgoing instances of these BOs against.

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:feature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature" xmlns:geographicfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociation" type="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ControlFeature is described or delineated by the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:384789b7-9eb5-4226-aa6f-58664638949a</app:SemanticID>
+        <app:DisplayName>Control feature - geographic feature physical representation association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedCompletelyIndicator" type="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedCompletelyIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the ControlFeature is described or delineated by the whole (true) or by part (false) of the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f0023bd6-37e9-4097-8d6a-23f6305ec76b</app:SemanticID>
+        <app:ShortName>isRepresentedCompletelyIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is represented completely</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedCompletelyIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the ControlFeature is described or delineated by the whole (true) or by part (false) of the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f0023bd6-37e9-4097-8d6a-23f6305ec76b</app:SemanticID>
+        <app:ShortName>isRepresentedCompletelyIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is represented completely</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedInItsEntiretyIndicator" type="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedInItsEntiretyIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the whole (true) or part (false) of the ControlFeature is described or delineated by the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6ca13337-2110-41ca-badd-ae76a7108407</app:SemanticID>
+        <app:ShortName>isRepresentedInItsEntiretyIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is represented in its entirety</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedInItsEntiretyIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the whole (true) or part (false) of the ControlFeature is described or delineated by the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6ca13337-2110-41ca-badd-ae76a7108407</app:SemanticID>
+        <app:ShortName>isRepresentedInItsEntiretyIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is represented in its entirety</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationPhysicalRepresentation" type="geographicfeature:GeographicFeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ControlFeature is described or delineated by the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0f37edd4-7dc2-43a8-91e3-94985190a00fI</app:SemanticID>
+        <app:ShortName>physicalRepresentation</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is described or delineated by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationPhysicalRepresentationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ControlFeature is described or delineated by the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0f37edd4-7dc2-43a8-91e3-94985190a00f-2R</app:SemanticID>
+        <app:ShortName>physicalRepresentationRef</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:5adbb7d6-d1c7-4d06-b5e2-8033d6b47221</app:ReferenceType>
+        <app:DisplayName>is described or delineated by</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ControlFeatureGeographicFeaturePhysicalRepresentationAssociationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The ControlFeature is described or delineated by the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:384789b7-9eb5-4226-aa6f-58664638949a</app:SemanticID>
+        <app:DisplayName>Control feature - geographic feature physical representation association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:AssociationType">
+        <xsd:sequence>
+          <xsd:element ref="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedCompletelyIndicator" />
+          <xsd:element ref="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationIsRepresentedInItsEntiretyIndicator" />
+          <xsd:element ref="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationPhysicalRepresentationRef" />
+          <xsd:element ref="feature:ControlFeatureGeographicFeaturePhysicalRepresentationAssociationPhysicalRepresentation" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Feature" type="feature:FeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Object that encompasses meteorological, geographic, or control features of military significance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9c7ae150-c502-47d7-a166-37f7f2539d37</app:SemanticID>
+        <app:Remarks>Features can be either natural features that may influence operations or artificial features representing administrative, political, or tactical constraints to be taken into account.
+Features are used to describe characteristics, phenomena, or other similar objects that are associated with a geographic location. These entities are of interest in the operational arena, and may be administratively defined or occur naturally.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FeatureController" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has authority over the Feature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d54410fc-9c92-4096-a3ef-04ea03b6311f-1I</app:SemanticID>
+        <app:ShortName>controller</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FeatureControllerRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has authority over the Feature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d54410fc-9c92-4096-a3ef-04ea03b6311f-1R</app:SemanticID>
+        <app:ShortName>controllerRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:d4664893-6364-4594-a766-df7d575b110a</app:ReferenceType>
+        <app:DisplayName>controls</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FeatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Object that encompasses meteorological, geographic, or control features of military significance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9c7ae150-c502-47d7-a166-37f7f2539d37</app:SemanticID>
+        <app:Remarks>Features can be either natural features that may influence operations or artificial features representing administrative, political, or tactical constraints to be taken into account.
+Features are used to describe characteristics, phenomena, or other similar objects that are associated with a geographic location. These entities are of interest in the operational arena, and may be administratively defined or occur naturally.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:ObjectType">
+        <xsd:sequence>
+          <xsd:element ref="feature:FeatureControllerRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="feature:FeatureController" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

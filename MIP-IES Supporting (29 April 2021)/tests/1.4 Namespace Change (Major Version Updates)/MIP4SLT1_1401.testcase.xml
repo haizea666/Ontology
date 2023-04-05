@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>14</TestCaseIdGroup>
+    <TestCaseIdNumber>1</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Backwards version compatibility - initialisation</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Let's use the terms 'BSO-v1' and 'BSO-v2', indicating a major version update to the BSO as an example. Assess what happens when the Provider supports BSO-v1 whereas the Consumer supports BSO-v2, the Consumer requests instances of BSO-v2 and the Provider responds with instances of BSO-v1 notification.</TestCaseObjective>
+  <TestCaseScenario>A 'major version update' refers to a change in a message schema that is sufficiently significant to warrant a new namespace (i.e. a new schema), not just an extension.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>1.2.1 - Joining.</TestCasePreCondition>
+  <TestCaseInput>Current situation as known by the provider.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the consumer system (v2) has tried to receive the current situation from the provider (v1) by means of the MIP4.0 Request-Response exchange pattern.</TestCaseConclusion>
+  <TestCaseOutput>Assess (record) what happens when the Provider supports BSO-v1 whereas the Consumer supports BSO-v2. Is the backwards version compatibility kept in case of new namespace (i.e. a new schema)?</TestCaseOutput>
+  <TestCaseTraceability>REQ_IDT_0005. MIP4_Request_Response_Exchange_Pattern.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (2, supports BSO-v2) requests current situation from Provider (1, supports BSO-v1). </TestCaseStepAction>
+    <TestCaseStepResult>Provider receives request (for BSO-v2 instances).
+Record Provider behaviour, regarding backwards version compatibility. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Provider (1, supports BSO-v1) responds to Consumer's (2, supports BSO-v2) request. </TestCaseStepAction>
+    <TestCaseStepResult>Received response at Consumer: either current situation data (BSO-v1 instances) or an error / problem notification.
+Record Consumer and Provider behaviour, regarding backwards version compatibility. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

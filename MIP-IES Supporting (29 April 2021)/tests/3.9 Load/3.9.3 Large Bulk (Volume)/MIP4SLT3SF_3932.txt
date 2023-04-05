@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT3SF_3932Test TitleSplit data with Objects and Action clusters.Execution Priority1ObjectiveThe objective of this test is to assess the ability of consumers and producers to handle large data volumes (quantity checking).ScenarioA Producer/Provider publishes / responds with multiple MIP4 valid messages representing split clusters of BSOs and Actions (BSOs and Actions grouped by means of Associations among them, making complex Business Objects). The Consumer receives and processes them into their system.EnvironmentInternet or Co-located. Exchange Pattern: All.Participation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionConsumers and producers can handle large and complex MIP4 data volumes.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0017.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Produce sequence of multiple MIP4 valid messages representing split clusters of BSOs and Actions (BSOs and Actions grouped by means of Associations among them, making complex Business Objects) that will be exchanged split (various messages).
+Each of such split clusters shall be scrambled, i.e. its partial messages shall be divided and intercalated in several messages with other clusters' messages.
+An open question is how large this split should be, after the 3.9.1 'LargeTrans' test group, together with the OSG volume analysis, maybe a figure of at least 3K messages (< 1MB) should suffice. ~~The producer/provider publishes a sequence of intercalated split MIP4 valid messages representing split clusters of BSOs and Actions, or is ready to respond them or send them as a file to the consumer. ~~122. Obtain the valid sequence of MIP4 valid messages representing split clusters of BSOs and Actions from the producer / provider, as they are produced / provided. ~~Content will be received from the producer/provider. ~~123. Process the MIP4 content as it is received on the Consumer. ~~The Consumer will successfully process the MIP4 content without error. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

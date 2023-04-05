@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>40</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create ObstacleGap.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to create ObstacleGaps (ControlFeature) in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates two ObstacleGaps (ControlFeature) with different orientations. Nation B receives the information and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes message elements for Obstacles (belonging in the ControlFeature message schema area), for instance Ground Picture &gt; Mobility/Counter-Mobility.
+Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the created ObstacleGaps are displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an ObstacleGap ControlFeature with a horizontal orientation (east - west). </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the ObstacleGap correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an ObstacleGap ControlFeature with a vertical orientation (north - south). </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the ObstacleGap correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

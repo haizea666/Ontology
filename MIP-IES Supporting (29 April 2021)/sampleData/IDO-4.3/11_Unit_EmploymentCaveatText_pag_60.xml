@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:Unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:extension="https://mip-interop.org/data/v4.3/Extension" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<extension:Extension extension:mustUnderstandIndicator="true">
+		<unit:UnitEmploymentCaveatText>Security tasking only.</unit:UnitEmploymentCaveatText>
+	</extension:Extension>
+	<base:ID>cacf04d5-8741-4ee8-a095-d2dc84ac80c1</base:ID>
+	<concept:ConceptName>Unit</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+	<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+	<organisation:MilitaryOrganisationServiceCode>AirForce</organisation:MilitaryOrganisationServiceCode>
+	<unit:UnitEchelon/>
+</unit:Unit>
+<!--
+Original example
+
+<unit:Unit ...>
+	...
+	<ext:Extension ext:mustUnderstand="true">
+    	    <unit_4.2:EmploymentCaveatTextWrapper>
+                 	<unit_4.2:EmploymentCaveatText>Security tasking only.</unit_4.2:EmploymentCaveatText>
+    	   </unit_4.2:EmploymentCaveatTextWrapper>
+	</ext:Extension>
+	...
+</unit:Unit>
+
+-->

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>24</TestCaseIdGroup>
+    <TestCaseIdNumber>25</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Polygon - First and Last point</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Check the proper handling of polygon first and last point whether they are the same or not</TestCaseObjective>
+  <TestCaseScenario>Send an object with all its mandatory as well as optional elements filled in with valid values to the Gateway through the Test Tool (TT). The Gateway must be able to handle a polygon graphical representation of an object. First step, the first and last point are differents. On a second step, the first and last points of the polygon are the same. In either way the Gateway must remain stable and the C2System must represent a closed polygon.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. MIP4SLT2.5_2425-n.xml data are available at the TT to be sent.</TestCasePreCondition>
+  <TestCaseInput>MIP4SLT2.5_2425-1.xml (first and last are different), MIP4SLT2.5_2425-2.xml (first and last are the same).</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success the Gateway remains stable and handles all messages correctly. Preferably the object is displayed at the nation's C2 system with correct mandatory information. The C2 System represents the polygon as a closed line.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail</TestCaseOutput>
+  <TestCaseTraceability>REQ_IDT_????, MPR_2073</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2425-1.xml into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Object visible in the C2 system. Polygon is represented as a closed line</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2425-2.xml into their C2 system (2) through the TT (1). </TestCaseStepAction>
+    <TestCaseStepResult>Object visible in the C2 system. Polygon is represented as a closed line</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

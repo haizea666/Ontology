@@ -1,0 +1,33 @@
+Test description
+
+Test IDMIP4SLT3SF_3603Test TitleSubscribe to updates and represent current information.Execution Priority1ObjectiveThe objective of this test is to assess the ability of an incoming C2IS (Nation B) to subscribe to the notification stream of another C2IS (Nation A).ScenarioUpon arrival at the location, Nation B will subscribe to all or part of the Topic list of Nation A. Subscription starts after Nation A has provided the necessary information to configure the systems, and the physical connection is set up. In most cases it is expected that the Consumer will wish to initialise prior to subscribing to notifications.EnvironmentInternet, co-located. Exchange Pattern: P/S.Participation2MTRSPre-test ConditionsMIP4SLT3SF_3601. Both Nations are correctly configured for the MIP LAN they are on.
+The test procedures presuppose that the physical communications links are established and tested, and that each nation has a current and correct common data-fill, plus any required national data, loaded in its' national system.
+Nation A shall be in an operational state.
+Both nations shall provide a summary of the data to be exchanged so that validation by the receiving nation can be performed.
+Both nations shall have established and verified connectivity via the MIP4-IES Exchange Mechanism.
+MIP4SLT3SF_3602, Initialise and represent current information, recommendedTest InputsN/AConclusionWhen both nations' C2IS have completed the exchange of operational data, both nations will have the same tactical picture (for the shared topics).Test OutputsN/ATraceabilityREQ_SYS_0003, REQ_SYS_0019.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation B subscribes to one or more topics from Nation A.
+
+Notices: This test is done bilaterally. Nations will switch roles at the end of the test.
+After the exchange of operational data is completed, and both nations have theoretically the same tactical picture, each nation will notify its partner nation that this is complete. ~~~~212. Nation A creates BSOs in a topic with positions and status. ~~The operational situation is in Nation A's C2IS. Nation B receives the operational situation and displays the same operational situation in its C2IS (for the subscribed topics). ~~123. Nation A updates the BSOs created at step 2. ~~Nation B receives the updates and reflects it correctly on its C2IS. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

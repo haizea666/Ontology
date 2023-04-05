@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>49</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Subscribe, termination time returned by producer might be earlier than the one requested by consumer</TestCaseTitle>
+  <TestCaseExecutionPriority>3</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective is for the Consumer to subscribe to a topic provided by the Provider. The producer might response with a termination time earlier than the one requested by the consumer. Producer and consumer must react properly considering the termination time provided by the producer in the subscribe response.</TestCaseObjective>
+  <TestCaseScenario>The Consumer is interested in receiving regular updates on a topic in an asynchronous way (i.e. without polling the Producer).</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1213, MIP4SLT1_1215, MIP4SLT1_1130
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system. The Producer system broadcasts at least some of the topics requested.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>When termination time is reached, the consumer and producer must consider the subscription as terminated. The test is concluded when the producer stops sending when termination time is reached and the consumer is not expecting to receive any other notification for this terminated subscription.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer subscribes to the Producer in order to advertise its interest in a subset of the data space. The consumer specifies a subscription termination time in the future. 
+rpw:GetResourceProperty
+with parameters wsn:FullTopicExpression, wsn:FixedTopicSet, wsn:TopicExpressionDialect and wstop:TopicSet.</TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request for resource properties. The producer receives a subscription request with a specified termination time.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

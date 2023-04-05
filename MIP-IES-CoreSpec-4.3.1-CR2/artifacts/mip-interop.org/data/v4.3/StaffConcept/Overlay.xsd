@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:staffconceptoverlay="https://mip-interop.org/data/v4.3/StaffConcept/Overlay" targetNamespace="https://mip-interop.org/data/v4.3/StaffConcept/Overlay" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/StaffConcept.xsd" namespace="https://mip-interop.org/data/v4.3/StaffConcept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="DomainPicture" type="staffconceptoverlay:DomainPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Overlay containing information on a specific sphere of operational activity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f6950c73-a3d0-40cc-bcf4-e2b457b292dc</app:SemanticID>
+        <app:DisplayName>Domain picture</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DomainPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Overlay containing information on a specific sphere of operational activity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f6950c73-a3d0-40cc-bcf4-e2b457b292dc</app:SemanticID>
+        <app:DisplayName>Domain picture</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:OverlayType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FunctionalPicture" type="staffconceptoverlay:FunctionalPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Overlay containing information related to a specific military function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c88570cd-4586-4306-9ccf-bfa68c73a53b</app:SemanticID>
+        <app:DisplayName>Functional picture</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FunctionalPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Overlay containing information related to a specific military function.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c88570cd-4586-4306-9ccf-bfa68c73a53b</app:SemanticID>
+        <app:DisplayName>Functional picture</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:OverlayType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Overlay" type="staffconceptoverlay:OverlayType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A StaffConcept that contains situational information related to force disposition (potentially of friendly, hostile, neutral and unknown forces), coordination measures related to battle space management (known as battlespace geometry), and associated activities, designed primarily to share an understanding of a current, predicted, prescribed, or past situation in a defined geographical area of a theatre of operation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18c446eb-d236-472a-98de-b504f52a3308</app:SemanticID>
+        <app:DisplayName>Overlay</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OverlayContent" type="battlespaceconcept:BattlespaceConceptType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Overlay includes the BattlespaceConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4fcf3122-ba24-4861-b879-8675d0200f78I</app:SemanticID>
+        <app:ShortName>content</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>includes</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OverlayContentRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Overlay includes the BattlespaceConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4fcf3122-ba24-4861-b879-8675d0200f78R</app:SemanticID>
+        <app:ShortName>contentRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:46a54ff0-fbf0-11e5-a837-0800200c9a66</app:ReferenceType>
+        <app:DisplayName>includes</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OverlayEnclosedOverlayRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The enclosing Overlay encompasses the enclosed Overlay.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a0af5561-5d00-4555-8fc6-e28f121ced63-2R</app:SemanticID>
+        <app:ShortName>enclosedOverlayRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:18c446eb-d236-472a-98de-b504f52a3308</app:ReferenceType>
+        <app:DisplayName>encloses</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OverlayEnclosingOverlayRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The enclosing Overlay encompasses the enclosed Overlay.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a0af5561-5d00-4555-8fc6-e28f121ced63-1R</app:SemanticID>
+        <app:ShortName>enclosingOverlayRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:18c446eb-d236-472a-98de-b504f52a3308</app:ReferenceType>
+        <app:DisplayName>encloses</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OverlayIsUncorrelatedIndicator" type="staffconceptoverlay:OverlayIsUncorrelatedIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Overlay contains uncorrelated information only (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18b52084-1e45-4b3f-82fb-bd3366bc63eb</app:SemanticID>
+        <app:ShortName>isUncorrelatedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is uncorrelated</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OverlayIsUncorrelatedIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Overlay contains uncorrelated information only (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18b52084-1e45-4b3f-82fb-bd3366bc63eb</app:SemanticID>
+        <app:ShortName>isUncorrelatedIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is uncorrelated</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:complexType name="OverlayType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A StaffConcept that contains situational information related to force disposition (potentially of friendly, hostile, neutral and unknown forces), coordination measures related to battle space management (known as battlespace geometry), and associated activities, designed primarily to share an understanding of a current, predicted, prescribed, or past situation in a defined geographical area of a theatre of operation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18c446eb-d236-472a-98de-b504f52a3308</app:SemanticID>
+        <app:DisplayName>Overlay</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconcept:StaffConceptType">
+        <xsd:sequence>
+          <xsd:element ref="staffconceptoverlay:OverlayIsUncorrelatedIndicator" minOccurs="0" />
+          <xsd:element ref="staffconceptoverlay:OverlayContentRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="staffconceptoverlay:OverlayContent" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="staffconceptoverlay:OverlayEnclosingOverlayRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="staffconceptoverlay:OverlayEnclosedOverlayRef" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedAirPicture" type="staffconceptoverlay:RecognizedAirPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An electronically produced display compiled from radar and other sources covering a three-dimensional volume of airspace in which all detected air contacts have been evaluated and assigned an identification designation and track number.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e81308fb-d35e-411b-88cf-128d343a817d</app:SemanticID>
+        <app:DisplayName>Recognized Air Picture (RAP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedAirPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An electronically produced display compiled from radar and other sources covering a three-dimensional volume of airspace in which all detected air contacts have been evaluated and assigned an identification designation and track number.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e81308fb-d35e-411b-88cf-128d343a817d</app:SemanticID>
+        <app:DisplayName>Recognized Air Picture (RAP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:DomainPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedCBRNPicture" type="staffconceptoverlay:RecognizedCBRNPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A collated and correlated product of all-source information gathering bearing upon the threat, risk or emergence of chemical, biological, radiological or nuclear attacks or hazards in the context of a commander's mission.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0530fab3-88fe-4954-8ce2-566a94b2f2a0</app:SemanticID>
+        <app:Remarks>Where employed in single hazard environments, derivative terms may be used, e.g. recognized biological picture.</app:Remarks>
+        <app:DisplayName>Recognized CBRN Picture (RCBRNP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedCBRNPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A collated and correlated product of all-source information gathering bearing upon the threat, risk or emergence of chemical, biological, radiological or nuclear attacks or hazards in the context of a commander's mission.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0530fab3-88fe-4954-8ce2-566a94b2f2a0</app:SemanticID>
+        <app:Remarks>Where employed in single hazard environments, derivative terms may be used, e.g. recognized biological picture.</app:Remarks>
+        <app:DisplayName>Recognized CBRN Picture (RCBRNP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedCISPicture" type="staffconceptoverlay:RecognizedCISPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture with information on Communication and Information Systems (CIS) including CIS status, infrastructure, connectivity/coverage and significant events.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4b6442a0-ad1b-446c-8028-264dcb7e9b4b</app:SemanticID>
+        <app:DisplayName>Recognized CIS Picture (RCISP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedCISPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture with information on Communication and Information Systems (CIS) including CIS status, infrastructure, connectivity/coverage and significant events.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4b6442a0-ad1b-446c-8028-264dcb7e9b4b</app:SemanticID>
+        <app:DisplayName>Recognized CIS Picture (RCISP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedCivilSituationPicture" type="staffconceptoverlay:RecognizedCivilSituationPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture of the civil environment to enable all command levels in NATO to understand the situation and better inform future decisions and coherent planning.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3fb72dcf-2e67-4b9f-a46c-1f5752378115</app:SemanticID>
+        <app:DisplayName>Recognized Civil Situation Picture (RCivP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedCivilSituationPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture of the civil environment to enable all command levels in NATO to understand the situation and better inform future decisions and coherent planning.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3fb72dcf-2e67-4b9f-a46c-1f5752378115</app:SemanticID>
+        <app:DisplayName>Recognized Civil Situation Picture (RCivP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedCyberPicture" type="staffconceptoverlay:RecognizedCyberPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A DomainPicture that matches and integrates various views of cyberspace aspects, maps adversaries in cyberspace and is used in direct support of the planning and the execution of current and future operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:98179246-f9b8-4753-ba1e-f52a5ed4bb9b</app:SemanticID>
+        <app:Remarks>The RCyberP can support deconflicting activities in cyberspace with other activities.</app:Remarks>
+        <app:DisplayName>Recognized Cyber Picture (RCyberP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedCyberPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A DomainPicture that matches and integrates various views of cyberspace aspects, maps adversaries in cyberspace and is used in direct support of the planning and the execution of current and future operations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:98179246-f9b8-4753-ba1e-f52a5ed4bb9b</app:SemanticID>
+        <app:Remarks>The RCyberP can support deconflicting activities in cyberspace with other activities.</app:Remarks>
+        <app:DisplayName>Recognized Cyber Picture (RCyberP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:DomainPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedElectromagneticPicture" type="staffconceptoverlay:RecognizedElectromagneticPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture that provides situational awareness of the electromagnetic environment (EME) by integrating measured data from EME sensors covering the area of interest (AOI).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3d1d1e47-0e35-461a-82f4-e1974c024a86</app:SemanticID>
+        <app:DisplayName>Recognized Electromagnetic Picture (REMP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedElectromagneticPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture that provides situational awareness of the electromagnetic environment (EME) by integrating measured data from EME sensors covering the area of interest (AOI).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3d1d1e47-0e35-461a-82f4-e1974c024a86</app:SemanticID>
+        <app:DisplayName>Recognized Electromagnetic Picture (REMP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedEngineerPicture" type="staffconceptoverlay:RecognizedEngineerPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture that includes information on the technical status of supply routes, transport facilities, EODs, landmines, engineer unit locations, mobility risk assessments, engineer-related FRAGOs, environment protection, and battle damage repair.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:32548c95-028e-46a4-af87-6a470417197c</app:SemanticID>
+        <app:DisplayName>Recognized Engineer Picture (REngP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedEngineerPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture that includes information on the technical status of supply routes, transport facilities, EODs, landmines, engineer unit locations, mobility risk assessments, engineer-related FRAGOs, environment protection, and battle damage repair.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:32548c95-028e-46a4-af87-6a470417197c</app:SemanticID>
+        <app:DisplayName>Recognized Engineer Picture (REngP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedEnvironmentalPicture" type="staffconceptoverlay:RecognizedEnvironmentalPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A complete and seamless depiction of geospatial, oceanographic and meteorological information designated for the planning and conduct of joint operations in a specific area at a specific time and which supports the unity of effort throughout the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b63d3f18-925e-4fe3-96e5-a8f767ceba4c</app:SemanticID>
+        <app:DisplayName>Recognized Environmental Picture (REP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedEnvironmentalPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A complete and seamless depiction of geospatial, oceanographic and meteorological information designated for the planning and conduct of joint operations in a specific area at a specific time and which supports the unity of effort throughout the battlespace.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b63d3f18-925e-4fe3-96e5-a8f767ceba4c</app:SemanticID>
+        <app:DisplayName>Recognized Environmental Picture (REP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedGroundPicture" type="staffconceptoverlay:RecognizedGroundPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A compilation of validated data relating to a defined ground area that is disseminated to enable situational awareness and support decision making at all levels.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1999d883-ab0d-498b-8568-88f2803fc5e7</app:SemanticID>
+        <app:DisplayName>Recognized Ground Picture (RGP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedGroundPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A compilation of validated data relating to a defined ground area that is disseminated to enable situational awareness and support decision making at all levels.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1999d883-ab0d-498b-8568-88f2803fc5e7</app:SemanticID>
+        <app:DisplayName>Recognized Ground Picture (RGP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:DomainPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedIntelligencePicture" type="staffconceptoverlay:RecognizedIntelligencePictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture of actors' capabilities, structures, organization, intentions, objectives and vulnerabilities in context.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:934f876c-57cc-41f0-bca5-694c447bcc2a</app:SemanticID>
+        <app:DisplayName>Recognized Intelligence Picture (RIP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedIntelligencePictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture of actors' capabilities, structures, organization, intentions, objectives and vulnerabilities in context.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:934f876c-57cc-41f0-bca5-694c447bcc2a</app:SemanticID>
+        <app:DisplayName>Recognized Intelligence Picture (RIP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedLogisticsPicture" type="staffconceptoverlay:RecognizedLogisticsPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture that provides information that should include, but not be limited to, the near to real time status of Joint Logistic Support Network (JLSN), Reception, Staging, and Onward Movement (RSOM) / Rearward Movement Staging and Dispatch (RMSD) and sustainment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f0de21cf-980b-407f-bea2-1085a98e2300</app:SemanticID>
+        <app:DisplayName>Recognized Logistics Picture (RLP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedLogisticsPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture that provides information that should include, but not be limited to, the near to real time status of Joint Logistic Support Network (JLSN), Reception, Staging, and Onward Movement (RSOM) / Rearward Movement Staging and Dispatch (RMSD) and sustainment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f0de21cf-980b-407f-bea2-1085a98e2300</app:SemanticID>
+        <app:DisplayName>Recognized Logistics Picture (RLP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedMaritimePicture" type="staffconceptoverlay:RecognizedMaritimePictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A non-real time geographic presentation of processed all-source contacts and planning data, known at a given time, of surface, subsurface, amphibious  and maritime air units, forces and operations in a designated area of interest (AOl), compiled by an assigned RMP manager.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4f7911e1-f9be-4980-96d6-e495a498eb50</app:SemanticID>
+        <app:Remarks>The RMP is in accordance with requirements from operational directives and tasking to support decision makers in the conduct of C2 of maritime forces and operations. The RMP is neither a tactical plot nor a real-time display.</app:Remarks>
+        <app:DisplayName>Recognized Maritime Picture (RMP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedMaritimePictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A non-real time geographic presentation of processed all-source contacts and planning data, known at a given time, of surface, subsurface, amphibious  and maritime air units, forces and operations in a designated area of interest (AOl), compiled by an assigned RMP manager.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4f7911e1-f9be-4980-96d6-e495a498eb50</app:SemanticID>
+        <app:Remarks>The RMP is in accordance with requirements from operational directives and tasking to support decision makers in the conduct of C2 of maritime forces and operations. The RMP is neither a tactical plot nor a real-time display.</app:Remarks>
+        <app:DisplayName>Recognized Maritime Picture (RMP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:DomainPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedMedicalPicture" type="staffconceptoverlay:RecognizedMedicalPictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture including information on significant medical events (e.g. diseases, epidemics, etc.), military and civilian medical treatment facilities, and medical evacuation facilities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8afa8975-1852-4122-ba4f-e691cea38153</app:SemanticID>
+        <app:DisplayName>Recognized Medical Picture (RMedP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedMedicalPictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A FunctionalPicture including information on significant medical events (e.g. diseases, epidemics, etc.), military and civilian medical treatment facilities, and medical evacuation facilities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8afa8975-1852-4122-ba4f-e691cea38153</app:SemanticID>
+        <app:DisplayName>Recognized Medical Picture (RMedP)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:FunctionalPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecognizedSpacePicture" type="staffconceptoverlay:RecognizedSpacePictureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A DomainPicture that provides knowledge about space systems capabilities, operational readiness, limitations, as well as environmental conditions, events, threats and activities (both current and planned) in, from, toward or through space.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b284fdb6-a7d2-4c97-b344-3e3d765b70c0</app:SemanticID>
+        <app:DisplayName>Recognized Space Picture</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecognizedSpacePictureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A DomainPicture that provides knowledge about space systems capabilities, operational readiness, limitations, as well as environmental conditions, events, threats and activities (both current and planned) in, from, toward or through space.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b284fdb6-a7d2-4c97-b344-3e3d765b70c0</app:SemanticID>
+        <app:DisplayName>Recognized Space Picture</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptoverlay:DomainPictureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

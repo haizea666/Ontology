@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="MaterielModelName" type="materiel:MaterielModelNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The model name of the type of Materiel assigned either by its manufacturer or by its operating organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4787523a-7e18-4bbf-850e-2a64e3abacc4</app:SemanticID>
+        <app:ShortName>modelName</app:ShortName>
+        <app:Remarks>The model name must not be confused with the type name. The model name denotes the product (e.g., 'HF-9000D'), whereas the type name is used to classify the object (e.g., 'High Frequency Radio').</app:Remarks>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>model name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MaterielModelNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The model name of the type of Materiel assigned either by its manufacturer or by its operating organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4787523a-7e18-4bbf-850e-2a64e3abacc4</app:SemanticID>
+        <app:ShortName>modelName</app:ShortName>
+        <app:Remarks>The model name must not be confused with the type name. The model name denotes the product (e.g., 'HF-9000D'), whereas the type name is used to classify the object (e.g., 'High Frequency Radio').</app:Remarks>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>model name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

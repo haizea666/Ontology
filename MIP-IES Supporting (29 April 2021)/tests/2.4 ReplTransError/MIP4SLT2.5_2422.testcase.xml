@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>24</TestCaseIdGroup>
+    <TestCaseIdNumber>22</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Use of Managed Code Lists - ethnic</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The list of code values for the ethnic element will not be frozen as part of the MIP4 specification, but evolves over time (or specified for a particular operation). Systems that map between the ethnic codes and internal structures must be prepared to accommodate changes, and handle unrecognized values. MIP will provide an initial ethnic code list, but the ethnic code list will be external to the schemas.</TestCaseObjective>
+  <TestCaseScenario>Send an object with different ethnic codes to the Gateway through the Test Tool (TT). The ethnic codes are taken from the ethnic code list. Send the object again with ethnic codes not present in the ethnic code list. The Gateway must be able to handle the ethnic codes by either correct mapping to the C2 system, translate invalid ethnic codes to comment or any other means. In either way the Gateway must remain stable.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. The Gateway is configured with the elements from the ethnic code list contained in dataset_2422x.</TestCasePreCondition>
+  <TestCaseInput>Dataset_2422x.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success the Gateway remains stable and handles all messages correctly. Preferably the object is displayed at the nations C2 system with correct ethnic information.</TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>REQ_IDT_0003</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2422a into their C2 system (2) through the TT (1).</TestCaseStepAction>
+    <TestCaseStepResult>Objects visible in the C2 system with the ethnic of the ethnic code list.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads dataset_2422b into their C2 system (2) through the TT (1).</TestCaseStepAction>
+    <TestCaseStepResult>Objects visible in the C2 system with invalid or no ethnic codes.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

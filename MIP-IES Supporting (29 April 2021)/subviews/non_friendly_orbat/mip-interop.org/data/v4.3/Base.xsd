@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:tns="https://mip-interop.org/data/v4.3/Base" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:prim="https://mip-interop.org/data/v4.3/Primitives" xmlns:ext="https://mip-interop.org/data/v4.3/Extension" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="https://mip-interop.org/data/v4.3/Base" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.0">
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/Primitives" schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" />
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/Extension" schemaLocation="https://mip-interop.org/data/v4.3/Extension.xsd" />
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/AppInfo" schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" />
+  <xsd:annotation>
+    <xsd:documentation>
+            The base schema for the defining concepts and root types.
+        </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Extensible" type="base:ExtensibleType">
+    <xsd:annotation>
+      <xsd:documentation>The abstract base class for everything.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:eb9f5abd-a122-4c92-872f-010a1a80ab77</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ExtensibleType" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A base data type.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:bff0b994-db5c-468a-bf69-7b0651494591</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ext:Extension" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="base:Amplification" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Identifiable" type="base:IdentifiableType">
+    <xsd:annotation>
+      <xsd:documentation>A data concept of something that is able to be recognized; distinguishable.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:e88a6aa4-b902-40ab-ba5b-3be4dd119cbc</app:SemanticID>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="IdentifiableType" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data type, of something able to be recognized; distinguishable.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:e88a6aa4-b902-40ab-ba5b-3be4dd119cbc</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="tns:ExtensibleType">
+        <xsd:sequence>
+          <xsd:element ref="base:ID" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="NonIdentifiableType" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data type of something that does not have a standard identifier.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:4cf0e30c-69f3-4781-990a-a9eb745319da</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="tns:ExtensibleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Amplification" type="base:AmplificationType">
+    <xsd:annotation>
+      <xsd:documentation>An addition to or expansion of a statement or idea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:Remarks>The amplification concept is described in the IDT Overview Documentation. It is not to be confused with a similarly named concept from APP-11.</app:Remarks>
+        <app:SemanticID>IDT:499e2a6b-b6b0-470e-9d75-6aba853abf77</app:SemanticID>
+        <app:ShortName>amplification</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AmplificationType">
+    <xsd:annotation>
+      <xsd:documentation>An addition to or expansion of a statement or idea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:Remarks>The amplification concept is described in the IDT Overview Documentation. It is not to be confused with a similarly named concept from APP-11.</app:Remarks>
+        <app:SemanticID>IDT:499e2a6b-b6b0-470e-9d75-6aba853abf77</app:SemanticID>
+        <app:ShortName>amplification</app:ShortName>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="base:AmplificationLocationText" />
+      <xsd:element ref="base:AmplificationText" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="AmplificationLocationText" type="base:AmplificationLocationTextType">
+    <xsd:annotation>
+      <xsd:documentation>The location of the amplified element.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:0d850348-dfee-4b42-abc6-4577d404a5d2</app:SemanticID>
+        <app:ShortName>locationText</app:ShortName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AmplificationLocationTextType">
+    <xsd:annotation>
+      <xsd:documentation>The location of the amplified element.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:0d850348-dfee-4b42-abc6-4577d404a5d2</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="prim:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="1024" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AmplificationText" type="base:AmplificationTextType">
+    <xsd:annotation>
+      <xsd:documentation>An explanation indicating why information is not provided or other amplifying information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:3baa2e0c-146a-4cb4-a8f3-e92c0e168347</app:SemanticID>
+        <app:ShortName>nilReasonText</app:ShortName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AmplificationTextType">
+    <xsd:annotation>
+      <xsd:documentation>An explanation indicating why information is not provided or other amplifying information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:3baa2e0c-146a-4cb4-a8f3-e92c0e168347</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="prim:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="1024" />
+      <xsd:pattern value="Inapplicable|Missing|Unknown|Withheld|(Other:.*)" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="Association" type="base:AssociationType" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a connection or cooperative link between Identifiables.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:a6390cae-2d42-46d2-af31-c40482f112a3</app:SemanticID>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AssociationType" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data type for an association, connection or cooperative link between Identifiables.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:a6390cae-2d42-46d2-af31-c40482f112a3</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="IdentifiableReferenceType">
+    <xsd:annotation>
+      <xsd:documentation>A data type representing a reference to an identifiable piece of information. The reference contains enough information to uniquely identify the artifact for possible retrieval in the future.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:08c28d7d-a1c4-4065-8342-0b976c328549</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="tns:ExtensibleType">
+        <xsd:sequence>
+          <xsd:element ref="tns:ID" />
+          <xsd:element ref="app:SemanticID" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IsLocalIndicator" type="base:IsLocalIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation>Whether the reference is local to the nested object (true) or global (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:1fd2cdf3-70bf-4524-b335-01f6607ffa34</app:SemanticID>
+        <app:ShortName>isLocalIndicator</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:Remarks>A global reference may be resolved by looking in the local data store or by requesting it from the provider.</app:Remarks>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IsLocalIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation>Whether the reference is local to the nested object (true) or global (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:1fd2cdf3-70bf-4524-b335-01f6607ffa34</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+  <xsd:element name="ID" type="base:IDType">
+    <xsd:annotation>
+      <xsd:documentation>A globally unique identifier.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:ae116366-de9f-4587-9d09-9001367adb4e</app:SemanticID>
+        <app:ShortName>identifier</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="IDType">
+    <xsd:annotation>
+      <xsd:documentation>A data type representing a globally unique identifier.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:ae116366-de9f-4587-9d09-9001367adb4e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:pattern value="[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="Data" type="base:IdentifiableType">
+    <xsd:annotation>
+      <xsd:documentation>The actual content.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:690bf6b3-21b7-4b9e-8f73-9279c07f4a53</app:SemanticID>
+        <app:ShortName>data</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ContextIdentifier" type="base:ContextIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation>The identifier of the context.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:e48fbc5c-1c75-47e9-8f12-3c948dbc9a5d</app:SemanticID>
+        <app:ShortName>contextIdentifier</app:ShortName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ContextIdentifierType">
+    <xsd:annotation>
+      <xsd:documentation>The identifier of the context.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:e48fbc5c-1c75-47e9-8f12-3c948dbc9a5d</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:minLength value="1" />
+      <xsd:pattern value="[0-9a-zA-Z_\-{}:/]+" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="Context" type="base:ContextType">
+    <xsd:annotation>
+      <xsd:documentation>The context in which the identifiable data is to be exchanged.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:5e3f9cc3-d35b-4401-b194-ff95e5f0a5d7</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ContextType">
+    <xsd:annotation>
+      <xsd:documentation>The context in which the identifiable data is to be exchanged.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:5e3f9cc3-d35b-4401-b194-ff95e5f0a5d7</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:ExtensibleType">
+        <xsd:sequence>
+          <xsd:element ref="base:ContextIdentifier" />
+          <xsd:element ref="base:Data" />
+          <xsd:element ref="base:ContextLastModificationDateTime" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ContextLastModificationDateTime" type="base:ContextLastModificationDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation>The time at which the information was last modified or distributed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:bf888722-c0e3-499a-b161-3c6cca6c1260</app:SemanticID>
+        <app:ShortName>lastModificationDateTime</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>last modification date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ContextLastModificationDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation>The time at which the information was last modified or distributed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>IDT:bf888722-c0e3-499a-b161-3c6cca6c1260</app:SemanticID>
+        <app:ShortName>lastModificationDateTime</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>last modification date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="prim:TimePointType" />
+  </xsd:simpleType>
+</xsd:schema>

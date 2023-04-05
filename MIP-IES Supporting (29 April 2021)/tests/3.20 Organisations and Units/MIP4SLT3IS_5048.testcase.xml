@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>50</TestCaseIdGroup>
+    <TestCaseIdNumber>48</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Units with Orientation based GeometricDefinition.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the operational elements (defined by IDT Schema Documentation &gt; Unit.xsd &gt; ScoutUnit, as an example unit with its orientation) and the Consumers are able to correctly understand (and display) it.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates message elements for Orientation based GeometricDefinition. The Consumers receive the data and process them.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Forces' topic. The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>The orientation of the objects is correct when the information is exchanged between the C2IS's of both nations.
+This test is considered a success if the unit is created and all elements are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates an example Unit with known values for its orientation based GeometricDefinition elements (Course, Lat, Lon and Speed), with name XXX_SU_048 and fills at least ALL its mandatory elements.
+In particular Nation A creates a Unit with a Course element valorised.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_SU_048 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the example Unit and all elements that the Producer created.
+All elements covering the orientation have been changed correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer creates an update for the object by changing its GeometricDefinition and its Sub-Type in particular Point &gt; PointPosition:
+* Lon
+* Lat
+* Course
+* Speed </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process (and display) the changed Orientation based GeometricDefinition and all elements that the Producer created.
+All elements covering the orientation have been changed correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

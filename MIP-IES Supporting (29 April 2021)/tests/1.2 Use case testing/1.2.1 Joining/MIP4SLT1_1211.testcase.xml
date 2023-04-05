@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>11</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Provision Of Joining Questionnaire</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Ensure that the exchange partners are informed of the capabilities of their partner systems, and the specifics relating to service endpoints, prior to actual MIP4 Information Exchange.</TestCaseObjective>
+  <TestCaseScenario>Prior to initiating MIP4 Information Exchange, the exchange partners shall complete and share the MIP4 Joining Questionnaire.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet. Exchange Pattern: All.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more</TestCaseMaximumParticipation>
+  <TestCasePreCondition>None.</TestCasePreCondition>
+  <TestCaseInput>Use MIP4SLT1_1211 - MIP4-IES_Joining_Questionnaire_v1.0.0.docx as template to be filled in.</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the completed MIP4 Joining Questionnaire is provided, read and understood by the Consumer.</TestCaseConclusion>
+  <TestCaseOutput>The Producer will provide a completed Joining Questionnaire to Consumer.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0003, REQ_EM_0008.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer will request the completed MIP4 Joining Questionnaire from the Producer. </TestCaseStepAction>
+    <TestCaseStepResult>The Producer will make available a completed MIP4 Joining Questionnaire. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer will examine the Producer's MIP4 Joining Questionnaire for completeness, including:
+* The supported exchange patterns
+* The presence and uniqueness of the source identifier
+* The MIP4 messages supported
+* Any caveats regarding the service endpoint
+* Any caveats regarding the MIP4 payloads.
+* The provision of the URL for each MIP4 R/R and P/S service WSDL. </TestCaseStepAction>
+    <TestCaseStepResult>The consumer will understand what to expect from the Producer and how to initiate exchange of information. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

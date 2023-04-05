@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>32</TestCaseIdGroup>
+    <TestCaseIdNumber>8</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Handling of IsDependent indicator</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability to process the IsDependent indicator.</TestCaseObjective>
+  <TestCaseScenario>A Consumer receives a valid MIP4 payload and processes it into their system.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'.</TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>The consumer can process MIP4 payloads properly based on the state of the IsDependent indicator and change of state of the IsDependent indicator.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0023.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain the valid MIP4 content from the producer containing payloads in which the object instance has a IsDependent indicator set to FALSE.</TestCaseStepAction>
+    <TestCaseStepResult>Content is received from the Producer.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer processes the payloads. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer successfully processes the content without error and display the object in the consumer system. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain the valid MIP4 content from the producer containing payloads in which the object instance has a IsDependent indicator set to TRUE. </TestCaseStepAction>
+    <TestCaseStepResult>Content is received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer processes the payloads. </TestCaseStepAction>
+    <TestCaseStepResult>MIP 4.0 expected behaviour; since there is no association in MIP 4.0, the consumer successfully ignores the content without error and the object is NOT displayed by the consumer system.
+MIP 4.1 expected behaviour; the consumer successfully process and display the object instance if all dependencies are present in the payload or are already in their system. If a dependency is missing, the object instance is successfully ignored and NOT displayed by the consumer system. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain an update of a valid MIP4 content from the producer containing payloads in which the object instance has a change of state from FALSE to TRUE of the IsDependent indicator. </TestCaseStepAction>
+    <TestCaseStepResult>Content is received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer processes the payloads. </TestCaseStepAction>
+    <TestCaseStepResult>MIP 4.0 expected behaviour; since there is no association in MIP 4.0, the consumer successfully ignores the content without error and the displayed object is removed from the display on the consumer system.
+MIP 4.1 expected behaviour; successfully process and the object are displayed on the consumer system if all dependencies are present in the payload or are already in their system. If a dependency is missing, the object instance is successfully ignored and object was already displayed it should be remove from the display on the consumer system. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>7</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain an update of a valid MIP4 content from the producer containing payloads in which the object instance has a change of state from TRUE to FALSE of the IsDependent indicator. </TestCaseStepAction>
+    <TestCaseStepResult>Content is received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>8</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer processes the payloads. </TestCaseStepAction>
+    <TestCaseStepResult>MIP 4.0 expected behaviour; the consumer successfully processes the content without error and the object is displayed object on the consumer system.
+MIP 4.1 expected behaviour; successfully process or update and the object is displayed on the consumer system if all dependencies are present in the payload or are already in their system. If a dependency is missing, the object instance is successfully ignored and object was already displayed it should be remove from the display on the consumer system. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

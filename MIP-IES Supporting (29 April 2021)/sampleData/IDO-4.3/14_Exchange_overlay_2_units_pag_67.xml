@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<base:Context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:staffconceptinformationgroup="https://mip-interop.org/data/v4.3/StaffConcept/InformationGroup" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ContextIdentifier>/InformationGroup</base:ContextIdentifier>
+	<base:Data xsi:type="staffconceptinformationgroup:OverlayType">
+		<base:ID>eb82f3db-7185-4d17-b078-84fc5abdffb2</base:ID>
+		<concept:ConceptName>Overlay 1</concept:ConceptName>
+		<staffconcept:StaffConceptMetadata>
+			<staffconceptmetadata:StaffConceptMetadataOriginator>
+				<conceptmetadata:OriginatorName>Originator</conceptmetadata:OriginatorName>
+			</staffconceptmetadata:StaffConceptMetadataOriginator>
+		</staffconcept:StaffConceptMetadata>
+		<staffconceptinformationgroup:InformationGroupContent xsi:type="unit:HeadquartersStaffUnitType">
+			<base:ID>4483ba36-9c1f-461e-8429-a4ed5755cbdd</base:ID>
+			<concept:ConceptName>Staff Unit 1</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+			<organisation:OrganisationHasCommandFunctionIndicator>false</organisation:OrganisationHasCommandFunctionIndicator>
+			<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+			<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+			<object:ArmyEchelonCode>Battalion</object:ArmyEchelonCode>
+			</unit:UnitEchelon>
+		</staffconceptinformationgroup:InformationGroupContent>
+		<staffconceptinformationgroup:InformationGroupContent xsi:type="unit:BroadcastPublicAffairsUnitType">
+			<base:ID>7edb5b74-baff-4e97-b2c1-1b27390c02fc</base:ID>
+			<concept:ConceptName>Public Affairs Unit</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+			<organisation:OrganisationHasCommandFunctionIndicator>false</organisation:OrganisationHasCommandFunctionIndicator>
+			<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+			<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+			<object:ArmyEchelonCode>RegimentOrGroup</object:ArmyEchelonCode>
+			</unit:UnitEchelon>
+		</staffconceptinformationgroup:InformationGroupContent>
+	</base:Data>
+</base:Context>
+
+<!--
+Original example
+
+<base:Context>
+   <base:ContextIdentifier>/InformationGroup</base:ContextIdentifier>
+   <base:Data xsi:type="staffconceptinformationgroup:OverlayType">
+       <base:ID>eb82f3db-7185-4d17-b078-84fc5abdffb2</base:ID>
+       <concept:ConceptName>Overlay 1</concept:ConceptName>
+       <staffconceptinformationgroup:InformationGroupContent xsi:type="unit:HeadquartersStaffUnitType">
+           <base:ID>4483ba36-9c1f-461e-8429-a4ed5755cbdd</base:ID>
+           <concept:ConceptName>Staff Unit 1</concept:ConceptName>
+           <organisation:OrganisationHasCommandFunctionIndicator>false
+           </organisation:OrganisationHasCommandFunctionIndicator>
+           <organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+           <unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+               <object:ArmyEchelonCode>Battalion</object:ArmyEchelonCode>
+           </unit:UnitEchelon>
+       </staffconceptinformationgroup:InformationGroupContent>
+       <staffconceptinformationgroup:InformationGroupContent xsi:type="unit:BroadcastPublicAffairsUnitType">
+           <base:ID>7edb5b74-baff-4e97-b2c1-1b27390c02fc</base:ID>
+           <concept:ConceptName>Public Affairs Unit</concept:ConceptName>
+           <organisation:OrganisationHasCommandFunctionIndicator>false
+           </organisation:OrganisationHasCommandFunctionIndicator>
+           <organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+           <unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+               <object:ArmyEchelonCode>RegimentOrGroup</object:ArmyEchelonCode>
+           </unit:UnitEchelon>
+       </staffconceptinformationgroup:InformationGroupContent>
+   </base:Data>
+</base:Context>
+
+-->

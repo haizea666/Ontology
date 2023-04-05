@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>9</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>1 BSO deletion (implicit delete) in two topics</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Verify that the National MIP solution provides the ability to delete a BSO from one topic which is represented in two topics.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates two BSOs in its National C2I which are included in two topics. Nation B requests from Nation A both topics and receives them. Nation A deletes one BSOs in one of the two topics. Nation B requests the new BSO status from Nation A and receives it. The BSOs is deleted from the one topic and not from the other.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Consumer (R/R) initialisation started.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is passed if Nation B receives the delete object status from Nation A. The deleted objects should be removed only from the affected Topic.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates two BSOs included in two Topics. </TestCaseStepAction>
+    <TestCaseStepResult>Nation A can see BSOs in its C2IS</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B requests from Nation A both topics. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives BSOs from Nation A</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A deletes one BSO from one Topic</TestCaseStepAction>
+    <TestCaseStepResult>Nation A can see the BSO deleted only from affected Topic</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B requests new situation and receives it. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays BSO deleted only from the affected Topic. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:action="https://mip-interop.org/data/v4.3/BattlespaceConcept/Action" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Action" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Concept.xsd" namespace="https://mip-interop.org/data/v4.3/Concept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Task" type="action:TaskType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Action, for which the planning details are known.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1f109ba1-99af-4ab1-bce3-adde85d2b418</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Task</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TaskDetailText" type="action:TaskDetailTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The description of the Task's detail.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cb5d91d1-839b-4647-9f46-07d34164d82c</app:SemanticID>
+        <app:ShortName>detailText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>detail</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TaskDetailTextType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The description of the Task's detail.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cb5d91d1-839b-4647-9f46-07d34164d82c</app:SemanticID>
+        <app:ShortName>detailText</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>text</app:MIMStereotype>
+        <app:DisplayName>detail</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TaskType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Action, for which the planning details are known.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1f109ba1-99af-4ab1-bce3-adde85d2b418</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Task</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="concept:ConceptName" />
+          <xsd:element ref="battlespaceconcept:BattlespaceConceptMetadata" />
+          <xsd:element ref="action:TaskDetailText" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT2.5_2502Test TitleCommentText element 2500 charExecution Priority1ObjectiveVerifies the ability to create, update and exchange an operational comment (CommentText) for a Facility in a nation's C2IS.
+IDT's remark: "There is no size limit on CommentText. We should test above and below the JC3IEDM equivalent limits."ScenarioSend a facility with an operational comment to the Gateway through the Test Tool (TT). The Gateway receives the information and interprets it correctly. 
+Update and send the comment again. The Gateway must be able to receive and interpret it correctly. 
+In either way the Gateway must remain stable.EnvironmentCo-located, Internet through VPN.Participation1MTRSApplicablePre-test ConditionsThe nation's Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport.Test InputsDataset_2502x.ConclusionThis test is considered a success if the Gateway remains stable and handles all messages correctly. Preferably all comments are displayed correctly.Test OutputsPass or fail.TraceabilityREQ_INF_0001
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The nation loads dataset_2502a (a Facility with an operational CommentText containing more than 2500 characters) into their C2 system (2) through the TT (1). ~~Comments correctly visible in the C2 system. ~~122. The nation loads dataset_2502b (StaffCommentsText additional to the previous CommentText) into their C2 system (2) through the TT (1). ~~Both, CommentText and StaffCommentsText, correctly visible in the C2 system. ~~123. The nation loads dataset_2502c (updated CommentText resulting Element is more than 2500 characters. The StaffCommentsText remains the same) into their C2 system (2) through the TT (1). ~~Both, CommentText and StaffCommentsText, correctly visible in the C2 system. ~~124. The nation loads dataset_2502d (updated StaffCommentsText) into their C2 system (2) through the TT (1). ~~Both, CommentText and StaffCommentsText, correctly visible in the C2 system. ~~125. The nation loads dataset_2502c (updated CommentText resulting Element is less than 2500 characters. The StaffCommentsText remains the same) into their C2 system (2) through the TT (1). ~~Both, CommentText and StaffCommentsText, correctly visible in the C2 system. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

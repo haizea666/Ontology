@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>36</TestCaseIdGroup>
+    <TestCaseIdNumber>1</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Join a Federation.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability of an incoming C2IS (Nation B) to join a MIP4 federation with another C2IS (Nation A). From then on, other Nations can follow this same process as Nations B and A.</TestCaseObjective>
+  <TestCaseScenario>The MIP4-IES solution focuses on a peer-to-peer exchange of information between a Provider and a Consumer system. The MIP4-IES solution is intended to be deployed in an environment with a stable IP network between the Provider and Consumer. The MIP4-IES solution will primarily focus on the boundary between C2 systems, it is expected that systems will connect 'at the back end' via the MIP4 interface, and will separately handle the presentation of information.</TestCaseScenario>
+  <TestCaseEnvironment>Internet, Co-located. Exchange Pattern: N/A</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>There is an available and dedicated stable MIP4 IP (V)LAN infrastructure, at least with bandwidth, throughput and performance values similar to the MIP local network in Greding during WGs. Its administrator(s) are also available for testing support.Both Nations have filled in the IPT4_Joining_Questionnaire and are correctly configured for the MIP4 LAN (including any security / classification constraints if necessary).The required physical communication links are established and tested, and each nation has a current and correct data-fill, plus any required national data, loaded in its national system.Nation A shall be in an operational state.Both nations shall provide a summary of the data to be exchanged (within the IPT4_Joining_Questionnaire) so that validation by the receiving nation can be performed.Both nations shall have established and verified connectivity via the MIP4-IES Exchange Mechanism.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>Systems are considered to have joined the MIP4 Federation when both nations' MIP4 Gateways have seamless IP connectivity between them.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0018</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Both nations get any necessary requirements and configuration data (IP addressing, TCP ports, users / passwords...) from the IP network administrator(s).
+Notices: This test is done bilaterally. Additional nations can repeat it for further joining the MIP4 federation.
+After joining, each nation will notify its partner nation that its joining process is complete.
+Notice that this procedure is just a draft general sample for IP networks. </TestCaseStepAction>
+    <TestCaseStepResult>Both nations become aware and understand what they technically need to join the IP federation network (transport level). </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Both nations configure their MIP4 gateways and any other necessary equipment (routers, switches, cipher...) with the data gathered at step 1. </TestCaseStepAction>
+    <TestCaseStepResult>Both nations get their MIP4 network equipment and interfaces configured after its administrator's procedure. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Both nations configure their MIP4 gateways and national C2IS in order to operate a MIP4 environment. </TestCaseStepAction>
+    <TestCaseStepResult>Both networks get their MIP4 national segment configured for operation after national procedures. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>With the help of the network administrator(s), both nations carry out peer-to-peer IP configuration tests (ping, raw XML message exchange, https...) in order to assure WS MIP4 exchange will be straightforward and clean. </TestCaseStepAction>
+    <TestCaseStepResult>The IP connection for WS operation between both nations' MIP4 gateways is fully operational, with the best quality that the network infrastructure allows for. </TestCaseStepResult>
+    <TestCaseStepDestination>2,1</TestCaseStepDestination>
+    <TestCaseStepSource>1,2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

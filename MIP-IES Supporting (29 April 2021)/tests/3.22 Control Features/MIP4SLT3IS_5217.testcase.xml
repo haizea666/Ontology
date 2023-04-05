@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>17</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create and update Holdings as ControlFeatures.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. To verify basic functionality regarding Holdings (not yet clear what a 'Holding' within MIP4 will be, see remarks on MIP4-IES Test Case Directory): test adding and updating Persons, Equipment and Consumable Materiel Holdings.</TestCaseObjective>
+  <TestCaseScenario>Two nations are exchanging information between their C2ISs.
+Nation A will add Holding information to an Organisation and send it to Nation B.
+Nation A will then update the Holding information, and send the updated information to Nation B.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation B has a subscription to Nation A's 'Forces' topic. A friend Organisation has been created by Nation A in the 'Forces' topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>Holding information created by Nation A is received by Nation B. Updates to existing Holding information made by Nation A are received by Nation B. Holding information is shared correctly by the C2ISs of both nations.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates three types of Holdings (just a raw 'ControlFeature' message element with associations to the Persons, Equipment and Materiel it contains?) for an existing Organisation (How can this figures be specified?): 
+- Person Holding (e.g. 30 with an officer RankCode)
+- Equipment Holding (e.g. 50 PowerTransmissionLines)
+- Consumable Materiel Holding (e.g. 100 with ClassV (Ammunition) MaterielSupplyClassCode) </TestCaseStepAction>
+    <TestCaseStepResult>Holding information is added to the organisation in Nation A's C2IS.
+Nation B receives Holding information. The Holding information for the Organisation is the same in the C2ISs of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the Holding information created in Step 1:
+- Number of officers changed to 28
+- Number of PowerTransmissionLines changed to 75
+- Number of ClassV changed to 0. </TestCaseStepAction>
+    <TestCaseStepResult>Holding information is updated in the C2IS of Nation A. Nation B receives and applies the updated information. The Holding information for the Organisation is the same in the C2IS of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

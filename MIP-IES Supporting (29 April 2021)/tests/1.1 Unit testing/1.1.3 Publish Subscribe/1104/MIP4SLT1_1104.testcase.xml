@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>4</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Subscribe using an unsupported filter (from producer's point of view): malformed topic expression</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>To subscribe to items using a filter with a malformed topic expression (using a TopicExpression).</TestCaseObjective>
+  <TestCaseScenario>Test of faults (InvalidTopicExpressionFault). The Consumer is interested in receiving regular updates of the Current Situation on topic in an asynchronous way (i.e. without polling the Producer). The topic expression is malformed as understood by the Producer.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 </TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1213, MIP4SLT1_1215
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.Consumer successfully discovered the target Producer. The system on the Consumer side has been properly configured and is ready to interact with the Producer system.</TestCasePreCondition>
+  <TestCaseInput>Name of single topic and topic expression dialect to be tested.</TestCaseInput>
+  <TestCaseConclusion>The test is concluded after the Consumer is ready to receive regular asynchronous updates of the current situation from the Producer and the Consumer system is able to correctly receive all information associated with the topic, i.e. that the topic expression is malformed as understood by the Producer, over a publish-subscribe exchange.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the information associated with the single topic requested is received correctly.</TestCaseOutput>
+  <TestCaseTraceability>MIP4_Publish_Subscribe_Exchange_Pattern, REQ_EM_0008, REQ_EM_0010, REQ_SYS_0021.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Consumer subscribes to the Producer in order to advertise its interest in a single topic.  
+rpw:GetResourceProperty
+with parameters wsn:SimpleTopicExpression, wsn:FixedTopicSet, wsn:TopicExpressionDialect and wstop:TopicSet. </TestCaseStepAction>
+    <TestCaseStepResult>The Producer receives a valid request for resource properties using SimpleTopicExpression </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer informs that the used topic expression is malformed. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer receives and interprets requested information correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

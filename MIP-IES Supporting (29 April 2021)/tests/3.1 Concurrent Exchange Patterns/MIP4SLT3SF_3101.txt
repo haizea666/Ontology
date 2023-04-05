@@ -1,0 +1,39 @@
+Test description
+
+Test IDMIP4SLT3SF_3101Test TitleFile - P/SExecution Priority1ObjectiveThe Provider exports the data via file and Consumer imports it.  Consumer is already subscribing to notifications.ScenarioThe Consumer is interested in receiving regular updates of the Current Situation in an asynchronous way (i.e. without polling the Producer).  The Producer exports a file (possibly to re-initialise Consumer) which the consumer receives and processes.EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 MTRSN/APre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1213, MIP4SLT1_1215
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.
+
+Consumer successfully discovered the target Producer.  The system on the Consumer side has been properly configured and is ready to interact with the Producer system.  The Consumer has subscribed for at least one notification that the Producer is exporting.
+Test InputsN/A.ConclusionThe test is concluded after the Consumer successfully receives and processes the transmitted file.Test OutputsN/A.TraceabilityREQ_SYS_0013.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1.Producer (1) checks the subscription filter and determines if data matches specified filter.  For this test, the Producer must be broadcasting data which matches the specified filter, so the Producer sends a wsn-b:Notify to the address specified in the wsn-b:ConsumerReference. ~~The Producer (1) sends notification to the Consumer (2) and exports the subscription data as a file.
+
+The Consumer imports the file correctly and processes the data contained in the file correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+3
+
+
+
+					          
+
+
+1
+

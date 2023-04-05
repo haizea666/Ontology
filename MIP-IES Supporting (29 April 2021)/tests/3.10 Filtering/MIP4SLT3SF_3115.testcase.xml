@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>15</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Filter by Area - data leaving.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Evaluate the behaviour associated with Filtering. Assess the impact of data 'leaving the filter' by Area. </TestCaseObjective>
+  <TestCaseScenario>A Consumer specifies a rectangular area indicating its geographical area of interest. Several BSOs within this subscription will be updated 'leaving the filter' at the Producer.
+The easiest way to test a BSO leaving an Area filter is by keeping its 'LocationType' to be a 'Point' and then changing its 'Lat' and 'Lon' Elements to move it out of the Consumer's area of interest borders (without changing any other of its elements or attributes).</TestCaseScenario>
+  <TestCaseEnvironment>Internet, co-located. Exchange Pattern: P/S, R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>31003 - Filter by Area test case.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>Even though the Consumer may specify a Filter, it remains the responsibility of the Provider to determine how best to satisfy the request, which should be considered a 'best effort' requirement.
+The Consumer must accept the fact that some updates may continue to be received for BSOs that leave its Area of Interest. If the Provider implements logic to stop sending updates when a BSO leaves the Area Filter, the Consumer will not receive any special notification - it is its (system) responsibility to detect when BSO position updates have gone stale and should be removed from the current operational picture shown on its C2IS.
+Consequently, the conclusion of this test is just to evaluate the behaviour associated with Filtering, assessing the impact of data 'leaving the filter' by Area.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0016, REQ_SYS_0021</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer inserts BSOs in its C2IS, within the Area of Interest of the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The insertions are automatically received at the Consumer, which is able to incorporate them to the current operational picture shown on its C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>At the producer, update the positions ('Lat' and 'Lon' Elements) of some of these BSOs, making them fall out of the consumer's Area of Interest. Rest of these BSOs' attributes and elements will stay unchanged. Obtain them on the consumer.
+Allow some reasonable time, to let the Consumer detect when BSO position updates have gone stale and act consequently. </TestCaseStepAction>
+    <TestCaseStepResult>It remains the responsibility of the Provider to determine how best to satisfy the Consumer's Filter specification request.
+The not filtered out insertions are automatically received at the Consumer, which is able to incorporate them to the current operational picture shown on its C2IS.
+The Filtering behaviour will be evaluated on both Producer and Consumer sides. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Producer and Consumer rotate roles and conduct Step 1 again. </TestCaseStepAction>
+    <TestCaseStepResult>As steps 1 and 2. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

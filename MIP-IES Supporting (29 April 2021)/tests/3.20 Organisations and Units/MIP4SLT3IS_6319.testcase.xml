@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>63</TestCaseIdGroup>
+    <TestCaseIdNumber>19</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Organisation Affiliations update.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Verify the ability to update and exchange Affiliations information of an Organisation in a nation's C2IS.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates an Organisation with specific Affiliations. Nation B receives the information and interprets it correctly.
+Nation A updates the Affiliations of the Organisation.Nation B receives and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a Topic which includes message elements belonging in the Organisation message schema area. Nation B has subscribed to this Topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the updated Affiliations of the Organisation are displayed correctly on both Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a message element for an Organisation with the following affiliations:
+GeopoliticalAffiliation
+EthnicAffiliation
+ReligiousAffiliation
+OtherAffiliation </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the Organisation with all affiliations correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates all of the 4 Affiliation Sub-Types. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives and displays the Organisation with the new affiliations correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

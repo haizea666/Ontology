@@ -1,0 +1,34 @@
+Test description
+
+Test IDMIP4SLT1_1125Test TitleRetrieve items using a filter on multiple topics, using a FullTopicExpressionExecution Priority2 (though High Priority area)ObjectiveTo retrieve items using a filter on multiple topics, using a FullTopicExpression.ScenarioTest to be derived with (topic "contains" items; topic does not "contain" items). 'Retrieve' is the term used within MIP Information Exchange Specification (MIP IES) - REQUEST/RESPONSE EXCHANGE PATTERN.
+Notice: There is 'TopicExpression' yet not 'FullTopicExpression' within MIP4.0- REQUEST/RESPONSE EXCHANGE PATTERN - IPT4
+V0.1.2, not even the term 'Full' is once found. EMT: Please assessEnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1214, MIP4SLT1_1213
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Test InputsName of multiple topics to be testedConclusionThe test is completed when the Consumer system is able to correctly receive all information associated with the contained items on multiple topics, over a request-response exchange.  The Provider must identify contained items on multiple topics.Test OutputsVerification that the information associated with the multiple topics requested is received correctly.TraceabilityMIP4_Request_Response_Exchange_Pattern, REQ_SYS_0021, REQ_EM_0012
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (1) requests information about items contained by multiple topics from the Provider (2) using a FullTopicExpression. ~~Provider receives and interprets request correctly. ~~122. Provider sends requested information (wether topics "contain" items; topics do not "contain" items).   Consumer receives and interprets requested data correctly. ~~Requested data is received and interpreted correctly. ~~21Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

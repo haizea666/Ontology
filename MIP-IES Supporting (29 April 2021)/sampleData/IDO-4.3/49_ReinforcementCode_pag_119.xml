@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:UnitReinforcementCode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">ReinforcedOnly</unit:UnitReinforcementCode>
+
+<!--
+Original example
+
+<taskorg:ReinforcementCodeWrapper>
+<taskorg:MilitaryOrganisationReinforcementCode>ReinforcedOnly</taskorg:MilitaryOrganisationReinforcementCode
+>
+</taskorg:ReinforcementCodeWrapper>
+-->

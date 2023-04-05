@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>33</TestCaseIdGroup>
+    <TestCaseIdNumber>4</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Check when new information (BSO) is added / removed from an Overlay. Update BSO after removing.</TestCaseTitle>
+  <TestCaseExecutionPriority>0</TestCaseExecutionPriority>
+  <TestCaseObjective>Verify correct exchange behaviour when a BSO is added to Overlay, removed from Overlay, and updated.</TestCaseObjective>
+  <TestCaseScenario>Nation A adds a new BSO to the Overlay.
+Nation B receives the update information for the Overlay and displays the BSO correctly.
+Nation A removes the BSO from the Overlay. Nation B receives the update information for the Overlay and removes the BSO from display.
+Nation A updates the BSO details. Nation B does not receive the update because BSO is not covered by the topic which contains the overlay..</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a topic, which includes the Overlay. 
+Nation B has subscribed to this topic.
+The Overlay was already exchanged after it was created by Nation A so that it is available on both systems.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the updates are display correctly on both Nations’ C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds a new BSOto the Overlay</TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the update and displays the BSO correctly.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A removes the BSO from the Overlay.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B receives the update and removes the BSO from the Overlay display.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the BSO details.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B does not receive the update because the BSO is not part of the topic subscribed by Nation B.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

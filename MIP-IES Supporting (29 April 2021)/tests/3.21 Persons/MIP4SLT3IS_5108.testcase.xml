@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>51</TestCaseIdGroup>
+    <TestCaseIdNumber>8</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Add Affiliations to Persons, Organisations and Facilities.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. To verify basic functionality for Affiliation: adding affiliations to Organisations, Persons and Facilities.</TestCaseObjective>
+  <TestCaseScenario>Two nations are exchanging information between their C2IS's. Nation A will add Affiliations (a 'Person' element) to an organisation, a person, or a facility.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation B has a subscription to receive information from the 'Ground Picture &gt; Forces' and the 'Ground Picture &gt; Infrastructure and Environment' Topics of Nation A. A 'Friend' (HostilityStatusCode) Organisation, and a Person BSO exist in the 'Forces' topic, and a 'Hostile' Facility exists in the 'Infrastructure and Environment' topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>Nation B receives information about Affiliation added by Nation A. The information is correctly processed (and displayed) in the C2IS's of both nations.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds the GeopoliticalAffiliation 'Canada' to an existing organisation in the 'Forces' Topic. </TestCaseStepAction>
+    <TestCaseStepResult>The GeopoliticalAffiliation is created; Nation B receives the new Affiliation information. The same information is shared by the C2IS's of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds the EthnicAffiliation 'Iranian/Persian' to an existing hostile facility (e.g. a Building) in the 'Infrastructure and Environment' topic. </TestCaseStepAction>
+    <TestCaseStepResult>The EthnicAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds a GeopoliticalAffiliation to an existing Person BSO in the 'Forces' Topic. </TestCaseStepAction>
+    <TestCaseStepResult>The GeopoliticalAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds a ReligiousAffiliation to the person BSO used in Step 3. </TestCaseStepAction>
+    <TestCaseStepResult>The ReligiousAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A adds the EthnicAffiliation 'Iranian/Persian' to the person BSO used in Step 3. </TestCaseStepAction>
+    <TestCaseStepResult>The EthnicAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A changes the EthnicAffiliation created in Step 5 to 'Iraqi'. </TestCaseStepAction>
+    <TestCaseStepResult>The EthnicAffiliation is changed; Nation B receives the updated information. The same information is shared by the C2IS's of both nations.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

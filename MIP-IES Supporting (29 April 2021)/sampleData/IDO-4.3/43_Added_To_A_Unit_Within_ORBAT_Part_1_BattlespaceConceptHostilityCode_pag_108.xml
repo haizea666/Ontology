@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<battlespaceconcept:BattlespaceConceptHostilityCode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">Friend</battlespaceconcept:BattlespaceConceptHostilityCode>
+
+<!--
+Original example
+
+<orgstruct:HostilityStatusCodeWrapper>
+	<orgstruct:HostilityStatusCode> Friend </orgstruct:HostilityStatusCode>
+</orgstruct:HostilityStatusCodeWrapper>
+-->

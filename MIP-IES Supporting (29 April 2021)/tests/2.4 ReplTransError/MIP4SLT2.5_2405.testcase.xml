@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT2.5</TestCaseIdLevel>
+    <TestCaseIdGroup>24</TestCaseIdGroup>
+    <TestCaseIdNumber>5</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Implicit Value-Ranges - Invalid Domain Value Numbers</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Check if the systems verify the number ranges according the schema and are able to handle invalid schema information.
+Further will be checked, if the systems are able to handle valid schema ranges which are outside intended MIM ranges (i.e. totalDigits=6, fractionDigits=2 allows in the schema the maximum value of 999999 but according MIM interpretation of the schema definition only 9999.99)</TestCaseObjective>
+  <TestCaseScenario>Send objects for which a range is defined. 
+Use numbers which are outside the schema definition.
+Further use numbers which are inside the schema definition and outside the intended MIM range.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located, Internet through VPN.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>1</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. 
+</TestCasePreCondition>
+  <TestCaseInput>MIP4SLT2.5_2405_x</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success the Gateway remains stable and handles all messages correctly. </TestCaseConclusion>
+  <TestCaseOutput>Pass or fail.</TestCaseOutput>
+  <TestCaseTraceability>-</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2405_a into their C2 system (2) through the TT (1).
+This file includes a chemical attack with values outside the schema definition.</TestCaseStepAction>
+    <TestCaseStepResult>The consumer reports an error to the producer/provider.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The nation loads MIP4SLT2.5_2405_b into their C2 system (2) through the TT (1).
+This file includes a armoured personell carrier with values inside the schema range but outside the intended MIM range.</TestCaseStepAction>
+    <TestCaseStepResult>The consumer system has to handle the information and could inform the producer/provider that the quality of the data might be compromised.</TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

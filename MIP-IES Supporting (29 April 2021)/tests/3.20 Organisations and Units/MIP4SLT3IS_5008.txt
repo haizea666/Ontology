@@ -1,0 +1,28 @@
+Test description
+
+Test IDMIP4SLT3IS_5008Test TitleCreate Unit with undefined GeometricDefinition.Execution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the operational elements (defined by IDT Schema Documentation > Unit.xsd > Unit) and the Consumers are able to correctly understand (and display) it. 
+This case is focused on the Unit's GeometricDefinition element when it is undefined.ScenarioThe Producer creates message elements for Unit with at least all its mandatory Elements. The Consumers receive the data and process them. GeometricDefinition Element is set to nil.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has created the 'Ground Picture > Forces' topic. The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the unit is created and all attributes are processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer creates the Unit with name XXX_UL_017 and fills ALL its mandatory elements with values, taking special care to set an undefined GeometricDefinition.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the unit: ITA_UL_017 ~~
+Consumers receive and process (and display) the Unit created and all elements that the Producer created. ~~122. The Producer creates an update for the object by changing its GeometricDefinition element with nil value. The OrganisationOperationalStatusCode is also changed, keeping the values of the rest of elements. ~~Consumers receive and process (and display) the created Unit with undefined location and all elements that the Producer created. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

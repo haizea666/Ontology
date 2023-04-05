@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT1_1107Test TitleSubscribe, demanding raw notifications (producer not supporting it)Execution Priority1ObjectiveConsumer subscribes to a Producer's subscription list and receives raw notification that the producer is not supporting the requested data. ScenarioA Consumer sends a subscription request to a Producer for a published topic requesting to receive a raw notifications if the producer is not supporting the requested data.  EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has created the 'Ground Picture > Forces' topic. The Consumer has subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the consumer receives raw notification that the producer is not supporting the topic. Test OutputsN/A.TraceabilityREQ_EM_0008, REQ_EM_0010.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Producer (A) publishes a subscription list including message type relating to 'Ground Picture > Forces' topic. ~~ 
+Consumer (B) subscribes to the 'Ground Picture > Forces' topic and requests raw notification if Producer (A) is not supporting the subscription data. ~~122. Producer (A) receives the subscription request for the 'Ground Picture > Forces' topic from Consumer (A) and sends raw notification to Consumer (B) that the producer is not supporting the request. ~~
+Consumer (B) received the raw notification from Producer (A) that the 'Ground Picture > Forces' topic is not supported. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

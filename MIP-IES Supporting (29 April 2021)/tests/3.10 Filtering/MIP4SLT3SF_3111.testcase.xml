@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>31</TestCaseIdGroup>
+    <TestCaseIdNumber>11</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Filter by Topic.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Evaluate the behaviour associated with Filtering, for the Filter by Topic type, which is the base filtering functionality. Commonly defined filtering specifications (Xpath expressions) for both P/S and R/R are recommended.</TestCaseObjective>
+  <TestCaseScenario>A Consumer is subscribed to part of the Topic list of the Producer. Several BSOs both within and out of this subscription will be published at the Producer.</TestCaseScenario>
+  <TestCaseEnvironment>Internet, co-located. Exchange Pattern: P/S, R/R.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>3.7 Information Scope (Topics)</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>Even though the Consumer may specify a Filter, it remains the responsibility of the Provider to determine how best to satisfy the request. This may mean that the Consumer receives data outside the parameters of the Filter. Satisfying the Filter requests of the Consumer should be considered 'best effort' and not a hard requirement.
+Consequently, the conclusion of this test is just to evaluate the behaviour associated with Filtering.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0021</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer inserts BSOs in its C2IS, both within and out of the Topic list to which the Consumer is subscribed. </TestCaseStepAction>
+    <TestCaseStepResult>It remains the responsibility of the Provider to determine how best to satisfy the Consumer's Filter specification request, which will be considered a 'best effort' requirement.
+The not filtered out insertions are automatically received at the Consumer, which is able to incorporate them (or not) to the current operational picture shown on its C2IS.
+The Filtering behaviour will be evaluated on both Producer and Consumer sides. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer and Consumer rotate roles and conduct Step 1 again. </TestCaseStepAction>
+    <TestCaseStepResult>As steps 1. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

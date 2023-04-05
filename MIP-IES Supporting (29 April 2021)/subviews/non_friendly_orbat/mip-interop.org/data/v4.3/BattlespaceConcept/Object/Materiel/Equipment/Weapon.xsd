@@ -1,0 +1,1712 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:equipment="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:weapon="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Weapon" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Weapon" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AirDefenceAutomaticCannon" type="weapon:AirDefenceAutomaticCannonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automatic cannon, usually linked to remote sensors, used primarily in the role of air defence.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b9577aa-401d-4ebc-a46e-ae1857beb632</app:SemanticID>
+        <app:DisplayName>Air-defence automatic cannon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AirDefenceAutomaticCannonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automatic cannon, usually linked to remote sensors, used primarily in the role of air defence.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b9577aa-401d-4ebc-a46e-ae1857beb632</app:SemanticID>
+        <app:DisplayName>Air-defence automatic cannon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AirDefenceGun" type="weapon:AirDefenceGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A gun used primarily in the role of air defence.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12c4bb9f-c48c-49b9-803c-f8ef2f0174ed</app:SemanticID>
+        <app:DisplayName>Air-defence gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AirDefenceGunScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the AirDefenceGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dcfa6165-42a0-43e6-bd6e-9a2ab3e9e319</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AirDefenceGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A gun used primarily in the role of air defence.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:12c4bb9f-c48c-49b9-803c-f8ef2f0174ed</app:SemanticID>
+        <app:DisplayName>Air-defence gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:AirDefenceGunScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AirDefenceMissileLauncher" type="weapon:AirDefenceMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an air defence missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c413a685-3b83-40bf-8a6d-a279c4f5e740</app:SemanticID>
+        <app:DisplayName>Air-defence missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AirDefenceMissileLauncherRangeCode" type="weapon:MissileLauncherRangeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The range of the AirDefenceMissileLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e964e3bd-c03d-4722-a108-09b238267616</app:SemanticID>
+        <app:ShortName>rangeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AirDefenceMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an air defence missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c413a685-3b83-40bf-8a6d-a279c4f5e740</app:SemanticID>
+        <app:DisplayName>Air-defence missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:AirDefenceMissileLauncherRangeCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AirDefenceWeapon" type="weapon:AirDefenceWeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon specifically designed for the engagement of aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d4a9dcf3-32fe-453d-aec5-ed01c915fd33</app:SemanticID>
+        <app:DisplayName>Air defence weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AirDefenceWeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon specifically designed for the engagement of aircraft.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d4a9dcf3-32fe-453d-aec5-ed01c915fd33</app:SemanticID>
+        <app:DisplayName>Air defence weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiAircraftArtillery" type="weapon:AntiAircraftArtilleryType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An anti-aircraft weapon employed in the air defence role.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:301b8c1a-c5e8-41b5-a4e0-a1186dc8b6f1</app:SemanticID>
+        <app:DisplayName>Anti-aircraft artillery</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiAircraftArtilleryType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An anti-aircraft weapon employed in the air defence role.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:301b8c1a-c5e8-41b5-a4e0-a1186dc8b6f1</app:SemanticID>
+        <app:DisplayName>Anti-aircraft artillery</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiAircraftMachineGun" type="weapon:AntiAircraftMachineGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An anti-aircraft gun, normally belt fed, employed in the air defence role.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f4593a6c-63f9-4a8b-9157-3e35d2603f1e</app:SemanticID>
+        <app:DisplayName>Anti-aircraft machine gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiAircraftMachineGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An anti-aircraft gun, normally belt fed, employed in the air defence role.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f4593a6c-63f9-4a8b-9157-3e35d2603f1e</app:SemanticID>
+        <app:DisplayName>Anti-aircraft machine gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiShipSurfaceMissileLauncher" type="weapon:AntiShipSurfaceMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-ship surface missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:45bf4002-1395-4511-8dcc-7f666a28564f</app:SemanticID>
+        <app:DisplayName>Anti-ship surface missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiShipSurfaceMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-ship surface missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:45bf4002-1395-4511-8dcc-7f666a28564f</app:SemanticID>
+        <app:DisplayName>Anti-ship surface missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiSubmarineWeapon" type="weapon:AntiSubmarineWeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon specifically designed for the engagement of submarines.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:641eb1d0-00a4-4f68-be53-1a547380c7fa</app:SemanticID>
+        <app:DisplayName>Anti-submarine weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiSubmarineWeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon specifically designed for the engagement of submarines.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:641eb1d0-00a4-4f68-be53-1a547380c7fa</app:SemanticID>
+        <app:DisplayName>Anti-submarine weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiTankGrenadeLauncher" type="weapon:AntiTankGrenadeLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-tank grenade in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b4641e50-aca0-4e08-82f9-806e8acb61cc</app:SemanticID>
+        <app:DisplayName>Anti-tank grenade launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AntiTankGrenadeLauncherScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the AntiTankGrenadeLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9bd99b15-9048-4f29-a59a-ff5e4db683c8</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiTankGrenadeLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-tank grenade in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b4641e50-aca0-4e08-82f9-806e8acb61cc</app:SemanticID>
+        <app:DisplayName>Anti-tank grenade launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:AntiTankGrenadeLauncherScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiTankGun" type="weapon:AntiTankGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A gun designed to destroy tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f23d9a9b-18fa-4cc7-8326-7fea9a345a61</app:SemanticID>
+        <app:DisplayName>Anti-tank gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AntiTankGunScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the AntiTankGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c27ebc7-2dc9-4487-9841-35dcad0e8346</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiTankGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A gun designed to destroy tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f23d9a9b-18fa-4cc7-8326-7fea9a345a61</app:SemanticID>
+        <app:DisplayName>Anti-tank gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:AntiTankGunScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiTankMissileLauncher" type="weapon:AntiTankMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-tank missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:018dce27-cf08-401f-a6bd-f909e274ce65</app:SemanticID>
+        <app:DisplayName>Anti-tank missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AntiTankMissileLauncherScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the AntiTankMissileLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d1de1bac-a758-4afe-b812-c6e9f482eb50</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiTankMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-tank missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:018dce27-cf08-401f-a6bd-f909e274ce65</app:SemanticID>
+        <app:DisplayName>Anti-tank missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:AntiTankMissileLauncherScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiTankRocketLauncher" type="weapon:AntiTankRocketLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-tank rocket in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3baaa226-1a0d-4df9-a779-80a12e27e7cd</app:SemanticID>
+        <app:DisplayName>Anti-tank rocket launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AntiTankRocketLauncherScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the AntiTankRocketLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:babf4e33-5ecd-4827-867d-eee387f89bb0</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiTankRocketLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold an anti-tank rocket in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3baaa226-1a0d-4df9-a779-80a12e27e7cd</app:SemanticID>
+        <app:DisplayName>Anti-tank rocket launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:AntiTankRocketLauncherScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AntiTankWeapon" type="weapon:AntiTankWeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon specifically designed for the engagement of armoured vehicles.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:069c96a0-335c-4196-95c6-88a60ea0f39a</app:SemanticID>
+        <app:DisplayName>Anti-tank weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AntiTankWeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon specifically designed for the engagement of armoured vehicles.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:069c96a0-335c-4196-95c6-88a60ea0f39a</app:SemanticID>
+        <app:DisplayName>Anti-tank weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ArmouredInfantryFightingOrCombatVehicle" type="weapon:ArmouredInfantryFightingOrCombatVehicleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An armoured vehicle used for transporting an infantry team and able to support it by the use of weapons.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dbf888d1-b51c-489c-a2a7-e7f559b492c9</app:SemanticID>
+        <app:DisplayName>Armoured infantry fighting/combat vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ArmouredInfantryFightingOrCombatVehicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An armoured vehicle used for transporting an infantry team and able to support it by the use of weapons.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dbf888d1-b51c-489c-a2a7-e7f559b492c9</app:SemanticID>
+        <app:DisplayName>Armoured infantry fighting/combat vehicle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AssaultGun" type="weapon:AssaultGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon, with a relatively long barrel, operating with a relatively low angle of fire, and having a high muzzle velocity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d634de3a-0d61-4556-9fd1-540b069ef28d</app:SemanticID>
+        <app:DisplayName>Assault gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AssaultGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon, with a relatively long barrel, operating with a relatively low angle of fire, and having a high muzzle velocity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d634de3a-0d61-4556-9fd1-540b069ef28d</app:SemanticID>
+        <app:DisplayName>Assault gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:GunType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AssaultRifle" type="weapon:AssaultRifleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A firearm used in an assault role, that has a rifled bore designed to be fired from the shoulder.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7dfa96f4-a260-4097-b805-832847e5e6ae</app:SemanticID>
+        <app:DisplayName>Assault rifle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AssaultRifleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A firearm used in an assault role, that has a rifled bore designed to be fired from the shoulder.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7dfa96f4-a260-4097-b805-832847e5e6ae</app:SemanticID>
+        <app:DisplayName>Assault rifle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:RifleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BallisticMissileLauncher" type="weapon:BallisticMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a ballistic missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f4365dd-7dde-45ca-a105-b2214f1494ba</app:SemanticID>
+        <app:DisplayName>Ballistic missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BallisticMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a ballistic missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5f4365dd-7dde-45ca-a105-b2214f1494ba</app:SemanticID>
+        <app:DisplayName>Ballistic missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SurfaceToSurfaceMissileLauncherType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BattleTank" type="weapon:BattleTankType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An armoured fighting vehicle, which, as its primary function, is designed to close with the enemy and engage their armour and infantry with direct fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84fc4efe-ad90-43cb-b21d-1048eab2968b</app:SemanticID>
+        <app:DisplayName>Battle-tank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="BattleTankScalingCode" type="equipment:BattleTankScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the BattleTank.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1c004b78-e22d-4091-93b1-e9de5f5192a5</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BattleTankType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An armoured fighting vehicle, which, as its primary function, is designed to close with the enemy and engage their armour and infantry with direct fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84fc4efe-ad90-43cb-b21d-1048eab2968b</app:SemanticID>
+        <app:DisplayName>Battle-tank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:TankType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:BattleTankScalingCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Blade" type="weapon:BladeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Flat cutting edge of a knife, saw or other tool or weapon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a4e33a2a-2d43-40e0-85ce-8b63bd0576b2</app:SemanticID>
+        <app:DisplayName>Blade</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="BladeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Flat cutting edge of a knife, saw or other tool or weapon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a4e33a2a-2d43-40e0-85ce-8b63bd0576b2</app:SemanticID>
+        <app:DisplayName>Blade</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Cannon" type="weapon:CannonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon for firing projectiles, having a heavy metal tube installed on a carriage or mounting.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9bb60342-f451-40db-819c-b4436cb87c4e</app:SemanticID>
+        <app:DisplayName>Cannon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CannonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon for firing projectiles, having a heavy metal tube installed on a carriage or mounting.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9bb60342-f451-40db-819c-b4436cb87c4e</app:SemanticID>
+        <app:DisplayName>Cannon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CarbineRifle" type="weapon:CarbineRifleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A short firearm, usually a rifle that has a rifled bore designed to be fired from the shoulder.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:554e8fef-005d-47ad-8450-f14b8428630b</app:SemanticID>
+        <app:DisplayName>Carbine rifle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CarbineRifleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A short firearm, usually a rifle that has a rifled bore designed to be fired from the shoulder.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:554e8fef-005d-47ad-8450-f14b8428630b</app:SemanticID>
+        <app:DisplayName>Carbine rifle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:RifleType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CloseInWeaponSystem" type="weapon:CloseInWeaponSystemType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An anti-aircraft weapon system employed, as a last resort, in the air defence role.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d5d284bc-9972-4af8-9fd7-0fb55d554175</app:SemanticID>
+        <app:DisplayName>Close in weapon system</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CloseInWeaponSystemType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An anti-aircraft weapon system employed, as a last resort, in the air defence role.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d5d284bc-9972-4af8-9fd7-0fb55d554175</app:SemanticID>
+        <app:DisplayName>Close in weapon system</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DirectFireGun" type="weapon:DirectFireGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon with a relatively low angle of fire, having a high muzzle velocity with a tube length of 30 calibres or more that delivers fire on a target using the target itself as a point of aim for either the weapon or the director.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3cf12d20-151e-4500-a8b3-d4bbd78519a4</app:SemanticID>
+        <app:DisplayName>Direct fire gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DirectFireGunScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the DirectFireGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:326fc131-7b0e-4af6-b705-878cacf45d2a</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DirectFireGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon with a relatively low angle of fire, having a high muzzle velocity with a tube length of 30 calibres or more that delivers fire on a target using the target itself as a point of aim for either the weapon or the director.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3cf12d20-151e-4500-a8b3-d4bbd78519a4</app:SemanticID>
+        <app:DisplayName>Direct fire gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:DirectFireGunScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FieldArtilleryCannon" type="weapon:FieldArtilleryCannonType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A field artillery cannon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6d5bd2dc-0877-431b-820f-f91cd8517a73</app:SemanticID>
+        <app:DisplayName>Field artillery cannon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FieldArtilleryCannonScalingCode" type="weapon:FieldArtilleryCannonScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the FieldArtilleryCannon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:14503a79-24a2-46f8-8c16-5f395a50c7a1</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="FieldArtilleryCannonScalingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of a FieldArtilleryCannon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1da793d6-dc73-442f-91f0-d77826295f54</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lighter than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The field artillery cannon has a calibre of 120mm and less.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3134f947-d7f8-45a0-adc3-e25aeb1df91f</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medium">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The field artillery cannon has a calibre between 121 and 160mm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ec5337a7-ac14-4f32-97cb-bb3dbe834550</app:SemanticID>
+            <app:DisplayName>Medium</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The field artillery cannon has a calibre between 161mm and 210mm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:10eb218c-ebea-4c59-9adf-cef948f7b1d9</app:SemanticID>
+            <app:DisplayName>Heavy</app:DisplayName>
+            <app:PhysicalName>HEAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryHeavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The field artillery cannon has a calibre of 211 MM or larger and is used in the field in support of manoeuvre forces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9e5147f2-f3f7-4cc1-a915-3c4f8f1da313</app:SemanticID>
+            <app:DisplayName>Very heavy</app:DisplayName>
+            <app:PhysicalName>VRYHVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="FieldArtilleryCannonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A field artillery cannon.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6d5bd2dc-0877-431b-820f-f91cd8517a73</app:SemanticID>
+        <app:DisplayName>Field artillery cannon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:FieldArtilleryWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:FieldArtilleryCannonScalingCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FieldArtilleryGun" type="weapon:FieldArtilleryGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon with a relatively long barrel, having a high muzzle velocity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ad869b7-7462-434b-9dca-207b43723ee2</app:SemanticID>
+        <app:DisplayName>Field artillery gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FieldArtilleryGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon with a relatively long barrel, having a high muzzle velocity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4ad869b7-7462-434b-9dca-207b43723ee2</app:SemanticID>
+        <app:DisplayName>Field artillery gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:FieldArtilleryWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FieldArtilleryWeapon" type="weapon:FieldArtilleryWeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An artillery weapon that is self-propelled or towed for use in the field in support of manoeuvre forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2de6474d-6464-4a27-b06e-e59130e30c4a</app:SemanticID>
+        <app:DisplayName>Field artillery weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FieldArtilleryWeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An artillery weapon that is self-propelled or towed for use in the field in support of manoeuvre forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2de6474d-6464-4a27-b06e-e59130e30c4a</app:SemanticID>
+        <app:DisplayName>Field artillery weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FixedFortificationArtillery" type="weapon:FixedFortificationArtilleryType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Guns inside a fortress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8d17c34b-6175-41f3-8bdf-b0027167d92a</app:SemanticID>
+        <app:DisplayName>Fixed fortification artillery</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FixedFortificationArtilleryType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Guns inside a fortress.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8d17c34b-6175-41f3-8bdf-b0027167d92a</app:SemanticID>
+        <app:DisplayName>Fixed fortification artillery</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:CannonType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FlameThrower" type="weapon:FlameThrowerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon that projects incendiary fuel and has provision for ignition of this fuel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ae00290c-6019-4364-bb9d-df66405de537</app:SemanticID>
+        <app:DisplayName>Flame-thrower</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FlameThrowerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon that projects incendiary fuel and has provision for ignition of this fuel.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ae00290c-6019-4364-bb9d-df66405de537</app:SemanticID>
+        <app:DisplayName>Flame-thrower</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GrenadeLauncher" type="weapon:GrenadeLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a grenade in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:314a18d8-2cf0-406e-8ce3-636de716926b</app:SemanticID>
+        <app:DisplayName>Grenade launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GrenadeLauncherScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the GrenadeLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:90e605e8-256e-4be6-8012-347b9292d8fc</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GrenadeLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a grenade in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:314a18d8-2cf0-406e-8ce3-636de716926b</app:SemanticID>
+        <app:DisplayName>Grenade launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:GrenadeLauncherScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GuidedCruiseMissileLauncher" type="weapon:GuidedCruiseMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a guided cruise missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dae2ad7d-e3e3-4c4f-91bf-2010f07f28bf</app:SemanticID>
+        <app:DisplayName>Guided cruise missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GuidedCruiseMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a guided cruise missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dae2ad7d-e3e3-4c4f-91bf-2010f07f28bf</app:SemanticID>
+        <app:DisplayName>Guided cruise missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SurfaceToSurfaceMissileLauncherType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Gun" type="weapon:GunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon with a relatively long barrel, operating with a relatively low angle of fire, and having a high muzzle velocity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d2d82023-b20b-4f31-8cb5-45feeffa6ff3</app:SemanticID>
+        <app:DisplayName>Gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GunHowitzer" type="weapon:GunHowitzerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon that has the capability of both low-angle and high-angles of fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6599199a-c5c8-44f5-a9f9-f8ba9a015ba8</app:SemanticID>
+        <app:DisplayName>Gun-howitzer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GunHowitzerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon that has the capability of both low-angle and high-angles of fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6599199a-c5c8-44f5-a9f9-f8ba9a015ba8</app:SemanticID>
+        <app:DisplayName>Gun-howitzer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:FieldArtilleryWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="GunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon with a relatively long barrel, operating with a relatively low angle of fire, and having a high muzzle velocity.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d2d82023-b20b-4f31-8cb5-45feeffa6ff3</app:SemanticID>
+        <app:DisplayName>Gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:CannonType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Howitzer" type="weapon:HowitzerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon that combines certain characteristics of guns and mortars. Normally a cannon with a tube length of 20 to 30 calibres; however, the tube length can exceed 30 calibres and still be considered a howitzer when the high angle firing zoning solution permits range overlap between charges.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c24e251-6ba9-4573-87c9-629001e27ea9</app:SemanticID>
+        <app:DisplayName>Howitzer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="HowitzerScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the Howitzer.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a363b32a-c864-4869-999b-f1fb949f7320</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="HowitzerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A cannon that combines certain characteristics of guns and mortars. Normally a cannon with a tube length of 20 to 30 calibres; however, the tube length can exceed 30 calibres and still be considered a howitzer when the high angle firing zoning solution permits range overlap between charges.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c24e251-6ba9-4573-87c9-629001e27ea9</app:SemanticID>
+        <app:DisplayName>Howitzer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:FieldArtilleryWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:HowitzerScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MachineGun" type="weapon:MachineGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automatic gun giving continuous fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bfed5383-14f3-4757-9543-6af40689cbf2</app:SemanticID>
+        <app:DisplayName>Machine gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MachineGunScalingCode" type="weapon:MachineGunScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the MachineGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2af010bd-fc98-4510-b3fb-573c7df273cd</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MachineGunScalingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of a MachineGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8b9cf8b7-1c8e-4e06-904d-456665e66905</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lighter than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f6583b0f-0f17-4832-81de-dfd490996276</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a0693585-9104-4162-899e-451e60808d82</app:SemanticID>
+            <app:DisplayName>Heavy</app:DisplayName>
+            <app:PhysicalName>HEAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MachineGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An automatic gun giving continuous fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:bfed5383-14f3-4757-9543-6af40689cbf2</app:SemanticID>
+        <app:DisplayName>Machine gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:MachineGunScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MachinePistol" type="weapon:MachinePistolType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A small hand-held firearm capable of giving continuous fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1857500f-a3f7-4f92-94d1-f5fface43b1d</app:SemanticID>
+        <app:DisplayName>Machine pistol</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MachinePistolType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A small hand-held firearm capable of giving continuous fire.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1857500f-a3f7-4f92-94d1-f5fface43b1d</app:SemanticID>
+        <app:DisplayName>Machine pistol</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="MissileLauncherRangeCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The range of a MissileLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:afa6ffe0-a513-48bc-830c-a092aae6dc9d</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is shorter range than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ShortRange">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:50384b10-b623-4af2-9ef6-17d299112083</app:SemanticID>
+            <app:DisplayName>Short range</app:DisplayName>
+            <app:PhysicalName>SHORT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MediumRange">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:91b63aaa-293e-4c3f-89fd-a06c8c50849f</app:SemanticID>
+            <app:DisplayName>Medium range</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LongRange">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:507254c9-e34c-4f3b-9921-7105f64e1aef</app:SemanticID>
+            <app:DisplayName>Long range</app:DisplayName>
+            <app:PhysicalName>LONG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="Mortar" type="weapon:MortarType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A portable, muzzle-loading cannon (indirect fire weapon) used to fire shells at low velocities, short ranges, and high trajectories.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:49b475ae-d01a-4d33-a3fa-c6ca7968d38c</app:SemanticID>
+        <app:Remarks>It usually has a shorter range than a howitzer and employs a higher angle of fire.</app:Remarks>
+        <app:DisplayName>Mortar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MortarScalingCode" type="weapon:MortarScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the Mortar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:36cbb612-af8a-47ad-8443-5a239da83398</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MortarScalingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of a Mortar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9660161c-e65e-40c5-96a9-3e693a7ee36f</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lighter than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Mortar is a man-portable and muzzle-loading, with either a rifled or smooth bore. Its calibre is usually 60mm or smaller.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8d71c5c3-eafe-49be-84a5-db44801431c0</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medium">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Mortar is man-portable and muzzle-loading, with either a rifled or smooth bore. Its calibre is usually between 61mm and 107mm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5b14a1d0-c21d-4402-81f9-ca798ae40b46</app:SemanticID>
+            <app:DisplayName>Medium</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Mortar is towed or vehicle-mounted, with either a rifled or smooth bore. Its calibre is usually between 108mm and 150mm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6730e4aa-ec6b-432d-acc1-7cd8a5ade854</app:SemanticID>
+            <app:DisplayName>Heavy</app:DisplayName>
+            <app:PhysicalName>HEAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryHeavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Mortar has a calibre of 151mm or larger.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:01863ab3-f2de-4cfe-9fd4-50dfe2f63d78</app:SemanticID>
+            <app:DisplayName>Very heavy</app:DisplayName>
+            <app:PhysicalName>VRYHVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MortarType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A portable, muzzle-loading cannon (indirect fire weapon) used to fire shells at low velocities, short ranges, and high trajectories.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:49b475ae-d01a-4d33-a3fa-c6ca7968d38c</app:SemanticID>
+        <app:Remarks>It usually has a shorter range than a howitzer and employs a higher angle of fire.</app:Remarks>
+        <app:DisplayName>Mortar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:MortarScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PistolOrRevolver" type="weapon:PistolOrRevolverType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A small hand-held firearm.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2ac35932-6e2a-4cff-8ff6-47bea85db5d5</app:SemanticID>
+        <app:DisplayName>Pistol/revolver</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PistolOrRevolverType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A small hand-held firearm.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2ac35932-6e2a-4cff-8ff6-47bea85db5d5</app:SemanticID>
+        <app:DisplayName>Pistol/revolver</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RecoillessGun" type="weapon:RecoillessGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon capable of being fired from either a ground mount or from a vehicle, and capable of destroying tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f438c5a7-b807-4bfb-a2c1-9110b871383c</app:SemanticID>
+        <app:DisplayName>Recoilless gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RecoillessGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A weapon capable of being fired from either a ground mount or from a vehicle, and capable of destroying tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f438c5a7-b807-4bfb-a2c1-9110b871383c</app:SemanticID>
+        <app:DisplayName>Recoilless gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ReconnaissanceTank" type="weapon:ReconnaissanceTankType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A mobile armoured vehicle providing firepower and crew protection for reconnaissance activities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad77e610-fa33-4e38-b335-2da2aa7fa9e6</app:SemanticID>
+        <app:DisplayName>Reconnaissance tank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ReconnaissanceTankType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A mobile armoured vehicle providing firepower and crew protection for reconnaissance activities.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad77e610-fa33-4e38-b335-2da2aa7fa9e6</app:SemanticID>
+        <app:DisplayName>Reconnaissance tank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:TankType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Rifle" type="weapon:RifleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A firearm that has a rifled bore designed to be fired from the shoulder.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fbc9cd6f-e187-40ab-9a61-8e1d22bf70af</app:SemanticID>
+        <app:DisplayName>Rifle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RifleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A firearm that has a rifled bore designed to be fired from the shoulder.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fbc9cd6f-e187-40ab-9a61-8e1d22bf70af</app:SemanticID>
+        <app:DisplayName>Rifle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RocketArtilleryWeapon" type="weapon:RocketArtilleryWeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A system designed to launch one or more powered unguided objects at a target.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9b9fe996-c586-4691-9fc5-df0113be6dfd</app:SemanticID>
+        <app:DisplayName>Rocket artillery weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RocketArtilleryWeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A system designed to launch one or more powered unguided objects at a target.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9b9fe996-c586-4691-9fc5-df0113be6dfd</app:SemanticID>
+        <app:DisplayName>Rocket artillery weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RocketLauncher" type="weapon:RocketLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold one or more rockets in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4bde2441-6d4d-483d-aab9-aba87be97e47</app:SemanticID>
+        <app:DisplayName>Rocket launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RocketLauncherHoldsMultipleRocketsIndicator" type="weapon:RocketLauncherHoldsMultipleRocketsIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the rocket launcher holds multiple rockets (true) or a single rocket (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c8eb3392-3700-4f1a-b22b-c16d891fc764</app:SemanticID>
+        <app:ShortName>holdsMultipleRocketsIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>holds multiple rockets</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RocketLauncherHoldsMultipleRocketsIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the rocket launcher holds multiple rockets (true) or a single rocket (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c8eb3392-3700-4f1a-b22b-c16d891fc764</app:SemanticID>
+        <app:ShortName>holdsMultipleRocketsIndicator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>holds multiple rockets</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="RocketLauncherScalingCode" type="object:EquipmentScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the RocketLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:201be6b0-497b-4ee9-806f-e715fdaf3556</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RocketLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold one or more rockets in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4bde2441-6d4d-483d-aab9-aba87be97e47</app:SemanticID>
+        <app:DisplayName>Rocket launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:RocketArtilleryWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:RocketLauncherHoldsMultipleRocketsIndicator" />
+          <xsd:element ref="weapon:RocketLauncherScalingCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Shotgun" type="weapon:ShotgunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A smooth-bore gun for firing small pellets at short range.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ce9b7a35-a88d-4586-bc93-102a2dedb82d</app:SemanticID>
+        <app:DisplayName>Shotgun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ShotgunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A smooth-bore gun for firing small pellets at short range.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ce9b7a35-a88d-4586-bc93-102a2dedb82d</app:SemanticID>
+        <app:DisplayName>Shotgun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SmallArm" type="weapon:SmallArmType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An individual portable weapon for defensive purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e74d4da4-e710-42c6-a655-b41bf219c1b6</app:SemanticID>
+        <app:DisplayName>Small arm</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SmallArmType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An individual portable weapon for defensive purposes.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e74d4da4-e710-42c6-a655-b41bf219c1b6</app:SemanticID>
+        <app:DisplayName>Small arm</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SubmachineGun" type="weapon:SubmachineGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A lightweight automatic or semiautomatic gun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:41ab18e6-b0a1-4fcf-85ed-a8024f5d14d4</app:SemanticID>
+        <app:DisplayName>Submachine gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SubmachineGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A lightweight automatic or semiautomatic gun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:41ab18e6-b0a1-4fcf-85ed-a8024f5d14d4</app:SemanticID>
+        <app:DisplayName>Submachine gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:SmallArmType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SurfaceToAirMissileLauncher" type="weapon:SurfaceToAirMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a surface to air missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02b44233-ab7a-4b31-adec-e78987c28562</app:SemanticID>
+        <app:DisplayName>Surface-to-air missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SurfaceToAirMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a surface to air missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:02b44233-ab7a-4b31-adec-e78987c28562</app:SemanticID>
+        <app:DisplayName>Surface-to-air missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SurfaceToSurfaceMissileLauncher" type="weapon:SurfaceToSurfaceMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a surface to surface missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9993a073-9033-44f3-a1e6-177e38487d97</app:SemanticID>
+        <app:DisplayName>Surface-to-surface missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SurfaceToSurfaceMissileLauncherRangeCode" type="weapon:MissileLauncherRangeCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The range of the SurfaceToSurfaceMissileLauncher.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5733e9ed-2b8e-4db2-9635-e6db8f46123a</app:SemanticID>
+        <app:ShortName>rangeCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>range</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SurfaceToSurfaceMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a surface to surface missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9993a073-9033-44f3-a1e6-177e38487d97</app:SemanticID>
+        <app:DisplayName>Surface-to-surface missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:SurfaceToSurfaceMissileLauncherRangeCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Tank" type="weapon:TankType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An armoured vehicle whose principal weapon is a direct fire gun optimised for the destruction of armoured vehicles.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:31db5f28-2118-44f9-905b-1a5725ccffc9</app:SemanticID>
+        <app:DisplayName>Tank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TankDestroyer" type="weapon:TankDestroyerType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tracked vehicle that relies on speed and firepower and has minimum armoured protection, usually armed with either anti-tank guided missile launcher, 80-90 MM gun or a recoilless rifle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:80714efe-f58e-41ca-aa16-36431682c6f7</app:SemanticID>
+        <app:DisplayName>Tank destroyer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TankDestroyerType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tracked vehicle that relies on speed and firepower and has minimum armoured protection, usually armed with either anti-tank guided missile launcher, 80-90 MM gun or a recoilless rifle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:80714efe-f58e-41ca-aa16-36431682c6f7</app:SemanticID>
+        <app:DisplayName>Tank destroyer</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TankGun" type="weapon:TankGunType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Turret mounted tank gun, for use in the field against tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3fab69c-cb3c-4093-8473-fd2a208ddcb2</app:SemanticID>
+        <app:DisplayName>Tank gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TankGunScalingCode" type="weapon:TankGunScalingCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of the TankGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:266dcb3e-b6b8-4b3d-b211-8a60a7748b13</app:SemanticID>
+        <app:ShortName>scalingCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>scaling</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="TankGunScalingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of a TankGun.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0ebafab1-81a8-4968-ad93-de8c073a0a38</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lighter than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Light, turret mounted, tank gun, calibre under 90 MM, for use in the field against tanks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:12da9eaa-9efc-499e-9baf-1d16d8c06ec1</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medium">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Medium, turret mounted, tank gun, calibre between 90 and 120 MM, for use in the field against tanks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ea47a8bf-a6ca-45d7-ab31-28ff83227623</app:SemanticID>
+            <app:DisplayName>Medium</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Heavy, turret mounted, tank gun, calibre over 120 MM, for use in the field against tanks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:44807db0-33c7-4aa6-9ff9-a43287b5d70d</app:SemanticID>
+            <app:DisplayName>Heavy</app:DisplayName>
+            <app:PhysicalName>HEAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TankGunType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Turret mounted tank gun, for use in the field against tanks.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f3fab69c-cb3c-4093-8473-fd2a208ddcb2</app:SemanticID>
+        <app:DisplayName>Tank gun</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AntiTankWeaponType">
+        <xsd:sequence>
+          <xsd:element ref="weapon:TankGunScalingCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TankType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An armoured vehicle whose principal weapon is a direct fire gun optimised for the destruction of armoured vehicles.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:31db5f28-2118-44f9-905b-1a5725ccffc9</app:SemanticID>
+        <app:DisplayName>Tank</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TheatreAirDefenceMissileLauncher" type="weapon:TheatreAirDefenceMissileLauncherType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a theatre air defence missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e44bfccb-2968-4cf9-81a3-c62defdf5aad</app:SemanticID>
+        <app:DisplayName>Theatre air-defence missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TheatreAirDefenceMissileLauncherType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A structural device designed to support and hold a theatre air defence missile in position for firing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e44bfccb-2968-4cf9-81a3-c62defdf5aad</app:SemanticID>
+        <app:DisplayName>Theatre air-defence missile launcher</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:AirDefenceWeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="UnknownTypeCrewServedWeapon" type="weapon:UnknownTypeCrewServedWeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5e8eb6c0-55e5-471c-ac39-5ea3c4af9f7b</app:SemanticID>
+        <app:DisplayName>Crew served weapon, unknown type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="UnknownTypeCrewServedWeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5e8eb6c0-55e5-471c-ac39-5ea3c4af9f7b</app:SemanticID>
+        <app:DisplayName>Crew served weapon, unknown type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="weapon:WeaponType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Weapon" type="weapon:WeaponType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment of any kind used in warfare or combat to attack and overcome an enemy.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0bffc212-a35f-4923-93ee-58e63767436c</app:SemanticID>
+        <app:DisplayName>Weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="WeaponType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Equipment of any kind used in warfare or combat to attack and overcome an enemy.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0bffc212-a35f-4923-93ee-58e63767436c</app:SemanticID>
+        <app:DisplayName>Weapon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:EquipmentType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

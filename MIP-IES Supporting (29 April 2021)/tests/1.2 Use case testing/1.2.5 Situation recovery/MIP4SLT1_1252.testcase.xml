@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>52</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Base Consumer Nominal Recovery with partial data already synchronized</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>A MIP4 Base Consumer is able to achieve Nominal Recovery of the current situation utilising Request/Response Exchange Pattern.</TestCaseObjective>
+  <TestCaseScenario>A Base Consumer (A) loses data and requires a re-synchronisation of Current Situation from Provider (B). Partial data have been already synchronized. There is no optimisation mechanism for now.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R </TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1221 - Consumer (A) is a Base Consumer exchanging data with Provider (B) through a Request/Response pattern. Partial data have been already synchronized when the re-synchronisation request occurs.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Consumer successfully requests and receives a re-synchronisation of the current situation data from the Provider through the Request/Response exchange pattern, taking into account that partial data have been already synchronised.Keep in mind that data payload has not to be validated at SLT1.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0009, MIP4 Request/Response Exchange Pattern. </TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>A Base Consumer (A) requires re-synchronization of the current situation from Provider (B) and requests a standalone update utilizing the Request/Response Exchange Pattern.
+Partial data have been already synchronised. </TestCaseStepAction>
+    <TestCaseStepResult>Provider (B) receives Request from Consumer (A) and successfully provides a Situation Update utilizing the Request Response Exchange Pattern (dealing with the fact that partial data have been already synchronised). </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <MTMTTestGroupId>0</MTMTTestGroupId>
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>33</TestCaseIdGroup>
+    <TestCaseIdNumber>3</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Update Overlay Metadata</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Verify exchange of Overlay update. Update details of the Overlay Elements: AlternateIdentifier, BaseMetadata, Extension, Identifier, NameWrapper.</TestCaseObjective>
+  <TestCaseScenario>Nation A updates details of an Overlay which was already exchanged with Nation B. Nation B receives the update and interprets it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has created a topic, which includes the Overlay and the objects includes in it.
+Nation B has subscribed to this topic.
+The Overlay was already exchanged after it was created by Nation A so that it is available on both systems.
+</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Overlay is displayed correctly on both Nations’ C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>?</TestCaseTraceability>
+  <TestCaseTimeToExecute>String</TestCaseTimeToExecute>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the Overlay data.</TestCaseStepAction>
+    <TestCaseStepResult>Nation B recieves the updated data and displays it correctly.</TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>false</TestCaseEventGeneration>
+</TestCase>

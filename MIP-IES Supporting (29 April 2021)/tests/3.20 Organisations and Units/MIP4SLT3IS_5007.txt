@@ -1,0 +1,36 @@
+Test description
+
+Test IDMIP4SLT3IS_5007Test TitleCreate Unit with focus on its Alt, Course and Speed.Execution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create the correct MIP data for all the elements (defined at IDT Schemas > Units.xsd > Unit) and the Consumers are able to correctly understand (and display) it. 
+This case focuses specifically on these Elements (choose for instance PointPosition LocationType), all of which are mandatory and must be > 0 for this test case: 
+* Alt: The distance with respect to the specified vertical datum.
+* Course: The direction the object is moving in, expressed as an angle.
+* Speed: The numeric value that denotes the motion of a specific OBJECT-ITEM at a specific LOCATION in terms of distance per unit time.ScenarioThe Producer creates message elements for Unit with at least Alt, Course and Speed and all its mandatory Elements. The Consumers receive the data and process them.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has created the 'Ground Picture > Forces' topic. The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the unit is created and all attributes are processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer creates the Unit with name XXX_UV_016 and fills ALL its mandatory elements with values. Specifically, Its GeometricDefinition > Alt, Course and Speed elements must be > 0
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the unit: ITA_UV_016 ~~
+Consumers receive and process (and display) the created Unit with Alt, Course, Speed and all the rest of attributes and elements that the Producer created. ~~
+
+
+122. The Producer creates an update for the object by changing its GeometricDefinition > Alt, Course and Speed elements, keeping the values of the rest of elements. ~~Consumers receive and process (and display) the created Unit with Alt, Course, Speed and all the rest of attributes and elements that the Producer created. ~~
+12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

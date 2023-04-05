@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>38</TestCaseIdGroup>
+    <TestCaseIdNumber>6</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Handling of unsupported object in the C2IS.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To verify that the National MIP solution can display some information or a generic symbol to users if it receives an unsupported object.</TestCaseObjective>
+  <TestCaseScenario>Nation A creates some BSOs in its C2IS that are not supported by Nation B's C2IS. Nation B receives the unsupported objects. Its C2IS displays some information or generic symbol for the objects.</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has published a topic. Nation B has subscribed to Nation A's topic.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is passed if Nation B receives the unsupported objects and displays some information or a generic symbol.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0010</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates objects that are not supported by a symbol in Nation B's C2IS.
+Comments
+The desired behaviour of a receiving system encountering an object for which it has no mapped message element is to display the object using a generic symbol.
+In order to know which objects Nation B does not support (this objects also have to be ones which nation A itself supports in order for them to be created), the results of each nation from the SLT3IS symbology related tests can be cross-checked. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B's C2IS displays some information or a generic symbol for the objects created by nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

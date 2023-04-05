@@ -1,0 +1,24 @@
+Test description
+
+Test IDMIP4SLT2.5_2601Test TitleExtension compatibility received data correlation testExecution Priority0 ("high risk" aspect)ObjectiveTo confirm the ability of the systems to handle the receipt of a message where the schema has been extended (using the Extension Block) with additional information, but the namespace of the schema remains unchanged. Ideally, all systems will be able to receive these messages, even if they are not capable of interpreting the extension.ScenarioCreate test data with one or more objects that have extended data and have it sent through the Test Tool (TT) (a pretending producer that supports the extended data) to a receiver Gateway that does not support the extended data. At the receiver end log the data and compare the send and receive data with a special utility to check which properties / elements are the same and which differ. A minimum base set of properties should be the same. Extended properties might be interpreted and mapped differently by the receiving gateway to the C2 system, but this should be no reason for errors. In any case the Gateway must remain stable.EnvironmentCo-located, Internet through VPN.Participation1MTRSPre-test ConditionsThe nations Gateway and the TT are ready to connect and have a physical connection with each other. Also the SOAP connection is established and ready for transport. The Gateway is configured with the elements from the nationality code list contained in dataset_2601x.
+If the contents of Extension are not understood and the 'mustUnderstand' Attribute on the Extension element is set to true, the message should not be processed.Test InputsDataset_2601x.ConclusionThis test is considered a success the Gateway remains stable and handles all messages correctly. Preferably the objects are displayed at the nations C2 system with correct information as far as understood by it.Test OutputsPass or fail.TraceabilityREQ_SYS_0011, the 'mustUnderstand' Attribute on the Extension element.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The nation loads dataset_2601a into their C2 system (2) through the TT (1).~~Objects visible in the C2 system correctly though extended data are ignored.
+Notice: If the contents of Extension are not understood and the 'mustUnderstand' Attribute on the Extension element is set to true, the message should not be processed.~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>50</TestCaseIdGroup>
+    <TestCaseIdNumber>76</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Update the CommentText about a Unit.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to update the CommentText about a Unit and the Consumers are able to correctly understand (and display) it. </TestCaseObjective>
+  <TestCaseScenario>The Producer updates the CommentText about a Unit for an Organisation or Unit Message Element, along with all its mandatory Elements. The Consumers receive the data and process them.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Forces' topic. The Consumers have subscribed to this topic. </TestCasePreCondition>
+  <TestCaseInput>MIP4SLT3IS_5049 has been carried out between Producer/Provider and Consumer.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the CommentText about a Unit is updated and all Elements are processed and interpreted correctly on all Consumers' C2ISs.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer updates the CommentText within the MIP4SLT3IS_5049 created Message Element, with a textual text about a Unit (preferably a yet shared one).
+Values for the rest of Elements in the Message are kept. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers receive and process the example Unit and all elements that the Producer updated. </TestCaseStepResult>
+    <TestCaseStepDestination />
+    <TestCaseStepSource />
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

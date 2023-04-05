@@ -1,0 +1,2143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:feature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature" xmlns:geographicfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:vegetation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature/Vegetation" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature/Vegetation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature/Vegetation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="CoastalHydrographicFeature" type="geographicfeature:CoastalHydrographicFeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeographicFeature that is the interface between water and land.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3ca1732a-aa2c-4517-bb0c-32b914cc353b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Coastal hydrographic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CoastalHydrographicFeatureCategoryCode" type="geographicfeature:CoastalHydrographicFeatureCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CoastalHydrographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e449b4a2-c0de-40eb-b78f-0104e09295ea</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CoastalHydrographicFeatureCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CoastalHydrographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c44f405f-867e-44e7-9b63-21610ade0246</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Backshore">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">That part of a shore or beach which is usually dry, being reached only by the highest tides.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a875833f-f5b7-48fe-9c68-1ef297d94ed0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Backshore</app:DisplayName>
+            <app:PhysicalName>BCKSHR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Beach">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">On a shore, the area on which the waves break and over which shore debris (for example: sand, shingle, and/or pebbles) accumulate.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f0499577-27ca-49ff-b2eb-bc1abf549b25</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Beach</app:DisplayName>
+            <app:PhysicalName>BEACH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Coastline">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A line generally following the contact between a land mass and a body of water that is based on the low water line.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c215401c-af25-4a19-9744-88e5f94ffec5</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Coastline</app:DisplayName>
+            <app:PhysicalName>CSTLNE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Foreshore">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The part of the shore or beach which lies between the low water mark and the upper limit of normal wave action.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:206acb1e-b5f8-4902-9224-965bc84298b4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Foreshore</app:DisplayName>
+            <app:PhysicalName>FRESHR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Island">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A land mass, other than a continent, surrounded by water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7975c695-0222-4105-9ea8-b212df2cff68</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Island</app:DisplayName>
+            <app:PhysicalName>ISLAND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NaturalHarbour">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A place of shelter for ships; where they may lie close to and sheltered by the shore or by works extended from it.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2d6c5498-7f72-4803-a73e-cdb6aa4b4bbc</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Harbour, natural</app:DisplayName>
+            <app:PhysicalName>HRBRNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Nearshore">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The part of the shore or beach which lies between the low water mark and the landward limit of the offshore region.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6b49e0b7-13d6-4f31-8915-8764ac62de00</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Nearshore</app:DisplayName>
+            <app:PhysicalName>NRSHRE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Shoreline">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A line drawn along the normal limit of wave action above the higher high water line as defined by the National Authority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d4a12d9d-f8aa-4fd5-8c8f-79a6c1683501</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Shoreline</app:DisplayName>
+            <app:PhysicalName>SHRLNE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TidalWater">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Any water the level of which changes periodically due to tidal action.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dfc7b61d-d6e3-4998-a278-3d26c587086e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Tidal water</app:DisplayName>
+            <app:PhysicalName>TDLWTR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CoastalHydrographicFeatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GeographicFeature that is the interface between water and land.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3ca1732a-aa2c-4517-bb0c-32b914cc353b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Coastal hydrographic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="geographicfeature:GeographicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:CoastalHydrographicFeatureCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Continent" type="geographicfeature:ContinentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Any of the world's main continuous expanses of land.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3fc13535-c056-4352-a126-4174f0cbad53</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Continent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ContinentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Any of the world's main continuous expanses of land.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3fc13535-c056-4352-a126-4174f0cbad53</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Continent</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="geographicfeature:GeographicFeatureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GeographicFeature" type="geographicfeature:GeographicFeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Terrain characteristics of military significance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5adbb7d6-d1c7-4d06-b5e2-8033d6b47221</app:SemanticID>
+        <app:Remarks>A GeographicFeature is a permanent or durable natural feature. In general, it represents any natural object or configuration of ground or water represented on a map or chart.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Geographic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GeographicFeatureAreMinesPresentIndicator" type="geographicfeature:GeographicFeatureAreMinesPresentIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether mines are present in the GeographicFeature (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e22201de-3f93-4846-bc9b-4bccacd5b8a8</app:SemanticID>
+        <app:ShortName>areMinesPresentIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>are mines present</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureAreMinesPresentIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether mines are present in the GeographicFeature (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e22201de-3f93-4846-bc9b-4bccacd5b8a8</app:SemanticID>
+        <app:ShortName>areMinesPresentIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>are mines present</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="GeographicFeatureBottomHardnessCode" type="geographicfeature:GeographicFeatureBottomHardnessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subjective indication obtained by a diver of the hardness of the liquid/solid surface interface and is the result of a single arm thrust.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6c495e33-b02a-489b-9828-438c6c6e1075</app:SemanticID>
+        <app:ShortName>bottomHardnessCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>bottom hardness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureBottomHardnessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subjective indication obtained by a diver of the hardness of the liquid/solid surface interface. It is the result of a single arm thrust.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:64f622a3-1788-40c9-857d-0bab94c017a8</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower hardness than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ArmPenetratesToShoulder">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The depth to which the divers arm penetrates the surface bottom, using a clenched fist, up to the shoulder.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1c6c937c-e4ec-45f5-9744-3b89c3b3d8a8</app:SemanticID>
+            <app:DisplayName>Arm penetrates to shoulder</app:DisplayName>
+            <app:PhysicalName>A</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArmPenetratesToElbow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The depth to which the divers arm penetrates the surface bottom, using a clenched fist, up to the elbow.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e9e3dc12-156b-403d-a4d9-241fcdd0ae19</app:SemanticID>
+            <app:DisplayName>Arm penetrates to elbow</app:DisplayName>
+            <app:PhysicalName>B</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArmPenetratesToWrist">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The depth to which the divers arm penetrates the surface bottom, using a clenched fist, up to the wrist.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:99ad50a7-e22d-44db-b98e-ee4919fdfef2</app:SemanticID>
+            <app:DisplayName>Arm penetrates to wrist</app:DisplayName>
+            <app:PhysicalName>C</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HandPenetratesToPalm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The depth to which the divers arm penetrates the surface bottom, using extended fingers, up to the palm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:69849fed-d39d-4d2f-837b-48f9a79b77d1</app:SemanticID>
+            <app:DisplayName>Hand penetrates to palm</app:DisplayName>
+            <app:PhysicalName>D</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HandPenetratesToKnuckles">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The depth to which the divers arm penetrates the surface bottom, using extended fingers, up to the knuckles.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e70c772c-de62-41ad-aebf-b056224daaf2</app:SemanticID>
+            <app:DisplayName>Hand penetrates to knuckles</app:DisplayName>
+            <app:PhysicalName>E</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NoPenetration">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The depth to which the divers arm penetrates the surface bottom, using a clenched fist, resulting in no penetration.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:999a33fd-81ca-446a-a9e2-578bf380982c</app:SemanticID>
+            <app:DisplayName>No penetration</app:DisplayName>
+            <app:PhysicalName>F</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="GeographicFeatureBottomPenetrationDimension" type="geographicfeature:GeographicFeatureBottomPenetrationDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The depth to which a diver is able to thrust his fist or fingers into the surface of the solid/liquid interface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:340ebb93-6ab9-4918-a04e-d2cf11c1c670</app:SemanticID>
+        <app:ShortName>bottomPenetrationDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>bottom penetration depth</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureBottomPenetrationDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The depth to which a diver is able to thrust his fist or fingers into the surface of the solid/liquid interface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:340ebb93-6ab9-4918-a04e-d2cf11c1c670</app:SemanticID>
+        <app:ShortName>bottomPenetrationDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>bottom penetration depth</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="3" />
+      <xsd:maxInclusive value="9.99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="GeographicFeatureHasRecirculatingSurfaceIndicator" type="geographicfeature:GeographicFeatureHasRecirculatingSurfaceIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the surface will recirculate as a result of rotor downwash (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfd33984-f946-4ce1-9464-e8e4fe6e5842</app:SemanticID>
+        <app:ShortName>hasRecirculatingSurfaceIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>has recirculating surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureHasRecirculatingSurfaceIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the surface will recirculate as a result of rotor downwash (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfd33984-f946-4ce1-9464-e8e4fe6e5842</app:SemanticID>
+        <app:ShortName>hasRecirculatingSurfaceIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>has recirculating surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="GeographicFeatureLiquidBody" type="geographicfeature:LiquidBodyType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The outermost boundary of a material body in a condition in which its particles move freely over each other.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:62e43d42-cfa5-4bb7-b6da-496261e83020</app:SemanticID>
+        <app:ShortName>liquidBody</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>liquid body</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GeographicFeatureLiquidSurface" type="geographicfeature:LiquidSurfaceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The condition of the liquid surface, when available.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:012e0e65-5657-4816-91f3-526298103613</app:SemanticID>
+        <app:ShortName>liquidSurface</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>liquid surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GeographicFeatureSolidSurface" type="geographicfeature:SolidSurfaceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The condition of the solid surface, when available.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8d7be8ff-0e08-4a0d-a9e2-88a50f22244d</app:SemanticID>
+        <app:ShortName>solidSurface</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>solid surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GeographicFeatureSolidSurfaceCompositionCode" type="geographicfeature:GeographicFeatureSolidSurfaceCompositionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The composition of the surface of the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8ead6c5d-ce44-4811-8121-b808f59e1c92</app:SemanticID>
+        <app:ShortName>solidSurfaceCompositionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>solid surface composition</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureSolidSurfaceCompositionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The composition of the surface of a GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4cf984e3-9a65-47ef-8fdc-6a8f1034fcbd</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Bedrock">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area which is composed of a naturally exposed material consisting of bedrock.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8b359c33-2df5-435a-b92e-011fd5d89592</app:SemanticID>
+            <app:DisplayName>Bedrock</app:DisplayName>
+            <app:PhysicalName>BDROCK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Coral">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area which is composed of coral.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eb83ff02-f4a7-4f3e-968a-32b39ce2392c</app:SemanticID>
+            <app:DisplayName>Coral</app:DisplayName>
+            <app:PhysicalName>CORAL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Earth">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area which is composed of soil.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b33d9c3f-a92e-49ff-bc82-36b1a36bf534</app:SemanticID>
+            <app:DisplayName>Earth</app:DisplayName>
+            <app:PhysicalName>EARTH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Ice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area which is composed of a layer or mass of frozen water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7eda0f42-078a-4c98-9ef2-8640f943159a</app:SemanticID>
+            <app:DisplayName>Ice</app:DisplayName>
+            <app:PhysicalName>ICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area that is composed mainly of small, loose grains of worn or disintegrated rock.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c6aab05a-ecb4-4a22-974a-59f87ec0d523</app:SemanticID>
+            <app:DisplayName>Sand</app:DisplayName>
+            <app:PhysicalName>SAND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Snow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area which is composed of snow.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1297bb0f-3c63-43d5-b705-c1de73f5eb15</app:SemanticID>
+            <app:DisplayName>Snow</app:DisplayName>
+            <app:PhysicalName>SNOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="GeographicFeatureSurfaceCategoryCode" type="geographicfeature:GeographicFeatureSurfaceCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of surface of the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9c0679c1-d940-448b-8465-e5dde64c5725</app:SemanticID>
+        <app:ShortName>surfaceCategoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>surface category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureSurfaceCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of surface of a GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8c0037d5-3b2a-44af-a228-e2077aff6a4f</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="LiquidSurface">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The boundary of a liquid with the atmosphere or solid.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ba6e661c-d83d-4a99-aab6-42513ebc8d16</app:SemanticID>
+            <app:DisplayName>Liquid surface</app:DisplayName>
+            <app:PhysicalName>LQDSRF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SolidSurface">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The boundary of the ground with the atmosphere or liquid.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:353b8687-65ca-4b7f-8393-3ce48430357d</app:SemanticID>
+            <app:DisplayName>Solid surface</app:DisplayName>
+            <app:PhysicalName>SLDSRF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="GeographicFeatureTerrainCode" type="geographicfeature:GeographicFeatureTerrainCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The tract of land.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ded172a2-1303-4f6f-9a8a-b5c3861a3a62</app:SemanticID>
+        <app:ShortName>terrainCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>terrain</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="GeographicFeatureTerrainCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The nature of a tract of land.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f854c314-12ca-44e5-a5c0-0315012e1ffa</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Flat">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain of the GeographicFeature is characterised as broadly level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c7f13eba-d887-4717-b313-560bf9274155</app:SemanticID>
+            <app:DisplayName>Flat</app:DisplayName>
+            <app:PhysicalName>FLAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hilly">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain of the GeographicFeature is characterised as having multiple hills.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:51f702a1-ce79-4267-a6ec-92620d325f76</app:SemanticID>
+            <app:DisplayName>Hilly</app:DisplayName>
+            <app:PhysicalName>HILLY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mountainous">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain of the GeographicFeature is characterised as having many large natural elevations of the earth's surface rising abruptly from the surrounding level.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e0589c4b-cbcf-4597-afb8-9475d9acdb90</app:SemanticID>
+            <app:DisplayName>Mountainous</app:DisplayName>
+            <app:PhysicalName>MOUNTS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Undulating">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain of the GeographicFeature is characterised as rolling or wavy.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a30f5c5a-f04e-4310-bc25-d4c5d62d3b42</app:SemanticID>
+            <app:DisplayName>Undulating</app:DisplayName>
+            <app:PhysicalName>UNDULT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Urban">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A topographical complex where man-made construction or high population density is the dominant feature.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7fee6f4f-7e5c-48fe-842a-97cfcbbbbca0</app:SemanticID>
+            <app:DisplayName>Urban</app:DisplayName>
+            <app:PhysicalName>URBAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="GeographicFeatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Terrain characteristics of military significance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5adbb7d6-d1c7-4d06-b5e2-8033d6b47221</app:SemanticID>
+        <app:Remarks>A GeographicFeature is a permanent or durable natural feature. In general, it represents any natural object or configuration of ground or water represented on a map or chart.</app:Remarks>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Geographic feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="feature:FeatureType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:GeographicFeatureAreMinesPresentIndicator" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureBottomHardnessCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureBottomPenetrationDimension" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureHasRecirculatingSurfaceIndicator" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureLiquidBody" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureLiquidSurface" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureSolidSurface" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureSolidSurfaceCompositionCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureSurfaceCategoryCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureTerrainCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:GeographicFeatureVegetation" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GeographicFeatureVegetation" type="vegetation:VegetationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The plants found in/at the GeographicFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:907cf3cc-dcb7-4445-9eaa-197bcd85c084</app:SemanticID>
+        <app:ShortName>vegetation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>vegetation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InlandWater" type="geographicfeature:InlandWaterType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The surface of an inland area permanently covered by water, but not significantly affected by tides.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a394c7c9-39ab-472d-bb01-a0c6aa90b7c9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Inland water</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InlandWaterCategoryCode" type="geographicfeature:InlandWaterCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of InlandWater.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:296cc6d2-25c9-4067-9f9d-c5a9a776966e</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InlandWaterCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of InlandWater.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:580f53cc-65cf-4dd0-88e3-78fca8dacc43</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Channel">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">That part of a body of water, either ocean or inland, (sometimes dredged) deep enough for navigation through an area otherwise not navigable.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ed3cff97-4d37-4c49-bd5e-2b893eca513e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Channel</app:DisplayName>
+            <app:PhysicalName>CHANEL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FloodedArea">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Land subject to controlled inundation (for example: flooded by the regulation of the level of water impounded by a dam or a beaver dam).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e9852813-9f0b-4c1c-a26a-28fe96f9bbb4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Flooded area</app:DisplayName>
+            <app:PhysicalName>FLDDAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Flume">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An inclined channel for conveying water from a distance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d02d6e2e-f604-4036-8b06-0bc3cacd3755</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Flume</app:DisplayName>
+            <app:PhysicalName>FLUME</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Ford">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A shallow place in a body of water used as a crossing.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:59557153-01fb-41e3-b085-c30a6c44f821</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:4f13854c-2353-4e73-a2b2-85f4bca0d4b4">MultiPointCategoryCode::IISymbol3Points</app:Geometry>
+            <app:DisplayName>Ford</app:DisplayName>
+            <app:PhysicalName>FORD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InlandWaterbodyBank">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The region along the edge of an inland water body that lies between the water and the first break in slope.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:022fe1b1-73e2-4e4c-ab47-ae3295409885</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Inland waterbody bank</app:DisplayName>
+            <app:PhysicalName>INWBBK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Lagoon">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An enclosed area of salt or brackish water separated from the open sea by some more or less effective, but not complete, obstacle (for example: a sand bank).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6e4bce00-3be0-41c3-815f-f817c010d2ad</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Lagoon</app:DisplayName>
+            <app:PhysicalName>LAGOON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Lake">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A large body of water entirely surrounded by land.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b359a826-ed79-4b6f-badf-cb4cacc908d1</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Lake</app:DisplayName>
+            <app:PhysicalName>LAKE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LandSubjectToInundation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract periodically covered by flood water, excluding tidal waters.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:834574aa-165d-436d-bab6-5b7141117004</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Land subject to inundation</app:DisplayName>
+            <app:PhysicalName>LNDSBJ</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LandWaterBoundary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The line where a land mass is in contact with a body of water and the tide state or river stage are unspecified.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7717261a-dde4-4f39-9395-f7443899e104</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:f4340665-cee4-4ba0-9e2a-7d5701f46718">Line</app:Geometry>
+            <app:DisplayName>Land water boundary</app:DisplayName>
+            <app:PhysicalName>LWBDY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pond">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small body of generally still water entirely surrounded by land.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:316cc594-1ce8-41fe-8262-a8c50984ab7e</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Pond</app:DisplayName>
+            <app:PhysicalName>POND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Rapids">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Portions of a stream with accelerated current where it descends rapidly but without a break in the slope of the bed sufficient to form a waterfall.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:29856cec-8376-4bb1-83a1-fe5711fc4f6f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Rapids</app:DisplayName>
+            <app:PhysicalName>RAPIDS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="River">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A natural flowing watercourse.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d94d75f3-8444-4307-99bf-04359c104fe3</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>River</app:DisplayName>
+            <app:PhysicalName>RIVER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sabkha">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A natural depression in arid or semi-arid regions whose bed is covered with salt encrusted clayey soil.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:af39b3fa-7256-48df-b647-fe52d76e2cf0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Sabkha</app:DisplayName>
+            <app:PhysicalName>SABKHA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SaltFlat">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A flat area of natural surface salt deposits.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:52be64b8-81db-4273-8016-145c4e5f352a</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Salt flat</app:DisplayName>
+            <app:PhysicalName>SLTFLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Spring">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A flow of water rising or welling naturally from the earth.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0ca2bba5-30a9-4923-b568-f930136d2577</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Spring</app:DisplayName>
+            <app:PhysicalName>SPRING</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VanishingPoint">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The location at which a watercourse disappears into the terrain.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:259d5776-b3bb-4354-be7c-fe07a1367783</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Vanishing point</app:DisplayName>
+            <app:PhysicalName>VNSHPT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WaterHole">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small natural terrain depression in which water collects, especially a pool where animals come to drink.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d637752a-7db6-4cac-8976-8da48aadc89d</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Water-hole</app:DisplayName>
+            <app:PhysicalName>WTRHOL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Waterfall">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A vertically descending part of a watercourse where it falls from a height (for example: over a rock or a precipice).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5e1e371e-d0cc-42ea-8359-05194efd3915</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Waterfall</app:DisplayName>
+            <app:PhysicalName>WATRFL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="InlandWaterType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The surface of an inland area permanently covered by water, but not significantly affected by tides.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a394c7c9-39ab-472d-bb01-a0c6aa90b7c9</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Inland water</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="geographicfeature:GeographicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:InlandWaterCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Landform" type="geographicfeature:LandformType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A natural feature of the earth's surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6fd103a2-4baa-40c6-b355-17c391eb3f45</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:5adbb7d6-d1c7-4d06-b5e2-8033d6b47221">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Landform</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LandformCategoryCode" type="geographicfeature:LandformCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Landform.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:78dcd676-8c39-418d-bda5-341817720064</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LandformCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Landform.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ed21fd2a-e861-49df-8198-87f12c7eb7b8</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AlluvialFan">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A fan-shaped alluvial deposit formed especially where a watercourse begins to descend a gentler slope.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dcbf051a-0008-40ea-9edc-dbb1d9df2cdd</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Alluvial fan</app:DisplayName>
+            <app:PhysicalName>ALLFAN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Cave">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An interconnected series of subterranean chambers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7c523bec-6bbb-4f0c-bdc8-24354c322b40</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Cave</app:DisplayName>
+            <app:PhysicalName>CAVE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Cay">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small insular feature, which may contain scant vegetation; usually composed of sand or coral.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7f666983-90b4-4f33-9282-b2821a023d97</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Cay</app:DisplayName>
+            <app:PhysicalName>CAY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CliffBottom">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The lower edge of a cliff or steep slope separating two comparatively level or more gently sloping surfaces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5794a63b-f878-4ddf-a520-caea4423b7fa</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Cliff bottom</app:DisplayName>
+            <app:PhysicalName>CLIFFB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CliffTop">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The upper edge of a cliff or steep slope separating two comparatively level or more gently sloping surfaces.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eff439bb-dfb0-4bed-b231-6df940436348</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Cliff top</app:DisplayName>
+            <app:PhysicalName>CLIFFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Crevice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A narrow opening or fissure produced by a crack in the land, especially in rock.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:68b03d8e-835e-435a-9fdf-9035a6abe39f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Crevice</app:DisplayName>
+            <app:PhysicalName>CRVICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Depression">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A sunken place in the terrain that is completely surrounded by higher terrain.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8a460453-f2ca-48c9-9321-b5dbd5a1524c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Depression</app:DisplayName>
+            <app:PhysicalName>DPRSSN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Desert">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An arid and treeless uncultivated sparsely populated tract of land.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ab5492c-3195-464b-83dc-2b6d8b511baa</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Desert</app:DisplayName>
+            <app:PhysicalName>DESERT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Esker">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A long, narrow ridge of sand and gravel deposited by a glacial stream.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e95f2361-3b43-4f95-b1b8-431a95c542b6</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Esker</app:DisplayName>
+            <app:PhysicalName>ESKER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Gap">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A low place in a mountain ridge, not used for transportation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cbe6afdb-bae2-4ffb-a20f-20dcc90da8f8</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:562bea9a-126c-4d47-9e31-9b41fb6c82b5">MultiPointCategoryCode::IISymbol4Points</app:Geometry>
+            <app:DisplayName>Gap</app:DisplayName>
+            <app:PhysicalName>GAP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GeologicFault">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A fracture or zone of fractures in a rock formation, marked by the relative displacement on either side of the plane of the fracture.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e774c465-ab42-43b9-a7db-e21143a25790</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Geologic fault</app:DisplayName>
+            <app:PhysicalName>GEOFLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GeothermalOutlet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A terrain surface feature controlled by or derived from the heat of the Earth’s interior.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c6f9a832-37ed-44d3-a878-03b2e52c4a70</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Geothermal outlet</app:DisplayName>
+            <app:PhysicalName>GEOTHR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Gully">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A deep ditch or channel cut into the terrain that results from erosion due to surface water runoff.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1e900077-3a60-4396-9805-6262606454c5</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Gully</app:DisplayName>
+            <app:PhysicalName>GULLY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hill">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small, isolated elevation, smaller than a mountain.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:aeeb65e6-797c-4555-9d4c-eb9be9f3fbd8</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Hill</app:DisplayName>
+            <app:PhysicalName>HILL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hummock">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A place of higher elevation within a wetland (for example: a swamp, a bog, or a marsh).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0878b606-773e-4739-b5b3-d29869f4eea7</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Hummock</app:DisplayName>
+            <app:PhysicalName>HUMOCK</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LandslideMass">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The mass of earth or rock which has slipped down from a mountain or cliff.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:49a1513c-5aed-471d-8fec-6ffaacde3cf4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Landslide mass</app:DisplayName>
+            <app:PhysicalName>LNDSLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Ledge">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A rocky formation continuous with and fringing the shore.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:821699dc-89dc-42c9-8aaf-663ffecfe482</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Ledge</app:DisplayName>
+            <app:PhysicalName>LEDGE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Moraine">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An accumulation of soil and stone debris deposited by a glacier.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:03eb5dfc-6303-4ea2-a272-0db63e076e6c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Moraine</app:DisplayName>
+            <app:PhysicalName>MORANE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mountain">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An elevation standing high above the surrounding area with small summit area, steep slopes and local relief of 300 metres or more.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e523d0e3-6f02-43b5-aae5-e378f3ba8ee4</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Mountain</app:DisplayName>
+            <app:PhysicalName>MOUNTN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MountainPass">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A narrow route through a mountainous region or over a mountain range.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2cea5f3d-2077-4771-bf9e-629b6e2929eb</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Mountain pass</app:DisplayName>
+            <app:PhysicalName>MNTPSS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Reef">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A mass of rock or coral which either reaches close to the sea surface or is exposed at low tide, posing a hazard to navigation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:857805a9-1209-419c-a9f2-f31e378db79d</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Reef</app:DisplayName>
+            <app:PhysicalName>REEF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RockFormation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A significant outcropping of exposed bedrock.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4389ac95-5fb9-4c60-88fc-2395dd8405c0</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Rock formation</app:DisplayName>
+            <app:PhysicalName>RCKFRM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SandDunes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">One or more mounds or ridges of sand usually formed by the wind.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ba841c40-5887-4de5-9d70-756fe0b75ff2</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Sand dunes</app:DisplayName>
+            <app:PhysicalName>SNDDUN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Snag">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A substantial item of woody vegetation (for example: tree, trunk, or bush) or a broken structural pile that is embedded in the bottom of a body of water (for example: ocean, river or inland waterbody) thereby creating a hazard to water travel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:535e4909-1a20-4737-8d16-450ff4fee6fa</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Snag</app:DisplayName>
+            <app:PhysicalName>SNAG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tundra">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A vast, nearly level, treeless arctic region usually with a marshy surface and underlying permafrost.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8eebfeab-4a8d-4cf3-ae74-bdfec0f5bad5</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Tundra</app:DisplayName>
+            <app:PhysicalName>TUNDRA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnderminedLand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A region undermined through mining activities that has already partly subsided or that is in the process of subsiding.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ccc3d1aa-b331-437c-8b22-72d3b3512369</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Undermined land</app:DisplayName>
+            <app:PhysicalName>UNDRML</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UnderwaterSandRidge">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Sand on the sea floor having steeper sides and less regular topography than a rise.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2af1d542-0a58-403f-8d2a-249de343e3a3</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Underwater sand ridge</app:DisplayName>
+            <app:PhysicalName>UNDRSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Valley">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A stretched-out groove in the land, usually formed by streams or rivers. A valley begins with high ground on three sides, and usually has a course of running water through it.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0abb698c-6fe2-44a6-a191-917234493e83</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Valley</app:DisplayName>
+            <app:PhysicalName>VALLEY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VolcanicDyke">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A sheet of rock filling a fissure that sometimes shows as a terrain ridge.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8d470f42-6be8-4bf5-83ed-0427b539553c</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Volcanic dyke</app:DisplayName>
+            <app:PhysicalName>VLCNOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Volcano">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A hill or mountain situated over an opening or openings in the Earth's crust through which lava, cinders, steam, and/or gases, are or have been expelled.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:45ca710e-7628-4cf7-a222-422391aaed35</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Volcano</app:DisplayName>
+            <app:PhysicalName>VOLCNO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LandformType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A natural feature of the earth's surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6fd103a2-4baa-40c6-b355-17c391eb3f45</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:5adbb7d6-d1c7-4d06-b5e2-8033d6b47221">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Landform</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="geographicfeature:GeographicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:LandformCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LiquidBodyBottomCurrentSpeed" type="geographicfeature:LiquidBodyBottomCurrentSpeedType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rate of the liquid movement at the bottom surface of the sea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:66b172ff-4914-493b-965b-d0505dc66a4b</app:SemanticID>
+        <app:ShortName>bottomCurrentSpeed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>bottom current speed</app:DisplayName>
+        <app:UnitOfMeasure>knot (kn)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LiquidBodyBottomCurrentSpeedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The rate of the liquid movement at the bottom surface of the sea.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:66b172ff-4914-493b-965b-d0505dc66a4b</app:SemanticID>
+        <app:ShortName>bottomCurrentSpeed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>bottom current speed</app:DisplayName>
+        <app:UnitOfMeasure>knot (kn)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="1" />
+      <xsd:totalDigits value="4" />
+      <xsd:maxInclusive value="999.9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LiquidBodyThermalLayerDepthDimension" type="geographicfeature:LiquidBodyThermalLayerDepthDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance below the liquid surface where the distinct interface between surface waters and cooler waters; regions between warmer upper layer (epilimnion) and the lower cold layer (hypolimnion) of the liquid where temperature declines abruptly (1 degree C or more per meter) with increasing depth.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:54e4c21c-8a97-45d6-b88d-7b966584566f</app:SemanticID>
+        <app:ShortName>thermalLayerDepthDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>thermal layer depth</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LiquidBodyThermalLayerDepthDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance below the liquid surface where the distinct interface between surface waters and cooler waters; regions between warmer upper layer (epilimnion) and the lower cold layer (hypolimnion) of the liquid where temperature declines abruptly (1 degree C or more per meter) with increasing depth.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:54e4c21c-8a97-45d6-b88d-7b966584566f</app:SemanticID>
+        <app:ShortName>thermalLayerDepthDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>thermal layer depth</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minExclusive value="0" />
+      <xsd:fractionDigits value="0" />
+      <xsd:totalDigits value="4" />
+      <xsd:maxInclusive value="9999" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LiquidBodyTidalStreamSpeed" type="geographicfeature:LiquidBodyTidalStreamSpeedType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal water movements due to tidal forcing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:234fe647-f136-4f62-b51e-f33c9a003312</app:SemanticID>
+        <app:ShortName>tidalStreamSpeed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>tidal stream speed</app:DisplayName>
+        <app:UnitOfMeasure>knot (kn)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LiquidBodyTidalStreamSpeedType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The horizontal water movements due to tidal forcing.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:234fe647-f136-4f62-b51e-f33c9a003312</app:SemanticID>
+        <app:ShortName>tidalStreamSpeed</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>speed</app:MIMStereotype>
+        <app:DisplayName>tidal stream speed</app:DisplayName>
+        <app:UnitOfMeasure>knot (kn)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="1" />
+      <xsd:totalDigits value="4" />
+      <xsd:maxInclusive value="999.9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LiquidBodyType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A physical structure in a condition in which its particles move freely over each other.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:539d7df1-fdb6-4a21-8c75-6964d1b6b9e5</app:SemanticID>
+        <app:DisplayName>Liquid body</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:LiquidBodyBottomCurrentSpeed" minOccurs="0" />
+          <xsd:element ref="geographicfeature:LiquidBodyThermalLayerDepthDimension" minOccurs="0" />
+          <xsd:element ref="geographicfeature:LiquidBodyTidalStreamSpeed" minOccurs="0" />
+          <xsd:element ref="geographicfeature:LiquidBodyUnderwaterVisibilityDimension" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LiquidBodyUnderwaterVisibilityDimension" type="geographicfeature:LiquidBodyUnderwaterVisibilityDimensionType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance at which an object disappears given the ambient light, suspended organic and inorganic particulate measure, dissolved substances, plankton and the waters molecular structure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfe326ae-4947-4fc9-908f-57ef42b681d4</app:SemanticID>
+        <app:ShortName>underwaterVisibilityDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>underwater visibility</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LiquidBodyUnderwaterVisibilityDimensionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The distance at which an object disappears given the ambient light, suspended organic and inorganic particulate measure, dissolved substances, plankton and the waters molecular structure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfe326ae-4947-4fc9-908f-57ef42b681d4</app:SemanticID>
+        <app:ShortName>underwaterVisibilityDimension</app:ShortName>
+        <app:MIMStereotype>dimension</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>underwater visibility</app:DisplayName>
+        <app:UnitOfMeasure>metre (m)</app:UnitOfMeasure>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:DecimalType">
+      <xsd:minInclusive value="0" />
+      <xsd:fractionDigits value="1" />
+      <xsd:totalDigits value="4" />
+      <xsd:maxInclusive value="999.9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LiquidSurfaceConditionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The physical status of a LiquidSurface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7118639a-ae72-4dae-b9bf-de011a4d9d44</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Drained">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area temporarily without any liquid present.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d5ec4582-ac1b-4d57-8710-9a77b905d395</app:SemanticID>
+            <app:DisplayName>Drained</app:DisplayName>
+            <app:PhysicalName>DRAIND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Ice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with a layer or mass of frozen water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4ee8f1f1-98ec-49ee-862d-4e75609f4a76</app:SemanticID>
+            <app:DisplayName>Ice</app:DisplayName>
+            <app:PhysicalName>ICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Liquid">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with liquid that is not frozen.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7701bf35-832f-4996-b59b-1a1ca6c9fef9</app:SemanticID>
+            <app:DisplayName>Liquid</app:DisplayName>
+            <app:PhysicalName>LIQUID</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Mixed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with a mix of ice and water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eab9fb2a-c543-4239-9bba-d4dc368c9b5d</app:SemanticID>
+            <app:DisplayName>Mixed</app:DisplayName>
+            <app:PhysicalName>MIXED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LiquidSurfaceSeaStateCode" type="geographicfeature:LiquidSurfaceSeaStateCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The range of wave heights on a liquid surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:39f03430-1058-4790-9d96-4b74f975bd77</app:SemanticID>
+        <app:ShortName>seaStateCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>sea state</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="LiquidSurfaceSeaStateCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The range of wave heights on a liquid surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5e0f5bb4-d3ac-46f1-be83-bcb49aba20f0</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower wave height than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="GlassyCalm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 0 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eb2f9e31-7bb8-4ab3-a918-375380d0ea49</app:SemanticID>
+            <app:DisplayName>Calm (glassy)</app:DisplayName>
+            <app:PhysicalName>0</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RippledCalm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 0 to 0.1 metre.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ad079512-4a53-44ab-8df6-67f24da9c400</app:SemanticID>
+            <app:DisplayName>Calm (rippled)</app:DisplayName>
+            <app:PhysicalName>1</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WaveletsSmooth">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 0.1 to 0.5 metre.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:75d89905-821d-4961-ad89-d7430d9c31b0</app:SemanticID>
+            <app:DisplayName>Smooth (wavelets)</app:DisplayName>
+            <app:PhysicalName>2</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Slight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 0.5 to 1.25 metre.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ff79869d-133a-40ce-a7c3-0bf70eae4b98</app:SemanticID>
+            <app:DisplayName>Slight</app:DisplayName>
+            <app:PhysicalName>3</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Moderate">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 1.25 to 2.5 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:931caa3f-acad-4124-a38b-55dd024e95fe</app:SemanticID>
+            <app:DisplayName>Moderate</app:DisplayName>
+            <app:PhysicalName>4</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Rough">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 2.5 to 4 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1a3d3a3b-d332-4fa7-8f41-bf222653554c</app:SemanticID>
+            <app:DisplayName>Rough</app:DisplayName>
+            <app:PhysicalName>5</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryRough">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 4 to 6 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0f4235f7-e9dc-4c75-baae-381ec9632ebf</app:SemanticID>
+            <app:DisplayName>Very rough</app:DisplayName>
+            <app:PhysicalName>6</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="High">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 6 to 9 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0b7a602f-1be0-48d3-8abb-6dc2b848cb06</app:SemanticID>
+            <app:DisplayName>High</app:DisplayName>
+            <app:PhysicalName>7</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VeryHigh">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height 9 to 14 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fe67b46f-d057-4e08-a337-0c2269533dd0</app:SemanticID>
+            <app:DisplayName>Very high</app:DisplayName>
+            <app:PhysicalName>8</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Phenomenal">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wave height greater than 14 metres.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2fa9536d-5587-4bc3-8885-ebaea48d8698</app:SemanticID>
+            <app:DisplayName>Phenomenal</app:DisplayName>
+            <app:PhysicalName>9</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LiquidSurfaceSurfaceConditionCode" type="geographicfeature:LiquidSurfaceConditionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The physical status of a liquid surface area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a7c812cf-4dde-4479-98e3-27246fe81fbb</app:SemanticID>
+        <app:ShortName>surfaceConditionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>surface condition</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LiquidSurfaceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The outermost boundary of a material body in a condition in which its particles move freely over each other.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:47698a9e-b010-402d-84a5-474d434d4a44</app:SemanticID>
+        <app:DisplayName>Liquid surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:LiquidSurfaceSeaStateCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:LiquidSurfaceSurfaceConditionCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:LiquidSurfaceWaveDirectionCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LiquidSurfaceWaveDirectionCode" type="object:DirectionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The direction of waves in a liquid surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a07792c3-4183-4920-9c6a-f93b148990c8</app:SemanticID>
+        <app:ShortName>waveDirectionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>wave direction</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SnowIceFeature" type="geographicfeature:SnowIceFeatureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A natural feature that is characterised by frozen water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Snow ice feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SnowIceFeatureCategoryCode" type="geographicfeature:SnowIceFeatureCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of SnowIceFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:61c7763b-8639-4040-b7ed-74e2b0136307</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SnowIceFeatureCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of SnowIceFeature.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:263df434-ee51-4a6c-83c3-6d1c9c41d228</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Crevasse">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A deep crack or fissure in a glacier that results from differential movement of ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5a580d09-dffc-46b0-9504-a20a445734b2</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Crevasse</app:DisplayName>
+            <app:PhysicalName>CRVASS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Glacier">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A large mass or river of ice formed by accumulation and compaction of snow on higher ground that is moving slowly down a slope or valley from above the snowline.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0f5bd276-ccee-4eba-8cfe-81fbac7b9ead</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Glacier</app:DisplayName>
+            <app:PhysicalName>GLACER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IceCliff">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The vertical face of a glacier or ice shelf.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:20e1cf52-e3be-40c2-81a3-2f55bc826d5d</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Ice cliff</app:DisplayName>
+            <app:PhysicalName>ICECLF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IcePeakOrNunatak">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A rocky peak projecting above a surrounding ice field that may be perpetually covered with ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a581d628-fcef-4ae2-872e-c2ea95f266b9</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Ice peak/nunatak</app:DisplayName>
+            <app:PhysicalName>ICEPKN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IceShelf">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A floating ice sheet of considerable thickness that is normally attached to the land along its landward edge.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4cca6128-dc1c-4684-b554-dd0ece79b728</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Ice shelf</app:DisplayName>
+            <app:PhysicalName>ICESHL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PackIce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Any area of sea ice other than fast ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4931a42d-503b-4456-b5d2-51b89c7002c7</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Pack ice</app:DisplayName>
+            <app:PhysicalName>PCKICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Pingo">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A cone or dome shaped mound or hill of peat or soil, usually with a core of ice.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bbac1658-6899-4ba7-9dbf-8c27c2c7de86</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Pingo</app:DisplayName>
+            <app:PhysicalName>PINGO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PolarIce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Sea ice that is more than one year old and more than 3 metres thick.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f706c494-6dff-4d3e-a69d-ae9ff1544254</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Polar ice</app:DisplayName>
+            <app:PhysicalName>PLRICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SnowFieldOrIceField">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A large area permanently covered by snow or ice over land or water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e04189cf-784a-49dc-ad9a-a65f8197ff0f</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Snow field/ice field</app:DisplayName>
+            <app:PhysicalName>SNWICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="SnowIceFeatureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A natural feature that is characterised by frozen water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6a5f761a-2127-4848-9a98-1b71e63bab8b</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Snow ice feature</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="geographicfeature:GeographicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:SnowIceFeatureCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="SolidSurfaceConditionCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The physical status of a solid surface area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:afd36564-df0f-4c07-a970-bcf3b2ce3f0f</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Dust">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with fine dry particles of matter.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d951003f-cb4a-4a1e-b9f9-492c49a6d886</app:SemanticID>
+            <app:DisplayName>Dust</app:DisplayName>
+            <app:PhysicalName>DUST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Earth">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characteristic of an area covered with soil.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4c4349cf-d9f8-4006-a635-8e10a073af45</app:SemanticID>
+            <app:DisplayName>Earth</app:DisplayName>
+            <app:PhysicalName>EARTH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Flood">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered or submerged temporarily in water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b70b9a24-a0b2-4c74-b962-25d532994b94</app:SemanticID>
+            <app:DisplayName>Flood</app:DisplayName>
+            <app:PhysicalName>FLOOD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Ice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with a layer or mass of frozen water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2f005c81-22f0-4b62-a5fa-9a41a276fb95</app:SemanticID>
+            <app:DisplayName>Ice</app:DisplayName>
+            <app:PhysicalName>ICE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sand">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with small, loose grains of worn or disintegrated rock.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d2dd420e-1634-4e06-9a52-678b5ae65f13</app:SemanticID>
+            <app:DisplayName>Sand</app:DisplayName>
+            <app:PhysicalName>SAND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Snow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A characterisation of an area covered with snow.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:119a621b-2d43-4c78-8f63-745caf90126a</app:SemanticID>
+            <app:DisplayName>Snow</app:DisplayName>
+            <app:PhysicalName>SNOW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SolidSurfaceDamageCode" type="geographicfeature:SolidSurfaceDamageCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The damage status of a solid surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ceccc802-09bf-4b20-87e8-f4dc854882b6</app:SemanticID>
+        <app:ShortName>damageCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>damage</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SolidSurfaceDamageCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The damage status of a solid surface.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a22b72c7-f5e6-4771-94e0-2dcc8f030b43</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Cleared">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain is passable or traversable.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bdaf8bd6-01ea-4f05-8bfb-c361e7f9ba70</app:SemanticID>
+            <app:DisplayName>Cleared</app:DisplayName>
+            <app:PhysicalName>CLEARD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Contaminated">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain is defiled, sullied or infected by contact with toxic substances.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bf8596d3-c4ba-41bc-b1c9-2620cb3a2c5a</app:SemanticID>
+            <app:DisplayName>Contaminated</app:DisplayName>
+            <app:PhysicalName>CNTMND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Destroyed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain is rendered useless or ineffective.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8cf77c6d-ed95-4091-b922-5ec3665b4032</app:SemanticID>
+            <app:DisplayName>Destroyed</app:DisplayName>
+            <app:PhysicalName>DSTRYD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HeavilyDamaged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain has suffered severe harm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f25ba91f-dfd5-4c63-973f-3de087ccfa6b</app:SemanticID>
+            <app:DisplayName>Heavily damaged</app:DisplayName>
+            <app:PhysicalName>HVYDAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LightlyDamaged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain has suffered limited harm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:970463be-90c3-4e6b-a4c7-9a2cec896adc</app:SemanticID>
+            <app:DisplayName>Lightly damaged</app:DisplayName>
+            <app:PhysicalName>LGTDAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ModeratelyDamaged">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain has suffered medium harm.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:599d69ec-a3f8-4f83-9a63-fa3f82bd4b30</app:SemanticID>
+            <app:DisplayName>Moderately damaged</app:DisplayName>
+            <app:PhysicalName>MODDAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Obstructed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The terrain is obstructed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ae1b75cb-a064-4bc9-8696-c9b0876e3a79</app:SemanticID>
+            <app:DisplayName>Obstructed</app:DisplayName>
+            <app:PhysicalName>OBSTRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SolidSurfaceDemolitionStatusCode" type="object:DemolitionStatusCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The status of an object destined for demolition.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e99e64e7-b5fd-4406-9ef2-24d23a418881</app:SemanticID>
+        <app:ShortName>demolitionStatusCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>demolition status</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SolidSurfaceFirmnessCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The firmness of a surface area, in terms of its ability to support land vehicles or helicopters.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3d08e824-6b4a-4e16-88fc-65fff4e018a2</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower firmness than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="VerySoft">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Wheeled vehicles cannot progress across the surface.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:57f16597-a2b1-40e6-bce0-0447cf76b0ee</app:SemanticID>
+            <app:DisplayName>Very soft</app:DisplayName>
+            <app:PhysicalName>VSOFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Soft">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">On the surface area, four-wheel drive vehicles cannot start from rest but might be able to cross if already on the move.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4cda4b28-49da-4285-a0e7-fcfafee2a641</app:SemanticID>
+            <app:DisplayName>Soft</app:DisplayName>
+            <app:PhysicalName>SOFT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Moderate">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The surface area can be used by three or four ton vehicles which should be able to start from rest using four-wheel drive.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0d6b1cf9-ae6d-4b89-9849-0a7084c1b7db</app:SemanticID>
+            <app:DisplayName>Moderate</app:DisplayName>
+            <app:PhysicalName>MODER</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The surface area is able to support the helicopter and can be used by two-wheel drive vehicles or four-wheel drive vehicles and trailers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:73259e73-4bbb-47be-979d-b7b8bc55fe76</app:SemanticID>
+            <app:DisplayName>Hard</app:DisplayName>
+            <app:PhysicalName>HARD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SolidSurfaceSurfaceConditionCode" type="geographicfeature:SolidSurfaceConditionCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The physical status of a solid surface area.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2e6fffeb-be28-4d0d-b0b5-84a77f05e1c5</app:SemanticID>
+        <app:ShortName>surfaceConditionCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>surface condition</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SolidSurfaceSurfaceFirmnessCode" type="geographicfeature:SolidSurfaceFirmnessCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The firmness of a surface area, in terms of its ability to support land vehicles or helicopters.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1aff145e-0e70-450f-babd-ee96d59f8568</app:SemanticID>
+        <app:ShortName>surfaceFirmnessCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>surface firmness</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SolidSurfaceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The outermost boundary of a material body in a condition in which its particles are firmly and continuously coherent.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:54dfde69-8603-4044-b990-2c2591194078</app:SemanticID>
+        <app:DisplayName>Solid surface</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:SolidSurfaceDamageCode" />
+          <xsd:element ref="geographicfeature:SolidSurfaceDemolitionStatusCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:SolidSurfaceSurfaceConditionCode" minOccurs="0" />
+          <xsd:element ref="geographicfeature:SolidSurfaceSurfaceFirmnessCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Wetland" type="geographicfeature:WetlandType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A marsh, swamp, or other stretch of land that is usually saturated with water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9efce2f4-8bce-4c65-a277-30d290f4efa4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Wetland</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="WetlandCategoryCode" type="geographicfeature:WetlandCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Wetland.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:900d6fde-dec5-408c-89c3-ca54ea896f43</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WetlandCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Wetland.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:1e62f2bb-1ba2-43fe-a1dc-344f2f18be46</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Bog">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A permanently wet area of land consisting of incompletely decayed organic material and mainly stagnant fresh water.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ccdf3b76-63e9-4cb4-b07c-a0898b4a74c6</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9efce2f4-8bce-4c65-a277-30d290f4efa4">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Bog</app:DisplayName>
+            <app:PhysicalName>BOG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Marsh">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A soft, poorly drained wetland that is characterized by the growth of only non-woody plants (for example: grasses) and often forms a transition region between a waterbody and land.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5e770100-e281-48a0-bc5e-6bf671c8c8fc</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9efce2f4-8bce-4c65-a277-30d290f4efa4">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Marsh</app:DisplayName>
+            <app:PhysicalName>MARSH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Swamp">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A seasonally flooded, poorly drained wetland with more woody plants than a marsh and better drainage than a bog.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4958282c-a209-4d09-9bb3-d7762e7e95f9</app:SemanticID>
+            <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:9efce2f4-8bce-4c65-a277-30d290f4efa4">AbsolutePoint</app:Geometry>
+            <app:DisplayName>Swamp</app:DisplayName>
+            <app:PhysicalName>SWAMP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="WetlandType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A marsh, swamp, or other stretch of land that is usually saturated with water.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9efce2f4-8bce-4c65-a277-30d290f4efa4</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Wetland</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="geographicfeature:GeographicFeatureType">
+        <xsd:sequence>
+          <xsd:element ref="geographicfeature:WetlandCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>35</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Moving entities into and out of a Topic</TestCaseTitle>
+  <TestCaseExecutionPriority>3</TestCaseExecutionPriority>
+  <TestCaseObjective>Asses Producer and Consumer behaviour when the Consumer is receiving subscription updates to desired Topics and entities (BSOs as for MIP4.0) move into and out of them.</TestCaseObjective>
+  <TestCaseScenario> MIP4SLT1_1231 has been executed successfully, the Consumer(s) is (are) receiving subscription updates to desired Topics via the Publish/Subscribe EP. Entities (BSOs as for MIP4.0) are moving into and out of these Topics.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1231: Current situation nominal consumption established and working between Producer/Provider and Consumer(s).
+The Consumer(s) is (are) receiving subscription updates to desired Topics via the Publish/Subscribe EP.  </TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>Asses Producer and Consumer behaviour as Entities (BSOs as for MIP4.0) are moving into and out of Consumer subscribed Topics.
+The simplest minimum behaviour would be:
+* Entity moves into a Topic: Producer starts to provide update information on that Entity to Consumer as prescribed by the P/S EP (probably as it enters the Topic for the first time)
+* Entity moves out of a Topic: Producer stops providing update information on that Entity to Consumer (and it is not required to do anything else as for MIP4.0)</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, REQ_EM_0010, REQ_EM_0012</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Producer (1) is processing subscription request from Consumer (2) and providing update information as prescribed utilising the Publish/Subscribe exchange mechanism. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer (2) receives updates of subscription data. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Entity (BSO as for MIP4.0) moves into a Topic to which the Consumer is subscribed. </TestCaseStepAction>
+    <TestCaseStepResult>Producer starts to provide update information on that Entity to Consumer as prescribed by the P/S EP. 
+Take notice of exact behaviour regarding to that Entity on both sides, Producer and Consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Entity (BSO as for MIP4.0) moves out of a Topic to which the Consumer is subscribed. </TestCaseStepAction>
+    <TestCaseStepResult>Producer stops providing update information on that Entity to Consumer. 
+Take notice of exact behaviour regarding to that Entity on both sides, Producer and Consumer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Repeat steps 2 and 3 several times, with new entities belonging in different Message Schema Areas if possible.
+Also try re-entry of entities that were in and left the topic. </TestCaseStepAction>
+    <TestCaseStepResult>Take notice of exact Producer's and Consumer's behaviour in each case. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

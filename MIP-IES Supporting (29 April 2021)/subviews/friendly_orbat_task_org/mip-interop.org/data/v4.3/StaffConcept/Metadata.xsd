@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:conceptmetadata2="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:informationresource="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" targetNamespace="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/InformationResource" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Concept/Metadata.xsd" namespace="https://mip-interop.org/data/v4.3/Concept/Metadata" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="Recipient" type="staffconceptmetadata:RecipientType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that is expected to receive information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:75074437-67f1-441f-be77-f1c293add113</app:SemanticID>
+        <app:DisplayName>Recipient</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RecipientActorReference" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to the actual Actor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0b2a114a-1e7a-4dde-a0ff-0c45583ed2c5</app:SemanticID>
+        <app:ShortName>actorReference</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:ReferenceType>MIM:6a71bb8c-9803-4a5e-a6ff-ef3ebc55481a</app:ReferenceType>
+        <app:DisplayName>actor Reference</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RecipientDistributionReasonCode" type="staffconceptmetadata:RecipientDistributionReasonCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The reason for the dissemination of a StaffConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:cfef74b2-1b46-475e-9c53-4621bb4e8993</app:SemanticID>
+        <app:ShortName>distributionReasonCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>distribution reason</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RecipientDistributionReasonCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The reason for the dissemination of a StaffConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:513fca2c-7878-417b-9fe5-d6dcafde914b</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="DistributedForAction">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The StaffConcept is to be distributed to the Recipient for action.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:db0f4221-a93e-4d0f-891d-51c47423f22a</app:SemanticID>
+            <app:DisplayName>Distributed for action</app:DisplayName>
+            <app:PhysicalName>DSTACT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DistributedForInformation">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The StaffConcept is to be distributed to the Recipient for information only.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5cea6556-8003-4eb3-854c-be306b47437b</app:SemanticID>
+            <app:DisplayName>Distributed for information</app:DisplayName>
+            <app:PhysicalName>DSTINF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RecipientName" type="staffconceptmetadata:RecipientNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Recipient.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ec061efe-691a-49a4-b0dc-04bb9f0181cd</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RecipientNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The name of the Recipient.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ec061efe-691a-49a4-b0dc-04bb9f0181cd</app:SemanticID>
+        <app:ShortName>name</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>adopted</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RecipientType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that is expected to receive information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:75074437-67f1-441f-be77-f1c293add113</app:SemanticID>
+        <app:DisplayName>Recipient</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="staffconceptmetadata:RecipientDistributionReasonCode" />
+          <xsd:element ref="staffconceptmetadata:RecipientName" />
+          <xsd:element ref="staffconceptmetadata:RecipientActorReference" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="StaffConceptMetadataIsAcknowledgementRequiredIndicator" type="staffconceptmetadata:StaffConceptMetadataIsAcknowledgementRequiredIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the users receiving the StaffConcept must acknowledge receipt (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:37502b95-7b37-4f43-a058-715e74b53d9b</app:SemanticID>
+        <app:ShortName>isAcknowledgementRequiredIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is acknowledgement required</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="StaffConceptMetadataIsAcknowledgementRequiredIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the users receiving the StaffConcept must acknowledge receipt (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:37502b95-7b37-4f43-a058-715e74b53d9b</app:SemanticID>
+        <app:ShortName>isAcknowledgementRequiredIndicator</app:ShortName>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>is acknowledgement required</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+  <xsd:element name="StaffConceptMetadataIssuingDateTime" type="staffconceptmetadata:StaffConceptMetadataIssuingDateTimeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the StaffConcept was formally issued or published.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9addf858-1ee0-49b1-a38b-f285466f7146</app:SemanticID>
+        <app:ShortName>issuingDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>issuing date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="StaffConceptMetadataIssuingDateTimeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The point in time at which the StaffConcept was formally issued or published.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9addf858-1ee0-49b1-a38b-f285466f7146</app:SemanticID>
+        <app:ShortName>issuingDateTime</app:ShortName>
+        <app:MIMStereotype>dateTime</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>issuing date/time</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TimePointType" />
+  </xsd:simpleType>
+  <xsd:element name="StaffConceptMetadataLifecycleCode" type="informationresource:InformationResourceLifecycleCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The state of the StaffConcept in its lifecycle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:164bddfb-e3ab-41e0-8a59-527488fdd0a7</app:SemanticID>
+        <app:ShortName>lifecycleCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>lifecycle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="StaffConceptMetadataOriginator" type="conceptmetadata2:OriginatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that creates or provides information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a9b5e1e6-a5a6-44a6-8809-0cdc7277a787</app:SemanticID>
+        <app:ShortName>originator</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="StaffConceptMetadataRecipient" type="staffconceptmetadata:RecipientType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Actor that is expected to receive information.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a76e0872-67b0-47fd-9f6b-4f4b998b2864</app:SemanticID>
+        <app:ShortName>recipient</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="StaffConceptMetadataType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Descriptive information about information given in a StaffConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0ba11f98-31a4-461c-80ac-54df489d5422</app:SemanticID>
+        <app:Remarks>This data type does not describe characteristics of a StaffConcept but characteristics of the information available for a StaffConcept.</app:Remarks>
+        <app:DisplayName>Staff concept metadata</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="conceptmetadata2:ConceptMetadataCommentText" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="conceptmetadata2:ConceptMetadataOriginatorConfidentialityLabel" minOccurs="0" />
+          <xsd:element ref="conceptmetadata2:ConceptMetadataValidityTimePeriod" minOccurs="0" />
+          <xsd:element ref="staffconceptmetadata:StaffConceptMetadataIsAcknowledgementRequiredIndicator" minOccurs="0" />
+          <xsd:element ref="staffconceptmetadata:StaffConceptMetadataIssuingDateTime" minOccurs="0" />
+          <xsd:element ref="staffconceptmetadata:StaffConceptMetadataLifecycleCode" minOccurs="0" />
+          <xsd:element ref="staffconceptmetadata:StaffConceptMetadataVersionValue" minOccurs="0" />
+          <xsd:element ref="staffconceptmetadata:StaffConceptMetadataRecipient" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="staffconceptmetadata:StaffConceptMetadataOriginator" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="StaffConceptMetadataVersionValue" type="staffconceptmetadata:StaffConceptMetadataVersionValueType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The version of the StaffConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3443cab9-1d9c-4b4c-bd00-f9bd8dbd9a79</app:SemanticID>
+        <app:ShortName>versionValue</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>value</app:MIMStereotype>
+        <app:DisplayName>version</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="StaffConceptMetadataVersionValueType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The version of the StaffConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3443cab9-1d9c-4b4c-bd00-f9bd8dbd9a79</app:SemanticID>
+        <app:ShortName>versionValue</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>value</app:MIMStereotype>
+        <app:DisplayName>version</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:StringType">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

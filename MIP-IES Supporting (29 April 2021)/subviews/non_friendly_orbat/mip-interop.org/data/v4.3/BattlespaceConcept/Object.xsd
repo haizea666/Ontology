@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:affiliation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AirForceEchelonCode" type="object:AirForceEchelonCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The echelon of the air force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:34f3015f-e928-4553-95bd-33e7c5b11791</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="AirForceEchelonCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An echelon of the air force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84054139-617c-4b33-a3be-e5af2de3b555</app:SemanticID>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower echelon than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Flight">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A specified group of aircraft engaged in a common mission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d776c121-b2a2-4e87-a49e-d65a453757fa</app:SemanticID>
+            <app:DisplayName>Flight</app:DisplayName>
+            <app:PhysicalName>FLIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirSquadron">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An administrative or tactical organisation normally but not necessarily composed of aircraft of the same type.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:40ca3a7a-c01d-4ac5-b03e-f2d87063ba8b</app:SemanticID>
+            <app:DisplayName>Squadron, air</app:DisplayName>
+            <app:PhysicalName>SQDRNA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Wing">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An aviation unit composed normally of one primary mission group and the necessary supporting organisations.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9a979e7b-a7d5-45b5-be12-9a644bb61696</app:SemanticID>
+            <app:DisplayName>Wing</app:DisplayName>
+            <app:PhysicalName>WING</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fleet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An organisation of ships, aircraft, Marine forces, and shore-based fleet activities all under the command of a commander or commander in chief who may exercise operational as well as administrative control.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1a6f2f14-ae8b-4323-8dfd-937fde0075e7</app:SemanticID>
+            <app:DisplayName>Fleet</app:DisplayName>
+            <app:PhysicalName>FLEET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AirForceEchelonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The relative size of an air force unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:26dc5957-ff54-46f5-b523-ccd00d389498</app:SemanticID>
+        <app:DisplayName>Air force echelon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:EchelonType">
+        <xsd:sequence>
+          <xsd:element ref="object:AirForceEchelonCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ArmyEchelonCode" type="object:ArmyEchelonCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The echelon of the army.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:70e9f5a8-ea49-4f88-be51-6c7f35c12c9c</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ArmyEchelonCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An echelon of the army.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c1bb653d-7ac2-476d-93c8-256b3bc3c864</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower echelon than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="TeamOrCrew">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A unit smaller than a squad that will be denoted by a vehicle or weapon symbol in a graphical representation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2f8eace5-afb3-4fd6-a09e-9f02b00dc1bd</app:SemanticID>
+            <app:DisplayName>Team or crew</app:DisplayName>
+            <app:PhysicalName>TEAM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Squad">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small number of men, a subdivision or section of a company, formed for drill.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0d0ab26a-ff90-42a9-8d4e-91592ee648fe</app:SemanticID>
+            <app:DisplayName>Squad</app:DisplayName>
+            <app:PhysicalName>SQUAD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Section">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small tactical unit.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1bdd3a13-bd4b-43a7-9ca0-673f1569cabe</app:SemanticID>
+            <app:DisplayName>Section</app:DisplayName>
+            <app:PhysicalName>SECT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PlatoonOrDetachment">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A basic administrative and tactical unit in most arms and services of the Army.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3c7a4a9e-ab05-4d9b-9701-b069a1654f4c</app:SemanticID>
+            <app:DisplayName>Platoon or detachment</app:DisplayName>
+            <app:PhysicalName>PLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Company">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A basic administrative and tactical unit in most arms and services of the Army that is on a command level below a battalion and above a platoon.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9fb45961-7988-4311-a7db-37a69aae62fe</app:SemanticID>
+            <app:Remarks>A company consists of two or more platoons, usually of the same type, with a headquarters and a limited capacity for self-support.
+According to the arms and services of the Army, denomination can be Company (for arms that were historically operating on foot), Squadron (for arms that were historically mounted on horses), or Battery (mainly for artillery).</app:Remarks>
+            <app:DisplayName>Company</app:DisplayName>
+            <app:PhysicalName>COY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Battalion">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A unit composed of a headquarters and two or more companies or batteries.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1f29b592-6a8d-4347-8a12-7a5e15b9cb17</app:SemanticID>
+            <app:Remarks>A battalion may be part of a regiment and be charged with only tactical functions, or it may be a separate unit and be charged with both administrative and tactical functions.</app:Remarks>
+            <app:DisplayName>Battalion</app:DisplayName>
+            <app:PhysicalName>BN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RegimentOrGroup">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An administrative and tactical unit, on a command level below a division or brigade and above a battalion, the entire organisation of which is prescribed by table of organisation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:65445f26-4149-4148-aac2-b9e578289cef</app:SemanticID>
+            <app:Remarks>A group is a flexible administrative and tactical unit composed of either two or more battalions or two or more squadrons. The term also applies to combat support or combat service support units.</app:Remarks>
+            <app:DisplayName>Regiment or group</app:DisplayName>
+            <app:PhysicalName>RGT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Brigade">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A unit composed of a headquarters and two or more battalions. It may be part of an army and be charged with only tactical functions, or it may be a separate unit and be charged with both administrative and tactical functions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1bff4eea-93bf-4de5-88ae-7dc2225237ea</app:SemanticID>
+            <app:DisplayName>Brigade</app:DisplayName>
+            <app:PhysicalName>BDE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Division">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A major administrative and tactical unit/formation that combines in itself the necessary arms and services required for sustained combat, larger than a regiment/brigade and smaller than a corps.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2e5db25e-f173-4d87-9603-0db8ef4887bd</app:SemanticID>
+            <app:DisplayName>Division</app:DisplayName>
+            <app:PhysicalName>DIV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Corps">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A formation larger than a division but smaller than an army or army group.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fe6b3551-dc97-4985-9b7e-55801a3a18bf</app:SemanticID>
+            <app:Remarks>A corps usually consists to two or more divisions together with supporting arms and services.</app:Remarks>
+            <app:DisplayName>Corps</app:DisplayName>
+            <app:PhysicalName>CORPS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Army">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A formation larger than an army corps but smaller than an army group.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c3591455-0a55-4f4c-8804-8be10e1cde52</app:SemanticID>
+            <app:Remarks>An army usually consists of two or more army corps.</app:Remarks>
+            <app:DisplayName>Army</app:DisplayName>
+            <app:PhysicalName>ARMY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ArmyGroup">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The largest formation of land forces, normally comprising two or more armies or army corps under a designated commander.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bcacc4b5-2a1b-4b77-a060-7647ccac5d68</app:SemanticID>
+            <app:DisplayName>Army group</app:DisplayName>
+            <app:PhysicalName>AG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Theatre">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A broad geographical area defined by the SACEUR, which includes and surrounds the JOA, where strategic and operational activity may take place in support of the JFC mission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:09eee30e-b251-44cc-bab0-048c0a14a0e7</app:SemanticID>
+            <app:DisplayName>Theatre</app:DisplayName>
+            <app:PhysicalName>THEATR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ArmyEchelonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The relative size of an army unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:41a01e85-510a-4168-b0f5-e08301982b3a</app:SemanticID>
+        <app:Remarks>UK and FR regiments, being comprised of three or four manoeuvre units, are represented as "Battalion", based on the comparative table of NATO formations and units, as prescribed in STANAG 2356.</app:Remarks>
+        <app:DisplayName>Army echelon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:EchelonType">
+        <xsd:sequence>
+          <xsd:element ref="object:ArmyEchelonCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="EchelonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The relative size of the commonly accepted configuration of military formations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad467b8c-87ba-46bc-b478-f50acf8387b1</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Echelon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="EquipmentScalingCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The scaling of equipment.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:38f09b26-b913-4fb4-86bf-7d1d8a864d85</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lighter than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Light">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:11716da5-5aa8-4274-bfb3-9c04a7d9aa7d</app:SemanticID>
+            <app:DisplayName>Light</app:DisplayName>
+            <app:PhysicalName>LIGHT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Medium">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2c38531a-e847-4a67-a8a3-cb7b22395792</app:SemanticID>
+            <app:DisplayName>Medium</app:DisplayName>
+            <app:PhysicalName>MEDIUM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heavy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b40376ad-cc42-40fb-af70-ea869d7a1a0c</app:SemanticID>
+            <app:DisplayName>Heavy</app:DisplayName>
+            <app:PhysicalName>HEAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="NavyEchelonCode" type="object:NavyEchelonCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The echelon of the navy.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:765b30d4-954d-44c9-8a38-eb3b610f0441</app:SemanticID>
+        <app:ShortName>code</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>code</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NavyEchelonCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An echelon of the navy.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9c6ef13c-b111-4234-9b97-53c345b62e43</app:SemanticID>
+        <app:MIMStereotype>ordered</app:MIMStereotype>
+        <app:OrderRelation>is lower echelon than</app:OrderRelation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="NavalTaskElement">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A component of a task unit organized by the commander of the task unit or higher authority for accomplishing a specific task.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0d365b79-ba33-4b8d-82e2-2eab0ad2d4a9</app:SemanticID>
+            <app:DisplayName>Naval task element</app:DisplayName>
+            <app:PhysicalName>TSKELN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Flotilla">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A small fleet; a fleet of boats or small vessels.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bd97eb1a-f682-4c6c-9e29-fe67de7cd159</app:SemanticID>
+            <app:DisplayName>Flotilla</app:DisplayName>
+            <app:PhysicalName>FLOTLA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NavalTaskUnit">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A component of a task group organized by the commander of a task group or higher authority for accomplishing specific tasks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:285d86ed-2f45-4817-b13f-ea6c56a3f8d2</app:SemanticID>
+            <app:DisplayName>Naval task unit</app:DisplayName>
+            <app:PhysicalName>NTU</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MaritimeSquadron">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An administrative or tactical organisation consisting of two or more divisions of ships, plus such additional ships as may be assigned as flagships or tenders.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d3684176-94ca-4fda-9fbf-89a48f602fec</app:SemanticID>
+            <app:DisplayName>Squadron, maritime</app:DisplayName>
+            <app:PhysicalName>SQDRNM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NavalTaskGroup">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A component of a task force organized by the commander of the task force or higher authority for accomplishing specific tasks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4a643376-e4e2-4242-a9be-32a573d4203c</app:SemanticID>
+            <app:DisplayName>Naval task group</app:DisplayName>
+            <app:PhysicalName>NTG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NavalTaskForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A component of a fleet organized by the commander of a task fleet or higher authority for the accomplishment of a specific task or tasks.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ba4ae2ea-730e-4bb8-8d27-a69e906dce7a</app:SemanticID>
+            <app:DisplayName>Naval task force</app:DisplayName>
+            <app:PhysicalName>NTF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Fleet">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An organisation of ships, aircraft, Marine forces, and shore-based fleet activities all under the command of a commander or commander in chief who may exercise operational as well as administrative control.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a22244de-d476-40c5-b7d0-10d4ce1f356a</app:SemanticID>
+            <app:DisplayName>Fleet</app:DisplayName>
+            <app:PhysicalName>FLEET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="NavyEchelonType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The relative size of a navy unit.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:427017b0-1783-4b95-bac1-0705856a0362</app:SemanticID>
+        <app:DisplayName>Navy echelon</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="object:EchelonType">
+        <xsd:sequence>
+          <xsd:element ref="object:NavyEchelonCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ObjectAffiliation" type="affiliation:AffiliationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The countries, nationalities, ethnic groups, functional groups, exercise groups, or religions to which membership or allegiance is ascribed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0b368104-7463-4555-bbf7-c86dad9a2223</app:SemanticID>
+        <app:ShortName>affiliation</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>affiliation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ObjectTypeName" type="object:ObjectTypeNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type name of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:118fa93e-4551-41d6-ba11-3ff5ae508699</app:SemanticID>
+        <app:ShortName>typeName</app:ShortName>
+        <app:Remarks>The type name shall only be specified if the existing taxonomy does not allow to classify the Object at a sufficient level of detail.
+The type name must not be confused with the model name available for Materiel. The type name is used to classify the Object (e.g., 'High Frequency Radio') whereas the model name denotes the product (e.g., 'HF-9000D').</app:Remarks>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>type name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ObjectTypeNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type name of the Object.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:118fa93e-4551-41d6-ba11-3ff5ae508699</app:SemanticID>
+        <app:ShortName>typeName</app:ShortName>
+        <app:Remarks>The type name shall only be specified if the existing taxonomy does not allow to classify the Object at a sufficient level of detail.
+The type name must not be confused with the model name available for Materiel. The type name is used to classify the Object (e.g., 'High Frequency Radio') whereas the model name denotes the product (e.g., 'HF-9000D').</app:Remarks>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>type name</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

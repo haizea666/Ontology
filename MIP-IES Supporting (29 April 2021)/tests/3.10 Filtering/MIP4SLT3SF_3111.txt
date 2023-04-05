@@ -1,0 +1,28 @@
+Test description
+
+Test IDMIP4SLT3SF_3111Test TitleFilter by Topic.Execution Priority1ObjectiveEvaluate the behaviour associated with Filtering, for the Filter by Topic type, which is the base filtering functionality. Commonly defined filtering specifications (Xpath expressions) for both P/S and R/R are recommended.ScenarioA Consumer is subscribed to part of the Topic list of the Producer. Several BSOs both within and out of this subscription will be published at the Producer.EnvironmentInternet, co-located. Exchange Pattern: P/S, R/R.Participation2MTRSPre-test Conditions3.7 Information Scope (Topics)Test InputsN/AConclusionEven though the Consumer may specify a Filter, it remains the responsibility of the Provider to determine how best to satisfy the request.  This may mean that the Consumer receives data outside the parameters of the Filter.  Satisfying the Filter requests of the Consumer should be considered 'best effort' and not a hard requirement.
+Consequently, the conclusion of this test is just to evaluate the behaviour associated with Filtering.Test OutputsN/ATraceabilityREQ_SYS_0021
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer inserts BSOs in its C2IS, both within and out of the Topic list to which the Consumer is subscribed. ~~It remains the responsibility of the Provider to determine how best to satisfy the Consumer's Filter specification request, which will be considered a 'best effort' requirement.
+The not filtered out insertions are automatically received at the Consumer, which is able to incorporate them (or not) to the current operational picture shown on its C2IS.
+The Filtering behaviour will be evaluated on both Producer and Consumer sides. ~~122. Producer and Consumer rotate roles and conduct Step 1 again. ~~As steps 1. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

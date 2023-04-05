@@ -1,0 +1,23 @@
+Test description
+
+Test IDMIP4SLT3IS_5218Test TitleCreate and update OrganisationBoundary.Execution Priority1ObjectiveBSO validation. To verify basic functionality regarding OrganisationBoundary: adding and updating boundaries between different organisations.ScenarioTwo nations are exchanging information between their C2IS's. Nation A will add an OrganisationBoundary, and then change the organisations associated with the boundary (currently, there are no formal associations, just by means of the LeftOrganisationName and RightOrganisationName elements). Nation A will then create a brigade sized boundary with no organisation associated to it.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2MTRSApplicablePre-test ConditionsNation B has subscribed to receive information from the 'Forces' and 'Battlespace Geometry' topics of Nation A. Four or more organisations exist in this topic.Test InputsN/A.ConclusionNation B receives information about organisational boundaries added and updated by Nation A. The boundaries are processed correctly by the C2IS of both Nations.Test OutputsN/A.TraceabilityREQ_INF_0002, REQ_INF_0003.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A creates an OrganisationBoundary' in the'Battlespace Geometry' between two existing organisations in the 'Forces' topic (marked in its LeftOrganisationName and RightOrganisationName elements) ~~The boundary is created in Nation A's C2IS and the EchelonCode is correctly processed and integrated. Nation B receives the new boundary, and it is processed and integrated correctly in Nation B's C2IS. ~~122. Nation A updates the boundary so that it exists between two different organisations in the 'Forces' topic (its LeftOrganisationName and RightOrganisationName elements are updated) ~~The boundary is updated in Nation A's C2IS and is received by Nation B. The same information is shared in the C2IS's of both nations. ~~123. Nation A creates a second boundary for a brigade sized organisation to it. ~~The boundary is created in Nation A's C2IS and the EchelonCode is integrated correctly; Nation B receives the new boundary and shares the same information. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

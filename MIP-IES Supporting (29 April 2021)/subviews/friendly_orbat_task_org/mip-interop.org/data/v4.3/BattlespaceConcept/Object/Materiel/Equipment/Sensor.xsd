@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:equipment="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:sensor="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Sensor" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment/Sensor" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/Equipment" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="AcousticSensor" type="sensor:AcousticSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence of sound waves in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4e0a0b12-8960-464e-b839-5296c1e8fef1</app:SemanticID>
+        <app:DisplayName>Acoustic sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="AcousticSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence of sound waves in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:4e0a0b12-8960-464e-b839-5296c1e8fef1</app:SemanticID>
+        <app:DisplayName>Acoustic sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:SensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ChemicalSensor" type="sensor:ChemicalSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence and other properties of chemicals in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:818e5315-6efe-4377-9679-cf40ca0134ee</app:SemanticID>
+        <app:DisplayName>Chemical sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ChemicalSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence and other properties of chemicals in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:818e5315-6efe-4377-9679-cf40ca0134ee</app:SemanticID>
+        <app:DisplayName>Chemical sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:SensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CyberSensor" type="sensor:CyberSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects and identifies events in the cyberspace being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f9a71a1-5a3c-45c5-b96d-63b656f6aae0</app:SemanticID>
+        <app:DisplayName>Cyber sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="CyberSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects and identifies events in the cyberspace being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8f9a71a1-5a3c-45c5-b96d-63b656f6aae0</app:SemanticID>
+        <app:DisplayName>Cyber sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:SensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ElectromagneticSpectrumSensor" type="sensor:ElectromagneticSpectrumSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence of electromagnetic radiation in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:78734bd4-e6bf-41ba-a520-32cc49527e60</app:SemanticID>
+        <app:DisplayName>Electromagnetic spectrum sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ElectromagneticSpectrumSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence of electromagnetic radiation in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:78734bd4-e6bf-41ba-a520-32cc49527e60</app:SemanticID>
+        <app:DisplayName>Electromagnetic spectrum sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:SensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="InfraredSensor" type="sensor:InfraredSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence of infrared radiation in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a6efe6f9-cb72-4f1d-92f7-3c1ffb23a320</app:SemanticID>
+        <app:DisplayName>Infrared sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InfraredSensorCategoryCode" type="sensor:InfraredSensorCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of InfraredSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:11b7d8d0-49e1-4b1b-a166-eeea5d1fa19b</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="InfraredSensorCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of InfraredSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c9242b60-73f7-432a-8abd-402e98b6e04f</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="ForwardLookingInfraredSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An airborne, electro-optical thermal imaging device that detects far-infrared energy, converts the energy into an electronic signal, and provides a visible image for day or night viewing. Also called FLIR.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:634e7692-5093-4c2e-800b-8f119c8dda62</app:SemanticID>
+            <app:DisplayName>Forward looking infrared sensor</app:DisplayName>
+            <app:PhysicalName>FLIR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InfraredDetectionSystem">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Equipment used to detect signals that fall within the region of the electromagnetic spectrum between the long wavelength extreme of the visible spectrum (about 0.7 micrometers) and the shortest microwaves (about 1 millimetre).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d23c391f-ed4f-4e9f-a3be-76cef0ed2831</app:SemanticID>
+            <app:DisplayName>Infrared detection system</app:DisplayName>
+            <app:PhysicalName>INDETS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ThermalInfraredSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device that detects emitted infrared energy from both target and background, converts the infrared wavelengths to the visual spectrum.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2fecabea-f21f-4ac1-b54d-21874b98b7c7</app:SemanticID>
+            <app:DisplayName>Thermal infrared sensor</app:DisplayName>
+            <app:PhysicalName>THEINF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="InfraredSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence of infrared radiation in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a6efe6f9-cb72-4f1d-92f7-3c1ffb23a320</app:SemanticID>
+        <app:DisplayName>Infrared sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:ElectromagneticSpectrumSensorType">
+        <xsd:sequence>
+          <xsd:element ref="sensor:InfraredSensorCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MagneticFieldSensor" type="sensor:MagneticFieldSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence and measurements of a magnetic field in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dde875ed-68fc-4be4-94fd-45609f99b4e0</app:SemanticID>
+        <app:DisplayName>Magnetic field sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MagneticFieldSensorCategoryCode" type="sensor:MagneticFieldSensorCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MagneticFieldSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3848d4ac-3ba1-405a-9896-7878613e3b7f</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MagneticFieldSensorCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of MagneticFieldSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:69929c20-54bf-4500-9580-1428f7bda2b7</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="MagneticAnomalyDetector">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device that detects minute natural or man-made variations in the Earth's magnetic field and is used to detect submarines from aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:88d4afd6-685c-4aee-9a0f-64d04ae18c10</app:SemanticID>
+            <app:DisplayName>Magnetic anomaly detector</app:DisplayName>
+            <app:PhysicalName>MGANDT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MagneticFieldSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects the presence and measurements of a magnetic field in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:dde875ed-68fc-4be4-94fd-45609f99b4e0</app:SemanticID>
+        <app:DisplayName>Magnetic field sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:ElectromagneticSpectrumSensorType">
+        <xsd:sequence>
+          <xsd:element ref="sensor:MagneticFieldSensorCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OpticalSensor" type="sensor:OpticalSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects images in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:333dbe11-4ee3-4c67-a577-1733c1f13f83</app:SemanticID>
+        <app:DisplayName>Optical sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OpticalSensorCategoryCode" type="sensor:OpticalSensorCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of OpticalSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:41db9102-df91-4bc0-a2ae-eb4049bfa274</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OpticalSensorCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of OpticalSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:280b13b4-6ff2-4300-aa13-4b25991198fb</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="LaserRangefinder">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device that uses laser energy for determining the distance from the device to a place or object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b2cddae0-0ca8-427a-b96b-73fcf806c864</app:SemanticID>
+            <app:DisplayName>Rangefinder, laser</app:DisplayName>
+            <app:PhysicalName>RNGLAS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LowLightObservationSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A scope, goggles, camera or other device that uses either ambient light amplification or thermal imaging using the infrared spectrum enabling vision during periods of low light.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:adeb5069-087c-432b-8a74-397a90672586</app:SemanticID>
+            <app:DisplayName>Low-light observation sensor</app:DisplayName>
+            <app:PhysicalName>LLOBSS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PanoramicViewSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:184bd75e-5baf-4c07-a4cc-ade42564dcc7</app:SemanticID>
+            <app:DisplayName>Panoramic view sensor</app:DisplayName>
+            <app:PhysicalName>PANOVW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StillImageSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An OpticalSensor that provides snapshot, single images.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f2aa070c-7a29-4cc8-bf39-634e74b014b9</app:SemanticID>
+            <app:DisplayName>Still image sensor</app:DisplayName>
+            <app:PhysicalName>STLIMG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VideoSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An OpticalSensor that provides a stream of images (video).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6745f6fb-d15f-45cc-ad09-7d12f47fa9bd</app:SemanticID>
+            <app:DisplayName>Video sensor</app:DisplayName>
+            <app:PhysicalName>VIDEO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OpticalSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects images in the environment being sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:333dbe11-4ee3-4c67-a577-1733c1f13f83</app:SemanticID>
+        <app:DisplayName>Optical sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:ElectromagneticSpectrumSensorType">
+        <xsd:sequence>
+          <xsd:element ref="sensor:OpticalSensorCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OtherElectromagneticSpectrumSensor" type="sensor:OtherElectromagneticSpectrumSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An ElectromagneticSpectrumSensor that detects the presence of electromagnetic radiation other than infrared, magnetic field, optical or radar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e213dab8-cad5-470d-80a6-6db92eeff5cd</app:SemanticID>
+        <app:DisplayName>Other electromagnetic spectrum sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OtherElectromagneticSpectrumSensorCategoryCode" type="sensor:OtherElectromagneticSpectrumSensorCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of OtherElectromagneticSpectrumSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b5a67668-9b46-4193-9b00-04a2eed393e0</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OtherElectromagneticSpectrumSensorCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of OtherElectromagneticSpectrumSensor.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2095c08d-76eb-463a-b779-2c451793430e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Bathythermograph">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device that records the ocean temperature at various depths. Used to assist in the determination of characteristics of sound propagation and sonar detection.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:cb677d2f-e0d8-4a14-be3e-7f228a4cc986</app:SemanticID>
+            <app:DisplayName>Bathythermograph</app:DisplayName>
+            <app:PhysicalName>BTHTGH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HyperspectralImagingSensor">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An electromagnetic spectrum sensor that uses large portion of the spectrum to generate images. Used for locating objects or determining the material structure of objects.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f2264424-cab0-46c9-8cb6-38b8035918c5</app:SemanticID>
+            <app:DisplayName>Hyperspectral imaging sensor</app:DisplayName>
+            <app:PhysicalName>HYSIM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LineCrosser">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Sensor that is designed to detect the crossing of a specific line by an object.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b6875b6b-6963-4714-9f81-9d62edceab53</app:SemanticID>
+            <app:DisplayName>Line crosser</app:DisplayName>
+            <app:PhysicalName>LINCRS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LowLightLevelTelevision">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Television-type system that uses ambient light to reduce the value of the ratio of brightness between target and background and the brightness of the background that is used for day/night surveillance, target acquisition, fire control, fire adjustment, target identification, and target tracking; the LLLTV cannot “see” in complete darkness, it needs some ambient light from the atmosphere, moon, stars etc.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9d6059ec-36e8-4eb2-a0cc-e06bce0d0785</app:SemanticID>
+            <app:DisplayName>Low light level television</app:DisplayName>
+            <app:PhysicalName>LGLVTV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RadarWarningReceiver">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An ElectromagneticSpectrumSensor that detects the radio emissions of radar systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1b4fcd98-9aa7-453f-b6ab-ac4418cf065d</app:SemanticID>
+            <app:DisplayName>Radar Warning Receiver (RWR)</app:DisplayName>
+            <app:PhysicalName>RWR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RemoteIntrusionDetectionDevice">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An equipment used to detect objects moving into or within an area of interest.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:34767e01-1338-46a7-824e-6f42e86699fe</app:SemanticID>
+            <app:DisplayName>Remote intrusion detection device</app:DisplayName>
+            <app:PhysicalName>RTINDD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OtherElectromagneticSpectrumSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An ElectromagneticSpectrumSensor that detects the presence of electromagnetic radiation other than infrared, magnetic field, optical or radar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:e213dab8-cad5-470d-80a6-6db92eeff5cd</app:SemanticID>
+        <app:DisplayName>Other electromagnetic spectrum sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:ElectromagneticSpectrumSensorType">
+        <xsd:sequence>
+          <xsd:element ref="sensor:OtherElectromagneticSpectrumSensorCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Radar" type="sensor:RadarType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Radio equipment based on emission of radio waves towards an object and analysis of the waves returned by that object or emitted in response to excitation by the received waves.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b2a6f2a7-d00f-4004-9ab3-f767cf9bf592</app:SemanticID>
+        <app:DisplayName>Radar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RadarCategoryCode" type="sensor:RadarCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Radar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ebe0c66a-14a0-468b-a9af-9a5bbc409791</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RadarCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Radar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3a717d06-f8b4-443b-a62a-9dfcd46e7819</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AdvancedSyntheticApertureRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A multimode real-time, high-resolution reconnaissance system carried on an aircraft with all-weather, day-night, and long-range mapping capabilities. ASARS detects and accurately locates stationary and moving ground targets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2689562c-10ad-487a-b005-f8c5bdd6a7ac</app:SemanticID>
+            <app:DisplayName>Radar, advanced synthetic aperture</app:DisplayName>
+            <app:PhysicalName>RDRASA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirDefenceTrackingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used specifically in an air-defence tracking mode.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:393d61c3-d479-49f7-94d0-5ccea1dbe83f</app:SemanticID>
+            <app:DisplayName>Radar, air defence tracking</app:DisplayName>
+            <app:PhysicalName>RDRADT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirSurveillanceRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The radar used for systematic observation of air space by electronic or other means, primarily for the purpose of identifying and determining the movements of aircraft and missiles, friendly and enemy, in the air space under observation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c341dd18-c201-4480-86d2-bcc958d36409</app:SemanticID>
+            <app:DisplayName>Radar, air-surveillance</app:DisplayName>
+            <app:PhysicalName>RDRARS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirTrafficControlRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used for monitoring air traffic.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:dd0c61b6-b901-4b3c-ab07-74486ab1bd8e</app:SemanticID>
+            <app:DisplayName>Radar, air-traffic control</app:DisplayName>
+            <app:PhysicalName>RDRATC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AirborneRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar carried through the air by an aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4d7f4a08-0f89-46f7-be84-a683352eecb1</app:SemanticID>
+            <app:DisplayName>Radar, airborne</app:DisplayName>
+            <app:PhysicalName>RDRARB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BombNavigationRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used specifically for bomb navigation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:061ff87e-226e-4fc4-ba2f-3ebc03069d60</app:SemanticID>
+            <app:DisplayName>Radar, bomb navigation</app:DisplayName>
+            <app:PhysicalName>RDRBNV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CounterArtilleryRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used to detect and locate enemy artillery weapon systems.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:19bb6fd8-026b-47e3-a1a7-6d865f5e2a2b</app:SemanticID>
+            <app:DisplayName>Radar, counter-artillery</app:DisplayName>
+            <app:PhysicalName>RDRCAT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CounterBatteryRangingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Weapon locating radar capable of locating guns, mortars and rockets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:24bcbf85-9438-4ac2-b185-78c3cec961aa</app:SemanticID>
+            <app:DisplayName>Radar, counter-battery ranging</app:DisplayName>
+            <app:PhysicalName>RDRCBR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CounterMortarRangingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Mortar locating radar capable of locating mortars.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4244b846-9b92-425b-ad7e-dc52b2007282</app:SemanticID>
+            <app:DisplayName>Radar, counter-mortar ranging</app:DisplayName>
+            <app:PhysicalName>RDRCMR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DirectionFindingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The radar used for determining the bearing of an electromagnetic emission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9b43742c-629f-4125-a6ae-e74efd105f71</app:SemanticID>
+            <app:DisplayName>Radar, direction finding</app:DisplayName>
+            <app:PhysicalName>RDRDFD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EarlyWarningOrAcquisitionRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used for early notification of the launch or approach of unknown weapons or weapon carriers.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:efff1d04-c71b-4fc6-8a95-a356712e7b62</app:SemanticID>
+            <app:DisplayName>Radar, early warning/acquisition</app:DisplayName>
+            <app:PhysicalName>RDREWA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EarthSatelliteOrSpaceTrackingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used for tracking satellite or other objects in space.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f95390be-b146-498f-9168-0394851c0634</app:SemanticID>
+            <app:DisplayName>Radar, earth satellite/space tracking</app:DisplayName>
+            <app:PhysicalName>RDREST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FireControlRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Radar used to provide target information inputs to a weapon fire control system.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7790b41a-d33e-4339-a606-a44d553ce25f</app:SemanticID>
+            <app:DisplayName>Radar, fire-control</app:DisplayName>
+            <app:PhysicalName>RDRFC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GroundSurveillanceRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Radar with the normal function of maintaining continuous watch over an area.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:60f11f3d-d5a7-4058-8e57-a23b2e998749</app:SemanticID>
+            <app:DisplayName>Radar, ground surveillance</app:DisplayName>
+            <app:PhysicalName>RDRGRS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GuidanceRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar that provides information used to guide an object such as a missile to a target.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:f3130e40-f260-41f7-946b-e67a3376bc59</app:SemanticID>
+            <app:DisplayName>Radar, guidance</app:DisplayName>
+            <app:PhysicalName>RDRGUD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HeightFindingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used to display the distance between an aircraft datum and the surface vertically below as determined by a reflecting radar transmission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ab071ceb-32a2-4561-b29c-25cedb9a89e2</app:SemanticID>
+            <app:DisplayName>Radar, height-finding</app:DisplayName>
+            <app:PhysicalName>RDRHFD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HighResolutionRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar that provides detailed information on the size and shape of a target and surface imaging.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1e5a6af3-9dc3-4a3b-acea-2f3bcff570ed</app:SemanticID>
+            <app:DisplayName>Radar, high resolution</app:DisplayName>
+            <app:PhysicalName>RDRHRL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IdentificationFriendOrFoe">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A system using electromagnetic transmissions to which equipment carried by friendly forces automatically responds.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2b0847a8-e7ed-4ac0-8f67-a3baae52ecdf</app:SemanticID>
+            <app:DisplayName>Identification friend/foe</app:DisplayName>
+            <app:PhysicalName>IDNTFF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="InverseSyntheticApertureRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A high-resolution radar that tracks a moving object by using a stationary single radiating antenna element that transmits when the moving object is at sequential positions on its line of movement. Used in maritime surveillance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0ec29dde-c09a-4756-8ad2-29abba72d268</app:SemanticID>
+            <app:DisplayName>Radar, inverse synthetic aperture</app:DisplayName>
+            <app:PhysicalName>RDISAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JointSurveillanceTargetAttackRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A long-range, air-to-ground surveillance system designed to locate, classify and track ground targets in all weather conditions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:8e46dafd-9f56-4d0e-96dc-8fec76780316</app:SemanticID>
+            <app:DisplayName>Radar, joint surveillance target attack</app:DisplayName>
+            <app:PhysicalName>RDRJST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MeteorologicalRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used to observe and measure meteorological conditions.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2bcd9cca-8874-4e30-b583-9e3470fb2e7b</app:SemanticID>
+            <app:DisplayName>Radar, meteorological</app:DisplayName>
+            <app:PhysicalName>RDRMET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NavigationRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A navigation radar is a means by which direction and/or position is assessed when moving from one point to another. The radar facilitates navigation by determining position and may also provide vector information for calculating direction and speed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:6b6d0989-6cfb-498a-b669-f71bfac661bb</app:SemanticID>
+            <app:DisplayName>Radar, navigation</app:DisplayName>
+            <app:PhysicalName>RDRNAV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OverTheHorizonRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar system that makes use of the atmospheric reflection and refraction phenomena to extend its range of detection beyond line of sight.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b19dc5ee-196b-421e-9de8-7485b7f94885</app:SemanticID>
+            <app:DisplayName>Radar, over-the-horizon</app:DisplayName>
+            <app:PhysicalName>RDOTHR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RangingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar used for the process of establishing target distance.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c9f443f9-b105-4ca7-912c-16187c10ccfd</app:SemanticID>
+            <app:DisplayName>Radar, ranging</app:DisplayName>
+            <app:PhysicalName>RDRRNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RelocatableOverTheHorizonRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A relocatable radar system makes use of the atmospheric reflection and refraction phenomena to extend its range of detection beyond line of sight.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:63c81369-6681-4826-9703-68dea9f7dab8</app:SemanticID>
+            <app:DisplayName>Radar, relocatable over-the-horizon</app:DisplayName>
+            <app:PhysicalName>RROTHR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SideLookingAirborneRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An airborne radar, viewing at right angles to the axis of the vehicle, which produces a presentation of terrain or moving targets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:146a47c7-395b-4f6c-b6a2-50bfb252ec26</app:SemanticID>
+            <app:DisplayName>Radar, side-looking airborne</app:DisplayName>
+            <app:PhysicalName>RDSLAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SideLookingRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A radar, viewing at right angles to the axis of the vehicle, which produces a presentation of terrain or moving targets.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fc0a337c-2b13-4d59-a54a-4cc36c50ff0c</app:SemanticID>
+            <app:DisplayName>Radar, side-looking</app:DisplayName>
+            <app:PhysicalName>RDRSLR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SyntheticApertureRadar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A high-resolution radar that simulates a large aperture by using a single radiating antenna element installed on a moving platform and transmitting at sequential positions on a line.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9883d4fd-bb71-4652-8145-96bb99d50ba9</app:SemanticID>
+            <app:DisplayName>Radar, synthetic aperture</app:DisplayName>
+            <app:PhysicalName>RDSNRS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RadarType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Radio equipment based on emission of radio waves towards an object and analysis of the waves returned by that object or emitted in response to excitation by the received waves.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b2a6f2a7-d00f-4004-9ab3-f767cf9bf592</app:SemanticID>
+        <app:DisplayName>Radar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:ElectromagneticSpectrumSensorType">
+        <xsd:sequence>
+          <xsd:element ref="sensor:RadarCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Sensor" type="sensor:SensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A device that detects or measures a physical property and records, indicates, or otherwise responds to it.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:572671b8-16c3-43f2-8054-fe563f7e820f</app:SemanticID>
+        <app:DisplayName>Sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A device that detects or measures a physical property and records, indicates, or otherwise responds to it.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:572671b8-16c3-43f2-8054-fe563f7e820f</app:SemanticID>
+        <app:DisplayName>Sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="equipment:ElectronicEquipmentType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Sonar" type="sensor:SonarType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">SOund NAvigation Ranging. A sonic device used primarily for the detection and location of underwater objects.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6d5ccecc-718e-4077-84ff-b0246649a001</app:SemanticID>
+        <app:DisplayName>Sonar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SonarCategoryCode" type="sensor:SonarCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Sonar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c5c9e989-9d15-4b9b-91e0-235f478260bb</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="SonarCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Sonar.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:29964c60-8930-49c5-a60c-bf9c651a4576</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CommandActivatedSonobuoySystem">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:182aabbe-52bf-480f-ac59-9d5e83230dc1</app:SemanticID>
+            <app:DisplayName>Command activated sonobuoy system</app:DisplayName>
+            <app:PhysicalName>CASS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DippingSonar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Sonar teathered to a helicopter, that is dipped into the water at variable depths to locate underwater objects.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:ea5f65a4-138d-4135-9174-5ffb7c34ac9a</app:SemanticID>
+            <app:DisplayName>Dipping sonar</app:DisplayName>
+            <app:PhysicalName>DPSON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DirectionalCommandActivatedSonobuoySystem">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1477db2d-a091-4bd0-a5ca-03515e900570</app:SemanticID>
+            <app:DisplayName>Directional command activated sonobuoy system</app:DisplayName>
+            <app:PhysicalName>DICASS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FixedArraySonar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A series/system of sonar sensors fixed into infrastructure.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e1c2e0e5-5b91-49de-b8f4-087ad5c07c51</app:SemanticID>
+            <app:DisplayName>Fixed array sonar</app:DisplayName>
+            <app:PhysicalName>FASON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HandHeldSonar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A hand held acoustic device used primarily for the detection and location of underwater objects.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9bc6b656-a533-4a9e-9e0b-ecfad96bdd9c</app:SemanticID>
+            <app:DisplayName>Hand-held sonar</app:DisplayName>
+            <app:PhysicalName>HHS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ReflectorDiabloSonar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A device to make a training mine appear larger or for use during diving conning run ICOS 42+ sides etc.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a1988bf0-4a6e-49fb-bdcd-05c2b14ce9e2</app:SemanticID>
+            <app:DisplayName>Reflector-Diablo sonar</app:DisplayName>
+            <app:PhysicalName>RDS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Sonobuoy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A disposable Sonar system dropped from the rear of an aircraft.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:15a0f596-8710-40ac-a05c-4cfdc8aa7403</app:SemanticID>
+            <app:DisplayName>Sonobuoy</app:DisplayName>
+            <app:PhysicalName>SONO</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TowedArraySonar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A Sonar tethered to the rear of a sea faring platform, able to be submerged at variable depths, used to detect underwater objects.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1a2cc6da-d273-4510-94fe-796b2a058ebf</app:SemanticID>
+            <app:DisplayName>Towed array sonar</app:DisplayName>
+            <app:PhysicalName>TAS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VariableDepthSonar">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">[No definition provided by the external source.]</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e382c990-d4fe-48e4-b651-37f727d185e4</app:SemanticID>
+            <app:DisplayName>Variable depth sonar</app:DisplayName>
+            <app:PhysicalName>VDS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="SonarType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">SOund NAvigation Ranging. A sonic device used primarily for the detection and location of underwater objects.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6d5ccecc-718e-4077-84ff-b0246649a001</app:SemanticID>
+        <app:DisplayName>Sonar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:AcousticSensorType">
+        <xsd:sequence>
+          <xsd:element ref="sensor:SonarCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SoundRangingSensor" type="sensor:SoundRangingSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A device used for the process of establishing target distance using sound.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ab7158ab-789d-4367-9875-71f17341ec6c</app:SemanticID>
+        <app:DisplayName>Sound ranging sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="SoundRangingSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A device used for the process of establishing target distance using sound.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ab7158ab-789d-4367-9875-71f17341ec6c</app:SemanticID>
+        <app:DisplayName>Sound ranging sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:AcousticSensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TactileSensor" type="sensor:TactileSensorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects properties of the environment being sensed through physical contact with the environment begin sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18517852-1db2-45b3-a166-17b7bde45366</app:SemanticID>
+        <app:Remarks>A typical sensor requiring physical contact is a pressure plate.</app:Remarks>
+        <app:DisplayName>Tactile sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="TactileSensorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A sensor that detects properties of the environment being sensed through physical contact with the environment begin sensed.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:18517852-1db2-45b3-a166-17b7bde45366</app:SemanticID>
+        <app:Remarks>A typical sensor requiring physical contact is a pressure plate.</app:Remarks>
+        <app:DisplayName>Tactile sensor</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:SensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="VerticalLineArrayDifar" type="sensor:VerticalLineArrayDifarType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An expendable, non-repairable sonobuoy known as VLAD (DIFAR is short for Directional Frequency Analysis and Recording System) designed to increase the detection of signals of interest in an environment where there is an ever-increasing amount of ambient noise.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fd3c6217-c0d6-49ca-8b6c-9ce51ebd0da2</app:SemanticID>
+        <app:DisplayName>Vertical line array difar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="VerticalLineArrayDifarType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An expendable, non-repairable sonobuoy known as VLAD (DIFAR is short for Directional Frequency Analysis and Recording System) designed to increase the detection of signals of interest in an environment where there is an ever-increasing amount of ambient noise.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:fd3c6217-c0d6-49ca-8b6c-9ce51ebd0da2</app:SemanticID>
+        <app:DisplayName>Vertical line array difar</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sensor:AcousticSensorType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>12</TestCaseIdGroup>
+    <TestCaseIdNumber>62</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Retrieve multiple items by their identifiers</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>To use multiple items' identifiers to request information about those items.</TestCaseObjective>
+  <TestCaseScenario>The consumer knows the identifiers for multiple items and wishes to obtain more information about those items.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1214, MIP4SLT1_1213
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]</TestCasePreCondition>
+  <TestCaseInput>Identifiers for desired items  </TestCaseInput>
+  <TestCaseConclusion>The test is completed when the Consumer system is able to correctly receive all information associated with multiple items after using those items' identifiers to initiate a request-response exchange. The Provider must identify invalid identifiers and the Consumer must then deal with those invalid identifiers in an appropriate manner which has not yet been specified as of 12 April 2016 (possibly discard them).</TestCaseConclusion>
+  <TestCaseOutput>Verification that the information associated with the items requested is received correctly.</TestCaseOutput>
+  <TestCaseTraceability>MIP4_Request_Response_Exchange_Pattern</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (1) requests multiple items from Provider (2) by specifying their valid item identifiers. </TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets request correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Provider sends requested information. Consumer receives and interprets requested data correctly. </TestCaseStepAction>
+    <TestCaseStepResult>Requested data is received and interpreted correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer requests multiple items from Provider but specifies one or more invalid item identifiers. </TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets request correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Provider sends requested information for valid identifiers and sends error message for invalid identifiers indicating unknown identifiers. Consumer receives and interprets requested data correctly for valid identifiers and traps returns for invalid identifiers. </TestCaseStepAction>
+    <TestCaseStepResult>Provider returns valid information for valid identifiers and sends error messages for invalid identifiers. Consumer receives and interprets response correctly and handles both valid data and error messages correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

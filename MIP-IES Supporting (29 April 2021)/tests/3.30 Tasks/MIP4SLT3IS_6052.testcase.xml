@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>60</TestCaseIdGroup>
+    <TestCaseIdNumber>52</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Indicate erroneous information for an example Task</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO PlannedTime. Test whether the Producer/Provider is able to create a Task, mark some information as erroneous and the Consumers/Receivers are able to understand (and display) it correctly.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates a Task (ArmedAssault) with specific HostilityStatus.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this ArmedAssault and marks the HostilityStatus as erroneous.
+The Consumers receive the information and interpret it correctly.
+The Producer creates a Task (AirAssault) with specific location (Point).
+The Consumers receive the information and interpret it correctly.
+The Producer updates this AirAssault and marks the location as erroneous.
+The Consumers receive the information and interpret it correctly.
+The Producer creates a Task (Breach) with a specific PlannedTimePeriod.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this Breach and marks the PlannedTimePeriod as erroneous.
+The Consumers receive the information and interpret it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created a topic which includes message elements belonging to the Task message schema area.
+The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Tasks are processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates an ArmedAssault (Task) with name XXX_AA_052 with HostilityStatus=Hostile.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_AA_052 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the ArmedAssault correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the ArmedAssault and marks the HostilityStatus (Hostile) as erroneous. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the ArmedAssault correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates an AirAssault (Task) with name XXX_AIA_052 with a specific Point location. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the AirAssault correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the AirAssault and marks the location as erroneous. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the AirAssault correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates a Breach (Task) with name XXX_BT_052 with a specific PlannedTimePeriod. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the Breach correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>6</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) updates the Breach and marks the PlannedTimePeriod as erroneous. </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the Breach correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

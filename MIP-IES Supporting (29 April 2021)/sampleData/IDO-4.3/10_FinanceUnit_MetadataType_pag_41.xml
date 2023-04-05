@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:OtherAdministrativeUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:prim="https://mip-interop.org/data/v4.3/Primitives" xmlns:battlespaceconceptmetadata="https://mip-interop.org/data/v4.3/BattlespaceConcept/Metadata" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:Amplification>
+		<base:AmplificationLocationText>Missing</base:AmplificationLocationText>
+		<base:AmplificationText>Missing</base:AmplificationText>
+	</base:Amplification>
+	<base:ID>urn:0001</base:ID>
+	<concept:ConceptName>NATO</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata>
+		<conceptmetadata:ConceptMetadataReference>
+			<conceptmetadata:ReferenceRoleCode>IsDescribedIn</conceptmetadata:ReferenceRoleCode>
+			<conceptmetadata:ReferenceCitedResourceRef xsi:nil="true"/>
+			<conceptmetadata:ReferenceCitedResource>
+				<base:ID>urn:guid:0D0463FA-EBB7-11E6-9295-1F2601A7C586</base:ID>
+				<concept:ConceptName>IDT</concept:ConceptName>
+				<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+				<battlespaceconcept:BattlespaceConceptMetadata></battlespaceconcept:BattlespaceConceptMetadata>
+			</conceptmetadata:ReferenceCitedResource>
+		</conceptmetadata:ConceptMetadataReference>
+		<conceptmetadata:ConceptMetadataReportingData>
+			<conceptmetadata:ReportingDataCategoryCode>Inferred</conceptmetadata:ReportingDataCategoryCode>
+			<conceptmetadata:ReportingDataObservationDateTime>2017-04-28T08:55:12.000Z</conceptmetadata:ReportingDataObservationDateTime>
+			<conceptmetadata:ReportingDataReportingDateTime>2017-04-28T09:41:52.000Z</conceptmetadata:ReportingDataReportingDateTime>
+			<conceptmetadata:ReportingDataReporter>
+				<conceptmetadata:ReporterName>1DIV</conceptmetadata:ReporterName>
+			</conceptmetadata:ReportingDataReporter>
+		</conceptmetadata:ConceptMetadataReportingData>
+	</battlespaceconcept:BattlespaceConceptMetadata>
+	<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+	<organisation:MilitaryOrganisationServiceCode>Combined</organisation:MilitaryOrganisationServiceCode>
+	<unit:UnitEchelon/>
+	<unit:OtherAdministrativeUnitCategoryCode>FinanceUnit</unit:OtherAdministrativeUnitCategoryCode>
+</unit:OtherAdministrativeUnit>
+<!--
+Original example
+
+<unit:FinanceUnit>
+...
+    <base:BaseMetadata xsi:type="meta:MetadataType">
+        <meta:CommentTextWrapper>
+           <prim:NilReason>Missing</prim:NilReason>
+        </meta:CommentTextWrapper>
+        <meta:ReferenceWrapper>        
+            <meta:Reference>
+                <meta:RoleCodeWrapper>
+                     <meta:ReferenceRoleCode>IsDescribedIn</meta:ReferenceRoleCode>
+                </meta:RoleCodeWrapper>
+                <meta:CitedResource>
+                     <base:Uri>urn:0001</base:Uri>
+                     <base:Source>NATO</base:Source>
+                     <base:ComplexType>org:AirFormation</base:ComplexType>
+                </meta:CitedResource>
+            </meta:Reference>
+        </meta:ReferenceWrapper> 
+        <meta:ReportingDataWrapper>
+            <meta:ReportingData>
+               <meta:ReportingDataCategoryCodeWrapper> 
+                  <meta:ReportingDataCategoryCode>Inferred</meta:ReportingDataCategoryCode>
+               </meta:ReportingDataCategoryCodeWrapper> 
+               <meta:ObservationDateTimeWrapper>
+                  <meta:ObservationDateTime>2017-04-28T08:55:12.000Z</meta:ObservationDateTime>
+               </meta:ObservationDateTimeWrapper>
+               <meta:ReportingDateTimeWrapper>
+                  <meta:ReportingDateTime>2017-04-28T09:41:52.000Z</meta:ReportingDateTime>
+               </meta:ReportingDateTimeWrapper>               
+               <meta:ReporterWrapper>
+                  <meta:Reporter>
+                     <meta:ReporterNameWrapper>                      
+                         <meta:ReporterName>1DIV</meta:ReporterName>
+                     </meta:ReporterNameWrapper>              
+                  </meta:Reporter>
+               </meta:ReporterWrapper>
+            </meta:ReportingData>
+        </meta:ReportingDataWrapper>
+    </base:BaseMetadata>
+...
+</unit:FinanceUnit>
+
+-->

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>53</TestCaseIdGroup>
+    <TestCaseIdNumber>1</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create Atmosphere.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. Test whether the Producer/Provider is able to create an Atmosphere (MeteorologicFeature) and the Consumers/Receivers are able to understand (and display) it correctly.</TestCaseObjective>
+  <TestCaseScenario>The Producer creates an Atmosphere (MeteorologicFeature)The Consumers receive the information and interpret it correctly.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created a topic which includes message elements belonging to the MeteorologicFeature message schema area.
+The Consumers have subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the Atmosphere is processed and interpreted correctly on all Nations' C2IS.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>The Producer (A) creates an Atmosphere (MeteorologicFeature) with name XXX_ATMOS_5301 and information for the following attributes:
+* Location
+* Interpretation
+* ProbabilityPercent
+* Source
+* HumidityPercent
+* InversionLayer
+* PressureMeasure
+* PressureSystemCategory
+* Temperature
+* TemperatureGradient
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the MeteorologicFeature: ITA_ ATMOS_5301 </TestCaseStepAction>
+    <TestCaseStepResult>Consumers (B) receive and display the Atmosphere correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

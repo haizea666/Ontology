@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<controlfeature:OtherControlFeature xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:controlfeature="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/ControlFeature" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>urn:mim:5767eff8-9120-42b1-8a19-8ad32886c601</base:ID>
+	<concept:ConceptName>OBJ BRAVO</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+	<controlfeature:OtherControlFeatureCategoryCode>ObjectiveArea</controlfeature:OtherControlFeatureCategoryCode>
+</controlfeature:OtherControlFeature>
+
+<!--
+Original example
+
+<?xml version ="1.0" encoding ="utf-16"?>
+<cfeat:ObjectiveArea>
+<base:Identifier>
+<base:Uri>urn:mim:5767eff8-9120-42b1-8a19-8ad32886c601</base:Uri>
+<base:Source>System_2</base:Source>
+<base:Discriminator>urn:guid:b6d509fd-3ef7-4f5d-926b-8884c52bd15d</base:Discriminator>
+<base:IsDependentIndicator>false</base:IsDependentIndicator>
+</base:Identifier>
+...
+<core:NameWrapper>
+<core:Name>OBJ BRAVO</core:Name> 
+</core:NameWrapper>
+...
+</cfeat:ObjectiveArea>
+-->

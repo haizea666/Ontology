@@ -1,0 +1,32 @@
+Test description
+
+Test IDMIP4SLT1_1262Test TitleRetrieve multiple items by their identifiersExecution Priority1ObjectiveTo use multiple items' identifiers to request information about those items.ScenarioThe consumer knows the identifiers for multiple items and wishes to obtain more information about those items.EnvironmentInternet or Co-locatedParticipation2MTRSPre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1214, MIP4SLT1_1213
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Test InputsIdentifiers for desired items  ConclusionThe test is completed when the Consumer system is able to correctly receive all information associated with multiple items after using those items' identifiers to initiate a request-response exchange.  The Provider must identify invalid identifiers and the Consumer must then deal with those invalid identifiers in an appropriate manner which has not yet been specified as of 12 April 2016 (possibly discard them).12 Test OutputsVerification that the information associated with the items requested is received correctly.TraceabilityMIP4_Request_Response_Exchange_Pattern
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Consumer (1) requests multiple items from Provider (2) by specifying their valid item identifiers. ~~Provider receives and interprets request correctly. ~~122. Provider sends requested information.   Consumer receives and interprets requested data correctly. ~~Requested data is received and interpreted correctly. ~~213. Consumer requests multiple items from Provider but specifies one or more invalid item identifiers. ~~Provider receives and interprets request correctly. ~~124. Provider sends requested information for valid identifiers and sends error message for invalid identifiers indicating unknown identifiers.   Consumer receives and interprets requested data correctly for valid identifiers and traps returns for invalid identifiers. ~~Provider returns valid information for valid identifiers and sends error messages for invalid identifiers.  Consumer receives and interprets response correctly and handles both valid data and error messages correctly. ~~21Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

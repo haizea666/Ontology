@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staffconceptorganisationstructure:NonFriendlyORBAT xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:appinfo="https://mip-interop.org/data/v4.3/AppInfo" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:person="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Person" xmlns:location="https://mip-interop.org/data/v4.3/BattlespaceConcept/Location" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" xmlns:staffconceptorganisationstructure="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" xmlns:affiliation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Affiliation" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:confidentialitymetadatalabel="urn:nato:stanag:4774:confidentialitymetadatalabel:1:0" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>uri:orgstruct:1405656500000000048214056565000000000483</base:ID>
+	<concept:ConceptName>Torrike ORBAT</concept:ConceptName>
+	<staffconcept:StaffConceptMetadata>
+		<conceptmetadata:ConceptMetadataMetadataConfidentialityLabel>
+			<confidentialitymetadatalabel:ConfidentialityInformation>
+				<confidentialitymetadatalabel:PolicyIdentifier>Unmarked</confidentialitymetadatalabel:PolicyIdentifier>
+				<confidentialitymetadatalabel:Classification>Unmarked</confidentialitymetadatalabel:Classification>
+			</confidentialitymetadatalabel:ConfidentialityInformation>
+			<confidentialitymetadatalabel:CreationDateTime>2019-12-24T10:00:00.000Z</confidentialitymetadatalabel:CreationDateTime>
+		</conceptmetadata:ConceptMetadataMetadataConfidentialityLabel>
+		<conceptmetadata:ConceptMetadataValidityTimePeriod xsi:type="generic:AbsoluteTimePeriodType">
+			<generic:AbsoluteTimePeriodEndDateTime>2019-12-24T10:00:00.000Z</generic:AbsoluteTimePeriodEndDateTime>
+			<generic:AbsoluteTimePeriodStartDateTime>2019-04-09T16:38:00.000Z</generic:AbsoluteTimePeriodStartDateTime>
+		</conceptmetadata:ConceptMetadataValidityTimePeriod>
+		<staffconceptmetadata:StaffConceptMetadataIsAcknowledgementRequiredIndicator>false</staffconceptmetadata:StaffConceptMetadataIsAcknowledgementRequiredIndicator>
+		<staffconceptmetadata:StaffConceptMetadataIssuingDateTime>2019-12-31T09:41:52.000Z</staffconceptmetadata:StaffConceptMetadataIssuingDateTime>
+		<staffconceptmetadata:StaffConceptMetadataVersionValue>1.0</staffconceptmetadata:StaffConceptMetadataVersionValue>
+		<staffconceptmetadata:StaffConceptMetadataRecipient>
+			<staffconceptmetadata:RecipientDistributionReasonCode>DistributedForInformation</staffconceptmetadata:RecipientDistributionReasonCode>
+			<staffconceptmetadata:RecipientName>BRIGADE</staffconceptmetadata:RecipientName>
+		</staffconceptmetadata:StaffConceptMetadataRecipient>
+		<staffconceptmetadata:StaffConceptMetadataOriginator>
+			<conceptmetadata:OriginatorName>ENEMY FORCE COMMAND</conceptmetadata:OriginatorName>
+		</staffconceptmetadata:StaffConceptMetadataOriginator>
+	</staffconcept:StaffConceptMetadata>
+	<staffconceptorganisationstructure:OrganisationStructureComponents xsi:type="organisation:OrganisationMaintenanceCommandAssociationType">
+		<base:ID>uri:unit:14056565000000000482uri:unit:14056565000000000483</base:ID>
+		<organisation:OrganisationFunctionalAssociationFunctionalObjectOrganisation xsi:type="unit:InfantryUnitType">
+			<base:ID>uri:unit:14056565000000000483</base:ID>
+			<concept:ConceptName>Torrike unit sub infantry</concept:ConceptName>
+			<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+			<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+			<object:ObjectAffiliation xsi:type="affiliation:GeopoliticalAffiliationType">
+			<affiliation:GeopoliticalAffiliationCode>Iran</affiliation:GeopoliticalAffiliationCode>
+			</object:ObjectAffiliation>
+			<object:ObjectAffiliation xsi:type="affiliation:EthnicAffiliationType">
+				<affiliation:EthnicAffiliationCode>Iran</affiliation:EthnicAffiliationCode>
+			</object:ObjectAffiliation>
+			<object:ObjectAffiliation xsi:type="affiliation:ReligiousAffiliationType">
+				<affiliation:ReligiousAffiliationCode>Muslim</affiliation:ReligiousAffiliationCode>
+			</object:ObjectAffiliation>
+			<object:ObjectAffiliation xsi:type="affiliation:OtherAffiliationType">
+				<affiliation:OtherAffiliationCode>Other</affiliation:OtherAffiliationCode>
+			</object:ObjectAffiliation>
+			<organisation:OrganisationHasCommandFunctionIndicator>false</organisation:OrganisationHasCommandFunctionIndicator>
+			<organisation:MilitaryOrganisationReadiness xsi:nil="true" />
+			<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+			<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+				<object:ArmyEchelonCode xsi:nil="true"/>
+			</unit:UnitEchelon>
+		</organisation:OrganisationFunctionalAssociationFunctionalObjectOrganisation>
+		<organisation:OrganisationFunctionalAssociationFunctionalSubjectOrganisationRef>
+			<base:ID>uri:unit:14056565000000000482</base:ID>
+			<appinfo:SemanticId>MIM:8ab23975-f1f8-4d22-bfff-45e195d06144</appinfo:SemanticId>
+			<base:IsLocalIndicator>true</base:IsLocalIndicator>
+		</organisation:OrganisationFunctionalAssociationFunctionalSubjectOrganisationRef>
+	</staffconceptorganisationstructure:OrganisationStructureComponents>
+	<staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef xsi:nil="true"/>
+	<staffconceptorganisationstructure:OrganisationStructureRootOrganisation xsi:type="unit:ArtilleryUnitType">
+		<base:ID>uri:unit:14056565000000000482</base:ID>
+		<concept:ConceptName>Torrike artillery unit</concept:ConceptName>
+		<battlespaceconcept:BattlespaceConceptIsTypeIndicator>false</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+		<battlespaceconcept:BattlespaceConceptMetadata xsi:nil="true"/>
+		<organisation:OrganisationHasCommandFunctionIndicator>true</organisation:OrganisationHasCommandFunctionIndicator>
+		<organisation:MilitaryOrganisationServiceCode>Army</organisation:MilitaryOrganisationServiceCode>
+		<unit:UnitEchelon xsi:type="object:ArmyEchelonType">
+			<object:ArmyEchelonCode>Brigade</object:ArmyEchelonCode>
+		</unit:UnitEchelon>
+	</staffconceptorganisationstructure:OrganisationStructureRootOrganisation>
+	<staffconceptorganisationstructure:NonFriendlyORBATTypeName>Torrike ORBAT</staffconceptorganisationstructure:NonFriendlyORBATTypeName>
+</staffconceptorganisationstructure:NonFriendlyORBAT>

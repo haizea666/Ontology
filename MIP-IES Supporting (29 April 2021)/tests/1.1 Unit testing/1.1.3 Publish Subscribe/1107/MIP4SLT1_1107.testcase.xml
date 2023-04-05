@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>7</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Subscribe, demanding raw notifications (producer not supporting it)</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>Consumer subscribes to a Producer's subscription list and receives raw notification that the producer is not supporting the requested data. </TestCaseObjective>
+  <TestCaseScenario>A Consumer sends a subscription request to a Producer for a published topic requesting to receive a raw notifications if the producer is not supporting the requested data.  </TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2 or more.</TestCaseMaximumParticipation>
+  <TestCasePreCondition>The Producer/Provider has created the 'Ground Picture &gt; Forces' topic. The Consumer has subscribed to this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>This test is considered a success if the consumer receives raw notification that the producer is not supporting the topic. </TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_EM_0008, REQ_EM_0010.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Producer (A) publishes a subscription list including message type relating to 'Ground Picture &gt; Forces' topic. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer (B) subscribes to the 'Ground Picture &gt; Forces' topic and requests raw notification if Producer (A) is not supporting the subscription data. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Producer (A) receives the subscription request for the 'Ground Picture &gt; Forces' topic from Consumer (A) and sends raw notification to Consumer (B) that the producer is not supporting the request. </TestCaseStepAction>
+    <TestCaseStepResult>Consumer (B) received the raw notification from Producer (A) that the 'Ground Picture &gt; Forces' topic is not supported. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

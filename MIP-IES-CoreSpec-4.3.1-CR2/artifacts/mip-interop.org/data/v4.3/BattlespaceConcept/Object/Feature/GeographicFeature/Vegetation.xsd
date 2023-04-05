@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:vegetation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature/Vegetation" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Feature/GeographicFeature/Vegetation" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:complexType name="BareVegetationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Vegetation of very reduced height, almost not visible or absent.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:42616641-9ecc-4281-99ff-a93ab1fb3ddf</app:SemanticID>
+        <app:DisplayName>Bare vegetation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:VegetationType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CultivatedVegetationCategoryCode" type="vegetation:CultivatedVegetationCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CultivatedVegetation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f736cd1e-3dcd-4552-84a8-f39e8f459faf</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="CultivatedVegetationCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of CultivatedVegetation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:2cda2035-bd82-44d7-afdb-230b6c98d97e</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="BotanicGarden">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A culturally designated tract where plants are displayed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:288925ee-306e-406a-a4fe-1085a382c917</app:SemanticID>
+            <app:DisplayName>Botanic garden</app:DisplayName>
+            <app:PhysicalName>BTNCLG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Cropland">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An area that has been tilled for the planting of crops.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:283beafa-0f22-4133-82b1-a1ae88c3b5d7</app:SemanticID>
+            <app:DisplayName>Cropland</app:DisplayName>
+            <app:PhysicalName>CRPLND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hedgerow">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A continuous growth of shrubs planted as a fence, a boundary, and/or a windbreak.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:62ba84fe-0dcb-4dc3-b3af-f84a01cab623</app:SemanticID>
+            <app:DisplayName>Hedgerow</app:DisplayName>
+            <app:PhysicalName>HDGERW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HopField">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered by the systematic planting of hop vines.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:55734ca7-7e96-4d78-9122-fa27c45ded3b</app:SemanticID>
+            <app:DisplayName>Hop field</app:DisplayName>
+            <app:PhysicalName>HOPFLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Orchard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered by systematic plantings of trees that yield fruits (including nuts).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0b8fd9fc-0b56-4e76-aea7-d2e9dbb74e5b</app:SemanticID>
+            <app:DisplayName>Orchard</app:DisplayName>
+            <app:PhysicalName>ORCHRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PlantNursery">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract where plants (for example: shrubs, flowers, and/or trees) are grown for transplanting, seed, and/or grafting.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2b6b6f03-e8ef-4cfc-b60e-1630c48c26aa</app:SemanticID>
+            <app:DisplayName>Plant nursery</app:DisplayName>
+            <app:PhysicalName>PLTNSR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Vineyard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered by the systematic planting of grape vines.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:32262d02-0870-41ad-abd2-994b38136499</app:SemanticID>
+            <app:DisplayName>Vineyard</app:DisplayName>
+            <app:PhysicalName>VNEYRD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CultivatedVegetationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Crops or gardens.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b76619e6-dd54-4b0a-9148-8a82cd55d6ad</app:SemanticID>
+        <app:DisplayName>Cultivated vegetation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:VegetationType">
+        <xsd:sequence>
+          <xsd:element ref="vegetation:CultivatedVegetationCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="JungleCategoryCode" type="vegetation:JungleCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Jungle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:66c255bd-c4cc-4d6f-95cd-a19c9ac0131d</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="JungleCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Jungle.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:8ae666ab-4b54-49f1-a6b6-1552ae6b2ad6</app:SemanticID>
+        <app:MIMStereotype>complete</app:MIMStereotype>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="CoastalOrEstuaryJungle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An area of jungle on generally swampy ground where movement is slow and difficult.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:95cf506d-d309-4aca-a85b-8ebedacb553f</app:SemanticID>
+            <app:DisplayName>Jungle, coastal/estuary</app:DisplayName>
+            <app:PhysicalName>JUNGCE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CultivationJungle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Areas which include areas such as rice paddies which will tend to be open, flat, dirty and swampy to areas such as rubber plantations which offer similar characteristics to primary jungle except for the fact that the trees will be in straight lines.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:2dc85a10-cdd6-4e2d-a33e-d366c15e7932</app:SemanticID>
+            <app:DisplayName>Jungle, cultivation</app:DisplayName>
+            <app:PhysicalName>JUNGC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PrimaryJungle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An area in lowland tropics, which has heavy rainfall. It has a thick 3 tier canopy up to 60m high and a reasonably clear floor that may permit some vehicular movement. Visibility may not exceed 50m.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:71da5e3f-a626-48db-acb9-edb00ac030bc</app:SemanticID>
+            <app:DisplayName>Jungle, primary</app:DisplayName>
+            <app:PhysicalName>JUNGP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SecondaryJungle">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An area that has thick undergrowth created through rapid growth after an area of primary jungle has been cleared, movement will be slow and noisy, heat increased due to a lack of canopy and visibility will be reduced to around 20m.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:340aec82-cf9e-45b0-a988-b0c606cd3ccd</app:SemanticID>
+            <app:DisplayName>Jungle, secondary</app:DisplayName>
+            <app:PhysicalName>JUNGS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="JungleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An area where heat is seldom less than 80°F/27°C, humidity normally 80-95% and rainfall on average at least 80 inches per year and rugged terrain.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:0705bd22-40b0-453d-a459-9348875b106e</app:SemanticID>
+        <app:DisplayName>Jungle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:VegetationType">
+        <xsd:sequence>
+          <xsd:element ref="vegetation:JungleCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="MarshType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An area of wet, often spongy ground that is subject to frequent rainfall or tidal inundations, but not considered to be continually under water. It is characterized by the growth of non woody plants and by the lack of trees.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3daffc41-9c05-4d91-bd33-cf54488051e4</app:SemanticID>
+        <app:DisplayName>Marsh</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:WetlandVegetationType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RangelandCategoryCode" type="vegetation:RangelandCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Rangeland.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ba883a00-4f07-4cd4-9bb3-b33f19c95297</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="RangelandCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Rangeland.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:deeb5753-b1d6-4fb2-8fae-23c02b065be3</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Brush">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered mainly by short, uncultured, woody plants.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:bacd1fd1-3377-4387-9beb-ddc0d9d5580f</app:SemanticID>
+            <app:DisplayName>Brush</app:DisplayName>
+            <app:PhysicalName>BRUSH</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Grassland">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered mainly by grasses that have little or no woody tissue.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:83b864b6-4446-497b-bdba-5a5db59d2099</app:SemanticID>
+            <app:DisplayName>Grassland</app:DisplayName>
+            <app:PhysicalName>GRSLND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Heathland">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An area of open uncultivated ground covered by heather and/or related plants, especially on acid sandy or peaty soil.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e9ac7446-57b1-4831-ba97-5bf1882d84b4</app:SemanticID>
+            <app:DisplayName>Heathland</app:DisplayName>
+            <app:PhysicalName>HTHLND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HerbAndBrush">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered by a mixture of herbaceous and low-growing, uncultivated plants that may have some woody tissue.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e45db326-c4ad-4a5c-a7af-6ccc47fd9d21</app:SemanticID>
+            <app:DisplayName>Herb and brush</app:DisplayName>
+            <app:PhysicalName>HERBBR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Savanna">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An open grassy plain with few or no trees in a tropical or subtropical region.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:394898ce-d2f8-4d14-8425-211bed7a3ca3</app:SemanticID>
+            <app:DisplayName>Savanna</app:DisplayName>
+            <app:PhysicalName>SAVNNA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Scrubland">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered sparsely by low trees, bushes, and/or shrubs that have been stunted by an environmental limitation (for example: low rainfall or nutrient-poor soil).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4e055721-47fe-44a6-b69a-a5bd78d7fad9</app:SemanticID>
+            <app:DisplayName>Scrubland</app:DisplayName>
+            <app:PhysicalName>SCRLND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Steppe">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A vast level grassy usually treeless plain.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7c7471ba-c3c2-4f69-9398-88ebf8733dfd</app:SemanticID>
+            <app:DisplayName>Steppe</app:DisplayName>
+            <app:PhysicalName>STEPPE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Thicket">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered mainly by low-growing, uncultured, woody plants that are thickly tangled together.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e1c2ee71-d900-4c25-8c77-befca09b8be3</app:SemanticID>
+            <app:DisplayName>Thicket</app:DisplayName>
+            <app:PhysicalName>THCKET</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tundra">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A vast, nearly level, treeless arctic region usually with a marshy surface and underlying permafrost.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:96beb54e-d05c-4a35-92f3-c2f7cb7dc709</app:SemanticID>
+            <app:DisplayName>Tundra</app:DisplayName>
+            <app:PhysicalName>TUNDRA</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RangelandType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Uncultured plants of low height.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b4768333-d762-4269-aff9-e7e39eaea421</app:SemanticID>
+        <app:DisplayName>Rangeland</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:VegetationType">
+        <xsd:sequence>
+          <xsd:element ref="vegetation:RangelandCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SwampType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A low lying saturated area covered with water all or most of the year, where accumulating dead vegetation does not rapidly decay. It can exist on flat-lying areas created by certain geomorphic environments. The vegetation mainly consists of hydrophytic trees and/or scrubs whose roots are adapted to wet conditions, with an open to very dense canopy closure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f7185396-c331-4260-8240-777e244a08a3</app:SemanticID>
+        <app:DisplayName>Swamp</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:WetlandVegetationType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VegetationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Plants considered collectively, especially those found in a particular area or habitat.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:581c4dff-4b1b-42a6-b4ce-142c9825b14f</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Vegetation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:NonIdentifiableType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="WetlandVegetationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Vegetation adapted to wet conditions such as swamps, marshes, or other usually saturated areas.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:5dc2320c-d43e-4920-81ee-c0d32bd2840e</app:SemanticID>
+        <app:DisplayName>Wetland vegetation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:VegetationType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="WoodCategoryCode" type="vegetation:WoodCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Wood.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:11dc9078-5589-4daf-8d99-4bc5bbbece7c</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="WoodCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The class of Wood.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a24220fc-2143-4160-b796-a03f3b05b57c</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Cane">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract covered mainly by large treelike grasses.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:31c8aa70-f420-47b9-914f-b13ec51e19e0</app:SemanticID>
+            <app:DisplayName>Cane</app:DisplayName>
+            <app:PhysicalName>CANE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Forest">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A tract of land primarily covered by trees and undergrowth.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:80442244-51b7-4f83-8e87-4e221e7222c7</app:SemanticID>
+            <app:DisplayName>Forest</app:DisplayName>
+            <app:PhysicalName>FOREST</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Oasis">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A fertile tract of land that occurs in a desert wherever a permanent supply of fresh water is available.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fc03f991-aa6d-4eb4-ab5f-ea5755bf1824</app:SemanticID>
+            <app:DisplayName>Oasis</app:DisplayName>
+            <app:PhysicalName>OASIS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Tree">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An individual woody perennial plant, typically having a single stem or trunk growing to a considerable height and bearing lateral branches at some distance from the ground.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:19527820-caeb-4dee-b594-b10d904a9809</app:SemanticID>
+            <app:DisplayName>Tree</app:DisplayName>
+            <app:PhysicalName>TREE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="WoodType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A tract of trees whose canopy is not closed (allows sunlight to reach the ground) and often includes undergrowth.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f1b1e299-5485-49da-b557-f86c00ced3cd</app:SemanticID>
+        <app:DisplayName>Wood</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="vegetation:VegetationType">
+        <xsd:sequence>
+          <xsd:element ref="vegetation:WoodCategoryCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

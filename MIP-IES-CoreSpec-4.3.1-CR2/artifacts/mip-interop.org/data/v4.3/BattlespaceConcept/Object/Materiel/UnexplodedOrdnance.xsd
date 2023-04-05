@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:unexplodedordnance="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/UnexplodedOrdnance" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/UnexplodedOrdnance" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="UnexplodedOrdnance" type="unexplodedordnance:UnexplodedOrdnanceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An explosive ordnance that has been primed, fused, armed, or otherwise prepared for action, and which has been fired, dropped, launched, placed in such a manner, as to constitute a hazard to operation, and remains unexploded either by malfunction or for any other cause. It is commonly abbreviated as UXO.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:71a59907-9d45-421c-aebe-c585a36de3a0</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Unexploded Ordnance (UXO)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="UnexplodedOrdnanceExposureCode" type="unexplodedordnance:UnexplodedOrdnanceExposureCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The visual status of an Unexploded Explosive Ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b6122918-9bf8-474e-8634-88902ef4e6e1</app:SemanticID>
+        <app:ShortName>exposureCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>exposure</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="UnexplodedOrdnanceExposureCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The visual status of an Unexploded Explosive Ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ecf900d1-cadf-4ad0-9e8a-b5ebbe8efc55</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="BodyPartiallyExposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The body of the Unexploded Explosive Ordnance is partially exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:94e15398-f2ff-4219-9f21-a211bf0aa9f1</app:SemanticID>
+            <app:DisplayName>Partially exposed, body</app:DisplayName>
+            <app:PhysicalName>PRTEXB</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FullyExposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is fully exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b0855e6b-4188-4c42-9429-4a9445c86843</app:SemanticID>
+            <app:DisplayName>Fully exposed</app:DisplayName>
+            <app:PhysicalName>FULEXP</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NosePartiallyExposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The nose of the Unexploded Explosive Ordnance is partially exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:c33b9ac4-19ad-4056-be4d-78934e225625</app:SemanticID>
+            <app:DisplayName>Partially exposed, nose</app:DisplayName>
+            <app:PhysicalName>PRTEXN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PartiallyExposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is partially exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1fed6203-a5ba-4baa-a582-9ef642b3eecf</app:SemanticID>
+            <app:DisplayName>Partially exposed</app:DisplayName>
+            <app:PhysicalName>PRTEX</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SidePartiallyExposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The side of the Unexploded Explosive Ordnance is partially exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:571b6754-b391-4b6f-ae76-c5c381e0b884</app:SemanticID>
+            <app:DisplayName>Partially exposed, side</app:DisplayName>
+            <app:PhysicalName>PRTEXS</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TailPartiallyExposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The tail of the Unexploded Explosive Ordnance is partially exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e3438ec2-bb49-4abc-9616-27db0016784a</app:SemanticID>
+            <app:DisplayName>Partially exposed, tail</app:DisplayName>
+            <app:PhysicalName>PRTEXT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Unexposed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is not exposed.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:37fcecae-2c72-4650-b4aa-6d762f40f29d</app:SemanticID>
+            <app:DisplayName>Unexposed</app:DisplayName>
+            <app:PhysicalName>UNEXPD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="UnexplodedOrdnanceStatusQualifierCode" type="unexplodedordnance:UnexplodedOrdnanceStatusQualifierCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The qualification status of an Unexploded Explosive Ordnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:731d4828-1f6e-471b-8348-8f987aedbf31</app:SemanticID>
+        <app:ShortName>statusQualifierCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>status</app:MIMStereotype>
+        <app:DisplayName>status qualifier</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="UnexplodedOrdnanceStatusQualifierCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The qualification status of an UnexplodedOrdnance.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:39786de6-93ab-4cb9-9159-79f10b41133f</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="Broken">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is broken.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e8c437d7-834b-4992-8319-90eef5736210</app:SemanticID>
+            <app:DisplayName>Broken</app:DisplayName>
+            <app:PhysicalName>BROKEN</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Intact">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is undamaged.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7806932f-cc3d-44a7-a1eb-49757e86cbc3</app:SemanticID>
+            <app:DisplayName>Intact</app:DisplayName>
+            <app:PhysicalName>INTACT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Leaking">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is losing its content.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:5a9c9fe3-cfbf-4829-82d1-80f75751693f</app:SemanticID>
+            <app:DisplayName>Leaking</app:DisplayName>
+            <app:PhysicalName>LEAKNG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="New">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is not old.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9a3c8c46-1b5a-4798-ae0d-7cd5598d1669</app:SemanticID>
+            <app:DisplayName>New</app:DisplayName>
+            <app:PhysicalName>NEW</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Old">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is not new.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b4e0f53a-7634-4bf7-b13c-76f3cd070ceb</app:SemanticID>
+            <app:DisplayName>Old</app:DisplayName>
+            <app:PhysicalName>OLD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Rusted">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The Unexploded Explosive Ordnance is corroded.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e5f7da4a-3558-4146-bfbd-9ac3c669cc58</app:SemanticID>
+            <app:DisplayName>Rusted</app:DisplayName>
+            <app:PhysicalName>RUSTED</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="UnexplodedOrdnanceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An explosive ordnance that has been primed, fused, armed, or otherwise prepared for action, and which has been fired, dropped, launched, placed in such a manner, as to constitute a hazard to operation, and remains unexploded either by malfunction or for any other cause. It is commonly abbreviated as UXO.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:71a59907-9d45-421c-aebe-c585a36de3a0</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155" app:inheritedFrom="MIM:da9a1be6-44d1-45c4-8ac2-9970038d17f1">AbsolutePoint</app:Geometry>
+        <app:DisplayName>Unexploded Ordnance (UXO)</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="materiel:MaterielType">
+        <xsd:sequence>
+          <xsd:element ref="unexplodedordnance:UnexplodedOrdnanceExposureCode" />
+          <xsd:element ref="unexplodedordnance:UnexplodedOrdnanceStatusQualifierCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

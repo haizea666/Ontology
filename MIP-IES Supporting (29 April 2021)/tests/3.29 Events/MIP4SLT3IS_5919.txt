@@ -1,0 +1,35 @@
+Test description
+
+Test IDMIP4SLT3IS_5919Test TitleCreate IEDEvent with IncidentCode = 'IEDCacheDiscovery'.Execution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create and update the activity information of an IEDEvent and the Consumers/Receivers are able to understand (and display) it correctly.ScenarioThe Producer creates an IEDEvent with specific activity information.
+The Consumers receive the information and interpret it correctly.
+The Producer updates the activity information of this IEDEvent.
+The Consumers receive the information and interpret it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSApplicablePre-test ConditionsThe Producer/Provider has created a topic which includes message elements belonging to the Event message schema area.
+The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the IEDEvent and its activity information is processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (1) creates an IEDEvent with name XXX_IEDC_919 and with the following activity information:
+* IncidentCode = 'IEDCacheDiscovery'
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the IEDEvent: ESP_ IEDC_919. ~~
+Consumers (2) receive and display the IEDEvent correctly. ~~122. The Producer (1) updates the IEDEvent with the following activity information:
+* IncidentCode = 'IEDHoax' ~~
+Consumers (2) receive and display the IEDEvent correctly. ~~12
+Configuration
+ItemValueCommentIEDEventGeneration10 --> Combine steps to one IEDEvent in the MTMT, generate new MTMT IEDEvents on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate IEDEvent.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

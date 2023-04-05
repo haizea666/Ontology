@@ -1,0 +1,24 @@
+Test description
+
+Test IDMIP4SLT3IS_5108Test TitleAdd Affiliations to Persons, Organisations and Facilities.Execution Priority1ObjectiveBSO validation. To verify basic functionality for Affiliation: adding affiliations to Organisations, Persons and Facilities.ScenarioTwo nations are exchanging information between their C2IS's. Nation A will add Affiliations (a 'Person' element) to an organisation, a person, or a facility.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2.MTRSApplicablePre-test ConditionsNation B has a subscription to receive information from the 'Ground Picture > Forces' and the 'Ground Picture > Infrastructure and Environment' Topics of Nation A. 
+A 'Friend' (HostilityStatusCode) Organisation, and a Person BSO exist in the 'Forces' topic, and a 'Hostile' Facility exists in the 'Infrastructure and Environment' topic.Test InputsN/A.ConclusionNation B receives information about Affiliation added by Nation A. The information is correctly processed (and displayed) in the C2IS's of both nations.Test OutputsN/A.TraceabilityREQ_INF_0003.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation A adds the GeopoliticalAffiliation 'Canada' to an existing organisation in the 'Forces' Topic. ~~The GeopoliticalAffiliation is created; Nation B receives the new Affiliation information. The same information is shared by the C2IS's of both nations. ~~122. Nation A adds the EthnicAffiliation 'Iranian/Persian' to an existing hostile facility (e.g. a Building) in the 'Infrastructure and Environment' topic. ~~The EthnicAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. ~~123. Nation A adds a GeopoliticalAffiliation to an existing Person BSO in the 'Forces' Topic. ~~The GeopoliticalAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. ~~124. Nation A adds a ReligiousAffiliation to the person BSO used in Step 3. ~~The ReligiousAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. ~~125. Nation A adds the EthnicAffiliation 'Iranian/Persian' to the person BSO used in Step 3. ~~The EthnicAffiliation is created; Nation B receives the new affiliation information. The same information is shared by the C2IS's of both nations. ~~126. Nation A changes the EthnicAffiliation created in Step 5 to 'Iraqi'. ~~The EthnicAffiliation is changed; Nation B receives the updated information. The same information is shared by the C2IS's of both nations. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

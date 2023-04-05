@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:staffconceptorganisationstructure="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" targetNamespace="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/StaffConcept.xsd" namespace="https://mip-interop.org/data/v4.3/StaffConcept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Concept.xsd" namespace="https://mip-interop.org/data/v4.3/Concept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="NonFriendlyORBAT" type="staffconceptorganisationstructure:NonFriendlyORBATType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An ORBAT for forces other than the own forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c21d7ff9-97ee-4743-bd15-7242d2c5150b</app:SemanticID>
+        <app:DisplayName>Non-Friendly Order of Battle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="NonFriendlyORBATType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An ORBAT for forces other than the own forces.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c21d7ff9-97ee-4743-bd15-7242d2c5150b</app:SemanticID>
+        <app:DisplayName>Non-Friendly Order of Battle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptorganisationstructure:OrderOfBattleType">
+        <xsd:sequence>
+          <xsd:element ref="staffconceptorganisationstructure:NonFriendlyORBATTypeName" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NonFriendlyORBATTypeName" type="staffconceptorganisationstructure:NonFriendlyORBATTypeNameType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of non-friendly ORBAT.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a262d2da-3a49-4686-a967-2bf213a509a4</app:SemanticID>
+        <app:ShortName>typeName</app:ShortName>
+        <app:Remarks>Possible ORBAT type names include 'Black' for criminal forces, 'Green' for local national forces, 'Red' for enemy forces, or 'White' for civilian organisations and NGOs.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="NonFriendlyORBATTypeNameType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of non-friendly ORBAT.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:a262d2da-3a49-4686-a967-2bf213a509a4</app:SemanticID>
+        <app:ShortName>typeName</app:ShortName>
+        <app:Remarks>Possible ORBAT type names include 'Black' for criminal forces, 'Green' for local national forces, 'Red' for enemy forces, or 'White' for civilian organisations and NGOs.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>name</app:MIMStereotype>
+        <app:DisplayName>type</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:TokenType">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrderOfBattle" type="staffconceptorganisationstructure:OrderOfBattleType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An OrganisationStructure that provides the identification, strength, command structure, and disposition of the personnel, units, and equipment of any military force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:592e2307-398f-418b-9941-85b574e36783</app:SemanticID>
+        <app:Remarks>Although sometimes used in other ways, this term most frequently applies to the grouping of forces for a specific campaign.</app:Remarks>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Order of battle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrderOfBattleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An OrganisationStructure that provides the identification, strength, command structure, and disposition of the personnel, units, and equipment of any military force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:592e2307-398f-418b-9941-85b574e36783</app:SemanticID>
+        <app:Remarks>Although sometimes used in other ways, this term most frequently applies to the grouping of forces for a specific campaign.</app:Remarks>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Order of battle</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="staffconceptorganisationstructure:OrganisationStructureType">
+        <xsd:sequence />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OrganisationStructure" type="staffconceptorganisationstructure:OrganisationStructureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The hierarchical configuration of a root Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b80961b-1119-464f-a65a-ad71ca9a0724</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Non Friendly ORBAT</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationStructureComponents" type="organisation:OrganisationFunctionalAssociationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The OrganisationStructure is composed of the OrganisationFunctionalAssociation as a component.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:6b265c16-ed78-40a3-ace0-f4c50a85159aI</app:SemanticID>
+        <app:ShortName>components</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is composed of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationStructureRootOrganisation" type="organisation:OrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation is the root of the OrganisationStructure.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7c992ebb-f7cf-491c-bf37-ac9d1256ba64I</app:SemanticID>
+        <app:ShortName>rootOrganisation</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is the root of</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrganisationStructureType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The hierarchical configuration of a root Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:7b80961b-1119-464f-a65a-ad71ca9a0724</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Non Friendly ORBAT</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="concept:ConceptName" />
+          <xsd:element ref="staffconcept:StaffConceptMetadata" />
+          <xsd:element ref="staffconceptorganisationstructure:OrganisationStructureComponents" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="staffconceptorganisationstructure:OrganisationStructureRootOrganisation" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

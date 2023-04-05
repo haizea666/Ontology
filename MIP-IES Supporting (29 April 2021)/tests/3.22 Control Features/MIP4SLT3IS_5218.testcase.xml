@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3IS</TestCaseIdLevel>
+    <TestCaseIdGroup>52</TestCaseIdGroup>
+    <TestCaseIdNumber>18</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Create and update OrganisationBoundary.</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>BSO validation. To verify basic functionality regarding OrganisationBoundary: adding and updating boundaries between different organisations.</TestCaseObjective>
+  <TestCaseScenario>Two nations are exchanging information between their C2IS's.
+Nation A will add an OrganisationBoundary, and then change the organisations associated with the boundary (currently, there are no formal associations, just by means of the LeftOrganisationName and RightOrganisationName elements).
+Nation A will then create a brigade sized boundary with no organisation associated to it.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: R/R, P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation B has subscribed to receive information from the 'Forces' and 'Battlespace Geometry' topics of Nation A. Four or more organisations exist in this topic.</TestCasePreCondition>
+  <TestCaseInput>N/A.</TestCaseInput>
+  <TestCaseConclusion>Nation B receives information about organisational boundaries added and updated by Nation A. The boundaries are processed correctly by the C2IS of both Nations.</TestCaseConclusion>
+  <TestCaseOutput>N/A.</TestCaseOutput>
+  <TestCaseTraceability>REQ_INF_0002, REQ_INF_0003.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an OrganisationBoundary' in the'Battlespace Geometry' between two existing organisations in the 'Forces' topic (marked in its LeftOrganisationName and RightOrganisationName elements) </TestCaseStepAction>
+    <TestCaseStepResult>The boundary is created in Nation A's C2IS and the EchelonCode is correctly processed and integrated. Nation B receives the new boundary, and it is processed and integrated correctly in Nation B's C2IS. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A updates the boundary so that it exists between two different organisations in the 'Forces' topic (its LeftOrganisationName and RightOrganisationName elements are updated) </TestCaseStepAction>
+    <TestCaseStepResult>The boundary is updated in Nation A's C2IS and is received by Nation B. The same information is shared in the C2IS's of both nations. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a second boundary for a brigade sized organisation to it. </TestCaseStepAction>
+    <TestCaseStepResult>The boundary is created in Nation A's C2IS and the EchelonCode is integrated correctly; Nation B receives the new boundary and shares the same information. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

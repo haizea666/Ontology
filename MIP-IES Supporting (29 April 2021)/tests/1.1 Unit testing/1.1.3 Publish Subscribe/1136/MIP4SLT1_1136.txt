@@ -1,0 +1,65 @@
+Test description
+
+Test IDMIP4SLT1_1136Test TitleSubscribe using a filter on sourceExecution Priority1ObjectiveThe objective is for the Consumer to subscribe to messages provided by the Provider which involve objects coming from a particular source.ScenarioThe Consumer is interested in receiving regular updates on multiple topics in an asynchronous way (i.e. without polling the Producer).  He wishes to receive only messages coming from a particular source.EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2 MTRSN/APre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1213, MIP4SLT1_1215, MIP4SLT1_1128, MIP4SLT1_1130
+
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Both Consumer and Producer systems conform to MIP4.0 Publish/Subscribe Exchange Pattern Specification.
+
+Both Consumer and Producer are able to process and exchange information represented according to MIP4.0 Information Schemas.
+
+Consumer successfully discovered the target Producer.  The system on the Consumer side has been properly configured and is ready to interact with the Producer system.  
+
+The Producer system broadcasts at least some messages coming from the source specified by the Consumer.
+Test InputsN/A.ConclusionThe test is concluded after the Consumer is receiving from the Producer regular asynchronous updates on one or more topics whose source is the one specified by the Consumer.  The data received in these updates is valid and complete.  The subscription with the termination time will have timed out and the Consumer will have unsubscribed from the subscription without a specified duration.  Once the Producer has successfully destroyed the subscriptions, the test is complete.Test OutputsN/A.TraceabilityREQ_EM_0008, REQ_EM_0010.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Consumer subscribes to the Producer in order to advertise its interest in a subset of the data space.  
+rpw:GetResourceProperty
+with parameters wsn:FullTopicExpression,  wsn:FixedTopicSet, wsn:TopicExpressionDialect and wstop:TopicSet. ~~
+The Consumer specifies a filter defined by a valid source.The Producer receives a valid request for resource properties using FullTopicExpression ~~
+
+The Producer receives a valid filter request based on a valid particular source.122. Producer sends the topics requested to the Consumer ~~Consumer receives the requested topics. ~~213. The Consumer processes the list of exposed topics, prepares a filter set, and requests a subscription on multiple topics to the Producer using the wsn-b:Subscribe operation.  Filter is specified using topic "contains" items.  The Consumer specifies a filter based on a valid source.
+
+The Consumer requests a subscription on multiple topics to the Producer using the wsn-b:Subscribe operation but specifies his filter using topic "does not contain" items. The Consumer specifies a filter based on a valid source.
+
+The Consumer requests a subscription on multiple different topics to the Producer using the wsn-b:Subscribe operation and requests a termination time for the subscription. The Consumer specifies a filter based on a valid source.
+~~Producer receives two subscription requests for multiple topics (one using topic "contains"  and one using topic "does not contain") and a third subscription request for multiple topics with a desired termination time.  All use FullTopicExpression. ~~124.Producer accepts or rejects the subscription requests.
+
+Producer checks subscription filters and determines if data matches specified filters.  If it does, the Producer sends a wsn-b:Notify to the address specified in the wsn-b:ConsumerReference for EACH matching subscription. ~~The Producer accepts the requests.
+
+
+The Producer sends notification to the Consumer using FullTopicExpression.
+
+The Consumer processes the data contained in the messages using FullTopicExpression. ~~215.Producer continuously sends notifications to the Consumer until the Consumer unsubscribes or the subscription expires.
+
+Subscription with termination time expires ~~Producer sends notifications.
+
+
+
+
+
+Producer raises ResourceUnknownFault according to WS-BaseNotification[Ref-6] ~~
+217.Consumer unsubscribes using wsn-b:Unsubscribe operation with the SubscriptionReference issued from the initial Subscribe responses. ~~Producer tries to destroy the corresponding subscriptions.  If Producer cannot destroy the subscriptions it sends a fault message to the Consumer. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+3
+
+
+
+					          
+
+
+1
+

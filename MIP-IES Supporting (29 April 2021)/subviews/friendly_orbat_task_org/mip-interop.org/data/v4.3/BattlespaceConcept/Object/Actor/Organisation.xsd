@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:primitives="https://mip-interop.org/data/v4.3/Primitives" targetNamespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" namespace="https://mip-interop.org/data/v4.3/Base" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/BattlespaceConcept.xsd" namespace="https://mip-interop.org/data/v4.3/BattlespaceConcept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Concept.xsd" namespace="https://mip-interop.org/data/v4.3/Concept" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/Primitives.xsd" namespace="https://mip-interop.org/data/v4.3/Primitives" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="MilitaryOrganisation" type="organisation:MilitaryOrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GovernmentOrganisation that is officially sanctioned and is trained and equipped to exert force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9d29c033-a496-41e6-b6a5-3b610335cded</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Military organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MilitaryOrganisationServiceCode" type="organisation:MilitaryOrganisationServiceCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The military, paramilitary, irregular force, force or group, capable of functioning as an offensive or defensive combat or support organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:d2f0e0ba-e195-46b5-b29b-6a535b0359af</app:SemanticID>
+        <app:ShortName>serviceCode</app:ShortName>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>service</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="MilitaryOrganisationServiceCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The military, paramilitary, irregular force, force or group, capable of functioning as an offensive or defensive combat or support organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:84903321-6ee1-48ef-ba36-426c0ddce170</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="AirForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation belongs to the Air Force (includes reserves and mobilised air national guard).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:09655091-3c57-4858-93f8-d4344dfccf5c</app:SemanticID>
+            <app:DisplayName>Air Force</app:DisplayName>
+            <app:PhysicalName>AIRFRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Army">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation belongs to the Army (includes territorial army, reserves, and mobilised national guard).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:7c40174a-4847-4bdd-9c06-3d3c072814aa</app:SemanticID>
+            <app:DisplayName>Army</app:DisplayName>
+            <app:PhysicalName>ARMY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BorderGuard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is paramilitary and its primary task is to maintain the security of national borders.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d942341c-e9e2-4de8-b50c-2ff8fa6e86a7</app:SemanticID>
+            <app:DisplayName>Border guard</app:DisplayName>
+            <app:PhysicalName>BRDRGD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CivilService">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is staffed solely by civilian personnel.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:1695b341-f7e4-483b-9fbe-252993e3203f</app:SemanticID>
+            <app:DisplayName>Civil service</app:DisplayName>
+            <app:PhysicalName>CVLSVC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CoastGuard">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is responsible for one or more of the following: coastal defence, protection of life and property at sea, and enforcement of customs, immigration, and navigation laws.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:fff22eb7-50fa-482a-a734-de179b5e5132</app:SemanticID>
+            <app:DisplayName>Coast guard</app:DisplayName>
+            <app:PhysicalName>COASTG</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Combined">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation contains two or more forces or agencies of two or more allies.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d2ac07a2-0899-4ad1-b5ff-3d2aa4113381</app:SemanticID>
+            <app:DisplayName>Combined</app:DisplayName>
+            <app:PhysicalName>COMBND</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Guerrilla">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is an irregular military force.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:9b54575e-3376-48db-b21b-4ec95099bb81</app:SemanticID>
+            <app:DisplayName>Guerrilla</app:DisplayName>
+            <app:PhysicalName>GUERLL</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Joint">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation contains elements of more than one Service from the same nation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:49083b20-6792-4a86-bf3d-aa127eb442ec</app:SemanticID>
+            <app:DisplayName>Joint</app:DisplayName>
+            <app:PhysicalName>JOINT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LocalDefenceForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation has defence of a specific region as its primary task (before mobilisation, a national guard is a local defence force).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:b2f44949-c4fb-46ba-ae04-4beca7409550</app:SemanticID>
+            <app:DisplayName>Local defence force</app:DisplayName>
+            <app:PhysicalName>LCLDFF</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LocalMilitia">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is civilian and has a defence and possibly also a police role; it may be an irregular civilian MilitaryOrganisation.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:77374153-6c0d-41e9-ad5f-68f6dc3e8d14</app:SemanticID>
+            <app:DisplayName>Local militia</app:DisplayName>
+            <app:PhysicalName>LCLMLT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Marines">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation belongs to the Marines (includes reserves).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:4d10f3fe-b9bd-4c3f-90a4-02500bfb1b88</app:SemanticID>
+            <app:DisplayName>Marines</app:DisplayName>
+            <app:PhysicalName>MARINE</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MedicalService">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation focuses on providing medical services.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:757f8186-ef9c-439e-a3bb-966e6eaae83b</app:SemanticID>
+            <app:DisplayName>Medical Service</app:DisplayName>
+            <app:PhysicalName>MEDSRV</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Navy">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation belongs to the Navy (includes reserves).</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:0761622e-27f2-42a4-8093-f45d3ac567c8</app:SemanticID>
+            <app:DisplayName>Navy</app:DisplayName>
+            <app:PhysicalName>NAVY</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Paramilitary">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is a force or a group distinct from the regular armed forces of any country but it resembles them in organization, equipment, training, or mission.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:e984eae6-85d6-41bd-af5c-ce7ad38e55dd</app:SemanticID>
+            <app:DisplayName>Paramilitary</app:DisplayName>
+            <app:PhysicalName>PAR</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SpecialForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is trained and equipped for special purposes.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:eec69fd2-18c9-4e11-9704-7f25c0c42635</app:SemanticID>
+            <app:DisplayName>Special force</app:DisplayName>
+            <app:PhysicalName>SPFRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TerritorialForce">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The MilitaryOrganisation is part of a nation's armed forces and is responsible for regional defence.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:3ac9763f-9bbd-4d81-b4a2-1cbe26c796d1</app:SemanticID>
+            <app:DisplayName>Territorial force</app:DisplayName>
+            <app:PhysicalName>TERFRC</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="MilitaryOrganisationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A GovernmentOrganisation that is officially sanctioned and is trained and equipped to exert force.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:9d29c033-a496-41e6-b6a5-3b610335cded</app:SemanticID>
+        <app:Geometry app:semanticID="MIM:1b27d622-6f58-406d-aceb-2402af195155">AbsolutePoint</app:Geometry>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Military organisation</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:IdentifiableType">
+        <xsd:sequence>
+          <xsd:element ref="concept:ConceptName" />
+          <xsd:element ref="battlespaceconcept:BattlespaceConceptAlternateIdentifier" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="battlespaceconcept:BattlespaceConceptAlternateName" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="battlespaceconcept:BattlespaceConceptHostilityCode" minOccurs="0" />
+          <xsd:element ref="battlespaceconcept:BattlespaceConceptMetadata" />
+          <xsd:element ref="battlespaceconcept:BattlespaceConceptStaffCommentsText" minOccurs="0" />
+          <xsd:element ref="object:ObjectAffiliation" />
+          <xsd:element ref="object:ObjectTypeName" minOccurs="0" />
+          <xsd:element ref="organisation:OrganisationHasCommandFunctionIndicator" />
+          <xsd:element ref="organisation:MilitaryOrganisationServiceCode" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OrganisationCommandAndControlAssociation" type="organisation:OrganisationCommandAndControlAssociationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has a command and control association with the other Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:719ed587-9fcd-4d91-a37c-e8010744de45</app:SemanticID>
+        <app:DisplayName>Organisation command and control association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationCommandAndControlAssociationCategoryCode" type="organisation:OrganisationCommandAndControlAssociationCategoryCodeType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of command and control association.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:70772ca4-f8f3-4c5f-8772-76f709aaf1c4</app:SemanticID>
+        <app:ShortName>categoryCode</app:ShortName>
+        <app:MIMStereotype>code</app:MIMStereotype>
+        <app:MIMStereotype>discriminator</app:MIMStereotype>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:DisplayName>category</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OrganisationCommandAndControlAssociationCategoryCodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type of command and control association between two Organisations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:f19c48f1-d371-407b-8c6e-781064e1da3b</app:SemanticID>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:CodeValueType">
+      <xsd:enumeration value="HasFullCommandOf">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The military authority and responsibility of a superior officer to issue orders to subordinates.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:07c34f55-489b-44c0-8c24-ae8980fd6d9f</app:SemanticID>
+            <app:DisplayName>Has full command of</app:DisplayName>
+            <app:PhysicalName>COMD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HasOperationalCommandOf">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The authority granted to a commander to assign missions or tasks to subordinate commanders, to deploy units, to reassign forces, and to retain or delegate operational and/or tactical control as may be deemed necessary.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:65cbc72d-ce51-4ec5-83e9-7227c65af080</app:SemanticID>
+            <app:DisplayName>Has operational command of</app:DisplayName>
+            <app:PhysicalName>OPCOMD</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HasOperationalControlOf">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The authority delegated to a commander to direct forces assigned so that the commander may accomplish specific missions or tasks which are usually limited by function, time, or location; to deploy units concerned, and to retain or assign tactical control of those units. It does not include authority to assign separate employment of components of the units concerned.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:d3f91240-24cd-4b14-b7f2-a0e8ee3d3ae7</app:SemanticID>
+            <app:DisplayName>Has operational control of</app:DisplayName>
+            <app:PhysicalName>OPCON</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HasTacticalCommandOf">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The authority delegated to a commander to assign tasks to forces under his command for the accomplishment of the mission assigned by higher authority.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:61dae9f0-c10a-483d-9fbc-dc730098d9f8</app:SemanticID>
+            <app:DisplayName>Has tactical command of</app:DisplayName>
+            <app:PhysicalName>TACCOM</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HasTacticalControlOf">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The detailed, and, usually, local direction and control of movements or manoeuvres necessary to accomplish missions or tasks assigned.</xsd:documentation>
+          <xsd:appinfo>
+            <app:SemanticID>MIM:a7adb072-ecaa-44c6-b9c7-75b1d1340836</app:SemanticID>
+            <app:DisplayName>Has tactical control of</app:DisplayName>
+            <app:PhysicalName>TACCNT</app:PhysicalName>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OrganisationCommandAndControlAssociationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Organisation has a command and control association with the other Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:719ed587-9fcd-4d91-a37c-e8010744de45</app:SemanticID>
+        <app:DisplayName>Organisation command and control association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="organisation:OrganisationFunctionalAssociationType">
+        <xsd:sequence>
+          <xsd:element ref="organisation:OrganisationCommandAndControlAssociationCategoryCode" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OrganisationFunctionalAssociation" type="organisation:OrganisationFunctionalAssociationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The nature of functional relationship between the subject and object Organisations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c959cb55-5877-4cdd-b45c-9ac692b6da07</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Organisation functional association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationFunctionalAssociationFunctionalObjectOrganisation" type="organisation:MilitaryOrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Organisation is functionally related to the object Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad74baaa-8b87-417c-b844-fe3641a3418f-2I</app:SemanticID>
+        <app:ShortName>functionalObjectOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is functionally related to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationFunctionalAssociationFunctionalObjectOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Organisation is functionally related to the object Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad74baaa-8b87-417c-b844-fe3641a3418f-2R</app:SemanticID>
+        <app:ShortName>functionalObjectOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:9d29c033-a496-41e6-b6a5-3b610335cded</app:ReferenceType>
+        <app:DisplayName>is functionally related to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationFunctionalAssociationFunctionalSubjectOrganisation" type="organisation:MilitaryOrganisationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Organisation is functionally related to the object Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad74baaa-8b87-417c-b844-fe3641a3418f-1I</app:SemanticID>
+        <app:ShortName>functionalSubjectOrganisation</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>is functionally related to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrganisationFunctionalAssociationFunctionalSubjectOrganisationRef" type="base:IdentifiableReferenceType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The subject Organisation is functionally related to the object Organisation.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:ad74baaa-8b87-417c-b844-fe3641a3418f-1R</app:SemanticID>
+        <app:ShortName>functionalSubjectOrganisationRef</app:ShortName>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:ReferenceType>MIM:9d29c033-a496-41e6-b6a5-3b610335cded</app:ReferenceType>
+        <app:DisplayName>is functionally related to</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="OrganisationFunctionalAssociationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The nature of functional relationship between the subject and object Organisations.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:c959cb55-5877-4cdd-b45c-9ac692b6da07</app:SemanticID>
+        <app:MIMStereotype>Abstract</app:MIMStereotype>
+        <app:DisplayName>Organisation functional association</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="base:AssociationType">
+        <xsd:sequence>
+          <xsd:element ref="organisation:OrganisationFunctionalAssociationFunctionalObjectOrganisationRef" minOccurs="0" />
+          <xsd:element ref="organisation:OrganisationFunctionalAssociationFunctionalObjectOrganisation" minOccurs="0" />
+          <xsd:element ref="organisation:OrganisationFunctionalAssociationFunctionalSubjectOrganisationRef" minOccurs="0" />
+          <xsd:element ref="organisation:OrganisationFunctionalAssociationFunctionalSubjectOrganisation" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OrganisationHasCommandFunctionIndicator" type="organisation:OrganisationHasCommandFunctionIndicatorType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Organisation has a command function (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528</app:SemanticID>
+        <app:ShortName>hasCommandFunctionIndicator</app:ShortName>
+        <app:Remarks>This attribute shall be used to draw the headquarters staff indicator when using APP-6.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>has command function</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="OrganisationHasCommandFunctionIndicatorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Whether the Organisation has a command function (true) or not (false).</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528</app:SemanticID>
+        <app:ShortName>hasCommandFunctionIndicator</app:ShortName>
+        <app:Remarks>This attribute shall be used to draw the headquarters staff indicator when using APP-6.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>indicator</app:MIMStereotype>
+        <app:MIMStereotype>type</app:MIMStereotype>
+        <app:DisplayName>has command function</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="primitives:BooleanType" />
+  </xsd:simpleType>
+</xsd:schema>

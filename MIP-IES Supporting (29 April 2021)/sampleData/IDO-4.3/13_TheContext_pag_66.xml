@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<base:Context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" xmlns:organisation="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xmlns:staffconceptorganisationstructure="https://mip-interop.org/data/v4.3/StaffConcept/OrganisationStructure" xmlns:unexplodedordnance="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel/UnexplodedOrdnance" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ContextIdentifier>OrganisationStructure</base:ContextIdentifier>
+	<base:Data xsi:type="staffconceptorganisationstructure:FriendlyORBATType">
+		<base:ID>0bc42092-0a3b-409a-aa60-4e564787e77e</base:ID>
+		<concept:ConceptName>Name</concept:ConceptName>
+		<staffconcept:StaffConceptMetadata>
+			<staffconceptmetadata:StaffConceptMetadataOriginator>
+				<conceptmetadata:OriginatorName>Originator</conceptmetadata:OriginatorName>
+			</staffconceptmetadata:StaffConceptMetadataOriginator>
+		</staffconcept:StaffConceptMetadata>
+		<staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef>
+			<base:ID>4483ba36-9c1f-461e-8429-a4ed5755cbdd</base:ID>
+			<app:SemanticId>b11dbbed-f8a9-4abb-a524-408e89231ffe</app:SemanticId>
+			<base:IsLocalIndicator>false</base:IsLocalIndicator>
+		</staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef>
+		<staffconceptorganisationstructure:OrganisationStructureRootOrganisation xsi:nil="true"/>
+	</base:Data>
+</base:Context>
+
+<!--
+Original example
+
+<base:Context>
+	<base:ContextIdentifier>OrganisationStructure</base:ContextIdentifier>
+	<base:Data xsi:type="staffconceptorganisationstructure:FriendlyOrbatType”>
+		<base:ID>0bc42092-0a3b-409a-aa60-4e564787e77e</base:ID>
+		<staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef xsi:type="unit:SignalUnitType">
+			<base:ID>4483ba36-9c1f-461e-8429-a4ed5755cbdd</base:ID>
+		</staffconceptorganisationstructure:OrganisationStructureRootOrganisationRef>
+	</base:Data>
+</base:Context>
+
+-->

@@ -1,0 +1,33 @@
+Test description
+
+Test IDMIP4SLT3IS_5480Test TitleUpdate to every possible GeometricDefinition (LocationType Sub-Types) for an example Facility.Execution Priority1ObjectiveBSO validation. Test whether the Producer/Provider is able to create and update every possible GeometricDefinition for a Facility and the Consumers/Receivers are able to understand (and display) it correctly.ScenarioThe Producer creates a Facility LandMinefield with LocationType=PolygonType.
+The Consumers receive the information and interpret it correctly.
+The Producer updates the LandMinefield to LocationType=ArcType.
+The Consumers receive the information and interpret it correctly.
+The Producer continues to update the LandMinefield to all possible LocationTypes and the Consumers receive the information and interpret it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSApplicablePre-test ConditionsThe Producer/Provider has created a topic which includes message elements belonging to the Facility message schema area.
+The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the Facility is processed and interpreted correctly on all Nations' C2IS for all LocationTypes.Test OutputsN/A.TraceabilityREQ_INF_0002, REQ_INF_0003
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (A) creates a LandMinefield  (Facility) with name XXX_LNDMNFLD_5480 and with LocationType=PolygonType:
+
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_ LNDMNFLD_5480 ~~Consumers (B) receive and display the LandMinefield correctly. ~~122. The Producer (A) updates the LandMinefield with LocationType=ArcType ~~Consumers (B) receive and display the LandMinefield correctly. ~~123. The Producer (A) updates the LandMinefield with LocationType=ArrowType ~~Consumers (B) receive and display the LandMinefield correctly. ~~124. The Producer (A) updates the LandMinefield with LocationType=CircleType ~~Consumers (B) receive and display the LandMinefield correctly. ~~125. The Producer (A) updates the LandMinefield with LocationType=CorridorType ~~Consumers (B) receive and display the LandMinefield correctly. ~~126. The Producer (A) updates the LandMinefield with LocationType=EllipseType ~~Consumers (B) receive and display the LandMinefield correctly. ~~127. The Producer (A) updates the LandMinefield with LocationType=FanType ~~Consumers (B) receive and display the LandMinefield correctly. ~~128. The Producer (A) updates the LandMinefield with LocationType=LineType ~~Consumers (B) receive and display the LandMinefield correctly. ~~129. The Producer (A) updates the LandMinefield with LocationType=MultipointType ~~Consumers (B) receive and display the LandMinefield correctly. ~~1210. The Producer (A) updates the LandMinefield with LocationType=OrbitType ~~Consumers (B) receive and display the LandMinefield correctly. ~~1211. The Producer (A) updates the LandMinefield with LocationType=PointType ~~Consumers (B) receive and display the LandMinefield correctly. ~~1212. The Producer (A) updates the LandMinefield with LocationType=RectangleType ~~Consumers (B) receive and display the LandMinefield correctly. ~~1213. The Producer (A) updates the LandMinefield with LocationType=SphereType ~~Consumers (B) receive and display the LandMinefield correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+3
+
+
+
+					          
+
+
+1
+

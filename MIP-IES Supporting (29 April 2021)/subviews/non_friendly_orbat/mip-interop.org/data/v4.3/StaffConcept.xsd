@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:staffconcept="https://mip-interop.org/data/v4.3/StaffConcept" xmlns:staffconceptmetadata="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" targetNamespace="https://mip-interop.org/data/v4.3/StaffConcept" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/StaffConcept/Metadata.xsd" namespace="https://mip-interop.org/data/v4.3/StaffConcept/Metadata" />
+  <xsd:import schemaLocation="https://mip-interop.org/data/v4.3/AppInfo.xsd" namespace="https://mip-interop.org/data/v4.3/AppInfo" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">The Schema.</xsd:documentation>
+    <xsd:appinfo />
+  </xsd:annotation>
+  <xsd:element name="StaffConceptMetadata" type="staffconceptmetadata:StaffConceptMetadataType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Descriptive information about information of the StaffConcept.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticID>MIM:b708ce6e-26b5-4a09-aac1-4ff03c4eaf2d</app:SemanticID>
+        <app:ShortName>metadata</app:ShortName>
+        <app:Remarks>This attribute does not describe characteristics of the StaffConcept but characteristics of the information available for this concept.</app:Remarks>
+        <app:ValueOrAmplification>1</app:ValueOrAmplification>
+        <app:MIMStereotype>instance</app:MIMStereotype>
+        <app:MIMStereotype>structure</app:MIMStereotype>
+        <app:DisplayName>metadata</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

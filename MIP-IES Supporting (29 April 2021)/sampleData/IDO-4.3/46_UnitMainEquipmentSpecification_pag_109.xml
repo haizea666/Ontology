@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<unit:UnitMainEquipmentSpecification xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="https://mip-interop.org/data/v4.3/AppInfo" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:materiel="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Materiel" xmlns:unit="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object/Actor/Organisation/Unit" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<unit:MainEquipmentSpecificationEquipmentQuantity>20</unit:MainEquipmentSpecificationEquipmentQuantity>
+	<unit:MainEquipmentSpecificationMainEquipmentRef xsi:nil="true"/>
+	<unit:MainEquipmentSpecificationMainEquipment>
+		<base:ID>uri:MIPTT:920526</base:ID>
+		<concept:ConceptName>Flatbed Wagon</concept:ConceptName>
+		<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+		<battlespaceconcept:BattlespaceConceptMetadata/>
+		<materiel:MaterielOperationalStatusCode xsi:nil="true"/>
+	</unit:MainEquipmentSpecificationMainEquipment>
+</unit:UnitMainEquipmentSpecification>
+
+<!--
+Original example
+
+<orgstruct:MainEquipmentSpecificationWrapper>
+	<orgstruct:MainEquipmentSpecification>
+		<unit_4.2:EquipmentQuantityWrapper>
+			<unit_4.2:EquipmentQuantity>20</unit_4.2:EquipmentQuantity>
+		</unit_4.2:EquipmentQuantityWrapper>
+		<orgstruct:MainEquipmentWrapper>
+			<orgstruct:Equipment>
+				<base:Uri>uri:MIPTT:920526</base:Uri>
+				<unit_4.2:TypeNameWrapper>
+					<unit_4.2:TypeName>Flatbed Wagon</unit_4.2:TypeName>
+				</unit_4.2:TypeNameWrapper>
+			</orgstruct:Equipment>
+		</orgstruct:MainEquipmentWrapper>
+	</orgstruct:MainEquipmentSpecification>
+</orgstruct:MainEquipmentSpecificationWrapper>
+-->

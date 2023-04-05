@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>39</TestCaseIdGroup>
+    <TestCaseIdNumber>22</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Process frequent Position updates (periodicity checking).</TestCaseTitle>
+  <TestCaseExecutionPriority>1</TestCaseExecutionPriority>
+  <TestCaseObjective>The objective of this test is to assess the ability of consumers and producers to handle frequent transactions.</TestCaseObjective>
+  <TestCaseScenario>A Consumer receives MIP4 BSOs with frequent Position (Type 'GeometricDefinition' &gt; Type 'PointPosition' &gt; Elements 'Lat' and 'Lon') updates from the Producer </TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located. Exchange Pattern: P/S.</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Test group 3.6 'Initialisation'. </TestCasePreCondition>
+  <TestCaseInput>Validated means to acquire information from the Producer using a MIP4 exchange pattern.</TestCaseInput>
+  <TestCaseConclusion>The producer and consumer can process MIP4 BSOs changing frequently their Position.</TestCaseConclusion>
+  <TestCaseOutput>The Consumer successfully acquires content from the Producer and is able to apply it to their system without error.</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0017.</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Obtain a MIP4 BSO (for instance an AdministrativeUnit, with LocationType = PointType in order to keep it simple) from the producer.</TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Process the MIP4 content on the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully process the MIP4 content. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Within a considered short time lapse (10 seconds or less if possible), change elements Lat and Lon), at the producer for the BSO produced on step 1. Rest of BSO's attributes and elements will stay unchanged as far as possible. Obtain it on the consumer.</TestCaseStepAction>
+    <TestCaseStepResult>Content will be received from the Producer. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Process the MIP4 content on the Consumer. </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully process the MIP4 content without error. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Repeat actions on steps 3 and 4 several times, changing to other values of elements Lat and Lon for that BSO. This should be carried out at the highest update and message production rate that the Producer is able to handle and for a quite long period (5 minutes...). </TestCaseStepAction>
+    <TestCaseStepResult>The Consumer will successfully process the MIP4 content without error, handling frequent transactions. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

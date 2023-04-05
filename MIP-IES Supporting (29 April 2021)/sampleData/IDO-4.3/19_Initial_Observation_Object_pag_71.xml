@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<object:Object xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concept="https://mip-interop.org/data/v4.3/Concept" xmlns:battlespaceconcept="https://mip-interop.org/data/v4.3/BattlespaceConcept" xmlns:object="https://mip-interop.org/data/v4.3/BattlespaceConcept/Object" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd">
+	<base:ID>urn:mim:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f</base:ID>
+	<concept:ConceptName>OBJ000765</concept:ConceptName>
+	<battlespaceconcept:BattlespaceConceptIsTypeIndicator>true</battlespaceconcept:BattlespaceConceptIsTypeIndicator>
+	<battlespaceconcept:BattlespaceConceptMetadata/>
+</object:Object>
+
+<!--
+Original example
+
+<obj:Object>
+    <base:Identifier>
+        <base:Uri>urn:mim:98a630cb-1c93-4eef-ab3a-c95cd4c7c74f</base:Uri>
+        <base:Source>IDT</base:Source>
+        <base:Discriminator>urn:guid:b6d509fd-3ef7-4f5d-926b-8884c52bd15d</base:Discriminator>
+        <base:IsDependentIndicator>false</base:IsDependentIndicator>
+    </base:Identifier>
+    ...
+    <core:IsInstanceIndicator>true</core:IsInstanceIndicator>
+    <core:NameWrapper>
+        <core:Name>OBJ000765</core:Name>
+    </core:NameWrapper>
+    ...
+</obj:Object>
+-->

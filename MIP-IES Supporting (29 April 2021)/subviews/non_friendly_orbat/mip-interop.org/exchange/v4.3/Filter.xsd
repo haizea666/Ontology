@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Version History
+v1.5.1 (12 Sep 2017): Official release as part of MIP4.0 baseline [ref MSG-DL-26 at MSG20; July 2017].  Details of internal releases removed from Version History.
+v1.6.0 (06 Feb 2020): Updated the schema to reflect the proposed changes to MIP 4.3 Information Definitions and WSMP 1.3.0  
+-->
+<xsd:schema targetNamespace="https://mip-interop.org/exchange/v4.3/Filter" version="1.6.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:base="https://mip-interop.org/data/v4.3/Base" xmlns:filter="https://mip-interop.org/exchange/v4.3/Filter" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xsd:import namespace="https://mip-interop.org/data/v4.3/Base" schemaLocation="https://mip-interop.org/data/v4.3/Base.xsd" />
+  <xsd:complexType name="MIP4FilterType">
+    <xsd:sequence>
+      <xsd:element ref="base:ID" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="base:ContextIdentifier" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="MIP4Filter" type="filter:MIP4FilterType" />
+</xsd:schema>

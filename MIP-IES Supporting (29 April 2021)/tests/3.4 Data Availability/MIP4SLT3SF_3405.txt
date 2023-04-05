@@ -1,0 +1,26 @@
+Test description
+
+Test IDMIP4SLT3SF_3405Test TitleObject progressing through a bounding box.Execution Priority5ObjectiveThe objective of this test is to assess the ability to process MIP4 BSOs progressing through the previous - current position bounding box, allowing the consumer to detect if they get outside the geographical filter they defined during subscription.ScenarioA Consumer receives MIP4 BSOs progressing through a bounding box and processes them into their system.
+Out of MIP4.0 scope.EnvironmentInternet or Co-located. Exchange Pattern: P/S.Participation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'. The Consumer has defined a geographical filter during subscription.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe consumer can process MIP4 BSOs progressing through a bounding box.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0015, REQ_SYS_0016.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain a MIP4 BSO inside the consumer's geographical filter, from the producer. ~~Content will be received from the Producer. ~~122. Process the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error, checking that the current bounding box is matching its filter. ~~123. Obtain the same MIP4 BSO that now has fallen outside the consumer's geographical filter, from the producer. ~~Content will be received from the Producer. ~~124. Process the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error, checking that the current bounding box is not matching its filter anymore and behaving accordingly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

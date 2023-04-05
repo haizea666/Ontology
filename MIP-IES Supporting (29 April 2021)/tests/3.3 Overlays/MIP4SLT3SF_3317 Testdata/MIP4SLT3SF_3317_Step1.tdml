@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+<Object ShortName="OverlayType" ObjectName="XXX_Overlay_3317" ObjectType="OverlayType" LocationType="none" ShowOptionals="true" ObjectKind="OVERLAY" Namespace="https://mip-interop.org/xsds/2017/11/22/IESInformationGroups" MIPType="InformationGroupType" SemanticId="MIM:3f010392-d0e8-4542-86a9-595fb6f90802" >
+<Property0 ShortName="Identifier" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_Overlay_3317:2018-12-04T11:39:31</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="XXX_Overlay_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:828</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" ObjectName="XXX_Overlay_3317" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="CommentTextWrapper" ObjectName="XXX_Overlay_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>Short text two</Value>
+<Property2 ShortName="CommentText" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>Where the f**k are the Yanks</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Reported</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2018-12-06T09:16:39.091Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2018-12-04T15:02:47.300Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ObjectName="XXX_Overlay_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>Jo6iMa</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="NameWrapper" ObjectName="XXX_Overlay_3317" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/11/22/IESInformationGroups" MIPType="NameWrapperType" SemanticId="MIM:25810a81-9da8-4988-a4f8-b34ba8202dfa" >
+<Value></Value>
+<Property1 ShortName="Name" ObjectName="XXX_Overlay_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/11/22/IESInformationGroups" MIPType="NameType" SemanticId="MIM:25810a81-9da8-4988-a4f8-b34ba8202dfa" >
+<Value>XXX_Overlay_3317</Value>
+</Property1>
+</Property0>
+</Object>
+<Object ShortName="ArmourUnitType" ObjectName="XXX_UnitA_3317" ObjectType="ArmourUnitType" LocationType="Point" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="CombatUnitType" SemanticId="MIM:3a2fd1e9-6e88-4de7-9633-527d818eded9" >
+<Property0 ShortName="Identifier" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_UnitA_3317:2018-12-04T11:41:23</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="XXX_UnitA_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:433</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" ObjectName="XXX_UnitA_3317" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="CommentTextWrapper" ObjectName="XXX_UnitA_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>I think it is a Russian hoax</Value>
+<Property2 ShortName="CommentText" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>This phase relationship (90° phase shift) provides the information required so that the encoder shaft direction as well as the velocity of the encoder shaft can be determined.</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Assumed</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2018-12-05T11:34:58.000Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2018-12-05T05:20:14.834Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>n2sCfHTG</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="IsInstanceIndicator" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="IsInstanceIndicatorType" SemanticId="MIP4IES:e821c670-009a-11e6-a837-0800200c9a66" >
+<Value>true</Value>
+</Property0>
+<Property0 ShortName="NameWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameWrapperType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value></Value>
+<Property1 ShortName="Name" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value>XXX_UnitA_3317</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="GeographicLocationWrapper" ObjectName="XXX_UnitA_3317" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="CoreLocationWrapperType" SemanticId="MIM:d0270649-07d8-47c7-b540-eb2ed10628c2" >
+<Value></Value>
+<Property1 ShortName="CoreLocation" ObjectName="XXX_UnitA_3317" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/Locations" DerivedType="PointType" DerivedSemanticId="MIM::Classes::Location::AbsolutePoint" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="CoreLocationType" SemanticId="MIM:c9164dc3-1dfe-433d-be3c-6329610f2d7c" >
+<Value></Value>
+<Property2 ShortName="GeoPoint" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="GeoPointType" SemanticId="MIM::Classes::Location::AbsolutePoint" >
+<Value></Value>
+<Property3 ShortName="Lon" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="LongitudeSimpleType" SemanticId="MIM::Classes::Location::LongitudeCoordinate" >
+<Value>49.12</Value>
+</Property3>
+<Property3 ShortName="Lat" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="LatitudeSimpleType" SemanticId="MIM::Classes::Location::LatitudeCoordinate" >
+<Value>11.08</Value>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="HasCommandFunctionIndicatorWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="HasCommandFunctionIndicatorWrapperType" SemanticId="MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528" >
+<Value></Value>
+<Property1 ShortName="HasCommandFunctionIndicator" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="HasCommandFunctionIndicatorType" SemanticId="MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="OperationalStatusCodeWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OperationalStatusCodeWrapperType" SemanticId="MIM:d8811012-ed46-45d6-83f6-0608bc973ede" >
+<Value></Value>
+<Property1 ShortName="OperationalStatusCode" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="OperationalStatusCodeType" SemanticId="MIM:b37617d2-c2d5-4f4f-94d9-1808b477679e" >
+<Value>TemporarilyNotOperational</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="ServiceCodeWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="MilitaryOrganisationServiceCodeWrapperType" SemanticId="MIM:d2f0e0ba-e195-46b5-b29b-6a535b0359af" >
+<Value></Value>
+<Property1 ShortName="MilitaryOrganisationServiceCode" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="MilitaryOrganisationServiceCodeType" SemanticId="MIM:84903321-6ee1-48ef-ba36-426c0ddce170" >
+<Value>CoastGuard</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="FormalAbbreviatedNameWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="FormalAbbreviatedNameWrapperType" SemanticId="MIM:82b2fee7-e98e-4fe8-a643-9aadba66e624" >
+<Value></Value>
+<Property1 ShortName="FormalAbbreviatedName" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="FormalAbbreviatedNameType" SemanticId="MIM:82b2fee7-e98e-4fe8-a643-9aadba66e624" >
+<Value>Up</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="SizeCodeWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="EchelonSizeCodeWrapperType" SemanticId="MIM:724a19da-8a78-467b-82fd-a1d221a365d4" >
+<Value></Value>
+<Property1 ShortName="EchelonSizeCode" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="EchelonSizeCodeType" SemanticId="MIM:ad467b8c-87ba-46bc-b478-f50acf8387b1" >
+<Value>Fleet</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="UsesUnmannedVehiclesIndicatorWrapper" ObjectName="XXX_UnitA_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="UsesUnmannedVehiclesIndicatorWrapperType" SemanticId="MIM:ed2a820f-cdf6-4f00-badb-08ad4f5d3845" >
+<Value></Value>
+<Property1 ShortName="UsesUnmannedVehiclesIndicator" ObjectName="XXX_UnitA_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="UsesUnmannedVehiclesIndicatorType" SemanticId="MIM:ed2a820f-cdf6-4f00-badb-08ad4f5d3845" >
+<Value>true</Value>
+</Property1>
+</Property0>
+</Object>
+<Object ShortName="InfantryUnitType" ObjectName="XXX_UnitB_3317" ObjectType="InfantryUnitType" LocationType="Point" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="CombatUnitType" SemanticId="MIM:e348d61c-6ff8-496f-bf71-962d13426741" >
+<Property0 ShortName="Identifier" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_UnitB_3317:2018-12-04T11:43:58</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="XXX_UnitB_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:513</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" ObjectName="XXX_UnitB_3317" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="CommentTextWrapper" ObjectName="XXX_UnitB_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>This object is an UFO</Value>
+<Property2 ShortName="CommentText" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>Short text one</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Inferred</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2018-12-06T00:15:07.762Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2018-12-05T07:22:24.227Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>R3qx6mLh</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="IsInstanceIndicator" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="IsInstanceIndicatorType" SemanticId="MIP4IES:e821c670-009a-11e6-a837-0800200c9a66" >
+<Value>true</Value>
+</Property0>
+<Property0 ShortName="NameWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameWrapperType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value></Value>
+<Property1 ShortName="Name" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="NameType" SemanticId="MIM:0c967c16-93a1-4e43-aef4-2a6c97489336" >
+<Value>XXX_UnitB_3317</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="GeographicLocationWrapper" ObjectName="XXX_UnitB_3317" SendIfOptional="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="CoreLocationWrapperType" SemanticId="MIM:d0270649-07d8-47c7-b540-eb2ed10628c2" >
+<Value></Value>
+<Property1 ShortName="CoreLocation" ObjectName="XXX_UnitB_3317" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/Locations" DerivedType="PointType" DerivedSemanticId="MIM::Classes::Location::AbsolutePoint" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESCore" MIPType="CoreLocationType" SemanticId="MIM:c9164dc3-1dfe-433d-be3c-6329610f2d7c" >
+<Value></Value>
+<Property2 ShortName="GeoPoint" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="GeoPointType" SemanticId="MIM::Classes::Location::AbsolutePoint" >
+<Value></Value>
+<Property3 ShortName="Lon" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="LongitudeSimpleType" SemanticId="MIM::Classes::Location::LongitudeCoordinate" >
+<Value>49.13</Value>
+</Property3>
+<Property3 ShortName="Lat" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Locations" MIPType="LatitudeSimpleType" SemanticId="MIM::Classes::Location::LatitudeCoordinate" >
+<Value>11.08</Value>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="HasCommandFunctionIndicatorWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="HasCommandFunctionIndicatorWrapperType" SemanticId="MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528" >
+<Value></Value>
+<Property1 ShortName="HasCommandFunctionIndicator" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="HasCommandFunctionIndicatorType" SemanticId="MIM:3ccc1ec1-bf33-44fa-ad9c-a2b6d68fa528" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="OperationalStatusCodeWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="OperationalStatusCodeWrapperType" SemanticId="MIM:d8811012-ed46-45d6-83f6-0608bc973ede" >
+<Value></Value>
+<Property1 ShortName="OperationalStatusCode" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="OperationalStatusCodeType" SemanticId="MIM:b37617d2-c2d5-4f4f-94d9-1808b477679e" >
+<Value>MarginallyOperational</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="ServiceCodeWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="MilitaryOrganisationServiceCodeWrapperType" SemanticId="MIM:d2f0e0ba-e195-46b5-b29b-6a535b0359af" >
+<Value></Value>
+<Property1 ShortName="MilitaryOrganisationServiceCode" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESOrganisations" MIPType="MilitaryOrganisationServiceCodeType" SemanticId="MIM:84903321-6ee1-48ef-ba36-426c0ddce170" >
+<Value>Combined</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="FormalAbbreviatedNameWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="FormalAbbreviatedNameWrapperType" SemanticId="MIM:82b2fee7-e98e-4fe8-a643-9aadba66e624" >
+<Value></Value>
+<Property1 ShortName="FormalAbbreviatedName" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="FormalAbbreviatedNameType" SemanticId="MIM:82b2fee7-e98e-4fe8-a643-9aadba66e624" >
+<Value>RkhPQM5bLAncOJj</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="SizeCodeWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="EchelonSizeCodeWrapperType" SemanticId="MIM:724a19da-8a78-467b-82fd-a1d221a365d4" >
+<Value></Value>
+<Property1 ShortName="EchelonSizeCode" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESObjects" MIPType="EchelonSizeCodeType" SemanticId="MIM:ad467b8c-87ba-46bc-b478-f50acf8387b1" >
+<Value>MaritimeSquadron</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="UsesUnmannedVehiclesIndicatorWrapper" ObjectName="XXX_UnitB_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="UsesUnmannedVehiclesIndicatorWrapperType" SemanticId="MIM:ed2a820f-cdf6-4f00-badb-08ad4f5d3845" >
+<Value></Value>
+<Property1 ShortName="UsesUnmannedVehiclesIndicator" ObjectName="XXX_UnitB_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESUnits" MIPType="UsesUnmannedVehiclesIndicatorType" SemanticId="MIM:ed2a820f-cdf6-4f00-badb-08ad4f5d3845" >
+<Value>true</Value>
+</Property1>
+</Property0>
+</Object>
+<Object ShortName="InformationGroupIncludesType" ObjectName="Association0" ObjectType="InformationGroupIncludesType" LocationType="none" ShowOptionals="true" ObjectKind="ASSOCIATION" Namespace="https://mip-interop.org/xsds/2017/11/22/IESInformationGroupAssociations" MIPType="InformationGroupToIdentifiableAssociationType" SemanticId="MIM:24e3fe23-07aa-4ab6-86e6-33420a142d0e" >
+<Property0 ShortName="Identifier" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:Association0:2018-12-04T11:45:10</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:382</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>false</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" ObjectName="Association0" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="CommentTextWrapper" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>I think it is a Russian hoax</Value>
+<Property2 ShortName="CommentText" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>The output from incremental rotary encoders is known as a “quadrature” signal. Quadrature encoder output signals are defined by the phase shift relationship between the A channel and the B channel signals.</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Assumed</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2018-12-05T21:25:29.973Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2018-12-05T20:09:46.404Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ObjectName="Association0" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>aEU</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AssociationObject" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifiableReferenceType" SemanticId="IDT::IdentifiableArtifactReference::Object" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_UnitA_3317:2018-12-04T11:41:23</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>https://mip-interop.org/xsds/2017/05/12/IESUnits|ArmourUnitType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:433</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StringIdentifier" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>XXX_UnitA_3317</Value>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AssociationSubject" ObjectName="Association0" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifiableReferenceType" SemanticId="IDT::IdentifiableArtifactReference::Subject" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_Overlay_3317:2018-12-04T11:39:31</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>https://mip-interop.org/xsds/2017/11/22/IESInformationGroups|OverlayType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:828</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StringIdentifier" ObjectName="Association0" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>XXX_Overlay_3317</Value>
+</Property2>
+</Property1>
+</Property0>
+</Object>
+<Object ShortName="InformationGroupIncludesType" ObjectName="Association1" ObjectType="InformationGroupIncludesType" LocationType="none" ShowOptionals="true" ObjectKind="ASSOCIATION" Namespace="https://mip-interop.org/xsds/2017/11/22/IESInformationGroupAssociations" MIPType="InformationGroupToIdentifiableAssociationType" SemanticId="MIM:24e3fe23-07aa-4ab6-86e6-33420a142d0e" >
+<Property0 ShortName="Identifier" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:Association1:2018-12-04T11:45:16</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:248</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>false</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" ObjectName="Association1" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="CommentTextWrapper" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>I think it is a Russian hoax</Value>
+<Property2 ShortName="CommentText" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>I think it is a Russian hoax</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Inferred</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2018-12-05T10:26:57.362Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2018-12-05T15:00:56.308Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ObjectName="Association1" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>R</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AssociationObject" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifiableReferenceType" SemanticId="IDT::IdentifiableArtifactReference::Object" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_UnitB_3317:2018-12-04T11:43:58</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>https://mip-interop.org/xsds/2017/05/12/IESUnits|InfantryUnitType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:513</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StringIdentifier" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>XXX_UnitB_3317</Value>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AssociationSubject" ObjectName="Association1" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifiableReferenceType" SemanticId="IDT::IdentifiableArtifactReference::Subject" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_Overlay_3317:2018-12-04T11:39:31</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>https://mip-interop.org/xsds/2017/11/22/IESInformationGroups|OverlayType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:828</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StringIdentifier" ObjectName="Association1" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>XXX_Overlay_3317</Value>
+</Property2>
+</Property1>
+</Property0>
+</Object>
+<Object ShortName="HoldsAQuantityOfType" ObjectName="XXX_Assoc4_3317" ObjectType="HoldsAQuantityOfType" LocationType="none" ShowOptionals="true" ObjectKind="ASSOCIATION" Namespace="https://mip-interop.org/xsds/2018/02/09/IESHolding" MIPType="ObjectToObjectAssociationType" SemanticId="MIM:17d543f8-1c56-4068-bf83-d95b22d6ae82" >
+<Property0 ShortName="Identifier" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifierType" SemanticId="IDT::Identity" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_Assoc4_3317:2018-12-04T14:59:25</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:404</Value>
+</Property1>
+<Property1 ShortName="IsDependentIndicator" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IsDependentIndicatorType" SemanticId="IDT:base:isdependentindicator" >
+<Value>true</Value>
+</Property1>
+</Property0>
+<Property0 ShortName="BaseMetadata" ObjectName="XXX_Assoc4_3317" DerivedNamespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" DerivedType="MetadataType" DerivedSemanticId="MIM:43852bb9-e50e-4951-87eb-8ba521e4b785" ShowOptionals="true" WasAbstract="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="BaseMetadataType" SemanticId="IDT::Metadata" >
+<Value></Value>
+<Property1 ShortName="CommentTextWrapper" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextWrapperType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>This object is an UFO</Value>
+<Property2 ShortName="CommentText" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="CommentTextType" SemanticId="MIM:31baf15b-478b-4ab1-a1dd-ca7e3f1d5510" >
+<Value>The direction of the encoder shaft can be determined by evaluation of the A or B signal level. The direction “CW” or “CCW” can be determined by evaluating the signal levels relative to the alternate channel at the time of the rising edge.</Value>
+</Property2>
+</Property1>
+<Property1 ShortName="ReportingDataWrapper" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataWrapperType" SemanticId="MIM:cbc8ccff-1aee-41a3-8106-b8a74884bdef" >
+<Value></Value>
+<Property2 ShortName="ReportingData" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataType" SemanticId="MIM:58fe3d92-401a-4fd5-8850-9d326dc41da3" >
+<Value></Value>
+<Property3 ShortName="ReportingDataCategoryCodeWrapper" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeWrapperType" SemanticId="MIM:8fb25866-a8fe-4324-999c-69b1262b821f" >
+<Value></Value>
+<Property4 ShortName="ReportingDataCategoryCode" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDataCategoryCodeType" SemanticId="MIM:0f8e332c-b397-4130-aac5-68ef5cd19ddb" >
+<Value>Inferred</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ObservationDateTimeWrapper" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeWrapperType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value></Value>
+<Property4 ShortName="ObservationDateTime" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ObservationDateTimeType" SemanticId="MIM:b28560ab-1fa6-4134-8ec0-09ab7c19785d" >
+<Value>2018-12-05T21:24:18.128Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReportingDateTimeWrapper" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeWrapperType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value></Value>
+<Property4 ShortName="ReportingDateTime" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReportingDateTimeType" SemanticId="MIM:b163ed1f-aff7-4edd-9378-0a5f45317c27" >
+<Value>2018-12-05T02:37:26.809Z</Value>
+</Property4>
+</Property3>
+<Property3 ShortName="ReporterWrapper" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterWrapperType" SemanticId="MIM:c52a207f-1a1b-43ff-a332-1aaf7d0137d0" >
+<Value></Value>
+<Property4 ShortName="Reporter" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterType" SemanticId="MIM:cbc9463e-5d8f-438c-a27e-a02e3cf8b8dd" >
+<Value></Value>
+<Property5 ShortName="ReporterNameWrapper" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameWrapperType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value></Value>
+<Property6 ShortName="ReporterName" ObjectName="XXX_Assoc4_3317" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/IESMetadata" MIPType="ReporterNameType" SemanticId="MIM:f4881f2c-5e4d-4390-b27c-e71a9cc3b348" >
+<Value>c26</Value>
+</Property6>
+</Property5>
+</Property4>
+</Property3>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AssociationObject" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifiableReferenceType" SemanticId="IDT::IdentifiableArtifactReference::Object" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_UnitA_3317:2018-12-04T11:41:23</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>https://mip-interop.org/xsds/2017/05/12/IESUnits|ArmourUnitType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:433</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StringIdentifier" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>XXX_UnitA_3317</Value>
+</Property2>
+</Property1>
+</Property0>
+<Property0 ShortName="AssociationSubject" ObjectName="XXX_Assoc4_3317" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="IdentifiableReferenceType" SemanticId="IDT::IdentifiableArtifactReference::Subject" >
+<Value></Value>
+<Property1 ShortName="Uri" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="UriType" SemanticId="ADEM::IDENTITY->identifier" >
+<Value>uri:MIPTT:XXX_UnitB_3317:2018-12-04T11:43:58</Value>
+</Property1>
+<Property1 ShortName="Source" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="SourceType" SemanticId="IDT::Source" >
+<Value>source:MIPTT</Value>
+</Property1>
+<Property1 ShortName="ComplexType" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="ComplexTypeType" SemanticId="xsd:complexType" >
+<Value>https://mip-interop.org/xsds/2017/05/12/IESUnits|InfantryUnitType</Value>
+</Property1>
+<Property1 ShortName="Discriminator" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="DiscriminatorType" SemanticId="IDT::discriminator" >
+<Value>disc:MIPTT:513</Value>
+</Property1>
+<Property1 ShortName="AlternateIdentifier" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="AlternateIdentifierType" SemanticId="IDT::AlternateIdentifier" >
+<Value></Value>
+<Property2 ShortName="StringIdentifier" ObjectName="XXX_Assoc4_3317" SendIfOptional="true" UserDefined="true" ShowOptionals="true" Namespace="https://mip-interop.org/xsds/2017/05/12/Base" MIPType="StringIdentifierType" SemanticId="IDT::StringIdentifier" >
+<Value>XXX_UnitB_3317</Value>
+</Property2>
+</Property1>
+</Property0>
+</Object>
+<Settings>
+<UseActualDate>false</UseActualDate>
+<MetaDataDate>2017-05-05T14:12:00Z</MetaDataDate>
+<NrObjects>1</NrObjects>
+<NrFiles>1</NrFiles>
+<Interval>0</Interval>
+<CreateOneFile>true</CreateOneFile>
+<BoundingBox>
+<NorthLimit>90</NorthLimit>
+<SouthLimit>-90</SouthLimit>
+<EastLimit>180</EastLimit>
+<WestLimit>-180</WestLimit>
+</BoundingBox>
+<UseBoundingBox>true</UseBoundingBox>
+</Settings>
+<OverlayData>
+<node0 Name="XXX_Overlay_3317" Association="" ObjectType="OVERLAY">
+<node1 Name="XXX_UnitA_3317" Association="Association0" ObjectType="OBJECT">
+</node1>
+<node1 Name="XXX_UnitB_3317" Association="Association1" ObjectType="OBJECT">
+</node1>
+</node0>
+</OverlayData>
+<TaskOrgOrbatData>
+</TaskOrgOrbatData>
+</TestData>

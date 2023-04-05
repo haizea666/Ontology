@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Archivo XML de muestra generado con XMLSpy v2018 rel. 2 (x64) (http://www.altova.com)-->
+<conceptmetadata:ConceptMetadataValidityTimePeriod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:conceptmetadata="https://mip-interop.org/data/v4.3/Concept/Metadata" xmlns:generic="https://mip-interop.org/data/v4.3/BattlespaceConcept/Generic" xsi:schemaLocation="https://mip-interop.org/data/v4.3/IES IES.xsd" xsi:type="generic:TextualTimePeriodType">
+	<generic:TextualTimePeriodDescriptionText>When reaching Phase Line LISA</generic:TextualTimePeriodDescriptionText>
+</conceptmetadata:ConceptMetadataValidityTimePeriod>
+
+<!--
+Original example
+
+<meta:ValidityTimePeriodWrapper>
+	<gen:TimePeriod xsi:type ="gen:TextualTimePeriodType" >
+		<gen:DescriptionTextWrapper>
+			<gen:DescriptionText>When reaching Phase Line LISA</gen:DescriptionText>
+		</gen:DescriptionTextWrapper>
+	</gen:TimePeriod>
+</meta:ValidityTimePeriodWrapper>
+-->

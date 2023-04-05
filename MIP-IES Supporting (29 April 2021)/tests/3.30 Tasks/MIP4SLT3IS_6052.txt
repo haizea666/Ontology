@@ -1,0 +1,39 @@
+Test description
+
+Test IDMIP4SLT3IS_6052Test TitleIndicate erroneous information for an example TaskExecution Priority1ObjectiveBSO PlannedTime. Test whether the Producer/Provider is able to create a Task, mark some information as erroneous and the Consumers/Receivers are able to understand (and display) it correctly.ScenarioThe Producer creates a Task (ArmedAssault) with specific HostilityStatus.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this ArmedAssault and marks the HostilityStatus as erroneous.
+The Consumers receive the information and interpret it correctly.
+The Producer creates a Task (AirAssault) with specific location (Point).
+The Consumers receive the information and interpret it correctly.
+The Producer updates this AirAssault and marks the location as erroneous.
+The Consumers receive the information and interpret it correctly.
+The Producer creates a Task (Breach) with a specific PlannedTimePeriod.
+The Consumers receive the information and interpret it correctly.
+The Producer updates this Breach and marks the PlannedTimePeriod as erroneous.
+The Consumers receive the information and interpret it correctly.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S.Participation2 or more.MTRSN/APre-test ConditionsThe Producer/Provider has created a topic which includes message elements belonging to the Task message schema area.
+The Consumers have subscribed to this topic.Test InputsN/A.ConclusionThis test is considered a success if the Tasks are processed and interpreted correctly on all Nations' C2IS.Test OutputsN/A.TraceabilityREQ_INF_0002
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The Producer (A) creates an ArmedAssault (Task) with name XXX_AA_052 with HostilityStatus=Hostile.
+
+Notices:
+XXX in name of the object is meant (in principle) to be replaced by the 3 letter code of the country name.
+Example for the name of the Organisation: ITA_AA_052 ~~Consumers (B) receive and display the ArmedAssault correctly. ~~122. The Producer (A) updates the ArmedAssault and marks the HostilityStatus (Hostile) as erroneous. ~~Consumers (B) receive and display the ArmedAssault correctly. ~~123. The Producer (A) creates an AirAssault (Task) with name XXX_AIA_052 with a specific Point location. ~~Consumers (B) receive and display the AirAssault correctly. ~~124. The Producer (A) updates the AirAssault and marks the location as erroneous. ~~Consumers (B) receive and display the AirAssault correctly. ~~125. The Producer (A) creates a Breach (Task) with name XXX_BT_052 with a specific PlannedTimePeriod. ~~Consumers (B) receive and display the Breach correctly. ~~126. The Producer (A) updates the Breach and marks the PlannedTimePeriod as erroneous. ~~Consumers (B) receive and display the Breach correctly. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

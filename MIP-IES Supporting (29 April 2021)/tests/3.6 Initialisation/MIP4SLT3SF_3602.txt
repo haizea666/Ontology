@@ -1,0 +1,36 @@
+Test description
+
+Test IDMIP4SLT3SF_3602Test TitleInitialise and represent current information.Execution Priority1ObjectiveThe objective of this test is to assess the ability of an incoming C2IS (Nation B) to complete a bilateral initialisation to a start state with another C2IS (Nation A), within 60 minutes.ScenarioUpon arrival at the location, Nation B will subscribe to all or part of the Topic list of Nation A, however, in most cases it is expected that the Consumer will wish to initialise prior to subscribing to notifications. Initialisation time starts after Nation A has provided the necessary information to configure the systems, and the physical connection is set up. Initialisation time ends when Nation B's MIP Solution goes to Operational State.
+This initialisation request could be repeated at any time if there is an interruption in communications and the Consumer requires a re-synchronisation.EnvironmentInternet, co-located. Exchange Pattern: R/RParticipation2MTRSPre-test ConditionsMIP4SLT3SF_3601. Both Nations are correctly configured for the MIP LAN they are on.
+The test procedures presuppose that the physical communications links are established and tested, and that each nation has a current and correct common data-fill, plus any required national data, loaded in its' national system.
+Nation A shall be in an operational state.
+Both nations shall provide a summary of the data to be exchanged so that validation by the receiving nation can be performed.
+Both nations shall have established and verified connectivity via the MIP4-IES Exchange Mechanism.Test InputsN/AConclusionSystems are considered "Initialised" when both nations' C2IS have completed the exchange of operational data and both nations have verified that they have the same tactical picture (for the shared topics).
+Verification of the tactical picture is not to be included in the allocated 60 minute initialization time.Test OutputsN/ATraceabilityREQ_SYS_0003
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Nation B synchronises its data with nation A for the topic(s) it will subscribe to or has already subscribed to.
+
+Notices: This test is done bilaterally. Nations will switch roles at the end of the test.
+After all initialisation data is successfully loaded, each nation will notify its partner nation that its initialisation is complete. ~~
+C2IS of Nation B should display the same information as Nation A regarding the topic(s) it has subscribed to.
+At this stage, initialisation is complete. ~~12
+Configuration
+ItemValueCommentEventGeneration00 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

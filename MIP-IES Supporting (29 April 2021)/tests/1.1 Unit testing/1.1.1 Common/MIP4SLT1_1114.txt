@@ -1,0 +1,37 @@
+Test description
+
+Test IDMIP4SLT1_1114Test TitleRetrieve Topic Set from Producer / ProviderExecution Priority1ObjectiveThe objective is for the Consumer to retrieve the topic Set supported by the ProducerScenarioThe Consumer is interested in retrieving the Topic Set supported by the Producer to use them for Request/Response and/or Publish/Subscribe exchangesEnvironmentInternet or Co-located. Exchange Pattern: P/S and R/R.Participation2 MTRSN/APre-test ConditionsMIP4SLT1_1211,  MIP4SLT1_1213, MIP4SLT1_1215
+
+Prior to initiating exchange to request resource properties, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners.  The exchange of completed questionnaires will:
+? Inform exchange partners of the capabilities of a partner system
+? Allow  partners to exchange source identifiers
+? Aid in the early identification of potential issues
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+
+IDRuleExigence-1Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]
+Both Consumer and Producer systems conform to either MIP4.0 Publish/Subscribe Exchange Pattern Specification or MIP4.0 Request/Response Exchange Pattern Specification or both.
+Test InputsN/A.ConclusionThe test is concluded after the Consumer has received the Producer Topic Set. The Topic Set should be conformed to OASIS Topic specification.Test OutputsN/A.TraceabilityREQ_EM_0011.
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. The consumer sends a request for the list of dialect to the GetResourceProperty service of the producer. Requested property is :
+<rp:GetResourceProperty>
+t1:TopicSet
+</rp:GetResourceProperty> ~~The Producer receives a valid request for resource properties using t1:TopicSet ~~
+122. Producer sends the Topic Set it supports. ~~Consumer receives the Topic Set supported by the producer. ~~21
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+2
+
+
+
+					          
+
+
+1
+

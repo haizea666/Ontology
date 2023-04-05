@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:app="https://mip-interop.org/xsds/data/v4.3/BattlespaceConcept/Action.xsd">
+<xsd:complexType name="TaskType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An Action, for which the planning details are known.</xsd:documentation>
+      <xsd:appinfo>
+        <app:SemanticId>MIM:1f109ba1-99af-4ab1-bce3-adde85d2b418</app:SemanticId>
+        <app:DisplayName>Task</app:DisplayName>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="action:ActionType">
+        <xsd:sequence>
+          <xsd:element ref="action:TaskAmendTimingCode" minOccurs="0" />
+          <xsd:element ref="action:TaskCompletionPercent" minOccurs="0" />
+          <xsd:element ref="action:TaskDetailText" minOccurs="0" />
+          <xsd:element ref="action:TaskEndQualifierCode" minOccurs="0" />
+          <xsd:element ref="action:TaskEntailedSafetyDegreeCode" minOccurs="0" />
+          <xsd:element ref="action:TaskEstimatedDuration" minOccurs="0" />
+          <xsd:element ref="action:TaskIsApprovedIndicator" minOccurs="0" />
+          <xsd:element ref="action:TaskIsCovertIndicator" minOccurs="0" />
+          <xsd:element ref="action:TaskIsFeintIndicator" minOccurs="0" />
+          <xsd:element ref="action:TaskIsPlanningCompletedIndicator" minOccurs="0" />
+          <xsd:element ref="action:TaskMaximumDuration" minOccurs="0" />
+          <xsd:element ref="action:TaskMeteorologicalImpactCode" minOccurs="0" />
+          <xsd:element ref="action:TaskMinimumDuration" minOccurs="0" />
+          <xsd:element ref="action:TaskOperationalLevelCode" minOccurs="0" />
+          <xsd:element ref="action:TaskPlannedTimePeriod" minOccurs="0" />
+          <xsd:element ref="action:TaskPriorityCode" minOccurs="0" />
+          <xsd:element ref="action:TaskProgressCode" minOccurs="0" />
+          <xsd:element ref="action:TaskStartQualifierCode" minOccurs="0" />
+          <xsd:element ref="action:TaskStatusCode" minOccurs="0" />
+          <xsd:element ref="action:TaskTimingDayCode" minOccurs="0" />
+          <xsd:element ref="action:TaskTimingHourCode" minOccurs="0" />
+          <xsd:element ref="action:TaskCandidateTargetListRef" minOccurs="0" />
+          <xsd:element ref="action:TaskRequiredTaskOrganisationRef" minOccurs="0" />
+          <xsd:element ref="action:TaskRequiredTaskOrganisation" minOccurs="0" />
+          <xsd:element ref="action:TaskRequestRef" minOccurs="0" />
+          <xsd:element ref="action:TaskRequest" minOccurs="0" />
+          <xsd:element ref="action:TaskConstraintRef" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element ref="action:TaskConstraint" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>
+
+
+<!--
+Original example
+
+<xsd:schema … 
+xmlns:app="https://mip-interop.org/xsds/2017/05/12/AppInfo.xsd">
+    ...
+    <xsd:complexType name="TaskType" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">An Action, for which the planning details are known.</xsd:documentation>
+            <xsd:appinfo>
+                <app:SemanticId >MIM::Classifiers::Action::Task</app:SemanticId>
+                ...
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexContent>
+            ...
+        </xsd:complexContent>
+    </xsd:complexType>
+    ...
+</xsd:schema>
+
+-->

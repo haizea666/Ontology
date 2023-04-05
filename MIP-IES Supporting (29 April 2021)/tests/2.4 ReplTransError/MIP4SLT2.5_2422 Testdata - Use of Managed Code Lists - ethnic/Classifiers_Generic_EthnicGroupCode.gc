@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList 
+	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+	<Identification>
+		<ShortName>EthnicAffiliationCodeType</ShortName>
+		<Version>0.9.9</Version>
+		<CanonicalUri>urn:int:nato:standard:mip:mip4ies:managedList:ethnicGroupCode</CanonicalUri>
+		<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:ethnicGroupCode:0:9:9</CanonicalVersionUri>
+	</Identification>
+	<ColumnSet>
+		<ColumnRef Id="code" ExternalRef="code">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="label" ExternalRef="label">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<ColumnRef Id="description" ExternalRef="description">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</ColumnRef>
+		<KeyRef Id="managedListKey" ExternalRef="managedListKey">
+			<CanonicalVersionUri>urn:int:nato:standard:mip:mip4ies:managedList:columnSet:1:0:0</CanonicalVersionUri>
+			<LocationUri>https://mip-interop.org/codelists/v4.3/ManagedListColumns.gc</LocationUri>
+		</KeyRef>
+	</ColumnSet>
+	<SimpleCodeList>
+
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>ABORGN</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Aboriginal</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>The ethnic group of Aboriginal people.</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>AFGHAN</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Afghani</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>The ethnic group of Afghani people.</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>AFRNFD</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>African not further defined</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>The not further defined ethnic groups of African people.</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>ALBNAN</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Albanian</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>The ethnic group of Albanian people.</SimpleValue>
+			</Value>
+		</Row> 
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>GYPSY</SimpleValue>
+			</Value>
+			<Value ColumnRef="label">
+				<SimpleValue>Gypsy</SimpleValue>
+			</Value>
+			<Value ColumnRef="description">
+				<SimpleValue>The ethnic group of Gypsy people.</SimpleValue>
+			</Value>
+		</Row> 
+	</SimpleCodeList>
+</gc:CodeList>
+

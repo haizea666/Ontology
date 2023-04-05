@@ -1,0 +1,25 @@
+Test description
+
+Test IDMIP4SLT3SF_3201Test TitleProcess valid MIP4 payload without extensions.Execution Priority1ObjectiveThe objective of this test is to assess the ability to process valid MIP4 payloads which do not take advantage of the extension mechanism.ScenarioA Consumer receives a valid MIP4 payload and processes it into their system.EnvironmentInternet or Co-located. Exchange Pattern: R/R, P/S, FileParticipation2MTRSPre-test ConditionsTest group 3.6 'Initialisation'.Test InputsValidated means to acquire information from the Producer using a MIP4 exchange pattern.ConclusionThe consumer can process MIP4 content which does not utilise MIP4 extensions.Test OutputsThe Consumer successfully acquires content from the Producer and is able to apply it to their system without error.TraceabilityREQ_SYS_0011.
+
+
+
+Test Procedure
+
+StepActionExpected ResultSrcDst1. Obtain the valid MIP4 content from the producer. ~~Content will be received from the Producer. ~~122. Process all the MIP4 content on the Consumer. ~~The Consumer will successfully process the MIP4 content without error. ~~12
+Configuration
+ItemValueCommentEventGeneration10 --> Combine steps to one event in the MTMT, generate new MTMT events on every source - destination change.
+1 --> Every step will be added to the MTMT as a separate event.
+
+
+
+
+2
+
+
+
+					          
+
+
+1
+

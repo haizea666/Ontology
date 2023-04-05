@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation name="Classifiers_Generic_EthnicGroupCode.cva" xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/">
+	<ValueLists>
+    	<ValueList id="Classifiers_Generic_EthnicGroupCode" uri="Classifiers_Generic_EthnicGroupCode.gc" />
+	</ValueLists>
+	<Contexts>
+    	<Context address="//affl:EthnicAffiliationCode" values="Classifiers_Generic_EthnicGroupCode" />
+	</Contexts>
+</cva:ContextValueAssociation>
+
+<!--
+Original example
+
+<cva:ContextValueAssociation name="Classifiers_Generic_EthnicGroupCode.cva" xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" ...>
+	<ValueLists>
+    	<ValueList id="Classifiers_Generic_EthnicGroupCode" uri="Classifiers_Generic_EthnicGroupCode.gc" />
+	</ValueLists>
+	<Contexts>
+    	<Context address="//affl:EthnicAffiliationCode" values="Classifiers_Generic_EthnicGroupCode" />
+	</Contexts>
+</cva:ContextValueAssociation>
+
+-->

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT1</TestCaseIdLevel>
+    <TestCaseIdGroup>11</TestCaseIdGroup>
+    <TestCaseIdNumber>17</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Retrieve items using an unsupported filter (from provider's point of view): unsupported TopicExpressionDialect.</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>To retrieve items using a filter with a TopicExpressionDialect, that is not supported by the provider.</TestCaseObjective>
+  <TestCaseScenario>Test of faults (to be derived with "TopicExpressionDialect unsupported"). 'Retrieve' is the term used within MIP Information Exchange Specification (MIP IES) - REQUEST/RESPONSE EXCHANGE PATTERN.</TestCaseScenario>
+  <TestCaseEnvironment>Internet or Co-located</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>MIP4SLT1_1211, MIP4SLT1_1214, MIP4SLT1_1213
+Prior to initiating exchange of MIP4.0 messages, each participant in the exchange will complete the MIP4.0 Joining Questionnaire [REF-MIP-5] and share this questionnaire with their exchange partners. The exchange of completed questionnaires will:
+* Inform exchange partners of the capabilities of a partner system
+* Allow  partners to exchange source identifiers
+* Aid in the early identification of potential issues
+
+The exchange partners are expected to resolve any identified issues prior to the actual exchange of MIP4.0 messages.
+
+Exigence-1 Prior to initiating MIP4.0 Information Exchange, the exchange partners shall complete and share the MIP4.0 Joining Questionnaire.[REF-MIP-5]</TestCasePreCondition>
+  <TestCaseInput>Name of single topic and TopicExpressionDialect to be tested</TestCaseInput>
+  <TestCaseConclusion>The test is completed when the Consumer system is able to correctly receive all information associated with the topic, i.e. that the used TopicExpressionDialect is unsupported / not understood by the Provider, over a request-response exchange.</TestCaseConclusion>
+  <TestCaseOutput>Verification that the information associated with the topic requested is received correctly.</TestCaseOutput>
+  <TestCaseTraceability>MIP4_Request_Response_Exchange_Pattern, REQ_SYS_0021, REQ_EM_0012</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Consumer (1) requests information about items contained by a topic from the Provider (2) using an unsupported TopicExpressionDialect. </TestCaseStepAction>
+    <TestCaseStepResult>Provider receives and interprets request correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Provider informs that the used TopicExpressionDialect is unsupported / not understood. Consumer receives and interprets requested information correctly. </TestCaseStepAction>
+    <TestCaseStepResult>Requested data is received and interpreted correctly. </TestCaseStepResult>
+    <TestCaseStepDestination>1</TestCaseStepDestination>
+    <TestCaseStepSource>2</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>

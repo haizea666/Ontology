@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<TestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://mip-interop.org/schemas/SEPT/2016/09/29/TestAutomation.xsd">
+  <TestCaseId>
+    <TestCaseIdBlock>MIP4</TestCaseIdBlock>
+    <TestCaseIdLevel>SLT3SF</TestCaseIdLevel>
+    <TestCaseIdGroup>37</TestCaseIdGroup>
+    <TestCaseIdNumber>1</TestCaseIdNumber>
+  </TestCaseId>
+  <TestCaseTitle>Information context immutability.</TestCaseTitle>
+  <TestCaseExecutionPriority>2</TestCaseExecutionPriority>
+  <TestCaseObjective>Assess how systems handle BSOs that are published in multiple Topics.
+The MIP Solution shall not change the information context (Topic) between Producer and Consumer. The MIP Gateway shall handle the exchange of information without human Intervention (but the actual mapping from message to topic is a national C2IS issue within MIP4-IES).</TestCaseObjective>
+  <TestCaseScenario>Nation A sends data belonging in a Topic (Friendly Forces, Routes, Civilian Infrastructure) to Nation B.
+Nation B receives the data and displays it without human intervention (hence some short of automated topic mapping is required at the national C2IS).
+Remark: The information can be displayed at the Consumer system little time after Producer updates the information in its system (&lt; 180s was the mark for MIP3.1, the Producer provides the content to the Consumer on an asynchronous basis as updates become available).</TestCaseScenario>
+  <TestCaseEnvironment>Co-located. Exchange Pattern: P/S</TestCaseEnvironment>
+  <TestCaseMaximumParticipation>2</TestCaseMaximumParticipation>
+  <TestCasePreCondition>Nation A has pre-defined Topics: 'Friendly Forces', 'Routes', and 'Civilian Infrastructure' for instance, to which Nation B will subscribe.</TestCasePreCondition>
+  <TestCaseInput>N/A</TestCaseInput>
+  <TestCaseConclusion>The test is a success when the information is exchanged without human intervention, and the information context (i.e. the Topic to which information is linked) does not change between producer and consumer.
+When the Producer's intention with its Topic definition is to convey the current/actual situation, Consumer C2IS must display the Topic in such a way that the exact same current/actual situation is presented as intended by the source.</TestCaseConclusion>
+  <TestCaseOutput>N/A</TestCaseOutput>
+  <TestCaseTraceability>REQ_SYS_0006, REQ_SYS_0007, REQ_SYS_0019</TestCaseTraceability>
+  <TestCaseStep>
+    <TestCaseStepNumber>1</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B (Consumer, 2) subscribes to three Topics ('FriendlyForces' 'Routes', and 'CivilianInfrastructure' for instance) of Nation A (Producer, 1). </TestCaseStepAction>
+    <TestCaseStepResult>A subscription exists between Nation A and Nation B. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>2</TestCaseStepNumber>
+    <TestCaseStepAction>Nation B synchronises its data for the subscribed Topics. </TestCaseStepAction>
+    <TestCaseStepResult>C2IS of Nation B should contain the same information as Nation A regarding the subscribed Topics. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>3</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates an Organisation in one of the Topics ('FriendlyForces' for instance) to which Nation B has subscribed to. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the Organisation in the same Topic with all the details provided from Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>4</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a Control Feature in one of the Topics ('Routes' for instance) to which Nation B has subscribed to. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the Control Feature in the same Topic with all the details provided from Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseStep>
+    <TestCaseStepNumber>5</TestCaseStepNumber>
+    <TestCaseStepAction>Nation A creates a Facility in one of the Topics ('CivilianInfrastructure' for instance) to which Nation B has subscribed to. </TestCaseStepAction>
+    <TestCaseStepResult>Nation B displays the Facility in the same Topic with all the details provided from Nation A. </TestCaseStepResult>
+    <TestCaseStepDestination>2</TestCaseStepDestination>
+    <TestCaseStepSource>1</TestCaseStepSource>
+  </TestCaseStep>
+  <TestCaseEventGeneration>true</TestCaseEventGeneration>
+</TestCase>
