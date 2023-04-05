@@ -1,0 +1,225 @@
+{
+	"$id": "/schemas/CyberDEM_Objects",
+	"schema": "https://json-schema.org/draft/2020-12/schema",
+
+	"$defs": {
+		"Application": {
+			"$comment": "Application",
+			"$comment": "A specific instance of a software program running on a device",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+				"Version": {"type": "string"},
+				"Company": {"type": "string"}
+			}
+		},
+		"CommunicationsData": {
+			"$comment": "CommunicationsData",
+			"$comment": "Data on a communications channel/stream",
+			"$comment": "extends: Data",
+			"type": "object",
+			"properties": {
+				"PacketSize": {"type": "integer"},
+				"PacketSizeStandardDeviation": {"type": "number"},
+				"Frequency": {"type": "integer"},
+				"Duplex": {"type": "boolean"}
+			}
+		},
+		"CyberObject": {
+			"$comment": "CyberObject",
+			"$comment": "A entity in cyberspace (physical, logical, or persona layers)",
+			"type": "object",
+			"properties": {
+				"ObjectID": {"type": "integer"},
+				"Name": {"type": "string"},
+				"Description": {"type": "string"},
+				"RelatedObjects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"RelatedObjectID": {"type": "integer"},
+							"RelationshipType": {"enum": ["Administers","AdministeredBy","ComponentOf","HasComponent","ContainedIn","Contains","ProvidedBy","Provides","ResidesOn","HasResident"]},
+							"RelatedObjectPrivileges": {"type": "string"}
+						}
+					}
+				}
+			}
+		},
+		"Data": {
+			"$comment": "Data",
+			"$comment": "Information encapsulated in an instance or collection of file(s), message(s), or record(s) in a database. Data can represent a specific information object or a kind of information, e.g. a specific tactical message or messages that contain SPOTREP information.",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+				"Sensitivity": {"enum": ["Unclassified","Confidential","FOUO","Secret","SecretNoForn","TS","TS_SCI","NATORestricted","NATOConfidential","NATOSecret","CosmicTopSecret","FVEYProprietary","Proprietary","PII","HIPAA","GDPR","Public"]},
+				"DataType": {"enum": ["File","Code","Credentials","Communications","SystemConfiguration"]},
+				"Encrypted": {"enum": ["NotEncrypted","DES","TripleDES","RSA","AES","TwoFish","SHA"]},
+				"Status": {"enum": ["Intact","Compromised","Corrupted","Manipulated","NonDecryptable","Erased"]},
+				"Confidentiality": {"type": "number"}
+			}
+		},
+		"Device": {
+			"$comment": "Device",
+			"$comment": "An electronic device capable of operating in cyberspace",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+				"DeviceTypes": {
+					"type": "array",
+					"items": {
+						"enum": ["Generic","Networking","ComputerNode","PortableComputer","Controller","Storage","Sensor","Printer","Scanner","Communications","HMI","Monitoring","IoT","Security"]
+					}
+				},
+				"IsVirtual": {"type": "boolean"},
+				"Role": {"type": "string"},
+				"DeviceIdentifier": {"type": "string"},
+				"NetworkInterfaces": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Name": {"type": "string"},
+							"Address": {"type": "string"}
+						}
+					}
+				}
+			}
+		},
+		"Network": {
+			"$comment": "Network",
+			"$comment": "A data network including LANs, WANs, tactical radio data networks, cellular data networks, etc.; networks can be composed of other networks, e.g. a WAN is a collection of LANs.",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+				"Protocol": {"enum": ["InternetProtocol","NAT","ICMP","ARP","RIP","OSPF","IPsec"]},
+				"Mask": {"type": "string"}
+			}
+		},
+		"NetworkLink": {
+			"$comment": "NetworkLink",
+			"$comment": "A (physical or logical) data link (or bus) between two or more devices",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+				"IsLogical": {"type": "boolean"},
+				"PhysicalLayer": {"enum": ["Wired","Wireless"]},
+				"DataLinkProtocol": {"enum": ["Ethernet","Wifi","ATM","LocalTalk","PPP","TokenRing","VLAN","Bluetooth","1553Bus"]},
+				"Bandwidth": {"type": "integer"},
+				"Latency": {"type": "integer"},
+				"Jitter": {"type": "integer"},
+				"NetworkInterfaces": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Name": {"type": "string"},
+							"Address": {"type": "string"}
+						}
+					}
+				}
+			}
+		},
+		"OperatingSystem": {
+			"$comment": "OperatingSystem",
+			"$comment": "The software that supports a computer's basic functions, such as scheduling tasks, executing applications, and controlling peripherals",
+			"$comment": "extends: Application",
+			"type": "object",
+			"properties": {
+				"OSType": {"enum": ["MicrosoftDOS","MicrosoftWindows","AppleMacOS","DECVMS","IBMOS_2","Android","AppleiOS","CiscoIOS","Firmware","UNIX-Linux"]}
+			}
+		},
+		"Persona": {
+			"$comment": "Persona",
+			"$comment": "A user or profile for a person within cyberspace",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"Service": {
+			"$comment": "Service",
+			"$comment": "An application that provides a service to network clients",
+			"$comment": "extends: Application",
+			"type": "object",
+			"properties": {
+				"ServiceType": {"enum": ["DNS","Email","Web","Database","File","Chat","Forum","SocialMedia"]},
+				"Address": {"type": "string"}
+			}
+		},
+		"System": {
+			"$comment": "System",
+			"$comment": "A system is a collection of CyberObjects (components/subsystems) that work together.",
+			"$comment": "extends: CyberObject",
+			"type": "object",
+			"properties": {
+				"SystemType": {"enum": ["Generic","SCADA","C2","ICS"]}
+			}
+		}
+	},
+
+	"type": "array",
+	"items": {
+		"type": "object",
+		"oneOf": [
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Application"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Application"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CommunicationsData"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CommunicationsData"},
+				{"$ref": "#/$defs/Data"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberObject"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Data"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Data"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Device"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Device"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Network"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Network"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "NetworkLink"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/NetworkLink"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "OperatingSystem"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/OperatingSystem"},
+				{"$ref": "#/$defs/Application"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Persona"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Persona"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Service"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Service"},
+				{"$ref": "#/$defs/Application"},
+				{"$ref": "#/$defs/CyberObject"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "System"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/System"},
+				{"$ref": "#/$defs/CyberObject"}
+			]}
+		],
+		"unevaluatedProperties": false
+	}
+}

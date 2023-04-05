@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1664806965144" name="http://daedafusion.com/case" uri="case.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664806965144" name="http://daedafusion.com/case/insider" uri="insider.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664806965144" name="http://www.daedafusion.com/Asset" uri="asset.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664806965144" name="http://www.daedafusion.com/editor_annotation" uri="editor_annotation.rdf"/>
+    </group>
+</catalog>

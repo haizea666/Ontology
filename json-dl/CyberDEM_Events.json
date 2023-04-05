@@ -1,0 +1,524 @@
+{
+	"$id": "/schemas/CyberDEM_Events",
+	"schema": "https://json-schema.org/draft/2020-12/schema",
+
+	"$defs": {
+		"BlockTrafficEffect": {
+			"$comment": "BlockTrafficEffect",
+			"$comment": "Completely block all traffic over a communication channel",
+			"$comment": "extends: Disrupt",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"CPULoadEffect": {
+			"$comment": "CPULoadEffect",
+			"$comment": "Artificial increase in CPU load. Percentage (from parent) describes amount of cpu usage",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"CyberAcknowledge": {
+			"$comment": "CyberAcknowledge",
+			"$comment": "Response to a CyberEvent that has requested an acknowledgement",
+			"$comment": "extends: CyberEvent",
+			"type": "object",
+			"properties": {
+				"RelatedEventID": {"type": "integer"},
+				"AcknowledgeResponse": {"enum": ["AbleToComply","UnableToComply"]}
+			}
+		},
+		"CyberAction": {
+			"$comment": "CyberAction",
+			"$comment": "The fact or process of doing something, in or through cyberspace, typically to achieve an aim (action: www.lexico.com, adapted)",
+			"$comment": "extends: CyberEvent",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"CyberAdmin": {
+			"$comment": "CyberAdmin",
+			"$comment": "Cyber actions that are administrative in nature (performed by authorized actors)",
+			"$comment": "extends: CyberAction",
+			"type": "object",
+			"properties": {
+				"AdminType": {"enum": ["Administration","Assessment","Collection","Configuration","Evaluation","Forensics","Investigation","Operations","Provisioning","Testing"]}
+			}
+		},
+		"CyberAttack": {
+			"$comment": "CyberAttack",
+			"$comment": "A cyberspace action that creates various direct denial effects in cyberspace (for example, degradation, disruption, or destruction) and manipulation that leads to denial, that is hidden or that manifests in the physical domains (JP 3-12).",
+			"$comment": "extends: CyberAction",
+			"type": "object",
+			"properties": {
+				"MitreAttackSubtechniqueIDs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"CyberDefend": {
+			"$comment": "CyberDefend",
+			"$comment": "A cyberspace action taken within protected cyberspace to defeat specific threats that have breached or are threatening to breach the cyberspace security measures and include actions to detect, characterize, counter, and mitigate threats, including malware or the unauthorized activities of users, and to restore the system to a secure configuration (JP3-12)",
+			"$comment": "extends: CyberAction",
+			"type": "object",
+			"properties": {
+				"MitreAttackMitigationIDs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"CyberEffect": {
+			"$comment": "CyberEffect",
+			"$comment": "A change, in or through cyberspace, which is a result or consequence of an action or other cause (effect: www.lexico.com, adapted)",
+			"$comment": "extends: CyberEvent",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"CyberEvent": {
+			"$comment": "CyberEvent",
+			"$comment": "A non-persistent cyber event as opposed to a persistent cyber object",
+			"type": "object",
+			"properties": {
+				"EventID": {"type": "integer"},
+				"Description": {"type": "string"},
+				"EventTime": {"type": "number"},
+				"TargetIDs": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"TargetModifiers": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Key": {"type": "string"},
+							"Value": {"type": "string"}
+						}
+					}
+				},
+				"Phase": {"enum": ["Start","Suspend","Continue","ContinueWithChanges","End","Cancel"]},
+				"Duration": {"type": "number"},
+				"ActorIDs": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"SourceIDs": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"Payload": {"type": "string"},
+				"RequestAcknowledgement": {"type": "boolean"}
+			}
+		},
+		"CyberOrder": {
+			"$comment": "CyberOrder",
+			"$comment": "A CyberEvent to capture cyberspace related command and control orders/directives",
+			"$comment": "extends: CyberEvent",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"CyberRecon": {
+			"$comment": "CyberRecon",
+			"$comment": "Activities in cyberspace conducted to gather intelligence required to support future OCO or DCO (FM 3-12)",
+			"$comment": "extends: CyberAction",
+			"type": "object",
+			"properties": {
+				"ReconType": {"enum": ["AccountDiscovery","AdMalware","AntivirusTrojan","ApplicationWindowDiscovery","ARPScan","BannerGrabbing","BounceScan","BrowserBookmarkDiscovery","CloudInfrastructureDiscovery","CloudServiceDashboard","CloudServiceDiscovery","Compliance","CSRF","DatabaseInjection","DatabaseStructure","DBManufactureVersion","Device","DNS","Domain","DomainTrustDiscovery","FileAndDirectoryDiscovery","FINScan","FTP","HTTP","IdleScan","IGMP","InputValidation","IP","LDAPScan","NetBiosScan","NetworkMap","NetworkServiceScanning","NetworkShareDiscovery","NetworkSniffing","NTP","NULLScan","OSScan","PasswordPolicyDiscovery","PatchHistory","PeripheralDeviceDiscovery","PermissionGroupsDiscovery","Ping","PingScan","PortScan","PortSweep","PPP","ProcessDiscovery","QueryRegistry","RARP","RemoteSystemDiscovery","Rootkit","RPCScan","Service","SLIP","SMTP","SNMPSweep","SoftwareDiscover","SYNScan","SystemInformationDiscovery","SystemNetworkConfigurationDiscovery","SystemNetworkConnectionsDiscovery","SystemOwnerUserDiscovery","SystemServiceDiscovery","SystemTimeDiscovery","TCPConnect","TraceRoute","UNIX-Linux","VirtualizationSandboxEvasion","Vulnerability","WebCrawler","Windows","WirelessActive","WirelessPassive","XMASScan","XSS"]},
+				"MitreAttackDetectionIDs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"DataExfiltration": {
+			"$comment": "DataExfiltration",
+			"$comment": "Data exfiltration is the unauthorized copying, transfer or retrieval of data from a computer or server. Data exfiltration is a malicious activity performed through various different techniques, typically by cybercriminals over the Internet or other network. (source: Techopedia.com). CyberEvent.Target identifies the data being exfiltrated. CyberEvent.ActorID identifies the actor performing the exfiltration",
+			"$comment": "extends: CyberAttack",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"Degrade": {
+			"$comment": "Degrade",
+			"$comment": "To deny access to, or operation of, a target to a level represented as a percentage of capacity (JP3-12)",
+			"$comment": "extends: Deny",
+			"type": "object",
+			"properties": {
+				"IsRandom": {"type": "boolean"},
+				"Percentage": {"type": "number"}
+			}
+		},
+		"DelayEffect": {
+			"$comment": "DelayEffect",
+			"$comment": "Increased time for data to travel between two points",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+				"Seconds": {"type": "number"}
+			}
+		},
+		"Deny": {
+			"$comment": "Deny",
+			"$comment": "To prevent access to, operation of, or availability of a target function by a specified level for a specified time, by degrade, disrupt, or destroy (JP3-12)",
+			"$comment": "extends: CyberEffect",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"Destroy": {
+			"$comment": "Destroy",
+			"$comment": "To completely and irreparably deny access to, or operation of, a target (JP3-12)",
+			"$comment": "extends: Deny",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"Detect": {
+			"$comment": "Detect",
+			"$comment": "To discover or discern the existence, presence, or fact of an intrusion into information systems. (MITRE, Characterizing Effects on the Cyber Adversary)",
+			"$comment": "extends: CyberEffect",
+			"type": "object",
+			"properties": {
+				"AcquiredInformation": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Key": {"type": "string"},
+							"Value": {"type": "string"}
+						}
+					}
+				}
+			}
+		},
+		"Disrupt": {
+			"$comment": "Disrupt",
+			"$comment": "To completely but temporarily deny access to, or operation of, a target for a period of time (JP3-12)",
+			"$comment": "extends: Deny",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"DropEffect": {
+			"$comment": "DropEffect",
+			"$comment": "Packet dropping. Percentage (from parent) describes amount of packets dropped",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"HardwareDamageEffect": {
+			"$comment": "HardwareDamageEffect",
+			"$comment": "Physical damage to a device",
+			"$comment": "extends: Destroy",
+			"type": "object",
+			"properties": {
+				"DamageType": {"enum": ["BootLoop","PhysicalDestruction","HardDriveErased"]}
+			}
+		},
+		"HardwareDegradeEffect": {
+			"$comment": "HardwareDegradeEffect",
+			"$comment": "Degradation, but not destruction of, hardware. Percentage (from parent) describes amount hardware is degraded",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+				"DegradeType": {"enum": ["Keyboard","Mouse","Display","Sound","BlueScreen","RandomText","Reboot"]}
+			}
+		},
+		"JitterEffect": {
+			"$comment": "JitterEffect",
+			"$comment": "Variance in time delay in milliseconds (ms) between data packets over a network; a disruption in the normal sequence of sending data packets",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+				"Milliseconds": {"type": "integer"}
+			}
+		},
+		"LoadRateEffect": {
+			"$comment": "LoadRateEffect",
+			"$comment": "Impact on data upload or download rate.. Percentage (from parent) describes amount of load rate degradation.",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+				"RateType": {"enum": ["Upload","Download"]}
+			}
+		},
+		"Manipulate": {
+			"$comment": "Manipulate",
+			"$comment": "The effect of controlling or changing information, information systems, and/or networks to create physical denial effects, using deception, decoying, conditioning, spoofing, falsification, and other similar techniques (JP3-12)",
+			"$comment": "extends: CyberEffect",
+			"type": "object",
+			"properties": {
+				"Description": {"type": "string"}
+			}
+		},
+		"ManipulationAttack": {
+			"$comment": "ManipulationAttack",
+			"$comment": "Controls or changes information, information systems, and/or networks to create physical denial effects, using deception, decoying, conditioning, spoofing, falsification, and other similar techniques (JP3-12)",
+			"$comment": "extends: CyberAttack",
+			"type": "object",
+			"properties": {
+				"Description": {"type": "string"}
+			}
+		},
+		"ManipulationEffect": {
+			"$comment": "ManipulationEffect",
+			"$comment": "",
+			"$comment": "extends: Manipulate",
+			"type": "object",
+			"properties": {
+				"ManipulationType": {"enum": ["Packet","File","Database"]},
+				"PacketManipulationType": {"enum": ["Duplication","Corruption","Reordering","Dropped"]},
+				"Percentage": {"type": "number"}
+			}
+		},
+		"MemoryUseEffect": {
+			"$comment": "MemoryUseEffect",
+			"$comment": "Artificial increase in memory usage. Percentage (from parent) describes amount of memory used.",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+			}
+		},
+		"OtherDegradeEffect": {
+			"$comment": "OtherDegradeEffect",
+			"$comment": "Generic degradation effect",
+			"$comment": "extends: Degrade",
+			"type": "object",
+			"properties": {
+				"Description": {"type": "string"}
+			}
+		},
+		"PhishingAttack": {
+			"$comment": "PhishingAttack",
+			"$comment": "The fraudulent practice of sending messages purporting to be from reputable sources in order to induce individuals to reveal sensitive information or unknowingly initiate another attack",
+			"$comment": "extends: CyberAttack",
+			"type": "object",
+			"properties": {
+				"MessageType": {"enum": ["Email","Chat","Text","SocialMedia"]},
+				"Header": {"type": "string"},
+				"Body": {"type": "string"}
+			}
+		}
+	},
+
+	"type": "array",
+	"items": {
+		"type": "object",
+		"oneOf": [
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "BlockTrafficEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/BlockTrafficEffect"},
+				{"$ref": "#/$defs/Disrupt"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CPULoadEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CPULoadEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberAcknowledge"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberAcknowledge"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberAction"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberAdmin"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberAdmin"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberAttack"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberAttack"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberDefend"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberDefend"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberEvent"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberOrder"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberOrder"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "CyberRecon"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/CyberRecon"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "DataExfiltration"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/DataExfiltration"},
+				{"$ref": "#/$defs/CyberAttack"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Degrade"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "DelayEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/DelayEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Deny"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Destroy"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Destroy"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Detect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Detect"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Disrupt"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Disrupt"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "DropEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/DropEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "HardwareDamageEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/HardwareDamageEffect"},
+				{"$ref": "#/$defs/Destroy"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "HardwareDegradeEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/HardwareDegradeEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "JitterEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/JitterEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "LoadRateEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/LoadRateEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "Manipulate"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/Manipulate"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "ManipulationAttack"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/ManipulationAttack"},
+				{"$ref": "#/$defs/CyberAttack"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "ManipulationEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/ManipulationEffect"},
+				{"$ref": "#/$defs/Manipulate"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "MemoryUseEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/MemoryUseEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "OtherDegradeEffect"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/OtherDegradeEffect"},
+				{"$ref": "#/$defs/Degrade"},
+				{"$ref": "#/$defs/Deny"},
+				{"$ref": "#/$defs/CyberEffect"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]},
+			{"allOf": [
+				{"type": "object", "properties": {"objectType": {"const": "PhishingAttack"}}, "required": ["objectType"]},
+				{"$ref": "#/$defs/PhishingAttack"},
+				{"$ref": "#/$defs/CyberAttack"},
+				{"$ref": "#/$defs/CyberAction"},
+				{"$ref": "#/$defs/CyberEvent"}
+			]}
+		],
+		"unevaluatedProperties": false
+	}
+}

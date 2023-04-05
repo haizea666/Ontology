@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://data-marking.mitre.org/Data_Marking" uri="markings.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/Campaign" uri="campaign.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/CourseOfAction" uri="course_of_action.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/ExploitTarget" uri="exploit_target.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/Incident" uri="incident.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/Indicator" uri="indicator.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/Report" uri="report.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/TTP" uri="ttp.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/ThreatActor" uri="threat_actor.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/stixCommon" uri="stix_common.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1677610376433" name="http://stix.mitre.org/stix_core" uri="stix_core.rdf"/>
+    </group>
+</catalog>
