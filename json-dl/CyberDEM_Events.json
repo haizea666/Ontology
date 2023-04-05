@@ -1,6 +1,6 @@
 {
 	"$id": "/schemas/CyberDEM_Events",
-	"schema": "https://json-schema.org/draft/2020-12/schema",
+	"schema": "https://json-schema.org/draft/2023-04/schema",
 
 	"$defs": {
 		"BlockTrafficEffect": {
